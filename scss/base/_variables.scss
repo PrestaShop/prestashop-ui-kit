@@ -1,0 +1,68 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Base Colors
+
+$blue-hover      : #3ED2F0;
+$blue            : #25B9D7;
+$light-blue      : #93DCEB;
+$dark-blue       : #155666;
+$purple          : #44309E;
+$dark-purple     : #1B1149;
+$red             : #D77A83;
+$pink            : #D40054;
+$ok-green        : #78D07D;
+$notice-green    : #70B580;
+$yellow-hover    : #FFD100;
+$yellow          : #FBB000;
+$input-white     : #FBFBFC;
+$off-white       : #F2F6F8;
+$soft-grey       : #EBEDEF;
+$light-grey      : #BBCDD2;
+$medium-grey     : #95A7AD;
+$rock-grey       : #465D64;
+$dark-grey       : #363A41;
+$stone-grey      : #292C32;
+$not-so-black    : #1E2024;
+$bg-notice       : #DFF5F9;
+$ico-notice      : #49BAD5;
+$bg-alert        : #FDE7BB;
+$ico-alert       : #CD9321;
+$bg-warning      : #EFC8CB;
+$ico-warning     : #C45C67;
+$bg-game         : #ECE7FF;
+$border-game     : #B4A2F9;
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trns-duration  : .3s;
+
+// Path to Assets
+
+$path--rel      : "../img";

@@ -3,7 +3,6 @@
 var gulp    = require('gulp');
 var sass    = require('gulp-sass');
 var replace = require('gulp-replace');
-var print   = require('gulp-print');
 var rootDir = __dirname;
 var nodeModulesDir = rootDir + '/node_modules';
 

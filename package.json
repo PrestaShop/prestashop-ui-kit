@@ -1,29 +1,24 @@
 {
-    "name": "PrestaKit",
-    "version": "0.0.1",
-    "description": "Prestashop UI Kit integration",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "dependencies": {
-        "gulp": "=3.9.0",
-        "gulp-sass": ">=2.1.1",
-        "bootstrap-sass": ">=3.3.6",
-        "normalize.css": ">=3.0.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gfanton/PrestaKit.git"
-    },
-    "keywords": [
-        "prestashop",
-        "ui",
-        "kit"
-    ],
-    "author": "gfanton & mmoustaid",
-    "license": "prestashop",
-    "bugs": {
-        "url": "https://github.com/gfanton/PrestaKit/issues"
-    }
+  "name": "PrestaKit",
+  "version": "0.0.1",
+  "description": "Prestashop UI Kit integration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfanton/PrestaKit.git"
+  },
+  "keywords": [
+    "prestashop",
+    "uikit"
+  ],
+  "author": "PrestaShop",
+  "license": "PrestaShop SA",
+  "bugs": {
+    "url": "https://github.com/gfanton/PrestaKit/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-sass": "~2.1.1",
+    "bootstrap": "~4.0.0-alpha.2",
+    "gulp-replace": "~0.5.4"
+  }
 }

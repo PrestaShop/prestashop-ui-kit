@@ -4,17 +4,17 @@
 @import "base/index";
 
 // ==========================================================================
-// Dependencies
+// Utilities
 // ==========================================================================
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "utilities/index";
 
 // ==========================================================================
 // Modules
 // ==========================================================================
-/* @import "modules/index"; */
+@import "modules/index";
 
 // ==========================================================================
-// Utilities
+// Dependencies
 // ==========================================================================
-/* @import "utilities/index"; */
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";

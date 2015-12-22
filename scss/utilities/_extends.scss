@@ -1,0 +1,62 @@
+// ==========================================================================
+// Extends
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+    &__#{$element} {
+    @content;
+}
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+    @content;
+}
+}
+
+// Buttons
+
+%btn {
+    padding: 15px 90px;
+    border: 0;
+    border-radius : $br--default;
+    color: $white;
+    text-transform: uppercase;
+    font-size : em(14px);
+    font-weight: $font-weight--ultra-bold;
+    transition: opacity $trns-duration;
+    display: block;
+    &:hover {
+        opacity: .75;
+    }
+    &:active {
+        opacity: initial;
+    }
+}
+
+// Generate modifier color classes
+
+@mixin ui-colors($map, $p-el:null) {
+    @each $theme, $color in $map {
+        @include m($theme) {
+            background-color: $color;
+
+            &-empty {
+                color:$color;
+                border: 1px $color solid;
+                background-color: $white;
+            }
+
+
+            // If an $p-el value is passed, generate pseudo-element bg colors. Used on progbars.
+            @if $p-el {
+                &:after {
+                    background-color: lighten($color, 8%);
+                } 
+            }
+        }
+
+    }
+}

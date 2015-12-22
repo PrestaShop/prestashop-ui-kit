@@ -1,3 +1,9 @@
 // ==========================================================================
 // Functions
 // ==========================================================================
+
+// Call the color palette modifiers in color values
+
+@function palette($palette, $shade: 'base') {
+  @return map-get(map-get($color-palettes, $palette), $shade);
+}

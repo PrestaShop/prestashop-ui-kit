@@ -1,0 +1,21 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+  @include ui-colors($ui-colors);
+}
+
+[class^="btn--"] {
+    //@extend %btn;
+
+    @include mq(medium) {
+        width: auto;
+        display: inline-block;
+    }
+
+    @include mq(small) {
+        width: 100%;
+        color: blue;
+    }
+}

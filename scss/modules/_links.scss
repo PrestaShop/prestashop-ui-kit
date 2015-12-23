@@ -1,13 +1,12 @@
 // ==========================================================================
-// Buttons
+// links
 // ==========================================================================
 
-.btn {
-  @include ui-bcolors($ui-colors);
+.lnk {
+    @include ui-colors($ui-colors);
 }
 
-[class^="btn--"] {
-    //@extend %btn;
+[class^="lnk--"] {
 
     @include mq(medium) {
         width: auto;

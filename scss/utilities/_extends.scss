@@ -16,29 +16,42 @@
 }
 }
 
-// Buttons
+// Generate modifier color classes
 
-%btn {
-    padding: 15px 90px;
-    border: 0;
-    border-radius : $br--default;
-    color: $white;
-    text-transform: uppercase;
-    font-size : em(14px);
-    font-weight: $font-weight--ultra-bold;
-    transition: opacity $trns-duration;
-    display: block;
-    &:hover {
-        opacity: .75;
-    }
-    &:active {
-        opacity: initial;
+@mixin ui-colors($map, $p-el:null) {
+    @each $theme, $color in $map {
+        @include m($theme) {
+
+            color: $color;
+            text-decoration: initial;
+            display:inline-block;
+            border-bottom:1px $color solid;
+
+            &:hover {
+                color: $color;
+                text-decoration: initial;
+                display:inline-block;
+                border-bottom:1px $color solid;
+                cursor: pointer;
+                @if $theme == 'disabled' {
+                    cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;                
+                }
+            }
+
+
+            // If an $p-el value is passed, generate pseudo-element bg colors. Used on progbars.
+            @if $p-el {
+                &:after {
+                    background-color: lighten($color, 8%);
+                } 
+            }
+        }
     }
 }
 
 // Generate modifier color classes
 
-@mixin ui-colors($map, $p-el:null) {
+@mixin ui-bcolors($map, $p-el:null) {
     @each $theme, $color in $map {
         @include m($theme) {
             background-color: $color;
@@ -49,6 +62,12 @@
                 background-color: $white;
             }
 
+            @if $theme == 'disabled' {
+                cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;
+                &-empty {
+                    cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;
+                }
+            }
 
             // If an $p-el value is passed, generate pseudo-element bg colors. Used on progbars.
             @if $p-el {

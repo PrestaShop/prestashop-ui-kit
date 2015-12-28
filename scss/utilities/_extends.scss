@@ -34,10 +34,9 @@
                 border-bottom:1px $color solid;
                 cursor: pointer;
                 @if $theme == 'disabled' {
-                    cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;                
+                    cursor: url("http://192.168.10.171/public/PrestaKit/img/not-allowed.png") 4 12, auto;                
                 }
             }
-
 
             // If an $p-el value is passed, generate pseudo-element bg colors. Used on progbars.
             @if $p-el {
@@ -56,6 +55,7 @@
         @include m($theme) {
             background-color: $color;
 
+            
             &-empty {
                 color:$color;
                 border: 1px $color solid;
@@ -63,9 +63,9 @@
             }
 
             @if $theme == 'disabled' {
-                cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;
+                cursor: url("http://192.168.10.171/public/PrestaKit/img/not-allowed.png") 4 12, auto;                
                 &-empty {
-                    cursor: url("http://localhost/public/PrestaKit/img/not-allowed.png") 4 12, auto;
+                    cursor: url("http://192.168.10.171/public/PrestaKit/img/not-allowed.png") 4 12, auto;                                    
                 }
             }
 

@@ -2,20 +2,31 @@
 // Buttons
 // ==========================================================================
 
-.btn {
-  @include ui-bcolors($ui-colors);
-}
+/* .btn { */
+/*   @include ui-bcolors($ui-colors); */
+/* } */
 
-[class^="btn--"] {
+[class^="btn-&-"] {
     //@extend %btn;
 
-    @include mq(medium) {
-        width: auto;
-        display: inline-block;
-    }
-
-    @include mq(small) {
-        width: 100%;
-        color: blue;
-    }
 }
+
+// Remove all backgrounds
+/* .btn-primary-outline { */
+/*   @include ps-button-outline-variant($btn-primary-bg); */
+/* } */
+/* .btn-secondary-outline { */
+/*   @include ps-button-outline-variant($btn-secondary-border); */
+/* } */
+/* .btn-info-outline { */
+/*   @include ps-button-outline-variant($btn-info-bg); */
+/* } */
+/* .btn-success-outline { */
+/*   @include ps-button-outline-variant($btn-success-bg); */
+/* } */
+/* .btn-warning-outline { */
+/*   @include ps-button-outline-variant($btn-warning-bg); */
+/* } */
+/* .btn-danger-outline { */
+/*   @include ps-button-outline-variant($btn-danger-bg); */
+/* } */

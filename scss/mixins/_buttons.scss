@@ -1,0 +1,16 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin ps-button-outline-variant($color) {
+    @include button-outline-variant($color);
+    @include hover {
+        color: #000;
+        background-color: #000;
+        border-color: #000;
+    }
+}
+@mixin button-outline-variant($color) {@include ps-button-outline-variant($color);}
+
+

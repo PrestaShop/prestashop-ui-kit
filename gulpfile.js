@@ -8,29 +8,31 @@ var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
-var sourcemaps     = require('gulp-sourcemaps');
+// var sourcemaps  = require('gulp-sourcemaps');
 var config         = {
     name           : 'prestakit',
     production     : !!util.env.production,
     scssIndex      : __dirname + '/scss/application.scss',
+    jsIndex        : __dirname + '/js/.js',
     scssPattern    : __dirname + '/scss/**/*.scss',
-    cssPattern     : __dirname + '/css/*.css',
+    cssPattern     : __dirname + '/dist/css/*.css',
     nodeModulesDir : __dirname + '/node_modules',
-    cssDir         : __dirname + '/css'
+    fontDir        : __dirname + '/fonts',
+    dist           : __dirname + '/dist'
 };
 
-gulp.task('default', ['sass', 'css:minify', 'css:lint']);
+gulp.task('default', ['sass', 'js', 'css:minify', 'css:lint']);
 
 gulp.task('sass', function () {
-    gulp.src([config.scssIndex])
+    return gulp.src([config.scssIndex])
     // init sourcemaps
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
     // build sass
         .pipe(sass.sync({
             includePaths : [config.nodeModulesDir]
         }).on('error', sass.logError))
     // maps
-        .pipe(sourcemaps.write('./maps'))
+        // .pipe(sourcemaps.write('./maps'))
     // purge
         .pipe(purge())
     // export
@@ -38,21 +40,26 @@ gulp.task('sass', function () {
             basename: config.name,
             extname: '.css'
         }))
-        .pipe(gulp.dest(config.cssDir));
+        .pipe(gulp.dest(config.dist + '/css'));
+});
+
+gulp.task('js', function () {
+    return gulp.src(config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js')
+        .pipe(gulp.dest(config.dist + '/js'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch(config.sassPattern, ['sass']);
+    return gulp.watch(config.sassPattern, ['sass']);
 });
 
 gulp.task('css:minify', function () {
-    gulp.src(config.cssPattern)
+    return gulp.src(config.cssPattern)
         .pipe(nano())
         .pipe(rename({
             basename: config.name,
             extname: '.min.css'
         }))
-        .pipe(gulp.dest(config.cssDir));
+        .pipe(gulp.dest(config.dist + '/css'));
 });
 
 // @TODO link to travis
@@ -68,7 +75,6 @@ gulp.task('css:lint', function () {
 });
 
 gulp.task('clean', function() {
-    gulp.src([config.cssDir + '/' + config.name + '.css',
-              config.cssDir + '/' + config.name + '.min.css'], {read: false})
+    return gulp.src([config.dist + '/*', config.jsDir + '/*'], {read: false})
         .pipe(clean());
 });

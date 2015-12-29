@@ -21,9 +21,9 @@ var config         = {
     dist           : __dirname + '/dist'
 };
 
-gulp.task('default', ['sass', 'js', 'css:minify', 'css:lint']);
+gulp.task('default', ['scss', 'js', 'css:minify', 'css:lint']);
 
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     return gulp.src([config.scssIndex])
     // init sourcemaps
         // .pipe(sourcemaps.init())
@@ -48,8 +48,8 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
-gulp.task('sass:watch', function () {
-    return gulp.watch(config.sassPattern, ['sass']);
+gulp.task('scss:watch', function () {
+    return gulp.watch(config.scssPattern, ['scss']);
 });
 
 gulp.task('css:minify', function () {

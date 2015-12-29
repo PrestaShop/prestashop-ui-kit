@@ -1,19 +1,25 @@
 'use strict';
 
-var gulp           = require('gulp');
-var sass           = require('gulp-sass');
-var replace        = require('gulp-replace');
-var rootDir        = __dirname;
-var nodeModulesDir = rootDir + '/node_modules';
+var gulp    = require('gulp');
+var sass    = require('node-sass');
+var gsass   = require('gulp-sass');
+var replace = require('gulp-replace');
 
 gulp.task('sass', function () {
-    var bootstrapDir = '@import "' + nodeModulesDir + '/bootstrap/scss/$2"';
+    console.log('compiling');
+
     gulp.src(['./scss/application.scss'])
 
-        .pipe(sass() .on('error', sass.logError)) // build sass
+        .pipe(gsass.sync({
+            includePaths : [[__dirname, 'node_modules'].join('/')]
+        }).on('error', gsass.logError)) // build sass
+
         .pipe(gulp.dest('./css')); // export css
+
+    console.log('done!');
 });
 
 gulp.task('sass:watch', function () {
+    console.log('watch start');
     gulp.watch('./scss/**/*.scss', ['sass']);
 });

@@ -8,8 +8,8 @@
 // ==========================================================================
 
 // Core variables and mixins
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 // ==========================================================================
 // Mixins
@@ -17,53 +17,53 @@
 @import "mixins/index";
 
 // Reset and dependencies
-@import "bootstrap/normalize";
-@import "bootstrap/print";
+@import "bootstrap/scss/normalize";
+@import "bootstrap/scss/print";
 
 // Core CSS
-@import "bootstrap/reboot";
-@import "bootstrap/type";
-@import "bootstrap/images";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
 
 
 
 // Components
-@import "bootstrap/animation";
-@import "bootstrap/dropdown";
-@import "bootstrap/button-group";
-@import "bootstrap/input-group";
-@import "bootstrap/custom-forms";
-@import "bootstrap/nav";
-@import "bootstrap/navbar";
-@import "bootstrap/card";
-@import "bootstrap/breadcrumb";
-@import "bootstrap/pagination";
-@import "bootstrap/pager";
-@import "bootstrap/labels";
-@import "bootstrap/jumbotron";
-@import "bootstrap/alert";
-@import "bootstrap/progress";
-@import "bootstrap/media";
-@import "bootstrap/list-group";
-@import "bootstrap/responsive-embed";
-@import "bootstrap/close";
+@import "bootstrap/scss/animation";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group";
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/pager";
+@import "bootstrap/scss/labels";
+@import "bootstrap/scss/jumbotron";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/responsive-embed";
+@import "bootstrap/scss/close";
 
 // Components w/ JavaScript
-@import "bootstrap/modal";
-@import "bootstrap/tooltip";
-@import "bootstrap/popover";
-@import "bootstrap/carousel";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
 
 // Utility classes
-@import "bootstrap/utilities";
-@import "bootstrap/utilities-background";
-@import "bootstrap/utilities-spacing";
-@import "bootstrap/utilities-responsive";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities-background";
+@import "bootstrap/scss/utilities-spacing";
+@import "bootstrap/scss/utilities-responsive";
 
 // ==========================================================================
 // Utilities

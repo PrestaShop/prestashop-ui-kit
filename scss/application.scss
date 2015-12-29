@@ -7,14 +7,15 @@
 // Bootstrap Componant
 // ==========================================================================
 
-// Core variables and mixins
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-
 // ==========================================================================
 // Mixins
 // ==========================================================================
 @import "mixins/index";
+
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
 // Reset and dependencies
 @import "bootstrap/normalize";

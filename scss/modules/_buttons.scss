@@ -11,6 +11,11 @@
 
 }
 
+.btn-primary {
+  @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+
 // Remove all backgrounds
 /* .btn-primary-outline { */
 /*   @include ps-button-outline-variant($btn-primary-bg); */

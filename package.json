@@ -23,6 +23,7 @@
     "gulp-csscomb": "^3.0.6",
     "gulp-cssnano": "^2.0.0",
     "gulp-dedupe": "0.0.2",
+    "gulp-minify-css": "^1.2.3",
     "gulp-replace": "~0.5.4",
     "gulp-sass": "~2.1.1",
     "gulp-uncss": "^1.0.4"

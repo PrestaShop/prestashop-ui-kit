@@ -4,7 +4,6 @@
 // and disabled options for all buttons
 
 @mixin ps-button-variant($color, $background, $border) {
-    @include button-variant($color, $background, $border);
     @include hover {
         color: #000;
         background-color: #000;

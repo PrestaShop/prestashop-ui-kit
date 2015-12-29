@@ -3,8 +3,7 @@
 var gulp   = require('gulp');
 var sass   = require('gulp-sass');
 var purge  = require('gulp-css-purge');
-var dedupe = require('gulp-dedupe');
-var nano   = require('gulp-cssnano');
+var minifyCss      = require('gulp-minify-css');
 var util   = require('gulp-util');
 
 var config = {
@@ -22,7 +21,7 @@ gulp.task('sass', function () {
             includePaths : [config.nodeModules]
         }).on('error', sass.logError)) // build sass
         .pipe(purge())                 // purge
-        .pipe(dedupe())                // dedupe
+        .pipe(minifyCss())                // dedupe
         .pipe(gulp.dest(config.cssDir));     // export
 });
 

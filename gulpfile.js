@@ -1,31 +1,31 @@
 'use strict';
 
-var gulp           = require('gulp');
-var sass           = require('gulp-sass');
-var replace        = require('gulp-replace');
-var purge = require('gulp-css-purge');
+var gulp   = require('gulp');
+var sass   = require('gulp-sass');
+var purge  = require('gulp-css-purge');
 var dedupe = require('gulp-dedupe');
-var nano = require('gulp-cssnano');
+var nano   = require('gulp-cssnano');
+var util   = require('gulp-util');
 
-var rootDir        = __dirname;
-var nodeModulesDir = rootDir + '/node_modules';
+var config = {
+    sassPattern : './scss/**/*.scss',
+    nodeModules : __dirname + '/node_modules',
+    production  : !!util.env.production,
+    scssIndex   : './scss/application.scss',
+    cssDir      : './css'
+};
 
 gulp.task('sass', function () {
-    console.log('compiling');
+    gulp.src([config.scssIndex])
 
-    gulp.src(['./scss/application.scss'])
-
-        .pipe(gsass.sync({
-            includePaths : [[__dirname, 'node_modules'].join('/')]
-        }).on('error', gsass.logError)) // build sass
-        .pipe(purge())
-        .pipe(dedupe())
-        .pipe(gulp.dest('./css')); // export css
-
-    console.log('done!');
+        .pipe(sass.sync({
+            includePaths : [config.nodeModules]
+        }).on('error', sass.logError)) // build sass
+        .pipe(purge())                 // purge
+        .pipe(dedupe())                // dedupe
+        .pipe(gulp.dest(config.cssDir));     // export
 });
 
 gulp.task('sass:watch', function () {
-    console.log('watch start');
-    gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch(config.sassPattern, ['sass']);
 });

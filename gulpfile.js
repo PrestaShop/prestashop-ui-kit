@@ -9,7 +9,8 @@ var rootDir        = __dirname;
 var nodeModulesDir = rootDir + '/node_modules';
 
 gulp.task('sass', function () {
-    var bootstrapDir = '@import "' + nodeModulesDir + '/bootstrap/scss/$2"';
+    console.log('compiling');
+
     gulp.src(['./scss/application.scss'])
         .pipe(sass() .on('error', sass.logError)) // build sass
         .pipe(purge())
@@ -18,5 +19,6 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
+    console.log('watch start');
     gulp.watch('./scss/**/*.scss', ['sass']);
 });

@@ -3,6 +3,33 @@
 // Copy settings from this file into the provided `_custom.scss` to override
 // the Bootstrap defaults without modifying key, versioned files.
 
+// Avatar
+//
+// Avatar Size
+$avatar-size-base:             150px;
+$avatar-size-lg:               100px;
+$avatar-size-sm:               60px;
+$avatar-size-xs:               40px;
+
+// Banner
+//
+// Banner Size
+$banner-vert-x:             300px;
+$banner-vert-y:             450px;
+$banner-hori-x:             620px;
+$banner-hori-y:             215px;
+
+// Buttons
+$btn-padding-x:                  1rem !default;
+$btn-padding-y:                  .375rem !default;
+$btn-font-weight:                normal !default;
+
+$btn-padding-x-sm:               .75rem !default;
+$btn-padding-y-sm:               .25rem !default;
+
+$btn-padding-x-lg:               2rem !default;
+$btn-padding-y-lg:               .60rem !default;
+
 // Font import
 // Montserrat   Normal : 400,
 //              Bold   : 700

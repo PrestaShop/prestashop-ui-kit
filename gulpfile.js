@@ -24,16 +24,14 @@ var config         = {
 };
 
 var root_scss = [
-    'scss/bootstrap.scss',
     'scss/application.scss'
 ];
 
 var root_css = [
-    'dist/css/bootstrap.css',
     'dist/css/application.css'
 ];
 
-gulp.task('default', ['scss', 'js', 'css:concat', 'css:minify']);
+gulp.task('default', ['scss', 'js', 'css:minify']);
  
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -45,14 +43,12 @@ gulp.task('scss', function () {
         }).on('error', scss.logError))
     // maps
         // .pipe(sourcemaps.write('./maps'))
-    // purge
-        // .pipe(purge())
     // export
-        // .pipe(rename({
-        //     prefix: 'bootstrap-',
-        //     basename: config.name,
-        //     extname: '.css'
-        // }))
+        .pipe(rename({
+            prefix: 'bootstrap-',
+            basename: config.name,
+            extname: '.css'
+        }))
         .pipe(gulp.dest(config.dist + '/css'));
 });
 
@@ -62,27 +58,16 @@ gulp.task('js', function () {
 });
 
 gulp.task('scss:watch', function () {
-    return gulp.watch(config.scssPattern, ['scss', 'css:concat']);
+    return gulp.watch(config.scssPattern, ['scss']);
 });
 
-gulp.task('css:minify', ['css:concat'], function () {
-    return gulp.src('dist/css/bootstrap-prestakit.css')
+gulp.task('css:minify', ['scss'], function () {
+    return gulp.src(config.cssPattern)
         .pipe(nano())
         .pipe(rename({
             prefix: 'bootstrap-',
             basename: config.name,
             extname: '.min.css'
-        }))
-        .pipe(gulp.dest(config.dist + '/css'));
-});
-
-gulp.task('css:concat', ['scss'], function() {
-    return gulp.src('dist/css/*.css')
-        .pipe(concatCss('concat.css'))
-        .pipe(rename({
-            prefix: 'bootstrap-',
-            basename: config.name,
-            extname: '.css'
         }))
         .pipe(gulp.dest(config.dist + '/css'));
 });

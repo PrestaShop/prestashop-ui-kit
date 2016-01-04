@@ -1,8 +1,10 @@
 'use strict';
 
 var gulp           = require('gulp');
-var sass           = require('gulp-sass');
+var sass           = require('node-sass');
+var scss           = require('gulp-sass');
 var purge          = require('gulp-css-purge');
+var concatCss = require('gulp-concat-css');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
@@ -21,25 +23,36 @@ var config         = {
     dist           : __dirname + '/dist'
 };
 
-gulp.task('default', ['scss', 'js', 'css:minify', 'css:lint']);
+var root_scss = [
+    'scss/bootstrap.scss',
+    'scss/application.scss'
+];
 
+var root_css = [
+    'dist/css/bootstrap.css',
+    'dist/css/application.css'
+];
+
+gulp.task('default', ['scss', 'js', 'css:concat', 'css:minify']);
+ 
 gulp.task('scss', function () {
-    return gulp.src([config.scssIndex])
+    return gulp.src(root_scss)
     // init sourcemaps
         // .pipe(sourcemaps.init())
-    // build sass
-        .pipe(sass.sync({
+    // build scss
+        .pipe(scss({
             includePaths : [config.nodeModulesDir]
-        }).on('error', sass.logError))
+        }).on('error', scss.logError))
     // maps
         // .pipe(sourcemaps.write('./maps'))
     // purge
-        .pipe(purge())
+        // .pipe(purge())
     // export
-        .pipe(rename({
-            basename: config.name,
-            extname: '.css'
-        }))
+        // .pipe(rename({
+        //     prefix: 'bootstrap-',
+        //     basename: config.name,
+        //     extname: '.css'
+        // }))
         .pipe(gulp.dest(config.dist + '/css'));
 });
 
@@ -49,18 +62,31 @@ gulp.task('js', function () {
 });
 
 gulp.task('scss:watch', function () {
-    return gulp.watch(config.scssPattern, ['scss']);
+    return gulp.watch(config.scssPattern, ['scss', 'css:concat']);
 });
 
-gulp.task('css:minify', function () {
-    return gulp.src(config.cssPattern)
+gulp.task('css:minify', ['css:concat'], function () {
+    return gulp.src('dist/css/bootstrap-prestakit.css')
         .pipe(nano())
         .pipe(rename({
+            prefix: 'bootstrap-',
             basename: config.name,
             extname: '.min.css'
         }))
         .pipe(gulp.dest(config.dist + '/css'));
 });
+
+gulp.task('css:concat', ['scss'], function() {
+    return gulp.src('dist/css/*.css')
+        .pipe(concatCss('concat.css'))
+        .pipe(rename({
+            prefix: 'bootstrap-',
+            basename: config.name,
+            extname: '.css'
+        }))
+        .pipe(gulp.dest(config.dist + '/css'));
+});
+
 
 // @TODO link to travis
 gulp.task('css:lint', function () {

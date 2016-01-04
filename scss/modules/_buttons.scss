@@ -15,7 +15,7 @@
   @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
-// Remove all backgrounds
+// remove all backgrounds
 /* .btn-primary-outline { */
 /*   @include ps-button-outline-variant($btn-primary-bg); */
 /* } */
@@ -34,3 +34,7 @@
 /* .btn-danger-outline { */
 /*   @include ps-button-outline-variant($btn-danger-bg); */
 /* } */
+
+h1 {
+    font-weight: 600;
+}

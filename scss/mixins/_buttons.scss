@@ -4,12 +4,21 @@
 // and disabled options for all buttons
 
 @mixin ps-button-variant($color, $background, $border) {
+    @include button-variant($color, $background, $border);
     @include hover {
-        color: #000;
-        background-color: #000;
-        border-color: #000;
+        color: $color;
+        background-color: lighten($background, 8%);
+        border-color: lighten($border, 8%);
+
     }
 }
 
-
-
+@mixin ps-button-outline-variant($btn-primary-bg) {
+    @include button-outline-variant($btn-primary-bg);
+    border: 0.15em solid $btn-primary-bg;
+    @include hover {
+        color: lighten($btn-primary-bg, 10%);
+        background-color: #fff;
+        border-color: lighten($btn-primary-bg, 10%);
+    }
+}

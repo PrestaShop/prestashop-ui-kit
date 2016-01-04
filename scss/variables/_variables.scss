@@ -17,10 +17,50 @@
 // Fonts
 // Components
 
+
+// Avatar
+//
+// Avatar Size
+$avatar-size-base:             150px;
+$avatar-size-lg:               100px;
+$avatar-size-sm:               60px;
+$avatar-size-xs:               40px;
+
+// Banner
+//
+// Banner Size
+$banner-vert-x:             300px;
+$banner-vert-y:             450px;
+$banner-hori-x:             620px;
+$banner-hori-y:             215px;
+
+// Buttons
+$btn-padding-x:                  1rem !default;
+$btn-padding-y:                  .375rem !default;
+$btn-font-weight:                normal !default;
+
+$btn-padding-x-sm:               .75rem !default;
+$btn-padding-y-sm:               .25rem !default;
+
+$btn-padding-x-lg:               2rem !default;
+$btn-padding-y-lg:               .60rem !default;
+
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+
 // General variable structure
 //
 // Variable format should follow the `$component-modifier-state-property` order.
-
 
 // Colors
 //
@@ -37,7 +77,6 @@ $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
-
 
 // Options
 //
@@ -272,14 +311,13 @@ $btn-link-disabled-color:        $gray-light !default;
 $btn-padding-x-sm:               .75rem !default;
 $btn-padding-y-sm:               .25rem !default;
 
-$btn-padding-x-lg:               1.25rem !default;
-$btn-padding-y-lg:               5.75rem !default;
+$btn-padding-x-lg:               2rem !default;
+$btn-padding-y-lg:               .60rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              $border-radius !default;
 $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
-
 
 // Forms
 

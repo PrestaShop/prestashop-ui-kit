@@ -3,15 +3,18 @@
 // Copy settings from this file into the provided `_custom.scss` to override
 // the Bootstrap defaults without modifying key, versioned files.
 
-// Font import
-// Montserrat   Normal : 400,
-//              Bold   : 700
+// Table of Contents
 //
-// Open Sans    Normal    : 400,
-//              Semi-Bold : 600,
-//              Bold      : 700
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700);
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
 
 // Avatar
 //
@@ -74,6 +77,9 @@ $bg-warning           : #EFC8CB;
 $ico-warning          : #C45C67;
 $bg-game              : #ECE7FF;
 $border-game          : #B4A2F9;
+
+// Tooltips
+$tooltip-bg: #95a7ad !default;
 
 // Typography
 

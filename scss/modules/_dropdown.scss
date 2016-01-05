@@ -2,21 +2,19 @@
 // Dropdown
 // ==========================================================================
 
+.dropdown {
+    button {
+        @extend .btn-sm;
+        @extend .btn-secondary;
 
-.drp {
-    @include ui-bcolors($ui-colors);
+        &:hover { border-color: $dropdown-border-color-hover; }
+
+
+
+    }
 }
 
-[class^="btn--"] {
-    //@extend %btn;
-
-    @include mq(medium) {
-        width: auto;
-        display: inline-block;
-    }
-
-    @include mq(small) {
-        width: 100%;
-        color: blue;
-    }
+// The dropdown menu
+.dropdown-menu {
+    border-color: red;
 }

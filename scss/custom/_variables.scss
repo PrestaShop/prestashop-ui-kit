@@ -3,6 +3,19 @@
 // Copy settings from this file into the provided `_custom.scss` to override
 // the Bootstrap defaults without modifying key, versioned files.
 
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+
 // Avatar
 //
 // Avatar Size
@@ -29,16 +42,6 @@ $btn-padding-y-sm:               .25rem !default;
 
 $btn-padding-x-lg:               2rem !default;
 $btn-padding-y-lg:               .60rem !default;
-
-// Font import
-// Montserrat   Normal : 400,
-//              Bold   : 700
-//
-// Open Sans    Normal    : 400,
-//              Semi-Bold : 600,
-//              Bold      : 700
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700);
 
 // Colors
 // UI-Kit color
@@ -75,6 +78,9 @@ $ico-warning      : #C45C67;
 $bg-game          : #ECE7FF;
 $border-game      : #B4A2F9;
 
+// Tooltips
+$tooltip-bg: #95a7ad !default;
+
 // Typography
 $headings-font-family: OpenSans;
 
@@ -82,7 +88,6 @@ $font-size-h1   : em(24px);
 $font-size-h2   : em(16px);
 $font-size-h3   : em(14px);
 $font-size-h4   : em(14px);
-
 
 // Table of Contents
 //

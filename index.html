@@ -2,8 +2,10 @@
     <head>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="dist/css/bootstrap-prestakit.css">
-        <script src="dist/js/bootstrap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="dist/js/tether.js"></script>
+        <script src="dist/js/bootstrap.js"></script>
+        <script src="dist/js/prestakit.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -19,12 +21,29 @@
 
         <button class="btn disabled">Warning</button>
 
+        <h1>Tooltip</h1></br>
 
-        <p>Here is an example of paragraph with a <a class="lnk--info">text link</a></p>
-        <small><p>Here is an example of paragraph with a <a class="lnk--info">text link</a></p></small>
-        <p>Here is an example of paragraph with a <a class="lnk--disabled" >text link</a></p>
-        <small><p>Here is an example of paragraph with a <a class="lnk--disabled" >text link</a></p></small>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top_left" title="Tooltip on top">
+            Tooltip on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top_right" title="Tooltip on top">
+            Tooltip on top
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on top-right">
+            Tooltip on top right
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on top">
+            Tooltip on top
+        </button>
+        </br></br>
 
+        <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Some tooltip text!">Hover over me</a>
+        <a href="#" data-toggle="tooltip" data-placement="left" title="Some tooltip text!">Hover over me</a>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Some tooltip text!">Hover over me</a>
+        </br></br>
+
+        <h1>Dropdown</h1>
         <div class="dropdown">
             <button class="btn-success-outline dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example<span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -34,13 +53,7 @@
             </ul>
         </div></br>
 
-        <input type="text" class="input-group-addon">
-        <input type="text" class="input-group"></br>
-        <input type="text" class="form-control"></br>
-        <input type="text" class="input-group-btn"></br></br>
-
-
-        </br></br></br></br>
+        <h1>Avatar</h1>
         <img class="ps-avatar img-circle" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
         <img class="ps-avatar-lg img-circle" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
         <img class="ps-avatar-sm img-circle" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
@@ -51,12 +64,6 @@
         <img class="ps-avatar-sm" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
         <img class="ps-avatar-xs" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
         </br></br>
-        <img class="ps-banner-vert" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
-        <img class="ps-banner-hori" src="http://www.irishtimes.com/polopoly_fs/1.2435080.1447863628!/image/image.jpg">
-        </br></br>
-
-
-
     </body>
 </html>
 

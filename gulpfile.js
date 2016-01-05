@@ -54,11 +54,13 @@ gulp.task('scss', function () {
 
 gulp.task('js', function () {
     return gulp.src(config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js')
+        .pipe(gulp.src(config.nodeModulesDir + '/tether/dist/js/tether*.js'))
+        .pipe(gulp.src('js/prestakit.js'))
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
 gulp.task('scss:watch', function () {
-    return gulp.watch(config.scssPattern, ['scss']);
+    return gulp.watch(config.scssPattern, ['scss', 'js']);
 });
 
 gulp.task('css:minify', ['scss'], function () {
@@ -71,7 +73,6 @@ gulp.task('css:minify', ['scss'], function () {
         }))
         .pipe(gulp.dest(config.dist + '/css'));
 });
-
 
 // @TODO link to travis
 gulp.task('css:lint', function () {

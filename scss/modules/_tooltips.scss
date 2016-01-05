@@ -1,0 +1,39 @@
+// ==========================================================================
+// Tooltips
+// ==========================================================================
+
+.tooltip {
+    &.tooltip-top,
+    &.bs-tether-element-attached-bottom {
+            .tooltip-arrow {
+//                left: 10%;
+            }
+    }
+}
+
+/* .tooltip { */
+    
+/*     &.bs-tether-element-attached-bottom-left { */
+/*         .tooltip-arrow { */
+/*             left: 10%; */
+/*         } */
+/*     } */
+
+/*     &.bs-tether-element-attached-bottom-right { */
+/*         .tooltip-arrow { */
+/*             left: 90%; */
+/*         } */
+/*     } */
+
+/*     &.bs-tether-element-attached-top-left { */
+/*         .tooltip-arrow { */
+/*             left: 10%; */
+/*         } */
+/*     } */
+
+/*     &.bs-tether-element-attached-top-right { */
+/*         .tooltip-arrow { */
+/*             left: 10%; */
+/*         } */
+/*     } */
+/* } */

@@ -1,0 +1,45 @@
+.panel {
+    @extend .card;
+}
+
+.panel-heading {
+    @extend .card-header;
+}
+
+.panel-title {
+    @extend .card-title;
+}
+
+.panel-body {
+    @extend .card-block;
+}
+
+.panel-footer {
+    @extend .card-title;
+}
+
+.panel-primary {
+    @extend .card-inverse;
+    @extend .card-primary;
+}
+
+.panel-success {
+    @extend .card-inverse;
+    @extend .card-success;
+}
+
+.panel-info {
+    @extend .card-inverse;
+    @extend .card-info;
+}
+
+.panel-warning {
+    @extend .card-inverse;
+    @extend .card-warning;
+}
+
+.panel-danger {
+    @extend .card-inverse;
+    @extend .card-danger;
+}
+

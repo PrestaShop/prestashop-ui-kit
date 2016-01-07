@@ -10,15 +10,12 @@
         "prestashop",
         "uikit"
     ],
-    "scripts": {
-        "gulp": "env PATH=./node_modules/.bin/:$PATH gulp"
-    },
     "author": "PrestaShop",
     "license": "PrestaShop SA",
     "bugs": {
         "url": "https://github.com/gfanton/PrestaKit/issues"
     },
-    "dependencies": {
+    "devDependencies": {
         "bootstrap": "=4.0.0-alpha.2",
         "gulp": "~3.9.0",
         "gulp-clean": "^0.3.1",

@@ -1,10 +1,9 @@
 'use strict';
 
 var gulp           = require('gulp');
+var sassdoc        = require('sassdoc');
 var sass           = require('node-sass');
 var scss           = require('gulp-sass');
-var purge          = require('gulp-css-purge');
-var concatCss = require('gulp-concat-css');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
@@ -28,11 +27,11 @@ var root_scss = [
 ];
 
 var root_css = [
-    'dist/css/application.css'
+   'dist/css/application.css'
 ];
 
 gulp.task('default', ['scss', 'js', 'css:minify']);
- 
+
 gulp.task('scss', function () {
     return gulp.src(root_scss)
     // init sourcemaps
@@ -53,15 +52,22 @@ gulp.task('scss', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js')
-        .pipe(gulp.src(config.nodeModulesDir + '/tether/dist/js/tether*.js'))
-        .pipe(gulp.src('js/prestakit.js'))
+    return gulp.src([config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js',
+                     config.nodeModulesDir + '/tether/dist/js/tether*.js',
+                     'js/prestakit.js'])
+
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
 gulp.task('scss:watch', function () {
     return gulp.watch(config.scssPattern, ['scss', 'js']);
 });
+
+gulp.task('scss:doc', function () {
+    return gulp.src(config.nodeModulesDir + 'bootstrap/scss/**/*.scss')
+        .pipe(sassdoc());
+});
+
 
 gulp.task('css:minify', ['scss'], function () {
     return gulp.src(config.cssPattern)

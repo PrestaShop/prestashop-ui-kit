@@ -535,7 +535,7 @@ mark,
 
 .img-fluid, .carousel-inner > .carousel-item > img, .carousel-inner > .item > img,
 .carousel-inner > .carousel-item > a > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item > a > img, .img-responsive {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -1254,8 +1254,8 @@ pre {
   .table .table {
     background-color: #fff; }
 
-.table-sm th,
-.table-sm td {
+.table-sm th, .table-condensed th,
+.table-sm td, .table-condensed td {
   padding: 0.3rem; }
 
 .table-bordered {

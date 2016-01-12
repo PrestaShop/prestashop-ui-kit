@@ -1,0 +1,11 @@
+.control-label {
+    @extend .form-control-label;
+}
+
+.input-lg {
+    @extend .form-control-lg;
+}
+
+.input-sm {
+    @extend .form-control-sm;
+}

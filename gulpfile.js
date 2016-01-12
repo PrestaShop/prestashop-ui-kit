@@ -12,7 +12,6 @@ var rename    = require('gulp-rename');
 var clean     = require('gulp-clean');
 var gulpkss   = require('gulp-kss-druff');
 
-// var sourcemaps  = require('gulp-sourcemaps');
 var config         = {
     name           : 'prestakit',
     production     : !!util.env.production,
@@ -31,7 +30,7 @@ var root_scss = [
 ];
 
 var root_css = [
-    'dist/css/application.css'
+   'dist/css/application.css'
 ];
 
 gulp.task('styleguide', function() {
@@ -84,9 +83,10 @@ gulp.task('scss', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js')
-        .pipe(gulp.src(config.nodeModulesDir + '/tether/dist/js/tether*.js'))
-        .pipe(gulp.src('js/prestakit.js'))
+    return gulp.src([config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js',
+                     config.nodeModulesDir + '/tether/dist/js/tether*.js',
+                     'js/prestakit.js'])
+
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
@@ -94,6 +94,12 @@ gulp.task('scss:watch', function () {
     gulp.watch(config.scssPattern, ['scss', 'js', 'styleguide']);
     gulp.watch(config.tplPattern, ['scss', 'js', 'styleguide']);
 });
+
+gulp.task('scss:doc', function () {
+    return gulp.src(config.nodeModulesDir + 'bootstrap/scss/**/*.scss')
+        .pipe(sassdoc());
+});
+
 
 gulp.task('css:minify', ['scss'], function () {
     return gulp.src(config.cssPattern)

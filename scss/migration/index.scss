@@ -1,0 +1,109 @@
+// ==========================================================================
+// Typography
+// =========================================================================
+// + Moved all .text- utilities to the _utilities.scss file.
+// + Dropped the .page-header class entirely.
+// + .dl-horizontal now requires grid classes, increasing flexbility in column
+//   widths.
+// + Custom <blockquote> styling has moved to classes—.blockquote and the
+//   .blockquote-reverse modifier.
+@import "typography";
+
+// ==========================================================================
+// Images
+// =========================================================================
+// + Renamed .img-responsive to .img-fluid.                                    @alias
+@import "images";
+
+// ==========================================================================
+// Tables
+// =========================================================================
+// + Nearly all instances of the > selector have been removed, meaning nested
+//   tables will now automatically inherit styles from their parents. This greatly
+//   simplifies our selectors and potential customizations.
+// + Responsive tables no longer require a wrapping element. Instead, just put
+//   the .table-responsive right on the <table>.
+// + Renamed .table-condensed to .table-sm for consistency.
+// + Added a new .table-inverse option.
+// + Added a new .table-reflow option.
+// + Added table header modifers: .thead-default and .thead-inverse
+@import "tables";
+
+// ==========================================================================
+// Forms
+// =========================================================================
+// + Moved element resets to the _reboot.scss file.
+// + Renamed .control-label to .form-control-label.                            @alias
+// + Renamed .input-lg and .input-sm to .form-control-lg and .form-control-sm, @alias
+//   respectively.
+// + Dropped .form-group-* classes for simplicity’s sake. Use .form-control-*
+//   classes instead now.
+// + Horizontal forms overhauled:
+//   o Dropped the .form-horizontal class requirement.
+//   o .form-group no longer mixins the .row class, so it’s now required for grid
+//     layouts. Added new .form-control-label class to vertically center labels with
+//     .form-controls.
+@import "forms";
+
+// ==========================================================================
+// Buttons
+// =========================================================================
+// + Renamed .btn-default to .btn-secondary.                                   @alias
+// + Dropped the .btn-xs class entirely.
+// + The stateful button feature of the button.js jQuery plugin has been 
+//   dropped. This includes the $().button(string) and $().button('reset') methods.
+//   We advise using a tiny bit of custom JavaScript instead, which will have the
+//   benefit of behaving exactly the way you want it to.
+//      o Note that the other features of the plugin (button checkboxes, button
+//        radios, single-toggle buttons) have been retained in v4.
+@import "buttons";
+
+// ==========================================================================
+// Button group
+// =========================================================================
+// + Dropped the .btn-group-xs class entirely.
+
+// ==========================================================================
+// navs
+// =========================================================================
+// + Dropped nearly all > selectors for simpler styling via un-nested classes.
+// + Instead of HTML-specific selectors like .nav > li > a, we use separate    @alias
+//   classes for .navs, .nav-items, and .nav-links. This makes your HTML more
+//   flexible while bringing along increased extensibility.
+@import "navs";
+
+// ==========================================================================
+// Pager
+// =========================================================================
+// + Renamed .previous and .next to .pager-prev and .pager-next.
+@import "pager";
+
+// ==========================================================================
+// Panels
+// =========================================================================
+// + .panel to .card                                                           @alias
+// + .panel-default removed and no replacement                                 @alias
+// + .panel-heading to .card-header                                            @alias
+// + .panel-title to .card-title                                               @alias
+// + .panel-body to .card-block                                                @alias
+// + .panel-footer to .card-footer                                             @alias
+// + .panel-primary to .card-primary and .card-inverse                         @alias
+// + .panel-success to .card-success and .card-inverse                         @alias
+// + .panel-info to .card-info and .card-inverse                               @alias
+// + .panel-warning to .card-warning and .card-inverse                         @alias
+// + .panel-danger to .card-danger and .card-inverse                           @alias
+@import "panels";
+
+// ==========================================================================
+// Carousel
+// =========================================================================
+// + Renamed .item to .carousel-item.                                          @alias
+@import "carousel";
+
+// ==========================================================================
+// Carousel
+// =========================================================================
+// + Added .pull-{xs,sm,md,lg,xl}-{left,right,none} classes for responsive floats
+// + Removed .pull-left and .pull-right since they’re redundant to .pull-xs-left
+//   and .pull-xs-right                                                        @alias
+@import "utilities";

@@ -1,0 +1,29 @@
+h1 {
+    font-weight : $font-weight-h1;
+    color       : $font-color-h1;
+}
+
+h2 {
+    font-weight : $font-weight-h2;
+    color       : $font-color-h2;
+}
+
+h3 {
+    font-weight : $font-weight-h3;
+    color       : $font-color-h3;
+}
+
+h4 {
+    font-weight : $font-weight-h4;
+    color       : $font-color-h4;
+}
+
+p {
+    font-weight : $font-weight-paragraph;
+    color       : $font-color-paragraph ;
+}
+
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+.h4 { @extend h4; }

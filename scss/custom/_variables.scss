@@ -78,12 +78,37 @@ $warning-hover   :             #EFC8CB;
 $tooltip-bg: #95a7ad !default;
 
 // Typography
-$headings-font-family: OpenSans;
 
-$font-size-h1   : em(24px);
-$font-size-h2   : em(16px);
-$font-size-h3   : em(14px);
-$font-size-h4   : em(14px);
+$font-family-base: Open Sans, sans-serif;
+
+$headings-font-family : $font-family-base;
+
+/* $font-size-base       : em(14px); */
+
+$font-size-h1         : em(24px);
+$font-size-h2         : em(16px);
+$font-size-h3         : em(14px);
+$font-size-h4         : em(14px);
+$font-size-paragraph  : em(14px);
+
+
+$font-color-h1        : $dark-grey;
+$font-color-h2        : $dark-grey;
+$font-color-h3        : $dark-grey;
+$font-color-h4        : $rock-grey;
+$font-color-paragraph : $rock-grey;
+
+// font weight
+
+$font-weight-normal   : 400;
+$font-weight-semibold : 600;
+$font-weight-bold     : 700;
+
+$font-weight-h1        : $font-weight-semibold;
+$font-weight-h2        : $font-weight-semibold;
+$font-weight-h3        : $font-weight-bold;
+$font-weight-h4        : $font-weight-semibold;
+$font-weight-paragraph : $font-weight-normal;
 
 // Table of Contents
 //
@@ -406,13 +431,14 @@ $form-icon-success: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 $form-icon-warning: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+" !default;
 $form-icon-danger: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=" !default;
 
-
+// ------------------------------@overrided
 // Dropdowns
 //
 // Dropdown menu container and contents.
 
 $dropdown-bg:                    #fff !default;
-$dropdown-border-color:          rgba(0,0,0,.15) !default;
+$dropdown-border-color:          #c7d6db;
+$dropdown-border-color-hover:    #a5b6bb;
 $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 

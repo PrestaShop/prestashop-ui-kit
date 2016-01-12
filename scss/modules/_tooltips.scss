@@ -1,6 +1,33 @@
-// ==========================================================================
-// Tooltips
-// ==========================================================================
+// Tooltip
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 4
+
+
+// Static demo
+//
+// SALUT
+//
+// <div class="tooltip-arrow"></div><div class="tooltip-inner">Tooltip on top</div>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> Tooltip on left</button>
+//
+// Styleguide 4.1
+
+// Interactive demo
+//
+// SALUT
+//
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> Tooltip on left</button>
+//
+// Styleguide 4.2
 
 .tooltip {
     &.tooltip-top,

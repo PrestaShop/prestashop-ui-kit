@@ -24,13 +24,17 @@
     "gulp-csslint": "^0.2.0",
     "gulp-cssnano": "^2.0.0",
     "gulp-dedupe": "0.0.2",
+    "gulp-kss": "git+https://github.com/kedruff/gulp-kss.git",
     "gulp-minify-css": "^1.2.3",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "~0.5.4",
     "gulp-sass": "~2.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.5",
+    "marked": "^0.3.5",
     "node-sass": "^3.4.2",
+    "sassdoc": "^2.1.19",
     "tether": "^1.1.1"
   }
 }

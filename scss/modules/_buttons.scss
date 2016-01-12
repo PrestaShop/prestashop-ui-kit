@@ -1,8 +1,57 @@
-// ==========================================================================
 // Buttons
-// ==========================================================================
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 2
 
-// Alternate buttons
+// Base styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Primary</button>
+// <button type="button" class="btn btn-secondary">Secondary</button>
+// <button type="button" class="btn btn-success">Success</button>
+// <button type="button" class="btn btn-warning">Warning</button>
+// <button type="button" class="btn btn-link">Link</button>
+//
+// Styleguide 2.1
+
+// Outline Styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary-outline">Primary</button>
+// <button type="button" class="btn btn-secondary-outline">Secondary</button>
+// <button type="button" class="btn btn-success-outline">Success</button>
+// <button type="button" class="btn btn-warning-outline">Warning</button>
+//
+// Styleguide 2.2
+
+// Sizes
+//
+// Add .btn-lg or .btn-sm for additional sizes.
+//
+// .btn-lg      - Active state.
+// .btn-sm      - Active state.
+// .btn-block      - Active state.
+//
+// Markup:
+// <button type="button" class="btn btn-primary {{modifier_class}}">Button</button>
+// <button type="button" class="btn btn-secondary {{modifier_class}}">Button</button>
+//
+// Styleguide 2.3
+
+// States
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Button</button>
+// <button type="button" class="btn btn-primary">Button</button>
+// <button type="button" class="btn btn-primary active">Button</button>
+// <button type="button" class="btn btn-primary disabled">Button</button>
+//
+// Styleguide 2.4
+
+// Core
+
 .btn-primary {
   @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }

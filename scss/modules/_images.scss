@@ -1,8 +1,16 @@
-// ==========================================================================
 // Images
-// ==========================================================================
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 3
 
-.ps-banner-hori {
+// Shapes
+//
+// Styleguide 3.1
+
+
+.banner-hori {
     width: $banner-hori-x;
     height: $banner-hori-y;
 }

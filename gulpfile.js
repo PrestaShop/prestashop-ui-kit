@@ -1,15 +1,17 @@
 'use strict';
 
-var gulp           = require('gulp');
-var sass           = require('node-sass');
-var scss           = require('gulp-sass');
-var purge          = require('gulp-css-purge');
+var gulp      = require('gulp');
+var sass      = require('node-sass');
+var scss      = require('gulp-sass');
+var purge     = require('gulp-css-purge');
 var concatCss = require('gulp-concat-css');
-var nano           = require('gulp-cssnano');
-var util           = require('gulp-util');
-var csslint        = require('gulp-csslint');
-var rename         = require('gulp-rename');
-var clean          = require('gulp-clean');
+var nano      = require('gulp-cssnano');
+var util      = require('gulp-util');
+var csslint   = require('gulp-csslint');
+var rename    = require('gulp-rename');
+var clean     = require('gulp-clean');
+var gulpkss   = require('gulp-kss-druff');
+
 // var sourcemaps  = require('gulp-sourcemaps');
 var config         = {
     name           : 'prestakit',
@@ -17,6 +19,7 @@ var config         = {
     scssIndex      : __dirname + '/scss/application.scss',
     jsIndex        : __dirname + '/js/.js',
     scssPattern    : __dirname + '/scss/**/*.scss',
+    tplPattern     : __dirname + '/template/index.html',
     cssPattern     : __dirname + '/dist/css/*.css',
     nodeModulesDir : __dirname + '/node_modules',
     fontDir        : __dirname + '/fonts',
@@ -31,8 +34,36 @@ var root_css = [
     'dist/css/application.css'
 ];
 
-gulp.task('default', ['scss', 'js', 'css:minify']);
- 
+gulp.task('styleguide', function() {
+    gulp.src('scss/**/*.scss')
+        .pipe(gulpkss({
+            template: 'template/',
+            multiline: true,
+            typos: false,
+            custom: [],
+            helpers: '',
+            css: [],
+            js: [],
+            homepage: __dirname + '/doc/styleguide.md'
+        }))
+        .pipe(gulp.dest(config.dist + '/docs'));
+
+    gulp.src('scss/**/*.scss')
+        .pipe(scss({
+            includePaths : [config.nodeModulesDir]
+        }).on('error', scss.logError))
+        .pipe(rename({
+            basename: 'style',
+            extname: '.css'
+        }))
+        .pipe(gulp.dest(config.dist + '/docs/public'));
+
+    gulp.src('template/public/kss.css')
+        .pipe(gulp.dest(config.dist + '/docs/public'));
+});
+
+gulp.task('default', ['scss', 'js', 'css:minify', 'styleguide']);
+
 gulp.task('scss', function () {
     return gulp.src(root_scss)
     // init sourcemaps
@@ -60,7 +91,8 @@ gulp.task('js', function () {
 });
 
 gulp.task('scss:watch', function () {
-    return gulp.watch(config.scssPattern, ['scss', 'js']);
+    gulp.watch(config.scssPattern, ['scss', 'js', 'styleguide']);
+    gulp.watch(config.tplPattern, ['scss', 'js', 'styleguide']);
 });
 
 gulp.task('css:minify', ['scss'], function () {

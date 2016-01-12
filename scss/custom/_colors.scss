@@ -1,0 +1,84 @@
+// Colors
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 1
+
+// Palette
+//
+// Visual identity & branding colors
+//
+// Markup:
+// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="dark-grey"></div><pre><b>Dark-grey:</b> #25B9D7</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
+//
+// Styleguide 1.1
+
+.primary {
+    @include ps-color($primary);
+}
+
+.primary-hover {
+    @include ps-color($primary-hover);
+}
+
+.secondary {
+    @include ps-color($secondary);
+}
+
+.secondary-hover {
+    @include ps-color($secondary-hover);
+}
+
+.dark-grey {
+    @include ps-color($dark-grey);
+}
+
+.medium-grey {
+    @include ps-color($medium-grey);
+}
+
+.light-grey {
+    @include ps-color($light-grey);
+}
+
+.soft-grey {
+    @include ps-color($soft-grey);
+}
+
+.white {
+    @include ps-color($white);
+}
+
+.notice {
+    @include ps-color($notice);
+}
+
+.success {
+    @include ps-color($success);
+}
+
+.success-hover {
+    @include ps-color($success-hover);
+}
+
+.warming {
+    @include ps-color($warning);
+}
+
+.warning-hover {
+    @include ps-color($warning-hover);
+}

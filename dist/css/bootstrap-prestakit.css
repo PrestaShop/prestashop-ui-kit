@@ -1474,7 +1474,7 @@
   .bootstrap4 a.btn.disabled,
   .bootstrap4 fieldset[disabled] a.btn {
     pointer-events: none; }
-  .bootstrap4 .btn-primary {
+  .bootstrap4 .btn-primary, .bootstrap4 .btn.btn-primary {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8; }
@@ -3948,7 +3948,7 @@
   @media print {
     .bootstrap4 .hidden-print {
       display: none !important; } }
-  .bootstrap4 .btn-primary {
+  .bootstrap4 .btn-primary, .bootstrap4 .btn.btn-primary {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8; }

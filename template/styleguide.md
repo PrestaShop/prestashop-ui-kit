@@ -1,4 +1,4 @@
-PrestaShop UI KIT
+PSUI
 =================
 
 This is a **template** for [kss-node](https://github.com/kss-node/kss-node) styleguide.

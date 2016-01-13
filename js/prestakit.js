@@ -6,4 +6,7 @@
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
+    $('.tooltip-error').tooltip({
+        template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
+    });
 });

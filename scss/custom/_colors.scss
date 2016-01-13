@@ -3,29 +3,29 @@
 // Button styles can be applied to anything with the `.btn` class applied.
 // However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 //
-// Styleguide 1
+// Styleguide 2
 
 // Palette
 //
 // Visual identity & branding colors
 //
 // Markup:
-// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="dark-grey"></div><pre><b>Dark-grey:</b> #25B9D7</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> #FFBB00</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> #FFD100</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> #25B9D7</pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> #3ED2F0</pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary"></div><pre><b>Primary:</b> <small>#25B9D7</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>Primary hover:</b> <small>#3ED2F0</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>Secondary:</b> <small>#FFBB00</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>Secondary hover:</b> <small>#FFD100</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="dark-grey"></div><pre><b>Dark-grey:</b> <small>#25B9D7</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="medium-grey"></div><pre><b>Medium-grey:</b> <small>#3ED2F0</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="light-grey"></div><pre><b>Light-grey:</b> <small>#FFBB00</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="soft-grey"></div><pre><b>Soft-grey:</b> <small>#FFD100</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="white"></div><pre><b>White:</b> <small>#25B9D7</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="notice"></div><pre><b>Notice:</b> <small>#3ED2F0</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="success"></div><pre><b>Success:</b> <small>#FFBB00</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="success-hover"></div><pre><b>Success-hover:</b> <small>#FFD100</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="warning"></div><pre><b>Warning:</b> <small>#25B9D7</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="warning-hover"></div><pre><b>Warning-hover:</b> <small>#3ED2F0</small></pre></div>
 //
-// Styleguide 1.1
+// Styleguide 2.1
 
 .primary {
     @include ps-color($primary);
@@ -75,7 +75,7 @@
     @include ps-color($success-hover);
 }
 
-.warming {
+.warning {
     @include ps-color($warning);
 }
 

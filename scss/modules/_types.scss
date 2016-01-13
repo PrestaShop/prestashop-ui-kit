@@ -1,3 +1,28 @@
+// Content
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 1
+
+// Headings and paragraphs
+//
+// h1 - h1 heading
+// h2 - h2 heading
+// h3 - h3 heading
+// h4 - h4 heading
+//
+// Markup:
+// <{{modifier_class}}>{{modifier_class}} heading</{{modifier_class}}>
+//
+// Styleguide 1.1
+
+// Lists
+//
+//
+// Styleguide 1.2
+
+
 h1 {
     font-weight : $font-weight-h1;
     color       : $font-color-h1;

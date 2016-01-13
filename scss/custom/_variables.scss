@@ -83,17 +83,23 @@ $tooltip-bg: #95a7ad !default;
 
 // Typography
 
+$font-family-sans-serif:     Open Sans, sans-serif;
+$font-family-serif:          Open Sans, serif;
+$font-family-monospace:      Open Sans, monospace;
+
 $font-family-base: Open Sans, sans-serif;
+
+
 
 $headings-font-family : $font-family-base;
 
 /* $font-size-base       : em(14px); */
 
-$font-size-h1         : em(24px);
-$font-size-h2         : em(16px);
-$font-size-h3         : em(14px);
-$font-size-h4         : em(14px);
-$font-size-paragraph  : em(14px);
+$font-size-h1         : 24px;
+$font-size-h2         : 16px;
+$font-size-h3         : 14px;
+$font-size-h4         : 14px;
+$font-size-paragraph  : 14px;
 
 
 $font-color-h1        : $dark-grey;

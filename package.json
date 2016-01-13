@@ -10,6 +10,9 @@
         "prestashop",
         "uikit"
     ],
+    "scripts": {
+        "postinstall" : "ln -f -s `pwd`/node_modules/bootstrap `pwd`/scss/bootsrtap"
+    },
     "author": "PrestaShop",
     "license": "PrestaShop SA",
     "bugs": {

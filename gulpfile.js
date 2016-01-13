@@ -7,6 +7,7 @@ var scss           = require('gulp-sass');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
+var sourcemaps     = require('gulp-sourcemaps');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
 // var sourcemaps  = require('gulp-sourcemaps');
@@ -35,13 +36,13 @@ gulp.task('default', ['scss', 'js', 'css:minify']);
 gulp.task('scss', function () {
     return gulp.src(root_scss)
     // init sourcemaps
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
     // build scss
         .pipe(scss({
             includePaths : [config.nodeModulesDir]
         }).on('error', scss.logError))
     // maps
-        // .pipe(sourcemaps.write('./maps'))
+        .pipe(sourcemaps.write('./maps'))
     // export
         .pipe(rename({
             prefix: 'bootstrap-',

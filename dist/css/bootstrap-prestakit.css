@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,800);
 /* $font-size-base       : em(14px); */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -357,6 +358,7 @@ output {
   /* .btn.btn-primary { */
   /*     @extend .btn-primary; */
   /* } */
+  /* @import 'colors'; */
   /* .tooltip { */
   /*     &.bs-tether-element-attached-bottom { */
   /*         .tooltip-inner { */
@@ -4702,75 +4704,5 @@ output {
     color: #c45c67; }
   .bootstrap.ui4 .tooltip-error .tooltip-arrow {
     border-top-color: #efc8cb !important; }
-  .bootstrap.ui4 .primary {
-    background-color: #25B9D7;
-    color: white; }
-    .bootstrap.ui4 .primary:hover {
-      background-color: #25B9D7; }
-  .bootstrap.ui4 .primary-hover {
-    background-color: #3ED2F0;
-    color: white; }
-    .bootstrap.ui4 .primary-hover:hover {
-      background-color: #3ED2F0; }
-  .bootstrap.ui4 .secondary {
-    background-color: #FFBB00;
-    color: white; }
-    .bootstrap.ui4 .secondary:hover {
-      background-color: #FFBB00; }
-  .bootstrap.ui4 .secondary-hover {
-    background-color: #FFD100;
-    color: white; }
-    .bootstrap.ui4 .secondary-hover:hover {
-      background-color: #FFD100; }
-  .bootstrap.ui4 .dark-grey {
-    background-color: #363A41;
-    color: white; }
-    .bootstrap.ui4 .dark-grey:hover {
-      background-color: #363A41; }
-  .bootstrap.ui4 .medium-grey {
-    background-color: #6C868E;
-    color: white; }
-    .bootstrap.ui4 .medium-grey:hover {
-      background-color: #6C868E; }
-  .bootstrap.ui4 .light-grey {
-    background-color: #BBCDD2;
-    color: white; }
-    .bootstrap.ui4 .light-grey:hover {
-      background-color: #BBCDD2; }
-  .bootstrap.ui4 .soft-grey {
-    background-color: #FAFBFC;
-    color: white; }
-    .bootstrap.ui4 .soft-grey:hover {
-      background-color: #FAFBFC; }
-  .bootstrap.ui4 .white {
-    background-color: #FFFFFF;
-    color: white; }
-    .bootstrap.ui4 .white:hover {
-      background-color: #FFFFFF; }
-  .bootstrap.ui4 .notice {
-    background-color: #DFF5F9;
-    color: white; }
-    .bootstrap.ui4 .notice:hover {
-      background-color: #DFF5F9; }
-  .bootstrap.ui4 .success {
-    background-color: #78D07D;
-    color: white; }
-    .bootstrap.ui4 .success:hover {
-      background-color: #78D07D; }
-  .bootstrap.ui4 .success-hover {
-    background-color: #70B580;
-    color: white; }
-    .bootstrap.ui4 .success-hover:hover {
-      background-color: #70B580; }
-  .bootstrap.ui4 .warning {
-    background-color: #C45C67;
-    color: white; }
-    .bootstrap.ui4 .warning:hover {
-      background-color: #C45C67; }
-  .bootstrap.ui4 .warning-hover {
-    background-color: #EFC8CB;
-    color: white; }
-    .bootstrap.ui4 .warning-hover:hover {
-      background-color: #EFC8CB; }
 
 /*# sourceMappingURL=maps/application.css.map */

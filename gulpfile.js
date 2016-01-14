@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp           = require('gulp');
-var sass           = require('node-sass');
 var scss           = require('gulp-sass');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
@@ -35,7 +34,9 @@ var root_css = [
 ];
 
 gulp.task('styleguide', function() {
-    gulp.src('scss/**/*.scss')
+    gulp.src(['scss/custom/**/*.scss',
+              'scss/mixins/**/*.scss',
+              'scss/modules/**/*.scss'])
         .pipe(gulpkss({
             template: 'template/',
             multiline: true,
@@ -62,14 +63,14 @@ gulp.task('styleguide', function() {
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
-gulp.task('default', ['scss', 'js', 'img', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'img', 'css:minify']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
     // init sourcemaps
         .pipe(sourcemaps.init())
     // build scss
-        .pipe(scss({
+        .pipe(scss.sync({
             includePaths : [config.nodeModulesDir]
         }).on('error', scss.logError))
     // maps
@@ -100,11 +101,6 @@ gulp.task('scss:watch', function () {
     gulp.watch(config.scssPattern, ['scss', 'js', 'img', 'styleguide']);
     gulp.watch(config.tplPattern, ['scss', 'js', 'img', 'styleguide']);
     //gulp.watch(config.jsPattern, ['scss', 'js', 'img', 'styleguide']);
-});
-
-gulp.task('scss:doc', function () {
-    return gulp.src(config.nodeModulesDir + 'bootstrap/scss/**/*.scss')
-        .pipe(sassdoc());
 });
 
 gulp.task('css:minify', ['scss'], function () {

@@ -1,4 +1,352 @@
 /* $font-size-base       : em(14px); */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active {
+  outline: 0; }
+
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1, .bootstrap.ui4 .h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+@-moz-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-webkit-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373a3c;
+  background-color: #fff; }
+
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+h1, .bootstrap.ui4 .h1, h2, .bootstrap.ui4 .h2, h3, .bootstrap.ui4 .h3, h4, .bootstrap.ui4 .h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #818a91; }
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit; }
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; }
+
+blockquote {
+  margin: 0 0 1rem; }
+
+a {
+  color: #0275d8;
+  text-decoration: none; }
+  a:focus, a:hover {
+    color: #014c8c;
+    text-decoration: underline; }
+  a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+figure {
+  margin: 0 0 1rem; }
+
+img {
+  vertical-align: middle; }
+
+[role="button"] {
+  cursor: pointer; }
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation; }
+
+table {
+  background-color: transparent; }
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #818a91;
+  text-align: left;
+  caption-side: bottom; }
+
+th {
+  text-align: left; }
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem; }
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0; }
+
+textarea {
+  resize: vertical; }
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit; }
+
+input[type="search"] {
+  box-sizing: inherit;
+  -webkit-appearance: none; }
+
+output {
+  display: inline-block; }
+
+[hidden] {
+  display: none !important; }
+
 .bootstrap.ui4 {
   /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
@@ -6,6 +354,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+  /* .btn.btn-primary { */
+  /*     @extend .btn-primary; */
+  /* } */
   /* .tooltip { */
   /*     &.bs-tether-element-attached-bottom-left { */
   /*         .tooltip-arrow { */
@@ -1474,7 +1825,7 @@
   .bootstrap.ui4 a.btn.disabled,
   .bootstrap.ui4 fieldset[disabled] a.btn {
     pointer-events: none; }
-  .bootstrap.ui4 .btn-primary, .bootstrap.ui4 .btn.btn-primary {
+  .bootstrap.ui4 .btn-primary {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8; }
@@ -3948,359 +4299,359 @@
   @media print {
     .bootstrap.ui4 .hidden-print {
       display: none !important; } }
-  .bootstrap.ui4 .btn.btn-primary {
+  .bootstrap.ui4 .btn-primary {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8; }
-    .bootstrap.ui4 .btn.btn-primary:hover {
+    .bootstrap.ui4 .btn-primary:hover {
       color: #fff;
       background-color: #025aa5;
       border-color: #01549b; }
-    .bootstrap.ui4 .btn.btn-primary:focus, .bootstrap.ui4 .btn.focus.btn-primary {
+    .bootstrap.ui4 .btn-primary:focus, .bootstrap.ui4 .btn-primary.focus {
       color: #fff;
       background-color: #025aa5;
       border-color: #01549b; }
-    .bootstrap.ui4 .btn.btn-primary:active, .bootstrap.ui4 .btn.active.btn-primary,
-    .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-primary {
+    .bootstrap.ui4 .btn-primary:active, .bootstrap.ui4 .btn-primary.active,
+    .open > .bootstrap.ui4 .btn-primary.dropdown-toggle {
       color: #fff;
       background-color: #025aa5;
       border-color: #01549b;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-primary:active:hover, .bootstrap.ui4 .btn.btn-primary:active:focus, .bootstrap.ui4 .btn.btn-primary:active.focus, .bootstrap.ui4 .btn.active.btn-primary:hover, .bootstrap.ui4 .btn.active.btn-primary:focus, .bootstrap.ui4 .btn.active.focus.btn-primary,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-primary:hover,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-primary:focus,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.focus.btn-primary {
+      .bootstrap.ui4 .btn-primary:active:hover, .bootstrap.ui4 .btn-primary:active:focus, .bootstrap.ui4 .btn-primary:active.focus, .bootstrap.ui4 .btn-primary.active:hover, .bootstrap.ui4 .btn-primary.active:focus, .bootstrap.ui4 .btn-primary.active.focus,
+      .open > .bootstrap.ui4 .btn-primary.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-primary.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-primary.dropdown-toggle.focus {
         color: #fff;
         background-color: #014682;
         border-color: #01315a; }
-    .bootstrap.ui4 .btn.disabled.btn-primary:focus, .bootstrap.ui4 .btn.disabled.focus.btn-primary, .bootstrap.ui4 .btn.btn-primary:disabled:focus, .bootstrap.ui4 .btn.btn-primary:disabled.focus {
+    .bootstrap.ui4 .btn-primary.disabled:focus, .bootstrap.ui4 .btn-primary.disabled.focus, .bootstrap.ui4 .btn-primary:disabled:focus, .bootstrap.ui4 .btn-primary:disabled.focus {
       background-color: #0275d8;
       border-color: #0275d8; }
-    .bootstrap.ui4 .btn.disabled.btn-primary:hover, .bootstrap.ui4 .btn.btn-primary:disabled:hover {
+    .bootstrap.ui4 .btn-primary.disabled:hover, .bootstrap.ui4 .btn-primary:disabled:hover {
       background-color: #0275d8;
       border-color: #0275d8; }
-    .bootstrap.ui4 .btn.btn-primary:hover {
+    .bootstrap.ui4 .btn-primary:hover {
       color: #fff;
       background-color: #068bfd;
       border-color: #068bfd; }
-  .bootstrap.ui4 .btn.btn-secondary, .bootstrap.ui4 .btn.btn-default, .bootstrap.ui4 .dropdown button.btn {
+  .bootstrap.ui4 .btn-secondary, .bootstrap.ui4 .btn-default, .bootstrap.ui4 .dropdown button {
     color: #373a3c;
     background-color: #fff;
     border-color: #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary:hover, .bootstrap.ui4 .btn.btn-default:hover, .bootstrap.ui4 .dropdown button.btn:hover {
+    .bootstrap.ui4 .btn-secondary:hover, .bootstrap.ui4 .btn-default:hover, .bootstrap.ui4 .dropdown button:hover {
       color: #373a3c;
       background-color: #e6e6e6;
       border-color: #adadad; }
-    .bootstrap.ui4 .btn.btn-secondary:focus, .bootstrap.ui4 .btn.btn-default:focus, .bootstrap.ui4 .dropdown button.btn:focus, .bootstrap.ui4 .btn.btn-secondary.focus, .bootstrap.ui4 .btn.focus.btn-default, .bootstrap.ui4 .dropdown button.btn.focus {
+    .bootstrap.ui4 .btn-secondary:focus, .bootstrap.ui4 .btn-default:focus, .bootstrap.ui4 .dropdown button:focus, .bootstrap.ui4 .btn-secondary.focus, .bootstrap.ui4 .focus.btn-default, .bootstrap.ui4 .dropdown button.focus {
       color: #373a3c;
       background-color: #e6e6e6;
       border-color: #adadad; }
-    .bootstrap.ui4 .btn.btn-secondary:active, .bootstrap.ui4 .btn.btn-default:active, .bootstrap.ui4 .dropdown button.btn:active, .bootstrap.ui4 .btn.btn-secondary.active, .bootstrap.ui4 .btn.active.btn-default, .bootstrap.ui4 .dropdown button.btn.active,
-    .open > .bootstrap.ui4 .btn.btn-secondary.dropdown-toggle,
-    .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-default,
-    .open > .bootstrap.ui4 .dropdown button.btn.dropdown-toggle {
+    .bootstrap.ui4 .btn-secondary:active, .bootstrap.ui4 .btn-default:active, .bootstrap.ui4 .dropdown button:active, .bootstrap.ui4 .btn-secondary.active, .bootstrap.ui4 .active.btn-default, .bootstrap.ui4 .dropdown button.active,
+    .open > .bootstrap.ui4 .btn-secondary.dropdown-toggle,
+    .open > .bootstrap.ui4 .dropdown-toggle.btn-default,
+    .open > .bootstrap.ui4 .dropdown button.dropdown-toggle {
       color: #373a3c;
       background-color: #e6e6e6;
       border-color: #adadad;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-secondary:active:hover, .bootstrap.ui4 .btn.btn-default:active:hover, .bootstrap.ui4 .dropdown button.btn:active:hover, .bootstrap.ui4 .btn.btn-secondary:active:focus, .bootstrap.ui4 .btn.btn-default:active:focus, .bootstrap.ui4 .dropdown button.btn:active:focus, .bootstrap.ui4 .btn.btn-secondary:active.focus, .bootstrap.ui4 .btn.btn-default:active.focus, .bootstrap.ui4 .dropdown button.btn:active.focus, .bootstrap.ui4 .btn.btn-secondary.active:hover, .bootstrap.ui4 .btn.active.btn-default:hover, .bootstrap.ui4 .dropdown button.btn.active:hover, .bootstrap.ui4 .btn.btn-secondary.active:focus, .bootstrap.ui4 .btn.active.btn-default:focus, .bootstrap.ui4 .dropdown button.btn.active:focus, .bootstrap.ui4 .btn.btn-secondary.active.focus, .bootstrap.ui4 .btn.active.focus.btn-default, .bootstrap.ui4 .dropdown button.btn.active.focus,
-      .open > .bootstrap.ui4 .btn.btn-secondary.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-default:hover,
-      .open > .bootstrap.ui4 .dropdown button.btn.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.btn-secondary.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.btn-default:focus,
-      .open > .bootstrap.ui4 .dropdown button.btn.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.btn-secondary.dropdown-toggle.focus,
-      .open > .bootstrap.ui4 .btn.dropdown-toggle.focus.btn-default,
-      .open > .bootstrap.ui4 .dropdown button.btn.dropdown-toggle.focus {
+      .bootstrap.ui4 .btn-secondary:active:hover, .bootstrap.ui4 .btn-default:active:hover, .bootstrap.ui4 .dropdown button:active:hover, .bootstrap.ui4 .btn-secondary:active:focus, .bootstrap.ui4 .btn-default:active:focus, .bootstrap.ui4 .dropdown button:active:focus, .bootstrap.ui4 .btn-secondary:active.focus, .bootstrap.ui4 .btn-default:active.focus, .bootstrap.ui4 .dropdown button:active.focus, .bootstrap.ui4 .btn-secondary.active:hover, .bootstrap.ui4 .active.btn-default:hover, .bootstrap.ui4 .dropdown button.active:hover, .bootstrap.ui4 .btn-secondary.active:focus, .bootstrap.ui4 .active.btn-default:focus, .bootstrap.ui4 .dropdown button.active:focus, .bootstrap.ui4 .btn-secondary.active.focus, .bootstrap.ui4 .active.focus.btn-default, .bootstrap.ui4 .dropdown button.active.focus,
+      .open > .bootstrap.ui4 .btn-secondary.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .dropdown-toggle.btn-default:hover,
+      .open > .bootstrap.ui4 .dropdown button.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-secondary.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .dropdown-toggle.btn-default:focus,
+      .open > .bootstrap.ui4 .dropdown button.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-secondary.dropdown-toggle.focus,
+      .open > .bootstrap.ui4 .dropdown-toggle.focus.btn-default,
+      .open > .bootstrap.ui4 .dropdown button.dropdown-toggle.focus {
         color: #373a3c;
         background-color: #d4d4d4;
         border-color: #8c8c8c; }
-    .bootstrap.ui4 .btn.btn-secondary.disabled:focus, .bootstrap.ui4 .btn.disabled.btn-default:focus, .bootstrap.ui4 .dropdown button.btn.disabled:focus, .bootstrap.ui4 .btn.btn-secondary.disabled.focus, .bootstrap.ui4 .btn.disabled.focus.btn-default, .bootstrap.ui4 .dropdown button.btn.disabled.focus, .bootstrap.ui4 .btn.btn-secondary:disabled:focus, .bootstrap.ui4 .btn.btn-default:disabled:focus, .bootstrap.ui4 .dropdown button.btn:disabled:focus, .bootstrap.ui4 .btn.btn-secondary:disabled.focus, .bootstrap.ui4 .btn.btn-default:disabled.focus, .bootstrap.ui4 .dropdown button.btn:disabled.focus {
+    .bootstrap.ui4 .btn-secondary.disabled:focus, .bootstrap.ui4 .disabled.btn-default:focus, .bootstrap.ui4 .dropdown button.disabled:focus, .bootstrap.ui4 .btn-secondary.disabled.focus, .bootstrap.ui4 .disabled.focus.btn-default, .bootstrap.ui4 .dropdown button.disabled.focus, .bootstrap.ui4 .btn-secondary:disabled:focus, .bootstrap.ui4 .btn-default:disabled:focus, .bootstrap.ui4 .dropdown button:disabled:focus, .bootstrap.ui4 .btn-secondary:disabled.focus, .bootstrap.ui4 .btn-default:disabled.focus, .bootstrap.ui4 .dropdown button:disabled.focus {
       background-color: #fff;
       border-color: #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary.disabled:hover, .bootstrap.ui4 .btn.disabled.btn-default:hover, .bootstrap.ui4 .dropdown button.btn.disabled:hover, .bootstrap.ui4 .btn.btn-secondary:disabled:hover, .bootstrap.ui4 .btn.btn-default:disabled:hover, .bootstrap.ui4 .dropdown button.btn:disabled:hover {
+    .bootstrap.ui4 .btn-secondary.disabled:hover, .bootstrap.ui4 .disabled.btn-default:hover, .bootstrap.ui4 .dropdown button.disabled:hover, .bootstrap.ui4 .btn-secondary:disabled:hover, .bootstrap.ui4 .btn-default:disabled:hover, .bootstrap.ui4 .dropdown button:disabled:hover {
       background-color: #fff;
       border-color: #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary:hover, .bootstrap.ui4 .btn.btn-default:hover, .bootstrap.ui4 .dropdown button.btn:hover {
+    .bootstrap.ui4 .btn-secondary:hover, .bootstrap.ui4 .btn-default:hover, .bootstrap.ui4 .dropdown button:hover {
       color: #373a3c;
       background-color: white;
       border-color: #e0e0e0; }
-  .bootstrap.ui4 .btn.btn-info {
+  .bootstrap.ui4 .btn-info {
     color: #fff;
     background-color: #5bc0de;
     border-color: #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info:hover {
+    .bootstrap.ui4 .btn-info:hover {
       color: #fff;
       background-color: #31b0d5;
       border-color: #2aabd2; }
-    .bootstrap.ui4 .btn.btn-info:focus, .bootstrap.ui4 .btn.btn-info.focus {
+    .bootstrap.ui4 .btn-info:focus, .bootstrap.ui4 .btn-info.focus {
       color: #fff;
       background-color: #31b0d5;
       border-color: #2aabd2; }
-    .bootstrap.ui4 .btn.btn-info:active, .bootstrap.ui4 .btn.btn-info.active,
-    .open > .bootstrap.ui4 .btn.btn-info.dropdown-toggle {
+    .bootstrap.ui4 .btn-info:active, .bootstrap.ui4 .btn-info.active,
+    .open > .bootstrap.ui4 .btn-info.dropdown-toggle {
       color: #fff;
       background-color: #31b0d5;
       border-color: #2aabd2;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-info:active:hover, .bootstrap.ui4 .btn.btn-info:active:focus, .bootstrap.ui4 .btn.btn-info:active.focus, .bootstrap.ui4 .btn.btn-info.active:hover, .bootstrap.ui4 .btn.btn-info.active:focus, .bootstrap.ui4 .btn.btn-info.active.focus,
-      .open > .bootstrap.ui4 .btn.btn-info.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.btn-info.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.btn-info.dropdown-toggle.focus {
+      .bootstrap.ui4 .btn-info:active:hover, .bootstrap.ui4 .btn-info:active:focus, .bootstrap.ui4 .btn-info:active.focus, .bootstrap.ui4 .btn-info.active:hover, .bootstrap.ui4 .btn-info.active:focus, .bootstrap.ui4 .btn-info.active.focus,
+      .open > .bootstrap.ui4 .btn-info.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-info.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-info.dropdown-toggle.focus {
         color: #fff;
         background-color: #269abc;
         border-color: #1f7e9a; }
-    .bootstrap.ui4 .btn.btn-info.disabled:focus, .bootstrap.ui4 .btn.btn-info.disabled.focus, .bootstrap.ui4 .btn.btn-info:disabled:focus, .bootstrap.ui4 .btn.btn-info:disabled.focus {
+    .bootstrap.ui4 .btn-info.disabled:focus, .bootstrap.ui4 .btn-info.disabled.focus, .bootstrap.ui4 .btn-info:disabled:focus, .bootstrap.ui4 .btn-info:disabled.focus {
       background-color: #5bc0de;
       border-color: #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info.disabled:hover, .bootstrap.ui4 .btn.btn-info:disabled:hover {
+    .bootstrap.ui4 .btn-info.disabled:hover, .bootstrap.ui4 .btn-info:disabled:hover {
       background-color: #5bc0de;
       border-color: #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info:hover {
+    .bootstrap.ui4 .btn-info:hover {
       color: #fff;
       background-color: #7dcde5;
       border-color: #7dcde5; }
-  .bootstrap.ui4 .btn.btn-success {
+  .bootstrap.ui4 .btn-success {
     color: #fff;
     background-color: #5cb85c;
     border-color: #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success:hover {
+    .bootstrap.ui4 .btn-success:hover {
       color: #fff;
       background-color: #449d44;
       border-color: #419641; }
-    .bootstrap.ui4 .btn.btn-success:focus, .bootstrap.ui4 .btn.btn-success.focus {
+    .bootstrap.ui4 .btn-success:focus, .bootstrap.ui4 .btn-success.focus {
       color: #fff;
       background-color: #449d44;
       border-color: #419641; }
-    .bootstrap.ui4 .btn.btn-success:active, .bootstrap.ui4 .btn.btn-success.active,
-    .open > .bootstrap.ui4 .btn.btn-success.dropdown-toggle {
+    .bootstrap.ui4 .btn-success:active, .bootstrap.ui4 .btn-success.active,
+    .open > .bootstrap.ui4 .btn-success.dropdown-toggle {
       color: #fff;
       background-color: #449d44;
       border-color: #419641;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-success:active:hover, .bootstrap.ui4 .btn.btn-success:active:focus, .bootstrap.ui4 .btn.btn-success:active.focus, .bootstrap.ui4 .btn.btn-success.active:hover, .bootstrap.ui4 .btn.btn-success.active:focus, .bootstrap.ui4 .btn.btn-success.active.focus,
-      .open > .bootstrap.ui4 .btn.btn-success.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.btn-success.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.btn-success.dropdown-toggle.focus {
+      .bootstrap.ui4 .btn-success:active:hover, .bootstrap.ui4 .btn-success:active:focus, .bootstrap.ui4 .btn-success:active.focus, .bootstrap.ui4 .btn-success.active:hover, .bootstrap.ui4 .btn-success.active:focus, .bootstrap.ui4 .btn-success.active.focus,
+      .open > .bootstrap.ui4 .btn-success.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-success.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-success.dropdown-toggle.focus {
         color: #fff;
         background-color: #398439;
         border-color: #2d672d; }
-    .bootstrap.ui4 .btn.btn-success.disabled:focus, .bootstrap.ui4 .btn.btn-success.disabled.focus, .bootstrap.ui4 .btn.btn-success:disabled:focus, .bootstrap.ui4 .btn.btn-success:disabled.focus {
+    .bootstrap.ui4 .btn-success.disabled:focus, .bootstrap.ui4 .btn-success.disabled.focus, .bootstrap.ui4 .btn-success:disabled:focus, .bootstrap.ui4 .btn-success:disabled.focus {
       background-color: #5cb85c;
       border-color: #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success.disabled:hover, .bootstrap.ui4 .btn.btn-success:disabled:hover {
+    .bootstrap.ui4 .btn-success.disabled:hover, .bootstrap.ui4 .btn-success:disabled:hover {
       background-color: #5cb85c;
       border-color: #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success:hover {
+    .bootstrap.ui4 .btn-success:hover {
       color: #fff;
       background-color: #78c478;
       border-color: #78c478; }
-  .bootstrap.ui4 .btn.btn-warning {
+  .bootstrap.ui4 .btn-warning {
     color: #fff;
     background-color: #f0ad4e;
     border-color: #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning:hover {
+    .bootstrap.ui4 .btn-warning:hover {
       color: #fff;
       background-color: #ec971f;
       border-color: #eb9316; }
-    .bootstrap.ui4 .btn.btn-warning:focus, .bootstrap.ui4 .btn.btn-warning.focus {
+    .bootstrap.ui4 .btn-warning:focus, .bootstrap.ui4 .btn-warning.focus {
       color: #fff;
       background-color: #ec971f;
       border-color: #eb9316; }
-    .bootstrap.ui4 .btn.btn-warning:active, .bootstrap.ui4 .btn.btn-warning.active,
-    .open > .bootstrap.ui4 .btn.btn-warning.dropdown-toggle {
+    .bootstrap.ui4 .btn-warning:active, .bootstrap.ui4 .btn-warning.active,
+    .open > .bootstrap.ui4 .btn-warning.dropdown-toggle {
       color: #fff;
       background-color: #ec971f;
       border-color: #eb9316;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-warning:active:hover, .bootstrap.ui4 .btn.btn-warning:active:focus, .bootstrap.ui4 .btn.btn-warning:active.focus, .bootstrap.ui4 .btn.btn-warning.active:hover, .bootstrap.ui4 .btn.btn-warning.active:focus, .bootstrap.ui4 .btn.btn-warning.active.focus,
-      .open > .bootstrap.ui4 .btn.btn-warning.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.btn-warning.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.btn-warning.dropdown-toggle.focus {
+      .bootstrap.ui4 .btn-warning:active:hover, .bootstrap.ui4 .btn-warning:active:focus, .bootstrap.ui4 .btn-warning:active.focus, .bootstrap.ui4 .btn-warning.active:hover, .bootstrap.ui4 .btn-warning.active:focus, .bootstrap.ui4 .btn-warning.active.focus,
+      .open > .bootstrap.ui4 .btn-warning.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-warning.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-warning.dropdown-toggle.focus {
         color: #fff;
         background-color: #d58512;
         border-color: #b06d0f; }
-    .bootstrap.ui4 .btn.btn-warning.disabled:focus, .bootstrap.ui4 .btn.btn-warning.disabled.focus, .bootstrap.ui4 .btn.btn-warning:disabled:focus, .bootstrap.ui4 .btn.btn-warning:disabled.focus {
+    .bootstrap.ui4 .btn-warning.disabled:focus, .bootstrap.ui4 .btn-warning.disabled.focus, .bootstrap.ui4 .btn-warning:disabled:focus, .bootstrap.ui4 .btn-warning:disabled.focus {
       background-color: #f0ad4e;
       border-color: #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning.disabled:hover, .bootstrap.ui4 .btn.btn-warning:disabled:hover {
+    .bootstrap.ui4 .btn-warning.disabled:hover, .bootstrap.ui4 .btn-warning:disabled:hover {
       background-color: #f0ad4e;
       border-color: #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning:hover {
+    .bootstrap.ui4 .btn-warning:hover {
       color: #fff;
       background-color: #f3be74;
       border-color: #f3be74; }
-  .bootstrap.ui4 .btn.btn-danger {
+  .bootstrap.ui4 .btn-danger {
     color: #fff;
     background-color: #d9534f;
     border-color: #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger:hover {
+    .bootstrap.ui4 .btn-danger:hover {
       color: #fff;
       background-color: #c9302c;
       border-color: #c12e2a; }
-    .bootstrap.ui4 .btn.btn-danger:focus, .bootstrap.ui4 .btn.btn-danger.focus {
+    .bootstrap.ui4 .btn-danger:focus, .bootstrap.ui4 .btn-danger.focus {
       color: #fff;
       background-color: #c9302c;
       border-color: #c12e2a; }
-    .bootstrap.ui4 .btn.btn-danger:active, .bootstrap.ui4 .btn.btn-danger.active,
-    .open > .bootstrap.ui4 .btn.btn-danger.dropdown-toggle {
+    .bootstrap.ui4 .btn-danger:active, .bootstrap.ui4 .btn-danger.active,
+    .open > .bootstrap.ui4 .btn-danger.dropdown-toggle {
       color: #fff;
       background-color: #c9302c;
       border-color: #c12e2a;
       background-image: none; }
-      .bootstrap.ui4 .btn.btn-danger:active:hover, .bootstrap.ui4 .btn.btn-danger:active:focus, .bootstrap.ui4 .btn.btn-danger:active.focus, .bootstrap.ui4 .btn.btn-danger.active:hover, .bootstrap.ui4 .btn.btn-danger.active:focus, .bootstrap.ui4 .btn.btn-danger.active.focus,
-      .open > .bootstrap.ui4 .btn.btn-danger.dropdown-toggle:hover,
-      .open > .bootstrap.ui4 .btn.btn-danger.dropdown-toggle:focus,
-      .open > .bootstrap.ui4 .btn.btn-danger.dropdown-toggle.focus {
+      .bootstrap.ui4 .btn-danger:active:hover, .bootstrap.ui4 .btn-danger:active:focus, .bootstrap.ui4 .btn-danger:active.focus, .bootstrap.ui4 .btn-danger.active:hover, .bootstrap.ui4 .btn-danger.active:focus, .bootstrap.ui4 .btn-danger.active.focus,
+      .open > .bootstrap.ui4 .btn-danger.dropdown-toggle:hover,
+      .open > .bootstrap.ui4 .btn-danger.dropdown-toggle:focus,
+      .open > .bootstrap.ui4 .btn-danger.dropdown-toggle.focus {
         color: #fff;
         background-color: #ac2925;
         border-color: #8b211e; }
-    .bootstrap.ui4 .btn.btn-danger.disabled:focus, .bootstrap.ui4 .btn.btn-danger.disabled.focus, .bootstrap.ui4 .btn.btn-danger:disabled:focus, .bootstrap.ui4 .btn.btn-danger:disabled.focus {
+    .bootstrap.ui4 .btn-danger.disabled:focus, .bootstrap.ui4 .btn-danger.disabled.focus, .bootstrap.ui4 .btn-danger:disabled:focus, .bootstrap.ui4 .btn-danger:disabled.focus {
       background-color: #d9534f;
       border-color: #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger.disabled:hover, .bootstrap.ui4 .btn.btn-danger:disabled:hover {
+    .bootstrap.ui4 .btn-danger.disabled:hover, .bootstrap.ui4 .btn-danger:disabled:hover {
       background-color: #d9534f;
       border-color: #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger:hover {
+    .bootstrap.ui4 .btn-danger:hover {
       color: #fff;
       background-color: #e07471;
       border-color: #e07471; }
-  .bootstrap.ui4 .btn.btn-primary-outline {
+  .bootstrap.ui4 .btn-primary-outline {
     color: #0275d8;
     background-image: none;
     background-color: transparent;
     border-color: #0275d8;
     border: 0.15em solid #0275d8; }
-    .bootstrap.ui4 .btn.btn-primary-outline:focus, .bootstrap.ui4 .btn.btn-primary-outline.focus, .bootstrap.ui4 .btn.btn-primary-outline:active, .bootstrap.ui4 .btn.btn-primary-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-primary-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-primary-outline:focus, .bootstrap.ui4 .btn-primary-outline.focus, .bootstrap.ui4 .btn-primary-outline:active, .bootstrap.ui4 .btn-primary-outline.active,
+    .open > .bootstrap.ui4 .btn-primary-outline.dropdown-toggle {
       color: #fff;
       background-color: #0275d8;
       border-color: #0275d8; }
-    .bootstrap.ui4 .btn.btn-primary-outline:hover {
+    .bootstrap.ui4 .btn-primary-outline:hover {
       color: #fff;
       background-color: #0275d8;
       border-color: #0275d8; }
-    .bootstrap.ui4 .btn.btn-primary-outline.disabled:focus, .bootstrap.ui4 .btn.btn-primary-outline.disabled.focus, .bootstrap.ui4 .btn.btn-primary-outline:disabled:focus, .bootstrap.ui4 .btn.btn-primary-outline:disabled.focus {
+    .bootstrap.ui4 .btn-primary-outline.disabled:focus, .bootstrap.ui4 .btn-primary-outline.disabled.focus, .bootstrap.ui4 .btn-primary-outline:disabled:focus, .bootstrap.ui4 .btn-primary-outline:disabled.focus {
       border-color: #43a7fd; }
-    .bootstrap.ui4 .btn.btn-primary-outline.disabled:hover, .bootstrap.ui4 .btn.btn-primary-outline:disabled:hover {
+    .bootstrap.ui4 .btn-primary-outline.disabled:hover, .bootstrap.ui4 .btn-primary-outline:disabled:hover {
       border-color: #43a7fd; }
-    .bootstrap.ui4 .btn.btn-primary-outline:hover {
+    .bootstrap.ui4 .btn-primary-outline:hover {
       color: #108ffd;
       background-color: #fff;
       border-color: #108ffd; }
-  .bootstrap.ui4 .btn.btn-secondary-outline {
+  .bootstrap.ui4 .btn-secondary-outline {
     color: #ccc;
     background-image: none;
     background-color: transparent;
     border-color: #ccc;
     border: 0.15em solid #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary-outline:focus, .bootstrap.ui4 .btn.btn-secondary-outline.focus, .bootstrap.ui4 .btn.btn-secondary-outline:active, .bootstrap.ui4 .btn.btn-secondary-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-secondary-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-secondary-outline:focus, .bootstrap.ui4 .btn-secondary-outline.focus, .bootstrap.ui4 .btn-secondary-outline:active, .bootstrap.ui4 .btn-secondary-outline.active,
+    .open > .bootstrap.ui4 .btn-secondary-outline.dropdown-toggle {
       color: #fff;
       background-color: #ccc;
       border-color: #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary-outline:hover {
+    .bootstrap.ui4 .btn-secondary-outline:hover {
       color: #fff;
       background-color: #ccc;
       border-color: #ccc; }
-    .bootstrap.ui4 .btn.btn-secondary-outline.disabled:focus, .bootstrap.ui4 .btn.btn-secondary-outline.disabled.focus, .bootstrap.ui4 .btn.btn-secondary-outline:disabled:focus, .bootstrap.ui4 .btn.btn-secondary-outline:disabled.focus {
+    .bootstrap.ui4 .btn-secondary-outline.disabled:focus, .bootstrap.ui4 .btn-secondary-outline.disabled.focus, .bootstrap.ui4 .btn-secondary-outline:disabled:focus, .bootstrap.ui4 .btn-secondary-outline:disabled.focus {
       border-color: white; }
-    .bootstrap.ui4 .btn.btn-secondary-outline.disabled:hover, .bootstrap.ui4 .btn.btn-secondary-outline:disabled:hover {
+    .bootstrap.ui4 .btn-secondary-outline.disabled:hover, .bootstrap.ui4 .btn-secondary-outline:disabled:hover {
       border-color: white; }
-    .bootstrap.ui4 .btn.btn-secondary-outline:hover {
+    .bootstrap.ui4 .btn-secondary-outline:hover {
       color: #e6e6e6;
       background-color: #fff;
       border-color: #e6e6e6; }
-  .bootstrap.ui4 .btn.btn-info-outline {
+  .bootstrap.ui4 .btn-info-outline {
     color: #5bc0de;
     background-image: none;
     background-color: transparent;
     border-color: #5bc0de;
     border: 0.15em solid #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info-outline:focus, .bootstrap.ui4 .btn.btn-info-outline.focus, .bootstrap.ui4 .btn.btn-info-outline:active, .bootstrap.ui4 .btn.btn-info-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-info-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-info-outline:focus, .bootstrap.ui4 .btn-info-outline.focus, .bootstrap.ui4 .btn-info-outline:active, .bootstrap.ui4 .btn-info-outline.active,
+    .open > .bootstrap.ui4 .btn-info-outline.dropdown-toggle {
       color: #fff;
       background-color: #5bc0de;
       border-color: #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info-outline:hover {
+    .bootstrap.ui4 .btn-info-outline:hover {
       color: #fff;
       background-color: #5bc0de;
       border-color: #5bc0de; }
-    .bootstrap.ui4 .btn.btn-info-outline.disabled:focus, .bootstrap.ui4 .btn.btn-info-outline.disabled.focus, .bootstrap.ui4 .btn.btn-info-outline:disabled:focus, .bootstrap.ui4 .btn.btn-info-outline:disabled.focus {
+    .bootstrap.ui4 .btn-info-outline.disabled:focus, .bootstrap.ui4 .btn-info-outline.disabled.focus, .bootstrap.ui4 .btn-info-outline:disabled:focus, .bootstrap.ui4 .btn-info-outline:disabled.focus {
       border-color: #b0e1ef; }
-    .bootstrap.ui4 .btn.btn-info-outline.disabled:hover, .bootstrap.ui4 .btn.btn-info-outline:disabled:hover {
+    .bootstrap.ui4 .btn-info-outline.disabled:hover, .bootstrap.ui4 .btn-info-outline:disabled:hover {
       border-color: #b0e1ef; }
-    .bootstrap.ui4 .btn.btn-info-outline:hover {
+    .bootstrap.ui4 .btn-info-outline:hover {
       color: #85d0e7;
       background-color: #fff;
       border-color: #85d0e7; }
-  .bootstrap.ui4 .btn.btn-success-outline {
+  .bootstrap.ui4 .btn-success-outline {
     color: #5cb85c;
     background-image: none;
     background-color: transparent;
     border-color: #5cb85c;
     border: 0.15em solid #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success-outline:focus, .bootstrap.ui4 .btn.btn-success-outline.focus, .bootstrap.ui4 .btn.btn-success-outline:active, .bootstrap.ui4 .btn.btn-success-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-success-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-success-outline:focus, .bootstrap.ui4 .btn-success-outline.focus, .bootstrap.ui4 .btn-success-outline:active, .bootstrap.ui4 .btn-success-outline.active,
+    .open > .bootstrap.ui4 .btn-success-outline.dropdown-toggle {
       color: #fff;
       background-color: #5cb85c;
       border-color: #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success-outline:hover {
+    .bootstrap.ui4 .btn-success-outline:hover {
       color: #fff;
       background-color: #5cb85c;
       border-color: #5cb85c; }
-    .bootstrap.ui4 .btn.btn-success-outline.disabled:focus, .bootstrap.ui4 .btn.btn-success-outline.disabled.focus, .bootstrap.ui4 .btn.btn-success-outline:disabled:focus, .bootstrap.ui4 .btn.btn-success-outline:disabled.focus {
+    .bootstrap.ui4 .btn-success-outline.disabled:focus, .bootstrap.ui4 .btn-success-outline.disabled.focus, .bootstrap.ui4 .btn-success-outline:disabled:focus, .bootstrap.ui4 .btn-success-outline:disabled.focus {
       border-color: #a3d7a3; }
-    .bootstrap.ui4 .btn.btn-success-outline.disabled:hover, .bootstrap.ui4 .btn.btn-success-outline:disabled:hover {
+    .bootstrap.ui4 .btn-success-outline.disabled:hover, .bootstrap.ui4 .btn-success-outline:disabled:hover {
       border-color: #a3d7a3; }
-    .bootstrap.ui4 .btn.btn-success-outline:hover {
+    .bootstrap.ui4 .btn-success-outline:hover {
       color: #80c780;
       background-color: #fff;
       border-color: #80c780; }
-  .bootstrap.ui4 .btn.btn-warning-outline {
+  .bootstrap.ui4 .btn-warning-outline {
     color: #f0ad4e;
     background-image: none;
     background-color: transparent;
     border-color: #f0ad4e;
     border: 0.15em solid #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning-outline:focus, .bootstrap.ui4 .btn.btn-warning-outline.focus, .bootstrap.ui4 .btn.btn-warning-outline:active, .bootstrap.ui4 .btn.btn-warning-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-warning-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-warning-outline:focus, .bootstrap.ui4 .btn-warning-outline.focus, .bootstrap.ui4 .btn-warning-outline:active, .bootstrap.ui4 .btn-warning-outline.active,
+    .open > .bootstrap.ui4 .btn-warning-outline.dropdown-toggle {
       color: #fff;
       background-color: #f0ad4e;
       border-color: #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning-outline:hover {
+    .bootstrap.ui4 .btn-warning-outline:hover {
       color: #fff;
       background-color: #f0ad4e;
       border-color: #f0ad4e; }
-    .bootstrap.ui4 .btn.btn-warning-outline.disabled:focus, .bootstrap.ui4 .btn.btn-warning-outline.disabled.focus, .bootstrap.ui4 .btn.btn-warning-outline:disabled:focus, .bootstrap.ui4 .btn.btn-warning-outline:disabled.focus {
+    .bootstrap.ui4 .btn-warning-outline.disabled:focus, .bootstrap.ui4 .btn-warning-outline.disabled.focus, .bootstrap.ui4 .btn-warning-outline:disabled:focus, .bootstrap.ui4 .btn-warning-outline:disabled.focus {
       border-color: #f8d9ac; }
-    .bootstrap.ui4 .btn.btn-warning-outline.disabled:hover, .bootstrap.ui4 .btn.btn-warning-outline:disabled:hover {
+    .bootstrap.ui4 .btn-warning-outline.disabled:hover, .bootstrap.ui4 .btn-warning-outline:disabled:hover {
       border-color: #f8d9ac; }
-    .bootstrap.ui4 .btn.btn-warning-outline:hover {
+    .bootstrap.ui4 .btn-warning-outline:hover {
       color: #f4c37d;
       background-color: #fff;
       border-color: #f4c37d; }
-  .bootstrap.ui4 .btn.btn-danger-outline {
+  .bootstrap.ui4 .btn-danger-outline {
     color: #d9534f;
     background-image: none;
     background-color: transparent;
     border-color: #d9534f;
     border: 0.15em solid #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger-outline:focus, .bootstrap.ui4 .btn.btn-danger-outline.focus, .bootstrap.ui4 .btn.btn-danger-outline:active, .bootstrap.ui4 .btn.btn-danger-outline.active,
-    .open > .bootstrap.ui4 .btn.btn-danger-outline.dropdown-toggle {
+    .bootstrap.ui4 .btn-danger-outline:focus, .bootstrap.ui4 .btn-danger-outline.focus, .bootstrap.ui4 .btn-danger-outline:active, .bootstrap.ui4 .btn-danger-outline.active,
+    .open > .bootstrap.ui4 .btn-danger-outline.dropdown-toggle {
       color: #fff;
       background-color: #d9534f;
       border-color: #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger-outline:hover {
+    .bootstrap.ui4 .btn-danger-outline:hover {
       color: #fff;
       background-color: #d9534f;
       border-color: #d9534f; }
-    .bootstrap.ui4 .btn.btn-danger-outline.disabled:focus, .bootstrap.ui4 .btn.btn-danger-outline.disabled.focus, .bootstrap.ui4 .btn.btn-danger-outline:disabled:focus, .bootstrap.ui4 .btn.btn-danger-outline:disabled.focus {
+    .bootstrap.ui4 .btn-danger-outline.disabled:focus, .bootstrap.ui4 .btn-danger-outline.disabled.focus, .bootstrap.ui4 .btn-danger-outline:disabled:focus, .bootstrap.ui4 .btn-danger-outline:disabled.focus {
       border-color: #eba5a3; }
-    .bootstrap.ui4 .btn.btn-danger-outline.disabled:hover, .bootstrap.ui4 .btn.btn-danger-outline:disabled:hover {
+    .bootstrap.ui4 .btn-danger-outline.disabled:hover, .bootstrap.ui4 .btn-danger-outline:disabled:hover {
       border-color: #eba5a3; }
-    .bootstrap.ui4 .btn.btn-danger-outline:hover {
+    .bootstrap.ui4 .btn-danger-outline:hover {
       color: #e27c79;
       background-color: #fff;
       border-color: #e27c79; }

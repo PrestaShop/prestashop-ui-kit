@@ -39,7 +39,8 @@ gulp.task('scss', function () {
         .pipe(sourcemaps.init())
     // build scss
         .pipe(scss({
-            includePaths : [config.nodeModulesDir]
+            includePaths : [require('node-reset-scss').includePath,
+                            config.nodeModulesDir]
         }).on('error', scss.logError))
     // maps
         .pipe(sourcemaps.write('./maps'))

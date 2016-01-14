@@ -3,46 +3,46 @@
 // ==========================================================================
 
 // Alternate buttons
-.btn {
-    &.btn-primary {
-        @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-    }
-    &.btn-secondary {
-        @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-    }
-    &.btn-info {
-        @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
-    }
-    &.btn-success {
-        @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
-    }
-    &.btn-warning {
-        @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-    }
-    &.btn-danger {
-        @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-    }
 
-    // Remove all backgrounds
-    &.btn-primary-outline {
-        @include ps-button-outline-variant($btn-primary-bg);
-    }
-    &.btn-secondary-outline {
-        @include ps-button-outline-variant($btn-secondary-border);
-    }
-    &.btn-info-outline {
-        @include ps-button-outline-variant($btn-info-bg);
-    }
-    &.btn-success-outline {
-        @include ps-button-outline-variant($btn-success-bg);
-    }
-    &.btn-warning-outline {
-        @include ps-button-outline-variant($btn-warning-bg);
-    }
-    &.btn-danger-outline {
-        @include ps-button-outline-variant($btn-danger-bg);
-    }
+.btn-primary {
+    @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
+.btn-secondary {
+    @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-info {
+    @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-success {
+    @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-warning {
+    @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+    @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+// Remove all backgrounds
+.btn-primary-outline {
+    @include ps-button-outline-variant($btn-primary-bg);
+}
+.btn-secondary-outline {
+    @include ps-button-outline-variant($btn-secondary-border);
+}
+.btn-info-outline {
+    @include ps-button-outline-variant($btn-info-bg);
+}
+.btn-success-outline {
+    @include ps-button-outline-variant($btn-success-bg);
+}
+.btn-warning-outline {
+    @include ps-button-outline-variant($btn-warning-bg);
+}
+.btn-danger-outline {
+    @include ps-button-outline-variant($btn-danger-bg);
+}
+
 .btn-sm {
   &.disabled,
   &:disabled {

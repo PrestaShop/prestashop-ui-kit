@@ -34,9 +34,7 @@ var root_css = [
 ];
 
 gulp.task('styleguide', function() {
-    gulp.src(['scss/custom/**/*.scss',
-              'scss/mixins/**/*.scss',
-              'scss/modules/**/*.scss'])
+    gulp.src(['scss/**/*.scss'])
         .pipe(gulpkss({
             template: 'template/',
             multiline: true,
@@ -49,21 +47,11 @@ gulp.task('styleguide', function() {
         }))
         .pipe(gulp.dest(config.dist + '/docs'));
 
-    gulp.src('scss/**/*.scss')
-        .pipe(scss({
-            includePaths : [config.nodeModulesDir]
-        }).on('error', scss.logError))
-        .pipe(rename({
-            basename: 'style',
-            extname: '.css'
-        }))
-        .pipe(gulp.dest(config.dist + '/docs/public'));
-
     gulp.src('template/public/kss.css')
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
-gulp.task('default', ['scss', 'js', 'img', 'css:minify']);
+gulp.task('default', ['scss', 'js', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -81,7 +69,8 @@ gulp.task('scss', function () {
             basename: config.name,
             extname: '.css'
         }))
-        .pipe(gulp.dest(config.dist + '/css'));
+        .pipe(gulp.dest(config.dist + '/css'))
+        .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
 gulp.task('js', function () {

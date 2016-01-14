@@ -40,43 +40,39 @@ $btn-font-weight:                normal !default;
 $btn-padding-x-sm:               .75rem !default;
 $btn-padding-y-sm:               .25rem !default;
 
-$btn-padding-x-lg:               2rem !default;
-$btn-padding-y-lg:               .60rem !default;
+$btn-padding-x-lg:               1.5rem !default;
+$btn-padding-y-lg:               .25rem !default;
+
+// Colors
+// UI-Kit color
+// this variable should only be used in this file
+$brand-primary:             #25B9D7;
+$brand-secondary:           #FFBB00;
+$brand-success:             #78D07D;
+$brand-info:                #5bc0de;
+$brand-warning:             #C05C67;
+$brand-danger:              #d9534f;
+
 
 // Colors
 // UI-Kit color
 // this variable should only be used in this file
 
-$white                : #FBFBFC;
-$blue-hover           : #3ED2F0;
-$blue                 : #25B9D7;
-$light-blue           : #93DCEB;
-$dark-blue            : #155666;
-$purple               : #44309E;
-$dark-purple          : #1B1149;
-$red                  : #D77A83;
-$pink                 : #D40054;
-$ok-green             : #78D07D;
-$notice-green         : #70B580;
-$yellow-hover         : #FFD100;
-$yellow               : #FBB000;
-$input-white          : #FBFBFC;
-$off-white            : #F2F6F8;
-$soft-grey            : #EBEDEF;
-$light-grey           : #BBCDD2;
-$medium-grey          : #95A7AD;
-$rock-grey            : #465D64;
-$dark-grey            : #363A41;
-$stone-grey           : #292C32;
-$not-so-black         : #1E2024;
-$bg-notice            : #DFF5F9;
-$ico-notice           : #49BAD5;
-$bg-alert             : #FDE7BB;
-$ico-alert            : #CD9321;
-$bg-warning           : #EFC8CB;
-$ico-warning          : #C45C67;
-$bg-game              : #ECE7FF;
-$border-game          : #B4A2F9;
+
+$primary         :             #25B9D7;
+$primary-hover   :       #3ED2F0;
+$secondary       :       #FFBB00;
+$secondary-hover :       #FFD100;
+$dark-grey       : #363A41;
+$medium-grey     : #6C868E;
+$light-grey      : #BBCDD2;
+$soft-grey       : #FAFBFC;
+$white           : #FFFFFF;
+$notice          :            #DFF5F9;
+$success         :             #78D07D;
+$success-hover   :             #70B580;
+$warning         :             #C45C67;
+$warning-hover   :             #EFC8CB;
 
 // Tooltips
 $tooltip-bg: #95a7ad !default;
@@ -105,8 +101,9 @@ $font-size-paragraph  : 14px;
 $font-color-h1        : $dark-grey;
 $font-color-h2        : $dark-grey;
 $font-color-h3        : $dark-grey;
-$font-color-h4        : $rock-grey;
-$font-color-paragraph : $rock-grey;
+$font-color-h3        : $dark-grey;
+$font-color-h4        : $medium-grey;
+$font-color-paragraph : $medium-grey;
 
 // font weight
 
@@ -363,9 +360,9 @@ $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               #fff !default;
-$btn-secondary-border:           #ccc !default;
+$btn-secondary-color:            #fff !default;
+$btn-secondary-bg:               $brand-secondary !default;
+$btn-secondary-border:           $btn-secondary-bg  !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;

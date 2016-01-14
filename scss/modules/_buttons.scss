@@ -1,8 +1,53 @@
-// ==========================================================================
 // Buttons
-// ==========================================================================
+//
+// Styleguide 3
 
-// Alternate buttons
+// Base styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Primary</button>
+// <button type="button" class="btn btn-secondary">Secondary</button>
+// <button type="button" class="btn btn-success">Success</button>
+// <button type="button" class="btn btn-warning">Warning</button>
+// <button type="button" class="btn btn-link">Link</button>
+//
+// Styleguide 3.1
+
+// Outline Styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary-outline">Primary</button>
+// <button type="button" class="btn btn-secondary-outline">Secondary</button>
+// <button type="button" class="btn btn-success-outline">Success</button>
+// <button type="button" class="btn btn-warning-outline">Warning</button>
+//
+// Styleguide 3.2
+
+// Sizes
+//
+// Add .btn-lg or .btn-sm for additional sizes.
+//
+// .btn-lg      - Active state.
+// .btn-sm      - Active state.
+// .btn-block      - Active state.
+//
+// Markup:
+// <button type="button" class="btn btn-primary {{modifier_class}}">Primary Button</button>
+// <button type="button" class="btn btn-primary-outline {{modifier_class}}">Primary Button</button>
+//
+// Styleguide 3.3
+
+// States
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Button</button>
+// <button type="button" class="btn btn-primary">Button</button>
+// <button type="button" class="btn btn-primary active">Button</button>
+// <button type="button" class="btn btn-primary disabled">Button</button>
+//
+// Styleguide 3.4
+
+// Core
 
 .btn-primary {
     @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
@@ -43,20 +88,31 @@
     @include ps-button-outline-variant($btn-danger-bg);
 }
 
+.btn {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .75em;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
 .btn-sm {
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
+    padding: .65em 1em;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
 }
 
 .btn-lg {
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
+    padding: 1em 1.5em;
+    font-weight: 800;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
 }

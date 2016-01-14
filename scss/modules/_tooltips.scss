@@ -1,39 +1,53 @@
-// ==========================================================================
 // Tooltips
-// ==========================================================================
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 12
 
-.tooltip {
-    &.tooltip-top,
-    &.bs-tether-element-attached-bottom {
-            .tooltip-arrow {
-//                left: 10%;
-            }
-    }
+// Static demo
+//
+// PrestaShop display
+//
+// Markup:
+// <div><div class="col-md-3 tooltip-arrow"></div><div class="tooltip-inner">Tooltip on top</div></div>
+// <div class="tooltip-error"><div class="col-md-3 tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div>
+//
+// Styleguide 12.1
+
+// Interactive demo
+//
+// Markup:
+// <button type="button" class="btn tooltip-error" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> Tooltip on left</button>
+// <a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
+//
+// Styleguide 12.2
+
+.tooltip-error {
+        .tooltip-inner {
+            background-color: #efc8cb;
+            color: #c45c67;
+        }
+
+        .tooltip-arrow {
+            border-top-color: #efc8cb !important;
+        }
 }
 
 /* .tooltip { */
-    
-/*     &.bs-tether-element-attached-bottom-left { */
+
+/*     &.bs-tether-element-attached-bottom { */
+
+/*         .tooltip-inner { */
+/*             background-color: blue !important; */
+/*         } */
 /*         .tooltip-arrow { */
-/*             left: 10%; */
+/*             border-top-color: blue !important; */
 /*         } */
 /*     } */
 
-/*     &.bs-tether-element-attached-bottom-right { */
-/*         .tooltip-arrow { */
-/*             left: 90%; */
-/*         } */
-/*     } */
-
-/*     &.bs-tether-element-attached-top-left { */
-/*         .tooltip-arrow { */
-/*             left: 10%; */
-/*         } */
-/*     } */
-
-/*     &.bs-tether-element-attached-top-right { */
-/*         .tooltip-arrow { */
-/*             left: 10%; */
-/*         } */
-/*     } */
 /* } */

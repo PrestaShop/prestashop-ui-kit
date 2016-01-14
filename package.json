@@ -25,6 +25,7 @@
     "gulp-cssnano": "^2.0.0",
     "gulp-dedupe": "0.0.2",
     "gulp-kss": "git+https://github.com/kedruff/gulp-kss.git",
+    "gulp-kss-druff": "^2.0.4",
     "gulp-minify-css": "^1.2.3",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "~0.5.4",

@@ -17,9 +17,11 @@ var config         = {
     production     : !!util.env.production,
     scssIndex      : __dirname + '/scss/application.scss',
     jsIndex        : __dirname + '/js/.js',
+    imgIndex       : __dirname + '/img',
     scssPattern    : __dirname + '/scss/**/*.scss',
     tplPattern     : __dirname + '/template/index.html',
     cssPattern     : __dirname + '/dist/css/*.css',
+    jsPattern     : __dirname + '/js/*.js',
     nodeModulesDir : __dirname + '/node_modules',
     fontDir        : __dirname + '/fonts',
     dist           : __dirname + '/dist'
@@ -61,7 +63,7 @@ gulp.task('styleguide', function() {
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
-gulp.task('default', ['scss', 'js', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -90,16 +92,21 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
+gulp.task('img', function () {
+    return gulp.src([config.imgIndex + '/logo.png'])
+        .pipe(gulp.dest(config.dist + '/docs/img'));
+});
+
 gulp.task('scss:watch', function () {
-    gulp.watch(config.scssPattern, ['scss', 'js', 'styleguide']);
-    gulp.watch(config.tplPattern, ['scss', 'js', 'styleguide']);
+    gulp.watch(config.scssPattern, ['scss', 'js', 'img', 'styleguide']);
+    gulp.watch(config.tplPattern, ['scss', 'js', 'img', 'styleguide']);
+    //gulp.watch(config.jsPattern, ['scss', 'js', 'img', 'styleguide']);
 });
 
 gulp.task('scss:doc', function () {
     return gulp.src(config.nodeModulesDir + 'bootstrap/scss/**/*.scss')
         .pipe(sassdoc());
 });
-
 
 gulp.task('css:minify', ['scss'], function () {
     return gulp.src(config.cssPattern)

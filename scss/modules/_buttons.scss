@@ -1,8 +1,5 @@
 // Buttons
 //
-// Button styles can be applied to anything with the `.btn` class applied.
-// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
-//
 // Styleguide 3
 
 // Base styles
@@ -35,8 +32,8 @@
 // .btn-block      - Active state.
 //
 // Markup:
-// <button type="button" class="btn btn-primary {{modifier_class}}">Button</button>
-// <button type="button" class="btn btn-secondary {{modifier_class}}">Button</button>
+// <button type="button" class="btn btn-primary {{modifier_class}}">Primary Button</button>
+// <button type="button" class="btn btn-primary-outline {{modifier_class}}">Primary Button</button>
 //
 // Styleguide 3.3
 
@@ -53,58 +50,69 @@
 // Core
 
 .btn-primary {
-  @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 .btn-secondary {
-  @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+    @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 .btn-info {
-  @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 .btn-success {
-  @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
 }
 .btn-warning {
-  @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
 .btn-danger {
-  @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
 // Remove all backgrounds
 .btn-primary-outline {
-  @include ps-button-outline-variant($btn-primary-bg);
+    @include ps-button-outline-variant($btn-primary-bg);
 }
 .btn-secondary-outline {
-  @include ps-button-outline-variant($btn-secondary-border);
+    @include ps-button-outline-variant($btn-secondary-border);
 }
 .btn-info-outline {
-  @include ps-button-outline-variant($btn-info-bg);
+    @include ps-button-outline-variant($btn-info-bg);
 }
 .btn-success-outline {
-  @include ps-button-outline-variant($btn-success-bg);
+    @include ps-button-outline-variant($btn-success-bg);
 }
 .btn-warning-outline {
-  @include ps-button-outline-variant($btn-warning-bg);
+    @include ps-button-outline-variant($btn-warning-bg);
 }
 .btn-danger-outline {
-  @include ps-button-outline-variant($btn-danger-bg);
+    @include ps-button-outline-variant($btn-danger-bg);
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .75em;
+    border-radius: 3px;
+    font-weight: 600;
 }
 
 .btn-sm {
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
+    padding: .65em 1em;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
 }
 
 .btn-lg {
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
+    padding: 1em 1.5em;
+    font-weight: 800;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
 }

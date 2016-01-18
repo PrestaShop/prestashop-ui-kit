@@ -11,12 +11,26 @@
         border-color: lighten($border, 8%);
 
     }
+
+    &:focus,
+    &.focus {
+        color: $color;
+        background-color: lighten($background, 8%);
+        border-color: lighten($border, 8%);
+    }
 }
 
 @mixin ps-button-outline-variant($btn-primary-bg) {
     @include button-outline-variant($btn-primary-bg);
     border: 0.15em solid $btn-primary-bg;
     @include hover {
+        color: lighten($btn-primary-bg, 10%);
+        background-color: #fff;
+        border-color: lighten($btn-primary-bg, 10%);
+    }
+
+    &:focus,
+    &.focus {
         color: lighten($btn-primary-bg, 10%);
         background-color: #fff;
         border-color: lighten($btn-primary-bg, 10%);

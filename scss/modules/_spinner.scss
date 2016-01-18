@@ -2,24 +2,30 @@
 //
 // Styleguide 14
 
-// Loading Spinner
+// Loading
 //
 // Static Mode
 //
 // Markup:
-// <div class="loading-spinner {{modifier_class}}"><div class="dot1"></div><div class="dot2"></div><div class="dot3"></div></div>
+// <div class="loading-spinner"><div class="dot1"></div><div class="dot2"></div><div class="dot3"></div></div>
 //
 // Styleguide 14.1
 
-// Download Button
+// Install
 //
 // Static Mode
 //
 // Markup:
-// <button class="btn btn-primary">hello</button>
+// <button id="download" class="btn btn-secondary"></button>
+// <button id="downloadtwo" class="btn btn-primary-outline"></button>
+//
+//     $("#download").psdwl({
+//       hover: 'install',
+//       validate: "success",
+//       text: "123,54 HT"
+//     });
 //
 // Styleguide 14.2
-
 
 .loading-spinner {
     position : absolute;
@@ -212,29 +218,36 @@
 }
 
 .onclic {
-  width: 40px;
-  border-radius: 40px;
-  border-color: #E6E8EB;
-  border-width: 2px;
-  font-size: 0;
-  border-left-color: #25B9D7;
-  -webkit-animation: rotating 2s linear infinite;
-          animation: rotating 2s linear infinite;
-}
+    color: white;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border-color: #E6E8EB;
+    border-width: 2px;
+    font-size: 0;
+    outline: none;
+    border-left-color: #25B9D7;
+    -webkit-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
 
-.onclic:after {
-  content: "";
-}
+    &:hover,
+    &.hover {
+        outline: none;
+        color: #fff;
+        background-color: #fff;
+        border-color: #E6E8EB;
+        border-left-color: #25B9D7;
+    }
 
-.validate {
-  font-size: 13px;
-  color: #FFF;
-  background: #25B9D7;
-}
-
-.validate:after {
-  font-family: 'FontAwesome';
-  content: "\f00c";
+    &:focus,
+    &.focus {
+        outline: none;
+        color: #fff;
+        background-color: #fff;
+        border-color: #E6E8EB;
+        border-left-color: #25B9D7;
+    }
 }
 
 @-webkit-keyframes rotating {

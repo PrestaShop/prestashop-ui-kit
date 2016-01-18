@@ -10,22 +10,21 @@
 // PrestaShop display
 //
 // Markup:
-// <div><div class="col-md-3 tooltip-arrow"></div><div class="tooltip-inner">Tooltip on top</div></div>
-// <div class="tooltip-error"><div class="col-md-3 tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div>
+// <div><div class="tooltip-arrow"></div><div class="tooltip-inner">Tooltip on top</div></div>
+// <div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div>
 //
 // Styleguide 12.1
 
 // Interactive demo
 //
 // Markup:
-// <button type="button" class="btn tooltip-error" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
 // <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 // <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
 // <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button>
-// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> Tooltip on left</button>
-// <a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
 //
 // Styleguide 12.2
+
 
 .tooltip-error {
         .tooltip-inner {

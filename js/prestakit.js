@@ -11,21 +11,42 @@ $(function () {
     $('.tooltip-error').tooltip(options);
     $('[data-toggle="tooltip"]').tooltip();
 
-    $(function() {
-        $( ".btn" ).click(function() {
-            $( ".btn" ).addClass( "onclic", 250, validate);
+    $.fn.psdwl = function(_config) {
+        var psdwl = this;
+        this.text(_config.text);
+
+        this.hover(function () {
+            psdwl.text(_config.hover);
+        }, function() {
+            psdwl.text(_config.text);
         });
 
-        function validate() {
+        psdwl.click(function() {
+            var bc = psdwl.css('border-color');
+
+            psdwl.css('border-left-color', bc);
+            psdwl.addClass( "onclic" );
+
             setTimeout(function() {
-                $( ".btn" ).removeClass( "onclic" );
-                $( ".btn" ).addClass( "validate", 450, callback );
-            }, 2250 );
-        }
-        function callback() {
-            setTimeout(function() {
-                $( ".btn" ).removeClass( "validate" );
-            }, 1250 );
-        }
+                psdwl.removeClass( "onclic" );
+                psdwl.addClass( "validate" );
+                psdwl.text(_config.validate);
+                psdwl.attr("disabled", "");
+            }, 3250 );
+        });
+
+    };;
+
+    $("#download").psdwl({
+        hover: 'install',
+        validate: "success",
+        text: "123,54 HT"
     });
+
+    $("#downloadtwo").psdwl({
+        hover: 'install',
+        validate: "success",
+        text: "Free"
+    });
+
 });

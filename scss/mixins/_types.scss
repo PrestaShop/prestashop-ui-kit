@@ -1,0 +1,5 @@
+@mixin font-variant($font-color, $font-weight, $font-line) {
+    line-height: $font-line;
+    font-weight: $font-weight;
+    color: $font-color;
+}

@@ -1,6 +1,6 @@
 {
   "name": "PrestaKit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Prestashop UI Kit integration",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
     "uikit"
   ],
   "scripts": {
-    "link": "ln -f -s `pwd`/node_modules/bootstrap `pwd`/scss/bootstrap"
+    "link": "ln -f -s `pwd`/node_modules/bootstrap `pwd`/scss/bootstrap && ln -f -s `pwd`/node_modules/font-awesome `pwd`/scss/font-awesome"
   },
   "author": "PrestaShop",
   "license": "PrestaShop SA",
@@ -20,8 +20,12 @@
   },
   "devDependencies": {
     "bootstrap": "=4.0.0-alpha.2",
+    "concat": "^1.0.0",
+    "font-awesome": "^4.5.0",
     "gulp": "~3.9.0",
     "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
     "gulp-csslint": "^0.2.0",
     "gulp-cssnano": "^2.0.0",
     "gulp-dedupe": "0.0.2",
@@ -31,6 +35,7 @@
     "gulp-replace": "~0.5.4",
     "gulp-sass": "~2.1.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
     "marked": "^0.3.5",

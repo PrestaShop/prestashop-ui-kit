@@ -5,6 +5,8 @@ var scss           = require('gulp-sass');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
+var uglify         = require('gulp-uglify');
+var concatcss      = require('gulp-concat-css');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
 var gulpkss        = require('gulp-kss-druff');
@@ -30,28 +32,16 @@ var root_scss = [
 ];
 
 var root_css = [
-   'dist/css/application.css'
+    'dist/css/application.css'
 ];
 
-gulp.task('styleguide', function() {
-    gulp.src(['scss/**/*.scss'])
-        .pipe(gulpkss({
-            template: 'template/',
-            multiline: true,
-            typos: false,
-            custom: [],
-            helpers: '',
-            css: [],
-            js: [],
-            homepage: __dirname + '/doc/styleguide.md'
-        }))
-        .pipe(gulp.dest(config.dist + '/docs'));
+var jsfiles = [
+    config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
+    config.nodeModulesDir + '/tether/dist/js/tether.min.js',
+    'js/prestakit.js'
+];
 
-    gulp.src('template/public/kss.css')
-        .pipe(gulp.dest(config.dist + '/docs/public'));
-});
-
-gulp.task('default', ['scss', 'js', 'img', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'fonts', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -73,11 +63,25 @@ gulp.task('scss', function () {
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
-gulp.task('js', function () {
-    return gulp.src([config.nodeModulesDir + '/bootstrap/dist/js/bootstrap*.js',
-                     config.nodeModulesDir + '/tether/dist/js/tether*.js',
-                     'js/prestakit.js'])
+gulp.task('js:uglify', ['js'], function () {
+    return gulp.src([config.dist + '/js/*min.js',
+                     '!' + config.dist + '/js/bundle-*'])
+        .pipe(uglify())
+        .pipe(rename({
+            prefix: 'bundle-',
+            basename: config.name,
+            extname: '.js'
+        }))
+        .pipe(gulp.dest(config.dist + '/js'));
+});
 
+gulp.task('fonts', function () {
+    return gulp.src([config.nodeModulesDir + '/font-awesome/fonts/*'])
+        .pipe(gulp.dest(config.dist + '/fonts'));
+});
+
+gulp.task('js', function () {
+    return gulp.src(jsfiles)
         .pipe(gulp.dest(config.dist + '/js'));
 });
 
@@ -92,6 +96,17 @@ gulp.task('scss:watch', function () {
     gulp.watch(config.jsPattern, ['scss', 'js', 'img', 'styleguide']);
 });
 
+gulp.task('css:concat', ['css:minify'], function () {
+    return gulp.src('dist/css/**/*.min.css')
+        .pipe(concatcss())
+        .pipe(rename({
+            prefix: 'bundle-',
+            basename: config.name,
+            extname: '.min.css'
+        }))
+        .pipe(gulp.dest(config.dist + '/css'));
+});
+
 gulp.task('css:minify', ['scss'], function () {
     return gulp.src(config.cssPattern)
         .pipe(nano())
@@ -101,6 +116,24 @@ gulp.task('css:minify', ['scss'], function () {
             extname: '.min.css'
         }))
         .pipe(gulp.dest(config.dist + '/css'));
+});
+
+gulp.task('styleguide', function() {
+    gulp.src(['scss/**/*.scss'])
+        .pipe(gulpkss({
+            template: 'template/',
+            multiline: true,
+            typos: false,
+            custom: [],
+            helpers: '',
+            css: [],
+            js: [],
+            homepage: __dirname + '/doc/styleguide.md'
+        }))
+        .pipe(gulp.dest(config.dist + '/docs'));
+
+    gulp.src('template/public/kss.css')
+        .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
 // @TODO link to travis
@@ -115,7 +148,10 @@ gulp.task('css:lint', function () {
         }));
 });
 
+
+
 gulp.task('clean', function() {
     return gulp.src([config.dist + '/*', config.jsDir + '/*'], {read: false})
         .pipe(clean());
 });
+

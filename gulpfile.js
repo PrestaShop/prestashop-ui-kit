@@ -89,7 +89,7 @@ gulp.task('img', function () {
 gulp.task('scss:watch', function () {
     gulp.watch(config.scssPattern, ['scss', 'js', 'img', 'styleguide']);
     gulp.watch(config.tplPattern, ['scss', 'js', 'img', 'styleguide']);
-    //gulp.watch(config.jsPattern, ['scss', 'js', 'img', 'styleguide']);
+    gulp.watch(config.jsPattern, ['scss', 'js', 'img', 'styleguide']);
 });
 
 gulp.task('css:minify', ['scss'], function () {

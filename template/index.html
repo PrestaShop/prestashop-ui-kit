@@ -44,6 +44,7 @@
                 </div>
             </div>
             <div class="kss-content">
+
                 <article class="kss-article">
                     {{#if homepage}}
                     <section id="section-0" class="kss-section kss-overview">
@@ -78,21 +79,26 @@
                                 </div>
                             </div>
                             {{/eachModifier}}
+
                             <div class="kss-markup">
                                 <pre><code class="lang-html">{{markup}}</code></pre>
                             </div>
+
                         </div>
                         {{else}}
+
                         {{#if description}}
                         <div class="kss-description">
                             {{{description}}}
                         </div>
                         {{/if}}
+
                         {{/if}}
                     </section>
                     {{/eachSection}}
                     {{/if}}
                 </article>
+
                 <footer class="kss-footer">
                     <div>Created using <a href="https://github.com/kss-node/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
                 </footer>

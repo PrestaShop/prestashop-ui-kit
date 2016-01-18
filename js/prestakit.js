@@ -13,44 +13,40 @@ $(function () {
 
     $.fn.psdwl = function(_config) {
         var psdwl = this;
-        psdwl.click(function() {
+        this.text(_config.text);
 
+        this.hover(function () {
+            psdwl.text(_config.hover);
+        }, function() {
+            psdwl.text(_config.text);
+        });
+
+        psdwl.click(function() {
+            var bc = psdwl.css('border-color');
+
+            psdwl.css('border-left-color', bc);
             psdwl.addClass( "onclic" );
 
             setTimeout(function() {
                 psdwl.removeClass( "onclic" );
                 psdwl.addClass( "validate" );
-            }, 2250 );
-
-            setTimeout(function() {
-                psdwl.removeClass( "validate" );
-            }, 1250 );
+                psdwl.text(_config.validate);
+                psdwl.attr("disabled", "");
+            }, 3250 );
         });
 
-        console.log((this));
-        this.css('content', _config.text);
-        console.log(_config);
     };;
 
     $("#download").psdwl({
         hover: 'install',
-        validate: "text",
-        text: "123"
+        validate: "success",
+        text: "123,54 HT"
     });
 
-    // $(function() {
-    //     $( ".download" ).click(function() {
+    $("#downloadtwo").psdwl({
+        hover: 'install',
+        validate: "success",
+        text: "Free"
+    });
 
-    //         $( ".download" ).addClass( "onclic", 250);
-
-    //         setTimeout(function() {
-    //             $( ".download" ).removeClass( "onclic" );
-    //             $( ".download" ).addClass( "validate", 450);
-    //         }, 2250 );
-
-    //         setTimeout(function() {
-    //             $( ".download" ).removeClass( "validate" );
-    //         }, 1250 );
-    //     });
-    // });
 });

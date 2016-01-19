@@ -3,12 +3,13 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin ps-button-variant($color, $background, $border) {
+@mixin ps-button-variant($color, $background, $border, $hover) {
     @include button-variant($color, $background, $border);
+
     @include hover {
         color: $color;
-        background-color: lighten($background, 8%);
-        border-color: lighten($border, 8%);
+        background-color: $hover;
+        border-color: $hover;
 
     }
 
@@ -20,13 +21,13 @@
     }
 }
 
-@mixin ps-button-outline-variant($btn-primary-bg) {
+@mixin ps-button-outline-variant($btn-primary-bg, $hover) {
     @include button-outline-variant($btn-primary-bg);
     border: 0.15em solid $btn-primary-bg;
     @include hover {
-        color: lighten($btn-primary-bg, 8%);
+        color: $hover;
         background-color: #fff;
-        border-color: lighten($btn-primary-bg, 8%);
+        border-color: $hover;
     }
 
     &:focus,
@@ -37,14 +38,14 @@
     }
 }
 
-@mixin ps-button-reverse($btn-primary-bg) {
+@mixin ps-button-reverse($btn-primary-bg, $hover) {
     @include button-outline-variant($btn-primary-bg);
     border: 0.15em solid $btn-primary-bg;
 
     @include hover {
         color: #fff;
-        background-color: lighten($btn-primary-bg, 8%);
-        border-color: lighten($btn-primary-bg, 8%);
+        background-color: $hover;
+        border-color: $hover;
     }
 
     &:focus,

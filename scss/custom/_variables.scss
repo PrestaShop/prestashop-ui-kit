@@ -19,7 +19,7 @@
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-shadows:                              true;
+$enable-shadows:                              false;
 // Avatar
 //
 // Avatar Size
@@ -69,6 +69,18 @@ $success:                                     #78D07D;
 $success-hover:                               #70B580;
 $warning:                                     #C45C67;
 $warning-hover:                               #EFC8CB;
+
+
+// Colors
+// UI-Kit color
+// this variable should only be used in this file
+$btn-primary-hover:                           #3ED2F0;
+$btn-secondary-hover:                         #FFD100;
+$btn-info-hover:                              #3ED2F0;
+$btn-success-hover:                           #70B580;
+$btn-warning-hover:                           #FFD100;
+$btn-danger-hover:                            #EFC8CB;
+
 
 // Colors
 // UI-Kit color

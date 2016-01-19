@@ -11,27 +11,6 @@
 //
 // Styleguide 14.1
 
-// Download
-//
-// Static Mode
-// <div class="row">
-// <div class="col-md-3"><button class="btn btn-primary-reverse btn-lg unbind">€ 199.99</button></div>
-// <div class="col-md-3"><button class="btn btn-primary btn-lg unbind">install</button></div>
-// <div class="col-md-3"><button class="btn btn-primary-reverse onclic btn-lg unbind"></button></div>
-// <div class="col-md-3"><button style="width: 94px" class="btn btn-primary btn-lg unbind"><i class="fa fa-check"></i></button></div>
-// </div>
-//
-// Dynamic Mode
-//
-// Markup:
-// <button id="psdwl" class="btn btn-primary btn-lg"></button>
-//
-//     $("#psdwl").psdwl({
-//       text: '€ 199.99'
-//     });
-//
-// Styleguide 14.2
-
 .unbind {
     margin-left: 15%;
 }
@@ -223,6 +202,27 @@
 
   }
 }
+
+// Download
+//
+// Static Mode
+// <div class="row">
+// <div class="col-md-3"><button class="btn btn-primary-reverse btn-lg unbind">€ 199.99</button></div>
+// <div class="col-md-3"><button class="btn btn-primary btn-lg unbind">install</button></div>
+// <div class="col-md-3"><button class="btn btn-primary-reverse onclic btn-lg unbind"></button></div>
+// <div class="col-md-3"><button style="width: 94px" class="btn btn-primary btn-lg unbind"><i class="fa fa-check"></i></button></div>
+// </div>
+//
+// Dynamic Mode
+//
+// Markup:
+// <button id="psdwl" class="btn btn-primary btn-lg"></button>
+//
+//     $("#psdwl").psdwl({
+//       text: '€ 199.99'
+//     });
+//
+// Styleguide 14.2
 
 .onclic {
     color: white;

@@ -5,48 +5,87 @@
  */
 
 $(function () {
+
     var options = {
         template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
     };
+
     $('.tooltip-error').tooltip(options);
     $('[data-toggle="tooltip"]').tooltip();
 
+    var setConfig = function (givenConfig, defaultConfig) {
+        var finalConfig = {};
+
+        for (var property in defaultConfig) {
+            if (givenConfig.hasOwnProperty(property)) {
+                finalConfig[property] = givenConfig[property];
+            } else {
+                finalConfig[property] = defaultConfig[property];
+            }
+        }
+
+        return finalConfig;
+    };
+
     $.fn.psdwl = function(_config) {
+        var config = null;
+
+        var defaultConfig =  {
+            hover: 'install',
+            validate: '<i class=\"fa fa-check\"></i>',
+            text: 'default',
+            default: true
+        };
+
         var psdwl = this;
-        this.text(_config.text);
+        config = setConfig(_config, defaultConfig);
+
+        if (config.default) {
+            var value = psdwl.attr('class').replace(/(btn-\w+)/, "$1-reverse");
+            psdwl.attr('class', value);
+        }
+
+        this.text(config.text);
+        var w = this.css('width');
 
         this.hover(function () {
-            psdwl.text(_config.hover);
+            psdwl.css('width', w);
+            psdwl.text(config.hover);
         }, function() {
-            psdwl.text(_config.text);
+            psdwl.css('width', '');
+            psdwl.text(config.text);
         });
 
         psdwl.click(function() {
-            var bc = psdwl.css('border-color');
-
-            psdwl.css('border-left-color', bc);
-            psdwl.addClass( "onclic" );
+            psdwl.css('border-left-color', psdwl.css('border-color'));
+            psdwl.addClass( 'onclic' );
+            psdwl.unbind('mouseenter').unbind('mouseleave').unbind('click');
+            var nw = parseInt(w, 10);
+            psdwl.css({
+                'width': '',
+                'margin-left': nw / 4
+            });
 
             setTimeout(function() {
                 psdwl.removeClass( "onclic" );
-                psdwl.addClass( "validate" );
-                psdwl.text(_config.validate);
-                psdwl.attr("disabled", "");
-            }, 3250 );
+                psdwl.css({
+                    'margin-left': '',
+                    'width': w
+                });
+                psdwl.html(config.validate);
+
+                if (config.default) {
+                    var value = psdwl.attr('class').replace('-reverse', "");
+                    psdwl.attr('class', value);
+                }
+
+            }, 3000 );
+
         });
 
     };;
 
-    $("#download").psdwl({
-        hover: 'install',
-        validate: "success",
-        text: "123,54 HT"
+    $("#psdwl").psdwl({
+        text: '€ 199.99'
     });
-
-    $("#downloadtwo").psdwl({
-        hover: 'install',
-        validate: "success",
-        text: "Free"
-    });
-
 });

@@ -1,27 +1,28 @@
 // Tooltips
 //
-// Button styles can be applied to anything with the `.btn` class applied.
-// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+// Inspired by the excellent Tipsy jQuery plugin written by Jason Frame.
 //
 // Styleguide 12
 
 // Static demo
 //
-// PrestaShop display
-//
-// Markup:
-// <div><div class="tooltip-arrow"></div><div class="tooltip-inner">Tooltip on top</div></div>
-// <div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div>
+// Four options are available: top, right, bottom, and left aligned.
+// <div class="row">
+// <div class="col-md-6"><div class="tooltip-arrow"></div><div class="tooltip-inner">Default Tooltip</div></div>
+// <div class="col-md-6"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div></div>
+// </div>
 //
 // Styleguide 12.1
 
 // Interactive demo
 //
 // Markup:
-// <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-// <button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-// <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
-// <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button>
+// <div class="row">
+// <div class="col-md-3"><button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button></div>
+// <div class="col-md-3"><button type="button" class="btn  tooltip-error" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button></div>
+// <div class="col-md-3"><button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button></div>
+// <div class="col-md-3"><button type="button" class="btn  tooltip-error" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom</button></div>
+// </div>
 //
 // Styleguide 12.2
 

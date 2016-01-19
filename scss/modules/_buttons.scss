@@ -32,20 +32,19 @@
 // .btn-block      - Active state.
 //
 // Markup:
-// <button type="button" class="btn btn-primary {{modifier_class}}">Warning Button</button>
+// <button type="button" class="btn btn-primary {{modifier_class}}">Primary Button</button>
 // <button type="button" class="btn btn-primary-outline {{modifier_class}}">Primary Button</button>
 //
-// Styleguide 3.3
+// Styleguide 3.4
 
 // States
 //
 // Markup:
 // <button type="button" class="btn btn-primary">Button</button>
-// <button type="button" class="btn btn-primary hover">Button</button>
 // <button type="button" class="btn btn-primary active">Button</button>
 // <button type="button" class="btn" disabled>Button</button>
 //
-// Styleguide 3.4
+// Styleguide 3.5
 
 // Core
 
@@ -88,11 +87,32 @@
     @include ps-button-outline-variant($btn-danger-bg);
 }
 
+// Remove all backgrounds
+.btn-primary-reverse {
+    @include ps-button-reverse($btn-primary-bg);
+}
+.btn-secondary-reverse {
+    @include ps-button-reverse($btn-secondary-border);
+}
+.btn-info-reverse {
+    @include ps-button-reverse($btn-info-bg);
+}
+.btn-success-reverse {
+    @include ps-button-reverse($btn-success-bg);
+}
+.btn-warning-reverse {
+    @include ps-button-reverse($btn-warning-bg);
+}
+.btn-danger-reverse {
+    @include ps-button-reverse($btn-danger-bg);
+}
+
 .btn {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: .75em;
     border-radius: 3px;
+    border-width: 2px;
     font-weight: 600;
 }
 
@@ -107,7 +127,7 @@
 }
 
 .btn-lg {
-    padding: 1em 1.5em;
+    padding: 1.25em 1.5em;
     font-weight: 800;
     &.disabled,
     &:disabled {

@@ -16,6 +16,10 @@
 // Fonts
 // Components
 
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-shadows:                              true;
 // Avatar
 //
 // Avatar Size
@@ -52,16 +56,6 @@ $btn-padding-y-lg:                            .25rem !default;
 // Colors
 // UI-Kit color
 // this variable should only be used in this file
-$brand-primary:                               #25B9D7;
-$brand-secondary:                             #FFBB00;
-$brand-success:                               #78D07D;
-$brand-info:                                  #5bc0de;
-$brand-warning:                               #C05C67;
-$brand-danger:                                #d9534f;
-
-// Colors
-// UI-Kit color
-// this variable should only be used in this file
 $primary:                                     #25B9D7;
 $primary-hover:                               #3ED2F0;
 $secondary:                                   #FFBB00;
@@ -76,6 +70,16 @@ $success:                                     #78D07D;
 $success-hover:                               #70B580;
 $warning:                                     #C45C67;
 $warning-hover:                               #EFC8CB;
+
+// Colors
+// UI-Kit color
+// this variable should only be used in this file
+$brand-primary:                               $primary;
+$brand-secondary:                             #FFBB00;
+$brand-success:                               #78D07D;
+$brand-info:                                  #5bc0de;
+$brand-warning:                               $brand-secondary;
+$brand-danger:                                #d9534f;
 
 // Tooltips
 $tooltip-bg:                                  #95a7ad !default;
@@ -112,7 +116,7 @@ $font-color-h4:                               $medium-grey;
 
 // Font Line
 $font-linea-primary:                          1.1rem;
-$font-line-secondary:                        1.1rem;
+$font-line-secondary:                         1.1rem;
 
 // Font Weight
 $font-weight-primary:                         300;
@@ -126,6 +130,13 @@ $font-weight-h1:                              $font-weight-semibold;
 $font-weight-h2:                              $font-weight-semibold;
 $font-weight-h3:                              $font-weight-bold;
 $font-weight-h4:                              $font-weight-semibold;
+
+// Forms
+$input-color-placeholder:                     $medium-grey;
+$input-font-style:                            italic;
+
+$input-border-focus:                          $primary-hover;
+$input-box-shadow-focus:                      $primary-hover;
 
 // Table of Contents
 //
@@ -386,7 +397,7 @@ $btn-warning-color:                           #fff !default;
 $btn-warning-bg:                              $brand-warning !default;
 $btn-warning-border:                          $btn-warning-bg !default;
 
-$btn-danger-color:                            #fff !default;
+$btn-danger-cmlor:                            #fff !default;
 $btn-danger-bg:                               $brand-danger !default;
 $btn-danger-border:                           $btn-danger-bg !default;
 

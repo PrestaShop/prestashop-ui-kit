@@ -1,0 +1,76 @@
+// Forms
+// 
+// Styleguide 5
+
+// Inputs (width build on grid)
+//
+// Remember, since Bootstrap utilizes the HTML5 doctype, all inputs must have a type attribute.
+//
+// Markup:
+// <fieldset class="form-group">
+// <label for="exampleInput1">Input</label>
+//  <input type="text" class="form-control" {{modifier_class}}></input>
+// </fieldset>
+// Markup:
+// <fieldset class="form-group">
+// <label for="exampleInput2">Input - Placeholder</label>
+//  <input type="text" class="form-control" placeholder="Wake me up!"></input>
+// </fieldset>
+// Markup:
+// <fieldset class="form-group">
+//  <input type="text" class="form-control" autofocus></input>
+// </fieldset>
+//
+// Styleguide 5.1
+
+.form-control {
+    @include placeholder {
+        font-style: $input-font-style;
+        color: $input-color-placeholder;
+    }
+
+    @include ps-form-control-focus();
+}
+
+// Form validation states
+//
+// success - Success
+// warning - Warning
+// danger - Error
+//
+// Markup:
+// <div class="form-group has-{{modifier_class}}">
+//  <label class="form-control-label" for="input{{modifier_class}}">Input {{modifier_class}}</label>
+//  <input type="text" class="form-control form-control-{{modifier_class}}" id="input{{modifier_class}}">
+// </div>
+//
+// Styleguide 5.2
+
+.has-success {
+    .form-control-success {
+        &:focus {
+            @include box-shadow(0 0 3px 0 $brand-success);
+        }    
+        background-image: url($form-icon-success);
+    }
+}
+
+
+.has-warning {
+    .form-control-warning {
+        background-image: url($form-icon-warning);
+        &:focus {
+            @include box-shadow(0 0 3px 0 $brand-warning);
+        }
+    }
+}
+
+.has-danger {
+    .form-control-danger {
+        background-image: url($form-icon-danger);
+        &:focus {
+            @include box-shadow(0 0 3px 0 $brand-danger);
+        }
+    }
+}
+

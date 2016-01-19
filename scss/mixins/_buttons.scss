@@ -24,15 +24,33 @@
     @include button-outline-variant($btn-primary-bg);
     border: 0.15em solid $btn-primary-bg;
     @include hover {
-        color: lighten($btn-primary-bg, 10%);
+        color: lighten($btn-primary-bg, 8%);
         background-color: #fff;
-        border-color: lighten($btn-primary-bg, 10%);
+        border-color: lighten($btn-primary-bg, 8%);
     }
 
     &:focus,
     &.focus {
-        color: lighten($btn-primary-bg, 10%);
+        color: lighten($btn-primary-bg, 8%);
         background-color: #fff;
-        border-color: lighten($btn-primary-bg, 10%);
+        border-color: lighten($btn-primary-bg, 8%);
+    }
+}
+
+@mixin ps-button-reverse($btn-primary-bg) {
+    @include button-outline-variant($btn-primary-bg);
+    border: 0.15em solid $btn-primary-bg;
+
+    @include hover {
+        color: #fff;
+        background-color: lighten($btn-primary-bg, 8%);
+        border-color: lighten($btn-primary-bg, 8%);
+    }
+
+    &:focus,
+    &.focus {
+        color: #fff;
+        background-color: lighten($btn-primary-bg, 8%);
+        border-color: lighten($btn-primary-bg, 8%);
     }
 }

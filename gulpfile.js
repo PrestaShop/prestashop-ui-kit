@@ -76,8 +76,9 @@ gulp.task('js:uglify', ['js'], function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src([config.nodeModulesDir + '/font-awesome/fonts/*'])
-        .pipe(gulp.dest(config.dist + '/fonts'));
+    gulp.src([config.nodeModulesDir + '/font-awesome/fonts/*'])
+        .pipe(gulp.dest(config.dist + '/fonts'))
+        .pipe(gulp.dest(config.dist + '/docs/fonts'));
 });
 
 gulp.task('js', function () {

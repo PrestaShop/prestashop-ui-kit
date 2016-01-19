@@ -28,10 +28,13 @@ $avatar-size-lg:                              100px;
 $avatar-size-sm:                              60px;
 $avatar-size-xs:                              40px;
 
+$font-size-root:                              12px;
+
 // Font Awesome
 //
 // Path
 $fa-font-path:                 "../fonts";
+
 
 // Banner
 //
@@ -136,6 +139,8 @@ $input-font-style:                            italic;
 
 $input-border-focus:                          $primary-hover;
 $input-box-shadow-focus:                      $primary-hover;
+
+$input-bg:                                    $soft-grey;
 
 // Table of Contents
 //

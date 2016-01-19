@@ -1,27 +1,35 @@
 // Content
 //
-// Button styles can be applied to anything with the `.btn` class applied.
-// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
-//
 // Styleguide 1
 
-// Headings and paragraphs
+// Headings
 //
-// h1 - test heading
-// h2 - test heading
-// h3 - test heading
-// h4 - test heading
-//
+// Heading 1
 // Markup:
-// <{{modifier_class}}>{{modifier_class}} heading</{{modifier_class}}>
+// <h1> The quick brown fox jumps over the lazy dog </h1>
+// Heading 2
+// Markup:
+// <h2> The quick brown fox jumps over the lazy dog </h2>
+// Heading 3
+// Markup:
+// <h3> The quick brown fox jumps over the lazy dog </h3>
+// Heading 4
+// Markup:
+// <h4> The quick brown fox jumps over the lazy dog </h4>
 //
 // Styleguide 1.1
 
-// Lists
+// Paragraphs
 //
+// p - Normal
+// small - Small Text
+// xsmall - Extra Small Text
+//
+// Markup:
+// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!</p>
+// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!</p>
 //
 // Styleguide 1.2
-
 
 h1 {
     font-weight : $font-weight-h1;
@@ -38,17 +46,43 @@ h3 {
     color       : $font-color-h3;
 }
 
+
 h4 {
     font-weight : $font-weight-h4;
     color       : $font-color-h4;
 }
 
-p {
-    font-weight : $font-weight-paragraph;
-    color       : $font-color-paragraph ;
+.font-primary {
+    font-weight : $font-weight-primary;
+    color: $font-color-primary;
 }
 
-.h1 { @extend h1; }
-.h2 { @extend h2; }
-.h3 { @extend h3; }
-.h4 { @extend h4; }
+.font-secondary {
+    font-weight : $font-weight-secondary;
+    color: $font-color-secondary;
+}
+
+sm, small {
+    @extend .font-primary;
+    font-size: $font-size-sm;
+
+    &.font-secondary {
+        @extend .font-secondary;
+    }
+}
+
+xs, xsmall {
+    @extend .font-primary;
+    font-size: $font-size-xs;
+
+    &.font-secondary {
+        @extend .font-secondary;
+    }
+}
+
+.h1     { @extend h1;    }
+.h2     { @extend h2;    }
+.h3     { @extend h3;    }
+.h4     { @extend h4;    }
+.sm, .small { @extend sm; }
+.xs, .xsmall { @extend xs; }

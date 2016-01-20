@@ -47,7 +47,6 @@
     .form-control-success {
         @include ps-form-control-focus($brand-success, $brand-success);
         background-image: none;
-        @include ps-fa-icon(facebook);
     }
 }
 

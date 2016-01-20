@@ -14,7 +14,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bootstrap.ui4 .has-success .form-control-success:before {
+.fa {
   display: inline-block;
   font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
@@ -71,10 +71,10 @@
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .bootstrap.ui4 .has-success .fa-pull-left.form-control-success:before {
+.fa.fa-pull-left {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .bootstrap.ui4 .has-success .fa-pull-right.form-control-success:before {
+.fa.fa-pull-right {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -84,10 +84,10 @@
 .pull-left {
   float: left; }
 
-.fa.pull-left, .bootstrap.ui4 .has-success .pull-left.form-control-success:before {
+.fa.pull-left {
   margin-right: .3em; }
 
-.fa.pull-right, .bootstrap.ui4 .has-success .pull-right.form-control-success:before {
+.fa.pull-right {
   margin-left: .3em; }
 
 .fa-spin {
@@ -624,8 +624,7 @@
   content: ""; }
 
 .fa-facebook-f:before,
-.fa-facebook:before,
-.bootstrap.ui4 .has-success .form-control-success:before {
+.fa-facebook:before {
   content: ""; }
 
 .fa-github:before {
@@ -7236,24 +7235,11 @@ output {
     outline: none;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #3ED2F0; }
   .bootstrap.ui4 .has-success .form-control-success {
-    background-image: none;
-    position: relative; }
+    background-image: none; }
     .bootstrap.ui4 .has-success .form-control-success:focus {
       border-color: #78D07D;
       outline: none;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #78D07D; }
-    .bootstrap.ui4 .has-success .form-control-success:before {
-      color: black;
-      display: inline-block;
-      font: normal normal normal 14px / 1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-size: 50px;
-      z-index: 99999;
-      transform: translate(0, 0);
-      left: -5px; }
   .bootstrap.ui4 .has-warning .form-control-warning {
     background-image: url("data: image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+"); }
     .bootstrap.ui4 .has-warning .form-control-warning:focus {

@@ -1,3 +1,17 @@
+@mixin ps-fa-icon($icon) {
+    position: relative;
+    &:before {
+        color: black;
+        @include fa-icon();
+        font-size: 50px;
+        z-index: 99999;
+        transform: translate(0, 0);
+        left: -5px;
+        @extend .#{$fa-css-prefix};
+        @extend .#{$fa-css-prefix}-#{$icon};
+    }
+}
+
 @mixin font-variant($font-color, $font-weight, $font-line) {
     line-height: $font-line;
     font-weight: $font-weight;

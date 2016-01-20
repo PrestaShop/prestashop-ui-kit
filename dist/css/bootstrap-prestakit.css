@@ -6358,6 +6358,8 @@ output {
   @media print {
     .bootstrap.ui4 .hidden-print {
       display: none !important; } }
+  .bootstrap.ui4 textarea:focus:focus, .bootstrap.ui4 input[type="text"]:focus:focus, .bootstrap.ui4 input[type="password"]:focus:focus, .bootstrap.ui4 input[type="datetime"]:focus:focus, .bootstrap.ui4 input[type="datetime-local"]:focus:focus, .bootstrap.ui4 input[type="date"]:focus:focus, .bootstrap.ui4 input[type="month"]:focus:focus, .bootstrap.ui4 input[type="time"]:focus:focus, .bootstrap.ui4 input[type="week"]:focus:focus, .bootstrap.ui4 input[type="number"]:focus:focus, .bootstrap.ui4 input[type="email"]:focus:focus, .bootstrap.ui4 input[type="url"]:focus:focus, .bootstrap.ui4 input[type="search"]:focus:focus, .bootstrap.ui4 input[type="tel"]:focus:focus, .bootstrap.ui4 input[type="color"]:focus:focus, .bootstrap.ui4 .uneditable-input:focus:focus {
+    background-color: #FAFBFC; }
   .bootstrap.ui4 .primary {
     background-color: #25B9D7;
     color: white; }
@@ -7083,7 +7085,7 @@ output {
     outline: none;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #3ED2F0; }
   .bootstrap.ui4 .has-success .form-control-success {
-    background-image: url("data: image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg=="); }
+    background-image: none; }
     .bootstrap.ui4 .has-success .form-control-success:focus {
       border-color: #78D07D;
       outline: none;

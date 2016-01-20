@@ -35,7 +35,6 @@ $font-size-root:                              16px;
 // Path
 $fa-font-path:                 "../fonts";
 
-
 // Banner
 //
 // Banner Size
@@ -70,30 +69,20 @@ $white:                                       #FFFFFF;
 $notice:                                      #DFF5F9;
 $success:                                     #78D07D;
 $success-hover:                               #70B580;
-$warning:                                     #C45C67;
-$warning-hover:                               #EFC8CB;
-
-
-// Colors
-// UI-Kit color
-// this variable should only be used in this file
-$btn-primary-hover:                           #3ED2F0;
-$btn-secondary-hover:                         #FFD100;
-$btn-info-hover:                              #3ED2F0;
-$btn-success-hover:                           #70B580;
-$btn-warning-hover:                           #FFD100;
-$btn-danger-hover:                            #EFC8CB;
-
+$warning:                                     #CD9321;
+$warning-hover:                               #FDE7BB;
+$danger:                                      #C45C67;
+$danger-hover:                                #EFC8Cb;
 
 // Colors
 // UI-Kit color
 // this variable should only be used in this file
 $brand-primary:                               $primary;
-$brand-secondary:                             #FFBB00;
-$brand-success:                               #78D07D;
+$brand-secondary:                             $secondary;
+$brand-success:                               $success;
 $brand-info:                                  #5bc0de;
-$brand-warning:                               $brand-secondary;
-$brand-danger:                                #d9534f;
+$brand-warning:                               $warning;
+$brand-danger:                                $danger;
 
 // Tooltips
 $tooltip-bg:                                  #95a7ad !default;

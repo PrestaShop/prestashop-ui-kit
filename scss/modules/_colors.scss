@@ -17,8 +17,10 @@
 // <div class="col-md-3"><div style="height: 60px;" class="notice"></div><pre><b>notice:</b> <small>#3ED2F0</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="success"></div><pre><b>success:</b> <small>#FFBB00</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="success-hover"></div><pre><b>success-hover:</b> <small>#FFD100</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="warning"></div><pre><b>warning:</b> <small>#25B9D7</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="warning-hover"></div><pre><b>warning-hover:</b> <small>#3ED2F0</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="warning"></div><pre><b>warning:</b> <small>#CD9321</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="warning-hover"></div><pre><b>warning-hover:</b> <small>#FDE7BB</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="danger"></div><pre><b>danger:</b> <small>#C45C67</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="danger-hover"></div><pre><b>danger-hover:</b> <small>#EFC8CB</small></pre></div>
 //
 // Styleguide 2.1
 
@@ -76,4 +78,12 @@
 
 .warning-hover {
     @include ps-color($warning-hover);
+}
+
+.danger {
+    @include ps-color($danger);
+}
+
+.danger-hover {
+    @include ps-color($danger-hover);
 }

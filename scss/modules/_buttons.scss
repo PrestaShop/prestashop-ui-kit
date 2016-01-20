@@ -8,8 +8,8 @@
 // <button type="button" class="btn btn-primary">Primary</button>
 // <button type="button" class="btn btn-secondary">Secondary</button>
 // <button type="button" class="btn btn-success">Success</button>
+// <button type="button" class="btn btn-warning">Warning</button>
 // <button type="button" class="btn btn-danger">Danger</button>
-// <button type="button" class="btn btn-link">Link</button>
 //
 // Styleguide 3.1
 
@@ -19,6 +19,7 @@
 // <button type="button" class="btn btn-primary-outline">Primary</button>
 // <button type="button" class="btn btn-secondary-outline">Secondary</button>
 // <button type="button" class="btn btn-success-outline">Success</button>
+// <button type="button" class="btn btn-warning-outline">Warning</button>
 // <button type="button" class="btn btn-danger-outline">Danger</button>
 //
 // Styleguide 3.2
@@ -61,10 +62,10 @@
     @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border, $success-hover);
 }
 .btn-warning {
-    @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, $secondary-hover);
+    @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, $warning-hover);
 }
 .btn-danger {
-    @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $warning-hover);
+    @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $danger-hover);
 }
 
 // Remove all backgrounds
@@ -81,10 +82,10 @@
     @include ps-button-outline-variant($btn-success-bg, $success-hover);
 }
 .btn-warning-outline {
-    @include ps-button-outline-variant($btn-warning-bg, $secondary-hover);
+    @include ps-button-outline-variant($btn-warning-bg, $warning-hover);
 }
 .btn-danger-outline {
-    @include ps-button-outline-variant($btn-danger-bg, $warning-hover);
+    @include ps-button-outline-variant($btn-danger-bg, $danger-hover);
 }
 
 // Remove all backgrounds
@@ -101,10 +102,10 @@
     @include ps-button-reverse($btn-success-bg, $success-hover);
 }
 .btn-warning-reverse {
-    @include ps-button-reverse($btn-warning-bg, $secondary-hover);
+    @include ps-button-reverse($btn-warning-bg, $warning-hover);
 }
 .btn-danger-reverse {
-    @include ps-button-reverse($btn-danger-bg, $warning-hover);
+    @include ps-button-reverse($btn-danger-bg, $danger-hover);
 }
 
 .btn {

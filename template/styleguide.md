@@ -14,10 +14,6 @@ Download
 git clone https://github.com/gfanton/PrestaKit
 ```
 
-**Note:** This package contains only template files.
-You have to install kss-node at first.
-
-
 Installation
 ------------
 You can install by just typing `npm install`.

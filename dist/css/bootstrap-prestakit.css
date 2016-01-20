@@ -2285,7 +2285,7 @@ html {
   width: device-width; }
 
 html {
-  font-size: 12px;
+  font-size: 16px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -2644,7 +2644,7 @@ output {
 @viewport {
   width: device-width; }
   .bootstrap.ui4 html {
-    font-size: 12px;
+    font-size: 16px;
     -webkit-tap-highlight-color: transparent; }
   .bootstrap.ui4 body {
     font-family: Open Sans, sans-serif;

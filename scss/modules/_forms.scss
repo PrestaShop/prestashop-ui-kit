@@ -45,22 +45,23 @@
 
 .has-success {
     .form-control-success {
-        @include ps-form-control-focus($brand-success, $brand-success)
-        background-image: url($form-icon-success);
+        @include ps-form-control-focus($brand-success, $brand-success);
+        background-image: none;
+        @include ps-fa-icon(facebook);
     }
 }
 
 
 .has-warning {
     .form-control-warning {
-        @include ps-form-control-focus($brand-warning, $brand-warning)
+        @include ps-form-control-focus($brand-warning, $brand-warning);
         background-image: url($form-icon-warning);
     }
 }
 
 .has-danger {
     .form-control-danger {
-        @include ps-form-control-focus($brand-danger, $brand-danger)
+        @include ps-form-control-focus($brand-danger, $brand-danger);
         background-image: url($form-icon-danger);
     }
 }

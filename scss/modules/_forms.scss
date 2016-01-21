@@ -1,3 +1,7 @@
+.input-group {
+    @include border-radius($input-border-radius);
+}
+
 // Forms
 // 
 // Styleguide 5
@@ -20,11 +24,12 @@
 // Styleguide 5.1
 
 .form-control {
+
     @include placeholder {
         font-style: $input-font-style;
         color: $input-color-placeholder;
     }
-
+    @include border-radius($input-border-radius);
     @include ps-form-control-focus($primary-hover, $primary-hover);
 }
 
@@ -46,7 +51,7 @@
 .has-success {
     .form-control-success {
         @include ps-form-control-focus($brand-success, $brand-success);
-        background-image: none;
+        background-image: url($form-icon-success);
     }
 }
 
@@ -65,3 +70,37 @@
     }
 }
 
+
+// Input groups
+//
+// Markup:
+// <div class="input-group">
+//   <span class="input-group-addon" id="basic-addon1">@</span>
+//   <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+// </div>
+// <br>
+// Markup:
+// <div class="input-group">
+//   <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+//   <span class="input-group-addon" id="basic-addon2">@example.com</span>
+// </div>
+// <br>
+// Markup:
+// <div class="input-group">
+//   <span class="input-group-addon">$</span>
+//   <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+//   <span class="input-group-addon">.00</span>
+// </div>
+// <br>
+// Markup:
+// <label for="basic-url">Your vanity URL</label>
+// <div class="input-group">
+//   <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+//   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+// </div>
+//
+// Styleguide 5.3
+
+input-group-addon {
+    color: $input-group-addon-color;
+}

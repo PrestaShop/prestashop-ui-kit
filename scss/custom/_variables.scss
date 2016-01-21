@@ -141,7 +141,13 @@ $input-font-style:                            italic;
 $input-border-focus:                          $primary-hover;
 $input-box-shadow-focus:                      $primary-hover;
 
+$input-border-color:                          #ccc;
 $input-bg:                                    $soft-grey;
+
+$input-group-addon-bg:                        $soft-grey;
+$input-group-addon-color:                     $medium-grey;
+$input-group-addon-border-color:              $input-border-color;
+
 
 // Table of Contents
 //

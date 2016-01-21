@@ -43,6 +43,7 @@
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-5.1"><span class="kss-ref">5.1</span><span class="kss-name">Inputs (width build on grid)</span></a></li>
                             <li class="kss-menu-item"><a href="#section-5.2"><span class="kss-ref">5.2</span><span class="kss-name">Form validation states</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-5.3"><span class="kss-ref">5.3</span><span class="kss-name">Input groups</span></a></li>
                         </ul>
                     </nav>
 
@@ -147,6 +148,61 @@
                                 <pre><code class="lang-html">&lt;div class=&quot;form-group has-&quot;&gt;
  &lt;label class=&quot;form-control-label&quot; for=&quot;input&quot;&gt;Input &lt;/label&gt;
  &lt;input type=&quot;text&quot; class=&quot;form-control form-control-&quot; id=&quot;input&quot;&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-5.3" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">5.3</span> Input groups</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+</div>
+<br>
+<div class="input-group">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-addon">.00</span>
+</div>
+<br>
+<label for="basic-url">Your vanity URL</label>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; aria-describedby=&quot;basic-addon1&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Recipient&#x27;s username&quot; aria-describedby=&quot;basic-addon2&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon2&quot;&gt;@example.com&lt;/span&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;$&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; aria-label=&quot;Amount (to the nearest dollar)&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;label for=&quot;basic-url&quot;&gt;Your vanity URL&lt;/label&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon3&quot;&gt;https://example.com/users/&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;basic-url&quot; aria-describedby=&quot;basic-addon3&quot;&gt;
 &lt;/div&gt;</code></pre>
                             </div>
 

@@ -7,6 +7,7 @@ var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
 var uglify         = require('gulp-uglify');
 var concatcss      = require('gulp-concat-css');
+var concat       = require('gulp-concat');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
 var gulpkss        = require('gulp-kss-druff');
@@ -38,10 +39,11 @@ var root_css = [
 var jsfiles = [
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
+    require.resolve('pstagger'),
     'js/prestakit.js'
 ];
 
-gulp.task('default', ['scss', 'js', 'fonts', 'img', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'js:uglify', 'fonts', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -64,13 +66,14 @@ gulp.task('scss', function () {
 });
 
 gulp.task('js:uglify', ['js'], function () {
-    return gulp.src([config.dist + '/js/*min.js',
-                     '!' + config.dist + '/js/bundle-*'])
+    return gulp.src(jsfiles)
+        .pipe(concat('bundle-' + config.name + '.js'))
+        .pipe(gulp.dest(config.dist + '/js'))
         .pipe(uglify())
         .pipe(rename({
             prefix: 'bundle-',
             basename: config.name,
-            extname: '.js'
+            extname: '.min.js'
         }))
         .pipe(gulp.dest(config.dist + '/js'));
 });
@@ -82,7 +85,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(jsfiles)
+     return gulp.src(jsfiles)
         .pipe(gulp.dest(config.dist + '/js'));
 });
 

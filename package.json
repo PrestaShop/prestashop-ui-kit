@@ -19,7 +19,9 @@
     "url": "https://github.com/gfanton/PrestaKit/issues"
   },
   "devDependencies": {
+    "bloodhound-js": "^1.2.1",
     "bootstrap": "=4.0.0-alpha.2",
+    "bootstrap-tokenfield": "^0.12.0",
     "concat": "^1.0.0",
     "font-awesome": "^4.5.0",
     "gulp": "~3.9.0",
@@ -39,6 +41,7 @@
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
     "marked": "^0.3.5",
+    "material-design-iconic-font": "^2.2.0",
     "node-sass": "^3.4.2",
     "tether": "^1.1.1"
   },

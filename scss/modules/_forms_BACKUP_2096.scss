@@ -3,7 +3,7 @@
 }
 
 // Forms
-//
+// 
 // Styleguide 5
 
 // Inputs (width build on grid)
@@ -70,6 +70,28 @@
     }
 }
 
+<<<<<<< HEAD
+// Select Menu
+//
+// Markup:
+// <select class="c-select">
+//   <option selected>This is the default selection</option>
+//   <option value="1">An item</option>
+//   <option value="2">Another one</option>
+//   <option value="3">Select item with Primary Hover color opacity 0.4</option>
+//   <option value="4">This is the last one</option>
+// </select>
+//
+// Styleguide 5.4
+
+.c-select {
+    width: 100%;
+    border-radius: 3px;
+    color: $font-color-h4;
+    border-color: $light-grey;
+}
+||||||| merged common ancestors
+=======
 
 // Input groups
 //
@@ -104,42 +126,4 @@
 input-group-addon {
     color: $input-group-addon-color;
 }
-
-// Select
-//
-// Markup:
-// <div class="form-group">
-//   <fieldset class="form-group">
-//    <label for="exampleSelect1">Example select</label>
-//    <select class="form-control" id="exampleSelect1">
-//      <option class="select-item">1</option>
-//      <option class="select-item">2</option>
-//      <option class="select-item">3</option>
-//      <option class="select-item">4</option>
-//      <option class="select-item">5</option>
-//    </select>
-//  </fieldset>
-// </div>
-//
-// Styleguide 5.4
-.form-group {
-    select {
-        /* -webkit-appearance: none; */
-        /* -moz-appearance: none; */
-        /* appearance: none; */
-
-        /* &::-ms-expand { */
-        /*     display: none; */
-        /* } */
-
-
-        .select-item {
-            @extend .dropdown-item;
-            @include border-radius($border-radius);
-
-            border: red 1px solid;
-            background-color: $soft-grey;
-        }
-
-    }
-}
+>>>>>>> 9d13055e0813b5d5fa930539ebef48ee101220a9

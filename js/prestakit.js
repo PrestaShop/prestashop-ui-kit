@@ -100,11 +100,13 @@ $(function () {
 
     };;
 
-    $("#psdwl").psdwl({});
+    // $("#psdwl").psdwl({});
 
-    $("#psdwl-2").psdwl({
-        text: '€199,99',
-        hover: 'discover',
-        default: false
-    });
+    // $("#psdwl-2").psdwl({
+    //     text: '€199,99',
+    //     hover: 'discover',
+    //     default: false
+    // });
+
+
 });

@@ -65,3 +65,22 @@
     }
 }
 
+// Select Menu
+//
+// Markup:
+// <select class="c-select">
+//   <option selected>This is the default selection</option>
+//   <option value="1">An item</option>
+//   <option value="2">Another one</option>
+//   <option value="3">Select item with Primary Hover color opacity 0.4</option>
+//   <option value="4">This is the last one</option>
+// </select>
+//
+// Styleguide 5.4
+
+.c-select {
+    width: 100%;
+    border-radius: 3px;
+    color: $font-color-h4;
+    border-color: $light-grey;
+}

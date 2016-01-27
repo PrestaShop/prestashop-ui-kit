@@ -32,7 +32,7 @@ $(function () {
 
         var defaultConfig =  {
             hover: 'install',
-            validate: '<i class=\"fa fa-check\"></i>',
+            validate: '<i class="zmdi zmdi-check"></i>',
             text: 'default',
             time: 3000,
             default: true
@@ -108,5 +108,44 @@ $(function () {
     //     default: false
     // });
 
+
+    // Apply toggle is long text
+    $(".alert-text").each(function () {
+        var height = $(this).height();
+        var lineHeight = parseFloat($(this).css("lineHeight"));
+        var rows = height / lineHeight;
+        var lines = 5;
+
+        if (Math.ceil(rows) > lines) {
+            var actualHtml = $(this).html();
+            var actualClass = $(this).parent().attr('class');
+
+            $(this).parent().addClass( "alert-drop" );
+            $(this).html("<b>Read More</b>");
+            $(this).parent().after(
+                '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
+            );
+
+            $(".alert-down-text").html(actualHtml);
+        }
+    });
+
+    $('.alert-drop').each(function(){
+        $(this).click(function(){
+
+            var radius = $(this).css("border-radius");
+
+            if ($(this).next('div').is(":hidden")) {
+                $(this).css("border-radius", '0');
+                $(this).css("border-bottom", 'none');
+            } else {
+                $(this).css("border-radius", radius);
+                $(this).css("border-bottom", '');
+            }
+
+            $(this).next('div').slideToggle(400);
+
+        });
+    });
 
 });

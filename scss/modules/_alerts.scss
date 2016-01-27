@@ -1,19 +1,75 @@
 // Alerts
 //
-// Alerts
-//
-// Markup:
-// <div class="alert alert-success" role="alert">
-//   Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastram  i andouille prosciutto filet mignon tail beef.
-// </div>
-// <div class="alert alert-info" role="alert">
-//   <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-// </div>
-// <div class="alert alert-warning" role="alert">
-//   <strong>Warning!</strong> Better check yourself, you're not looking too good.
-// </div>
-// <div class="alert alert-danger" role="alert">
-//   <strong>Oh snap!</strong> Change a few things up and try submitting again.
-// </div>
+// Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 //
 // Styleguide 9
+
+// Small Medium & Large Alerts
+//
+// Markup:
+// <div class="alert alert-info" role="alert">
+//   <i class="zmdi zmdi-help"></i><p class="alert-text">Small notice message <a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a></p>
+// </div>
+// <div class="alert alert-warning" role="alert">
+//   <i class="zmdi zmdi-info-outline"></i><p class="alert-text">Medium warning message Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
+// </div>
+// <div class="alert alert-danger" role="alert">
+//   <i class="zmdi zmdi-alert-circle-o"></i><p class="alert-text"><a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a> amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. <b>Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.Bacon ipsum dolor amet </b> biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
+// </div>
+//
+// Styleguide 9.1
+
+.alert {
+    position: relative;
+}
+
+.alert-info {
+    @include ps-alert-variant($notice, $primary, $dark-grey);
+}
+
+.alert-warning {
+    @include ps-alert-variant($warning-hover, $warning, $dark-grey);
+}
+
+.alert-danger {
+    @include ps-alert-variant($danger-hover, $danger, $dark-grey);
+}
+
+// Dismissing
+//
+// Markup:
+// <div class="alert alert-info" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-help"></i><p class="alert-text">Notice message</p>
+// </div>
+// <div class="alert alert-warning" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-info-outline"></i><p class="alert-text">Warning message</p>
+// </div>
+// <div class="alert alert-danger" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-alert-circle-o"></i><p class="alert-text">Danger message</p>
+// </div>
+//
+// Styleguide 9.2
+
+.alert-drop {
+    margin-bottom: 0;
+}
+
+.alert-down {
+    display: none;
+    background-color: $white;
+    border-radius: 0;
+    border-top: none;
+}
+
+// Dynamic feedbacks
+//
+// Styleguide 9.3

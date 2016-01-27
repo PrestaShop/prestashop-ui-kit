@@ -1,0 +1,25 @@
+// Alters variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin ps-alert-variant($background, $border, $body-color) {
+    @include alert-variant($background, $border, $body-color);
+
+    i {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: $border;
+        float: left;
+        font-size: 2.5em;
+    }
+    p {
+        margin-left: 2.5em;
+    }
+
+    .alert-link {
+        color: lighten($border, 10%);
+    }
+
+}

@@ -7,11 +7,12 @@ var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
 var uglify         = require('gulp-uglify');
 var concatcss      = require('gulp-concat-css');
+var concat       = require('gulp-concat');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
 var gulpkss        = require('gulp-kss-druff');
 var sourcemaps     = require('gulp-sourcemaps');
-
+i
 var config         = {
     name           : 'prestakit',
     production     : !!util.env.production,
@@ -34,15 +35,10 @@ var root_scss = [
 var jsfiles = [
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
-    config.nodeModulesDir + '/select2/dist/js/select2.min.js',
-    config.nodeModulesDir + '/typeahead.js/dist/typeahead.jquery.min.js',
-    config.nodeModulesDir + '/bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js',
-    config.nodeModulesDir + '/bloodhound-js/dist/bloodhound.min.js',
     'js/prestakit.js'
 ];
 
 var cssfiles = [
-    config.nodeModulesDir + '/select2/dist/css/select2.min.css',
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css'
 ];
 
@@ -77,13 +73,14 @@ gulp.task('scss', function () {
 });
 
 gulp.task('js:uglify', ['js'], function () {
-    return gulp.src([config.dist + '/js/*min.js',
-                     '!' + config.dist + '/js/bundle-*'])
+    return gulp.src(jsfiles)
+        .pipe(concat('bundle-' + config.name + '.js'))
+        .pipe(gulp.dest(config.dist + '/js'))
         .pipe(uglify())
         .pipe(rename({
             prefix: 'bundle-',
             basename: config.name,
-            extname: '.js'
+            extname: '.min.js'
         }))
         .pipe(gulp.dest(config.dist + '/js'));
 });

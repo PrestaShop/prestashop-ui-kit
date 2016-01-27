@@ -43,9 +43,9 @@
     "marked": "^0.3.5",
     "material-design-iconic-font": "^2.2.0",
     "node-sass": "^3.4.2",
-    "select2": "^4.0.1",
-    "tether": "^1.1.1",
-    "typeahead": "^0.2.1",
-    "typeahead.js": "^0.11.1"
+    "tether": "^1.1.1"
+  },
+  "dependencies": {
+    "pstagger": "git+https://github.com/PrestaShop/pstagger.git"
   }
 }

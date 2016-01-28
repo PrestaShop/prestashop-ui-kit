@@ -100,15 +100,6 @@ $(function () {
 
     };;
 
-    // $("#psdwl").psdwl({});
-
-    // $("#psdwl-2").psdwl({
-    //     text: '€199,99',
-    //     hover: 'discover',
-    //     default: false
-    // });
-
-
     // Apply toggle is long text
     $(".alert-text").each(function () {
         var height = $(this).height();
@@ -119,22 +110,18 @@ $(function () {
         if (Math.ceil(rows) > lines) {
             var actualHtml = $(this).html();
             var actualClass = $(this).parent().attr('class');
-
             $(this).parent().addClass( "alert-drop" );
             $(this).html("<b>Read More</b>");
             $(this).parent().after(
                 '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
             );
-
             $(".alert-down-text").html(actualHtml);
         }
     });
 
     $('.alert-drop').each(function(){
         $(this).click(function(){
-
             var radius = $(this).css("border-radius");
-
             if ($(this).next('div').is(":hidden")) {
                 $(this).css("border-radius", '0');
                 $(this).css("border-bottom", 'none');
@@ -142,10 +129,40 @@ $(function () {
                 $(this).css("border-radius", radius);
                 $(this).css("border-bottom", '');
             }
-
             $(this).next('div').slideToggle(400);
-
         });
+    });
+
+    // examples
+    $('#error').click(function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return $.growl.error({
+            title: "",
+            size: "large",
+            message: "The kitten is attacking!"
+        });
+    });
+
+    // examples
+    $('#notice').click(function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return $.growl.notice({
+            title: "",
+            size: "large",
+            message: "The kitten is cute!"
+        });
+    });
+
+    // examples
+    $("#psdwl").psdwl({});
+
+    // examples
+    $("#psdwl-2").psdwl({
+        text: '€199,99',
+        hover: 'discover',
+        default: false
     });
 
 

@@ -70,4 +70,15 @@
 
 // Dynamic feedbacks
 //
+// Markup:
+// <a id="notice">Notice</a>
+// <a id="error">Error</a>
+//
+//     $("#notice").growl({});   $("#psdwl1").psdwl({
+//                                text: '€199,99',
+//                                hover: 'discover',
+//                                default: false
+//                                });
+//
 // Styleguide 9.3
+

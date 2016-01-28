@@ -31,10 +31,10 @@ var root_scss = [
     'scss/application.scss'
 ];
 
-
 var jsfiles = [
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
+    config.nodeModulesDir + '/growl/lib/growl.js',
     require.resolve('pstagger'),
     'js/prestakit.js'
 ];
@@ -101,7 +101,6 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-
     return gulp.src(jsfiles)
         .pipe(gulp.dest(config.dist + '/js'))
         .pipe(gulp.dest(config.dist + '/docs/public'));;

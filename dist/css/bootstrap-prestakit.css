@@ -2870,7 +2870,7 @@ output {
     line-height: 1.5;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 0.25rem;
+    border-radius: 0.0625rem;
     transition: all .2s ease-in-out;
     display: inline-block;
     max-width: 100%;
@@ -2895,7 +2895,7 @@ output {
     font-size: 90%;
     color: #bd4147;
     background-color: #f7f7f9;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 kbd {
     padding: .2rem .4rem;
     font-size: 90%;
@@ -3620,7 +3620,7 @@ output {
     background-color: #FAFBFC;
     background-image: none;
     border: 1px solid #ccc;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .form-control::-ms-expand {
       background-color: transparent;
       border: 0; }
@@ -3866,7 +3866,7 @@ output {
     padding: 0.375rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .btn:focus, .bootstrap.ui4 .btn.focus, .bootstrap.ui4 .btn:active:focus, .bootstrap.ui4 .btn:active.focus, .bootstrap.ui4 .btn.active:focus, .bootstrap.ui4 .btn.active.focus {
       outline: thin dotted;
       outline: 5px auto -webkit-focus-ring-color;
@@ -4271,16 +4271,16 @@ output {
     color: #373a3c;
     text-align: left;
     list-style: none;
-    background-color: #fff;
+    background-color: #FAFBFC;
     background-clip: padding-box;
     border: 1px solid #c7d6db;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .dropdown-divider {
     height: 1px;
     margin: 0.5rem 0;
     overflow: hidden;
     background-color: #e5e5e5; }
-  .bootstrap.ui4 .dropdown-item {
+  .bootstrap.ui4 .dropdown-item, .bootstrap.ui4 .form-group select .select-item {
     display: block;
     width: 100%;
     padding: 3px 20px;
@@ -4292,18 +4292,18 @@ output {
     white-space: nowrap;
     background: none;
     border: 0; }
-    .bootstrap.ui4 .dropdown-item:focus, .bootstrap.ui4 .dropdown-item:hover {
+    .bootstrap.ui4 .dropdown-item:focus, .bootstrap.ui4 .form-group select .select-item:focus, .bootstrap.ui4 .dropdown-item:hover, .bootstrap.ui4 .form-group select .select-item:hover {
       color: #2b2d2f;
       text-decoration: none;
       background-color: #f5f5f5; }
-    .bootstrap.ui4 .dropdown-item.active, .bootstrap.ui4 .dropdown-item.active:focus, .bootstrap.ui4 .dropdown-item.active:hover {
+    .bootstrap.ui4 .dropdown-item.active, .bootstrap.ui4 .form-group select .active.select-item, .bootstrap.ui4 .dropdown-item.active:focus, .bootstrap.ui4 .form-group select .active.select-item:focus, .bootstrap.ui4 .dropdown-item.active:hover, .bootstrap.ui4 .form-group select .active.select-item:hover {
       color: #fff;
       text-decoration: none;
       background-color: #25B9D7;
       outline: 0; }
-    .bootstrap.ui4 .dropdown-item.disabled, .bootstrap.ui4 .dropdown-item.disabled:focus, .bootstrap.ui4 .dropdown-item.disabled:hover {
+    .bootstrap.ui4 .dropdown-item.disabled, .bootstrap.ui4 .form-group select .disabled.select-item, .bootstrap.ui4 .dropdown-item.disabled:focus, .bootstrap.ui4 .form-group select .disabled.select-item:focus, .bootstrap.ui4 .dropdown-item.disabled:hover, .bootstrap.ui4 .form-group select .disabled.select-item:hover {
       color: #818a91; }
-    .bootstrap.ui4 .dropdown-item.disabled:focus, .bootstrap.ui4 .dropdown-item.disabled:hover {
+    .bootstrap.ui4 .dropdown-item.disabled:focus, .bootstrap.ui4 .form-group select .disabled.select-item:focus, .bootstrap.ui4 .dropdown-item.disabled:hover, .bootstrap.ui4 .form-group select .disabled.select-item:hover {
       text-decoration: none;
       cursor: not-allowed;
       background-color: transparent;
@@ -4441,11 +4441,11 @@ output {
   .bootstrap.ui4 .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
     border-radius: 0; }
   .bootstrap.ui4 .btn-group-vertical > .btn:first-child:not(:last-child) {
-    border-top-right-radius: 0.25rem;
+    border-top-right-radius: 0.0625rem;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .bootstrap.ui4 .btn-group-vertical > .btn:last-child:not(:first-child) {
-    border-bottom-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.0625rem;
     border-top-right-radius: 0;
     border-top-left-radius: 0; }
   .bootstrap.ui4 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
@@ -4498,7 +4498,7 @@ output {
     text-align: center;
     background-color: #FAFBFC;
     border: 1px solid #ccc;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .input-group-addon.form-control-sm,
     .bootstrap.ui4 .input-group-sm > .input-group-addon,
     .bootstrap.ui4 .input-group-sm > .input-group-btn > .input-group-addon.btn, .bootstrap.ui4 .input-group-addon.input-sm {
@@ -4713,7 +4713,7 @@ output {
       display: block;
       padding: 0.5em 1em;
       border: 1px solid transparent;
-      border-radius: 0.25rem 0.25rem 0 0; }
+      border-radius: 0.0625rem 0.0625rem 0 0; }
       .bootstrap.ui4 .nav-tabs .nav-link:focus, .bootstrap.ui4 .nav-tabs > li > i:focus, .bootstrap.ui4 .nav-tabs .nav-link:hover, .bootstrap.ui4 .nav-tabs > li > i:hover {
         border-color: #eceeef #eceeef #ddd; }
       .bootstrap.ui4 .nav-tabs .nav-link.disabled, .bootstrap.ui4 .nav-tabs > li > i.disabled, .bootstrap.ui4 .nav-tabs .nav-link.disabled:focus, .bootstrap.ui4 .nav-tabs > li > i.disabled:focus, .bootstrap.ui4 .nav-tabs .nav-link.disabled:hover, .bootstrap.ui4 .nav-tabs > li > i.disabled:hover {
@@ -4738,7 +4738,7 @@ output {
   .bootstrap.ui4 .nav-pills .nav-link, .bootstrap.ui4 .nav-pills .nav-tabs > li > i {
     display: block;
     padding: 0.5em 1em;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .nav-pills .nav-link.active, .bootstrap.ui4 .nav-pills .nav-tabs > li > i.active, .bootstrap.ui4 .nav-pills .nav-link.active:focus, .bootstrap.ui4 .nav-pills .nav-tabs > li > i.active:focus, .bootstrap.ui4 .nav-pills .nav-link.active:hover, .bootstrap.ui4 .nav-pills .nav-tabs > li > i.active:hover,
   .bootstrap.ui4 .nav-pills .nav-item.open .nav-link, .bootstrap.ui4 .nav-pills .nav-tabs > li.open .nav-link, .bootstrap.ui4 .nav-pills .nav-item.open .nav-tabs > li > i, .bootstrap.ui4 .nav-pills .nav-tabs > li.open .nav-tabs > li > i,
   .bootstrap.ui4 .nav-pills .nav-item.open .nav-link:focus, .bootstrap.ui4 .nav-pills .nav-tabs > li.open .nav-link:focus, .bootstrap.ui4 .nav-pills .nav-item.open .nav-tabs > li > i:focus, .bootstrap.ui4 .nav-pills .nav-tabs > li.open .nav-tabs > li > i:focus,
@@ -4769,7 +4769,7 @@ output {
       clear: both; }
     @media (min-width: 544px) {
       .bootstrap.ui4 .navbar {
-        border-radius: 0.25rem; } }
+        border-radius: 0.0625rem; } }
   .bootstrap.ui4 .navbar-full {
     z-index: 1000; }
     @media (min-width: 544px) {
@@ -4823,7 +4823,7 @@ output {
     line-height: 1;
     background: none;
     border: 1px solid transparent;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .navbar-toggler:focus, .bootstrap.ui4 .navbar-toggler:hover {
       text-decoration: none; }
   @media (min-width: 544px) {
@@ -4893,7 +4893,7 @@ output {
     margin-bottom: 0.75rem;
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .card-block, .bootstrap.ui4 .panel-body {
     padding: 1.25rem; }
   .bootstrap.ui4 .card-title, .bootstrap.ui4 .panel-title, .bootstrap.ui4 .panel-footer {
@@ -4908,21 +4908,21 @@ output {
   .bootstrap.ui4 .card-link + .card-link {
     margin-left: 1.25rem; }
   .bootstrap.ui4 .card > .list-group:first-child .list-group-item:first-child, .bootstrap.ui4 .panel > .list-group:first-child .list-group-item:first-child {
-    border-radius: 0.25rem 0.25rem 0 0; }
+    border-radius: 0.0625rem 0.0625rem 0 0; }
   .bootstrap.ui4 .card > .list-group:last-child .list-group-item:last-child, .bootstrap.ui4 .panel > .list-group:last-child .list-group-item:last-child {
-    border-radius: 0 0 0.25rem 0.25rem; }
+    border-radius: 0 0 0.0625rem 0.0625rem; }
   .bootstrap.ui4 .card-header, .bootstrap.ui4 .panel-heading {
     padding: 0.75rem 1.25rem;
     background-color: #f5f5f5;
     border-bottom: 1px solid #e5e5e5; }
     .bootstrap.ui4 .card-header:first-child, .bootstrap.ui4 .panel-heading:first-child {
-      border-radius: 0.25rem 0.25rem 0 0; }
+      border-radius: 0.0625rem 0.0625rem 0 0; }
   .bootstrap.ui4 .card-footer {
     padding: 0.75rem 1.25rem;
     background-color: #f5f5f5;
     border-top: 1px solid #e5e5e5; }
     .bootstrap.ui4 .card-footer:last-child {
-      border-radius: 0 0 0.25rem 0.25rem; }
+      border-radius: 0 0 0.0625rem 0.0625rem; }
   .bootstrap.ui4 .card-primary, .bootstrap.ui4 .panel-primary {
     background-color: #25B9D7;
     border-color: #25B9D7; }
@@ -4984,9 +4984,9 @@ output {
     left: 0;
     padding: 1.25rem; }
   .bootstrap.ui4 .card-img-top {
-    border-radius: 0.25rem 0.25rem 0 0; }
+    border-radius: 0.0625rem 0.0625rem 0 0; }
   .bootstrap.ui4 .card-img-bottom {
-    border-radius: 0 0 0.25rem 0.25rem; }
+    border-radius: 0 0 0.0625rem 0.0625rem; }
   @media (min-width: 544px) {
     .bootstrap.ui4 .card-deck {
       display: table;
@@ -5041,7 +5041,7 @@ output {
     margin-bottom: 1rem;
     list-style: none;
     background-color: #eceeef;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .breadcrumb::after {
       content: "";
       display: table;
@@ -5060,16 +5060,16 @@ output {
     padding-left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .page-item {
     display: inline; }
     .bootstrap.ui4 .page-item:first-child .page-link {
       margin-left: 0;
-      border-bottom-left-radius: 0.25rem;
-      border-top-left-radius: 0.25rem; }
+      border-bottom-left-radius: 0.0625rem;
+      border-top-left-radius: 0.0625rem; }
     .bootstrap.ui4 .page-item:last-child .page-link {
-      border-bottom-right-radius: 0.25rem;
-      border-top-right-radius: 0.25rem; }
+      border-bottom-right-radius: 0.0625rem;
+      border-top-right-radius: 0.0625rem; }
     .bootstrap.ui4 .page-item.active .page-link, .bootstrap.ui4 .page-item.active .page-link:focus, .bootstrap.ui4 .page-item.active .page-link:hover {
       z-index: 2;
       color: #fff;
@@ -5161,7 +5161,7 @@ output {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .label:empty {
       display: none; }
   .bootstrap.ui4 .btn .label {
@@ -5217,7 +5217,7 @@ output {
     padding: 15px;
     margin-bottom: 1rem;
     border: 1px solid transparent;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     .bootstrap.ui4 .alert > p,
     .bootstrap.ui4 .alert > ul {
       margin-bottom: 0; }
@@ -5283,35 +5283,35 @@ output {
     appearance: none; }
   .bootstrap.ui4 .progress[value]::-webkit-progress-bar {
     background-color: #eee;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .progress[value]::-webkit-progress-value::before {
     content: attr(value); }
   .bootstrap.ui4 .progress[value]::-webkit-progress-value {
     background-color: #0074d9;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; }
+    border-top-left-radius: 0.0625rem;
+    border-bottom-left-radius: 0.0625rem; }
   .bootstrap.ui4 .progress[value="100"]::-webkit-progress-value {
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem; }
+    border-top-right-radius: 0.0625rem;
+    border-bottom-right-radius: 0.0625rem; }
   @media screen and (min-width: 0\0) {
     .bootstrap.ui4 .progress {
       background-color: #eee;
-      border-radius: 0.25rem; }
+      border-radius: 0.0625rem; }
     .bootstrap.ui4 .progress-bar {
       display: inline-block;
       height: 1rem;
       text-indent: -999rem;
       background-color: #0074d9;
-      border-top-left-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem; }
+      border-top-left-radius: 0.0625rem;
+      border-bottom-left-radius: 0.0625rem; }
     .bootstrap.ui4 .progress[width^="0"] {
       min-width: 2rem;
       color: #818a91;
       background-color: transparent;
       background-image: none; }
     .bootstrap.ui4 .progress[width="100%"] {
-      border-top-right-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem; } }
+      border-top-right-radius: 0.0625rem;
+      border-bottom-right-radius: 0.0625rem; } }
   .bootstrap.ui4 .progress-striped[value]::-webkit-progress-value {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem; }
@@ -5401,12 +5401,12 @@ output {
     background-color: #fff;
     border: 1px solid #ddd; }
     .bootstrap.ui4 .list-group-item:first-child {
-      border-top-right-radius: 0.25rem;
-      border-top-left-radius: 0.25rem; }
+      border-top-right-radius: 0.0625rem;
+      border-top-left-radius: 0.0625rem; }
     .bootstrap.ui4 .list-group-item:last-child {
       margin-bottom: 0;
-      border-bottom-right-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem; }
+      border-bottom-right-radius: 0.0625rem;
+      border-bottom-left-radius: 0.0625rem; }
   .bootstrap.ui4 .list-group-flush .list-group-item {
     border-width: 1px 0;
     border-radius: 0; }
@@ -5740,7 +5740,7 @@ output {
     color: #fff;
     text-align: center;
     background-color: #6C868E;
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .tooltip-arrow {
     position: absolute;
     width: 0;
@@ -7135,9 +7135,9 @@ output {
     border-radius: 0;
     border-top: none; }
   .bootstrap.ui4 .input-group {
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
   .bootstrap.ui4 .form-control {
-    border-radius: 0.25rem; }
+    border-radius: 0.0625rem; }
     ::-webkit-input-placeholder {
       font-style: italic;
       color: #6C868E; }
@@ -7174,6 +7174,17 @@ output {
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #C45C67; }
   .bootstrap.ui4 input-group-addon {
     color: #6C868E; }
+  .bootstrap.ui4 .form-group select {
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
+    /* &::-ms-expand { */
+    /*     display: none; */
+    /* } */ }
+    .bootstrap.ui4 .form-group select .select-item {
+      border-radius: 0.0625rem;
+      border: red 1px solid;
+      background-color: #FAFBFC; }
   .bootstrap.ui4 .tooltip-error .tooltip-inner {
     background-color: #efc8cb;
     color: #c45c67; }

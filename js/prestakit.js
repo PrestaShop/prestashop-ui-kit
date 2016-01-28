@@ -132,38 +132,4 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
-
-    // examples
-    $('#error').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return $.growl.error({
-            title: "",
-            size: "large",
-            message: "The kitten is attacking!"
-        });
-    });
-
-    // examples
-    $('#notice').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return $.growl.notice({
-            title: "",
-            size: "large",
-            message: "The kitten is cute!"
-        });
-    });
-
-    // examples
-    $("#psdwl").psdwl({});
-
-    // examples
-    $("#psdwl-2").psdwl({
-        text: '€199,99',
-        hover: 'discover',
-        default: false
-    });
-
-
 });

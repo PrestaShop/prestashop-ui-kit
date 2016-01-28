@@ -36,7 +36,7 @@ $font-size-root:                              16px;
 $fa-font-path:                 "../fonts";
 
 // Border
-$border-radius:                               .0625rem !default;
+$border-radius:                               .25rem !default;
 
 // Banner
 //
@@ -169,6 +169,14 @@ $dropdown-divider-bg:                         #e5e5e5 !default;
 
 // $dropdown-header-color:                       $gray-light !default;
 
+// Tags
+
+$tags-bg:  $primary-hover;
+$tags-color: $white;
+$tags-max-width: 200px;
+$tags-font-weight: $font-weight-semibold;
+$tags-space-x: .156rem;
+$tags-space-y: .375rem;
 
 // Table of Contents
 //

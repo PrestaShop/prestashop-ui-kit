@@ -7,12 +7,12 @@ var util           = require('gulp-util');
 var csslint        = require('gulp-csslint');
 var uglify         = require('gulp-uglify');
 var concatcss      = require('gulp-concat-css');
-var concat       = require('gulp-concat');
+var concat         = require('gulp-concat');
 var rename         = require('gulp-rename');
 var clean          = require('gulp-clean');
 var gulpkss        = require('gulp-kss-druff');
 var sourcemaps     = require('gulp-sourcemaps');
-i
+
 var config         = {
     name           : 'prestakit',
     production     : !!util.env.production,
@@ -21,7 +21,6 @@ var config         = {
     imgIndex       : __dirname + '/img',
     scssPattern    : __dirname + '/scss/**/*.scss',
     tplPattern     : __dirname + '/template/index.html',
-    cssPattern     : __dirname + '/dist/css/*.css',
     jsPattern      : __dirname + '/js/*.js',
     nodeModulesDir : __dirname + '/node_modules',
     fontDir        : __dirname + '/fonts',
@@ -32,14 +31,17 @@ var root_scss = [
     'scss/application.scss'
 ];
 
+
 var jsfiles = [
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
+    require.resolve('pstagger'),
     'js/prestakit.js'
 ];
 
 var cssfiles = [
-    config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css'
+    config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
+    config.nodeModulesDir + '/pstagger/jquery.pstagger.css'
 ];
 
 var fontsfiles = [
@@ -50,7 +52,7 @@ var imgfiles = [
     config.imgIndex + '/logo.png'
 ];
 
-gulp.task('default', ['scss', 'js', 'css', 'fonts', 'img', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'js:uglify', 'css', 'fonts', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -82,33 +84,37 @@ gulp.task('js:uglify', ['js'], function () {
             basename: config.name,
             extname: '.min.js'
         }))
-        .pipe(gulp.dest(config.dist + '/js'));
+        .pipe(gulp.dest(config.dist + '/js'))
+        .pipe(gulp.dest(config.dist + 'public'));
 });
 
 gulp.task('fonts', function () {
-    gulp.src(fontsfiles)
+    return gulp.src(fontsfiles)
         .pipe(gulp.dest(config.dist + '/fonts'))
         .pipe(gulp.dest(config.dist + '/docs/fonts'));
 });
 
 gulp.task('css', function () {
-    gulp.src(cssfiles)
+    return gulp.src(cssfiles)
         .pipe(gulp.dest(config.dist + '/css'))
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
 
 gulp.task('js', function () {
-    gulp.src(jsfiles)
-        .pipe(gulp.dest(config.dist + '/js'));
+
+    return gulp.src(jsfiles)
+        .pipe(gulp.dest(config.dist + '/js'))
+        .pipe(gulp.dest(config.dist + '/docs/public'));;
+
 });
 
 gulp.task('img', function () {
-    gulp.src(imgfiles)
+    return gulp.src(imgfiles)
         .pipe(gulp.dest(config.dist + '/docs/img'));
 });
 
 gulp.task('scss:watch', function () {
-    gulp.watch([config.scssPattern, config.tplPattern, config.jsPattern], ['scss', 'js', 'img', 'css', 'styleguide']);
+    return gulp.watch([config.scssPattern, config.tplPattern, config.jsPattern], ['scss', 'js', 'img', 'css', 'styleguide']);
 });
 
 gulp.task('css:concat', ['css:minify'], function () {
@@ -123,7 +129,7 @@ gulp.task('css:concat', ['css:minify'], function () {
 });
 
 gulp.task('css:minify', ['scss'], function () {
-    return gulp.src(config.cssPattern)
+    return gulp.src(cssfiles)
         .pipe(nano())
         .pipe(rename({
             prefix: 'bootstrap-',
@@ -152,16 +158,16 @@ gulp.task('styleguide', function() {
 });
 
 // @TODO link to travis
-gulp.task('css:lint', function () {
-    return gulp.src(config.cssPattern)
-        .pipe(csslint('csslintrc.json'))
-        .pipe(csslint.reporter(function(file) {
-            util.log('founds ' + util.colors.cyan(file.csslint.errorCount)+ ' errors in ' + util.colors.magenta(file.path));
-            file.csslint.results.forEach(function(result) {
-                util.log(result.error.message + ' on line ' + result.error.line);
-            });
-        }));
-});
+// gulp.task('css:lint', function () {
+//     return gulp.src(config.cssPattern)
+//         .pipe(csslint('csslintrc.json'))
+//         .pipe(csslint.reporter(function(file) {
+//             util.log('founds ' + util.colors.cyan(file.csslint.errorCount)+ ' errors in ' + util.colors.magenta(file.path));
+//             file.csslint.results.forEach(function(result) {
+//                 util.log(result.error.message + ' on line ' + result.error.line);
+//             });
+//         }));
+// });
 
 gulp.task('clean', function() {
     return gulp.src([config.dist + '/*', config.jsDir + '/*'], {read: false})

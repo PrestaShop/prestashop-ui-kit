@@ -4,200 +4,78 @@
 
 // Modules Cards Grid
 //
-// Markup
-// <div class="module-item-wrapper-grid v1">
-//     <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
-//         <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
-//         <div class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
-//             Call Back
-//         </div>
-//         <div class="text-ellipsis x-small-text module-version-author-grid">
-//             v1.0.3 by PrestaShop
-//         </div>
-//     </div>
-//     <div class="module-quick-description-grid no-padding">
-//         Concluez davantage de ventes en ajoutant le module Call Back à votre site marchand ! &nbsp; Ce bouton de rappel offre à vos clients un service aussi utile qu'apprécié :
-//         ...
-//         <div class="module-read-more-grid">
-//             <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
-//         </div>
-//     </div>
-//     <div class="module-quick-action-grid clearfix">
-//         <div class="pull-right btn-group">
-//             <a class="btn btn-default btn-xs light-button" href="http://addons.prestashop.com/fr/support-chat-online/3162-call-back.html?utm_source=back-office&amp;utm_medium=push-addons&amp;utm_campaign=back-office-FR&amp;utm_content=download">29.99</a>
-//             <button type="button" class="btn btn-default dropdown-toggle light-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-//                 <span class="caret"></span>
-//                 <span class="sr-only">Toggle Dropdown</span>
-//             </button>
-//             <ul class="dropdown-menu">
-//                 <li><a href="/admin-dev/module/manage/action/install/webcallback" class="module-install-btn">Install</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/uninstall/webcallback" class="module-install-btn">Uninstall</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/enable/webcallback" class="module-install-btn">Enable</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/disable/webcallback" class="module-install-btn">Disable</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/reset/webcallback" class="module-install-btn">Reset</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/update/webcallback" class="module-install-btn">Update</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/configure/webcallback" class="">Configure</a></li>
-//             </ul>
-// 
-//             <div class="loader module-install-loader">
-//                 <svg class="circular" viewBox="25 25 50 50">
-//                     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
-//                 </svg>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-//
 // Markup:
 // <div class="module-item-wrapper-grid v2">
 //     <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
 //         <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
-//         <div class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+//         <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
 //             Call Back
-//         </div>
+//         </h1>
 //         <div class="text-ellipsis x-small-text module-version-author-grid">
-//             v1.0.3 by PrestaShop
+//             v1.0.3 by <a href="#">PrestaShop</a>
 //         </div>
 //     </div>
 //     <div class="module-quick-description-grid no-padding">
-//         Concluez davantage de ventes en ajoutant le module Call Back à votre site marchand ! &nbsp; Ce bouton de rappel offre à vos clients un service aussi utile qu'apprécié :
-//         ...
+//         Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
 //         <div class="module-read-more-grid">
 //             <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
 //         </div>
 //     </div>
 //     <div class="module-quick-action-grid clearfix">
-//         <div class="pull-right btn-group">
-//             <a class="btn btn-default btn-xs light-button" href="http://addons.prestashop.com/fr/support-chat-online/3162-call-back.html?utm_source=back-office&amp;utm_medium=push-addons&amp;utm_campaign=back-office-FR&amp;utm_content=download">29.99</a>
-//             <button type="button" class="btn btn-default dropdown-toggle light-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-//                 <span class="caret"></span>
-//                 <span class="sr-only">Toggle Dropdown</span>
-//             </button>
-//             <ul class="dropdown-menu">
-//                 <li><a href="/admin-dev/module/manage/action/install/webcallback" class="module-install-btn">Install</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/uninstall/webcallback" class="module-install-btn">Uninstall</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/enable/webcallback" class="module-install-btn">Enable</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/disable/webcallback" class="module-install-btn">Disable</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/reset/webcallback" class="module-install-btn">Reset</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/update/webcallback" class="module-install-btn">Update</a></li>
-//                 <li><a href="/admin-dev/module/manage/action/configure/webcallback" class="">Configure</a></li>
-//             </ul>
-// 
-//             <div class="loader module-install-loader">
-//                 <svg class="circular" viewBox="25 25 50 50">
-//                     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
-//                 </svg>
-//             </div>
-//         </div>
+// <button id="test" class="btn btn-primary-outline btn-lg pull-xs-right">199.99 €</button>
+//  <script type="text/javascript">
+// $(document).ready(function(){
+//     $("#test").psdwl({
+//         text: "€199,99",
+//         hover: "Discover",
+//         default: false
+//     });}
+// ()); 
+// </script>
 //     </div>
 // </div>
 //
+//
 // Styleguide 16.1
-
-/**
- * Module GRID CSS
- */
 
 .module-item-wrapper-grid.v2 {
     @extend .card;
-
-    .module-name-grid {
-        @extend .card-title;   
-    }
-
-    .module-logo-thumb-grid {
-        width: 57px;
-        height:57px;
-        float:left;
-        vertical-align: 0;
-    }
-}
-
-.module-item-wrapper-grid.v1 {
-    
-    .module-name-grid {
-        color: #1E2024 !important;
-        font-family:"Open Sans", Helvetica, Arial,sans-serif !important;
-        font-weight: bold;
-        font-size: 14px;
-        display: inline-block;
-        width: 75%;
-        margin-left: 5px;
-        /*margin-top: 0.5em;*/
-    }
+    @extend .card-block;
 
     .module-item-heading-grid {
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-    }
+        position: relative;
 
-    .module-quick-description-grid {
-        width: 100%;
-        height: 100px;
-        max-height: 100px;
-        margin-top: 10px !important;
-        text-align: justify;
-        display: block; /* Fallback for non-webkit */
-        display: -webkit-box;
-        max-width: 400px;
-        margin: 0 auto;
-        font-size: 12px;
-        line-height: 1.4;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        .module-logo-thumb-grid {
+            width: 45px;
+            height: 45px;
+            float: left;
+            vertical-align: 0;
+
+            @include border-radius($border-radius);
+        }
+
+        .module-name-grid {
+            @extend .card-title;
+
+            position: relative;
+            margin: 0 57px;
+            margin-bottom: .5em;
+        }
+
+        .module-version-author-grid {
+            @extend .card-title;
+
+            margin: 0 57px;
+            position: relative;
+            margin-bottom: .5em;
+        }
     }
 
     .module-quick-action-grid {
-        margin-top: 10px;
-        height: 30px;
+        postion: relative;
     }
 
-    .module-version-author-grid {
-        margin-left: 5px;
-        display: inline-block;
-        width: 65%;
-    }
-
-    .module-logo-thumb-grid {
-        width: 57px;
-        height:57px;
-        float:left;
-        vertical-align: 0 !important;
-    }
-
-    @media(max-width: 1430px) {
-        .module-logo-thumb-grid {
-            width: 40px;
-            height:40px;
-            float:left;
-            vertical-align: 0 !important;
-        }
-    }
-
-    @media(max-width: 992px) {
-        .module-logo-thumb-grid {
-            width: 20px;
-            height:20px;
-            float:left;
-            vertical-align: 0 !important;
-        }
-    }
-
-    .module-item-wrapper-grid  {
-        background: white;
-        padding: 20px;
-        margin-bottom: 10px;
-        box-shadow: 0 1px 0 #C7D6DB;
-    }
-
-    .module-read-more-grid {
-        display: inline-block;
-    }
-
-    .module-read-more-grid-btn {
-        margin-left: 5px;
+    .module-quick-description-grid {
+        margin: 15px 0;
     }
 }

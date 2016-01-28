@@ -130,5 +130,4 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
-
 });

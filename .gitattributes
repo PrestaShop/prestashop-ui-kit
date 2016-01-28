@@ -3,4 +3,4 @@ dist/*.css   text eol=lf
 dist/*.js    text eol=lf
 
 # Use your side of the merge.
-dist/* merge=ours
+dist/**/* merge=ours

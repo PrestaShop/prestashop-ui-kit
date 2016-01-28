@@ -71,14 +71,37 @@
 // Dynamic feedbacks
 //
 // Markup:
-// <a id="notice">Notice</a>
-// <a id="error">Error</a>
-//
-//     $("#notice").growl({});   $("#psdwl1").psdwl({
-//                                text: '€199,99',
-//                                hover: 'discover',
-//                                default: false
-//                                });
+// <a id="test-notice">Notice</a>
+// <a id="test-error">Error</a>
+// <script class="text/javascript">
+//     $( document ).ready( function () {
+//          $('#test-error').click(function(event) {
+//              event.preventDefault();
+//              event.stopPropagation();
+//              return $.growl.error({
+//                  title: "",
+//                  size: "large",
+//                  message: "The kitten is attacking!"
+//              });
+//          });
+//          $('#test-notice').click(function(event) {
+//              event.preventDefault();
+//              event.stopPropagation();
+//              return $.growl.notice({
+//                  title: "",
+//                  size: "large",
+//                  message: "The kitten is cute!"
+//              });
+//          });
+//      });
+// </script>
 //
 // Styleguide 9.3
 
+.growl-notice {    
+    @include ps-growl($success, "\f26b");
+}
+
+.growl-error {
+    @include ps-growl($danger, "\f1f0");
+}

@@ -15,7 +15,6 @@ $(function () {
 
     var setConfig = function (givenConfig, defaultConfig) {
         var finalConfig = {};
-
         for (var property in defaultConfig) {
             if (givenConfig.hasOwnProperty(property)) {
                 finalConfig[property] = givenConfig[property];
@@ -23,7 +22,6 @@ $(function () {
                 finalConfig[property] = defaultConfig[property];
             }
         }
-
         return finalConfig;
     };
 
@@ -132,38 +130,5 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
-
-    // examples
-    $('#error').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return $.growl.error({
-            title: "",
-            size: "large",
-            message: "The kitten is attacking!"
-        });
-    });
-
-    // examples
-    $('#notice').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return $.growl.notice({
-            title: "",
-            size: "large",
-            message: "The kitten is cute!"
-        });
-    });
-
-    // examples
-    $("#psdwl").psdwl({});
-
-    // examples
-    $("#psdwl-2").psdwl({
-        text: '€199,99',
-        hover: 'discover',
-        default: false
-    });
-
 
 });

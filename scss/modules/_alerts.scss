@@ -68,11 +68,13 @@
     border-top: none;
 }
 
-// Dynamic feedbacks
+// Feedbacks
+//
+// Dynamic
 //
 // Markup:
-// <a id="test-notice">Notice</a>
-// <a id="test-error">Error</a>
+// <button class="btn btn-success" id="test-notice">Click on me</button>
+// <button class="btn btn-danger" id="test-error">Click on me</button>
 // <script class="text/javascript">
 //     $( document ).ready( function () {
 //          $('#test-error').click(function(event) {

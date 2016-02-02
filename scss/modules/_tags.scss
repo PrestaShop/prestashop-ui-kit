@@ -1,0 +1,59 @@
+// Tags
+//
+// Styleguide 15
+
+// Ps Tagger
+//
+// Markup:
+//        <div class="wrapper">
+//            <input id="pstagger-bar" type="text"/>
+//        </div>
+//        <hr/>
+//        Currently tagged:
+//        <div id="example1-tags">
+//        </div>
+//        <script type="text/javascript">
+//            $(document).ready(function(){
+//                $('#pstagger-bar').pstagger({
+//                   inputPlaceholder: 'Add tag ...',
+//                   clearAllBtn: true,
+//                   clearAllIconClassAdditional: 'myIconClass',
+//                   onTagsChanged: onTagsChange,
+//                   onResetTags: onReset,
+//               });
+//            });
+//            function onTagsChange(tagsList) {
+//                $('#example1-tags').html(tagsList.join(', '));
+//            }
+//            function onReset() {
+//                $('#example1-tags').empty();
+//            }
+//        </script>
+//
+// Styleguide 15.1
+
+.pstaggerAddTagInput,
+.pstaggerTagsWrapper {
+    @include reset-text();
+    
+    font-size: $font-size-sm;
+    font-weight: $tags-font-weight;
+    padding: $tags-space-y $input-padding-x;
+    width: 100%;
+    min-height: $input-height;
+    height: inherit;
+    
+    @include border-radius($border-radius);
+
+    .pstaggerTag {
+        margin: 0 $tags-space-x;
+        position: relative;
+        height: inherit;
+        padding: 0 8px;
+        color: $tooltip-color;
+        text-align: center;
+        background-color: $tags-bg;
+
+        @include border-radius($border-radius);
+    }
+}

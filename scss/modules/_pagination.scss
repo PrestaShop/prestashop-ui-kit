@@ -1,0 +1,57 @@
+// Pagination
+//
+// Markup:
+// <nav>
+//   <ul class="pagination">
+//     <li class="page-item">
+//     <a class="page-link" href="#" aria-label="Previous">
+//         <i class="zmdi zmdi-chevron-left"></i>
+//         <span class="sr-only">Previous</span>
+//       </a>
+//     </li>
+//     <li class="page-item active">
+//      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+//     </li>
+//     <li class="page-item"><a class="page-link" href="#">2</a></li>
+//     <li class="page-item"><a class="page-link" href="#">3</a></li>
+//     <li class="page-item"><a class="page-link" href="#">4</a></li>
+//     <li class="page-item"><a class="page-link" href="#">5</a></li>
+//     <li class="page-item">
+//     <a class="page-link" href="#" aria-label="Next">
+//         <i class="zmdi zmdi-chevron-right"></i>
+//         <span class="sr-only">Next</span>
+//       </a>
+//     </li>
+//   </ul>
+// </nav>
+//
+// Styleguide 10
+
+.page-item {
+
+  &.active .page-link {
+    @include plain-hover-focus {
+      z-index: 2;
+      color: $dark-grey;
+      cursor: default;
+      background-color: $white;
+      border: 2px solid $primary;
+      border-radius: 50%;
+    }
+  }
+
+}
+
+.page-link {
+    font-weight: 600;
+    color: $medium-grey;
+    border: none;
+
+    @include hover-focus {
+        text-decoration: none;
+        color: $primary;
+        background-color: $white;
+        border-color: $pagination-hover-border;
+    }
+
+}

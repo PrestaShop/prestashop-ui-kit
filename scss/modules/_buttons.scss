@@ -1,0 +1,146 @@
+// Buttons
+//
+// Styleguide 3
+
+// Base styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Primary</button>
+// <button type="button" class="btn btn-secondary">Secondary</button>
+// <button type="button" class="btn btn-success">Success</button>
+// <button type="button" class="btn btn-warning">Warning</button>
+// <button type="button" class="btn btn-danger">Danger</button>
+//
+// Styleguide 3.1
+
+.btn-primary {
+    @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border, $primary-hover);
+}
+.btn-secondary {
+    @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border, $secondary-hover);
+}
+.btn-info {
+    @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border, $primary-hover);
+}
+.btn-success {
+    @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border, $success-hover);
+}
+.btn-warning {
+    @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, $warning-hover);
+}
+.btn-danger {
+    @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $danger-hover);
+}
+
+// Outline Styles
+//
+// Markup:
+// <button type="button" class="btn btn-primary-outline">Primary</button>
+// <button type="button" class="btn btn-secondary-outline">Secondary</button>
+// <button type="button" class="btn btn-success-outline">Success</button>
+// <button type="button" class="btn btn-warning-outline">Warning</button>
+// <button type="button" class="btn btn-danger-outline">Danger</button>
+//
+// Styleguide 3.2
+
+.btn-primary-outline {
+    @include ps-button-outline-variant($btn-primary-bg, $primary-hover);
+}
+.btn-secondary-outline {
+    @include ps-button-outline-variant($btn-secondary-border, $secondary-hover);
+}
+.btn-info-outline {
+    @include ps-button-outline-variant($btn-info-bg, $primary-hover);
+}
+.btn-success-outline {
+    @include ps-button-outline-variant($btn-success-bg, $success-hover);
+}
+.btn-warning-outline {
+    @include ps-button-outline-variant($btn-warning-bg, $warning-hover);
+}
+.btn-danger-outline {
+    @include ps-button-outline-variant($btn-danger-bg, $danger-hover);
+}
+
+.btn-primary-reverse {
+    @include ps-button-reverse($btn-primary-bg, $primary-hover);
+}
+.btn-secondary-reverse {
+    @include ps-button-reverse($btn-secondary-border, $secondary-hover);
+}
+.btn-info-reverse {
+    @include ps-button-reverse($btn-info-bg, $primary-hover);
+}
+.btn-success-reverse {
+    @include ps-button-reverse($btn-success-bg, $success-hover);
+}
+.btn-warning-reverse {
+    @include ps-button-reverse($btn-warning-bg, $warning-hover);
+}
+.btn-danger-reverse {
+    @include ps-button-reverse($btn-danger-bg, $danger-hover);
+}
+
+// Sizes
+//
+// Add .btn-lg or .btn-sm for additional sizes.
+//
+// .btn-lg      - Large Button.
+// .btn-sm      - Small Button.
+// .btn-xs      - Extra Small Button.
+// .btn-block   - Block Button.
+//
+// Markup:
+// <button type="button" class="btn btn-primary {{modifier_class}}">Primary Button</button>
+// <button type="button" class="btn btn-primary-outline {{modifier_class}}">Primary Button</button>
+//
+// Styleguide 3.4
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .75em;
+    border-radius: 3px;
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.btn-xs {
+    padding: .65em .65em;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
+}
+
+.btn-sm {
+    padding: .65em 1em;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
+}
+
+.btn-lg {
+    padding: 1.25em 1.5em;
+    font-weight: 800;
+    &.disabled,
+    &:disabled {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
+}
+
+// States
+//
+// Markup:
+// <button type="button" class="btn btn-primary">Button</button>
+// <button type="button" class="btn btn-primary active">Button</button>
+// <button type="button" class="btn" disabled>Button</button>
+//
+// Styleguide 3.5

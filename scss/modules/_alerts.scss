@@ -1,0 +1,109 @@
+// Alerts
+//
+// Styleguide 9
+
+// Small Medium & Large Alerts
+//
+// Markup:
+// <div class="alert alert-info" role="alert">
+//   <i class="zmdi zmdi-help"></i><p class="alert-text">Small notice message <a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a></p>
+// </div>
+// <div class="alert alert-warning" role="alert">
+//   <i class="zmdi zmdi-info-outline"></i><p class="alert-text">Medium warning message Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
+// </div>
+// <div class="alert alert-danger" role="alert">
+//   <i class="zmdi zmdi-alert-circle-o"></i><p class="alert-text"><a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a> amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. <b>Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.Bacon ipsum dolor amet </b> biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
+// </div>
+//
+// Styleguide 9.1
+
+.alert {
+    position: relative;
+}
+
+.alert-info {
+    @include ps-alert-variant($notice, $primary, $dark-grey);
+}
+
+.alert-warning {
+    @include ps-alert-variant($warning-hover, $warning, $dark-grey);
+}
+
+.alert-danger {
+    @include ps-alert-variant($danger-hover, $danger, $dark-grey);
+}
+
+// Dismissing
+//
+// Markup:
+// <div class="alert alert-info" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-help"></i><p class="alert-text">Notice message</p>
+// </div>
+// <div class="alert alert-warning" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-info-outline"></i><p class="alert-text">Warning message</p>
+// </div>
+// <div class="alert alert-danger" role="alert">
+// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+//    <span aria-hidden="true">&times;</span>
+// </button>
+//   <i class="zmdi zmdi-alert-circle-o"></i><p class="alert-text">Danger message</p>
+// </div>
+//
+// Styleguide 9.2
+
+.alert-drop {
+    margin-bottom: 0;
+}
+
+.alert-down {
+    display: none;
+    background-color: $white;
+    border-radius: 0;
+    border-top: none;
+}
+
+// Feedbacks
+//
+// Dynamic
+//
+// Markup:
+// <button class="btn btn-success" id="test-notice">Click on me</button>
+// <button class="btn btn-danger" id="test-error">Click on me</button>
+// <script class="text/javascript">
+//     $( document ).ready( function () {
+//          $('#test-error').click(function(event) {
+//              event.preventDefault();
+//              event.stopPropagation();
+//              return $.growl.error({
+//                  title: "",
+//                  size: "large",
+//                  message: "The kitten is attacking!"
+//              });
+//          });
+//          $('#test-notice').click(function(event) {
+//              event.preventDefault();
+//              event.stopPropagation();
+//              return $.growl.notice({
+//                  title: "",
+//                  size: "large",
+//                  message: "The kitten is cute!"
+//              });
+//          });
+//      });
+// </script>
+//
+// Styleguide 9.3
+
+.growl-notice {    
+    @include ps-growl($success, "\f26b");
+}
+
+.growl-error {
+    @include ps-growl($danger, "\f1f0");
+}

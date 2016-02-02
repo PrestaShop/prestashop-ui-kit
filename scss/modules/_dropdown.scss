@@ -1,0 +1,39 @@
+// Dropdowns
+
+// Dropdown Button
+//
+// Markup:
+// <div class="dropdown">
+//  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+//    <a class="dropdown-item" href="#">Action</a>
+//    <a class="dropdown-item" href="#">Another action</a>
+//    <a class="dropdown-item" href="#">Something else here</a>
+//  </div>
+//</div>
+// Markup:
+// <div class="dropdown open">
+//  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-// haspopup="true" aria-expanded="false">
+//    Dropdown
+//  </button>
+//  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+//    <a class="dropdown-item" href="#">Action</a>
+//    <a class="dropdown-item" href="#">Another action</a>
+//    <a class="dropdown-item" href="#">Something else here</a>
+//  </div>
+//</div>
+//
+// Styleguide 7
+
+.dropdown {
+    button {
+        @extend .btn-sm;
+        @extend .btn-secondary;
+
+        &:hover { border-color: $dropdown-border-color-hover; }
+
+    }
+}
+
+.dropdown-menu {
+    border-color: red;
+}

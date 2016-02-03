@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,800);
-/* $font-size-base:                           em(14px); */
 @import url(jquery.pstagger.css);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -2809,16 +2808,16 @@ output {
     color: white; }
   .bootstrap.ui4 .navbar-dark .navbar-divider {
     background-color: rgba(255, 255, 255, 0.075); }
-  .bootstrap.ui4 .card, .bootstrap.ui4 .panel, .bootstrap.ui4 .module-item-wrapper-grid.v2 {
+  .bootstrap.ui4 .card, .bootstrap.ui4 .panel, .bootstrap.ui4 .module-item-wrapper-grid {
     position: relative;
     display: block;
     margin-bottom: 0.75rem;
     background-color: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 0.25rem; }
-  .bootstrap.ui4 .card-block, .bootstrap.ui4 .panel-body, .bootstrap.ui4 .module-item-wrapper-grid.v2 {
+  .bootstrap.ui4 .card-block, .bootstrap.ui4 .panel-body, .bootstrap.ui4 .module-item-wrapper-grid {
     padding: 1.25rem; }
-  .bootstrap.ui4 .card-title, .bootstrap.ui4 .panel-title, .bootstrap.ui4 .panel-footer, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid {
+  .bootstrap.ui4 .card-title, .bootstrap.ui4 .panel-title, .bootstrap.ui4 .panel-footer, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid {
     margin-bottom: 0.75rem; }
   .bootstrap.ui4 .card-subtitle {
     margin-top: -0.375rem;
@@ -2829,9 +2828,9 @@ output {
     text-decoration: none; }
   .bootstrap.ui4 .card-link + .card-link {
     margin-left: 1.25rem; }
-  .bootstrap.ui4 .card > .list-group:first-child .list-group-item:first-child, .bootstrap.ui4 .panel > .list-group:first-child .list-group-item:first-child, .bootstrap.ui4 .module-item-wrapper-grid.v2 > .list-group:first-child .list-group-item:first-child {
+  .bootstrap.ui4 .card > .list-group:first-child .list-group-item:first-child, .bootstrap.ui4 .panel > .list-group:first-child .list-group-item:first-child, .bootstrap.ui4 .module-item-wrapper-grid > .list-group:first-child .list-group-item:first-child {
     border-radius: 0.25rem 0.25rem 0 0; }
-  .bootstrap.ui4 .card > .list-group:last-child .list-group-item:last-child, .bootstrap.ui4 .panel > .list-group:last-child .list-group-item:last-child, .bootstrap.ui4 .module-item-wrapper-grid.v2 > .list-group:last-child .list-group-item:last-child {
+  .bootstrap.ui4 .card > .list-group:last-child .list-group-item:last-child, .bootstrap.ui4 .panel > .list-group:last-child .list-group-item:last-child, .bootstrap.ui4 .module-item-wrapper-grid > .list-group:last-child .list-group-item:last-child {
     border-radius: 0 0 0.25rem 0.25rem; }
   .bootstrap.ui4 .card-header, .bootstrap.ui4 .panel-heading {
     padding: 0.75rem 1.25rem;
@@ -2883,7 +2882,7 @@ output {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .bootstrap.ui4 .card-inverse .card-header, .bootstrap.ui4 .panel-primary .card-header, .bootstrap.ui4 .panel-success .card-header, .bootstrap.ui4 .panel-info .card-header, .bootstrap.ui4 .panel-warning .card-header, .bootstrap.ui4 .panel-danger .card-header, .bootstrap.ui4 .card-inverse .panel-heading, .bootstrap.ui4 .panel-primary .panel-heading, .bootstrap.ui4 .panel-success .panel-heading, .bootstrap.ui4 .panel-info .panel-heading, .bootstrap.ui4 .panel-warning .panel-heading, .bootstrap.ui4 .panel-danger .panel-heading,
   .bootstrap.ui4 .card-inverse .card-footer, .bootstrap.ui4 .panel-primary .card-footer, .bootstrap.ui4 .panel-success .card-footer, .bootstrap.ui4 .panel-info .card-footer, .bootstrap.ui4 .panel-warning .card-footer, .bootstrap.ui4 .panel-danger .card-footer,
-  .bootstrap.ui4 .card-inverse .card-title, .bootstrap.ui4 .panel-primary .card-title, .bootstrap.ui4 .panel-success .card-title, .bootstrap.ui4 .panel-info .card-title, .bootstrap.ui4 .panel-warning .card-title, .bootstrap.ui4 .panel-danger .card-title, .bootstrap.ui4 .card-inverse .panel-title, .bootstrap.ui4 .panel-primary .panel-title, .bootstrap.ui4 .panel-success .panel-title, .bootstrap.ui4 .panel-info .panel-title, .bootstrap.ui4 .panel-warning .panel-title, .bootstrap.ui4 .panel-danger .panel-title, .bootstrap.ui4 .card-inverse .panel-footer, .bootstrap.ui4 .panel-primary .panel-footer, .bootstrap.ui4 .panel-success .panel-footer, .bootstrap.ui4 .panel-info .panel-footer, .bootstrap.ui4 .panel-warning .panel-footer, .bootstrap.ui4 .panel-danger .panel-footer, .bootstrap.ui4 .card-inverse .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .card-inverse .module-name-grid, .bootstrap.ui4 .panel-primary .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-primary .module-name-grid, .bootstrap.ui4 .panel-success .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-success .module-name-grid, .bootstrap.ui4 .panel-info .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-info .module-name-grid, .bootstrap.ui4 .panel-warning .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-warning .module-name-grid, .bootstrap.ui4 .panel-danger .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-danger .module-name-grid, .bootstrap.ui4 .card-inverse .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .card-inverse .module-version-author-grid, .bootstrap.ui4 .panel-primary .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-primary .module-version-author-grid, .bootstrap.ui4 .panel-success .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-success .module-version-author-grid, .bootstrap.ui4 .panel-info .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-info .module-version-author-grid, .bootstrap.ui4 .panel-warning .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-warning .module-version-author-grid, .bootstrap.ui4 .panel-danger .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .panel-danger .module-version-author-grid,
+  .bootstrap.ui4 .card-inverse .card-title, .bootstrap.ui4 .panel-primary .card-title, .bootstrap.ui4 .panel-success .card-title, .bootstrap.ui4 .panel-info .card-title, .bootstrap.ui4 .panel-warning .card-title, .bootstrap.ui4 .panel-danger .card-title, .bootstrap.ui4 .card-inverse .panel-title, .bootstrap.ui4 .panel-primary .panel-title, .bootstrap.ui4 .panel-success .panel-title, .bootstrap.ui4 .panel-info .panel-title, .bootstrap.ui4 .panel-warning .panel-title, .bootstrap.ui4 .panel-danger .panel-title, .bootstrap.ui4 .card-inverse .panel-footer, .bootstrap.ui4 .panel-primary .panel-footer, .bootstrap.ui4 .panel-success .panel-footer, .bootstrap.ui4 .panel-info .panel-footer, .bootstrap.ui4 .panel-warning .panel-footer, .bootstrap.ui4 .panel-danger .panel-footer, .bootstrap.ui4 .card-inverse .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .card-inverse .module-name-grid, .bootstrap.ui4 .panel-primary .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-primary .module-name-grid, .bootstrap.ui4 .panel-success .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-success .module-name-grid, .bootstrap.ui4 .panel-info .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-info .module-name-grid, .bootstrap.ui4 .panel-warning .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-warning .module-name-grid, .bootstrap.ui4 .panel-danger .module-item-wrapper-grid .module-item-heading-grid .module-name-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-danger .module-name-grid, .bootstrap.ui4 .card-inverse .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .card-inverse .module-version-author-grid, .bootstrap.ui4 .panel-primary .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-primary .module-version-author-grid, .bootstrap.ui4 .panel-success .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-success .module-version-author-grid, .bootstrap.ui4 .panel-info .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-info .module-version-author-grid, .bootstrap.ui4 .panel-warning .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-warning .module-version-author-grid, .bootstrap.ui4 .panel-danger .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid, .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .panel-danger .module-version-author-grid,
   .bootstrap.ui4 .card-inverse .card-blockquote, .bootstrap.ui4 .panel-primary .card-blockquote, .bootstrap.ui4 .panel-success .card-blockquote, .bootstrap.ui4 .panel-info .card-blockquote, .bootstrap.ui4 .panel-warning .card-blockquote, .bootstrap.ui4 .panel-danger .card-blockquote {
     color: #fff; }
   .bootstrap.ui4 .card-inverse .card-link, .bootstrap.ui4 .panel-primary .card-link, .bootstrap.ui4 .panel-success .card-link, .bootstrap.ui4 .panel-info .card-link, .bootstrap.ui4 .panel-warning .card-link, .bootstrap.ui4 .panel-danger .card-link,
@@ -2914,7 +2913,7 @@ output {
       display: table;
       table-layout: fixed;
       border-spacing: 1.25rem 0; }
-      .bootstrap.ui4 .card-deck .card, .bootstrap.ui4 .card-deck .panel, .bootstrap.ui4 .card-deck .module-item-wrapper-grid.v2 {
+      .bootstrap.ui4 .card-deck .card, .bootstrap.ui4 .card-deck .panel, .bootstrap.ui4 .card-deck .module-item-wrapper-grid {
         display: table-cell;
         width: 1%;
         vertical-align: top; }
@@ -2926,36 +2925,36 @@ output {
       display: table;
       width: 100%;
       table-layout: fixed; }
-      .bootstrap.ui4 .card-group .card, .bootstrap.ui4 .card-group .panel, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2 {
+      .bootstrap.ui4 .card-group .card, .bootstrap.ui4 .card-group .panel, .bootstrap.ui4 .card-group .module-item-wrapper-grid {
         display: table-cell;
         vertical-align: top; }
-        .bootstrap.ui4 .card-group .card + .card, .bootstrap.ui4 .card-group .panel + .card, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2 + .card, .bootstrap.ui4 .card-group .card + .panel, .bootstrap.ui4 .card-group .panel + .panel, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2 + .panel, .bootstrap.ui4 .card-group .card + .module-item-wrapper-grid.v2, .bootstrap.ui4 .card-group .panel + .module-item-wrapper-grid.v2, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2 + .module-item-wrapper-grid.v2 {
+        .bootstrap.ui4 .card-group .card + .card, .bootstrap.ui4 .card-group .panel + .card, .bootstrap.ui4 .card-group .module-item-wrapper-grid + .card, .bootstrap.ui4 .card-group .card + .panel, .bootstrap.ui4 .card-group .panel + .panel, .bootstrap.ui4 .card-group .module-item-wrapper-grid + .panel, .bootstrap.ui4 .card-group .card + .module-item-wrapper-grid, .bootstrap.ui4 .card-group .panel + .module-item-wrapper-grid, .bootstrap.ui4 .card-group .module-item-wrapper-grid + .module-item-wrapper-grid {
           margin-left: 0;
           border-left: 0; }
-        .bootstrap.ui4 .card-group .card:first-child, .bootstrap.ui4 .card-group .panel:first-child, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:first-child {
+        .bootstrap.ui4 .card-group .card:first-child, .bootstrap.ui4 .card-group .panel:first-child, .bootstrap.ui4 .card-group .module-item-wrapper-grid:first-child {
           border-bottom-right-radius: 0;
           border-top-right-radius: 0; }
-          .bootstrap.ui4 .card-group .card:first-child .card-img-top, .bootstrap.ui4 .card-group .panel:first-child .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:first-child .card-img-top {
+          .bootstrap.ui4 .card-group .card:first-child .card-img-top, .bootstrap.ui4 .card-group .panel:first-child .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid:first-child .card-img-top {
             border-top-right-radius: 0; }
-          .bootstrap.ui4 .card-group .card:first-child .card-img-bottom, .bootstrap.ui4 .card-group .panel:first-child .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:first-child .card-img-bottom {
+          .bootstrap.ui4 .card-group .card:first-child .card-img-bottom, .bootstrap.ui4 .card-group .panel:first-child .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid:first-child .card-img-bottom {
             border-bottom-right-radius: 0; }
-        .bootstrap.ui4 .card-group .card:last-child, .bootstrap.ui4 .card-group .panel:last-child, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:last-child {
+        .bootstrap.ui4 .card-group .card:last-child, .bootstrap.ui4 .card-group .panel:last-child, .bootstrap.ui4 .card-group .module-item-wrapper-grid:last-child {
           border-bottom-left-radius: 0;
           border-top-left-radius: 0; }
-          .bootstrap.ui4 .card-group .card:last-child .card-img-top, .bootstrap.ui4 .card-group .panel:last-child .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:last-child .card-img-top {
+          .bootstrap.ui4 .card-group .card:last-child .card-img-top, .bootstrap.ui4 .card-group .panel:last-child .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid:last-child .card-img-top {
             border-top-left-radius: 0; }
-          .bootstrap.ui4 .card-group .card:last-child .card-img-bottom, .bootstrap.ui4 .card-group .panel:last-child .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:last-child .card-img-bottom {
+          .bootstrap.ui4 .card-group .card:last-child .card-img-bottom, .bootstrap.ui4 .card-group .panel:last-child .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid:last-child .card-img-bottom {
             border-bottom-left-radius: 0; }
-        .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child), .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child), .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:not(:first-child):not(:last-child) {
+        .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child), .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child), .bootstrap.ui4 .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) {
           border-radius: 0; }
-          .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child) .card-img-top, .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child) .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:not(:first-child):not(:last-child) .card-img-top,
-          .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child) .card-img-bottom, .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child) .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid.v2:not(:first-child):not(:last-child) .card-img-bottom {
+          .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child) .card-img-top, .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child) .card-img-top, .bootstrap.ui4 .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top,
+          .bootstrap.ui4 .card-group .card:not(:first-child):not(:last-child) .card-img-bottom, .bootstrap.ui4 .card-group .panel:not(:first-child):not(:last-child) .card-img-bottom, .bootstrap.ui4 .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-bottom {
             border-radius: 0; } }
   @media (min-width: 544px) {
     .bootstrap.ui4 .card-columns {
       column-count: 3;
       column-gap: 1.25rem; }
-      .bootstrap.ui4 .card-columns .card, .bootstrap.ui4 .card-columns .panel, .bootstrap.ui4 .card-columns .module-item-wrapper-grid.v2 {
+      .bootstrap.ui4 .card-columns .card, .bootstrap.ui4 .card-columns .panel, .bootstrap.ui4 .card-columns .module-item-wrapper-grid {
         display: inline-block;
         width: 100%; } }
   .bootstrap.ui4 .breadcrumb {
@@ -3693,7 +3692,7 @@ output {
     word-spacing: normal;
     word-wrap: normal;
     font-size: 0.75rem;
-    background-color: #fff;
+    background-color: #363A41;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem; }
@@ -3709,7 +3708,7 @@ output {
           bottom: 1px;
           margin-left: -10px;
           content: "";
-          border-top-color: #fff;
+          border-top-color: #363A41;
           border-bottom-width: 0; }
     .bootstrap.ui4 .popover.popover-right, .bootstrap.ui4 .popover.bs-tether-element-attached-left {
       margin-left: 10px; }
@@ -3723,7 +3722,7 @@ output {
           bottom: -10px;
           left: 1px;
           content: "";
-          border-right-color: #fff;
+          border-right-color: #363A41;
           border-left-width: 0; }
     .bootstrap.ui4 .popover.popover-bottom, .bootstrap.ui4 .popover.bs-tether-element-attached-top {
       margin-top: 10px; }
@@ -3738,7 +3737,7 @@ output {
           margin-left: -10px;
           content: "";
           border-top-width: 0;
-          border-bottom-color: #fff; }
+          border-bottom-color: #363A41; }
     .bootstrap.ui4 .popover.popover-left, .bootstrap.ui4 .popover.bs-tether-element-attached-right {
       margin-left: -10px; }
       .bootstrap.ui4 .popover.popover-left .popover-arrow, .bootstrap.ui4 .popover.bs-tether-element-attached-right .popover-arrow {
@@ -3752,13 +3751,13 @@ output {
           bottom: -10px;
           content: "";
           border-right-width: 0;
-          border-left-color: #fff; }
+          border-left-color: #363A41; }
   .bootstrap.ui4 .popover-title {
     padding: 8px 14px;
     margin: 0;
     font-size: 1rem;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #ebebeb;
+    background-color: #2f3339;
+    border-bottom: 1px solid #23262b;
     border-radius: -0.7rem -0.7rem 0 0; }
   .bootstrap.ui4 .popover-content {
     padding: 9px 14px; }
@@ -4935,6 +4934,11 @@ output {
     border-radius: 3px;
     border-width: 2px;
     font-weight: 600; }
+  .bootstrap.ui4 .btn-xs {
+    padding: .65em .65em; }
+    .bootstrap.ui4 .btn-xs.disabled, .bootstrap.ui4 .btn-xs:disabled {
+      cursor: not-allowed;
+      opacity: .65; }
   .bootstrap.ui4 .btn-sm, .bootstrap.ui4 .btn-group-sm > .btn, .bootstrap.ui4 .dropdown button {
     padding: .65em 1em; }
     .bootstrap.ui4 .btn-sm.disabled, .bootstrap.ui4 .btn-group-sm > .disabled.btn, .bootstrap.ui4 .dropdown button.disabled, .bootstrap.ui4 .btn-sm:disabled, .bootstrap.ui4 .btn-group-sm > .btn:disabled, .bootstrap.ui4 .dropdown button:disabled {
@@ -5118,11 +5122,34 @@ output {
       border-color: #C45C67;
       outline: none;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #C45C67; }
-  .bootstrap.ui4 .tooltip-error .tooltip-inner {
-    background-color: #efc8cb;
-    color: #c45c67; }
-  .bootstrap.ui4 .tooltip-error .tooltip-arrow {
-    border-top-color: #efc8cb !important; }
+  .bootstrap.ui4 .page-item.active .page-link, .bootstrap.ui4 .page-item.active .page-link:focus, .bootstrap.ui4 .page-item.active .page-link:hover {
+    z-index: 2;
+    color: #363A41;
+    cursor: default;
+    background-color: #FFFFFF;
+    border: 2px solid #25B9D7;
+    border-radius: 50%; }
+  .bootstrap.ui4 .page-link {
+    font-weight: 600;
+    color: #6C868E;
+    border: none; }
+    .bootstrap.ui4 .page-link:focus, .bootstrap.ui4 .page-link:hover {
+      text-decoration: none;
+      color: #25B9D7;
+      background-color: #FFFFFF;
+      border-color: #ddd; }
+  .bootstrap.ui4 .tooltip {
+    font-weight: 600; }
+  .bootstrap.ui4 .tooltip-error {
+    /* .tooltip-arrow { */
+    /*     border-top-color: $danger-hover !important; */
+    /*     border-left-color: $danger-hover !important; */
+    /*     border-bottom-color: $danger-hover !important; */
+    /*     border-right-color: $danger-hover !important; */
+    /* } */ }
+    .bootstrap.ui4 .tooltip-error .tooltip-inner {
+      background-color: #EFC8Cb;
+      color: #C45C67; }
   .bootstrap.ui4 .loading-spinner {
     position: absolute; }
   .bootstrap.ui4 .dot, .bootstrap.ui4 .dot1, .bootstrap.ui4 .dot2, .bootstrap.ui4 .dot3 {
@@ -5283,26 +5310,42 @@ output {
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-  .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid {
+  .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid {
     position: relative; }
-    .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .module-logo-thumb-grid {
+    .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-logo-thumb-grid {
       width: 45px;
       height: 45px;
       float: left;
       vertical-align: 0;
       border-radius: 0.25rem; }
-    .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .module-name-grid {
+    .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-name-grid {
       position: relative;
       margin: 0 57px;
       margin-bottom: .5em; }
-    .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-item-heading-grid .module-version-author-grid {
+    .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid {
       margin: 0 57px;
       position: relative;
       margin-bottom: .5em; }
-  .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-quick-action-grid {
+    .bootstrap.ui4 .module-item-wrapper-grid .module-item-heading-grid .module-read-more-grid-btn {
+      float: left; }
+  .bootstrap.ui4 .module-item-wrapper-grid .module-quick-action-grid {
     postion: relative; }
-  .bootstrap.ui4 .module-item-wrapper-grid.v2 .module-quick-description-grid {
+  .bootstrap.ui4 .module-item-wrapper-grid .module-quick-description-grid {
     margin: 15px 0; }
+  .bootstrap.ui4 .popover {
+    color: #FFFFFF;
+    font-weight: 600; }
+  .bootstrap.ui4 .popover-content {
+    font-size: 1.1em; }
+    .bootstrap.ui4 .popover-content a {
+      font-weight: 600; }
+  .bootstrap.ui4 .popover-title {
+    color: #FFFFFF;
+    border-bottom: none;
+    background-color: #363A41; }
+    .bootstrap.ui4 .popover-title .close {
+      color: #FFFFFF;
+      opacity: 0.8; }
   .bootstrap.ui4 .pstaggerAddTagInput,
   .bootstrap.ui4 .pstaggerTagsWrapper {
     font-family: Open Sans, sans-serif;
@@ -5323,19 +5366,24 @@ output {
     font-size: 0.75rem;
     font-weight: 600;
     padding: 0.375rem 0.75rem;
+    color: #6C868E;
     width: 100%;
     min-height: 2.25rem;
     height: inherit;
     border-radius: 0.25rem; }
     .bootstrap.ui4 .pstaggerAddTagInput .pstaggerTag,
     .bootstrap.ui4 .pstaggerTagsWrapper .pstaggerTag {
+      font-size: 1rem;
       margin: 0 0.156rem;
       position: relative;
       height: inherit;
       padding: 0 8px;
-      color: #fff;
+      color: #FFFFFF;
       text-align: center;
       background-color: #3ED2F0;
       border-radius: 0.25rem; }
+      .bootstrap.ui4 .pstaggerAddTagInput .pstaggerTag a,
+      .bootstrap.ui4 .pstaggerTagsWrapper .pstaggerTag a {
+        color: #363A41; }
 
 /*# sourceMappingURL=maps/application.css.map */

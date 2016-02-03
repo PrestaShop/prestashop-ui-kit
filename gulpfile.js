@@ -92,7 +92,7 @@ gulp.task('js:uglify', ['js'], function () {
 gulp.task('fonts', function () {
     return gulp.src(fontsfiles)
         .pipe(gulp.dest(config.dist + '/fonts'))
-        .pipe(gulp.dest(config.dist + '/docs/public/fonts'));
+        .pipe(gulp.dest(config.dist + '/docs/fonts'));
 });
 
 gulp.task('css', function () {

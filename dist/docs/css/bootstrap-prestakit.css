@@ -1,6 +1,7 @@
 @charset "UTF-8";
-/* $OpenSansPath: "https://fonts.googleapis.com/css?"; */
+/* not used */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800);
+/* @import "open-sans-fontface/sass/open-sans"; */
 @import url(jquery.pstagger.css);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -366,50 +367,13 @@ h4, .h4, .bootstrap.ui4 .h4 {
   font-weight: 600;
   color: #6C868E; }
 
-.font-primary, *,
-body,
-td,
-tr,
-div,
-p,
-form,
-input,
-select,
-textarea,
-font, sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small, xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall, .bootstrap.ui4 *,
-.bootstrap.ui4 body,
-.bootstrap.ui4 td,
-.bootstrap.ui4 tr,
-.bootstrap.ui4 div,
-.bootstrap.ui4 p,
-.bootstrap.ui4 form,
-.bootstrap.ui4 input,
-.bootstrap.ui4 select,
-.bootstrap.ui4 textarea,
-.bootstrap.ui4 font, .bootstrap.ui4 sm, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 xsmall {
-  font-weight: 300;
+.font-primary, sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small, xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall, .bootstrap.ui4 sm, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 xsmall {
+  font-weight: 400;
   color: #363A41; }
 
 .font-secondary {
-  font-weight: 300;
+  font-weight: 400;
   color: #6C868E; }
-
-a {
-  font-weight: 800;
-  color: #25B9D7; }
-
-*,
-body,
-td,
-tr,
-div,
-p,
-form,
-input,
-select,
-textarea,
-font {
-  line-height: 1.3rem; }
 
 sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small {
   font-size: 0.75rem;
@@ -784,16 +748,16 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     font-weight: 300; }
   .bootstrap.ui4 .display-1 {
     font-size: 6rem;
-    font-weight: 300; }
+    font-weight: 400; }
   .bootstrap.ui4 .display-2 {
     font-size: 5.5rem;
-    font-weight: 300; }
+    font-weight: 400; }
   .bootstrap.ui4 .display-3 {
     font-size: 4.5rem;
-    font-weight: 300; }
+    font-weight: 400; }
   .bootstrap.ui4 .display-4 {
     font-size: 3.5rem;
-    font-weight: 300; }
+    font-weight: 400; }
   .bootstrap.ui4 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -5050,37 +5014,12 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 h4, .bootstrap.ui4 .h4 {
     font-weight: 600;
     color: #6C868E; }
-  .bootstrap.ui4 .font-primary, .bootstrap.ui4 *, .bootstrap.ui4
-  body, .bootstrap.ui4
-  td, .bootstrap.ui4
-  tr, .bootstrap.ui4
-  div, .bootstrap.ui4
-  p, .bootstrap.ui4
-  form, .bootstrap.ui4
-  input, .bootstrap.ui4
-  select, .bootstrap.ui4
-  textarea, .bootstrap.ui4
-  font, .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, .bootstrap.ui4 xsmall {
-    font-weight: 300;
+  .bootstrap.ui4 .font-primary, .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, .bootstrap.ui4 xsmall {
+    font-weight: 400;
     color: #363A41; }
   .bootstrap.ui4 .font-secondary {
-    font-weight: 300;
+    font-weight: 400;
     color: #6C868E; }
-  .bootstrap.ui4 a {
-    font-weight: 800;
-    color: #25B9D7; }
-  .bootstrap.ui4 *,
-  .bootstrap.ui4 body,
-  .bootstrap.ui4 td,
-  .bootstrap.ui4 tr,
-  .bootstrap.ui4 div,
-  .bootstrap.ui4 p,
-  .bootstrap.ui4 form,
-  .bootstrap.ui4 input,
-  .bootstrap.ui4 select,
-  .bootstrap.ui4 textarea,
-  .bootstrap.ui4 font {
-    line-height: 1.3rem; }
   .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small {
     font-size: 0.75rem;
     line-height: 1.1rem; }

@@ -295,7 +295,7 @@ html {
   width: device-width; }
 
 html {
-  font-size: 12px;
+  font-size: 16px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -723,7 +723,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
 @viewport {
   width: device-width; }
   .bootstrap.ui4 html {
-    font-size: 12px;
+    font-size: 16px;
     -webkit-tap-highlight-color: transparent; }
   .bootstrap.ui4 body {
     font-family: Open Sans, sans-serif;
@@ -5192,7 +5192,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-info i {
       position: absolute;
-      top: 8px;
       left: 10px;
       color: #25B9D7;
       float: left;
@@ -5211,7 +5210,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-warning i {
       position: absolute;
-      top: 8px;
       left: 10px;
       color: #CD9321;
       float: left;
@@ -5230,7 +5228,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-danger i {
       position: absolute;
-      top: 8px;
       left: 10px;
       color: #C45C67;
       float: left;
@@ -5256,9 +5253,11 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       float: left;
       margin: 0 15px 0 0; }
     .bootstrap.ui4 .growl-notice .growl-message {
-      font-weight: 600; }
+      font-weight: 600;
+      color: #FFFFFF; }
     .bootstrap.ui4 .growl-notice .growl-close {
-      font-size: 24px; }
+      font-size: 24px;
+      color: #FFFFFF; }
   .bootstrap.ui4 .growl-error {
     background: #C45C67; }
     .bootstrap.ui4 .growl-error .growl-message:before {
@@ -5269,9 +5268,11 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       float: left;
       margin: 0 15px 0 0; }
     .bootstrap.ui4 .growl-error .growl-message {
-      font-weight: 600; }
+      font-weight: 600;
+      color: #FFFFFF; }
     .bootstrap.ui4 .growl-error .growl-close {
-      font-size: 24px; }
+      font-size: 24px;
+      color: #FFFFFF; }
   .bootstrap.ui4 .form-control {
     border-radius: 0.25rem; }
     ::-webkit-input-placeholder {

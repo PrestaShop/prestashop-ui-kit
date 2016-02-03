@@ -375,10 +375,6 @@ h4, .h4, .bootstrap.ui4 .h4 {
   font-weight: 400;
   color: #6C868E; }
 
-a {
-  font-weight: 800;
-  color: #25B9D7; }
-
 sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small {
   font-size: 0.75rem;
   line-height: 1.1rem; }
@@ -5024,9 +5020,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 .font-secondary {
     font-weight: 400;
     color: #6C868E; }
-  .bootstrap.ui4 a {
-    font-weight: 800;
-    color: #25B9D7; }
   .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small {
     font-size: 0.75rem;
     line-height: 1.1rem; }

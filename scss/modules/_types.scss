@@ -62,11 +62,6 @@ h4 {
     color: $font-color-secondary;
 }
 
-a {
-    font-weight: 800;
-    color: $brand-primary;
-}
-
 sm, small {
     @extend .font-primary;
     font-size: $font-size-sm;

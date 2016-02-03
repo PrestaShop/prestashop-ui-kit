@@ -49,13 +49,13 @@
                             <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Pagination</span></a></li>
                             <li class="kss-menu-item"><a href="section-11.html"><span class="kss-ref">11</span><span class="kss-name">Modals</span></a></li>
                             <li class="kss-menu-item"><a href="section-12.html"><span class="kss-ref">12</span><span class="kss-name">Tooltips</span></a></li>
-                            <li class="kss-menu-item"><a href="section-13.html"><span class="kss-ref">13</span><span class="kss-name">Popovers</span></a></li>
-                            <li class="kss-menu-item"><a href="section-14.html"><span class="kss-ref">14</span><span class="kss-name">Spinner</span></a></li>
-                            <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Tags</span></a></li>
-                            <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Modules Cards</span></a></li>
+                            <li class="kss-menu-item"><a href="section-13.html"><span class="kss-ref">13</span><span class="kss-name">Spinner</span></a></li>
+                            <li class="kss-menu-item"><a href="section-14.html"><span class="kss-ref">14</span><span class="kss-name">Tags</span></a></li>
+                            <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Modules Cards</span></a></li>
+                            <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Tables</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
-                            <li class="kss-menu-item"><a href="#section-15.1"><span class="kss-ref">15.1</span><span class="kss-name">Ps Tagger</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-15.1"><span class="kss-ref">15.1</span><span class="kss-name">Modules Cards Grid</span></a></li>
                         </ul>
                     </nav>
 
@@ -65,67 +65,135 @@
 
                 <article class="kss-article">
                     <section id="section-15" class="kss-section kss-depth-1">
-                        <h1 class="kss-title"><span class="kss-ref">15</span> Tags</h1>
+                        <h1 class="kss-title"><span class="kss-ref">15</span> Modules Cards</h1>
 
 
                     </section>
                     <section id="section-15.1" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">15.1</span> Ps Tagger</h1>
+                        <h1 class="kss-title"><span class="kss-ref">15.1</span> Modules Cards Grid</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                           <div class="wrapper">
-           <input id="pstagger-bar" type="text"/>
-       </div>
-       <hr/>
-       Currently tagged:
-       <div id="example1-tags">
-       </div>
-       <script type="text/javascript">
-           $(document).ready(function(){
-               $('#pstagger-bar').pstagger({
-                  inputPlaceholder: 'Add tag ...',
-                  clearAllBtn: true,
-                  clearAllIconClassAdditional: 'myIconClass',
-                  onTagsChanged: onTagsChange,
-                  onResetTags: onReset,
-              });
-           });
-           function onTagsChange(tagsList) {
-               $('#example1-tags').html(tagsList.join(', '));
-           }
-           function onReset() {
-               $('#example1-tags').empty();
-           }
-       </script>
+                                    <div class="row">
+    <div class="col-sm-6">
+        <div class="module-item-wrapper-grid ">
+            <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
+                <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
+                <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+                    Call Back
+                </h1>
+                <div class="text-ellipsis x-small-text module-version-author-grid">
+                    v1.0.3 by <a href="#">PrestaShop</a>
+                </div>
+            </div>
+            <div class="module-quick-description-grid no-padding">
+                Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+                <div class="module-read-more-grid">
+                    <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+                </div>
+            </div>
+            <div class="module-quick-action-grid clearfix">
+                <button id="test1" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="module-item-wrapper-grid">
+            <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
+                <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
+                <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+                    Call Back
+                </h1>
+                <div class="text-ellipsis x-small-text module-version-author-grid">
+                    v1.0.3 by <a href="#">PrestaShop</a>
+                </div>
+            </div>
+            <div class="module-quick-description-grid no-padding">
+                Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+                <div class="module-read-more-grid">
+                    <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+                </div>
+            </div>
+            <div class="module-quick-action-grid clearfix">
+                <button id="test2" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#test1").psdwl({
+        text: "€199,99",
+        hover: "Install",
+    });
+    $("#test2").psdwl({
+        text: "€199,99",
+        hover: "Discover",
+    });
+});
+</script>
                                 </div>
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">       &lt;div class=&quot;wrapper&quot;&gt;
-           &lt;input id=&quot;pstagger-bar&quot; type=&quot;text&quot;/&gt;
-       &lt;/div&gt;
-       &lt;hr/&gt;
-       Currently tagged:
-       &lt;div id=&quot;example1-tags&quot;&gt;
-       &lt;/div&gt;
-       &lt;script type=&quot;text/javascript&quot;&gt;
-           $(document).ready(function(){
-               $(&#x27;#pstagger-bar&#x27;).pstagger({
-                  inputPlaceholder: &#x27;Add tag ...&#x27;,
-                  clearAllBtn: true,
-                  clearAllIconClassAdditional: &#x27;myIconClass&#x27;,
-                  onTagsChanged: onTagsChange,
-                  onResetTags: onReset,
-              });
-           });
-           function onTagsChange(tagsList) {
-               $(&#x27;#example1-tags&#x27;).html(tagsList.join(&#x27;, &#x27;));
-           }
-           function onReset() {
-               $(&#x27;#example1-tags&#x27;).empty();
-           }
-       &lt;/script&gt;</code></pre>
+                                <pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+        &lt;div class=&quot;module-item-wrapper-grid &quot;&gt;
+            &lt;div class=&quot;module-item-heading-grid&quot; data-toggle=&quot;modal&quot; data-target=&quot;#module-modal-read-more-webcallback&quot;&gt;
+                &lt;img class=&quot;module-logo-thumb-grid&quot; src=&quot;http://addons-media.prestashop.com/img/pico/3162.jpg&quot; alt=&quot;Call Back&quot;&gt;
+                &lt;h1 class=&quot;text-ellipsis module-name-grid&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Call Back&quot;&gt;
+                    Call Back
+                &lt;/h1&gt;
+                &lt;div class=&quot;text-ellipsis x-small-text module-version-author-grid&quot;&gt;
+                    v1.0.3 by &lt;a href=&quot;#&quot;&gt;PrestaShop&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;module-quick-description-grid no-padding&quot;&gt;
+                Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+                &lt;div class=&quot;module-read-more-grid&quot;&gt;
+                    &lt;a class=&quot;module-read-more-grid-btn&quot; href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#module-modal-read-more-webcallback&quot;&gt;Read More&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;module-quick-action-grid clearfix&quot;&gt;
+                &lt;button id=&quot;test1&quot; class=&quot;btn btn-primary btn-lg pull-xs-right&quot;&gt;199.99 €&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+        &lt;div class=&quot;module-item-wrapper-grid&quot;&gt;
+            &lt;div class=&quot;module-item-heading-grid&quot; data-toggle=&quot;modal&quot; data-target=&quot;#module-modal-read-more-webcallback&quot;&gt;
+                &lt;img class=&quot;module-logo-thumb-grid&quot; src=&quot;http://addons-media.prestashop.com/img/pico/3162.jpg&quot; alt=&quot;Call Back&quot;&gt;
+                &lt;h1 class=&quot;text-ellipsis module-name-grid&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Call Back&quot;&gt;
+                    Call Back
+                &lt;/h1&gt;
+                &lt;div class=&quot;text-ellipsis x-small-text module-version-author-grid&quot;&gt;
+                    v1.0.3 by &lt;a href=&quot;#&quot;&gt;PrestaShop&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;module-quick-description-grid no-padding&quot;&gt;
+                Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+                &lt;div class=&quot;module-read-more-grid&quot;&gt;
+                    &lt;a class=&quot;module-read-more-grid-btn&quot; href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#module-modal-read-more-webcallback&quot;&gt;Read More&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;module-quick-action-grid clearfix&quot;&gt;
+                &lt;button id=&quot;test2&quot; class=&quot;btn btn-primary btn-lg pull-xs-right&quot;&gt;199.99 €&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;#test1&quot;).psdwl({
+        text: &quot;€199,99&quot;,
+        hover: &quot;Install&quot;,
+    });
+    $(&quot;#test2&quot;).psdwl({
+        text: &quot;€199,99&quot;,
+        hover: &quot;Discover&quot;,
+    });
+});
+&lt;/script&gt;</code></pre>
                             </div>
 
                         </div>

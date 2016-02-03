@@ -26,8 +26,8 @@
 // xsmall - Extra Small Text
 //
 // Markup:
-// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!</p>
-// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!</p>
+// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget! <a href="#"> And this is a link</a></p>
+// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!<a href="#"> And this is a link</a></p>
 //
 // Styleguide 1.2
 
@@ -62,22 +62,37 @@ h4 {
     color: $font-color-secondary;
 }
 
+a {
+    font-weight: 800;
+    color: $primary-color;
+}
+
+// Base text
+*,    
+body, 
+td, 
+tr, 
+div, 
+p, 
+form, 
+input, 
+select, 
+textarea, 
+font {
+    @extend .font-primary;
+    line-height: 1.3rem;
+}
+
 sm, small {
     @extend .font-primary;
     font-size: $font-size-sm;
-
-    &.font-secondary {
-        @extend .font-secondary;
-    }
+    line-height: 1.1rem;
 }
 
 xs, xsmall {
     @extend .font-primary;
     font-size: $font-size-xs;
-
-    &.font-secondary {
-        @extend .font-secondary;
-    }
+    line-height: 1.1rem;
 }
 
 .h1     { @extend h1;    }

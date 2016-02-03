@@ -24,7 +24,7 @@
 //                 </div>
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test1" class="btn btn-primary-reverse btn-lg pull-xs-right">199.99 €</button>
+//                 <button id="test1" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
 //             </div>
 //         </div>
 //     </div>
@@ -46,7 +46,7 @@
 //                 </div>
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test2" class="btn btn-primary-reverse btn-lg pull-xs-right">199.99 €</button>
+//                 <button id="test2" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
 //             </div>
 //         </div>
 //     </div>
@@ -56,14 +56,12 @@
 //     $("#test1").psdwl({
 //         text: "€199,99",
 //         hover: "Install",
-//         default: false
 //     });
 //     $("#test2").psdwl({
 //         text: "€199,99",
 //         hover: "Discover",
-//         default: false
-//     });}
-// ); 
+//     });
+// }); 
 // </script>
 //
 // Styleguide 15.1

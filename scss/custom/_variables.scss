@@ -34,7 +34,9 @@ $font-size-root:                              16px;
 /* $OpenSansPath: "https://fonts.googleapis.com/css?"; */
 
 // Border
-$border-radius:                               .25rem !default;
+$border-radius:                               .25rem;
+$border-width:                                1px;
+
 
 // Banner
 //
@@ -99,7 +101,7 @@ $font-family-base:                            Open Sans, sans-serif;
 
 $headings-font-family:                        $font-family-base;
 
-$font-size-base:                              1rem;
+$font-size-base:                              .9rem;
 
 $font-size-h1:                                1.5rem;
 $font-size-h2:                                1.0rem;

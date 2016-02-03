@@ -1,96 +1,7 @@
 @charset "UTF-8";
 /* $OpenSansPath: "https://fonts.googleapis.com/css?"; */
-/* BEGIN Light */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800);
 @import url(jquery.pstagger.css);
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/Light/OpenSans-Light.eot?v=1.1.0");
-  src: url("./fonts/Light/OpenSans-Light.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Light/OpenSans-Light.woff?v=1.1.0") format("woff"), url("./fonts/Light/OpenSans-Light.ttf?v=1.1.0") format("truetype"), url("./fonts/Light/OpenSans-Light.svg?v=1.1.0#Light") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-
-/* END Light */
-/* BEGIN Light Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/LightItalic/OpenSans-LightItalic.eot?v=1.1.0");
-  src: url("./fonts/LightItalic/OpenSans-LightItalic.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/LightItalic/OpenSans-LightItalic.woff?v=1.1.0") format("woff"), url("./fonts/LightItalic/OpenSans-LightItalic.ttf?v=1.1.0") format("truetype"), url("./fonts/LightItalic/OpenSans-LightItalic.svg?v=1.1.0#LightItalic") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-
-/* END Light Italic */
-/* BEGIN Regular */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/Regular/OpenSans-Regular.eot?v=1.1.0");
-  src: url("./fonts/Regular/OpenSans-Regular.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Regular/OpenSans-Regular.woff?v=1.1.0") format("woff"), url("./fonts/Regular/OpenSans-Regular.ttf?v=1.1.0") format("truetype"), url("./fonts/Regular/OpenSans-Regular.svg?v=1.1.0#Regular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-/* END Regular */
-/* BEGIN Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/Italic/OpenSans-Italic.eot?v=1.1.0");
-  src: url("./fonts/Italic/OpenSans-Italic.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Italic/OpenSans-Italic.woff?v=1.1.0") format("woff"), url("./fonts/Italic/OpenSans-Italic.ttf?v=1.1.0") format("truetype"), url("./fonts/Italic/OpenSans-Italic.svg?v=1.1.0#Italic") format("svg");
-  font-weight: normal;
-  font-style: italic; }
-
-/* END Italic */
-/* BEGIN Semibold */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/Semibold/OpenSans-Semibold.eot?v=1.1.0");
-  src: url("./fonts/Semibold/OpenSans-Semibold.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Semibold/OpenSans-Semibold.woff?v=1.1.0") format("woff"), url("./fonts/Semibold/OpenSans-Semibold.ttf?v=1.1.0") format("truetype"), url("./fonts/Semibold/OpenSans-Semibold.svg?v=1.1.0#Semibold") format("svg");
-  font-weight: 600;
-  font-style: normal; }
-
-/* END Semibold */
-/* BEGIN Semibold Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/SemiboldItalic/OpenSans-SemiboldItalic.eot?v=1.1.0");
-  src: url("./fonts/SemiboldItalic/OpenSans-SemiboldItalic.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/SemiboldItalic/OpenSans-SemiboldItalic.woff?v=1.1.0") format("woff"), url("./fonts/SemiboldItalic/OpenSans-SemiboldItalic.ttf?v=1.1.0") format("truetype"), url("./fonts/SemiboldItalic/OpenSans-SemiboldItalic.svg?v=1.1.0#SemiboldItalic") format("svg");
-  font-weight: 600;
-  font-style: italic; }
-
-/* END Semibold Italic */
-/* BEGIN Bold */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/Bold/OpenSans-Bold.eot?v=1.1.0");
-  src: url("./fonts/Bold/OpenSans-Bold.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/Bold/OpenSans-Bold.woff?v=1.1.0") format("woff"), url("./fonts/Bold/OpenSans-Bold.ttf?v=1.1.0") format("truetype"), url("./fonts/Bold/OpenSans-Bold.svg?v=1.1.0#Bold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-/* END Bold */
-/* BEGIN Bold Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/BoldItalic/OpenSans-BoldItalic.eot?v=1.1.0");
-  src: url("./fonts/BoldItalic/OpenSans-BoldItalic.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/BoldItalic/OpenSans-BoldItalic.woff?v=1.1.0") format("woff"), url("./fonts/BoldItalic/OpenSans-BoldItalic.ttf?v=1.1.0") format("truetype"), url("./fonts/BoldItalic/OpenSans-BoldItalic.svg?v=1.1.0#BoldItalic") format("svg");
-  font-weight: bold;
-  font-style: italic; }
-
-/* END Bold Italic */
-/* BEGIN Extrabold */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/ExtraBold/OpenSans-ExtraBold.eot?v=1.1.0");
-  src: url("./fonts/ExtraBold/OpenSans-ExtraBold.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/ExtraBold/OpenSans-ExtraBold.woff?v=1.1.0") format("woff"), url("./fonts/ExtraBold/OpenSans-ExtraBold.ttf?v=1.1.0") format("truetype"), url("./fonts/ExtraBold/OpenSans-ExtraBold.svg?v=1.1.0#ExtraBold") format("svg");
-  font-weight: 800;
-  font-style: normal; }
-
-/* END Extrabold */
-/* BEGIN Extrabold Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("./fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?v=1.1.0");
-  src: url("./fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix&v=1.1.0") format("embedded-opentype"), url("./fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff?v=1.1.0") format("woff"), url("./fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf?v=1.1.0") format("truetype"), url("./fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg?v=1.1.0#ExtraBoldItalic") format("svg");
-  font-weight: 800;
-  font-style: italic; }
-
-/* END Extrabold Italic */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -300,7 +211,7 @@ html {
 
 body {
   font-family: Open Sans, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: #373a3c;
   background-color: #fff; }
@@ -727,7 +638,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     -webkit-tap-highlight-color: transparent; }
   .bootstrap.ui4 body {
     font-family: Open Sans, sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     color: #373a3c;
     background-color: #fff; }
@@ -919,7 +830,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 .blockquote {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     border-left: 0.25rem solid #eceeef; }
   .bootstrap.ui4 .blockquote-footer {
     display: block;
@@ -1694,7 +1605,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     display: block;
     width: 100%;
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     color: #55595c;
     background-color: #FAFBFC;
@@ -1726,7 +1637,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     .bootstrap.ui4 input[type="time"].form-control,
     .bootstrap.ui4 input[type="datetime-local"].form-control,
     .bootstrap.ui4 input[type="month"].form-control {
-      line-height: 2.25rem; }
+      line-height: 2.1rem; }
     .bootstrap.ui4 input[type="date"].input-sm,
     .input-group-sm .bootstrap.ui4 input[type="date"].form-control,
     .bootstrap.ui4 input[type="time"].input-sm,
@@ -1752,7 +1663,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     .bootstrap.ui4 input[type="month"].form-control {
       line-height: 3.16667rem; } }
   .bootstrap.ui4 .form-control-static {
-    min-height: 2.25rem;
+    min-height: 2.1rem;
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
     margin-bottom: 0; }
@@ -1831,8 +1742,8 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 .form-control-danger {
     padding-right: 2.25rem;
     background-repeat: no-repeat;
-    background-position: center right 0.5625rem;
-    background-size: 1.4625rem 1.4625rem; }
+    background-position: center right 0.525rem;
+    background-size: 1.365rem 1.365rem; }
   .bootstrap.ui4 .has-success .text-help,
   .bootstrap.ui4 .has-success .form-control-label, .bootstrap.ui4 .has-success .control-label,
   .bootstrap.ui4 .has-success .radio,
@@ -1944,7 +1855,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     user-select: none;
     border: 1px solid transparent;
     padding: 0.375rem 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     border-radius: 0.25rem; }
     .bootstrap.ui4 .btn:focus, .bootstrap.ui4 .btn.focus, .bootstrap.ui4 .btn:active:focus, .bootstrap.ui4 .btn:active.focus, .bootstrap.ui4 .btn.active:focus, .bootstrap.ui4 .btn.active.focus {
@@ -2347,7 +2258,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #373a3c;
     text-align: left;
     list-style: none;
@@ -2571,7 +2482,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     vertical-align: middle; }
   .bootstrap.ui4 .input-group-addon {
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: normal;
     line-height: 1;
     color: #55595c;
@@ -3649,7 +3560,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     padding-bottom: 100%; }
   .bootstrap.ui4 .close {
     float: right;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: bold;
     line-height: 1;
     color: #000;
@@ -3914,7 +3825,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 .popover-title {
     padding: 8px 14px;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: #2f3339;
     border-bottom: 1px solid #23262b;
     border-radius: -0.7rem -0.7rem 0 0; }
@@ -5325,7 +5236,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #25B9D7;
       background-color: #FFFFFF;
       border-color: #ddd; }
-  .bootstrap.ui4 .tooltip {
+  .bootstrap.ui4 .tooltip-inner {
     font-weight: 600; }
   .bootstrap.ui4 .tooltip-error {
     /* .tooltip-arrow { */
@@ -5523,6 +5434,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     color: #FFFFFF;
     font-weight: 600; }
   .bootstrap.ui4 .popover-content {
+    color: #FFFFFF;
     font-size: 1.1em; }
     .bootstrap.ui4 .popover-content a {
       font-weight: 600; }
@@ -5555,7 +5467,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     padding: 0.375rem 0.75rem;
     color: #6C868E;
     width: 100%;
-    min-height: 2.25rem;
+    min-height: 2.1rem;
     height: inherit;
     border-radius: 0.25rem; }
     .bootstrap.ui4 .pstaggerAddTagInput .pstaggerTag,
@@ -5572,5 +5484,18 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       .bootstrap.ui4 .pstaggerAddTagInput .pstaggerTag a,
       .bootstrap.ui4 .pstaggerTagsWrapper .pstaggerTag a {
         color: #363A41; }
+  .bootstrap.ui4 .table tbody {
+    border: 2px solid #BBCDD2; }
+  .bootstrap.ui4 .table th, .bootstrap.ui4 .table td {
+    font-weight: 400;
+    color: #363A41;
+    border: none; }
+  .bootstrap.ui4 .table thead {
+    border: 2px solid #BBCDD2; }
+    .bootstrap.ui4 .table thead th {
+      font-weight: 600;
+      color: #6C868E;
+      border-top: 2px solid #BBCDD2;
+      border-bottom: 2px solid #BBCDD2; }
 
 /*# sourceMappingURL=maps/application.css.map */

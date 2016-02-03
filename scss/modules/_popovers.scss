@@ -9,7 +9,7 @@
 //               html: true,
 //               title: 'Popover title' +
 //                      '<button type="button" id="close" class="close" onclick="$(\'#popovers\').popover(\'hide\');">&times;</button>',
-//               content: 'And here\'s some amazing content. It\'s very engaging. Right? <a href=\'www.prestashop.com\'>PrestaShop</a>'
+//               content: 'And here\'s some amazing content. It\'s very engaging. Right? <a href=\'#\'>PrestaShop</a>'
 //          });
 //      });
 // </script>
@@ -22,6 +22,7 @@
 }
 
 .popover-content {
+    color: $white;
     font-size: 1.1em;
     a {
         font-weight: 600;

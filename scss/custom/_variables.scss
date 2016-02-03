@@ -16,12 +16,11 @@
 // Fonts
 // Components
 
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
+/// Options
+/// Quickly modify global styling by enabling or disabling optional features.
 $enable-shadows:                              false;
-// Avatar
-//
+
+/// Avatar
 // Avatar Size
 $avatar-size-base:                            150px;
 $avatar-size-lg:                              100px;
@@ -30,16 +29,7 @@ $avatar-size-xs:                              40px;
 
 $font-size-root:                              16px;
 
-// Open Sans Path
-/* $OpenSansPath: "https://fonts.googleapis.com/css?"; */
-
-// Border
-$border-radius:                               .25rem;
-$border-width:                                1px;
-
-
-// Banner
-//
+/// Banner
 // Banner Size
 $banner-vert-x:                               300px;
 $banner-vert-y:                               450px;
@@ -57,9 +47,8 @@ $btn-padding-y-sm:                            .25rem !default;
 $btn-padding-x-lg:                            1.5rem !default;
 $btn-padding-y-lg:                            .25rem !default;
 
-// Colors
+/// Colors
 // UI-Kit color
-// this variable should only be used in this file
 $primary:                                     #25B9D7;
 $primary-hover:                               #3ED2F0;
 $secondary:                                   #FFBB00;
@@ -77,23 +66,36 @@ $warning-hover:                               #FDE7BB;
 $danger:                                      #C45C67;
 $danger-hover:                                #EFC8Cb;
 
-// Colors
-// UI-Kit color
-// this variable should only be used in this file
+// Brands Colors
 $brand-primary:                               $primary;
 $brand-secondary:                             $secondary;
 $brand-success:                               $success;
-$brand-info:                                  #5bc0de;
+$brand-info:                                  #5bc0de; /* not used */
 $brand-warning:                               $warning;
 $brand-danger:                                $danger;
 
-// Popovers
+/// Popovers
 $popover-bg:                                  $dark-grey;
 
-// Tooltips
+/// Tooltips
 $tooltip-bg:                                  $medium-grey;
 
-// Typography
+/// Fonts
+$font-size-root:                              16px;
+
+// Fonts weight
+$font-weight-normal:                          400;
+$font-weight-semibold:                        600;
+$font-weight-bold:                            800;
+
+$font-weight-primary:                         $font-weight-normal;
+$font-weight-secondary:                       $font-weight-normal;
+
+$display1-weight:                             $font-weight-normal;
+$display2-weight:                             $font-weight-normal;
+$display3-weight:                             $font-weight-normal;
+$display4-weight:                             $font-weight-normal;
+
 $font-family-sans-serif:                      Open Sans, sans-serif;
 $font-family-serif:                           Open Sans, serif;
 $font-family-monospace:                       Open Sans, monospace;
@@ -125,20 +127,12 @@ $font-color-h4:                               $medium-grey;
 $font-linea-primary:                          1.1rem;
 $font-line-secondary:                         1.1rem;
 
-// Font Weight
-$font-weight-primary:                         300;
-$font-weight-secondary:                       300;
-
-$font-weight-normal:                          400;
-$font-weight-semibold:                        600;
-$font-weight-bold:                            800;
-
 $font-weight-h1:                              $font-weight-semibold;
 $font-weight-h2:                              $font-weight-semibold;
 $font-weight-h3:                              $font-weight-bold;
 $font-weight-h4:                              $font-weight-semibold;
 
-// Forms
+/// Forms
 $input-color-placeholder:                     $medium-grey;
 $input-font-style:                            italic;
 
@@ -152,26 +146,18 @@ $input-group-addon-bg:                        $soft-grey;
 $input-group-addon-color:                     $medium-grey;
 $input-group-addon-border-color:              $input-border-color;
 
-// Dropdowns
+/// Dropdowns
 $dropdown-bg:                                 $soft-grey;
 $dropdown-border-color:                       $light-grey;
 $dropdown-border-color-hover:                 $light-grey;
-// $dropdown-border-width:                       $border-width !default;
 $dropdown-divider-bg:                         #e5e5e5 !default;
 
-// $dropdown-link-color:                         $gray-dark !default;
-// $dropdown-link-hover-color:                   darken($gray-dark, 5%) !default;
-// $dropdown-link-hover-bg:                      #f5f5f5 !default;
+/// Module Cards
 
-// $dropdown-link-active-color:                  $component-active-color !default;
-// $dropdown-link-active-bg:                     $component-active-bg !default;
-
-// $dropdown-link-disabled-color:                $gray-light !default;
-
-// $dropdown-header-color:                       $gray-light !default;
+// Logo
+$module-logo-size: 45px;
 
 // Tags
-
 $tags-bg:  $primary-hover;
 $tags-color: $white;
 $tags-max-width: 200px;
@@ -180,6 +166,8 @@ $tags-space-x: .156rem;
 $tags-space-y: .375rem;
 $tags-cross-color: $dark-grey;
 
+/// Original Bootstrap _variables
+//
 // Table of Contents
 //
 // Colors

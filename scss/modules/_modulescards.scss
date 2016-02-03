@@ -5,40 +5,70 @@
 // Modules Cards Grid
 //
 // Markup:
-// <div class="module-item-wrapper-grid v2">
-//     <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
-//         <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
-//         <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
-//             Call Back
-//         </h1>
-//         <div class="text-ellipsis x-small-text module-version-author-grid">
-//             v1.0.3 by <a href="#">PrestaShop</a>
+// <div class="row">
+//     <div class="col-sm-6"> 
+//         <div class="module-item-wrapper-grid ">
+//             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
+//                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
+//                 <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+//                     Call Back
+//                 </h1>
+//                 <div class="text-ellipsis x-small-text module-version-author-grid">
+//                     v1.0.3 by <a href="#">PrestaShop</a>
+//                 </div>
+//             </div>
+//             <div class="module-quick-description-grid no-padding">
+//                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+//                 <div class="module-read-more-grid">
+//                     <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//                 </div>
+//             </div>
+//             <div class="module-quick-action-grid clearfix">
+//                 <button id="test1" class="btn btn-primary-reverse btn-lg pull-xs-right">199.99 €</button>
+//             </div>
 //         </div>
 //     </div>
-//     <div class="module-quick-description-grid no-padding">
-//         Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
-//         <div class="module-read-more-grid">
-//             <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//     <div class="col-sm-6">
+//         <div class="module-item-wrapper-grid">
+//             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
+//                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
+//                 <h1 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+//                     Call Back
+//                 </h1>
+//                 <div class="text-ellipsis x-small-text module-version-author-grid">
+//                     v1.0.3 by <a href="#">PrestaShop</a>
+//                 </div>
+//             </div>
+//             <div class="module-quick-description-grid no-padding">
+//                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+//                 <div class="module-read-more-grid">
+//                     <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//                 </div>
+//             </div>
+//             <div class="module-quick-action-grid clearfix">
+//                 <button id="test2" class="btn btn-primary-reverse btn-lg pull-xs-right">199.99 €</button>
+//             </div>
 //         </div>
 //     </div>
-//     <div class="module-quick-action-grid clearfix">
-// <button id="test" class="btn btn-primary-outline btn-lg pull-xs-right">199.99 €</button>
-//  <script type="text/javascript">
+// </div>
+// <script type="text/javascript">
 // $(document).ready(function(){
-//     $("#test").psdwl({
+//     $("#test1").psdwl({
+//         text: "€199,99",
+//         hover: "Install",
+//         default: false
+//     });
+//     $("#test2").psdwl({
 //         text: "€199,99",
 //         hover: "Discover",
 //         default: false
 //     });}
-// ()); 
+// ); 
 // </script>
-//     </div>
-// </div>
-//
 //
 // Styleguide 16.1
 
-.module-item-wrapper-grid.v2 {
+.module-item-wrapper-grid {
     @extend .card;
     @extend .card-block;
 
@@ -68,6 +98,10 @@
             margin: 0 57px;
             position: relative;
             margin-bottom: .5em;
+        }
+
+        .module-read-more-grid-btn {
+            float: left;
         }
     }
 

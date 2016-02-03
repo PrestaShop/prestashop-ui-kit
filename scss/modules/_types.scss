@@ -26,8 +26,8 @@
 // xsmall - Extra Small Text
 //
 // Markup:
-// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget! <a href="#"> And this is a link</a></p>
-// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!<a href="#"> And this is a link</a></p>
+// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget! <a class="url" href="#"> And this is a link</a></p>
+// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!<a class="url" href="#"> And this is a link</a></p>
 //
 // Styleguide 1.2
 
@@ -46,10 +46,13 @@ h3 {
     color       : $font-color-h3;
 }
 
-
 h4 {
     font-weight : $font-weight-h4;
     color       : $font-color-h4;
+}
+
+.url {
+    font-weight: $font-weight-url;
 }
 
 .font-primary {
@@ -74,9 +77,9 @@ xs, xsmall {
     line-height: 1.1rem;
 }
 
-.h1     { @extend h1;    }
-.h2     { @extend h2;    }
-.h3     { @extend h3;    }
-.h4     { @extend h4;    }
-.sm, .small { @extend sm; }
+.h1          { @extend h1; }
+.h2          { @extend h2; }
+.h3          { @extend h3; }
+.h4          { @extend h4; }
+.sm, .small  { @extend sm; }
 .xs, .xsmall { @extend xs; }

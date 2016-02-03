@@ -96,6 +96,8 @@ $display2-weight:                             $font-weight-normal;
 $display3-weight:                             $font-weight-normal;
 $display4-weight:                             $font-weight-normal;
 
+$font-weight-url:                             800;
+
 $font-family-sans-serif:                      Open Sans, sans-serif;
 $font-family-serif:                           Open Sans, serif;
 $font-family-monospace:                       Open Sans, monospace;
@@ -155,16 +157,16 @@ $dropdown-divider-bg:                         #e5e5e5 !default;
 /// Module Cards
 
 // Logo
-$module-logo-size: 45px;
+$module-logo-size:                            45px;
 
 // Tags
-$tags-bg:  $primary-hover;
-$tags-color: $white;
-$tags-max-width: 200px;
-$tags-font-weight: $font-weight-semibold;
-$tags-space-x: .156rem;
-$tags-space-y: .375rem;
-$tags-cross-color: $dark-grey;
+$tags-bg:                                     $primary-hover;
+$tags-color:                                  $white;
+$tags-max-width:                              200px;
+$tags-font-weight:                            $font-weight-semibold;
+$tags-space-x:                                .156rem;
+$tags-space-y:                                .375rem;
+$tags-cross-color:                            $dark-grey;
 
 /// Original Bootstrap _variables
 //

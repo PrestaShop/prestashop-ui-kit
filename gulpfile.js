@@ -34,8 +34,8 @@ var root_scss = [
 var jsfiles = [
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
+    config.nodeModulesDir + '/pstagger/jquery.pstagger.min.js',
     config.nodeModulesDir + '/jquery.growl/javascripts/jquery.growl.js',
-    require.resolve('pstagger'),
     'js/prestakit.js'
 ];
 
@@ -43,6 +43,7 @@ var cssfiles = [
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.css',
     config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css',
+    config.nodeModulesDir + '/pstagger/jquery.pstagger.css'
 ];
 
 var fontsfiles = [
@@ -53,7 +54,7 @@ var imgfiles = [
     config.imgIndex + '/logo.png'
 ];
 
-gulp.task('default', ['scss', 'js', 'js:uglify', 'css', 'fonts', 'img', 'css:minify', 'styleguide']);
+gulp.task('default', ['scss', 'js', 'css', 'fonts', 'img', 'css:minify', 'styleguide']);
 
 gulp.task('scss', function () {
     return gulp.src(root_scss)
@@ -86,7 +87,7 @@ gulp.task('js:uglify', ['js'], function () {
             extname: '.min.js'
         }))
         .pipe(gulp.dest(config.dist + '/js'))
-        .pipe(gulp.dest(config.dist + 'public'));
+        .pipe(gulp.dest(config.dist + '/doc/public'));
 });
 
 gulp.task('fonts', function () {
@@ -156,18 +157,6 @@ gulp.task('styleguide', function() {
     gulp.src('template/public/kss.css')
         .pipe(gulp.dest(config.dist + '/docs/public'));
 });
-
-// @TODO link to travis
-// gulp.task('css:lint', function () {
-//     return gulp.src(config.cssPattern)
-//         .pipe(csslint('csslintrc.json'))
-//         .pipe(csslint.reporter(function(file) {
-//             util.log('founds ' + util.colors.cyan(file.csslint.errorCount)+ ' errors in ' + util.colors.magenta(file.path));
-//             file.csslint.results.forEach(function(result) {
-//                 util.log(result.error.message + ' on line ' + result.error.line);
-//             });
-//         }));
-// });
 
 gulp.task('clean', function() {
     return gulp.src([config.dist + '/*', config.jsDir + '/*'], {read: false})

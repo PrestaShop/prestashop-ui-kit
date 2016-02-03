@@ -46,8 +46,7 @@ var cssfiles = [
 ];
 
 var fontsfiles = [
-    config.nodeModulesDir + '/material-design-iconic-font/dist/fonts/*',
-    config.nodeModulesDir + '/open-sans-fontface/fonts/**/*'
+    config.nodeModulesDir + '/material-design-iconic-font/dist/fonts/*'
 ];
 
 var imgfiles = [

@@ -6,13 +6,23 @@
 
 $(function () {
 
+    // Enable tooltips everywhere
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Error tooltips template
     var options = {
         template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
     };
-
+    // Enable Error tooltips
     $('.tooltip-error').tooltip(options);
-    $('[data-toggle="tooltip"]').tooltip();
 
+
+    // Enable popovers everywhere
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+
+    // Keep one unique configuration
     var setConfig = function (givenConfig, defaultConfig) {
         var finalConfig = {};
         for (var property in defaultConfig) {
@@ -25,9 +35,11 @@ $(function () {
         return finalConfig;
     };
 
+    // Spinner
     $.fn.psdwl = function(_config) {
         var config = null;
 
+        // Default Configuration
         var defaultConfig =  {
             hover: 'install',
             validate: '<i class="zmdi zmdi-check"></i>',
@@ -48,6 +60,7 @@ $(function () {
             config.text = $(psdwl.selector).text();
         }
 
+        // Width correction on Hover
         psdwl.html(config.hover);
         var hw = this.css('width');
         psdwl.html(config.text);

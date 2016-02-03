@@ -1,3 +1,44 @@
 // Popovers
 //
 // Styleguide 13
+
+// Popovers
+//
+// Markup:
+// <div><button id="popovers" type="button" class="btn btn-lg btn-danger">Click to toggle popover</button></div>
+// <script class="text/javascript">
+//     $( document ).ready( function () {
+//          $("#popovers").popover({
+//               placement: 'right',
+//               html: true,
+//               title: 'Popover title' +
+//                      '<button type="button" id="close" class="close" onclick="$(\'#popovers\').popover(\'hide\');">&times;</button>',
+//               content: 'And here\'s some amazing content. It\'s very engaging. Right? <a href=\'www.prestashop.com\'>PrestaShop</a>'
+//          });
+//      });
+// </script>
+//
+// Styleguide 12.3
+
+.popover {
+    color: $white;
+    font-weight: 600;
+}
+
+.popover-content {
+    font-size: 1.1em;
+    a {
+        font-weight: 600;
+    }
+}
+
+.popover-title {
+    color: $white;
+    border-bottom: none;
+    background-color: $dark-grey;
+    .close {
+        color: $white;
+        opacity: 0.8;
+    }
+}
+

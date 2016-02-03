@@ -87,6 +87,9 @@ $brand-info:                                  #5bc0de;
 $brand-warning:                               $warning;
 $brand-danger:                                $danger;
 
+// Popovers
+$popover-bg:                                  $dark-grey;
+
 // Tooltips
 $tooltip-bg:                                  $medium-grey;
 
@@ -97,8 +100,6 @@ $font-family-monospace:                       Open Sans, monospace;
 $font-family-base:                            Open Sans, sans-serif;
 
 $headings-font-family:                        $font-family-base;
-
-/* $font-size-base:                           em(14px); */
 
 $font-size-base:                              1rem;
 

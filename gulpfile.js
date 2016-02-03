@@ -73,7 +73,7 @@ gulp.task('scss', function () {
             extname: '.css'
         }))
         .pipe(gulp.dest(config.dist + '/css'))
-        .pipe(gulp.dest(config.dist + '/docs/public'));
+        .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
 gulp.task('js:uglify', ['js'], function () {
@@ -87,7 +87,7 @@ gulp.task('js:uglify', ['js'], function () {
             extname: '.min.js'
         }))
         .pipe(gulp.dest(config.dist + '/js'))
-        .pipe(gulp.dest(config.dist + '/doc/public'));
+        .pipe(gulp.dest(config.dist + '/doc/js'));
 });
 
 gulp.task('fonts', function () {
@@ -99,13 +99,13 @@ gulp.task('fonts', function () {
 gulp.task('css', function () {
     return gulp.src(cssfiles)
         .pipe(gulp.dest(config.dist + '/css'))
-        .pipe(gulp.dest(config.dist + '/docs/public'));
+        .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
 gulp.task('js', function () {
     return gulp.src(jsfiles)
         .pipe(gulp.dest(config.dist + '/js'))
-        .pipe(gulp.dest(config.dist + '/docs/public'));;
+        .pipe(gulp.dest(config.dist + '/docs/js'));;
 
 });
 
@@ -155,7 +155,7 @@ gulp.task('styleguide', function() {
         .pipe(gulp.dest(config.dist + '/docs'));
 
     gulp.src('template/public/kss.css')
-        .pipe(gulp.dest(config.dist + '/docs/public'));
+        .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
 gulp.task('clean', function() {

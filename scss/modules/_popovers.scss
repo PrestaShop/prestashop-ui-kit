@@ -18,21 +18,17 @@
 
 .popover {
     color: $white;
-    font-weight: 600;
 }
 
 .popover-content {
     color: $white;
-    font-size: 1.1em;
-    a {
-        font-weight: 600;
-    }
 }
 
 .popover-title {
     color: $white;
     border-bottom: none;
     background-color: $dark-grey;
+
     .close {
         color: $white;
         opacity: 0.8;

@@ -367,27 +367,7 @@ h4, .h4, .bootstrap.ui4 .h4 {
   font-weight: 600;
   color: #6C868E; }
 
-.font-primary, *,
-body,
-td,
-tr,
-div,
-p,
-form,
-input,
-select,
-textarea,
-font, sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small, xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall, .bootstrap.ui4 *,
-.bootstrap.ui4 body,
-.bootstrap.ui4 td,
-.bootstrap.ui4 tr,
-.bootstrap.ui4 div,
-.bootstrap.ui4 p,
-.bootstrap.ui4 form,
-.bootstrap.ui4 input,
-.bootstrap.ui4 select,
-.bootstrap.ui4 textarea,
-.bootstrap.ui4 font, .bootstrap.ui4 sm, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 xsmall {
+.font-primary, sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small, xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall, .bootstrap.ui4 sm, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 xsmall {
   font-weight: 400;
   color: #363A41; }
 
@@ -398,19 +378,6 @@ font, sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small, xs, .xs
 a {
   font-weight: 800;
   color: #25B9D7; }
-
-*,
-body,
-td,
-tr,
-div,
-p,
-form,
-input,
-select,
-textarea,
-font {
-  line-height: 1.3rem; }
 
 sm, .sm, .small, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, small {
   font-size: 0.75rem;
@@ -5051,17 +5018,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 h4, .bootstrap.ui4 .h4 {
     font-weight: 600;
     color: #6C868E; }
-  .bootstrap.ui4 .font-primary, .bootstrap.ui4 *, .bootstrap.ui4
-  body, .bootstrap.ui4
-  td, .bootstrap.ui4
-  tr, .bootstrap.ui4
-  div, .bootstrap.ui4
-  p, .bootstrap.ui4
-  form, .bootstrap.ui4
-  input, .bootstrap.ui4
-  select, .bootstrap.ui4
-  textarea, .bootstrap.ui4
-  font, .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, .bootstrap.ui4 xsmall {
+  .bootstrap.ui4 .font-primary, .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small, .bootstrap.ui4 xs, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, .bootstrap.ui4 xsmall {
     font-weight: 400;
     color: #363A41; }
   .bootstrap.ui4 .font-secondary {
@@ -5070,18 +5027,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
   .bootstrap.ui4 a {
     font-weight: 800;
     color: #25B9D7; }
-  .bootstrap.ui4 *,
-  .bootstrap.ui4 body,
-  .bootstrap.ui4 td,
-  .bootstrap.ui4 tr,
-  .bootstrap.ui4 div,
-  .bootstrap.ui4 p,
-  .bootstrap.ui4 form,
-  .bootstrap.ui4 input,
-  .bootstrap.ui4 select,
-  .bootstrap.ui4 textarea,
-  .bootstrap.ui4 font {
-    line-height: 1.3rem; }
   .bootstrap.ui4 sm, .bootstrap.ui4 .sm, .bootstrap.ui4 .small, .bootstrap.ui4 small {
     font-size: 0.75rem;
     line-height: 1.1rem; }

@@ -67,22 +67,6 @@ a {
     color: $brand-primary;
 }
 
-// Base text
-*,    
-body, 
-td, 
-tr, 
-div, 
-p, 
-form, 
-input, 
-select, 
-textarea, 
-font {
-    @extend .font-primary;
-    line-height: 1.3rem;
-}
-
 sm, small {
     @extend .font-primary;
     font-size: $font-size-sm;

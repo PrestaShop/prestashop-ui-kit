@@ -8,10 +8,10 @@ PrestaShop is a free and Open Source e-commerce web application, committed to pr
 
 Download
 --------
-**[psui](https://github.com/gfanton/PrestaKit)** [zip] or
+**[prestashop-ui-kit](https://github.com/PrestaShop/prestashop-ui-kit)** [zip] or
 
 ```
-git clone https://github.com/gfanton/PrestaKit
+git clone https://github.com/PrestaShop/prestashop-ui-kit
 ```
 
 Installation
@@ -25,4 +25,4 @@ npm install
 
 License
 -------
-This template is under the [MIT License](https://github.com/htanjo/kss-node-template/blob/master/LICENSE).
+This template is under the [MIT License]().

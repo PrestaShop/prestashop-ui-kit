@@ -42,6 +42,7 @@
     "marked": "^0.3.5",
     "material-design-iconic-font": "^2.2.0",
     "node-sass": "^3.4.2",
+    "open-sans-fontface": "^1.4.0",
     "tether": "^1.1.1"
   },
   "dependencies": {

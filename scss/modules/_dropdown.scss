@@ -29,8 +29,9 @@
         @extend .btn-sm;
         @extend .btn-secondary;
 
-        &:hover { border-color: $dropdown-border-color-hover; }
-
+        &:hover {
+            border-color: $dropdown-border-color-hover;
+        }
     }
 }
 

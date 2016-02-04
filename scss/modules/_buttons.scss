@@ -144,3 +144,15 @@
 // <button type="button" class="btn" disabled>Button</button>
 //
 // Styleguide 3.5
+
+// Switch Button
+//
+// Markup:
+// <input type="checkbox" name="my-checkbox" checked>
+// <script class="text/javascript">
+//     $( document ).ready( function () {
+//        $("[name='my-checkbox']").bootstrapSwitch(); 
+//     });
+// </script>
+//
+// Styleguide 3.6

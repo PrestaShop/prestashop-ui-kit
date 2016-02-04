@@ -4987,24 +4987,6 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
     .bootstrap.ui4 .btn-lg.disabled, .bootstrap.ui4 .btn-group-lg > .disabled.btn, .bootstrap.ui4 .btn-lg:disabled, .bootstrap.ui4 .btn-group-lg > .btn:disabled {
       cursor: not-allowed;
       opacity: .65; }
-  .bootstrap.ui4 .banner-hori {
-    width: 620px;
-    height: 215px; }
-  .bootstrap.ui4 .ps-banner-vert {
-    width: 300px;
-    height: 450px; }
-  .bootstrap.ui4 .ps-avatar {
-    width: 150px;
-    height: 150px; }
-  .bootstrap.ui4 .ps-avatar-lg {
-    width: 100px;
-    height: 100px; }
-  .bootstrap.ui4 .ps-avatar-sm {
-    width: 60px;
-    height: 60px; }
-  .bootstrap.ui4 .ps-avatar-xs {
-    width: 40px;
-    height: 40px; }
   .bootstrap.ui4 h1, .bootstrap.ui4 .h1 {
     font-weight: 600;
     color: #363A41; }
@@ -5047,6 +5029,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-info i {
       position: absolute;
+      top: 8px;
       left: 10px;
       color: #25B9D7;
       float: left;
@@ -5065,6 +5048,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-warning i {
       position: absolute;
+      top: 8px;
       left: 10px;
       color: #CD9321;
       float: left;
@@ -5083,6 +5067,7 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #1f2125; }
     .bootstrap.ui4 .alert-danger i {
       position: absolute;
+      top: 8px;
       left: 10px;
       color: #C45C67;
       float: left;
@@ -5435,5 +5420,9 @@ xs, .xs, .xsmall, .bootstrap.ui4 .xs, .bootstrap.ui4 .xsmall, xsmall {
       color: #6C868E;
       border-top: 2px solid #BBCDD2;
       border-bottom: 2px solid #BBCDD2; }
+  .bootstrap.ui4 ul {
+    color: #FF00FF; }
+  .bootstrap.ui4 ol {
+    color: #FF00FF; }
 
 /*# sourceMappingURL=maps/application.css.map */

@@ -16,6 +16,7 @@ var sourcemaps     = require('gulp-sourcemaps');
 var config         = {
     name           : 'prestakit',
     production     : !!util.env.production,
+    projectDir     : __dirname + '/',
     scssIndex      : __dirname + '/scss/application.scss',
     jsIndex        : __dirname + '/js/.js',
     imgIndex       : __dirname + '/img',
@@ -31,18 +32,20 @@ var root_scss = [
 ];
 
 var jsfiles = [
+    // Vendors js
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.min.js',
     config.nodeModulesDir + '/jquery.growl/javascripts/jquery.growl.js',
-    'js/prestakit.js'
+    config.nodeModulesDir + '/select2/dist/js/select2.min.js',
+    // Kit js
+    config.projectDir + 'js/prestakit.js'
 ];
 
 var cssfiles = [
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.css',
-    config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css',
-    config.nodeModulesDir + '/pstagger/jquery.pstagger.css'
+    config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css'
 ];
 
 var fontsfiles = [

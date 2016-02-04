@@ -23,10 +23,12 @@
         <script src="js/jquery.pstagger.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/select2.min.js"></script>
         <script src="js/prestakit.js"></script>
+
         
     </head>
-    <body id="kss-node" class="bootstrap ui4">
+    <body id="kss-node">
         <div class="kss-wrapper">
             <div class="kss-sidebar">
                 <div class="kss-sidebar-inner">
@@ -57,6 +59,8 @@
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-5.1"><span class="kss-ref">5.1</span><span class="kss-name">Inputs (width build on grid)</span></a></li>
                             <li class="kss-menu-item"><a href="#section-5.2"><span class="kss-ref">5.2</span><span class="kss-name">Form validation states</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-5.3"><span class="kss-ref">5.3</span><span class="kss-name">Select (Bootstrap)</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-5.4"><span class="kss-ref">5.4</span><span class="kss-name">Select2 (require select2.js)</span></a></li>
                         </ul>
                     </nav>
 
@@ -162,6 +166,72 @@
  &lt;label class=&quot;form-control-label&quot; for=&quot;input&quot;&gt;Input &lt;/label&gt;
  &lt;input type=&quot;text&quot; class=&quot;form-control form-control-&quot; id=&quot;input&quot;&gt;
 &lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-5.3" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">5.3</span> Select (Bootstrap)</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <select class="c-select ">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;select class=&quot;c-select &quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-5.4" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">5.4</span> Select2 (require select2.js)</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <select class="select2-exemple">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+<script type="text/javascript">
+$(document).ready(function() {
+  // Just add class "select2-exemple" (or whatever) to any select element
+  $(".select2-exemple").select2({
+     theme: "prestakit"
+  });
+});
+</script>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;select class=&quot;select2-exemple&quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+  // Just add class &quot;select2-exemple&quot; (or whatever) to any select element
+  $(&quot;.select2-exemple&quot;).select2({
+     theme: &quot;prestakit&quot;
+  });
+});
+&lt;/script&gt;</code></pre>
                             </div>
 
                         </div>

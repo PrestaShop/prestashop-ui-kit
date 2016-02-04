@@ -9,8 +9,9 @@
 
         <link rel="stylesheet" href="css/kss.css" />
         <link rel="stylesheet" href="css/jquery.growl.css"/>
-        <link rel="stylesheet" href="css/material-design-iconic-font.min.css"/>
-        <link rel="stylesheet" href="css/bootstrap-prestakit.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/bootstrap-switch.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
         
 
         <script src="public/jquery-1.9.1.min.js"></script>
@@ -23,10 +24,12 @@
         <script src="js/jquery.pstagger.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/prestakit.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/prestashop-ui-kit.js"></script>
         
     </head>
-    <body id="kss-node" class="bootstrap ui4">
+    <body id="kss-node">
         <div class="kss-wrapper">
             <div class="kss-sidebar">
                 <div class="kss-sidebar-inner">
@@ -53,12 +56,14 @@
                             <li class="kss-menu-item"><a href="section-14.html"><span class="kss-ref">14</span><span class="kss-name">Tags</span></a></li>
                             <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Modules Cards</span></a></li>
                             <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Tables</span></a></li>
+                            <li class="kss-menu-item"><a href="section-17.html"><span class="kss-ref">17</span><span class="kss-name">Tab-bar &amp; Navs-Bar</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-3.1"><span class="kss-ref">3.1</span><span class="kss-name">Base styles</span></a></li>
                             <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">Outline Styles</span></a></li>
                             <li class="kss-menu-item"><a href="#section-3.4"><span class="kss-ref">3.4</span><span class="kss-name">Sizes</span></a></li>
                             <li class="kss-menu-item"><a href="#section-3.5"><span class="kss-ref">3.5</span><span class="kss-name">States</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-3.6"><span class="kss-ref">3.6</span><span class="kss-name">Switch Button</span></a></li>
                         </ul>
                     </nav>
 
@@ -202,6 +207,31 @@
                                 <pre><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot;&gt;Button&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-3.6" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">3.6</span> Switch Button</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <input type="checkbox" name="my-checkbox" checked>
+<script class="text/javascript">
+    $( document ).ready( function () {
+       $("[name='my-checkbox']").bootstrapSwitch();
+    });
+</script>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;input type=&quot;checkbox&quot; name=&quot;my-checkbox&quot; checked&gt;
+&lt;script class=&quot;text/javascript&quot;&gt;
+    $( document ).ready( function () {
+       $(&quot;[name=&#x27;my-checkbox&#x27;]&quot;).bootstrapSwitch();
+    });
+&lt;/script&gt;</code></pre>
                             </div>
 
                         </div>

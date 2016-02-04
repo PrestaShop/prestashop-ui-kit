@@ -19,10 +19,10 @@ $(function () {
 
     // Enable popovers everywhere
     $(function () {
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"]').popover();
     });
 
-    // Keep one unique configuration
+    // Keep unique configuration
     var setConfig = function (givenConfig, defaultConfig) {
         var finalConfig = {};
         for (var property in defaultConfig) {
@@ -36,6 +36,8 @@ $(function () {
     };
 
     // Spinner
+    // @TODO: Add addEventListener, prototype
+    // 1.0.0
     $.fn.psdwl = function(_config) {
         var config = null;
 
@@ -66,15 +68,13 @@ $(function () {
         psdwl.html(config.text);
         var w = this.css('width');
 
+        // Higher width or default
         var width = parseInt(w, 10) < parseInt(hw, 10) ? hw : w;
-
-        if (parseInt(width, 10) < 90)
-            width = '95px';
+        width = parseInt(width, 10) < 90 ? '95px' : width;
 
         psdwl.css('width', width);
 
         psdwl.hover(function () {
-            psdwl.css('width', width);
             psdwl.html(config.hover);
         }, function() {
             psdwl.html(config.text);

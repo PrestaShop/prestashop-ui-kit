@@ -29,7 +29,6 @@
     @include ps-form-control-focus($primary-hover, $primary-hover);
 }
 
-
 // Form validation states
 //
 // success - Success
@@ -66,4 +65,18 @@
     }
 }
 
+// Submit Input
+//
+// Use Icon entity in value, add .has-icon
+// TODO: Adapter le mixin des buttons
+//
+// Markup:
+//  <input type="submit" class="btn has-icon" value="&#xE872;">
+//
+// Styleguide 5.3
 
+.has-icon {
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    color: $dark-grey;
+}

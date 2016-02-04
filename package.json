@@ -41,7 +41,6 @@
     "handlebars": "^4.0.5",
     "jquery.growl": "git+https://github.com/ksylvest/jquery-growl.git",
     "marked": "^0.3.5",
-    "material-design-iconic-font": "^2.2.0",
     "node-sass": "^3.4.2",
     "open-sans-fontface": "^1.4.0",
     "select2": "^4.0.1",

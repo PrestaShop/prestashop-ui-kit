@@ -6181,19 +6181,24 @@ textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:foc
   font-weight: 600; }
 
 .btn-xs {
-  padding: .65em .65em; }
+  padding: .65em .65em;
+  font-size: .65em;
+  font-weight: 600; }
   .btn-xs.disabled, .btn-xs:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
 .btn-sm, .btn-group-sm > .btn, .dropdown button {
-  padding: .65em 1em; }
+  padding: .65em 1em;
+  font-size: .75em;
+  font-weight: 600; }
   .btn-sm.disabled, .btn-group-sm > .disabled.btn, .dropdown button.disabled, .btn-sm:disabled, .btn-group-sm > .btn:disabled, .dropdown button:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 1.25em 1.5em;
+  font-size: .75em;
   font-weight: 800; }
   .btn-lg.disabled, .btn-group-lg > .disabled.btn, .btn-lg:disabled, .btn-group-lg > .btn:disabled {
     cursor: not-allowed;
@@ -6315,12 +6320,13 @@ xs, .xs, .xsmall, xsmall {
 .growl-notice {
   background: #78D07D; }
   .growl-notice .growl-message:before {
-    font-family: 'Material-Design-Iconic-Font';
-    font-size: 20px;
+    font-family: 'Material Icons';
+    font-size: 26px;
+    font-weight: 400;
     display: block;
-    content: "";
+    content: "";
     float: left;
-    margin: 0 15px 0 0; }
+    margin: 0 12px 0 0; }
   .growl-notice .growl-message {
     font-weight: 600;
     color: #FFFFFF; }
@@ -6331,12 +6337,13 @@ xs, .xs, .xsmall, xsmall {
 .growl-error {
   background: #C45C67; }
   .growl-error .growl-message:before {
-    font-family: 'Material-Design-Iconic-Font';
-    font-size: 20px;
+    font-family: 'Material Icons';
+    font-size: 26px;
+    font-weight: 400;
     display: block;
-    content: "";
+    content: "";
     float: left;
-    margin: 0 15px 0 0; }
+    margin: 0 12px 0 0; }
   .growl-error .growl-message {
     font-weight: 600;
     color: #FFFFFF; }
@@ -6383,6 +6390,11 @@ xs, .xs, .xsmall, xsmall {
     border-color: #C45C67;
     outline: none;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #C45C67; }
+
+.has-icon {
+  font-family: 'Material Icons';
+  font-size: 1.5em;
+  color: #363A41; }
 
 .page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
   z-index: 2;

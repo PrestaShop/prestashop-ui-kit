@@ -29,12 +29,13 @@
     background: $background;
 
     .growl-message:before {        
-        font-family: 'Material-Design-Iconic-Font';
-        font-size: 20px;
+        font-family: 'Material Icons';
+        font-size: 26px;
+        font-weight: 400;
         display: block;
         content: $icon;
         float: left;
-        margin: 0 15px 0 0;
+        margin: 0 12px 0 0;
     }
 
     .growl-message {

@@ -107,6 +107,8 @@
 
 .btn-xs {
     padding: .65em .65em;
+    font-size: .65em;
+    font-weight: 600;
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;
@@ -117,6 +119,8 @@
 
 .btn-sm {
     padding: .65em 1em;
+    font-size: .75em;
+    font-weight: 600;
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;
@@ -127,6 +131,7 @@
 
 .btn-lg {
     padding: 1.25em 1.5em;
+    font-size: .75em;
     font-weight: 800;
     &.disabled,
     &:disabled {

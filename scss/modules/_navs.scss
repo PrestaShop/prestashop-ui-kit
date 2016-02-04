@@ -1,0 +1,97 @@
+// Tab-bar & Navs-Bar
+//
+// Styleguide 17
+
+// Nav tabs
+//
+// Markup:
+// <div style="background-color: #eaebec; padding: 20px;"> 
+// <ul class="nav nav-tabs" id="myTab" role="tablist">
+//   <li class="nav-item">
+//     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
+//   </li>
+//   <li class="nav-item">
+//     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a>
+//   </li>
+//   <li class="nav-item">
+//     <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a>
+//   </li>
+//   <li class="nav-item">
+//     <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
+//   </li>
+// </ul>
+// <div class="tab-content">
+//   <div class="tab-pane active" id="home" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
+//   <div class="tab-pane" id="profile" role="tabpanel">Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.</div>
+//   <div class="tab-pane" id="messages" role="tabpanel">Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</div>
+//   <div class="tab-pane" id="settings" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
+// </div>
+// <script type="text/javascript">
+// $(document).ready(function(){
+//   $('#myTab a').click(function (e) {
+//     e.preventDefault()
+//     $(this).tab('show')
+//   });
+// });
+// </script>
+// </div>
+//
+// Styleguide 17.1
+
+.nav-tabs {
+    border-radius: 0;
+    @include clearfix();
+
+    background-color: inherit;
+    .nav-item {
+        float: left;
+        // Make the list-items overlay the bottom border
+        margin-bottom: -1px;
+
+        + .nav-item {
+            margin-left: .2rem;
+        }
+    }
+
+    .nav-link {
+        display: block;
+        padding: $nav-link-padding;
+        border: $nav-tabs-link-border-width solid transparent;
+
+        font-weight: $nav-tabs-unactive-link-hover-font-weight;
+        color: $nav-tabs-unactive-link-hover-color;
+        @include border-radius(0);
+
+        @include hover-focus {
+            border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+        }
+
+        &.disabled {
+            @include plain-hover-focus {
+                color: $nav-disabled-link-color;
+                background-color: transparent;
+                border-color: transparent;
+            }
+        }
+    }
+
+    .nav-link.active,
+    .nav-item.open .nav-link {
+        @include plain-hover-focus {
+            /* color: $nav-tabs-active-link-hover-color; */
+            /* background-color: $nav-tabs-active-link-hover-bg; */
+            /* border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color transparent; */
+
+            border: 0;
+            border-top: 3px solid $nav-tabs-active-link-hover-border-color;
+            background-color: #fff;
+            color: $nav-tabs-active-link-hover-color;
+            font-weight: $nav-tabs-active-link-hover-font-weight;
+        }
+    }
+}
+
+.tab-content {
+    background-color: $nav-tab-content-bg;
+    padding: 20px;
+}

@@ -109,7 +109,7 @@ $(function () {
 
         });
 
-    };;
+    };
 
     // Apply toggle is long text
     $(".alert-text").each(function () {

@@ -71,12 +71,19 @@
 // TODO: Adapter le mixin des buttons
 //
 // Markup:
-//  <input type="submit" class="btn has-icon" value="&#xE872;">
+//  <input type="submit" class="btn btn-primary has-icon" value="&#xE872;">
+//  <input type="submit" class="btn btn-secondary has-icon" value="&#xE872;">
+//  <input type="submit" class="btn btn-success has-icon" value="&#xE872;">
+//  <input type="submit" class="btn btn-warning has-icon" value="&#xE872;">
+//  <input type="submit" class="btn btn-danger has-icon" value="&#xE872;">
 //
 // Styleguide 5.3
 
 .has-icon {
     font-family: 'Material Icons';
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: $dark-grey;
+    &:hover {
+        color: $dark-grey;
+    }
 }

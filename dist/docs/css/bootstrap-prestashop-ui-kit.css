@@ -6435,8 +6435,10 @@ xs, .xs, .xsmall, xsmall {
 
 .has-icon {
   font-family: 'Material Icons';
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #363A41; }
+  .has-icon:hover {
+    color: #363A41; }
 
 .page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
   z-index: 2;

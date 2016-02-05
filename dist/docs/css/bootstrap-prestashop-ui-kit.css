@@ -24,7 +24,7 @@
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 16px;
   /* Preferred icon size */
   display: inline-block;
   width: 1em;
@@ -6224,7 +6224,7 @@ textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:foc
 
 .btn-xs {
   padding: .65em .65em;
-  font-size: .65em;
+  gfont-size: .65em;
   font-weight: 600; }
   .btn-xs.disabled, .btn-xs:disabled {
     cursor: not-allowed;
@@ -6646,17 +6646,238 @@ xs, .xs, .xsmall, xsmall {
     border-radius: 0.25rem; }
   .module-item-wrapper-grid .module-item-heading-grid .module-name-grid {
     position: relative;
-    margin: 0 57px;
-    margin-bottom: .5em; }
+    margin: 0 57px; }
   .module-item-wrapper-grid .module-item-heading-grid .module-version-author-grid {
     margin: 0 57px;
-    position: relative;
-    margin-bottom: .5em; }
+    position: relative; }
   .module-item-wrapper-grid .module-item-heading-grid .module-read-more-grid-btn {
     float: left; }
 
+.module-item-wrapper-grid .module-container {
+  text-align: center; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-0 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-0:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-0:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-05 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-05:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-05:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-1 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-1:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-1:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-15 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-15:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-15:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-2 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-2:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-2:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-25 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-25:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-25:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-3 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-3:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-3:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-35 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-35:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-35:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-4 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-4:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-4:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-45 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-45:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-45:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
+.module-item-wrapper-grid .module-star-ranking-grid-5 {
+  display: inline;
+  position: absolute;
+  left: 5%;
+  bottom: 10%; }
+  .module-item-wrapper-grid .module-star-ranking-grid-5:before {
+    font-family: 'Material Icons';
+    content: "\E838\E838\E838\E838\E838";
+    color: #6C868E;
+    float: left;
+    font-size: 1.1em; }
+  .module-item-wrapper-grid .module-star-ranking-grid-5:after {
+    position: absolute;
+    font-family: 'Material Icons';
+    content: "";
+    color: #FFD100;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0; }
+
 .module-item-wrapper-grid .module-quick-action-grid {
-  postion: relative; }
+  display: inline; }
 
 .module-item-wrapper-grid .module-quick-description-grid {
   margin: 15px 0; }

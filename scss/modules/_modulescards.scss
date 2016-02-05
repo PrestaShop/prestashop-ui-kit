@@ -14,17 +14,22 @@
 //                     Call Back
 //                 </h1>
 //                 <div class="text-ellipsis x-small-text module-version-author-grid">
-//                     v1.0.3 by <a href="#">PrestaShop</a>
+//                     v1.0.3 by <a class="url" href="#">PrestaShop</a>
 //                 </div>
 //             </div>
 //             <div class="module-quick-description-grid no-padding">
 //                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
 //                 <div class="module-read-more-grid">
-//                     <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//                     <a class="module-read-more-grid-btn url" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
 //                 </div>
 //             </div>
+//             <div class="module-container">
+//             <div class="module-star-ranking-grid-3">
+//             ( 42 )
+//             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test1" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
+//                 <button id="test1" class="btn btn-primary btn-sm pull-xs-right">199.99 €</button>
+//             </div>
 //             </div>
 //         </div>
 //     </div>
@@ -36,17 +41,20 @@
 //                     Call Back
 //                 </h1>
 //                 <div class="text-ellipsis x-small-text module-version-author-grid">
-//                     v1.0.3 by <a href="#">PrestaShop</a>
+//                     v1.0.3 by <a class="url" href="#">PrestaShop</a>
 //                 </div>
 //             </div>
 //             <div class="module-quick-description-grid no-padding">
 //                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
 //                 <div class="module-read-more-grid">
-//                     <a class="module-read-more-grid-btn" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//                     <a class="module-read-more-grid-btn url" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
 //                 </div>
 //             </div>
+//             <div class="module-star-ranking-grid-45">
+//             ( 42 )
+//             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test2" class="btn btn-primary btn-lg pull-xs-right">199.99 €</button>
+//                 <button id="test2" class="btn btn-primary btn-sm pull-xs-right">Free</button>
 //             </div>
 //         </div>
 //     </div>
@@ -58,7 +66,6 @@
 //         hover: "Install",
 //     });
 //     $("#test2").psdwl({
-//         text: "€199,99",
 //         hover: "Discover",
 //     });
 // }); 
@@ -84,10 +91,8 @@
 
         .module-name-grid {
             @extend .card-title;
-
             position: relative;
             margin: 0 57px;
-            margin-bottom: .5em;
         }
 
         .module-version-author-grid {
@@ -95,7 +100,6 @@
 
             margin: 0 57px;
             position: relative;
-            margin-bottom: .5em;
         }
 
         .module-read-more-grid-btn {
@@ -103,8 +107,16 @@
         }
     }
 
+    .module-container {
+        text-align:center;
+    }
+
+    .module-star-ranking-grid {
+        @include stars($ps-stars);
+    }
+
     .module-quick-action-grid {
-        postion: relative;
+        display :inline;   
     }
 
     .module-quick-description-grid {

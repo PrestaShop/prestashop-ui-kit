@@ -44,7 +44,7 @@ $(function () {
         // Default Configuration
         var defaultConfig =  {
             hover: 'install',
-            validate: '<i class="zmdi zmdi-check"></i>',
+            validate: '<i class="material-icons">check</i>',
             text: 'default',
             time: 3000,
             default: true
@@ -70,7 +70,7 @@ $(function () {
 
         // Higher width or default
         var width = parseInt(w, 10) < parseInt(hw, 10) ? hw : w;
-        width = parseInt(width, 10) < 90 ? '95px' : width;
+        width = parseInt(width, 10) < 95 ? '95px' : width;
 
         psdwl.css('width', width);
 

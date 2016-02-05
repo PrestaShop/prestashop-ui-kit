@@ -1,24 +1,13 @@
-// Font import
-// Open Sans    Normal    : 400,
-//              Semi-Bold : 600,
-//              Bold      : 700
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800");
-
-// Material Icons
-//
-//
-
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
-       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+       url(MaterialIcons-Regular.woff2) format('woff2'),
+       url(MaterialIcons-Regular.woff) format('woff'),
+       url(MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
@@ -47,5 +36,3 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-
-

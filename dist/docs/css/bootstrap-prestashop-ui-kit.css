@@ -10,9 +10,41 @@
 /* $nav-pills-active-link-hover-bg:           $component-active-bg !default; */
 /* $nav-pills-active-link-hover-color:        $component-active-color !default; */
 /* TODO change padding */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800);
-/* @import "open-sans-fontface/sass/open-sans"; */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800");
 @import url(jquery.pstagger.css);
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.woff2) format("woff2"), url(../fonts/MaterialIcons-Regular.woff) format("woff"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype"); }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+/* @import "open-sans-fontface/sass/open-sans"; */
 .select2-container {
   box-sizing: border-box;
   display: inline-block;

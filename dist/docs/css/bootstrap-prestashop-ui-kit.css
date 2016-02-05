@@ -6224,7 +6224,7 @@ textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:foc
 
 .btn-xs {
   padding: .65em .65em;
-  font-size: .65em;
+  gfont-size: .65em;
   font-weight: 600; }
   .btn-xs.disabled, .btn-xs:disabled {
     cursor: not-allowed;

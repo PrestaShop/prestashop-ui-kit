@@ -60,7 +60,8 @@
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-5.1"><span class="kss-ref">5.1</span><span class="kss-name">Inputs (width build on grid)</span></a></li>
                             <li class="kss-menu-item"><a href="#section-5.2"><span class="kss-ref">5.2</span><span class="kss-name">Form validation states</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-5.3"><span class="kss-ref">5.3</span><span class="kss-name">Submit Input</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-5.3"><span class="kss-ref">5.3</span><span class="kss-name">Select (Bootstrap)</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-5.4"><span class="kss-ref">5.4</span><span class="kss-name">Dropdown</span></a></li>
                         </ul>
                     </nav>
 
@@ -171,29 +172,109 @@
                         </div>
                     </section>
                     <section id="section-5.3" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">5.3</span> Submit Input</h1>
-                        <div class="kss-description">
-                            <p>Use Icon entity in value, add .has-icon
-TODO: Adapter le mixin des buttons</p>
-
-                        </div>
+                        <h1 class="kss-title"><span class="kss-ref">5.3</span> Select (Bootstrap)</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                     <input type="submit" class="btn btn-primary has-icon" value="&#xE872;">
- <input type="submit" class="btn btn-secondary has-icon" value="&#xE872;">
- <input type="submit" class="btn btn-success has-icon" value="&#xE872;">
- <input type="submit" class="btn btn-warning has-icon" value="&#xE872;">
- <input type="submit" class="btn btn-danger has-icon" value="&#xE872;">
+                                    <select class="c-select ">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
                                 </div>
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html"> &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary has-icon&quot; value=&quot;&amp;#xE872;&quot;&gt;
- &lt;input type=&quot;submit&quot; class=&quot;btn btn-secondary has-icon&quot; value=&quot;&amp;#xE872;&quot;&gt;
- &lt;input type=&quot;submit&quot; class=&quot;btn btn-success has-icon&quot; value=&quot;&amp;#xE872;&quot;&gt;
- &lt;input type=&quot;submit&quot; class=&quot;btn btn-warning has-icon&quot; value=&quot;&amp;#xE872;&quot;&gt;
- &lt;input type=&quot;submit&quot; class=&quot;btn btn-danger has-icon&quot; value=&quot;&amp;#xE872;&quot;&gt;</code></pre>
+                                <pre><code class="lang-html">&lt;select class=&quot;c-select &quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-5.4" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">5.4</span> Dropdown</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div class="row">
+<div class="col-md-6">
+<select class="select2-exemple">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+<div class="col-md-6">
+<select class="select2-exemple-2" multiple="multiple">
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+   function formatData (data) {
+       console.log(data);
+       var $res = $('<span></span>');
+       var $check = $('<input type="checkbox" />');
+       $res.text(data.text);
+       if (data.element) {
+           $res.prepend($check);
+           $check.prop('checked', data.element.selected);
+       }
+       return $res;
+   };
+  // Just add class "select2-exemple" (or whatever) to any select element
+  $(".select2-exemple").select2();
+  $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
+});
+</script>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-6&quot;&gt;
+&lt;select class=&quot;select2-exemple&quot;&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-6&quot;&gt;
+&lt;select class=&quot;select2-exemple-2&quot; multiple=&quot;multiple&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+   function formatData (data) {
+       console.log(data);
+       var $res = $(&#x27;&lt;span&gt;&lt;/span&gt;&#x27;);
+       var $check = $(&#x27;&lt;input type=&quot;checkbox&quot; /&gt;&#x27;);
+       $res.text(data.text);
+       if (data.element) {
+           $res.prepend($check);
+           $check.prop(&#x27;checked&#x27;, data.element.selected);
+       }
+       return $res;
+   };
+  // Just add class &quot;select2-exemple&quot; (or whatever) to any select element
+  $(&quot;.select2-exemple&quot;).select2();
+  $(&quot;.select2-exemple-2&quot;).select2({ placeholder: &quot;Open this select menu&quot;, minimumResultsForSearch: -1, templateResult: formatData});
+});
+&lt;/script&gt;</code></pre>
                             </div>
 
                         </div>

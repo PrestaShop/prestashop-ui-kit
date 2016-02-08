@@ -65,25 +65,97 @@
     }
 }
 
-// Submit Input
-//
-// Use Icon entity in value, add .has-icon
-// TODO: Adapter le mixin des buttons
+// Select (Bootstrap)
 //
 // Markup:
-//  <input type="submit" class="btn btn-primary has-icon" value="&#xE872;">
-//  <input type="submit" class="btn btn-secondary has-icon" value="&#xE872;">
-//  <input type="submit" class="btn btn-success has-icon" value="&#xE872;">
-//  <input type="submit" class="btn btn-warning has-icon" value="&#xE872;">
-//  <input type="submit" class="btn btn-danger has-icon" value="&#xE872;">
+// <select class="c-select {{modifier_class}}">
+//   <option selected>Open this select menu</option>
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
+// </select>
 //
 // Styleguide 5.3
 
-.has-icon {
-    font-family: 'Material Icons';
-    font-size: 1.25em;
-    color: $dark-grey;
-    &:hover {
-        color: $dark-grey;
+// Select2 (require select2.js)
+//
+// Markup:
+// <select class="select2-exemple">
+//   <option selected>Open this select menu</option>
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
+// </select>
+// <script type="text/javascript">
+// $(document).ready(function() {
+//   // Just add class "select2-exemple" (or whatever) to any select element
+//   $(".select2-exemple").select2({
+//      theme: "prestakit"
+//   });
+// });
+// </script>
+//
+// Styleguide 5.4
+
+.select2-container--prestakit {
+    @extend .c-select;
+    @import "select2/src/scss/theme/default/single";
+    @import "select2/src/scss/theme/default/multiple";
+
+    .select2-search--dropdown {
+        .select2-search__field {
+            border: 1px solid $border-color;
+            outline: 0;
+        }
+    }
+
+    .select2-search--inline {
+        .select2-search__field {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .select2-dropdown {
+        background-color: $dropdown-bg-color;
+        border: 1px solid transparent;
+    }
+
+    .select2-dropdown--above {
+        border-bottom: none;
+    }
+
+    .select2-dropdown--below {
+        border-top: none;
+    }
+
+    .select2-results > .select2-results__options {
+        max-height: $results-max-height;
+        overflow-y: auto;
+    }
+
+    .select2-results__option {
+        &[role=group] {
+            padding: 0;
+        }
+
+        &[aria-disabled=true] {
+            color: $results-choice-fg-unselectable-color;
+        }
+    }
+
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: $results-choice-bg-hover-color;
+        color: $results-choice-fg-hover-color;
+    }
+
+    .select2-results__group {
+        cursor: default;
+        display: block;
+        padding: 6px;
+    }
+
+    &.select2-container--open .select2-dropdown {
+        border-color: $focus-border-color;
     }
 }

@@ -39,6 +39,7 @@ var jsfiles = [
     config.nodeModulesDir + '/pstagger/jquery.pstagger.min.js',
     config.nodeModulesDir + '/jquery.growl/javascripts/jquery.growl.js',
     config.nodeModulesDir + '/select2/dist/js/select2.min.js',
+
     // Kit js
     config.projectDir + 'js/prestashop-ui-kit.js'
 ];
@@ -47,7 +48,7 @@ var cssfiles = [
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
     config.nodeModulesDir + '/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.css',
-    config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css'
+    config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css',
 ];
 
 var fontsfiles = [

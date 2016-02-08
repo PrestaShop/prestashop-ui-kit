@@ -153,11 +153,6 @@
 // Switch Button
 //
 // Markup:
-// <input type="checkbox" name="my-checkbox" checked>
-// <script class="text/javascript">
-//     $( document ).ready( function () {
-//        $("[name='my-checkbox']").bootstrapSwitch(); 
-//     });
-// </script>
+// <input data-toggle="switch" type="checkbox" name="my-checkbox" checked>
 //
 // Styleguide 3.6

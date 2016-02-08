@@ -77,35 +77,67 @@
 //
 // Styleguide 5.3
 
-// Select2 (require select2.js)
+// Dropdown
 //
 // Markup:
+// <div class="row">
+// <div class="col-md-6">
 // <select class="select2-exemple">
 //   <option selected>Open this select menu</option>
 //   <option value="1">One</option>
 //   <option value="2">Two</option>
 //   <option value="3">Three</option>
 // </select>
+// </div>
+// <div class="col-md-6">
+// <select class="select2-exemple-2" multiple="multiple">
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
+// </select>
+// </div>
+// </div>
 // <script type="text/javascript">
 // $(document).ready(function() {
+//    function formatData (data) {
+//        console.log(data);
+//        var $res = $('<span></span>');
+//        var $check = $('<input type="checkbox" />');
+//        $res.text(data.text);
+//        if (data.element) {
+//            $res.prepend($check);
+//            $check.prop('checked', data.element.selected);
+//        }
+//        return $res;
+//    };
 //   // Just add class "select2-exemple" (or whatever) to any select element
-//   $(".select2-exemple").select2({
-//      theme: "prestakit"
-//   });
+//   $(".select2-exemple").select2();
+//   $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
 // });
 // </script>
 //
 // Styleguide 5.4
 
 .select2-container--prestakit {
-    @extend .c-select;
-    @import "select2/src/scss/theme/default/single";
-    @import "select2/src/scss/theme/default/multiple";
+
+    @import "scss/mixins/single";
+    @import "scss/mixins/multiple";
+
+    width: 100% !important;
+
+    .select2-search__field {
+        width: 100% !important;
+    }
 
     .select2-search--dropdown {
         .select2-search__field {
             border: 1px solid $border-color;
             outline: 0;
+            padding-right: ($input-padding-x * 3);
+            background-repeat: no-repeat;
+            background-position: center right ($input-height * .25);
+            background-size: ($input-height * .65) ($input-height * .65);
+            background-image: url($search-icon);
         }
     }
 
@@ -113,6 +145,7 @@
         .select2-search__field {
             outline: 0;
             box-shadow: none;
+            padding: 3px;
         }
     }
 
@@ -135,6 +168,7 @@
     }
 
     .select2-results__option {
+        color: $medium-grey;
         &[role=group] {
             padding: 0;
         }
@@ -156,6 +190,6 @@
     }
 
     &.select2-container--open .select2-dropdown {
-        border-color: $focus-border-color;
+        border-color: $light-grey;
     }
 }

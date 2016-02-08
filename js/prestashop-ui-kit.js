@@ -6,6 +6,12 @@
 
 $(function () {
 
+    // Set default theme to prestakit for Select2
+    $.fn.select2.defaults.set("theme", "prestakit");
+
+    // Enable Switch Button everywhere
+    $('[data-toggle="switch"]').bootstrapSwitch();
+
     // Enable tooltips everywhere
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -13,14 +19,12 @@ $(function () {
     var options = {
         template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
     };
+
     // Enable Error tooltips
     $('.tooltip-error').tooltip(options);
 
-
     // Enable popovers everywhere
-    $(function () {
-        $('[data-toggle="popover"]').popover();
-    });
+    $('[data-toggle="popover"]').popover();
 
     // Keep unique configuration
     var setConfig = function (givenConfig, defaultConfig) {
@@ -36,7 +40,7 @@ $(function () {
     };
 
     // Spinner
-    // @TODO: Add addEventListener, prototype
+    // @TODO: Add addEventListener, prototype, callback
     // 1.0.0
     $.fn.psdwl = function(_config) {
         var config = null;

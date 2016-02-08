@@ -144,7 +144,8 @@ $input-group-addon-color:                     $medium-grey;
 $input-group-addon-border-color:              $input-border-color;
 
 /// Tab-bar & Navs-Bar
-$nav-link-padding:                            1em 2.5em !default;
+$nav-link-unactive-padding:                   1em 2.5em !default;
+$nav-link-active-padding:                     0.75em 2.5em 1em 2.5em !default;
 
 // tab-bar
 
@@ -159,7 +160,7 @@ $nav-tabs-link-border-width:                  0;
 $nav-tabs-active-link-hover-bg:               $body-bg;
 $nav-tabs-unactive-link-hover-bg:             inherit;
 
-$nav-tabs-active-link-hover-font-weight:      $font-weight-bold;
+$nav-tabs-active-link-hover-font-weight:      $font-weight-normal;
 $nav-tabs-unactive-link-hover-font-weight:    $font-weight-normal;
 
 $nav-tabs-active-link-hover-color:            $dark-grey;

@@ -1,8 +1,12 @@
 /*!
- * PrestaKit v1.0.0 (http://getbootstrap.com)
+ * Prestige v1.0.0 (http://getbootstrap.com)
  * Copyright 2015-2015
  * Copy License
  */
+
+plugins_list = [
+    "select2"
+];
 
 $(function () {
 
@@ -12,8 +16,7 @@ $(function () {
     $.fn.select2.defaults.set("theme", "prestakit");
 
     // Template
-    var templateData = function formatData (data) {
-        console.log(data);
+    function formatData (data) {
         var $res = $('<span></span>');
         var $check = $('<input type="checkbox" />');
         $res.text(data.text);
@@ -24,6 +27,13 @@ $(function () {
         return $res;
     };
 
+    function formatRepo (data) {
+        console.log(data);
+        var $res = $('<span class="select2-selection__tags"></span>');
+        $res.text(data.text);
+        return $res;
+    }
+
     // Enable Select2 everywhere
     //
     // TODO Add templateResult
@@ -32,17 +42,17 @@ $(function () {
         var newObj = {};
 
         for (var attr in $(this).data()) {
-            if (attr.localeCompare("toggle")) {
-                if (!attr.localeCompare("templateresult"))
-                    newObj["templateResult"] = window[templateData];
-                else if (!attr.localeCompare("minimumresultsforsearch"))
-                    newObj["minimumResultsForSearch"] = $(this).data()[attr];
-                else
-                    newObj[attr] = $(this).data()[attr];
+            if (!attr.localeCompare("templateresult"))
+                newObj["templateResult"] = eval($(this).data()[attr]);
+            else if (!attr.localeCompare("templateselection"))
+                newObj["templateSelection"] = eval($(this).data()[attr]);
+            else if (!attr.localeCompare("minimumresultsforsearch"))
+                newObj["minimumResultsForSearch"] = $(this).data()[attr];
+            else if (attr.localeCompare("toggle")) {
+                newObj[attr] = $(this).data()[attr];
             }
         }
 
-        console.log(newObj);
         $(this).select2(newObj);
     });
 
@@ -193,4 +203,11 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
+});
+
+$( document ).ready(function(){
+    if (plugins_list.map(function(e, i) {
+        return jQuery()[e] === undefined ? 1 | console.log(e + " is not loaded") : 0;
+    }).reduce((prev, curr) => prev | curr))
+        console.log("PrestaKit may not work correctly..");
 });

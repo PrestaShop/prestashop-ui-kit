@@ -90,30 +90,22 @@
 // </select>
 // </div>
 // <div class="col-md-6">
-// <select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="templateData" multiple="multiple">
+// <select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="formatData" data-templateSelection="formatRepo" multiple="multiple">
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
+//   <option value="1">One</option>
+//   <option value="2">Two</option>
+//   <option value="3">Three</option>
 //   <option value="1">One</option>
 //   <option value="2">Two</option>
 //   <option value="3">Three</option>
 // </select>
 // </div>
 // </div>
-// <script type="text/javascript">
-// $(document).ready(function() {
-//    function formatData (data) {
-//        console.log(data);
-//        var $res = $('<span></span>');
-//        var $check = $('<input type="checkbox" />');
-//        $res.text(data.text);
-//        if (data.element) {
-//            $res.prepend($check);
-//            $check.prop('checked', data.element.selected);
-//        }
-//        return $res;
-//    };
-//   // Just add class "select2-exemple" (or whatever) to any select element
-//   $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
-// });
-// </script>
 //
 // Styleguide 5.4
 
@@ -191,4 +183,6 @@
     &.select2-container--open .select2-dropdown {
         border-color: $light-grey;
     }
+
+
 }

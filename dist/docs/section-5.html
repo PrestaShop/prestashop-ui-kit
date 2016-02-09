@@ -26,6 +26,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/select2.min.js"></script>
         <script src="js/bootstrap-switch.min.js"></script>
+
         <script src="js/prestashop-ui-kit.js"></script>
         
     </head>
@@ -57,6 +58,7 @@
                             <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Modules Cards</span></a></li>
                             <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Tables</span></a></li>
                             <li class="kss-menu-item"><a href="section-17.html"><span class="kss-ref">17</span><span class="kss-name">Tab-bar &amp; Navs-Bar</span></a></li>
+                            <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Tree</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-5.1"><span class="kss-ref">5.1</span><span class="kss-name">Inputs (width build on grid)</span></a></li>
@@ -212,30 +214,22 @@
 </select>
 </div>
 <div class="col-md-6">
-<select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="templateData" multiple="multiple">
+<select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="formatData" data-templateSelection="formatRepo" multiple="multiple">
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
 </div>
 </div>
-<script type="text/javascript">
-$(document).ready(function() {
-   function formatData (data) {
-       console.log(data);
-       var $res = $('<span></span>');
-       var $check = $('<input type="checkbox" />');
-       $res.text(data.text);
-       if (data.element) {
-           $res.prepend($check);
-           $check.prop('checked', data.element.selected);
-       }
-       return $res;
-   };
-  // Just add class "select2-exemple" (or whatever) to any select element
-  $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
-});
-</script>
                                 </div>
                             </div>
 
@@ -250,30 +244,22 @@ $(document).ready(function() {
 &lt;/select&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-6&quot;&gt;
-&lt;select data-toggle=&quot;select2&quot; data-placeholder=&quot;Open this select menu&quot; data-templateResult=&quot;templateData&quot; multiple=&quot;multiple&quot;&gt;
+&lt;select data-toggle=&quot;select2&quot; data-placeholder=&quot;Open this select menu&quot; data-templateResult=&quot;formatData&quot; data-templateSelection=&quot;formatRepo&quot; multiple=&quot;multiple&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
   &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
   &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
 &lt;/select&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-$(document).ready(function() {
-   function formatData (data) {
-       console.log(data);
-       var $res = $(&#x27;&lt;span&gt;&lt;/span&gt;&#x27;);
-       var $check = $(&#x27;&lt;input type=&quot;checkbox&quot; /&gt;&#x27;);
-       $res.text(data.text);
-       if (data.element) {
-           $res.prepend($check);
-           $check.prop(&#x27;checked&#x27;, data.element.selected);
-       }
-       return $res;
-   };
-  // Just add class &quot;select2-exemple&quot; (or whatever) to any select element
-  $(&quot;.select2-exemple-2&quot;).select2({ placeholder: &quot;Open this select menu&quot;, minimumResultsForSearch: -1, templateResult: formatData});
-});
-&lt;/script&gt;</code></pre>
+&lt;/div&gt;</code></pre>
                             </div>
 
                         </div>

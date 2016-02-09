@@ -5,7 +5,7 @@
 // Nav tabs
 //
 // Markup:
-// <div style="background-color: #eaebec; padding: 20px;"> 
+// <div style="background-color: #eaebec; padding: 20px;">
 // <ul class="nav nav-tabs" id="myTab" role="tablist">
 //   <li class="nav-item">
 //     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
@@ -45,6 +45,7 @@
         font-weight: $nav-tabs-unactive-link-hover-font-weight;
         background-color: $nav-tabs-unactive-link-hover-bg;
         color: $nav-tabs-unactive-link-hover-color;
+        padding: $nav-link-unactive-padding;
         @include border-radius(0);
     }
 
@@ -55,6 +56,7 @@
             background-color: $nav-tabs-active-link-hover-bg;
             color: $nav-tabs-active-link-hover-color;
             font-weight: $nav-tabs-active-link-hover-font-weight;
+            padding: $nav-link-active-padding;
         }
     }
 }
@@ -96,7 +98,7 @@
         font-weight: $nav-tabs-unactive-link-hover-font-weight;
         background-color: #fff;
         color: $nav-tabs-unactive-link-hover-color;
-        padding: $nav-link-padding;
+        padding: $nav-link-unactive-padding;
         @include border-radius(0);
     }
 
@@ -107,6 +109,7 @@
             background-color: $nav-tabs-active-link-hover-bg;
             color: $nav-tabs-active-link-hover-color;
             font-weight: $nav-tabs-active-link-hover-font-weight;
+            padding: $nav-link-active-padding;
         }
     }
 

@@ -3144,7 +3144,7 @@ input[type="button"].btn-block {
       margin-left: .2rem; }
   .nav-tabs .nav-link, .nav-tabs > li > i {
     display: block;
-    padding: 1em 2.5em;
+    padding: 0.5em 1em;
     border: 0 solid transparent;
     border-radius: 0.25rem 0.25rem 0 0; }
     .nav-tabs .nav-link:focus, .nav-tabs > li > i:focus, .nav-tabs .nav-link:hover, .nav-tabs > li > i:hover {
@@ -3176,7 +3176,7 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link, .nav-pills .nav-tabs > li > i {
   display: block;
-  padding: 1em 2.5em;
+  padding: 0.5em 1em;
   border-radius: 0; }
 
 .nav-pills .nav-link.active, .nav-pills .nav-tabs > li > i.active, .nav-pills .nav-link.active:focus, .nav-pills .nav-tabs > li > i.active:focus, .nav-pills .nav-link.active:hover, .nav-pills .nav-tabs > li > i.active:hover,
@@ -6711,6 +6711,7 @@ xs, .xs, .xsmall, xsmall {
     font-weight: 400;
     background-color: inherit;
     color: #6C868E;
+    padding: 1em 2.5em;
     border-radius: 0; }
   .nav-tabs .nav-link.active, .nav-tabs > li > i.active, .nav-tabs .nav-link.active:focus, .nav-tabs > li > i.active:focus, .nav-tabs .nav-link.active:hover, .nav-tabs > li > i.active:hover,
   .nav-tabs .nav-item.open .nav-link, .nav-tabs > li.open .nav-link,
@@ -6722,7 +6723,8 @@ xs, .xs, .xsmall, xsmall {
     border-top: 3px solid #25B9D7;
     background-color: #fff;
     color: #363A41;
-    font-weight: 800; }
+    font-weight: 400;
+    padding: 0.75em 2.5em 1em 2.5em; }
 
 .tab-content {
   background-color: #fff;
@@ -6752,7 +6754,8 @@ xs, .xs, .xsmall, xsmall {
     border-bottom: 3px solid #25B9D7;
     background-color: #fff;
     color: #363A41;
-    font-weight: 800; }
+    font-weight: 400;
+    padding: 0.75em 2.5em 1em 2.5em; }
 
 textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:focus:focus, input[type="datetime"]:focus:focus, input[type="datetime-local"]:focus:focus, input[type="date"]:focus:focus, input[type="month"]:focus:focus, input[type="time"]:focus:focus, input[type="week"]:focus:focus, input[type="number"]:focus:focus, input[type="email"]:focus:focus, input[type="url"]:focus:focus, input[type="search"]:focus:focus, input[type="tel"]:focus:focus, input[type="color"]:focus:focus, .uneditable-input:focus:focus {
   background-color: #FAFBFC; }

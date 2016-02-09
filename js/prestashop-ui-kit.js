@@ -1,16 +1,66 @@
 /*!
- * PrestaKit v1.0.0 (http://getbootstrap.com)
+ * Prestige v1.0.0 (http://getbootstrap.com)
  * Copyright 2015-2015
  * Copy License
  */
 
+plugins_list = [
+    "select2"
+];
+
 $(function () {
 
+    // Select2
+    //
     // Set default theme to prestakit for Select2
     $.fn.select2.defaults.set("theme", "prestakit");
 
+    // Template
+    function formatData (data) {
+        var $res = $('<span></span>');
+        var $check = $('<input type="checkbox" />');
+        $res.text(data.text);
+        if (data.element) {
+            $res.prepend($check);
+            $check.prop('checked', data.element.selected);
+        }
+        return $res;
+    };
+
+    function formatRepo (data) {
+        console.log(data);
+        var $res = $('<span class="select2-selection__tags"></span>');
+        $res.text(data.text);
+        return $res;
+    }
+
+    // Enable Select2 everywhere
+    //
+    // TODO Add templateResult
+    $('[data-toggle="select2"]').each(function () {
+
+        var newObj = {};
+
+        for (var attr in $(this).data()) {
+            if (!attr.localeCompare("templateresult"))
+                newObj["templateResult"] = eval($(this).data()[attr]);
+            else if (!attr.localeCompare("templateselection"))
+                newObj["templateSelection"] = eval($(this).data()[attr]);
+            else if (!attr.localeCompare("minimumresultsforsearch"))
+                newObj["minimumResultsForSearch"] = $(this).data()[attr];
+            else if (attr.localeCompare("toggle")) {
+                newObj[attr] = $(this).data()[attr];
+            }
+        }
+
+        $(this).select2(newObj);
+    });
+
     // Enable Switch Button everywhere
-    $('[data-toggle="switch"]').bootstrapSwitch();
+    $('[data-toggle="switch"]').bootstrapSwitch({
+        onText: '<i class="material-icons">check</i>',
+        offText: '<i class="material-icons">close</i>'
+    });
 
     // Enable tooltips everywhere
     $('[data-toggle="tooltip"]').tooltip();
@@ -126,7 +176,13 @@ $(function () {
             var actualHtml = $(this).html();
             var actualClass = $(this).parent().attr('class');
             $(this).parent().addClass( "alert-drop" );
-            $(this).html("<b>Read More</b>");
+
+            if (typeof($(this).data('title')) != "undefined" && $(this).data('title') !== "") {
+                $(this).html('<b>' + $(this).data('title') + '</b>');
+            } else {
+                $(this).html("<b>Read More</b>");
+            }
+            $(this).css('cursor', 'pointer');
             $(this).parent().after(
                 '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
             );
@@ -147,4 +203,11 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
+});
+
+$( document ).ready(function(){
+    if (plugins_list.map(function(e, i) {
+        return jQuery()[e] === undefined ? 1 | console.log(e + " is not loaded") : 0;
+    }).reduce((prev, curr) => prev | curr))
+        console.log("PrestaKit may not work correctly..");
 });

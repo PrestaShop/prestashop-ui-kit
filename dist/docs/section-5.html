@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="css/kss.css" />
         <link rel="stylesheet" href="css/jquery.growl.css"/>
+
         <link rel="stylesheet" href="css/bootstrap-switch.min.css"/>
         <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
         
@@ -203,7 +204,7 @@
                                 <div class="kss-modifier-example">
                                     <div class="row">
 <div class="col-md-6">
-<select class="select2-exemple">
+<select data-toggle="select2" data-minimumResultsForSearch="-1">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
@@ -211,7 +212,7 @@
 </select>
 </div>
 <div class="col-md-6">
-<select class="select2-exemple-2" multiple="multiple">
+<select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="templateData" multiple="multiple">
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -232,7 +233,6 @@ $(document).ready(function() {
        return $res;
    };
   // Just add class "select2-exemple" (or whatever) to any select element
-  $(".select2-exemple").select2();
   $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
 });
 </script>
@@ -242,7 +242,7 @@ $(document).ready(function() {
                             <div class="kss-markup">
                                 <pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md-6&quot;&gt;
-&lt;select class=&quot;select2-exemple&quot;&gt;
+&lt;select data-toggle=&quot;select2&quot; data-minimumResultsForSearch=&quot;-1&quot;&gt;
   &lt;option selected&gt;Open this select menu&lt;/option&gt;
   &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
@@ -250,7 +250,7 @@ $(document).ready(function() {
 &lt;/select&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-6&quot;&gt;
-&lt;select class=&quot;select2-exemple-2&quot; multiple=&quot;multiple&quot;&gt;
+&lt;select data-toggle=&quot;select2&quot; data-placeholder=&quot;Open this select menu&quot; data-templateResult=&quot;templateData&quot; multiple=&quot;multiple&quot;&gt;
   &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
   &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
@@ -271,7 +271,6 @@ $(document).ready(function() {
        return $res;
    };
   // Just add class &quot;select2-exemple&quot; (or whatever) to any select element
-  $(&quot;.select2-exemple&quot;).select2();
   $(&quot;.select2-exemple-2&quot;).select2({ placeholder: &quot;Open this select menu&quot;, minimumResultsForSearch: -1, templateResult: formatData});
 });
 &lt;/script&gt;</code></pre>

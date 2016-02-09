@@ -82,7 +82,7 @@
 // Markup:
 // <div class="row">
 // <div class="col-md-6">
-// <select class="select2-exemple">
+// <select data-toggle="select2" data-minimumResultsForSearch="-1">
 //   <option selected>Open this select menu</option>
 //   <option value="1">One</option>
 //   <option value="2">Two</option>
@@ -90,7 +90,7 @@
 // </select>
 // </div>
 // <div class="col-md-6">
-// <select class="select2-exemple-2" multiple="multiple">
+// <select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="templateData" multiple="multiple">
 //   <option value="1">One</option>
 //   <option value="2">Two</option>
 //   <option value="3">Three</option>
@@ -111,7 +111,6 @@
 //        return $res;
 //    };
 //   // Just add class "select2-exemple" (or whatever) to any select element
-//   $(".select2-exemple").select2();
 //   $(".select2-exemple-2").select2({ placeholder: "Open this select menu", minimumResultsForSearch: -1, templateResult: formatData});
 // });
 // </script>

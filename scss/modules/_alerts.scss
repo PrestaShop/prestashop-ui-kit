@@ -4,6 +4,8 @@
 
 // Small Medium & Large Alerts
 //
+// 
+//
 // Markup:
 // <div class="alert alert-info" role="alert">
 //   <i class="material-icons">help</i><p class="alert-text">Small notice message <a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a></p>
@@ -12,7 +14,7 @@
 //   <i class="material-icons">info_outline</i><p class="alert-text">Medium warning message Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
 // </div>
 // <div class="alert alert-danger" role="alert">
-//   <i class="material-icons">error_outline</i><p class="alert-text"><a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a> amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. <b>Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.Bacon ipsum dolor amet </b> biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
+//   <i class="material-icons">error_outline</i><p data-title="Read More" class="alert-text"><a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a> amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. <b>Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.Bacon ipsum dolor amet </b> biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
 // </div>
 //
 // Styleguide 9.1

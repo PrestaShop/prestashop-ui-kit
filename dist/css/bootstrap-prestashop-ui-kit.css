@@ -5856,6 +5856,38 @@ a.bg-danger:focus, a.bg-danger:hover {
     cursor: not-allowed;
     opacity: .65; }
 
+.bootstrap-switch-on {
+  border-radius: 25px;
+  background: #25B9D7;
+  border: 1px solid #BBCDD2; }
+
+.bootstrap-switch-off {
+  border-radius: 25px;
+  background: #FFFFFF;
+  border: 1px solid #BBCDD2; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  border-radius: 25px;
+  color: #25B9D7;
+  background: #FFFFFF;
+  border: 1px solid #BBCDD2; }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+  border-radius: 25px;
+  color: #6C868E;
+  background: #FFFFFF;
+  border: 1px solid #BBCDD2; }
+
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
+  background: #25B9D7; }
+
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label {
+  backgroud: #FFFFFF; }
+
 h1, .h1 {
   font-weight: 600;
   color: #363A41; }

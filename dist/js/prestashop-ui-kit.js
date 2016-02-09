@@ -6,11 +6,51 @@
 
 $(function () {
 
+    // Select2
+    //
     // Set default theme to prestakit for Select2
     $.fn.select2.defaults.set("theme", "prestakit");
 
+    // Template
+    var templateData = function formatData (data) {
+        console.log(data);
+        var $res = $('<span></span>');
+        var $check = $('<input type="checkbox" />');
+        $res.text(data.text);
+        if (data.element) {
+            $res.prepend($check);
+            $check.prop('checked', data.element.selected);
+        }
+        return $res;
+    };
+
+    // Enable Select2 everywhere
+    //
+    // TODO Add templateResult
+    $('[data-toggle="select2"]').each(function () {
+
+        var newObj = {};
+
+        for (var attr in $(this).data()) {
+            if (attr.localeCompare("toggle")) {
+                if (!attr.localeCompare("templateresult"))
+                    newObj["templateResult"] = window[templateData];
+                else if (!attr.localeCompare("minimumresultsforsearch"))
+                    newObj["minimumResultsForSearch"] = $(this).data()[attr];
+                else
+                    newObj[attr] = $(this).data()[attr];
+            }
+        }
+
+        console.log(newObj);
+        $(this).select2(newObj);
+    });
+
     // Enable Switch Button everywhere
-    $('[data-toggle="switch"]').bootstrapSwitch();
+    $('[data-toggle="switch"]').bootstrapSwitch({
+        onText: '<i class="material-icons">check</i>',
+        offText: '<i class="material-icons">close</i>'
+    });
 
     // Enable tooltips everywhere
     $('[data-toggle="tooltip"]').tooltip();
@@ -126,7 +166,13 @@ $(function () {
             var actualHtml = $(this).html();
             var actualClass = $(this).parent().attr('class');
             $(this).parent().addClass( "alert-drop" );
-            $(this).html("<b>Read More</b>");
+
+            if (typeof($(this).data('title')) != "undefined" && $(this).data('title') !== "") {
+                $(this).html('<b>' + $(this).data('title') + '</b>');
+            } else {
+                $(this).html("<b>Read More</b>");
+            }
+            $(this).css('cursor', 'pointer');
             $(this).parent().after(
                 '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
             );

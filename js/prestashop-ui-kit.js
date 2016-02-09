@@ -1,8 +1,12 @@
 /*!
- * PrestaKit v1.0.0 (http://getbootstrap.com)
+ * Prestige v1.0.0 (http://getbootstrap.com)
  * Copyright 2015-2015
  * Copy License
  */
+
+plugins_list = [
+    "select2"
+];
 
 $(function () {
 
@@ -193,4 +197,11 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
+});
+
+$( document ).ready(function(){
+    if (plugins_list.map(function(e, i) {
+        return jQuery()[e] === undefined ? 1 | console.log(e + " is not loaded") : 0;
+    }).reduce((prev, curr) => prev | curr))
+        console.log("PrestaKit may not work correctly..");
 });

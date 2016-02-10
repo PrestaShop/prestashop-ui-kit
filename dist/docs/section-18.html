@@ -61,7 +61,7 @@
                             <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Tree</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
-                            <li class="kss-menu-item"><a href="#section-18.1"><span class="kss-ref">18.1</span><span class="kss-name">Prestashop Category tree</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-18.1"><span class="kss-ref">18.1</span><span class="kss-name">Option tree</span></a></li>
                         </ul>
                     </nav>
 
@@ -76,129 +76,109 @@
 
                     </section>
                     <section id="section-18.1" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">18.1</span> Prestashop Category tree</h1>
+                        <h1 class="kss-title"><span class="kss-ref">18.1</span> Option tree</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                    <ul class="category-tree">
-    <ul class="category-tree">
-        <li style="background-image:url(&quot;/web/bundles/framework/images/blue_picto_less.gif&quot;);">
-            <div class="radio">
+                                    <ul class="option-tree" data-toggle="option-tree">
+    <li>
+        <label>
+            <input type="radio" name="radio-name" value="1"> Femmes
+        </label>
+        <ul>
+            <li>
                 <label>
-                    <input type="radio" name="form[choice_tree][tree]" value="3">Femmes</label>
-            </div>
-            <ul style="display: block;">
-                <li style="background-image:url(&quot;/web/bundles/framework/images/blue_picto_less.gif&quot;);">
-                    <div class="radio">
+                    <input type="radio" name="radio-name" value="1"> Tops
+                </label>
+                <ul>
+                    <li>
                         <label>
-                            <input type="radio" name="form[choice_tree][tree]" value="4">Tops</label>
-                    </div>
-                    <ul style="display: block;">
-                        <li>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="form[choice_tree][tree]" value="5">T-shirts</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="form[choice_tree][tree]" value="7">Chemisiers</label>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li style="background-image:url(&quot;/web/bundles/framework/images/blue_picto_less.gif&quot;);">
-                    <div class="radio">
+                            <input type="radio" name="radio-name" value="1"> T-shirts
+                        </label>
+                    </li>
+                    <li>
                         <label>
-                            <input type="radio" name="form[choice_tree][tree]" value="8">Robes</label>
-                    </div>
-                    <ul style="display: block;">
-                        <li>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="form[choice_tree][tree]" value="9">Robes décontractées</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="form[choice_tree][tree]" value="10">Robes de soirée</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="form[choice_tree][tree]" value="11">Robes d'été</label>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+                            <input type="radio" name="radio-name" value="1"> Chemisiers
+                        </label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="radio-name" value="1"> Robes
+                </label>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio-name" value="1"> Robes décontractées
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio-name" value="1"> Robes de soirée
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="radio-name" value="1"> Robes d'été
+                        </label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ul>
                                 </div>
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;ul class=&quot;category-tree&quot;&gt;
-    &lt;ul class=&quot;category-tree&quot;&gt;
-        &lt;li style=&quot;background-image:url(&amp;quot;/web/bundles/framework/images/blue_picto_less.gif&amp;quot;);&quot;&gt;
-            &lt;div class=&quot;radio&quot;&gt;
+                                <pre><code class="lang-html">&lt;ul class=&quot;option-tree&quot; data-toggle=&quot;option-tree&quot;&gt;
+    &lt;li&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Femmes
+        &lt;/label&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
                 &lt;label&gt;
-                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;3&quot;&gt;Femmes&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;ul style=&quot;display: block;&quot;&gt;
-                &lt;li style=&quot;background-image:url(&amp;quot;/web/bundles/framework/images/blue_picto_less.gif&amp;quot;);&quot;&gt;
-                    &lt;div class=&quot;radio&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Tops
+                &lt;/label&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
                         &lt;label&gt;
-                            &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;4&quot;&gt;Tops&lt;/label&gt;
-                    &lt;/div&gt;
-                    &lt;ul style=&quot;display: block;&quot;&gt;
-                        &lt;li&gt;
-                            &lt;div class=&quot;radio&quot;&gt;
-                                &lt;label&gt;
-                                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;5&quot;&gt;T-shirts&lt;/label&gt;
-                            &lt;/div&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;div class=&quot;radio&quot;&gt;
-                                &lt;label&gt;
-                                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;7&quot;&gt;Chemisiers&lt;/label&gt;
-                            &lt;/div&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li style=&quot;background-image:url(&amp;quot;/web/bundles/framework/images/blue_picto_less.gif&amp;quot;);&quot;&gt;
-                    &lt;div class=&quot;radio&quot;&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; T-shirts
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
                         &lt;label&gt;
-                            &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;8&quot;&gt;Robes&lt;/label&gt;
-                    &lt;/div&gt;
-                    &lt;ul style=&quot;display: block;&quot;&gt;
-                        &lt;li&gt;
-                            &lt;div class=&quot;radio&quot;&gt;
-                                &lt;label&gt;
-                                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;9&quot;&gt;Robes décontractées&lt;/label&gt;
-                            &lt;/div&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;div class=&quot;radio&quot;&gt;
-                                &lt;label&gt;
-                                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;10&quot;&gt;Robes de soirée&lt;/label&gt;
-                            &lt;/div&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;div class=&quot;radio&quot;&gt;
-                                &lt;label&gt;
-                                    &lt;input type=&quot;radio&quot; name=&quot;form[choice_tree][tree]&quot; value=&quot;11&quot;&gt;Robes d&#x27;été&lt;/label&gt;
-                            &lt;/div&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Chemisiers
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Robes
+                &lt;/label&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Robes décontractées
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Robes de soirée
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;radio-name&quot; value=&quot;1&quot;&gt; Robes d&#x27;été
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                             </div>
 

@@ -6789,6 +6789,25 @@ xs, .xs, .xsmall, xsmall {
     font-weight: 400;
     padding: 0.75em 2.5em 1em 2.5em; }
 
+.option-tree {
+  list-style: none;
+  padding: 0; }
+  .option-tree ul {
+    display: none;
+    list-style: none;
+    padding: 0 0 0 20px; }
+  .option-tree .no-button, .option-tree .open-button {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-top: -2px;
+    vertical-align: middle; }
+  .option-tree .open-button {
+    color: #6C868E;
+    cursor: pointer; }
+    .option-tree .open-button.closed {
+      color: #25B9D7; }
+
 textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:focus:focus, input[type="datetime"]:focus:focus, input[type="datetime-local"]:focus:focus, input[type="date"]:focus:focus, input[type="month"]:focus:focus, input[type="time"]:focus:focus, input[type="week"]:focus:focus, input[type="number"]:focus:focus, input[type="email"]:focus:focus, input[type="url"]:focus:focus, input[type="search"]:focus:focus, input[type="tel"]:focus:focus, input[type="color"]:focus:focus, .uneditable-input:focus:focus {
   background-color: #FAFBFC; }
 

@@ -4,10 +4,6 @@
  * Copy License
  */
 
-plugins_list = [
-    "select2"
-];
-
 $(function () {
 
     // Select2
@@ -203,11 +199,25 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
-});
 
-$( document ).ready(function(){
-    if (plugins_list.map(function(e, i) {
-        return jQuery()[e] === undefined ? 1 | console.log(e + " is not loaded") : 0;
-    }).reduce((prev, curr) => prev | curr))
-        console.log("PrestaKit may not work correctly..");
+    $('[data-toggle="option-tree"]').each(function(){
+        $(this).find('li').each(function(){
+            var $this = $(this);
+            if ($this.find( "> ul").length !== 0) {
+                var newElement = $('<div class="open-button closed"><i class="material-icons">add_box</i></div>');
+                newElement.on("click", function(){
+                    if ($(this).is(".closed")) {
+                        $(this).parent().find("> ul").slideDown();
+                        $(this).removeClass('closed').find('.material-icons').html("indeterminate_check_box");
+                    } else {
+                        $(this).parent().find("> ul").slideUp();
+                        $(this).addClass('closed').find('.material-icons').html("add_box");
+                    }
+                });
+                $this.prepend(newElement);
+            } else {
+                $this.prepend('<i class="material-icons"></i>');
+            }
+        });
+    });
 });

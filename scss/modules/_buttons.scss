@@ -173,13 +173,13 @@
 .bootstrap-switch-on {
     border-radius: 25px;
     background: $primary;
-    border: 1px solid $light-grey;
+    border: 1px solid $gray-light;
 }
 
 .bootstrap-switch-off {
     border-radius: 25px;
     background: $white;
-    border: 1px solid $light-grey;
+    border: 1px solid $gray-light;
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
@@ -187,7 +187,7 @@
     border-radius: 25px;
     color: $primary;
     background: $white;
-    border: 1px solid $light-grey;
+    border: 1px solid $gray-light;
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on,
@@ -198,9 +198,9 @@
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
     border-radius: 25px;
-    color: $medium-grey;
+    color: $gray-medium;
     background: $white;
-    border: 1px solid $light-grey;
+    border: 1px solid $gray-light;
 }
 
 .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,

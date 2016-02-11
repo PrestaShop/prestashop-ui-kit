@@ -4,10 +4,6 @@
  * Copy License
  */
 
-plugins_list = [
-    "select2"
-];
-
 $(function () {
 
     // Select2
@@ -203,11 +199,4 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
-});
-
-$( document ).ready(function(){
-    if (plugins_list.map(function(e, i) {
-        return jQuery()[e] === undefined ? 1 | console.log(e + " is not loaded") : 0;
-    }).reduce((prev, curr) => prev | curr))
-        console.log("PrestaKit may not work correctly..");
 });

@@ -18,7 +18,13 @@
 
 /// Options
 /// Quickly modify global styling by enabling or disabling optional features.
-$enable-shadows:                              false;
+$enable-flex:                                 true;
+$enable-rounded:                              true !default;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+$enable-transitions:                          true;
+$enable-hover-media-query:                    false !default;
+$enable-grid-classes:                         true !default;
 
 $font-size-root:                              16px;
 

@@ -57,7 +57,7 @@
         font-size: 1rem;
         margin: 0 $tags-space-x;
         position: relative;
-        height: inherit;
+        height: $tags-height;
         padding: 0 8px;
         color: $tags-color;
         text-align: center;

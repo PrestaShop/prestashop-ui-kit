@@ -28,6 +28,8 @@ $enable-grid-classes:                         true !default;
 
 $font-size-root:                              16px;
 
+$line-height:                                 1.5 !default;
+
 // Buttons
 $btn-padding-x:                               1rem !default;
 $btn-padding-y:                               .375rem !default;
@@ -145,13 +147,18 @@ $font-weight-h3:                              $font-weight-bold;
 $font-weight-h4:                              $font-weight-semibold;
 
 /// Forms
+$input-padding-x:                             .75rem !default;
+$input-padding-y:                             .375rem !default;
+
+$input-height:                                (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
+
 $input-color-placeholder:                     $gray-medium;
 $input-font-style:                            italic;
 
 $input-border-focus:                          $primary-hover;
 $input-box-shadow-focus:                      $primary-hover;
 
-$input-border-color:                          #ccc;
+$input-border-color:                          $gray-light;
 $input-bg:                                    $soft-grey;
 
 $input-group-addon-bg:                        $soft-grey;
@@ -210,14 +217,18 @@ $navbar-light-hover-color:                    rgba(0,0,0,.6) !default;
 $navbar-light-active-color:                   rgba(0,0,0,.8) !default;
 $navbar-light-disabled-color:                 rgba(0,0,0,.15) !default;
 
+/// List group
+$list-group-bg:                               #fff !default;
+$list-group-border-color:                     $input-border-color;
 
-/// Avatar
+$list-group-hover-bg:                         $primary-hover;
 
-// Avatar Size
-$avatar-size-base:                            150px;
-$avatar-size-lg:                              100px;
-$avatar-size-sm:                              60px;
-$avatar-size-xs:                              40px;
+$list-group-disabled-color:                   $gray-light !default;
+$list-group-disabled-text-color:              $list-group-disabled-color !default;
+
+$list-group-link-color:                       #555 !default;
+$list-group-link-hover-color:                 #fff;
+$list-group-link-heading-color:               #333 !default;
 
 /// Dropdowns
 
@@ -233,8 +244,8 @@ $dropdown-border-color-hover:                 #a5b6bb;
 $dropdown-divider-bg:                         #e5e5e5 !default;
 
 $dropdown-link-color:                         $gray-dark !default;
-$dropdown-link-hover-color:                   darken($gray-dark, 5%) !default;
-$dropdown-link-hover-bg:                      #f5f5f5 !default;
+$dropdown-link-hover-color:                   #fff !default;
+$dropdown-link-hover-bg:                      $primary-hover;
 
 // select2
 $remove-color:                                #888;
@@ -270,6 +281,14 @@ $results-choice-bg-hover-color:               $primary-hover;
 $results-choice-fg-hover-color:               white;
 $results-choice-fg-unselectable-color:        grey;
 
+/// Avatar
+
+// Avatar Size
+$avatar-size-base:                            150px;
+$avatar-size-lg:                              100px;
+$avatar-size-sm:                              60px;
+$avatar-size-xs:                              40px;
+
 /// Module Cards
 
 // Logo
@@ -280,6 +299,7 @@ $tags-bg:                                     $primary-hover;
 $tags-color:                                  $white;
 $tags-max-width:                              200px;
 $tags-font-weight:                            $font-weight-semibold;
+$tags-height:                                 $input-height - ($input-padding-y * 2);
 $tags-space-x:                                .156rem;
 $tags-space-y:                                .375rem;
 $tags-cross-color:                            $gray-dark;

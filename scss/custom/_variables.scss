@@ -100,7 +100,7 @@ $display2-weight:                             $font-weight-normal;
 $display3-weight:                             $font-weight-normal;
 $display4-weight:                             $font-weight-normal;
 
-$font-weight-url:                             800;
+$font-weight-url:                             $font-weight-semibold;
 
 $font-family-sans-serif:                      Open Sans, sans-serif;
 $font-family-serif:                           Open Sans, serif;
@@ -130,7 +130,7 @@ $font-color-h3:                               $dark-grey;
 $font-color-h4:                               $medium-grey;
 
 // Font Line
-$font-linea-primary:                          1.1rem;
+$font-line-primary:                           1.1rem;
 $font-line-secondary:                         1.1rem;
 
 $font-weight-h1:                              $font-weight-semibold;

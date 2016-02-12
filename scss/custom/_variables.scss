@@ -18,9 +18,17 @@
 
 /// Options
 /// Quickly modify global styling by enabling or disabling optional features.
-$enable-shadows:                              false;
+$enable-flex:                                 false !default;
+$enable-rounded:                              true !default;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+$enable-transitions:                          true;
+$enable-hover-media-query:                    false !default;
+$enable-grid-classes:                         true !default;
 
 $font-size-root:                              16px;
+
+$line-height:                                 1.5 !default;
 
 // Buttons
 $btn-padding-x:                               1rem !default;
@@ -40,9 +48,9 @@ $primary:                                     #25B9D7;
 $primary-hover:                               #3ED2F0;
 $secondary:                                   #FFBB00;
 $secondary-hover:                             #FFD100;
-$dark-grey:                                   #363A41;
-$medium-grey:                                 #6C868E;
-$light-grey:                                  #BBCDD2;
+$gray-dark:                                   #363A41;
+$gray-medium:                                 #6C868E;
+$gray-light:                                  #BBCDD2;
 $soft-grey:                                   #FAFBFC;
 $white:                                       #FFFFFF;
 $notice:                                      #DFF5F9;
@@ -75,14 +83,14 @@ $brand-danger:                                $danger;
 // Settings for the `<body>` element.
 
 $body-bg:                                     #fff;
-$body-color:                                  $dark-grey;
+$body-color:                                  $gray-dark;
 
 
 /// Popovers
-$popover-bg:                                  $dark-grey;
+$popover-bg:                                  $gray-dark;
 
 /// Tooltips
-$tooltip-bg:                                  $medium-grey;
+$tooltip-bg:                                  $gray-medium;
 
 /// Fonts
 $font-size-root:                              16px;
@@ -121,13 +129,13 @@ $font-size-xs:                                .65rem;
 
 // Font Color
 
-$font-color-primary:                          $dark-grey;
-$font-color-secondary:                        $medium-grey;
+$font-color-primary:                          $gray-dark;
+$font-color-secondary:                        $gray-medium;
 
-$font-color-h1:                               $dark-grey;
-$font-color-h2:                               $dark-grey;
-$font-color-h3:                               $dark-grey;
-$font-color-h4:                               $medium-grey;
+$font-color-h1:                               $gray-dark;
+$font-color-h2:                               $gray-dark;
+$font-color-h3:                               $gray-dark;
+$font-color-h4:                               $gray-medium;
 
 // Font Line
 $font-line-primary:                           1.1rem;
@@ -139,17 +147,22 @@ $font-weight-h3:                              $font-weight-bold;
 $font-weight-h4:                              $font-weight-semibold;
 
 /// Forms
-$input-color-placeholder:                     $medium-grey;
+$input-padding-x:                             .75rem !default;
+$input-padding-y:                             .375rem !default;
+
+$input-height:                                (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
+
+$input-color-placeholder:                     $gray-medium;
 $input-font-style:                            italic;
 
 $input-border-focus:                          $primary-hover;
 $input-box-shadow-focus:                      $primary-hover;
 
-$input-border-color:                          #ccc;
+$input-border-color:                          $gray-light;
 $input-bg:                                    $soft-grey;
 
 $input-group-addon-bg:                        $soft-grey;
-$input-group-addon-color:                     $medium-grey;
+$input-group-addon-color:                     $gray-medium;
 $input-group-addon-border-color:              $input-border-color;
 
 /// Tab-bar & Navs-Bar
@@ -172,8 +185,8 @@ $nav-tabs-unactive-link-hover-bg:             inherit;
 $nav-tabs-active-link-hover-font-weight:      $font-weight-normal;
 $nav-tabs-unactive-link-hover-font-weight:    $font-weight-normal;
 
-$nav-tabs-active-link-hover-color:            $dark-grey;
-$nav-tabs-unactive-link-hover-color:          $medium-grey;
+$nav-tabs-active-link-hover-color:            $gray-dark;
+$nav-tabs-unactive-link-hover-color:          $gray-medium;
 
 /* $nav-tabs-active-link-hover-color:         $gray !default; */
 $nav-tabs-active-link-hover-border-color:     $brand-primary;
@@ -204,14 +217,18 @@ $navbar-light-hover-color:                    rgba(0,0,0,.6) !default;
 $navbar-light-active-color:                   rgba(0,0,0,.8) !default;
 $navbar-light-disabled-color:                 rgba(0,0,0,.15) !default;
 
+/// List group
+$list-group-bg:                               #fff !default;
+$list-group-border-color:                     $input-border-color;
 
-/// Avatar
+$list-group-hover-bg:                         $primary-hover;
 
-// Avatar Size
-$avatar-size-base:                            150px;
-$avatar-size-lg:                              100px;
-$avatar-size-sm:                              60px;
-$avatar-size-xs:                              40px;
+$list-group-disabled-color:                   $gray-light !default;
+$list-group-disabled-text-color:              $list-group-disabled-color !default;
+
+$list-group-link-color:                       #555 !default;
+$list-group-link-hover-color:                 #fff;
+$list-group-link-heading-color:               #333 !default;
 
 /// Dropdowns
 
@@ -226,9 +243,9 @@ $dropdown-border-color:                       #c7d6db;
 $dropdown-border-color-hover:                 #a5b6bb;
 $dropdown-divider-bg:                         #e5e5e5 !default;
 
-$dropdown-link-color:                         $dark-grey !default;
-$dropdown-link-hover-color:                   darken($dark-grey, 5%) !default;
-$dropdown-link-hover-bg:                      #f5f5f5 !default;
+$dropdown-link-color:                         $gray-dark !default;
+$dropdown-link-hover-color:                   #fff !default;
+$dropdown-link-hover-bg:                      $primary-hover;
 
 // select2
 $remove-color:                                #888;
@@ -264,6 +281,14 @@ $results-choice-bg-hover-color:               $primary-hover;
 $results-choice-fg-hover-color:               white;
 $results-choice-fg-unselectable-color:        grey;
 
+/// Avatar
+
+// Avatar Size
+$avatar-size-base:                            150px;
+$avatar-size-lg:                              100px;
+$avatar-size-sm:                              60px;
+$avatar-size-xs:                              40px;
+
 /// Module Cards
 
 // Logo
@@ -274,9 +299,10 @@ $tags-bg:                                     $primary-hover;
 $tags-color:                                  $white;
 $tags-max-width:                              200px;
 $tags-font-weight:                            $font-weight-semibold;
+$tags-height:                                 $input-height - ($input-padding-y * 2);
 $tags-space-x:                                .156rem;
 $tags-space-y:                                .375rem;
-$tags-cross-color:                            $dark-grey;
+$tags-cross-color:                            $gray-dark;
 
 
 

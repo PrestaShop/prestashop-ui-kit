@@ -41,15 +41,15 @@
 }
 
 .dark-grey {
-    @include ps-color($dark-grey);
+    @include ps-color($gray-dark);
 }
 
 .medium-grey {
-    @include ps-color($medium-grey);
+    @include ps-color($gray-medium);
 }
 
 .light-grey {
-    @include ps-color($light-grey);
+    @include ps-color($gray-light);
 }
 
 .soft-grey {

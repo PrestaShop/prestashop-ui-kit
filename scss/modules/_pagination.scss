@@ -32,7 +32,7 @@
   &.active .page-link {
     @include plain-hover-focus {
       z-index: 2;
-      color: $dark-grey;
+      color: $gray-dark;
       cursor: default;
       background-color: $white;
       border: 2px solid $primary;
@@ -44,7 +44,7 @@
 
 .page-link {
     font-weight: 600;
-    color: $medium-grey;
+    color: $gray-medium;
     border: none;
 
     @include hover-focus {

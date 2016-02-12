@@ -24,15 +24,15 @@
 }
 
 .alert-info {
-    @include ps-alert-variant($notice, $primary, $dark-grey);
+    @include ps-alert-variant($notice, $primary, $gray-dark);
 }
 
 .alert-warning {
-    @include ps-alert-variant($warning-hover, $warning, $dark-grey);
+    @include ps-alert-variant($warning-hover, $warning, $gray-dark);
 }
 
 .alert-danger {
-    @include ps-alert-variant($danger-hover, $danger, $dark-grey);
+    @include ps-alert-variant($danger-hover, $danger, $gray-dark);
 }
 
 // Dismissing

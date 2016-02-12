@@ -42,9 +42,9 @@ $(function () {
                 newObj["templateResult"] = eval($(this).data()[attr]);
             else if (!attr.localeCompare("templateselection"))
                 newObj["templateSelection"] = eval($(this).data()[attr]);
-            else if (!attr.localeCompare("minimumresultsforsearch")) 
+            else if (!attr.localeCompare("minimumresultsforsearch"))
                 newObj["minimumResultsForSearch"] = $(this).data()[attr];
-            else if (attr.localeCompare("toggle")) 
+            else if (attr.localeCompare("toggle"))
                 newObj[attr] = $(this).data()[attr];
         }
 
@@ -131,7 +131,7 @@ $(function () {
 
         psdwl.click(function() {
             psdwl.css('border-left-color', psdwl.css('border-color'));
-            psdwl.addClass( 'onclic' );
+            psdwl.addClass( 'onclick' );
             psdwl.unbind('mouseenter').unbind('mouseleave').unbind('click');
             var nw = parseInt(width, 10);
             psdwl.css({
@@ -141,7 +141,7 @@ $(function () {
             });
 
             setTimeout(function() {
-                psdwl.removeClass( "onclic" );
+                psdwl.removeClass( "onclick" );
                 psdwl.css({
                     'margin-left': '',
                     'margin-right': '',

@@ -51,7 +51,7 @@ $secondary-hover:                             #FFD100;
 $gray-dark:                                   #363A41;
 $gray-medium:                                 #6C868E;
 $gray-light:                                  #BBCDD2;
-$soft-grey:                                   #FAFBFC;
+$gray-soft:                                   #FAFBFC;
 $white:                                       #FFFFFF;
 $notice:                                      #DFF5F9;
 $success:                                     #78D07D;
@@ -159,9 +159,9 @@ $input-border-focus:                          $primary-hover;
 $input-box-shadow-focus:                      $primary-hover;
 
 $input-border-color:                          $gray-light;
-$input-bg:                                    $soft-grey;
+$input-bg:                                    $gray-soft;
 
-$input-group-addon-bg:                        $soft-grey;
+$input-group-addon-bg:                        $gray-soft;
 $input-group-addon-color:                     $gray-medium;
 $input-group-addon-border-color:              $input-border-color;
 

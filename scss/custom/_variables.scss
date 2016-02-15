@@ -165,19 +165,16 @@ $input-group-addon-bg:                        $soft-grey;
 $input-group-addon-color:                     $gray-medium;
 $input-group-addon-border-color:              $input-border-color;
 
-/// Tab-bar & Navs-Bar
+/// Navigation
+
 $nav-link-unactive-padding:                   1em 2.5em !default;
 $nav-link-active-padding:                     0.75em 2.5em 1em 2.5em !default;
 
 // tab-bar
 
-/* $nav-disabled-link-color:                  $gray-light !default; */
-/* $nav-disabled-link-hover-color:            $gray-light !default; */
-
 $nav-tabs-border-color:                       #FFF;
 
 $nav-tabs-link-border-width:                  0;
-/* $nav-tabs-link-hover-border-color:         $gray-lighter !default; */
 
 $nav-tabs-active-link-hover-bg:               $body-bg;
 $nav-tabs-unactive-link-hover-bg:             inherit;
@@ -188,15 +185,10 @@ $nav-tabs-unactive-link-hover-font-weight:    $font-weight-normal;
 $nav-tabs-active-link-hover-color:            $gray-dark;
 $nav-tabs-unactive-link-hover-color:          $gray-medium;
 
-/* $nav-tabs-active-link-hover-color:         $gray !default; */
 $nav-tabs-active-link-hover-border-color:     $brand-primary;
 
-/* $nav-tabs-justified-link-border-color:     #FF0000; */
-/* $nav-tajified-active-link-border-color:    $body-bg !default; */
 
 $nav-pills-border-radius:                     0;
-/* $nav-pills-active-link-hover-bg:           $component-active-bg !default; */
-/* $nav-pills-active-link-hover-color:        $component-active-color !default; */
 
 // tab content
 $nav-tab-content-bg:                          $body-bg;
@@ -207,15 +199,12 @@ $navbar-border-radius:                        0;
 $navbar-padding-horizontal:                   2.5em;
 $navbar-padding-vertical:                     1.0em;
 
-$navbar-dark-color:                           rgba(255,255,255,.5) !default;
-$navbar-dark-hover-color:                     rgba(255,255,255,.75) !default;
-$navbar-dark-active-color:                    rgba(255,255,255,1) !default;
-$navbar-dark-disabled-color:                  rgba(255,255,255,.25) !default;
+$navbar-bottom-separtor-color:                $gray-light;
 
-$navbar-light-color:                          rgba(0,0,0,.3) !default;
-$navbar-light-hover-color:                    rgba(0,0,0,.6) !default;
-$navbar-light-active-color:                   rgba(0,0,0,.8) !default;
-$navbar-light-disabled-color:                 rgba(0,0,0,.15) !default;
+// Subheader
+$subheader-title-font-size:                   $font-size-h1;
+$subheader-title-font-weight:                 $font-weight-semibold;
+
 
 /// List group
 $list-group-bg:                               #fff !default;

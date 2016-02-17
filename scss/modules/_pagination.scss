@@ -32,11 +32,9 @@
   &.active .page-link {
     @include plain-hover-focus {
       z-index: 2;
-      color: $gray-dark;
+      color: $primary;
       cursor: default;
       background-color: $white;
-      border: 2px solid $primary;
-      border-radius: 50%;
     }
   }
 

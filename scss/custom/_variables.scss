@@ -54,6 +54,8 @@ $gray-light:                                  #BBCDD2;
 $soft-grey:                                   #FAFBFC;
 $white:                                       #FFFFFF;
 $notice:                                      #DFF5F9;
+$tertiary:                                    $gray-light;
+$tertiary-hover:                              $gray-medium;
 $success:                                     #78D07D;
 $success-hover:                               #70B580;
 $warning:                                     #CD9321;
@@ -73,10 +75,17 @@ $search-icon:                                 "data: image/svg+xml;base64,PHN2Zy
 // Brands Colors
 $brand-primary:                               $primary;
 $brand-secondary:                             $secondary;
+$brand-tertiary:                              $tertiary;
 $brand-success:                               $success;
 $brand-info:                                  #5bc0de; /* not used */
 $brand-warning:                               $warning;
 $brand-danger:                                $danger;
+
+// Btn
+$btn-tertiary-color:                         #fff;
+$btn-tertiary-bg:                            $brand-tertiary;
+$btn-tertiary-border:                        $btn-tertiary-bg;
+
 
 // Body
 //

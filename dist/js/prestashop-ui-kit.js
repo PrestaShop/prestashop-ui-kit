@@ -10,6 +10,7 @@ $(function () {
     //
     // Set default theme to prestakit for Select2
     $.fn.select2.defaults.set("theme", "prestakit");
+    $.fn.select2.defaults.set("width", "100%");
 
     // Template
     function formatData (data) {

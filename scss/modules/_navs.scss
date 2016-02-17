@@ -1,4 +1,4 @@
-// Tab-bar & Navs-Bar
+// Navigation
 //
 // Styleguide 17
 
@@ -69,9 +69,9 @@
 // Nav bars
 //
 // Markup:
-// <div style="background-color: #eaebec; padding: 20px;">
+// <div style="background-color: #eaebec; ">
 // <nav class="navbar navbar-light">
-//   <ul class="nav navbar-nav">
+//   <ul class="nav navbar-nav navbar-separator">
 //     <li class="nav-item active">
 //       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 //     </li>
@@ -90,9 +90,15 @@
 //
 // Styleguide 17.2
 
+.navbar {
+    background-color: #fff;
+    width: 100%;
+}
+
 .navbar-nav {
 
     background-color: #fff;
+    margin-left: 10px;
 
     .nav-link {
         font-weight: $nav-tabs-unactive-link-hover-font-weight;
@@ -100,6 +106,10 @@
         color: $nav-tabs-unactive-link-hover-color;
         padding: $nav-link-unactive-padding;
         @include border-radius(0);
+
+        + .nav-link {
+            margin-left: 0;
+        }
     }
 
     .nav-link.active,
@@ -113,4 +123,167 @@
         }
     }
 
+    .nav-item + .nav-item {
+        margin-left: 0;
+    }
+
+    &.navbar-separator:after {
+        content: " ";
+        left: 0;
+        display: table-cell;
+        border-bottom: 1px solid $navbar-bottom-separtor-color;
+        position: absolute;
+        height: 1.72em * 2;
+        width: 100%;
+    }
 }
+
+
+// Subheader
+//
+// Markup:
+// <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
+// <nav class="subheader">
+//   <!-- Breadcrumb -->
+//   <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
+//     <li><a href="#">Home</a></li>
+//     <li><a href="#">Library</a></li>
+//     <li class="active">Data</li>
+//   </ol>
+//   <!-- QuickNav -->
+//   <ul class="subheader-quicknav">
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">insert_chart</i>
+//           <p>Sales</p>
+//        </a>
+//     </li>
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">view_list</i>
+//           <p>product List</p>
+//        </a>
+//     </li>
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">tag_faces</i>
+//           <p>Funny joke</p>
+//        </a>
+//     </li>
+//   </ul>
+//   <!-- Title -->
+//   <div class="subheader-title">Subheader</div>
+// </nav>
+// </div>
+//
+// Styleguide 17.3
+
+.subheader {
+    @extend .navbar;
+    @extend .navbar-light;
+    padding: 0 1.25em;
+
+    .subheader-breadcrumb {
+        @extend .breadcrumb;
+        width: 100%;
+        background-color: inherit;
+        padding: 20px 12px 12px 12px;
+    }
+
+    .subheader-title {
+        font-size: $subheader-title-font-size;
+        font-weight: $font-weight-semibold;
+        display: inline-block;
+    }
+
+    .subheader-quicknav {
+        @include pull-right;
+        @extend .navbar-nav;
+        @extend .nav;
+        display: inline-block;
+    }
+
+    .subheader-navbar {
+        @include pull-left;
+        @extend .navbar-nav;
+        @extend .nav;
+        width: 100%;
+    }
+}
+
+.subheader-quicknav {
+
+    .subheader-quicknav-item {
+        @extend .nav-item;
+        text-align: center;
+        line-height: 1em;
+
+        .subheader-quicknav-link {
+            display: block;
+            font-weight: 400;
+            background-color: #fff;
+            color: #6C868E;
+            padding: 0 .65em;
+            border-radius: 0;
+        }
+
+        > i,
+        .material-icons {
+            font-size: 1.875em;
+        }
+    }
+}
+
+// Subheader with navbar
+//
+// Markup:
+// <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
+// <nav class="subheader">
+//   <!-- Breadcrumb -->
+//   <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
+//     <li><a href="#">Home</a></li>
+//     <li><a href="#">Library</a></li>
+//     <li class="active">Data</li>
+//   </ol>
+//   <!-- QuickNav -->
+//   <ul class="subheader-quicknav">
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">insert_chart</i>
+//           <p>Sales</p>
+//        </a>
+//     </li>
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">view_list</i>
+//           <p>product List</p>
+//        </a>
+//     </li>
+//     <li class="subheader-quicknav-item">
+//        <a class="subheader-quicknav-link" href="#">
+//           <i class="material-icons">tag_faces</i>
+//           <p>Funny joke</p>
+//        </a>
+//     </li>
+//   </ul>
+//   <!-- Title -->
+//   <div class="subheader-title">Subheader</div>
+//   <!-- Navbar -->
+//   <ul class="nav subheader-navbar">
+//     <li class="nav-item active">
+//       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+//     </li>
+//     <li class="nav-item">
+//       <a class="nav-link" href="#">Features</a>
+//     </li>
+//     <li class="nav-item">
+//       <a class="nav-link" href="#">Pricing</a>
+//     </li>
+//     <li class="nav-item">
+//       <a class="nav-link" href="#">About</a>
+//     </li>
+//   </ul>
+// </nav>
+// </div>
+//
+// Styleguide 17.4

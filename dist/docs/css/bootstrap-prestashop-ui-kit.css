@@ -3950,9 +3950,7 @@ a.label:focus, a.label:hover {
 .progress[value]::-webkit-progress-value {
   background-color: #0074d9;
   border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem; }
+  border-bottom-left-radius: 0.25rem; }
 
 .progress[value="100"]::-webkit-progress-value {
   border-top-right-radius: 0.25rem;

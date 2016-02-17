@@ -13,17 +13,42 @@
 //         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 //           <span aria-hidden="true">&times;</span>
 //         </button>
-//         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+//         <h4 class="modal-title" id="myModalLabel">Lorem ipsum</h4>
 //       </div>
 //       <div class="modal-body">
-//         ...
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui sem, egestas non luctus et, semper sed risus. Etiam vel quam et eros pharetra volutpat. Sed faucibus hendrerit diam vitae hendrerit.
+//       <br/><br/>Donec mollis pretium ex luctus molestie. Pellentesque imperdiet libero eget metus gravida dictum.
 //       </div>
 //       <div class="modal-footer">
-//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Save changes</button>
+//         <button type="button" class="btn btn-tertiary-outline btn-lg" data-dismiss="modal">Close</button>
+//         <button type="button" class="btn btn-primary btn-lg">Save changes</button>
 //       </div>
 //     </div>
 //   </div>
 // </div>
 //
 // Styleguide 11
+
+.modal-content {
+    padding: 12px;
+}
+
+.modal-title {
+    color: $gray-dark;
+    font-size: $font-size-h1;
+    font-weight: 600;
+}
+
+
+.modal-header .close {
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}

@@ -3950,7 +3950,9 @@ a.label:focus, a.label:hover {
 .progress[value]::-webkit-progress-value {
   background-color: #0074d9;
   border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem; }
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
 
 .progress[value="100"]::-webkit-progress-value {
   border-top-right-radius: 0.25rem;
@@ -6426,6 +6428,24 @@ xs, .xs, .xsmall, xsmall {
 .select2-container--prestakit.select2-container--open .select2-dropdown {
   border-color: #BBCDD2; }
 
+.modal-content {
+  padding: 12px; }
+
+.modal-title {
+  color: #363A41;
+  font-size: 1.5rem;
+  font-weight: 600; }
+
+.modal-header .close {
+  font-size: 2.3rem;
+  font-weight: 400; }
+
+.modal-header {
+  border-bottom: none; }
+
+.modal-footer {
+  border-top: none; }
+
 .page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
   z-index: 2;
   color: #25B9D7;
@@ -7091,6 +7111,25 @@ input::-webkit-input-placeholder {
   .subheader-quicknav .subheader-quicknav-item > i,
   .subheader-quicknav .subheader-quicknav-item .material-icons {
     font-size: 1.875em; }
+
+.progress[value]::-webkit-progress-bar {
+  border: 1px solid #BBCDD2;
+  border-radius: 0.25rem;
+  background-color: #FFFFFF; }
+
+.progress[value]::-webkit-progress-value {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
+
+.progress-primary[value]::-webkit-progress-value {
+  background-color: #25B9D7; }
+
+.progress-primary[value]::-moz-progress-bar {
+  background-color: #25B9D7; }
+
+@media screen and (min-width: 0\0) {
+  .progress-primary .progress-bar {
+    background-color: #25B9D7; } }
 
 textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:focus:focus, input[type="datetime"]:focus:focus, input[type="datetime-local"]:focus:focus, input[type="date"]:focus:focus, input[type="month"]:focus:focus, input[type="time"]:focus:focus, input[type="week"]:focus:focus, input[type="number"]:focus:focus, input[type="email"]:focus:focus, input[type="url"]:focus:focus, input[type="search"]:focus:focus, input[type="tel"]:focus:focus, input[type="color"]:focus:focus, .uneditable-input:focus:focus {
   background-color: #FAFBFC; }

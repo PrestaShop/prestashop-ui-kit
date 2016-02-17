@@ -1,0 +1,29 @@
+// Progress bar
+//
+// Styleguide 20
+
+// Light & Dark
+//
+// Markup:
+// <progress class="progress progress-primary" value="25" max="100">25%</progress>
+// <progress class="progress progress-primary" value="50" max="100">50%</progress>
+// <progress class="progress progress-primary" value="75" max="100">75%</progress>
+// <progress class="progress progress-primary" value="100" max="100">100%</progress>
+//
+// Styleguide 20.1
+
+.progress[value]::-webkit-progress-bar {
+    border: 1px solid $gray-light;
+    border-radius: $border-radius;
+    background-color: $white;    
+}
+
+
+.progress[value]::-webkit-progress-value {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.progress-primary {
+  @include progress-variant($progress-bar-bg);
+}

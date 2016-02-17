@@ -174,12 +174,25 @@ $input-group-addon-bg:                        $gray-soft;
 $input-group-addon-color:                     $gray-medium;
 $input-group-addon-border-color:              $input-border-color;
 
-/// Navigation
+// Navigation
 
 $nav-link-unactive-padding:                   1em 2.5em !default;
 $nav-link-active-padding:                     0.75em 2.5em 1em 2.5em !default;
 
-// tab-bar
+// Progress bar
+
+$progress-bg:                                 $white;
+$progress-bar-color:                          $gray-soft;
+//$progress-border-radius:                      $border-radius;
+
+$progress-bar-bg:                             $brand-primary;
+$progress-bar-success-bg:                     $brand-success;
+$progress-bar-warning-bg:                     $brand-warning;
+$progress-bar-danger-bg:                      $brand-danger;
+$progress-bar-info-bg:                        $brand-info;
+
+
+// Tab-bar
 
 $nav-tabs-border-color:                       #FFF;
 
@@ -199,7 +212,7 @@ $nav-tabs-active-link-hover-border-color:     $brand-primary;
 
 $nav-pills-border-radius:                     0;
 
-// tab content
+// Tab content
 $nav-tab-content-bg:                          $body-bg;
 $nav-tab-content-padding:                     20px; /* TODO change padding */
 
@@ -278,6 +291,25 @@ $results-nested-padding:                      20px;
 $results-choice-bg-hover-color:               $primary-hover;
 $results-choice-fg-hover-color:               white;
 $results-choice-fg-unselectable-color:        grey;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /// Avatar
 

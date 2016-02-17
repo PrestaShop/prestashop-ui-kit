@@ -23,18 +23,3 @@
 //</div>
 //
 // Styleguide 7
-
-.dropdown {
-    button {
-        @extend .btn-sm;
-        @extend .btn-secondary;
-
-        &:hover {
-            border-color: $dropdown-border-color-hover;
-        }
-    }
-}
-
-.dropdown-menu {
-    border-color: red;
-}

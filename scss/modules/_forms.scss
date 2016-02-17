@@ -82,7 +82,7 @@
 // Markup:
 // <div class="row">
 // <div class="col-md-6">
-// <select data-toggle="select2" data-minimumResultsForSearch="-1">
+// <select data-toggle="select2">
 //   <option selected>Open this select menu</option>
 //   <option value="1">One</option>
 //   <option value="2">Two</option>
@@ -114,10 +114,9 @@
     @import "scss/mixins/single";
     @import "scss/mixins/multiple";
 
-    width: 100% !important;
-
+//    width: 100% !important;
     .select2-search__field {
-        width: 100% !important;
+//        width: 100% !important;
     }
 
     .select2-search--dropdown {
@@ -159,7 +158,7 @@
     }
 
     .select2-results__option {
-        color: $medium-grey;
+        color: $gray-medium;
         &[role=group] {
             padding: 0;
         }
@@ -181,7 +180,7 @@
     }
 
     &.select2-container--open .select2-dropdown {
-        border-color: $light-grey;
+        border-color: $gray-light;
     }
 
 

@@ -9,10 +9,10 @@
 // <div class="col-md-3"><div style="height: 60px;" class="primary-hover"></div><pre><b>primary-hover:</b> <small>#3ED2F0</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="secondary"></div><pre><b>secondary:</b> <small>#FFBB00</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="secondary-hover"></div><pre><b>secondary-hover:</b> <small>#FFD100</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="dark-grey"></div><pre><b>dark-grey:</b> <small>#25B9D7</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="medium-grey"></div><pre><b>medium-grey:</b> <small>#3ED2F0</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="light-grey"></div><pre><b>light-grey:</b> <small>#FFBB00</small></pre></div>
-// <div class="col-md-3"><div style="height: 60px;" class="soft-grey"></div><pre><b>soft-grey:</b> <small>#FFD100</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="gray-dark"></div><pre><b>gray-dark:</b> <small>#25B9D7</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="gray-medium"></div><pre><b>gray-medium:</b> <small>#3ED2F0</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="gray-light"></div><pre><b>gray-light:</b> <small>#FFBB00</small></pre></div>
+// <div class="col-md-3"><div style="height: 60px;" class="gray-soft"></div><pre><b>gray-soft:</b> <small>#FFD100</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="white"></div><pre><b>white:</b> <small>#FFFFFF</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="notice"></div><pre><b>notice:</b> <small>#3ED2F0</small></pre></div>
 // <div class="col-md-3"><div style="height: 60px;" class="success"></div><pre><b>success:</b> <small>#FFBB00</small></pre></div>
@@ -40,20 +40,20 @@
     @include ps-color($secondary-hover);
 }
 
-.dark-grey {
-    @include ps-color($dark-grey);
+.gray-dark {
+    @include ps-color($gray-dark);
 }
 
-.medium-grey {
-    @include ps-color($medium-grey);
+.gray-medium {
+    @include ps-color($gray-medium);
 }
 
-.light-grey {
-    @include ps-color($light-grey);
+.gray-light {
+    @include ps-color($gray-light);
 }
 
-.soft-grey {
-    @include ps-color($soft-grey);
+.gray-soft {
+    @include ps-color($gray-soft);
 }
 
 .white {

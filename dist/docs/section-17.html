@@ -57,12 +57,16 @@
                             <li class="kss-menu-item"><a href="section-14.html"><span class="kss-ref">14</span><span class="kss-name">Tags</span></a></li>
                             <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Modules Cards</span></a></li>
                             <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Tables</span></a></li>
-                            <li class="kss-menu-item"><a href="section-17.html"><span class="kss-ref">17</span><span class="kss-name">Tab-bar &amp; Navs-Bar</span></a></li>
+                            <li class="kss-menu-item"><a href="section-17.html"><span class="kss-ref">17</span><span class="kss-name">Navigation</span></a></li>
                             <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Tree</span></a></li>
+                            <li class="kss-menu-item"><a href="section-19.html"><span class="kss-ref">19</span><span class="kss-name">List group</span></a></li>
+                            <li class="kss-menu-item"><a href="section-20.html"><span class="kss-ref">20</span><span class="kss-name">Progress bar</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-17.1"><span class="kss-ref">17.1</span><span class="kss-name">Nav tabs</span></a></li>
                             <li class="kss-menu-item"><a href="#section-17.2"><span class="kss-ref">17.2</span><span class="kss-name">Nav bars</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-17.3"><span class="kss-ref">17.3</span><span class="kss-name">Subheader</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-17.4"><span class="kss-ref">17.4</span><span class="kss-name">Subheader with navbar</span></a></li>
                         </ul>
                     </nav>
 
@@ -72,7 +76,7 @@
 
                 <article class="kss-article">
                     <section id="section-17" class="kss-section kss-depth-1">
-                        <h1 class="kss-title"><span class="kss-ref">17</span> Tab-bar &amp; Navs-Bar</h1>
+                        <h1 class="kss-title"><span class="kss-ref">17</span> Navigation</h1>
 
 
                     </section>
@@ -154,9 +158,9 @@ $(document).ready(function(){
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                    <div style="background-color: #eaebec; padding: 20px;">
+                                    <div style="background-color: #eaebec; ">
 <nav class="navbar navbar-light">
-  <ul class="nav navbar-nav">
+  <ul class="nav navbar-nav navbar-separator">
     <li class="nav-item active">
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li>
@@ -176,9 +180,197 @@ $(document).ready(function(){
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;div style=&quot;background-color: #eaebec; padding: 20px;&quot;&gt;
+                                <pre><code class="lang-html">&lt;div style=&quot;background-color: #eaebec; &quot;&gt;
 &lt;nav class=&quot;navbar navbar-light&quot;&gt;
-  &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+  &lt;ul class=&quot;nav navbar-nav navbar-separator&quot;&gt;
+    &lt;li class=&quot;nav-item active&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-17.3" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">17.3</span> Subheader</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
+<nav class="subheader">
+  <!-- Breadcrumb -->
+  <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">Data</li>
+  </ol>
+  <!-- QuickNav -->
+  <ul class="subheader-quicknav">
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">insert_chart</i>
+          <p>Sales</p>
+       </a>
+    </li>
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">view_list</i>
+          <p>product List</p>
+       </a>
+    </li>
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">tag_faces</i>
+          <p>Funny joke</p>
+       </a>
+    </li>
+  </ul>
+  <!-- Title -->
+  <div class="subheader-title">Subheader</div>
+</nav>
+</div>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div style=&quot;background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;&quot;&gt;
+&lt;nav class=&quot;subheader&quot;&gt;
+  &lt;!-- Breadcrumb --&gt;
+  &lt;ol class=&quot;subheader-breadcrumb&quot; style=&quot;margin-bottom: 5px;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;!-- QuickNav --&gt;
+  &lt;ul class=&quot;subheader-quicknav&quot;&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;insert_chart&lt;/i&gt;
+          &lt;p&gt;Sales&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;view_list&lt;/i&gt;
+          &lt;p&gt;product List&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;tag_faces&lt;/i&gt;
+          &lt;p&gt;Funny joke&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- Title --&gt;
+  &lt;div class=&quot;subheader-title&quot;&gt;Subheader&lt;/div&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-17.4" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">17.4</span> Subheader with navbar</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
+<nav class="subheader">
+  <!-- Breadcrumb -->
+  <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">Data</li>
+  </ol>
+  <!-- QuickNav -->
+  <ul class="subheader-quicknav">
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">insert_chart</i>
+          <p>Sales</p>
+       </a>
+    </li>
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">view_list</i>
+          <p>product List</p>
+       </a>
+    </li>
+    <li class="subheader-quicknav-item">
+       <a class="subheader-quicknav-link" href="#">
+          <i class="material-icons">tag_faces</i>
+          <p>Funny joke</p>
+       </a>
+    </li>
+  </ul>
+  <!-- Title -->
+  <div class="subheader-title">Subheader</div>
+  <!-- Navbar -->
+  <ul class="nav subheader-navbar">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+</nav>
+</div>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div style=&quot;background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;&quot;&gt;
+&lt;nav class=&quot;subheader&quot;&gt;
+  &lt;!-- Breadcrumb --&gt;
+  &lt;ol class=&quot;subheader-breadcrumb&quot; style=&quot;margin-bottom: 5px;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;!-- QuickNav --&gt;
+  &lt;ul class=&quot;subheader-quicknav&quot;&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;insert_chart&lt;/i&gt;
+          &lt;p&gt;Sales&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;view_list&lt;/i&gt;
+          &lt;p&gt;product List&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;subheader-quicknav-item&quot;&gt;
+       &lt;a class=&quot;subheader-quicknav-link&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;tag_faces&lt;/i&gt;
+          &lt;p&gt;Funny joke&lt;/p&gt;
+       &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- Title --&gt;
+  &lt;div class=&quot;subheader-title&quot;&gt;Subheader&lt;/div&gt;
+  &lt;!-- Navbar --&gt;
+  &lt;ul class=&quot;nav subheader-navbar&quot;&gt;
     &lt;li class=&quot;nav-item active&quot;&gt;
       &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
     &lt;/li&gt;

@@ -42,22 +42,22 @@
 .table {
 
     tbody {
-        border: 2px solid $light-grey;
+        border: 2px solid $gray-light;
     }
 
     th, td {
         font-weight: 400;
-        color: $dark-grey;
+        color: $gray-dark;
         border: none;
     }
 
     thead {
-        border: 2px solid $light-grey;
+        border: 2px solid $gray-light;
         th {
             font-weight: 600;
-            color: $medium-grey;
-            border-top: 2px solid $light-grey;
-            border-bottom: 2px solid $light-grey;
+            color: $gray-medium;
+            border-top: 2px solid $gray-light;
+            border-bottom: 2px solid $gray-light;
         }
     }
 }

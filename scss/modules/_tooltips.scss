@@ -29,11 +29,12 @@
             background-color: $danger-hover;
             color: $danger;
         }
-
-        /* .tooltip-arrow { */
-        /*     border-top-color: $danger-hover !important; */
-        /*     border-left-color: $danger-hover !important; */
-        /*     border-bottom-color: $danger-hover !important; */
-        /*     border-right-color: $danger-hover !important; */
-        /* } */
+    
 }
+
+@include error-tooptip(right, left);
+@include error-tooptip(left, right);
+@include error-tooptip(top, bottom);
+@include error-tooptip(bottom, top);
+
+

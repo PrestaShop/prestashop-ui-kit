@@ -28,8 +28,7 @@
         .tooltip-inner {
             background-color: $danger-hover;
             color: $danger;
-        }
-    
+        }    
 }
 
 @include error-tooptip(right, left);

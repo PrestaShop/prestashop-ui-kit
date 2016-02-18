@@ -121,13 +121,15 @@
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                    <div><button id="popovers" type="button" class="btn btn-lg btn-danger">Click to toggle popover</button></div>
+                                    <div><button id="popovers" type="button" class="btn btn-tertiary">Click to toggle popover</button></div>
 <script class="text/javascript">
     $( document ).ready( function () {
          $("#popovers").popover({
               placement: 'right',
               html: true,
-              title: 'Popover title',
+              trigger: 'focus',
+              title: 'Popover title'+
+                     '<button type="button" id="close" class="close" onclick="$(&quot;#popovers&quot;).popover(&quot;hide&quot;);">&times;</button>',
               content: 'And here\'s some amazing content. It\'s very engaging. Right? <a href=\'#\'>PrestaShop</a>'
          });
      });
@@ -136,13 +138,15 @@
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;div&gt;&lt;button id=&quot;popovers&quot; type=&quot;button&quot; class=&quot;btn btn-lg btn-danger&quot;&gt;Click to toggle popover&lt;/button&gt;&lt;/div&gt;
+                                <pre><code class="lang-html">&lt;div&gt;&lt;button id=&quot;popovers&quot; type=&quot;button&quot; class=&quot;btn btn-tertiary&quot;&gt;Click to toggle popover&lt;/button&gt;&lt;/div&gt;
 &lt;script class=&quot;text/javascript&quot;&gt;
     $( document ).ready( function () {
          $(&quot;#popovers&quot;).popover({
               placement: &#x27;right&#x27;,
               html: true,
-              title: &#x27;Popover title&#x27;,
+              trigger: &#x27;focus&#x27;,
+              title: &#x27;Popover title&#x27;+
+                     &#x27;&lt;button type=&quot;button&quot; id=&quot;close&quot; class=&quot;close&quot; onclick=&quot;$(&amp;quot;#popovers&amp;quot;).popover(&amp;quot;hide&amp;quot;);&quot;&gt;&amp;times;&lt;/button&gt;&#x27;,
               content: &#x27;And here\&#x27;s some amazing content. It\&#x27;s very engaging. Right? &lt;a href=\&#x27;#\&#x27;&gt;PrestaShop&lt;/a&gt;&#x27;
          });
      });

@@ -1,6 +1,6 @@
 // Progress bar
 //
-// Styleguide 20
+// Styleguide 18
 
 // Light & Dark
 //
@@ -10,7 +10,7 @@
 // <progress class="progress progress-primary" value="75" max="100">75%</progress>
 // <progress class="progress progress-primary" value="100" max="100">100%</progress>
 //
-// Styleguide 20.1
+// Styleguide 18.1
 
 .progress[value]::-webkit-progress-bar {
     border: 1px solid $gray-light;

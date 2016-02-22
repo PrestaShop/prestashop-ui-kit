@@ -6325,8 +6325,11 @@ input[type=search] {
   border: solid 1px #ccc;
   width: 11px;
   cursor: pointer;
+  text-indent: 2.5rem;
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
   border-radius: 10em;
@@ -6340,6 +6343,7 @@ input[type=search] {
     background-color: #fff;
     padding-left: 32px;
     cursor: auto;
+    text-indent: 0;
     -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
     -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
     box-shadow: 0 0 5px rgba(109, 207, 246, 0.5); }

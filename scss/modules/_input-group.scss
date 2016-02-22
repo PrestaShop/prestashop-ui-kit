@@ -1,6 +1,6 @@
 // Input groups
 //
-// Styleguide 6
+// Styleguide 5
 
 // Basic example
 //
@@ -30,49 +30,52 @@
 //   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
 // </div>
 //
-// Styleguide 6.1
+// Styleguide 5.1
 
 // Seach Form
 //
 // Markup:
 // <form id="demo-2">
-// 	<input type="search" class="form-control" placeholder="Search">
+// 	<input type="search" class="form-control">
 // </form>
 //
-// Styleguide 6.2
+// Styleguide 5.2
 
 input[type=search] {
-	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-	border: solid 1px #ccc;
-	width: 11px;
-  cursor: pointer;
-  
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-  
-	-webkit-border-radius: 10em;
-	-moz-border-radius: 10em;
-	border-radius: 10em;
-	
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;
+	  background: $white url($search-icon) center no-repeat;
+	  border: solid 1px #ccc;
+	  width: 11px;
+    cursor: pointer;
+	  text-indent: 2.5rem;
 
-  &:hover {
-      border-color: $primary;
-  }
-  
-  &:focus {
-	    width: 200px;
-	    background-color: #fff;
-      padding-left: 32px;
-      cursor: auto;
-	    
-	    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	    box-shadow: 0 0 5px rgba(109,207,246,.5);
-        
-  }
+	  -webkit-appearance: textfield;
+	  -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+	  box-sizing: content-box;
+
+	  -webkit-border-radius: 10em;
+	  -moz-border-radius: 10em;
+	  border-radius: 10em;
+
+	  -webkit-transition: all .5s;
+	  -moz-transition: all .5s;
+	  transition: all .5s;
+
+    &:hover {
+        border-color: $primary;
+    }
+
+    &:focus {
+        background: $white url($search-icon) 95% no-repeat;
+	      width: 250px;
+        cursor: auto;
+	      text-indent: 0;
+			  
+	      -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	      -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	      box-shadow: 0 0 5px rgba(109,207,246,.5);
+
+    }
 }
 
 input:-moz-placeholder {
@@ -81,5 +84,5 @@ input:-moz-placeholder {
 }
 input::-webkit-input-placeholder {
 	  color: #999;
-	  color: transparent;    
+	  color: transparent;
 }

@@ -1,6 +1,6 @@
 // Forms
 //
-// Styleguide 5
+// Styleguide 4
 
 // Inputs (width build on grid)
 //
@@ -17,7 +17,7 @@
 //  <input type="text" class="form-control" placeholder="Wake me up!"></input>
 // </fieldset>
 //
-// Styleguide 5.1
+// Styleguide 4.1
 
 .form-control {
 
@@ -41,7 +41,7 @@
 //  <input type="text" class="form-control form-control-{{modifier_class}}" id="input{{modifier_class}}">
 // </div>
 //
-// Styleguide 5.2
+// Styleguide 4.2
 
 .has-success {
     .form-control-success {
@@ -75,7 +75,7 @@
 //   <option value="3">Three</option>
 // </select>
 //
-// Styleguide 5.3
+// Styleguide 4.3
 
 // Dropdown
 //
@@ -107,17 +107,12 @@
 // </div>
 // </div>
 //
-// Styleguide 5.4
+// Styleguide 4.4
 
 .select2-container--prestakit {
 
     @import "scss/mixins/single";
     @import "scss/mixins/multiple";
-
-//    width: 100% !important;
-    .select2-search__field {
-//        width: 100% !important;
-    }
 
     .select2-search--dropdown {
         .select2-search__field {

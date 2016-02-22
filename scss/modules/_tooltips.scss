@@ -1,6 +1,6 @@
 // Tooltips
 //
-// Styleguide 12
+// Styleguide 10
 
 // Static demo
 //
@@ -10,7 +10,7 @@
 // <div class="col-md-6"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div></div>
 // </div>
 //
-// Styleguide 12.1
+// Styleguide 10.1
 
 // Interactive demo
 //
@@ -22,18 +22,18 @@
 // <div class="col-md-3"><button type="button" class="btn tooltip-error" data-toggle="tooltip" data-placement="bottom" title="Error on bottom"> Error on bottom</button></div>
 // </div>
 //
-// Styleguide 12.2
+// Styleguide 10.2
 
 .tooltip-error {
         .tooltip-inner {
             background-color: $danger-hover;
             color: $danger;
-        }
-
-        /* .tooltip-arrow { */
-        /*     border-top-color: $danger-hover !important; */
-        /*     border-left-color: $danger-hover !important; */
-        /*     border-bottom-color: $danger-hover !important; */
-        /*     border-right-color: $danger-hover !important; */
-        /* } */
+        }    
 }
+
+@include error-tooptip(right, left);
+@include error-tooptip(left, right);
+@include error-tooptip(top, bottom);
+@include error-tooptip(bottom, top);
+
+

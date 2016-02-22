@@ -58,9 +58,6 @@ $(function () {
         offText: '<i class="material-icons">close</i>'
     });
 
-    // Enable tooltips everywhere
-    $('[data-toggle="tooltip"]').tooltip();
-
     // Error tooltips template
     var options = {
         template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
@@ -68,6 +65,9 @@ $(function () {
 
     // Enable Error tooltips
     $('.tooltip-error').tooltip(options);
+
+    // Enable tooltips everywhere
+    $('[data-toggle="tooltip"]').tooltip();
 
     // Enable popovers everywhere
     $('[data-toggle="popover"]').popover();

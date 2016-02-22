@@ -1,19 +1,21 @@
 // Popovers
 //
 // Markup:
-// <div><button id="popovers" type="button" class="btn btn-lg btn-danger">Click to toggle popover</button></div>
+// <div><button id="popovers" type="button" class="btn btn-tertiary">Click to toggle popover</button></div>
 // <script class="text/javascript">
 //     $( document ).ready( function () {
 //          $("#popovers").popover({
 //               placement: 'right',
 //               html: true,
-//               title: 'Popover title',
+//               trigger: 'focus',
+//               title: 'Popover title'+
+//                      '<button type="button" id="close" class="close" onclick="$(&quot;#popovers&quot;).popover(&quot;hide&quot;);">&times;</button>',
 //               content: 'And here\'s some amazing content. It\'s very engaging. Right? <a href=\'#\'>PrestaShop</a>'
 //          });
 //      });
 // </script>
 //
-// Styleguide 12.3
+// Styleguide 10.3
 
 .popover {
     color: $white;

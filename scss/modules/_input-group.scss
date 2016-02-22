@@ -46,14 +46,17 @@ input[type=search] {
 	border: solid 1px #ccc;
 	width: 11px;
   cursor: pointer;
-  
+	text-indent: 2.5rem;
+
 	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-  
+	-moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+	box-sizing: content-box;
+
 	-webkit-border-radius: 10em;
 	-moz-border-radius: 10em;
 	border-radius: 10em;
-	
+
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
 	transition: all .5s;
@@ -61,17 +64,18 @@ input[type=search] {
   &:hover {
       border-color: $primary;
   }
-  
+
   &:focus {
 	    width: 200px;
 	    background-color: #fff;
       padding-left: 32px;
       cursor: auto;
-	    
+	    text-indent: 0;
+			
 	    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	    box-shadow: 0 0 5px rgba(109,207,246,.5);
-        
+
   }
 }
 
@@ -81,5 +85,5 @@ input:-moz-placeholder {
 }
 input::-webkit-input-placeholder {
 	  color: #999;
-	  color: transparent;    
+	  color: transparent;
 }

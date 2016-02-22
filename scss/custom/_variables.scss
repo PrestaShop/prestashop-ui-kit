@@ -90,12 +90,10 @@ $btn-tertiary-border:                        $btn-tertiary-bg;
 // Body
 //
 // Settings for the `<body>` element.
-
 $body-bg:                                     #fff;
 $body-color:                                  $gray-dark;
 
-
-/// Popovers
+// Popovers
 $popover-bg:                                  $gray-dark;
 
 /// Tooltips
@@ -137,7 +135,6 @@ $font-size-sm:                                .75rem;
 $font-size-xs:                                .65rem;
 
 // Font Color
-
 $font-color-primary:                          $gray-dark;
 $font-color-secondary:                        $gray-medium;
 
@@ -175,25 +172,13 @@ $input-group-addon-color:                     $gray-medium;
 $input-group-addon-border-color:              $input-border-color;
 
 // Navigation
-
 $nav-link-unactive-padding:                   1em 2.5em !default;
 $nav-link-active-padding:                     0.75em 2.5em 1em 2.5em !default;
 
 // Progress bar
-
-$progress-bg:                                 $white;
-$progress-bar-color:                          $gray-soft;
-//$progress-border-radius:                      $border-radius;
-
-$progress-bar-bg:                             $brand-primary;
-$progress-bar-success-bg:                     $brand-success;
-$progress-bar-warning-bg:                     $brand-warning;
-$progress-bar-danger-bg:                      $brand-danger;
-$progress-bar-info-bg:                        $brand-info;
-
+$progress-border-radius:                      .45rem;
 
 // Tab-bar
-
 $nav-tabs-border-color:                       #FFF;
 
 $nav-tabs-link-border-width:                  0;

@@ -1,10 +1,9 @@
-# PrestaKit
-UI Kit integration for PrestaShop
-
 PrestaShop UI Kit
 =================
 
-**[jquery-growl](http://build.prestashop.com/prestashop-ui-kit/)**
+UI Kit integration for PrestaShop
+
+**[pretashop-ui-kit](http://build.prestashop.com/prestashop-ui-kit/)**
 
 Installation
 ------------

@@ -36,15 +36,15 @@
 //
 // Markup:
 // <form id="demo-2">
-// 	<input type="search" class="form-control">
+// 	<input type="search" class="form-control form-search">
 // </form>
 //
 // Styleguide 5.2
 
-input[type=search] {
+.form-search[type=search] {
 	  background: $white url($search-icon) center no-repeat;
 	  border: solid 1px #ccc;
-	  width: 11px;
+	  width: 16px;
     cursor: pointer;
 	  text-indent: 2.5rem;
 
@@ -67,6 +67,7 @@ input[type=search] {
 
     &:focus {
         background: $white url($search-icon) 95% no-repeat;
+        border-color: $primary;
 	      width: 250px;
         cursor: auto;
 	      text-indent: 0;
@@ -78,11 +79,11 @@ input[type=search] {
     }
 }
 
-input:-moz-placeholder {
+.form-search::-moz-placeholder {
 	  color: #999;
     color: transparent;
 }
-input::-webkit-input-placeholder {
+.form-search::-webkit-input-placeholder {
 	  color: #999;
 	  color: transparent;
 }

@@ -6849,10 +6849,10 @@ xs, .xs, .xsmall, xsmall {
 .form-inline .select2-container--prestakit {
   display: inline-block; }
 
-input[type=search] {
+.form-search[type=search] {
   background: #FFFFFF url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=") center no-repeat;
   border: solid 1px #ccc;
-  width: 11px;
+  width: 16px;
   cursor: pointer;
   text-indent: 2.5rem;
   -webkit-appearance: textfield;
@@ -6865,10 +6865,11 @@ input[type=search] {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s; }
-  input[type=search]:hover {
+  .form-search[type=search]:hover {
     border-color: #25B9D7; }
-  input[type=search]:focus {
+  .form-search[type=search]:focus {
     background: #FFFFFF url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=") 95% no-repeat;
+    border-color: #25B9D7;
     width: 250px;
     cursor: auto;
     text-indent: 0;
@@ -6876,11 +6877,11 @@ input[type=search] {
     -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
     box-shadow: 0 0 5px rgba(109, 207, 246, 0.5); }
 
-input:-moz-placeholder {
+.form-search::-moz-placeholder {
   color: #999;
   color: transparent; }
 
-input::-webkit-input-placeholder {
+.form-search::-webkit-input-placeholder {
   color: #999;
   color: transparent; }
 

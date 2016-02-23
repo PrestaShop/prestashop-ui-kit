@@ -21,14 +21,18 @@
 $enable-flex:                                 false !default;
 $enable-rounded:                              true !default;
 $enable-shadows:                              false !default;
-$enable-gradients:                            false !default;
+$enable-gradients:                            true;
 $enable-transitions:                          true;
-$enable-hover-media-query:                    false !default;
+$enable-hover-media-query:                    true;
 $enable-grid-classes:                         true !default;
 
 $font-size-root:                              16px;
 
 $line-height:                                 1.5 !default;
+
+$border-radius:                               .25rem !default;
+$border-radius-lg:                            .3rem !default;
+$border-radius-sm:                            .2rem !default;
 
 // Buttons
 $btn-padding-x:                               1rem !default;
@@ -42,16 +46,21 @@ $btn-padding-x-lg:                            1.5rem !default;
 $btn-padding-y-lg:                            .25rem !default;
 
 // Colors
+// Grayscale and brand colors for use across Bootstrap.
+$gray-dark:                                   #363A41;
+$gray:                                        #55595c !default;
+$gray-medium:                                 #6C868E;
+$gray-light:                                  #BBCDD2;
+$gray-soft:                                   #FAFBFC;
+$gray-lighter:                                #eceeef !default;
+$gray-lightest:                               #f7f7f9 !default;
+
 
 // UI-Kit color
 $primary:                                     #25B9D7;
 $primary-hover:                               #3ED2F0;
 $secondary:                                   #FFBB00;
 $secondary-hover:                             #FFD100;
-$gray-dark:                                   #363A41;
-$gray-medium:                                 #6C868E;
-$gray-light:                                  #BBCDD2;
-$gray-soft:                                   #FAFBFC;
 $white:                                       #FFFFFF;
 $notice:                                      #DFF5F9;
 $tertiary:                                    $gray-medium;
@@ -62,15 +71,6 @@ $warning:                                     #CD9321;
 $warning-hover:                               #FDE7BB;
 $danger:                                      #C45C67;
 $danger-hover:                                #EFC8Cb;
-
-// Form Icon
-$form-icon-success:                           "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzhEMDdEIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40TDkgMTYuMnoiLz4NCjwvc3ZnPg==";
-
-$form-icon-warning:                           "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0Q5MzIxIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTExIDE3aDJ2LTZoLTJ2NnptMS0xNUM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6TTExIDloMlY3aC0ydjJ6Ii8+DQo8L3N2Zz4=";
-
-$form-icon-danger:                            "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQzQ1QzY3IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz4NCiAgICA8cGF0aCBkPSJNMTEgMTVoMnYyaC0yem0wLThoMnY2aC0yem0uOTktNUM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPg0KPC9zdmc+";
-
-$search-icon:                                 "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=";
 
 // Brands Colors
 $brand-primary:                               $primary;
@@ -85,7 +85,6 @@ $brand-danger:                                $danger;
 $btn-tertiary-color:                         #fff;
 $btn-tertiary-bg:                            $brand-tertiary;
 $btn-tertiary-border:                        $btn-tertiary-bg;
-
 
 // Body
 //
@@ -153,7 +152,19 @@ $font-weight-h3:                              $font-weight-bold;
 $font-weight-h4:                              $font-weight-semibold;
 
 /// Forms
-$input-padding-x:                             .75rem !default;
+
+// Form Icon
+$form-icon-success:                           "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzhEMDdEIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40TDkgMTYuMnoiLz4NCjwvc3ZnPg==";
+
+$form-icon-warning:                           "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0Q5MzIxIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTExIDE3aDJ2LTZoLTJ2NnptMS0xNUM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6TTExIDloMlY3aC0ydjJ6Ii8+DQo8L3N2Zz4=";
+
+$form-icon-danger:                            "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQzQ1QzY3IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz4NCiAgICA8cGF0aCBkPSJNMTEgMTVoMnYyaC0yem0wLThoMnY2aC0yem0uOTktNUM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPg0KPC9zdmc+";
+
+$search-icon:                                 "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=";
+
+// Input
+
+$input-padding-x:                             .563rem;
 $input-padding-y:                             .375rem !default;
 
 $input-height:                                (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
@@ -277,24 +288,19 @@ $results-choice-bg-hover-color:               $primary-hover;
 $results-choice-fg-hover-color:               white;
 $results-choice-fg-unselectable-color:        grey;
 
+$caret-width:                                 .3rem;
+$caret-width-lg:                              $caret-width;
 
+$form-control-default-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+$form-control-focus-box-shadow: $form-control-default-box-shadow,
+0 0 8px rgba($input-border-focus, 0.6);
+$form-control-transition: border-color ease-in-out .15s,
+box-shadow ease-in-out .15s;
+$input-border: $border-radius;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$dropdown-arrow-color: $input-color-placeholder !default;
+$dropdown-box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !default;
+$clear-selection-color: $dropdown-arrow-color !default;
 
 /// Avatar
 

@@ -1,6 +1,9 @@
 'use strict';
 
+// Include gulp
 var gulp           = require('gulp');
+
+// Include Our Plugins
 var scss           = require('gulp-sass');
 var nano           = require('gulp-cssnano');
 var util           = require('gulp-util');
@@ -13,13 +16,12 @@ var clean          = require('gulp-clean');
 var gulpkss        = require('gulp-kss-druff');
 var sourcemaps     = require('gulp-sourcemaps');
 
+// Iterate Configuration
 var config         = {
     name           : 'prestashop-ui-kit',
-    production     : !!util.env.production,
     projectDir     : __dirname + '/',
     scssIndex      : __dirname + '/scss/application.scss',
-    jsIndex        : __dirname + '/js/.js',
-    imgIndex       : __dirname + '/img',
+    imgPattern     : __dirname + '/img',
     scssPattern    : __dirname + '/scss/**/*.scss',
     tplPattern     : __dirname + '/template/index.html',
     jsPattern      : __dirname + '/js/*.js',
@@ -27,10 +29,7 @@ var config         = {
     dist           : __dirname + '/dist'
 };
 
-var root_scss = [
-    'scss/application.scss'
-];
-
+// List Dependencies JS
 var jsfiles = [
     // Vendors js
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
@@ -44,6 +43,7 @@ var jsfiles = [
     config.projectDir + 'js/prestashop-ui-kit.js'
 ];
 
+// List Dependencies CSS
 var cssfiles = [
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
     config.nodeModulesDir + '/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
@@ -51,27 +51,31 @@ var cssfiles = [
     config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css',
 ];
 
+// Material Icons Fonts
 var fontsfiles = [
     config.nodeModulesDir + '/material-design-icons/iconfont/*'
 ];
 
+// PrestaShop Logo
 var imgfiles = [
-    config.imgIndex + '/logo.png'
+    config.imgPattern + '/logo.png'
 ];
 
+// Default Task
 gulp.task('default', ['scss', 'js', 'css', 'fonts', 'img', 'css:minify', 'styleguide']);
 
+// Compile Our Scss
 gulp.task('scss', function () {
-    return gulp.src(root_scss)
-    // init sourcemaps
+    return gulp.src(config.scssIndex)
+    // Init Sourcemaps
         .pipe(sourcemaps.init())
-    // build scss
+    // Build Scss
         .pipe(scss.sync({
             includePaths : [config.nodeModulesDir]
         }).on('error', scss.logError))
-    // maps
+    // Maps
         .pipe(sourcemaps.write('./maps'))
-    // export
+    // Export
         .pipe(rename({
             prefix: 'bootstrap-',
             basename: config.name,
@@ -81,6 +85,7 @@ gulp.task('scss', function () {
         .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
+// Concatenate & Minify JS
 gulp.task('js:uglify', ['js'], function () {
     return gulp.src(jsfiles)
         .pipe(concat('bundle-' + config.name + '.js'))
@@ -95,18 +100,21 @@ gulp.task('js:uglify', ['js'], function () {
         .pipe(gulp.dest(config.dist + '/doc/js'));
 });
 
+// Import Material Icons Fonts
 gulp.task('fonts', function () {
     return gulp.src(fontsfiles)
         .pipe(gulp.dest(config.dist + '/fonts'))
         .pipe(gulp.dest(config.dist + '/docs/fonts'));
 });
 
+// Import Dependencies CSS
 gulp.task('css', function () {
     return gulp.src(cssfiles)
         .pipe(gulp.dest(config.dist + '/css'))
         .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
+// Import Dependencies JS
 gulp.task('js', function () {
     return gulp.src(jsfiles)
         .pipe(gulp.dest(config.dist + '/js'))
@@ -114,15 +122,18 @@ gulp.task('js', function () {
 
 });
 
+// Import PrestaShop Logo
 gulp.task('img', function () {
     return gulp.src(imgfiles)
         .pipe(gulp.dest(config.dist + '/docs/img'));
 });
 
+// Watch Files For Change
 gulp.task('scss:watch', function () {
     return gulp.watch([config.scssPattern, config.tplPattern, config.jsPattern], ['scss', 'js', 'img', 'css', 'styleguide']);
 });
 
+// Concatenate CSS
 gulp.task('css:concat', ['css:minify'], function () {
     return gulp.src('dist/css/**/*.min.css')
         .pipe(concatcss())
@@ -134,6 +145,7 @@ gulp.task('css:concat', ['css:minify'], function () {
         .pipe(gulp.dest(config.dist + '/css'));
 });
 
+// Minify SCSS
 gulp.task('css:minify', ['scss'], function () {
     return gulp.src(cssfiles)
         .pipe(nano())
@@ -145,8 +157,9 @@ gulp.task('css:minify', ['scss'], function () {
         .pipe(gulp.dest(config.dist + '/css'));
 });
 
+// Knyle Style Sheets Documentation
 gulp.task('styleguide', function() {
-    gulp.src(['scss/**/*.scss'])
+    gulp.src(config.scssPattern)
         .pipe(gulpkss({
             template: 'template/',
             multiline: true,
@@ -159,12 +172,14 @@ gulp.task('styleguide', function() {
         }))
         .pipe(gulp.dest(config.dist + '/docs'));
 
+    // Import Template CSS
     gulp.src('template/public/kss.css')
         .pipe(gulp.dest(config.dist + '/docs/css'));
 });
 
+// Clean Dist
 gulp.task('clean', function() {
-    return gulp.src([config.dist + '/*', config.jsDir + '/*'], {read: false})
+    return gulp.src([config.dist + '/*'], {read: false})
         .pipe(clean());
 });
 

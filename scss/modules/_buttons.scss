@@ -176,58 +176,9 @@
 // ```
 //
 // Markup:
-// <input data-toggle="switch" type="checkbox" name="my-checkbox" checked>
+// <input data-toggle="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked>
 //
 // Styleguide 3.6
-
-
-.bootstrap-switch {
-
-}
-
-.bootstrap-switch-on {
-    border-radius: 25px;
-    background: $primary;
-    border: 1px solid $gray-light;
-}
-
-.bootstrap-switch-off {
-    border-radius: 25px;
-    background: $white;
-    border: 1px solid $gray-light;
-}
-
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
-    border-radius: 25px;
-    color: $primary;
-    background: $white;
-    border: 1px solid $gray-light;
-}
-
-.bootstrap-switch .bootstrap-switch-handle-on,
-.bootstrap-switch .bootstrap-switch-label {
-//    background: $primary;
-}
-
-.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
-.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
-    border-radius: 25px;
-    color: $gray-medium;
-    background: $white;
-    border: 1px solid $gray-light;
-}
-
-.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
-.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
-    background: $primary;
-}
-
-.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
-.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label {
-    backgroud: $white;
-}
-
 
 // Examples Buttons
 //

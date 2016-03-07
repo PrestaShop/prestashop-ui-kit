@@ -98,7 +98,6 @@
 //
 // .btn-lg      - Large Button.
 // .btn-sm      - Small Button.
-// .btn-xs      - Extra Small Button.
 // .btn-block   - Block Button.
 //
 // Markup:
@@ -120,22 +119,9 @@
     }
 }
 
-.btn-xs {
-    padding: .65em .65em;
-    gfont-size: .65em;
-    font-weight: 600;
-    &.disabled,
-    &:disabled {
-        cursor: $cursor-disabled;
-        opacity: .65;
-        @include box-shadow(none);
-    }
-}
-
 .btn-sm {
-    padding: .65em 1em;
-    font-size: .75em;
-    font-weight: 600;
+    padding: rem(4px) rem(8px);
+    font-size: rem(8px);
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;
@@ -146,8 +132,7 @@
 
 .btn-lg {
     padding: 1.25em 1.5em;
-    font-size: .75em;
-    font-weight: 800;
+    font-size: rem(12px);
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;

@@ -152,18 +152,56 @@
 
 // Switch Button
 //
-// **[bootstrap-switch](http://www.bootstrap-switch.org/)**
-// ```
-// [...]
-//      <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
-//      <script src="js/bootstrap-switch.min.js"></script>
-// [...]
-// ```
-//
 // Markup:
 // <input data-toggle="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked>
 //
 // Styleguide 3.6
+
+.switch-input {
+    height: $switch-height;
+    width: $switch-width;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    &, &:after {
+        display: block;
+        background: $white;
+        border: 2px solid $gray-light;
+        border-radius: $switch-height;
+        box-sizing: border-box;
+        color: $gray-medium;
+        transition: all 0.5s;
+    }
+
+    > input {
+        display: none;
+    }
+
+    &:after {
+        @extend .material-icons;
+        content: 'close';
+        height: $switch-height + (2 * $switch-margin);
+        width: $switch-height + (2 * $switch-margin);
+        position: absolute;
+        top: -($switch-margin + 2px);
+        left: -($switch-margin + 2px);
+        transform: rotate(-180deg);
+        padding: 3px 0 0 3px;
+        font-size: 24px;
+    }
+
+    &.-checked {
+        background: $primary;
+
+        &:after {
+            content: 'check';
+            left: $switch-width - ($switch-margin + $switch-height);
+            color: $primary;
+            transform: rotate(0deg);
+        }
+    }
+}
 
 // Examples Buttons
 //

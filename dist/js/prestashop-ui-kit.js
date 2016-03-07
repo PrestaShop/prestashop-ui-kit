@@ -53,10 +53,17 @@ $(function () {
         $(this).select2(newObj);
     });
 
-    // Enable Switch Button everywhere
-    $('[data-toggle="switch"]').bootstrapSwitch({
-        onText: '<i class="material-icons">check</i>',
-        offText: '<i class="material-icons">close</i>'
+    $('[data-toggle="switch"]').each(function() {
+        var $this = $(this);
+        var baseClass = $this.prop('checked') ? '-checked' : '';
+        $(this)
+            .wrap('<div class="switch-input '+baseClass+'"></div>')
+            .parent()
+            .click(function() {
+                $(this).toggleClass('-checked');
+                var checkbox = $(this).find('input');
+                checkbox.prop('checked', !checkbox.prop('checked'));
+            });
     });
 
     // Error tooltips template

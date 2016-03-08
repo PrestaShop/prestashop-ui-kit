@@ -11,7 +11,7 @@
   /* For IE6-8 */
   src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.woff2) format("woff2"), url(../fonts/MaterialIcons-Regular.woff) format("woff"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
-.material-icons, .switch-input:after {
+.material-icons, .switch-input:after, .switch-input.small:after, .switch-input.tiny:after {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -6430,9 +6430,10 @@ xs, .xs, .xsmall, xsmall {
   width: 60px;
   position: relative;
   cursor: pointer;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 5px 0 0; }
   .switch-input, .switch-input:after {
-    display: block;
     background: #FFFFFF;
     border: 2px solid #BBCDD2;
     border-radius: 30px;
@@ -6442,22 +6443,99 @@ xs, .xs, .xsmall, xsmall {
   .switch-input > input {
     display: none; }
   .switch-input:after {
+    display: block;
     content: 'close';
-    height: 34px;
-    width: 34px;
+    height: 36px;
+    width: 36px;
     position: absolute;
-    top: -4px;
-    left: -4px;
+    top: -5px;
+    left: -5px;
     transform: rotate(-180deg);
-    padding: 3px 0 0 3px;
+    line-height: 32px;
+    vertical-align: middle;
+    text-align: center;
     font-size: 24px; }
   .switch-input.-checked {
     background: #25B9D7; }
     .switch-input.-checked:after {
       content: 'check';
-      left: 28px;
+      left: 25px;
       color: #25B9D7;
       transform: rotate(0deg); }
+  .switch-input.small {
+    height: 20px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 4px 0 0; }
+    .switch-input.small, .switch-input.small:after {
+      background: #FFFFFF;
+      border: 2px solid #BBCDD2;
+      border-radius: 20px;
+      box-sizing: border-box;
+      color: #6C868E;
+      transition: all 0.5s; }
+    .switch-input.small > input {
+      display: none; }
+    .switch-input.small:after {
+      display: block;
+      content: 'close';
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      transform: rotate(-180deg);
+      line-height: 20px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 16px; }
+    .switch-input.small.-checked {
+      background: #25B9D7; }
+      .switch-input.small.-checked:after {
+        content: 'check';
+        left: 16px;
+        color: #25B9D7;
+        transform: rotate(0deg); }
+  .switch-input.tiny {
+    height: 16px;
+    width: 28px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 3px 0 0; }
+    .switch-input.tiny, .switch-input.tiny:after {
+      background: #FFFFFF;
+      border: 2px solid #BBCDD2;
+      border-radius: 16px;
+      box-sizing: border-box;
+      color: #6C868E;
+      transition: all 0.5s; }
+    .switch-input.tiny > input {
+      display: none; }
+    .switch-input.tiny:after {
+      display: block;
+      content: 'close';
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      transform: rotate(-180deg);
+      line-height: 14px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 12px; }
+    .switch-input.tiny.-checked {
+      background: #25B9D7; }
+      .switch-input.tiny.-checked:after {
+        content: 'check';
+        left: 9px;
+        color: #25B9D7;
+        transform: rotate(0deg); }
 
 .btn-icon {
   font-size: 22px;

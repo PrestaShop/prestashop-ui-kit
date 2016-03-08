@@ -152,54 +152,25 @@
 
 // Switch Button
 //
+// There are multiple sizes.
+//
+// .small - Small switch
+// .tiny - Tiny switch (Usefull for inline)
+//
 // Markup:
-// <input data-toggle="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked>
+// <label for="switch{{modifier_class}}"><input data-toggle="switch" class="{{modifier_class}}" id="switch{{modifier_class}}" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
 //
 // Styleguide 3.6
 
 .switch-input {
-    height: $switch-height;
-    width: $switch-width;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
+    @include ps-switch(30px, 60px, -3px, 24px);
 
-    &, &:after {
-        display: block;
-        background: $white;
-        border: 2px solid $gray-light;
-        border-radius: $switch-height;
-        box-sizing: border-box;
-        color: $gray-medium;
-        transition: all 0.5s;
+    &.small {
+        @include ps-switch(20px, 40px, -2px, 16px);
     }
 
-    > input {
-        display: none;
-    }
-
-    &:after {
-        @extend .material-icons;
-        content: 'close';
-        height: $switch-height + (2 * $switch-margin);
-        width: $switch-height + (2 * $switch-margin);
-        position: absolute;
-        top: -($switch-margin + 2px);
-        left: -($switch-margin + 2px);
-        transform: rotate(-180deg);
-        padding: 3px 0 0 3px;
-        font-size: 24px;
-    }
-
-    &.-checked {
-        background: $primary;
-
-        &:after {
-            content: 'check';
-            left: $switch-width - ($switch-margin + $switch-height);
-            color: $primary;
-            transform: rotate(0deg);
-        }
+    &.tiny {
+        @include ps-switch(16px, 28px, -1px, 12px);
     }
 }
 

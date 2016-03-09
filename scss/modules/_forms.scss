@@ -19,6 +19,13 @@
 //
 // Styleguide 4.1
 
+.form-group {
+    .form-control-label {
+        color: $gray-medium;
+        padding-left: 0;
+    }
+}
+
 .form-control {
     @include placeholder {
         font-style: $input-font-style;
@@ -47,6 +54,9 @@
         @include ps-form-control-focus($brand-success, $brand-success);
         background-image: url($form-icon-success);
     }
+    .form-control-label {
+        color: $brand-success;
+    }
 }
 
 .has-warning {
@@ -54,12 +64,18 @@
         @include ps-form-control-focus($brand-warning, $brand-warning);
         background-image: url($form-icon-warning);
     }
+    .form-control-label {
+        color: $brand-warning;
+    }
 }
 
 .has-danger {
     .form-control-danger {
         @include ps-form-control-focus($brand-danger, $brand-danger);
         background-image: url($form-icon-danger);
+    }
+    .form-control-label {
+        color: $brand-danger;
     }
 }
 

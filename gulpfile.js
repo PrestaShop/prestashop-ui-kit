@@ -33,7 +33,6 @@ var config         = {
 var jsfiles = [
     // Vendors js
     config.nodeModulesDir + '/bootstrap/dist/js/bootstrap.min.js',
-    config.nodeModulesDir + '/bootstrap-switch/dist/js/bootstrap-switch.min.js',
     config.nodeModulesDir + '/tether/dist/js/tether.min.js',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.min.js',
     config.nodeModulesDir + '/jquery.growl/javascripts/jquery.growl.js',
@@ -46,7 +45,6 @@ var jsfiles = [
 // List Dependencies CSS
 var cssfiles = [
     config.nodeModulesDir + '/material-design-iconic-font/dist/css/material-design-iconic-font.min.css',
-    config.nodeModulesDir + '/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css',
     config.nodeModulesDir + '/pstagger/jquery.pstagger.css',
     config.nodeModulesDir + '/jquery.growl/stylesheets/jquery.growl.css',
 ];

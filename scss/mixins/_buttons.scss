@@ -55,3 +55,62 @@
         border-color: lighten($btn-primary-bg, 8%);
     }
 }
+
+// Switch
+//
+// Help creates the differents switchs sizes
+
+@mixin ps-switch($height, $width, $margin, $icon-size, $align-margin: 2px) {
+    height: $height;
+    width: $width;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    @if $margin < 0 {
+        margin: -$align-margin 2px - $margin 0 0;
+    }
+    @else {
+        margin: -$align-margin 2px 0 0;
+    }
+
+    &, &:after {
+        background: $white;
+        border: 2px solid $gray-light;
+        border-radius: $height;
+        box-sizing: border-box;
+        color: $gray-medium;
+        transition: all 0.5s;
+    }
+
+    > input {
+        display: none;
+    }
+
+    &:after {
+        @extend .material-icons;
+        display: block;
+        content: 'close';
+        height: $height + (2 * -$margin);
+        width: $height + (2 * -$margin);
+        position: absolute;
+        top: $margin - 2px;
+        left: $margin - 2px;
+        transform: rotate(-180deg);
+        line-height: $height - (2 * $margin) - 4px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: $icon-size;
+    }
+
+    &.-checked {
+        background: $primary;
+
+        &:after {
+            content: 'check';
+            left: $width - $height - 2px + $margin;
+            color: $primary;
+            transform: rotate(0deg);
+        }
+    }
+}

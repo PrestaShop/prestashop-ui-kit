@@ -4,6 +4,14 @@
  * Copy License
  */
 
+$.propHooks.checked = {
+    set: function(elem, value, name) {
+        var ret = (elem[ name ] = value);
+        $(elem).trigger("change");
+        return ret;
+    }
+};
+
 $(function () {
 
     // Select2
@@ -53,10 +61,24 @@ $(function () {
         $(this).select2(newObj);
     });
 
-    // Enable Switch Button everywhere
-    $('[data-toggle="switch"]').bootstrapSwitch({
-        onText: '<i class="material-icons">check</i>',
-        offText: '<i class="material-icons">close</i>'
+    $('[data-toggle="switch"]').each(function() {
+        var checkbox = $(this);
+        var baseClass = checkbox.prop('checked') ? '-checked' : '';
+
+        checkbox.wrap('<div class="switch-input '+baseClass+'"></div>');
+        var parent = checkbox.parent();
+        parent.addClass(checkbox.attr("class"));
+
+        checkbox.on('change', function() {
+            parent.toggleClass('-checked', checkbox.prop('checked'));
+        });
+
+        parent.click(function() {
+            if (event.srcElement == parent[0]) {
+                checkbox.prop('checked', !checkbox.prop('checked'));
+                return false;
+            }
+        });
     });
 
     // Error tooltips template

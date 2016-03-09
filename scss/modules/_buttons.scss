@@ -98,7 +98,6 @@
 //
 // .btn-lg      - Large Button.
 // .btn-sm      - Small Button.
-// .btn-xs      - Extra Small Button.
 // .btn-block   - Block Button.
 //
 // Markup:
@@ -120,22 +119,9 @@
     }
 }
 
-.btn-xs {
-    padding: .65em .65em;
-    gfont-size: .65em;
-    font-weight: 600;
-    &.disabled,
-    &:disabled {
-        cursor: $cursor-disabled;
-        opacity: .65;
-        @include box-shadow(none);
-    }
-}
-
 .btn-sm {
-    padding: .65em 1em;
-    font-size: .75em;
-    font-weight: 600;
+    padding: rem(4px) rem(8px);
+    font-size: rem(8px);
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;
@@ -146,8 +132,7 @@
 
 .btn-lg {
     padding: 1.25em 1.5em;
-    font-size: .75em;
-    font-weight: 800;
+    font-size: rem(12px);
     &.disabled,
     &:disabled {
         cursor: $cursor-disabled;
@@ -167,18 +152,27 @@
 
 // Switch Button
 //
-// **[bootstrap-switch](http://www.bootstrap-switch.org/)**
-// ```
-// [...]
-//      <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
-//      <script src="js/bootstrap-switch.min.js"></script>
-// [...]
-// ```
+// There are multiple sizes.
+//
+// .small - Small switch
+// .tiny - Tiny switch (Usefull for inline)
 //
 // Markup:
-// <input data-toggle="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked>
+// <label for="switch{{modifier_class}}"><input data-toggle="switch" class="{{modifier_class}}" id="switch{{modifier_class}}" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
 //
 // Styleguide 3.6
+
+.switch-input {
+    @include ps-switch(30px, 60px, -3px, 24px);
+
+    &.small {
+        @include ps-switch(20px, 40px, -2px, 16px);
+    }
+
+    &.tiny {
+        @include ps-switch(16px, 28px, -1px, 12px);
+    }
+}
 
 // Examples Buttons
 //

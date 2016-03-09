@@ -9,7 +9,6 @@
 
         <link rel="stylesheet" href="css/kss.css" />
         <link rel="stylesheet" href="css/jquery.growl.css"/>
-        <link rel="stylesheet" href="css/bootstrap-switch.min.css"/>
 
         <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
         
@@ -25,7 +24,6 @@
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/select2.min.js"></script>
-        <script src="js/bootstrap-switch.min.js"></script>
 
         <script src="js/prestashop-ui-kit.js"></script>
         
@@ -169,18 +167,6 @@
                             </div>
                             <div class="kss-modifier">
                                 <div class="kss-modifier-head">
-                                    <div class="kss-modifier-name">.btn-xs</div>
-                                    <div class="kss-modifier-description">
-                                        Extra Small Button.
-                                    </div>
-                                </div>
-                                <div class="kss-modifier-example">
-                                    <button type="button" class="btn btn-primary btn-xs">Primary Button</button>
-<button type="button" class="btn btn-primary-outline btn-xs">Primary Button</button>
-                                </div>
-                            </div>
-                            <div class="kss-modifier">
-                                <div class="kss-modifier-head">
                                     <div class="kss-modifier-name">.btn-block</div>
                                     <div class="kss-modifier-description">
                                         Block Button.
@@ -221,22 +207,40 @@
                     <section id="section-3.6" class="kss-section kss-depth-2">
                         <h1 class="kss-title"><span class="kss-ref">3.6</span> Switch Button</h1>
                         <div class="kss-description">
-                            <p><strong><a href="http://www.bootstrap-switch.org/">bootstrap-switch</a></strong></p>
-<pre><code>[...]
-     &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap-prestashop-ui-kit.css&quot;/&gt;
-     &lt;script src=&quot;js/bootstrap-switch.min.js&quot;&gt;&lt;/script&gt;
-[...]
-</code></pre>
+                            <p>There are multiple sizes.</p>
+
                         </div>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                    <input data-toggle="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked>
+                                    <label for="switch"><input data-toggle="switch" class="" id="switch" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
+                                </div>
+                            </div>
+                            <div class="kss-modifier">
+                                <div class="kss-modifier-head">
+                                    <div class="kss-modifier-name">.small</div>
+                                    <div class="kss-modifier-description">
+                                        Small switch
+                                    </div>
+                                </div>
+                                <div class="kss-modifier-example">
+                                    <label for="switchsmall"><input data-toggle="switch" class="small" id="switchsmall" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
+                                </div>
+                            </div>
+                            <div class="kss-modifier">
+                                <div class="kss-modifier-head">
+                                    <div class="kss-modifier-name">.tiny</div>
+                                    <div class="kss-modifier-description">
+                                        Tiny switch (Usefull for inline)
+                                    </div>
+                                </div>
+                                <div class="kss-modifier-example">
+                                    <label for="switchtiny"><input data-toggle="switch" class="tiny" id="switchtiny" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
                                 </div>
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;input data-toggle=&quot;switch&quot; data-inverse=&quot;true&quot; type=&quot;checkbox&quot; name=&quot;my-checkbox&quot; checked&gt;</code></pre>
+                                <pre><code class="lang-html">&lt;label for=&quot;switch&quot;&gt;&lt;input data-toggle=&quot;switch&quot; class=&quot;&quot; id=&quot;switch&quot; data-inverse=&quot;true&quot; type=&quot;checkbox&quot; name=&quot;my-checkbox&quot; checked&gt; I love cats.&lt;/label&gt;</code></pre>
                             </div>
 
                         </div>

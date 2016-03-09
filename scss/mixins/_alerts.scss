@@ -30,20 +30,25 @@
 
     .growl-message:before {        
         font-family: 'Material Icons';
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 400;
         display: block;
         content: $icon;
         float: left;
-        margin: 0 12px 0 0;
+        margin: 0 12px 0 -40px;
     }
 
     .growl-message {
-        font-weight: 600;
+        display: block;
+        margin-right: 50px;
+        margin-left: 40px;
         color: $white;
     }
 
     .growl-close {
+        position: absolute;
+        top: 14px;
+        right: 10px;
         font-size: 24px;
         color: $white;
     }

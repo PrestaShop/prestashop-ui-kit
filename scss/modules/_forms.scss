@@ -22,7 +22,7 @@
 .form-group {
     .form-control-label {
         color: $gray-medium;
-        padding-left: 0;
+        padding: 0 0 $input-padding-y 0;
     }
 }
 
@@ -543,4 +543,30 @@
 
 .form-inline .select2-container--prestakit {
     display: inline-block;
+}
+
+//
+// Help boxes
+//
+
+$help-box-size: 16px;
+
+.help-box {
+    display: inline-block;
+    box-sizing: border-box;
+    color: $primary-hover;
+    background-color: $notice;
+    height: $help-box-size;
+    width: $help-box-size;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid $brand-primary;
+    border-radius: ($border-radius / 2);
+
+    &:after {
+        content: '?'
+    }
 }

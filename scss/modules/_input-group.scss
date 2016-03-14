@@ -33,6 +33,9 @@
 // Styleguide 5.1
 
 .input-group {
+  .input-group-addon {
+    color: $input-group-addon-color;
+  }
   .form-control:not(:first-child) {
     border-left: none;
   }

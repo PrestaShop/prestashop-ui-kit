@@ -63,22 +63,26 @@ $(function () {
 
     $('[data-toggle="switch"]').each(function() {
         var checkbox = $(this);
-        var baseClass = checkbox.prop('checked') ? '-checked' : '';
+        if (checkbox.data('activated') == undefined) {
+            checkbox.data('activated', true);
 
-        checkbox.wrap('<div class="switch-input '+baseClass+'"></div>');
-        var parent = checkbox.parent();
-        parent.addClass(checkbox.attr("class"));
+            var baseClass = checkbox.prop('checked') ? '-checked' : '';
 
-        checkbox.on('change', function() {
-            parent.toggleClass('-checked', checkbox.prop('checked'));
-        });
+            checkbox.wrap('<div class="switch-input '+baseClass+'"></div>');
+            var parent = checkbox.parent();
+            parent.addClass(checkbox.attr("class"));
 
-        parent.click(function() {
-            if (event.srcElement == parent[0]) {
-                checkbox.prop('checked', !checkbox.prop('checked'));
-                return false;
-            }
-        });
+            checkbox.on('change', function() {
+                parent.toggleClass('-checked', checkbox.prop('checked'));
+            });
+
+            parent.click(function(event) {
+                if (event.srcElement == parent[0] || event.srcElement == undefined) {
+                    checkbox.prop('checked', !checkbox.prop('checked'));
+                    return false;
+                }
+            });
+        }
     });
 
     // Error tooltips template

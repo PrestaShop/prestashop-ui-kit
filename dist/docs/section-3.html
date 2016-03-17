@@ -62,9 +62,10 @@
                             <li class="kss-menu-item"><a href="#section-3.1"><span class="kss-ref">3.1</span><span class="kss-name">Base styles</span></a></li>
                             <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">Outline Styles</span></a></li>
                             <li class="kss-menu-item"><a href="#section-3.4"><span class="kss-ref">3.4</span><span class="kss-name">Sizes</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-3.5"><span class="kss-ref">3.5</span><span class="kss-name">States</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-3.6"><span class="kss-ref">3.6</span><span class="kss-name">Switch Button</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-3.7"><span class="kss-ref">3.7</span><span class="kss-name">Examples Buttons</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-3.5"><span class="kss-ref">3.5</span><span class="kss-name">Action button</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-3.6"><span class="kss-ref">3.6</span><span class="kss-name">States</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-3.7"><span class="kss-ref">3.7</span><span class="kss-name">Switch Button</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-3.8"><span class="kss-ref">3.8</span><span class="kss-name">Examples Buttons</span></a></li>
                         </ul>
                     </nav>
 
@@ -89,6 +90,7 @@
 <button type="button" class="btn btn-success">Success</button>
 <button type="button" class="btn btn-warning">Warning</button>
 <button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-invisible"><i class="material-icons">cake</i> The cake is a lie</button>
                                 </div>
                             </div>
 
@@ -98,7 +100,8 @@
 &lt;button type=&quot;button&quot; class=&quot;btn btn-tertiary&quot;&gt;Tertiary&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;</code></pre>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-invisible&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;cake&lt;/i&gt; The cake is a lie&lt;/button&gt;</code></pre>
                             </div>
 
                         </div>
@@ -186,7 +189,22 @@
                         </div>
                     </section>
                     <section id="section-3.5" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">3.5</span> States</h1>
+                        <h1 class="kss-title"><span class="kss-ref">3.5</span> Action button</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <button type="button" class="btn btn-action"><i class="material-icons">add</i>Button</button>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-action&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;add&lt;/i&gt;Button&lt;/button&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-3.6" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">3.6</span> States</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
@@ -204,8 +222,8 @@
 
                         </div>
                     </section>
-                    <section id="section-3.6" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">3.6</span> Switch Button</h1>
+                    <section id="section-3.7" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">3.7</span> Switch Button</h1>
                         <div class="kss-description">
                             <p>There are multiple sizes.</p>
 
@@ -245,23 +263,23 @@
 
                         </div>
                     </section>
-                    <section id="section-3.7" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">3.7</span> Examples Buttons</h1>
+                    <section id="section-3.8" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">3.8</span> Examples Buttons</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
-                                    <button type="button" class="btn btn-primary-outline sensitive"><i class="material-icons btn-icon">add_circle</i>Add a new feature</button>
-<a href="#" class="btn sensitive"><i class="material-icons btn-icon">open_in_new</i>Create a new warehouse</a>
-<button type="button" class="btn btn-tertiary-outline sensitive"><i class="material-icons btn-icon">visibility</i>Show disabled modules</button>
-<button type="button" class="btn btn-tertiary-outline sensitive">Show disabled modules<i class="material-icons btn-icon-right">visibility</i></button>
+                                    <button type="button" class="btn btn-primary-outline sensitive"><i class="material-icons">add_circle</i> Add a new feature</button>
+<a href="#" class="btn sensitive"><i class="material-icons">open_in_new</i> Create a new warehouse</a>
+<button type="button" class="btn btn-tertiary-outline sensitive"><i class="material-icons">visibility</i> Show disabled modules</button>
+<button type="button" class="btn btn-tertiary-outline sensitive">Show disabled modules <i class="material-icons">visibility</i></button>
                                 </div>
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline sensitive&quot;&gt;&lt;i class=&quot;material-icons btn-icon&quot;&gt;add_circle&lt;/i&gt;Add a new feature&lt;/button&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn sensitive&quot;&gt;&lt;i class=&quot;material-icons btn-icon&quot;&gt;open_in_new&lt;/i&gt;Create a new warehouse&lt;/a&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-tertiary-outline sensitive&quot;&gt;&lt;i class=&quot;material-icons btn-icon&quot;&gt;visibility&lt;/i&gt;Show disabled modules&lt;/button&gt;
-&lt;button type=&quot;button&quot; class=&quot;btn btn-tertiary-outline sensitive&quot;&gt;Show disabled modules&lt;i class=&quot;material-icons btn-icon-right&quot;&gt;visibility&lt;/i&gt;&lt;/button&gt;</code></pre>
+                                <pre><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline sensitive&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;add_circle&lt;/i&gt; Add a new feature&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn sensitive&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt; Create a new warehouse&lt;/a&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-tertiary-outline sensitive&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;visibility&lt;/i&gt; Show disabled modules&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-tertiary-outline sensitive&quot;&gt;Show disabled modules &lt;i class=&quot;material-icons&quot;&gt;visibility&lt;/i&gt;&lt;/button&gt;</code></pre>
                             </div>
 
                         </div>

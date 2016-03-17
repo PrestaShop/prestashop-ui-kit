@@ -32,6 +32,18 @@
 //
 // Styleguide 5.1
 
+.input-group {
+  .input-group-addon {
+    color: $input-group-addon-color;
+  }
+  .form-control:not(:first-child) {
+    border-left: none;
+  }
+  .form-control:not(:last-child) {
+    border-right: none;
+  }
+}
+
 // Seach Form
 //
 // Markup:
@@ -42,48 +54,48 @@
 // Styleguide 5.2
 
 .form-search[type=search] {
-	  background: $white url($search-icon) center no-repeat;
-	  border: solid 1px #ccc;
-	  width: 16px;
-    cursor: pointer;
-	  text-indent: 2.5rem;
+  background: $white url($search-icon) center no-repeat;
+  border: solid 1px #ccc;
+  width: 16px;
+  cursor: pointer;
+  text-indent: 2.5rem;
 
-	  -webkit-appearance: textfield;
-	  -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-	  box-sizing: content-box;
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 
-	  -webkit-border-radius: 10em;
-	  -moz-border-radius: 10em;
-	  border-radius: 10em;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
 
-	  -webkit-transition: all .5s;
-	  -moz-transition: all .5s;
-	  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
 
-    &:hover {
-        border-color: $primary;
-    }
+  &:hover {
+    border-color: $primary;
+  }
 
-    &:focus {
-        background: $white url($search-icon) 95% no-repeat;
-        border-color: $primary;
-	      width: 250px;
-        cursor: auto;
-	      text-indent: 0;
-			  
-	      -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	      -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	      box-shadow: 0 0 5px rgba(109,207,246,.5);
+  &:focus {
+    background: $white url($search-icon) 95% no-repeat;
+    border-color: $primary;
+    width: 250px;
+    cursor: auto;
+    text-indent: 0;
 
-    }
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+
+  }
 }
 
 .form-search::-moz-placeholder {
-	  color: #999;
-    color: transparent;
+  color: #999;
+  color: transparent;
 }
 .form-search::-webkit-input-placeholder {
-	  color: #999;
-	  color: transparent;
+  color: #999;
+  color: transparent;
 }

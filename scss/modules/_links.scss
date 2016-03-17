@@ -1,3 +1,23 @@
 // Links
 //
 //
+
+.external-link {
+  &:after {
+    font-family: 'Material Icons';
+    content: 'launch';
+    -webkit-font-feature-settings: 'liga';
+    font-size: rem(20px);
+    margin-left: rem(3px);
+    vertical-align: rem(-4px);
+  }
+}
+
+.small {
+  .external-link {
+    &:after {
+      font-size: rem(16px);
+      margin-left: rem(2px);
+    }
+  }
+}

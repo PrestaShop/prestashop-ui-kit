@@ -11,6 +11,7 @@
 // <button type="button" class="btn btn-success">Success</button>
 // <button type="button" class="btn btn-warning">Warning</button>
 // <button type="button" class="btn btn-danger">Danger</button>
+// <button type="button" class="btn btn-invisible"><i class="material-icons">cake</i> The cake is a lie</button>
 //
 // Styleguide 3.1
 
@@ -34,6 +35,9 @@
 }
 .btn-danger {
     @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $danger-hover);
+}
+.btn-invisible {
+    @include ps-button-variant($gray-medium, rgba($white, 0), rgba($gray-light, 0), $gray-light);
 }
 
 // Outline Styles
@@ -141,6 +145,29 @@
     }
 }
 
+// Action button
+//
+// Markup:
+// <button type="button" class="btn btn-action"><i class="material-icons">add</i>Button</button>
+//
+// Styleguide 3.5
+
+.btn-action {
+    @include ps-button-outline-variant($gray-light, $gray-light);
+    color: $primary;
+
+    > .material-icons {
+        color: $primary;
+    }
+
+    &:hover {
+        color: $primary-hover;
+        > .material-icons {
+            color: $primary-hover;
+        }
+    }
+}
+
 // States
 //
 // Markup:
@@ -148,7 +175,7 @@
 // <button type="button" class="btn btn-primary active">Button</button>
 // <button type="button" class="btn" disabled>Button</button>
 //
-// Styleguide 3.5
+// Styleguide 3.6
 
 // Switch Button
 //
@@ -160,7 +187,7 @@
 // Markup:
 // <label for="switch{{modifier_class}}"><input data-toggle="switch" class="{{modifier_class}}" id="switch{{modifier_class}}" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
 //
-// Styleguide 3.6
+// Styleguide 3.7
 
 .switch-input {
     @include ps-switch(30px, 60px, -3px, 24px);
@@ -177,20 +204,17 @@
 // Examples Buttons
 //
 // Markup:
-// <button type="button" class="btn btn-primary-outline sensitive"><i class="material-icons btn-icon">add_circle</i>Add a new feature</button>
-// <a href="#" class="btn sensitive"><i class="material-icons btn-icon">open_in_new</i>Create a new warehouse</a>
-// <button type="button" class="btn btn-tertiary-outline sensitive"><i class="material-icons btn-icon">visibility</i>Show disabled modules</button>
-// <button type="button" class="btn btn-tertiary-outline sensitive">Show disabled modules<i class="material-icons btn-icon-right">visibility</i></button>
+// <button type="button" class="btn btn-primary-outline sensitive"><i class="material-icons">add_circle</i> Add a new feature</button>
+// <a href="#" class="btn sensitive"><i class="material-icons">open_in_new</i> Create a new warehouse</a>
+// <button type="button" class="btn btn-tertiary-outline sensitive"><i class="material-icons">visibility</i> Show disabled modules</button>
+// <button type="button" class="btn btn-tertiary-outline sensitive">Show disabled modules <i class="material-icons">visibility</i></button>
 //
-// Styleguide 3.7
+// Styleguide 3.8
 
-.btn-icon {
-    font-size: 22px;
-    vertical-align: -7px;
-    margin: 0 7px 0 0;
-    &-right {
-        font-size: 22px;
-        vertical-align: -7px;
-        margin: 0 0 0 7px;
+.btn {
+    > .material-icons {
+        font-size: rem(20px);
+        vertical-align: rem(-6px);
+        margin: rem(-4px) 0;
     }
 }

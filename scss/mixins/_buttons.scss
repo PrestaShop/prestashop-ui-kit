@@ -23,7 +23,7 @@
 
 @mixin ps-button-outline-variant($btn-primary-bg, $hover) {
     @include button-outline-variant($btn-primary-bg);
-    border: 0.15em solid $btn-primary-bg;
+    border: rem(2px) solid $btn-primary-bg;
     @include hover {
         color: $hover;
         background-color: #fff;

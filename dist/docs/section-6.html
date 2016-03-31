@@ -44,7 +44,7 @@
                             <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Buttons</span></a></li>
                             <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Forms</span></a></li>
                             <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Input groups</span></a></li>
-                            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdown</span></a></li>
+                            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdowns</span></a></li>
                             <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Alerts</span></a></li>
                             <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Pagination</span></a></li>
                             <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Modals</span></a></li>
@@ -59,6 +59,8 @@
                             <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Progress bar</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
+                            <li class="kss-menu-item"><a href="#section-6.1"><span class="kss-ref">6.1</span><span class="kss-name">Dropdown 1</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-6.2"><span class="kss-ref">6.2</span><span class="kss-name">Dropdown 2</span></a></li>
                         </ul>
                     </nav>
 
@@ -68,7 +70,12 @@
 
                 <article class="kss-article">
                     <section id="section-6" class="kss-section kss-depth-1">
-                        <h1 class="kss-title"><span class="kss-ref">6</span> Dropdown</h1>
+                        <h1 class="kss-title"><span class="kss-ref">6</span> Dropdowns</h1>
+
+
+                    </section>
+                    <section id="section-6.1" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">6.1</span> Dropdown 1</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
@@ -112,6 +119,69 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-6.2" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">6.2</span> Dropdown 2</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div class="ps-dropdown dropdown open">
+  <span type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="js-selected-item selected-item">Categories</span> <i class="material-icons arrow-down">keyboard_arrow_down</i>
+  </span>
+  <div class="ps-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu1">
+    <ul class="items-list js-items-list">
+     <li><a class="dropdown-item" data-item="All">All<span class="pull-right">210</span></a></li>
+     <li><a class="dropdown-item" data-item="Category">Category<span class="pull-right">210</span></a></li>
+     <li><a class="dropdown-item" data-item="Category 2">Category 2<span class="pull-right">210</span></a></li>
+     <li><a class="dropdown-item" data-item="Category 3">Category 3<span class="pull-right">210</span></a></li>
+     <li><a class="dropdown-item" data-item="Category 4">Category 4<span class="pull-right">210</span></a></li>
+     <li><a class="dropdown-item" data-item="Category 5">Category 5<span class="pull-right">210</span></a></li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('.js-items-list').on('click',function (e) {
+    $('.selected').removeClass('selected');
+    $('.js-selected-item').text($(e.target).data('item'));
+    $(e.target).addClass('selected');
+    e.stopPropagation();
+  });
+});
+</script>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div class=&quot;ps-dropdown dropdown open&quot;&gt;
+  &lt;span type=&quot;button&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;span class=&quot;js-selected-item selected-item&quot;&gt;Categories&lt;/span&gt; &lt;i class=&quot;material-icons arrow-down&quot;&gt;keyboard_arrow_down&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;div class=&quot;ps-dropdown-menu dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+    &lt;ul class=&quot;items-list js-items-list&quot;&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;All&quot;&gt;All&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;Category&quot;&gt;Category&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;Category 2&quot;&gt;Category 2&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;Category 3&quot;&gt;Category 3&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;Category 4&quot;&gt;Category 4&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; data-item=&quot;Category 5&quot;&gt;Category 5&lt;span class=&quot;pull-right&quot;&gt;210&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ $(document).ready(function(){
+  $(&#x27;.js-items-list&#x27;).on(&#x27;click&#x27;,function (e) {
+    $(&#x27;.selected&#x27;).removeClass(&#x27;selected&#x27;);
+    $(&#x27;.js-selected-item&#x27;).text($(e.target).data(&#x27;item&#x27;));
+    $(e.target).addClass(&#x27;selected&#x27;);
+    e.stopPropagation();
+  });
+});
+&lt;/script&gt;</code></pre>
                             </div>
 
                         </div>

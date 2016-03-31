@@ -1,4 +1,9 @@
-// Dropdown
+// Dropdowns
+//
+// Styleguide 6
+
+// Dropdown 1
+//
 //
 // Markup:
 // <div class="dropdown">
@@ -8,7 +13,7 @@
 //    <a class="dropdown-item" href="#">Something else here</a>
 //  </div>
 //</div>
-// Markup: 
+// Markup:
 // <div class="dropdown open">
 //  <button class="btn btn-tertiary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-// haspopup="true" aria-expanded="false">
 //    Dropdown
@@ -21,4 +26,100 @@
 //</div>
 // <br/><br/><br/>
 //
-// Styleguide 6
+// Styleguide 6.1
+
+//
+// Dropdown 2
+//
+//
+// Markup:
+// <div class="ps-dropdown dropdown open">
+//   <span type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//     <span class="js-selected-item selected-item">Categories</span> <i class="material-icons arrow-down">keyboard_arrow_down</i>
+//   </span>
+//   <div class="ps-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu1">
+//     <ul class="items-list js-items-list">
+//      <li><a class="dropdown-item" data-item="All">All<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category">Category<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 2">Category 2<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 3">Category 3<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 4">Category 4<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 5">Category 5<span class="pull-right">210</span></a></li>
+//     </ul>
+//   </div>
+// </div>
+// <script type="text/javascript">
+//  $(document).ready(function(){
+//   $('.js-items-list').on('click',function (e) {
+//     $('.selected').removeClass('selected');
+//     $('.js-selected-item').text($(e.target).data('item'));
+//     $(e.target).addClass('selected');
+//     e.stopPropagation();
+//   });
+// });
+// </script>
+//
+// Styleguide 6.2
+
+.ps-dropdown{
+  font-size: em(18px);
+  .arrow-down{
+    font-size: em(25px);
+    top: em(6px);
+    left: em(6px);
+    position: relative;
+    cursor: pointer;
+  }
+  > .ps-dropdown-menu{
+    min-width: 220px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+    &:before {
+      position: absolute;
+      top: -7px;
+      left: 99px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: -6px;
+      left: 100px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+      content: '';
+    }
+
+    .dropdown-item{
+      cursor: pointer;
+    }
+    .items-list{
+      list-style-type: none;
+      padding: 0;
+      .dropdown-item{
+        margin: em(10px) 0;
+        &.selected{
+          color: $gray-light;
+        }
+        &.selected span{
+          color: $gray-light;
+          border-color: $gray-light;
+        }
+        span{
+          color:$brand-info;
+          border:$brand-info 1px solid;
+          font-size: em(12px);
+          padding: em(4px);
+          border-radius: em(2px);
+        }
+      }
+    }
+  }
+}

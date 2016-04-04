@@ -7076,6 +7076,56 @@ xs, .xs, .xsmall, xsmall {
   color: #999;
   color: transparent; }
 
+.ps-dropdown {
+  font-size: 1.125em; }
+  .ps-dropdown .arrow-down {
+    font-size: 1.5625em;
+    top: 0.375em;
+    left: 0.375em;
+    position: relative;
+    cursor: pointer; }
+  .ps-dropdown > .ps-dropdown-menu {
+    min-width: 220px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+    .ps-dropdown > .ps-dropdown-menu:before {
+      position: absolute;
+      top: -7px;
+      left: 99px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: ''; }
+    .ps-dropdown > .ps-dropdown-menu:after {
+      position: absolute;
+      top: -6px;
+      left: 100px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+      content: ''; }
+    .ps-dropdown > .ps-dropdown-menu .dropdown-item {
+      cursor: pointer; }
+    .ps-dropdown > .ps-dropdown-menu .items-list {
+      list-style-type: none;
+      padding: 0; }
+      .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item {
+        margin: 0.625em 0; }
+        .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item.selected {
+          color: #BBCDD2; }
+        .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item.selected span {
+          color: #BBCDD2;
+          border-color: #BBCDD2; }
+        .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item span {
+          color: #5bc0de;
+          border: #5bc0de 1px solid;
+          font-size: 0.75em;
+          padding: 0.25em;
+          border-radius: 0.125em; }
+
 .alert {
   position: relative; }
 

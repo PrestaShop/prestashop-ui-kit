@@ -6524,6 +6524,8 @@ xs, .xs, .xsmall, xsmall {
     box-sizing: border-box;
     color: #6C868E;
     transition: all 0.5s; }
+  .switch-input {
+    background: #FFBB00; }
   .switch-input > input {
     display: none; }
   .switch-input:after {
@@ -6561,6 +6563,8 @@ xs, .xs, .xsmall, xsmall {
       box-sizing: border-box;
       color: #6C868E;
       transition: all 0.5s; }
+    .switch-input.small {
+      background: #FFBB00; }
     .switch-input.small > input {
       display: none; }
     .switch-input.small:after {
@@ -6598,6 +6602,8 @@ xs, .xs, .xsmall, xsmall {
       box-sizing: border-box;
       color: #6C868E;
       transition: all 0.5s; }
+    .switch-input.tiny {
+      background: #FFBB00; }
     .switch-input.tiny > input {
       display: none; }
     .switch-input.tiny:after {

@@ -82,6 +82,9 @@
         color: $gray-medium;
         transition: all 0.5s;
     }
+    &{
+      background: $secondary;
+    }
 
     > input {
         display: none;

@@ -6655,6 +6655,12 @@ xs, .xs, .xsmall, xsmall {
     outline: none;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #3ED2F0; }
 
+.edit {
+  background: url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNmM4NjhlIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTMgMTcuMjVWMjFoMy43NUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMyAxNy4yNXpNMjAuNzEgNy4wNGMuMzktLjM5LjM5LTEuMDIgMC0xLjQxbC0yLjM0LTIuMzRjLS4zOS0uMzktMS4wMi0uMzktMS40MSAwbC0xLjgzIDEuODMgMy43NSAzLjc1IDEuODMtMS44M3oiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==") no-repeat;
+  background-size: contain;
+  background-size: 2%;
+  background-position: right 0.625rem center; }
+
 .has-success .form-control-success {
   background-image: url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzhEMDdEIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40TDkgMTYuMnoiLz4NCjwvc3ZnPg=="); }
   .has-success .form-control-success:focus {

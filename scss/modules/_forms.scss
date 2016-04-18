@@ -16,6 +16,11 @@
 // <label class="form-control-label" for="exampleInput2">Input - Placeholder</label>
 //  <input type="text" class="form-control" placeholder="Wake me up!"></input>
 // </fieldset>
+// Markup:
+// <fieldset class="form-group">
+// <label class="form-control-label" for="exampleInput3">Input - edit</label>
+//  <input type="text" class="form-control edit"></input>
+// </fieldset>
 //
 // Styleguide 4.1
 
@@ -33,6 +38,13 @@
     }
     @include border-radius($border-radius);
     @include ps-form-control-focus($primary-hover, $primary-hover);
+}
+
+.edit {
+  background: url($edit-icon) no-repeat;
+  background-size: contain;
+  background-size: 2%;
+  background-position: right rem(10px) center;
 }
 
 // Form validation states
@@ -338,9 +350,9 @@
     /* select2 single selection */
     .select2-selection--single {
         height: $input-height;
-        line-height: $line-height;        
+        line-height: $line-height;
         padding: $input-padding-y $input-padding-x + $caret-width * 3 $input-padding-y $input-padding-x;
-        
+
         /**
          * Adjust the single Select2's dropdown arrow button appearance.
          */
@@ -483,7 +495,7 @@
             }
         }
 
-        
+
         /**
          * Multiple Select2
          */

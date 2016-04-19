@@ -199,7 +199,7 @@ $nav-tabs-link-border-width:                  0;
 $nav-tabs-active-link-hover-bg:               $body-bg;
 $nav-tabs-unactive-link-hover-bg:             inherit;
 
-$nav-tabs-active-link-hover-font-weight:      $font-weight-normal;
+$nav-tabs-active-link-hover-font-weight:      $font-weight-semibold;
 $nav-tabs-unactive-link-hover-font-weight:    $font-weight-normal;
 
 $nav-tabs-active-link-hover-color:            $gray-dark;
@@ -213,6 +213,7 @@ $nav-pills-border-radius:                     0;
 // Tab content
 $nav-tab-content-bg:                          $body-bg;
 $nav-tab-content-padding:                     20px; /* TODO change padding */
+$nav-tab-content-border-color:               #c7d6db;
 
 // Navbar
 $navbar-border-radius:                        0;

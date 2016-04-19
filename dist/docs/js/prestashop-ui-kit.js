@@ -40,26 +40,28 @@ $(function () {
         return $res;
     }
 
-    // Enable Select2 everywhere
-    //
-    // TODO Add templateResult
-    $('[data-toggle="select2"]').each(function () {
+    function enableSelect2 () {
+      // Enable Select2 everywhere
+      //
+      // TODO Add templateResult
+      $('[data-toggle="select2"]').each(function () {
 
-        var newObj = {"minimumResultsForSearch": -1};
+          var newObj = {"minimumResultsForSearch": -1};
 
-        for (var attr in $(this).data()) {
-            if (!attr.localeCompare("templateresult"))
-                newObj["templateResult"] = eval($(this).data()[attr]);
-            else if (!attr.localeCompare("templateselection"))
-                newObj["templateSelection"] = eval($(this).data()[attr]);
-            else if (!attr.localeCompare("minimumresultsforsearch"))
-                newObj["minimumResultsForSearch"] = $(this).data()[attr];
-            else if (attr.localeCompare("toggle"))
-                newObj[attr] = $(this).data()[attr];
-        }
+          for (var attr in $(this).data()) {
+              if (!attr.localeCompare("templateresult"))
+                  newObj["templateResult"] = eval($(this).data()[attr]);
+              else if (!attr.localeCompare("templateselection"))
+                  newObj["templateSelection"] = eval($(this).data()[attr]);
+              else if (!attr.localeCompare("minimumresultsforsearch"))
+                  newObj["minimumResultsForSearch"] = $(this).data()[attr];
+              else if (attr.localeCompare("toggle"))
+                  newObj[attr] = $(this).data()[attr];
+          }
 
-        $(this).select2(newObj);
-    });
+          $(this).select2(newObj);
+      });
+    }
 
     $('[data-toggle="switch"]').each(function() {
         var checkbox = $(this);
@@ -226,4 +228,6 @@ $(function () {
             $(this).next('div').slideToggle(400);
         });
     });
+
+    enableSelect2();
 });

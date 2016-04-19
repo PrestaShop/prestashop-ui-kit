@@ -101,6 +101,9 @@ $tooltip-bg:                                  $gray-medium;
 /// Fonts
 $font-size-root:                              16px;
 
+/// Borders
+$primary-border-color:                        #c7d6db;
+
 // Fonts weight
 $font-weight-normal:                          400;
 $font-weight-semibold:                        600;
@@ -199,7 +202,7 @@ $nav-tabs-link-border-width:                  0;
 $nav-tabs-active-link-hover-bg:               $body-bg;
 $nav-tabs-unactive-link-hover-bg:             inherit;
 
-$nav-tabs-active-link-hover-font-weight:      $font-weight-normal;
+$nav-tabs-active-link-hover-font-weight:      $font-weight-semibold;
 $nav-tabs-unactive-link-hover-font-weight:    $font-weight-normal;
 
 $nav-tabs-active-link-hover-color:            $gray-dark;
@@ -213,6 +216,7 @@ $nav-pills-border-radius:                     0;
 // Tab content
 $nav-tab-content-bg:                          $body-bg;
 $nav-tab-content-padding:                     20px; /* TODO change padding */
+$nav-tab-content-border-color:                $primary-border-color;
 
 // Navbar
 $navbar-border-radius:                        0;
@@ -248,7 +252,7 @@ $list-group-link-heading-color:               #333 !default;
 // Dropdown menu container and contents.
 
 $dropdown-bg:                                 #fff !default;
-$dropdown-border-color:                       #c7d6db;
+$dropdown-border-color:                       $primary-border-color;
 $dropdown-border-color-hover:                 #a5b6bb;
 $dropdown-divider-bg:                         #e5e5e5 !default;
 
@@ -573,7 +577,7 @@ $btn-font-weight:                             normal !default;
 
 $btn-primary-color:                           #fff !default;
 $btn-primary-bg:                              $brand-primary !default;
-$btn-primary-border:                          $btn-primary-bg !default;
+$btn-primary-border:                          $primary-border-color !default;
 
 $btn-secondary-color:                         #fff !default;
 $btn-secondary-bg:                            $brand-secondary !default;
@@ -658,7 +662,7 @@ $form-icon-danger:                            "data: image/svg+xml;base64,PHN2Zy
 // Dropdown menu container and contents.
 
 $dropdown-bg:                                 #fff !default;
-$dropdown-border-color:                       #c7d6db;
+$dropdown-border-color:                       $primary-border-color;
 $dropdown-border-color-hover:                 #a5b6bb;
 $dropdown-border-width:                       $border-width !default;
 $dropdown-divider-bg:                         #e5e5e5 !default;

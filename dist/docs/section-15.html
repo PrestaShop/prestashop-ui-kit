@@ -60,9 +60,10 @@
                         </ul>
                         <ul class="kss-menu-child">
                             <li class="kss-menu-item"><a href="#section-15.1"><span class="kss-ref">15.1</span><span class="kss-name">Nav tabs</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-15.2"><span class="kss-ref">15.2</span><span class="kss-name">Nav bars</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-15.3"><span class="kss-ref">15.3</span><span class="kss-name">Subheader</span></a></li>
-                            <li class="kss-menu-item"><a href="#section-15.4"><span class="kss-ref">15.4</span><span class="kss-name">Subheader with navbar</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-15.2"><span class="kss-ref">15.2</span><span class="kss-name">Nav tabs bordered</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-15.3"><span class="kss-ref">15.3</span><span class="kss-name">Nav bars</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-15.4"><span class="kss-ref">15.4</span><span class="kss-name">Subheader</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-15.5"><span class="kss-ref">15.5</span><span class="kss-name">Subheader with navbar</span></a></li>
                         </ul>
                     </nav>
 
@@ -150,7 +151,80 @@ $(document).ready(function(){
                         </div>
                     </section>
                     <section id="section-15.2" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">15.2</span> Nav bars</h1>
+                        <h1 class="kss-title"><span class="kss-ref">15.2</span> Nav tabs bordered</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div style="background-color: #eaebec; padding: 20px;">
+<ul class="nav nav-tabs bordered" id="myTabBordered" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#homeBordered" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#profileBordered" role="tab">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#messagesBordered" role="tab">Messages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#settingsBordered" role="tab">Settings</a>
+  </li>
+</ul>
+<div class="tab-content bordered">
+  <div class="tab-pane active" id="homeBordered" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
+  <div class="tab-pane" id="profileBordered" role="tabpanel">Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.</div>
+  <div class="tab-pane" id="messagesBordered" role="tabpanel">Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</div>
+  <div class="tab-pane" id="settingsBordered" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#myTabBordered a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  });
+});
+</script>
+</div>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div style=&quot;background-color: #eaebec; padding: 20px;&quot;&gt;
+&lt;ul class=&quot;nav nav-tabs bordered&quot; id=&quot;myTabBordered&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; href=&quot;#homeBordered&quot; role=&quot;tab&quot;&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; href=&quot;#profileBordered&quot; role=&quot;tab&quot;&gt;Profile&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; href=&quot;#messagesBordered&quot; role=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; href=&quot;#settingsBordered&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tab-content bordered&quot;&gt;
+  &lt;div class=&quot;tab-pane active&quot; id=&quot;homeBordered&quot; role=&quot;tabpanel&quot;&gt;Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.&lt;/div&gt;
+  &lt;div class=&quot;tab-pane&quot; id=&quot;profileBordered&quot; role=&quot;tabpanel&quot;&gt;Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.&lt;/div&gt;
+  &lt;div class=&quot;tab-pane&quot; id=&quot;messagesBordered&quot; role=&quot;tabpanel&quot;&gt;Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.&lt;/div&gt;
+  &lt;div class=&quot;tab-pane&quot; id=&quot;settingsBordered&quot; role=&quot;tabpanel&quot;&gt;Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+  $(&#x27;#myTabBordered a&#x27;).click(function (e) {
+    e.preventDefault()
+    $(this).tab(&#x27;show&#x27;)
+  });
+});
+&lt;/script&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-15.3" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">15.3</span> Nav bars</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
@@ -198,8 +272,8 @@ $(document).ready(function(){
 
                         </div>
                     </section>
-                    <section id="section-15.3" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">15.3</span> Subheader</h1>
+                    <section id="section-15.4" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">15.4</span> Subheader</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
@@ -277,8 +351,8 @@ $(document).ready(function(){
 
                         </div>
                     </section>
-                    <section id="section-15.4" class="kss-section kss-depth-2">
-                        <h1 class="kss-title"><span class="kss-ref">15.4</span> Subheader with navbar</h1>
+                    <section id="section-15.5" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">15.5</span> Subheader with navbar</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">

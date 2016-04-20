@@ -11,7 +11,7 @@
   }
 
   if (typeof jQuery === 'undefined') {
-    console.error('prestaShopUI needs jQuery.');
+    console.error('PrestaShopUI needs jQuery.');
   }
 
   /**

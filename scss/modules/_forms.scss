@@ -41,10 +41,11 @@
 }
 
 .edit {
-  background: url($edit-icon) no-repeat;
-  background-size: contain;
-  background-size: 2%;
-  background-position: right rem(10px) center;
+  @include ps-form-icon-right($edit-icon);
+}
+
+.search {
+  @include ps-form-icon-right($search-icon);
 }
 
 // Form validation states
@@ -125,6 +126,22 @@
 // </div>
 //
 // Styleguide 4.4
+
+// Autocomplete search with items selected
+//
+// Markup:
+// <div class="autocomplete-search">
+//   <input type="text" class="form-control search" placeholder="Search and add a related product" autocomplete="off">
+//   <ul class="product-list">
+//     <li class="card">
+//       <img class="image" src="./img/autocomplete-seach.png">
+//       <span class="label">Faded Short Sleeves T-shirt (ref: demo_1)</span>
+//       <i class="material-icons delete">clear</i>
+//     </li>
+//   </ul>
+// </div>
+//
+// Styleguide 4.5
 
 .select2-container--prestakit {
     display: block;
@@ -580,5 +597,37 @@ $help-box-size: 16px;
 
     &:after {
         content: '?'
+    }
+}
+
+.autocomplete-search {
+    >.product-list {
+        padding: 0;
+
+        >.card {
+            @extend .card;
+            margin-top: rem(5px);
+            padding-right: rem(10px);
+
+            >.image {
+                margin: rem(5px);
+                max-height: rem(40px);
+            }
+
+            >.label {
+                @extend .font-secondary;
+                @extend .small;
+                font-weight: $font-weight-semibold;
+            }
+
+            >.delete {
+                @extend .pull-xs-right;
+                line-height: rem(50px);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }

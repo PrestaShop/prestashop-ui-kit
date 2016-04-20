@@ -9,7 +9,6 @@
 
         <link rel="stylesheet" href="css/kss.css" />
         <link rel="stylesheet" href="css/jquery.growl.css"/>
-        <link rel="stylesheet" href="css/bootstrap-switch.min.css"/>
 
         <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
         
@@ -25,7 +24,6 @@
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/select2.min.js"></script>
-        <script src="js/bootstrap-switch.min.js"></script>
 
         <script src="js/prestashop-ui-kit.js"></script>
         
@@ -46,7 +44,7 @@
                             <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Buttons</span></a></li>
                             <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Forms</span></a></li>
                             <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Input groups</span></a></li>
-                            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdown</span></a></li>
+                            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdowns</span></a></li>
                             <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Alerts</span></a></li>
                             <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Pagination</span></a></li>
                             <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Modals</span></a></li>
@@ -65,6 +63,7 @@
                             <li class="kss-menu-item"><a href="#section-4.2"><span class="kss-ref">4.2</span><span class="kss-name">Form validation states</span></a></li>
                             <li class="kss-menu-item"><a href="#section-4.3"><span class="kss-ref">4.3</span><span class="kss-name">Select (Bootstrap)</span></a></li>
                             <li class="kss-menu-item"><a href="#section-4.4"><span class="kss-ref">4.4</span><span class="kss-name">Dropdown</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-4.5"><span class="kss-ref">4.5</span><span class="kss-name">Autocomplete search with items selected</span></a></li>
                         </ul>
                     </nav>
 
@@ -95,6 +94,10 @@
 <label class="form-control-label" for="exampleInput2">Input - Placeholder</label>
  <input type="text" class="form-control" placeholder="Wake me up!"></input>
 </fieldset>
+<fieldset class="form-group">
+<label class="form-control-label" for="exampleInput3">Input - edit</label>
+ <input type="text" class="form-control edit"></input>
+</fieldset>
                                 </div>
                             </div>
 
@@ -106,6 +109,10 @@
 &lt;fieldset class=&quot;form-group&quot;&gt;
 &lt;label class=&quot;form-control-label&quot; for=&quot;exampleInput2&quot;&gt;Input - Placeholder&lt;/label&gt;
  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Wake me up!&quot;&gt;&lt;/input&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;form-group&quot;&gt;
+&lt;label class=&quot;form-control-label&quot; for=&quot;exampleInput3&quot;&gt;Input - edit&lt;/label&gt;
+ &lt;input type=&quot;text&quot; class=&quot;form-control edit&quot;&gt;&lt;/input&gt;
 &lt;/fieldset&gt;</code></pre>
                             </div>
 
@@ -213,22 +220,6 @@
   <option value="3">Three</option>
 </select>
 </div>
-<div class="col-md-6">
-<select data-toggle="select2" data-placeholder="Open this select menu" data-templateResult="formatData" data-templateSelection="formatRepo" multiple="multiple">
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-</div>
 </div>
                                 </div>
                             </div>
@@ -243,22 +234,39 @@
   &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
 &lt;/select&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md-6&quot;&gt;
-&lt;select data-toggle=&quot;select2&quot; data-placeholder=&quot;Open this select menu&quot; data-templateResult=&quot;formatData&quot; data-templateSelection=&quot;formatRepo&quot; multiple=&quot;multiple&quot;&gt;
-  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
-  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
-  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
-  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
-  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
-  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
-  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
-  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
-  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
-  &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
-  &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
-  &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
-&lt;/select&gt;
-&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-4.5" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">4.5</span> Autocomplete search with items selected</h1>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <div class="autocomplete-search">
+  <input type="text" class="form-control search" placeholder="Search and add a related product" autocomplete="off">
+  <ul class="product-list">
+    <li class="card">
+      <img class="image" src="./img/autocomplete-seach.png">
+      <span class="label">Faded Short Sleeves T-shirt (ref: demo_1)</span>
+      <i class="material-icons delete">clear</i>
+    </li>
+  </ul>
+</div>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;div class=&quot;autocomplete-search&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control search&quot; placeholder=&quot;Search and add a related product&quot; autocomplete=&quot;off&quot;&gt;
+  &lt;ul class=&quot;product-list&quot;&gt;
+    &lt;li class=&quot;card&quot;&gt;
+      &lt;img class=&quot;image&quot; src=&quot;./img/autocomplete-seach.png&quot;&gt;
+      &lt;span class=&quot;label&quot;&gt;Faded Short Sleeves T-shirt (ref: demo_1)&lt;/span&gt;
+      &lt;i class=&quot;material-icons delete&quot;&gt;clear&lt;/i&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
                             </div>
 

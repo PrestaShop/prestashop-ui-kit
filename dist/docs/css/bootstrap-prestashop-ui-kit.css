@@ -2235,21 +2235,21 @@ fieldset[disabled] a.btn {
 .btn-primary {
   color: #fff;
   background-color: #25B9D7;
-  border-color: #c7d6db; }
+  border-color: #25B9D7; }
   @media (hover: hover) {
     .btn-primary:hover {
       color: #fff;
       background-color: #1e94ab;
-      border-color: #a2bbc3; } }
+      border-color: #1c8ca3; } }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #1e94ab;
-    border-color: #a2bbc3; }
+    border-color: #1c8ca3; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #1e94ab;
-    border-color: #a2bbc3;
+    border-color: #1c8ca3;
     background-image: none; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
     .open > .btn-primary.dropdown-toggle:hover,
@@ -2257,14 +2257,14 @@ fieldset[disabled] a.btn {
     .open > .btn-primary.dropdown-toggle.focus {
       color: #fff;
       background-color: #18798d;
-      border-color: #799da9; }
+      border-color: #125b6a; }
   .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus {
     background-color: #25B9D7;
-    border-color: #c7d6db; }
+    border-color: #25B9D7; }
   @media (hover: hover) {
     .btn-primary.disabled:hover, .btn-primary:disabled:hover {
       background-color: #25B9D7;
-      border-color: #c7d6db; } }
+      border-color: #25B9D7; } }
 
 .btn-secondary, .btn-default {
   color: #fff;
@@ -5680,21 +5680,21 @@ xs, .xs, .xsmall, xsmall {
 .btn-primary {
   color: #fff;
   background-color: #25B9D7;
-  border-color: #c7d6db; }
+  border-color: #25B9D7; }
   @media (hover: hover) {
     .btn-primary:hover {
       color: #fff;
       background-color: #1e94ab;
-      border-color: #a2bbc3; } }
+      border-color: #1c8ca3; } }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #1e94ab;
-    border-color: #a2bbc3; }
+    border-color: #1c8ca3; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #1e94ab;
-    border-color: #a2bbc3;
+    border-color: #1c8ca3;
     background-image: none; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
     .open > .btn-primary.dropdown-toggle:hover,
@@ -5702,14 +5702,14 @@ xs, .xs, .xsmall, xsmall {
     .open > .btn-primary.dropdown-toggle.focus {
       color: #fff;
       background-color: #18798d;
-      border-color: #799da9; }
+      border-color: #125b6a; }
   .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled.focus {
     background-color: #25B9D7;
-    border-color: #c7d6db; }
+    border-color: #25B9D7; }
   @media (hover: hover) {
     .btn-primary.disabled:hover, .btn-primary:disabled:hover {
       background-color: #25B9D7;
-      border-color: #c7d6db; } }
+      border-color: #25B9D7; } }
   @media (hover: hover) {
     .btn-primary:hover {
       color: #fff;
@@ -5718,7 +5718,7 @@ xs, .xs, .xsmall, xsmall {
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #46c5df;
-    border-color: #e0e8eb; }
+    border-color: #46c5df; }
 
 .btn-secondary, .btn-default {
   color: #fff;
@@ -6031,7 +6031,7 @@ xs, .xs, .xsmall, xsmall {
   background-color: transparent;
   border-color: #25B9D7;
   border: 0.125rem solid #25B9D7;
-  border-color: #c7d6db; }
+  border-color: #25B9D7; }
   .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,
   .open > .btn-primary-outline.dropdown-toggle {
     color: #fff;
@@ -6056,6 +6056,8 @@ xs, .xs, .xsmall, xsmall {
     color: #46c5df;
     background-color: #fff;
     border-color: #46c5df; }
+  .btn-primary-outline.sensitive {
+    border-color: #c7d6db; }
 
 .btn-secondary-outline {
   color: #FFBB00;

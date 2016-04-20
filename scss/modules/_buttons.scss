@@ -55,6 +55,9 @@
 .btn-primary-outline {
     @include ps-button-outline-variant($btn-primary-bg, $primary-hover);
     border-color: $btn-primary-border;
+    &.sensitive {
+        border-color: $primary-border-color;
+    }
 }
 .btn-secondary-outline {
     @include ps-button-outline-variant($btn-secondary-border, $secondary-hover);

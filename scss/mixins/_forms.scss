@@ -30,6 +30,13 @@
   }
 }
 
+@mixin ps-form-icon-right($icon) {
+    background-image: url($icon) ;
+    background-repeat: no-repeat;
+    background-size: 2%;
+    background-position: right rem(10px) center;
+}
+
 @mixin bootstrap-input-defaults {
     @include box-shadow($form-control-default-box-shadow);
     background-color: $input-bg;

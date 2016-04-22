@@ -39,12 +39,12 @@
 //   </span>
 //   <div class="ps-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenu1">
 //     <ul class="items-list js-items-list">
-//      <li><a class="dropdown-item" data-item="All">All<span class="pull-right">210</span></a></li>
-//      <li><a class="dropdown-item" data-item="Category">Category<span class="pull-right">210</span></a></li>
-//      <li><a class="dropdown-item" data-item="Category 2">Category 2<span class="pull-right">210</span></a></li>
-//      <li><a class="dropdown-item" data-item="Category 3">Category 3<span class="pull-right">210</span></a></li>
-//      <li><a class="dropdown-item" data-item="Category 4">Category 4<span class="pull-right">210</span></a></li>
-//      <li><a class="dropdown-item" data-item="Category 5">Category 5<span class="pull-right">210</span></a></li>
+//      <li><a class="dropdown-item" data-item="All">All<span>210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category">Category<span>210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 2">Category 2<span>210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 3">Category 3<span>210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 4">Category 4<span>210</span></a></li>
+//      <li><a class="dropdown-item" data-item="Category 5">Category 5<span>210</span></a></li>
 //     </ul>
 //   </div>
 // </div>
@@ -99,6 +99,8 @@
 
     .dropdown-item{
       cursor: pointer;
+      @include display(flex);
+      @include justify-content(space-between);
     }
     .items-list{
       list-style-type: none;

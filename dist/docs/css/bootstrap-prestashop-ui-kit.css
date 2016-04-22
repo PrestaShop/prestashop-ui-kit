@@ -7120,7 +7120,23 @@ xs, .xs, .xsmall, xsmall {
       border-left: 6px solid transparent;
       content: ''; }
     .ps-dropdown > .ps-dropdown-menu .dropdown-item {
-      cursor: pointer; }
+      cursor: pointer;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify; }
     .ps-dropdown > .ps-dropdown-menu .items-list {
       list-style-type: none;
       padding: 0; }

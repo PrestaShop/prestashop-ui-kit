@@ -33,7 +33,7 @@
 @mixin ps-form-icon-right($icon) {
     background-image: url($icon) ;
     background-repeat: no-repeat;
-    background-size: 2%;
+    background-size: rem(20px);
     background-position: right rem(10px) center;
 }
 

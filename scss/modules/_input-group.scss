@@ -48,7 +48,7 @@
 //
 // Markup:
 // <form id="demo-2">
-// 	<input type="search" class="form-control form-search">
+//  <input type="search" class="form-control form-search">
 // </form>
 //
 // Styleguide 5.2
@@ -60,18 +60,13 @@
   cursor: pointer;
   text-indent: 2.5rem;
 
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  @include box-sizing(content-box);
+  @include border-radius(10em);
+  @include transition( all .5s);
 
-  -webkit-border-radius: 10em;
-  -moz-border-radius: 10em;
-  border-radius: 10em;
-
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
+  .input-group & {
+    @include border-radius(10em);
+  }
 
   &:hover {
     border-color: $primary;
@@ -83,19 +78,121 @@
     width: 250px;
     cursor: auto;
     text-indent: 0;
-
-    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
     box-shadow: 0 0 5px rgba(109,207,246,.5);
-
   }
 }
 
-.form-search::-moz-placeholder {
-  color: #999;
-  color: transparent;
+.form-search {
+  @include placeholder {
+    color: #999;
+    color: transparent;
+  }
 }
-.form-search::-webkit-input-placeholder {
-  color: #999;
-  color: transparent;
+
+// Seach Form with dropdown
+//
+// Markup:
+// <form class="dropdown-form js-dropdown-form">
+//   <div class="input-group">
+//     <input type="search" class="form-control dropdown-form-search js-form-search" placeholder="Search (e.g.: product reference, customer name…)">
+//     <div class="input-group-addon">
+//       <div class="dropdown">
+//         <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+//          Everywhere
+//         </span>
+//         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+//           <a class="dropdown-item" href="#">Action</a>
+//           <a class="dropdown-item" href="#">Another action</a>
+//           <a class="dropdown-item" href="#">Something else here</a>
+//         </div>
+//        </div>
+//      </div>
+//      <div class="input-group-addon search-bar"><button type="submit">SEARCH<i class="material-icons">search</i></button></div>
+//    </div>
+// </form>
+// <script type="text/javascript">
+//  $(document).ready(function(){
+//    $('.js-form-search').on('focusin', () => {
+//      if (!$('.js-dropdown-form').hasClass('expanded')) {
+//        $('.js-dropdown-form').addClass('expanded');
+//      }
+//    });
+//  });
+// </script>
+//
+// Styleguide 5.3
+
+.dropdown-form {
+  .dropdown-form-search {
+    border: none;
+    @include border-radius(10em);
+    background: transparent url($search-icon) center no-repeat;
+    cursor: pointer;
+    @include placeholder {
+      visibility: hidden;
+    }
+  }
+  .input-group {
+    border: solid 1px $gray-light;
+    width: 4%;
+    @include border-radius(10em);
+    @include transition( all .5s);
+    &:hover {
+      border-color: $primary;
+    }
+  }
+  &.expanded .input-group {
+    width: 98%;
+    .form-control:not(:last-child) {
+      border-right: solid 1px $gray-light;
+    }
+  }
+  &.expanded .input-group-addon {
+    display: table-cell;
+    @include animation(fadeIn 1.0s ease-in);
+  }
+  &.expanded .dropdown-form-search {
+    background: none;
+    cursor: text;
+    @include placeholder {
+      visibility: visible;
+    }
+  }
+  .dropdown-toggle {
+    color: $gray-medium;
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    margin-top: rem(15px);
+  }
+  .input-group-addon {
+    border:none;
+    &.search-bar {
+      border-bottom-right-radius: 10em;
+      border-top-right-radius: 10em;
+      background: $primary;
+      color:$white;
+      width: rem(120px);
+      button{
+        background: transparent;
+        border:none;
+      }
+      .material-icons{
+        vertical-align: bottom;
+        margin-left: rem(5px);
+        font-size: rem(18px);
+        padding-top: rem(2px);
+      }
+    }
+    display: none;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

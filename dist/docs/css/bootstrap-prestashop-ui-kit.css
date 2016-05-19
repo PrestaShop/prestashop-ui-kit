@@ -7137,7 +7137,8 @@ xs, .xs, .xsmall, xsmall {
   border: none;
   border-radius: 10em;
   background: transparent url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=") center no-repeat;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 2.1875rem; }
   .dropdown-form .dropdown-form-search::-webkit-input-placeholder {
     visibility: hidden; }
   .dropdown-form .dropdown-form-search::-moz-placeholder {
@@ -7149,7 +7150,7 @@ xs, .xs, .xsmall, xsmall {
 
 .dropdown-form .input-group {
   border: solid 1px #BBCDD2;
-  width: 4%;
+  width: 2.3125rem;
   border-radius: 10em;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -7158,7 +7159,7 @@ xs, .xs, .xsmall, xsmall {
     border-color: #25B9D7; }
 
 .dropdown-form.expanded .input-group {
-  width: 98%; }
+  width: 37.5rem; }
   .dropdown-form.expanded .input-group .form-control:not(:last-child) {
     border-right: solid 1px #BBCDD2; }
 

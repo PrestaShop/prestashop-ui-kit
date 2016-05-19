@@ -110,15 +110,6 @@
 //      <div class="input-group-addon search-bar"><button type="submit">SEARCH<i class="material-icons">search</i></button></div>
 //    </div>
 // </form>
-// <script type="text/javascript">
-//  $(document).ready(function(){
-//    $('.js-form-search').on('focusin', () => {
-//      if (!$('.js-dropdown-form').hasClass('expanded')) {
-//        $('.js-dropdown-form').addClass('expanded');
-//      }
-//    });
-//  });
-// </script>
 //
 // Styleguide 5.3
 
@@ -128,13 +119,14 @@
     @include border-radius(10em);
     background: transparent url($search-icon) center no-repeat;
     cursor: pointer;
+    height: rem(35px);
     @include placeholder {
       visibility: hidden;
     }
   }
   .input-group {
     border: solid 1px $gray-light;
-    width: 4%;
+    width: rem(37px);
     @include border-radius(10em);
     @include transition( all .5s);
     &:hover {
@@ -142,7 +134,7 @@
     }
   }
   &.expanded .input-group {
-    width: 98%;
+    width: rem(600px);
     .form-control:not(:last-child) {
       border-right: solid 1px $gray-light;
     }

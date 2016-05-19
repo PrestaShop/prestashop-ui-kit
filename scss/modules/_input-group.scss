@@ -119,14 +119,16 @@
     @include border-radius(10em);
     background: transparent url($search-icon) center no-repeat;
     cursor: pointer;
-    height: rem(35px);
+    height: rem(30px);
+    font-size: rem(13px);
+    text-indent: rem(10px);
     @include placeholder {
       visibility: hidden;
     }
   }
   .input-group {
     border: solid 1px $gray-light;
-    width: rem(37px);
+    width: rem(32px);
     @include border-radius(10em);
     @include transition( all .5s);
     &:hover {
@@ -141,6 +143,8 @@
   }
   &.expanded .input-group-addon {
     display: table-cell;
+    padding-top: rem(2px);
+    padding-bottom: rem(2px);
     @include animation(fadeIn 1.0s ease-in);
   }
   &.expanded .dropdown-form-search {
@@ -156,6 +160,7 @@
   }
   .dropdown-menu {
     margin-top: rem(15px);
+    margin-left: rem(-10px);
   }
   .input-group-addon {
     border:none;

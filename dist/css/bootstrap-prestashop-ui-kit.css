@@ -7138,7 +7138,9 @@ xs, .xs, .xsmall, xsmall {
   border-radius: 10em;
   background: transparent url("data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=") center no-repeat;
   cursor: pointer;
-  height: 2.1875rem; }
+  height: 1.875rem;
+  font-size: 0.8125rem;
+  text-indent: 0.625rem; }
   .dropdown-form .dropdown-form-search::-webkit-input-placeholder {
     visibility: hidden; }
   .dropdown-form .dropdown-form-search::-moz-placeholder {
@@ -7150,7 +7152,7 @@ xs, .xs, .xsmall, xsmall {
 
 .dropdown-form .input-group {
   border: solid 1px #BBCDD2;
-  width: 2.3125rem;
+  width: 2rem;
   border-radius: 10em;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -7165,6 +7167,8 @@ xs, .xs, .xsmall, xsmall {
 
 .dropdown-form.expanded .input-group-addon {
   display: table-cell;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
   -webkit-animation: fadeIn 1s ease-in;
   -moz-animation: fadeIn 1s ease-in;
   animation: fadeIn 1s ease-in; }
@@ -7186,7 +7190,8 @@ xs, .xs, .xsmall, xsmall {
   cursor: pointer; }
 
 .dropdown-form .dropdown-menu {
-  margin-top: 0.9375rem; }
+  margin-top: 0.9375rem;
+  margin-left: -0.625rem; }
 
 .dropdown-form .input-group-addon {
   border: none;

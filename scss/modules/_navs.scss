@@ -143,6 +143,10 @@
 .navbar {
     background-color: #fff;
     width: 100%;
+
+    &.navbar-light {
+      padding-bottom: 0;
+    }
 }
 
 .navbar-nav {
@@ -180,10 +184,10 @@
     &.navbar-separator:after {
         content: " ";
         left: 0;
+        bottom: 0;
         display: table-cell;
         border-bottom: 1px solid $navbar-bottom-separtor-color;
         position: absolute;
-        height: 1.72em * 2;
         width: 100%;
     }
 }

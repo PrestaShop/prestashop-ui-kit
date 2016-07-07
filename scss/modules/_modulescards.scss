@@ -28,7 +28,7 @@
 //             ( 42 )
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test1" class="btn btn-primary btn-sm pull-xs-right">199.99 €</button>
+//                 <button id="test1" class="btn btn-primary light-button btn-sm pull-xs-right">199.99 €</button>
 //             </div>
 //             </div>
 //         </div>
@@ -54,7 +54,7 @@
 //             ( 42 )
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test2" class="btn btn-primary btn-sm pull-xs-right">Free</button>
+//                 <button id="test2" class="btn btn-primary light-button btn-sm pull-xs-right">Free</button>
 //             </div>
 //         </div>
 //     </div>
@@ -117,10 +117,10 @@
 
     .module-quick-action-grid {
         display :inline;
-				button {
-					font-size: rem(10px);
-					padding: rem(8px);
-				}
+        .light-button{
+          font-size: rem(10px);
+          padding: rem(8px);
+        }
     }
 
     .module-quick-description-grid {

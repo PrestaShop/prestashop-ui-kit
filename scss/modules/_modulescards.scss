@@ -6,7 +6,7 @@
 //
 // Markup:
 // <div class="row">
-//     <div class="col-sm-6"> 
+//     <div class="col-sm-6">
 //         <div class="module-item-wrapper-grid">
 //             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
 //                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
@@ -68,7 +68,7 @@
 //     $("#test2").psdwl({
 //         hover: "Discover",
 //     });
-// }); 
+// });
 // </script>
 //
 // Styleguide 13.1
@@ -116,7 +116,11 @@
     }
 
     .module-quick-action-grid {
-        display :inline;   
+        display :inline;
+				button {
+					font-size: rem(10px);
+					padding: rem(8px);
+				}
     }
 
     .module-quick-description-grid {

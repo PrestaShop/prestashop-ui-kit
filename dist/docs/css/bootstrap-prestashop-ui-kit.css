@@ -7937,7 +7937,7 @@ xs, .xs, .xsmall, xsmall {
 
 .module-item-wrapper-grid .module-quick-action-grid {
   display: inline; }
-  .module-item-wrapper-grid .module-quick-action-grid button {
+  .module-item-wrapper-grid .module-quick-action-grid .light-button {
     font-size: 0.625rem;
     padding: 0.5rem; }
 

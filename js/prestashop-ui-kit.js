@@ -119,6 +119,14 @@
     jQuery('[data-toggle="popover"]').popover();
   }
 
+  var initSearchBar = function() {
+    $('.js-form-search').on('focusin', function() {
+       if (!$('.js-dropdown-form').hasClass('expanded')) {
+         $('.js-dropdown-form').addClass('expanded');
+       }
+     });
+  }
+
   global.prestaShopUiKit = {
 
     /**
@@ -148,6 +156,7 @@
         initToggleButtons();
         initAlerts();
         initToolTips();
+        initSearchBar();
       });
     },
 

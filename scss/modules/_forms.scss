@@ -126,10 +126,14 @@
 // <div class="autocomplete-search">
 //   <input type="text" class="form-control search" placeholder="Search and add a related product" autocomplete="off">
 //   <ul class="product-list">
-//     <li class="card">
-//       <img class="image" src="./img/autocomplete-seach.png">
-//       <span class="label">Faded Short Sleeves T-shirt (ref: demo_1)</span>
-//       <i class="material-icons delete">clear</i>
+//     <li class="media">
+//       <div class="media-left">
+//         <img class="media-object image" src="./img/autocomplete-seach.png">
+//       </div>
+//       <div class="media-body media-middle">
+//         <span class="label">Faded Short Sleeves T-shirt (ref: demo_1)</span>
+//         <i class="material-icons delete">clear</i>
+//       </div>
 //     </li>
 //   </ul>
 // </div>
@@ -597,30 +601,32 @@ $help-box-size: 16px;
     >.product-list {
         padding: 0;
 
-        >.card {
+        >.media {
             @extend .card;
             margin-top: rem(5px);
             padding-right: rem(10px);
-
-            >.image {
-                margin: rem(5px);
-                max-height: rem(40px);
+            > .media-left {
+              > .image {
+                  margin: rem(5px);
+                  max-height: rem(40px);
+              }
             }
+            > .media-body {
+              > .label {
+                  @extend .font-secondary;
+                  @extend .small;
+                  font-weight: $font-weight-semibold;
+              }
 
-            >.label {
-                @extend .font-secondary;
-                @extend .small;
-                font-weight: $font-weight-semibold;
-            }
+              > .delete {
+                  @extend .pull-xs-right;
+                  line-height: rem(25px);
 
-            >.delete {
-                @extend .pull-xs-right;
-                line-height: rem(50px);
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
+                  &:hover {
+                      cursor: pointer;
+                  }
+              }
+          }
         }
     }
 }

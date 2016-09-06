@@ -11,7 +11,7 @@
   /* For IE6-8 */
   src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.woff2) format("woff2"), url(../fonts/MaterialIcons-Regular.woff) format("woff"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
-.material-icons, .switch-input:after, .switch-input.small:after, .autocomplete-search > .product-list > .card > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label:after, .autocomplete-search > .product-list > .panel > .switch-input.label:after, .switch-input.tiny:after {
+.material-icons, .switch-input:after, .switch-input.small:after, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after, .switch-input.tiny:after {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -999,11 +999,7 @@ hr {
 
 small,
 .small,
-.autocomplete-search > .product-list > .card > .label,
-.autocomplete-search > .product-list > .module-item-wrapper-grid > .label,
-.module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .label,
-.module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .label,
-.autocomplete-search > .product-list > .panel > .label {
+.autocomplete-search > .product-list > .media > .media-body > .label {
   font-size: 80%;
   font-weight: normal; }
 
@@ -3606,7 +3602,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-divider {
   background-color: rgba(255, 255, 255, 0.075); }
 
-.card, .autocomplete-search > .product-list > .card, .module-item-wrapper-grid, .module-addons-item-grid .module-addons-item-wrapper-grid, .module-placeholders-wrapper .timeline-item-wrapper, .panel {
+.card, .autocomplete-search > .product-list > .media, .module-item-wrapper-grid, .module-addons-item-grid .module-addons-item-wrapper-grid, .module-placeholders-wrapper .timeline-item-wrapper, .panel {
   position: relative;
   display: block;
   margin-bottom: 0.75rem;
@@ -3634,10 +3630,10 @@ input[type="button"].btn-block {
 .card-link + .card-link {
   margin-left: 1.25rem; }
 
-.card > .list-group:first-child .list-group-item:first-child, .autocomplete-search > .product-list > .card > .list-group:first-child .list-group-item:first-child, .module-item-wrapper-grid > .list-group:first-child .list-group-item:first-child, .module-addons-item-grid .module-addons-item-wrapper-grid > .list-group:first-child .list-group-item:first-child, .module-placeholders-wrapper .timeline-item-wrapper > .list-group:first-child .list-group-item:first-child, .panel > .list-group:first-child .list-group-item:first-child {
+.card > .list-group:first-child .list-group-item:first-child, .autocomplete-search > .product-list > .media > .list-group:first-child .list-group-item:first-child, .module-item-wrapper-grid > .list-group:first-child .list-group-item:first-child, .module-addons-item-grid .module-addons-item-wrapper-grid > .list-group:first-child .list-group-item:first-child, .module-placeholders-wrapper .timeline-item-wrapper > .list-group:first-child .list-group-item:first-child, .panel > .list-group:first-child .list-group-item:first-child {
   border-radius: 0.25rem 0.25rem 0 0; }
 
-.card > .list-group:last-child .list-group-item:last-child, .autocomplete-search > .product-list > .card > .list-group:last-child .list-group-item:last-child, .module-item-wrapper-grid > .list-group:last-child .list-group-item:last-child, .module-addons-item-grid .module-addons-item-wrapper-grid > .list-group:last-child .list-group-item:last-child, .module-placeholders-wrapper .timeline-item-wrapper > .list-group:last-child .list-group-item:last-child, .panel > .list-group:last-child .list-group-item:last-child {
+.card > .list-group:last-child .list-group-item:last-child, .autocomplete-search > .product-list > .media > .list-group:last-child .list-group-item:last-child, .module-item-wrapper-grid > .list-group:last-child .list-group-item:last-child, .module-addons-item-grid .module-addons-item-wrapper-grid > .list-group:last-child .list-group-item:last-child, .module-placeholders-wrapper .timeline-item-wrapper > .list-group:last-child .list-group-item:last-child, .panel > .list-group:last-child .list-group-item:last-child {
   border-radius: 0 0 0.25rem 0.25rem; }
 
 .card-header, .panel-heading {
@@ -3761,7 +3757,7 @@ input[type="button"].btn-block {
     display: table;
     table-layout: fixed;
     border-spacing: 1.25rem 0; }
-    .card-deck .card, .card-deck .autocomplete-search > .product-list > .card, .card-deck .module-item-wrapper-grid, .card-deck .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-deck .module-addons-item-wrapper-grid, .card-deck .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-deck .timeline-item-wrapper, .card-deck .panel {
+    .card-deck .card, .card-deck .autocomplete-search > .product-list > .media, .card-deck .module-item-wrapper-grid, .card-deck .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-deck .module-addons-item-wrapper-grid, .card-deck .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-deck .timeline-item-wrapper, .card-deck .panel {
       display: table-cell;
       width: 1%;
       vertical-align: top; }
@@ -3774,30 +3770,31 @@ input[type="button"].btn-block {
     display: table;
     width: 100%;
     table-layout: fixed; }
-    .card-group .card, .card-group .autocomplete-search > .product-list > .card, .card-group .module-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-group .timeline-item-wrapper, .card-group .panel {
+    .card-group .card, .card-group .autocomplete-search > .product-list > .media, .card-group .module-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-group .timeline-item-wrapper, .card-group .panel {
       display: table-cell;
       vertical-align: top; }
-      .card-group .card + .card, .card-group .module-item-wrapper-grid + .card, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .card, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .card, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .card, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .card, .card-group .panel + .card, .card-group .autocomplete-search > .product-list > .card + .card, .card-group .autocomplete-search > .product-list > .module-item-wrapper-grid + .card, .card-group .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid + .card, .module-addons-item-grid .card-group .autocomplete-search > .product-list > .module-addons-item-wrapper-grid + .card, .card-group .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper + .card, .module-placeholders-wrapper .card-group .autocomplete-search > .product-list > .timeline-item-wrapper + .card, .card-group .autocomplete-search > .product-list > .panel + .card, .card-group .card + .module-item-wrapper-grid, .card-group .autocomplete-search > .product-list > .card + .module-item-wrapper-grid, .card-group .module-item-wrapper-grid + .module-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .module-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .module-item-wrapper-grid, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .module-item-wrapper-grid, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .module-item-wrapper-grid, .card-group .panel + .module-item-wrapper-grid, .card-group .module-addons-item-grid .card + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .card + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .autocomplete-search > .product-list > .card + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .autocomplete-search > .product-list > .card + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .module-item-wrapper-grid + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-item-wrapper-grid + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .module-addons-item-grid .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-placeholders-wrapper .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-placeholders-wrapper .card-group .module-addons-item-grid .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-addons-item-grid .module-placeholders-wrapper .card-group .timeline-item-wrapper + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .panel + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .panel + .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .card + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .card + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .autocomplete-search > .product-list > .card + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .autocomplete-search > .product-list > .card + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .module-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .module-item-wrapper-grid + .timeline-item-wrapper, .card-group .module-addons-item-grid .module-placeholders-wrapper .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-addons-item-grid .card-group .module-placeholders-wrapper .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .panel + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .panel + .timeline-item-wrapper, .card-group .card + .panel, .card-group .autocomplete-search > .product-list > .card + .panel, .card-group .module-item-wrapper-grid + .panel, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .panel, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .panel, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .panel, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .panel, .card-group .panel + .panel {
+      .card-group .card + .card, .card-group .autocomplete-search > .product-list > .media + .card, .card-group .module-item-wrapper-grid + .card, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .card, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .card, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .card, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .card, .card-group .panel + .card, .card-group .autocomplete-search > .product-list > .card + .media, .card-group .autocomplete-search > .product-list > .media + .media, .card-group .autocomplete-search > .product-list > .module-item-wrapper-grid + .media, .card-group .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid + .media, .module-addons-item-grid .card-group .autocomplete-search > .product-list > .module-addons-item-wrapper-grid + .media, .card-group .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper + .media, .module-placeholders-wrapper .card-group .autocomplete-search > .product-list > .timeline-item-wrapper + .media, .card-group .autocomplete-search > .product-list > .panel + .media, .card-group .card + .module-item-wrapper-grid, .card-group .autocomplete-search > .product-list > .media + .module-item-wrapper-grid, .card-group .module-item-wrapper-grid + .module-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .module-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .module-item-wrapper-grid, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .module-item-wrapper-grid, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .module-item-wrapper-grid, .card-group .panel + .module-item-wrapper-grid, .card-group .module-addons-item-grid .card + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .card + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .autocomplete-search > .product-list > .media + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .autocomplete-search > .product-list > .media + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .module-item-wrapper-grid + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-item-wrapper-grid + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .module-addons-item-grid .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .module-placeholders-wrapper .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-placeholders-wrapper .card-group .module-addons-item-grid .timeline-item-wrapper + .module-addons-item-wrapper-grid, .module-addons-item-grid .module-placeholders-wrapper .card-group .timeline-item-wrapper + .module-addons-item-wrapper-grid, .card-group .module-addons-item-grid .panel + .module-addons-item-wrapper-grid, .module-addons-item-grid .card-group .panel + .module-addons-item-wrapper-grid, .card-group .module-placeholders-wrapper .card + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .card + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .autocomplete-search > .product-list > .media + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .autocomplete-search > .product-list > .media + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .module-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .module-item-wrapper-grid + .timeline-item-wrapper, .card-group .module-addons-item-grid .module-placeholders-wrapper .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-addons-item-grid .card-group .module-placeholders-wrapper .module-addons-item-wrapper-grid + .timeline-item-wrapper, .module-placeholders-wrapper .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .timeline-item-wrapper, .card-group .module-placeholders-wrapper .panel + .timeline-item-wrapper, .module-placeholders-wrapper .card-group .panel + .timeline-item-wrapper, .card-group .card + .panel, .card-group .autocomplete-search > .product-list > .media + .panel, .card-group .module-item-wrapper-grid + .panel, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid + .panel, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid + .panel, .card-group .module-placeholders-wrapper .timeline-item-wrapper + .panel, .module-placeholders-wrapper .card-group .timeline-item-wrapper + .panel, .card-group .panel + .panel {
         margin-left: 0;
         border-left: 0; }
-      .card-group .card:first-child, .card-group .module-item-wrapper-grid:first-child, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child, .card-group .panel:first-child {
+      .card-group .card:first-child, .card-group .autocomplete-search > .product-list > .media:first-child, .card-group .module-item-wrapper-grid:first-child, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child, .card-group .panel:first-child {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0; }
-        .card-group .card:first-child .card-img-top, .card-group .module-item-wrapper-grid:first-child .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child .card-img-top, .card-group .panel:first-child .card-img-top {
+        .card-group .card:first-child .card-img-top, .card-group .autocomplete-search > .product-list > .media:first-child .card-img-top, .card-group .module-item-wrapper-grid:first-child .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child .card-img-top, .card-group .panel:first-child .card-img-top {
           border-top-right-radius: 0; }
-        .card-group .card:first-child .card-img-bottom, .card-group .module-item-wrapper-grid:first-child .card-img-bottom, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child .card-img-bottom, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child .card-img-bottom, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child .card-img-bottom, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child .card-img-bottom, .card-group .panel:first-child .card-img-bottom {
+        .card-group .card:first-child .card-img-bottom, .card-group .autocomplete-search > .product-list > .media:first-child .card-img-bottom, .card-group .module-item-wrapper-grid:first-child .card-img-bottom, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:first-child .card-img-bottom, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:first-child .card-img-bottom, .card-group .module-placeholders-wrapper .timeline-item-wrapper:first-child .card-img-bottom, .module-placeholders-wrapper .card-group .timeline-item-wrapper:first-child .card-img-bottom, .card-group .panel:first-child .card-img-bottom {
           border-bottom-right-radius: 0; }
-      .card-group .card:last-child, .card-group .module-item-wrapper-grid:last-child, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child, .card-group .panel:last-child {
+      .card-group .card:last-child, .card-group .autocomplete-search > .product-list > .media:last-child, .card-group .module-item-wrapper-grid:last-child, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child, .card-group .panel:last-child {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0; }
-        .card-group .card:last-child .card-img-top, .card-group .module-item-wrapper-grid:last-child .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child .card-img-top, .card-group .panel:last-child .card-img-top {
+        .card-group .card:last-child .card-img-top, .card-group .autocomplete-search > .product-list > .media:last-child .card-img-top, .card-group .module-item-wrapper-grid:last-child .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child .card-img-top, .card-group .panel:last-child .card-img-top {
           border-top-left-radius: 0; }
-        .card-group .card:last-child .card-img-bottom, .card-group .module-item-wrapper-grid:last-child .card-img-bottom, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child .card-img-bottom, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child .card-img-bottom, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child .card-img-bottom, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child .card-img-bottom, .card-group .panel:last-child .card-img-bottom {
+        .card-group .card:last-child .card-img-bottom, .card-group .autocomplete-search > .product-list > .media:last-child .card-img-bottom, .card-group .module-item-wrapper-grid:last-child .card-img-bottom, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:last-child .card-img-bottom, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:last-child .card-img-bottom, .card-group .module-placeholders-wrapper .timeline-item-wrapper:last-child .card-img-bottom, .module-placeholders-wrapper .card-group .timeline-item-wrapper:last-child .card-img-bottom, .card-group .panel:last-child .card-img-bottom {
           border-bottom-left-radius: 0; }
-      .card-group .card:not(:first-child):not(:last-child), .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child), .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:not(:first-child):not(:last-child), .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:not(:first-child):not(:last-child), .card-group .module-placeholders-wrapper .timeline-item-wrapper:not(:first-child):not(:last-child), .module-placeholders-wrapper .card-group .timeline-item-wrapper:not(:first-child):not(:last-child), .card-group .panel:not(:first-child):not(:last-child) {
+      .card-group .card:not(:first-child):not(:last-child), .card-group .autocomplete-search > .product-list > .media:not(:first-child):not(:last-child), .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child), .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:not(:first-child):not(:last-child), .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:not(:first-child):not(:last-child), .card-group .module-placeholders-wrapper .timeline-item-wrapper:not(:first-child):not(:last-child), .module-placeholders-wrapper .card-group .timeline-item-wrapper:not(:first-child):not(:last-child), .card-group .panel:not(:first-child):not(:last-child) {
         border-radius: 0; }
-        .card-group .card:not(:first-child):not(:last-child) .card-img-top, .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:not(:first-child):not(:last-child) .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:not(:first-child):not(:last-child) .card-img-top, .card-group .panel:not(:first-child):not(:last-child) .card-img-top,
+        .card-group .card:not(:first-child):not(:last-child) .card-img-top, .card-group .autocomplete-search > .product-list > .media:not(:first-child):not(:last-child) .card-img-top, .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .module-addons-item-grid .card-group .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-top, .card-group .module-placeholders-wrapper .timeline-item-wrapper:not(:first-child):not(:last-child) .card-img-top, .module-placeholders-wrapper .card-group .timeline-item-wrapper:not(:first-child):not(:last-child) .card-img-top, .card-group .panel:not(:first-child):not(:last-child) .card-img-top,
         .card-group .card:not(:first-child):not(:last-child) .card-img-bottom,
+        .card-group .autocomplete-search > .product-list > .media:not(:first-child):not(:last-child) .card-img-bottom,
         .card-group .module-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-bottom,
         .card-group .module-addons-item-grid .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-bottom, .module-addons-item-grid
         .card-group .module-addons-item-wrapper-grid:not(:first-child):not(:last-child) .card-img-bottom,
@@ -3810,7 +3807,7 @@ input[type="button"].btn-block {
   .card-columns {
     column-count: 3;
     column-gap: 1.25rem; }
-    .card-columns .card, .card-columns .autocomplete-search > .product-list > .card, .card-columns .module-item-wrapper-grid, .card-columns .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-columns .module-addons-item-wrapper-grid, .card-columns .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-columns .timeline-item-wrapper, .card-columns .panel {
+    .card-columns .card, .card-columns .autocomplete-search > .product-list > .media, .card-columns .module-item-wrapper-grid, .card-columns .module-addons-item-grid .module-addons-item-wrapper-grid, .module-addons-item-grid .card-columns .module-addons-item-wrapper-grid, .card-columns .module-placeholders-wrapper .timeline-item-wrapper, .module-placeholders-wrapper .card-columns .timeline-item-wrapper, .card-columns .panel {
       display: inline-block;
       width: 100%; } }
 
@@ -4365,22 +4362,10 @@ button.list-group-item {
   .list-group-item.active .list-group-item-heading,
   .list-group-item.active .list-group-item-heading > small,
   .list-group-item.active .list-group-item-heading > .small,
-  .list-group-item.active .autocomplete-search > .product-list > .card.list-group-item-heading > .label,
-  .list-group-item.active .autocomplete-search > .product-list > .module-item-wrapper-grid.list-group-item-heading > .label,
-  .list-group-item.active .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label, .module-addons-item-grid
-  .list-group-item.active .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label,
-  .list-group-item.active .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label, .module-placeholders-wrapper
-  .list-group-item.active .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label,
-  .list-group-item.active .autocomplete-search > .product-list > .panel.list-group-item-heading > .label, .list-group-item.active:focus .list-group-item-heading,
+  .list-group-item.active .autocomplete-search > .product-list > .media > .media-body.list-group-item-heading > .label, .list-group-item.active:focus .list-group-item-heading,
   .list-group-item.active:focus .list-group-item-heading > small,
   .list-group-item.active:focus .list-group-item-heading > .small,
-  .list-group-item.active:focus .autocomplete-search > .product-list > .card.list-group-item-heading > .label,
-  .list-group-item.active:focus .autocomplete-search > .product-list > .module-item-wrapper-grid.list-group-item-heading > .label,
-  .list-group-item.active:focus .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label, .module-addons-item-grid
-  .list-group-item.active:focus .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label,
-  .list-group-item.active:focus .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label, .module-placeholders-wrapper
-  .list-group-item.active:focus .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label,
-  .list-group-item.active:focus .autocomplete-search > .product-list > .panel.list-group-item-heading > .label {
+  .list-group-item.active:focus .autocomplete-search > .product-list > .media > .media-body.list-group-item-heading > .label {
     color: inherit; }
   .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
     color: #d1f1f7; }
@@ -4394,13 +4379,7 @@ button.list-group-item {
     .list-group-item.active:hover .list-group-item-heading,
     .list-group-item.active:hover .list-group-item-heading > small,
     .list-group-item.active:hover .list-group-item-heading > .small,
-    .list-group-item.active:hover .autocomplete-search > .product-list > .card.list-group-item-heading > .label,
-    .list-group-item.active:hover .autocomplete-search > .product-list > .module-item-wrapper-grid.list-group-item-heading > .label,
-    .list-group-item.active:hover .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label, .module-addons-item-grid
-    .list-group-item.active:hover .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.list-group-item-heading > .label,
-    .list-group-item.active:hover .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label, .module-placeholders-wrapper
-    .list-group-item.active:hover .autocomplete-search > .product-list > .timeline-item-wrapper.list-group-item-heading > .label,
-    .list-group-item.active:hover .autocomplete-search > .product-list > .panel.list-group-item-heading > .label {
+    .list-group-item.active:hover .autocomplete-search > .product-list > .media > .media-body.list-group-item-heading > .label {
       color: inherit; }
     .list-group-item.active:hover .list-group-item-text {
       color: #d1f1f7; } }
@@ -5065,7 +5044,7 @@ button.close {
 .pull-xs-left, .pull-left {
   float: left !important; }
 
-.pull-xs-right, .autocomplete-search > .product-list > .card > .delete, .autocomplete-search > .product-list > .module-item-wrapper-grid > .delete, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .delete, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .delete, .autocomplete-search > .product-list > .panel > .delete, .pull-right {
+.pull-xs-right, .autocomplete-search > .product-list > .media > .media-body > .delete, .pull-right {
   float: right !important; }
 
 .pull-xs-none {
@@ -5593,15 +5572,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .url {
   font-weight: 600; }
 
-.font-primary, sm, .sm, .small, .autocomplete-search > .product-list > .card > .label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .label, .autocomplete-search > .product-list > .panel > .label, small, xs, .xs, .xsmall, xsmall {
+.font-primary, sm, .sm, .small, .autocomplete-search > .product-list > .media > .media-body > .label, small, xs, .xs, .xsmall, xsmall {
   font-weight: 400;
   color: #363A41; }
 
-.font-secondary, .autocomplete-search > .product-list > .card > .label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .label, .autocomplete-search > .product-list > .panel > .label {
+.font-secondary, .autocomplete-search > .product-list > .media > .media-body > .label {
   font-weight: 400;
   color: #6C868E; }
 
-sm, .sm, .small, .autocomplete-search > .product-list > .card > .label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .label, .autocomplete-search > .product-list > .panel > .label, small {
+sm, .sm, .small, .autocomplete-search > .product-list > .media > .media-body > .label, small {
   font-size: 0.75rem;
   line-height: 1.1rem; }
 
@@ -6549,11 +6528,11 @@ xs, .xs, .xsmall, xsmall {
     color: #d4dfe2;
     background-color: #fff;
     border-color: #d4dfe2; }
-  .btn-action > .material-icons, .btn-action > .switch-input:after, .autocomplete-search > .product-list > .card.btn-action > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid.btn-action > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.btn-action > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.btn-action > .switch-input.label:after, .autocomplete-search > .product-list > .panel.btn-action > .switch-input.label:after {
+  .btn-action > .material-icons, .btn-action > .switch-input:after, .autocomplete-search > .product-list > .media > .media-body.btn-action > .switch-input.label:after {
     color: #25B9D7; }
   .btn-action:hover {
     color: #3ED2F0; }
-    .btn-action:hover > .material-icons, .btn-action:hover > .switch-input:after, .autocomplete-search > .product-list > .card.btn-action:hover > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid.btn-action:hover > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.btn-action:hover > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.btn-action:hover > .switch-input.label:after, .autocomplete-search > .product-list > .panel.btn-action:hover > .switch-input.label:after {
+    .btn-action:hover > .material-icons, .btn-action:hover > .switch-input:after, .autocomplete-search > .product-list > .media > .media-body.btn-action:hover > .switch-input.label:after {
       color: #3ED2F0; }
 
 .switch-input {
@@ -6595,7 +6574,7 @@ xs, .xs, .xsmall, xsmall {
       left: 25px;
       color: #25B9D7;
       transform: rotate(0deg); }
-  .switch-input.small, .autocomplete-search > .product-list > .card > .switch-input.label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label, .autocomplete-search > .product-list > .panel > .switch-input.label {
+  .switch-input.small, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label {
     height: 20px;
     width: 40px;
     position: relative;
@@ -6603,18 +6582,18 @@ xs, .xs, .xsmall, xsmall {
     display: inline-block;
     vertical-align: middle;
     margin: -2px 4px 0 0; }
-    .switch-input.small, .autocomplete-search > .product-list > .card > .switch-input.label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label, .autocomplete-search > .product-list > .panel > .switch-input.label, .switch-input.small:after, .autocomplete-search > .product-list > .card > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label:after, .autocomplete-search > .product-list > .panel > .switch-input.label:after {
+    .switch-input.small, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label, .switch-input.small:after, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after {
       background: #FFFFFF;
       border: 2px solid #BBCDD2;
       border-radius: 20px;
       box-sizing: border-box;
       color: #6C868E;
       transition: all 0.5s; }
-    .switch-input.small, .autocomplete-search > .product-list > .card > .switch-input.label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label, .autocomplete-search > .product-list > .panel > .switch-input.label {
+    .switch-input.small, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label {
       background: #FFBB00; }
-    .switch-input.small > input, .autocomplete-search > .product-list > .card > .switch-input.label > input, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label > input, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label > input, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label > input, .autocomplete-search > .product-list > .panel > .switch-input.label > input {
+    .switch-input.small > input, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label > input {
       display: none; }
-    .switch-input.small:after, .autocomplete-search > .product-list > .card > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label:after, .autocomplete-search > .product-list > .panel > .switch-input.label:after {
+    .switch-input.small:after, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after {
       display: block;
       content: 'close';
       height: 24px;
@@ -6627,9 +6606,9 @@ xs, .xs, .xsmall, xsmall {
       vertical-align: middle;
       text-align: center;
       font-size: 16px; }
-    .switch-input.small.-checked, .autocomplete-search > .product-list > .card > .switch-input.-checked.label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.-checked.label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.-checked.label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.-checked.label, .autocomplete-search > .product-list > .panel > .switch-input.-checked.label {
+    .switch-input.small.-checked, .autocomplete-search > .product-list > .media > .media-body > .switch-input.-checked.label {
       background: #25B9D7; }
-      .switch-input.small.-checked:after, .autocomplete-search > .product-list > .card > .switch-input.-checked.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.-checked.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.-checked.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.-checked.label:after, .autocomplete-search > .product-list > .panel > .switch-input.-checked.label:after {
+      .switch-input.small.-checked:after, .autocomplete-search > .product-list > .media > .media-body > .switch-input.-checked.label:after {
         content: 'check';
         left: 16px;
         color: #25B9D7;
@@ -6674,7 +6653,7 @@ xs, .xs, .xsmall, xsmall {
         color: #25B9D7;
         transform: rotate(0deg); }
 
-.btn > .material-icons, .btn > .switch-input:after, .autocomplete-search > .product-list > .card.btn > .switch-input.label:after, .autocomplete-search > .product-list > .module-item-wrapper-grid.btn > .switch-input.label:after, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid.btn > .switch-input.label:after, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper.btn > .switch-input.label:after, .autocomplete-search > .product-list > .panel.btn > .switch-input.label:after {
+.btn > .material-icons, .btn > .switch-input:after, .autocomplete-search > .product-list > .media > .media-body.btn > .switch-input.label:after {
   font-size: 1.25rem;
   vertical-align: -0.375rem;
   margin: -0.25rem 0; }
@@ -7098,17 +7077,17 @@ xs, .xs, .xsmall, xsmall {
 
 .autocomplete-search > .product-list {
   padding: 0; }
-  .autocomplete-search > .product-list > .card, .autocomplete-search > .product-list > .module-item-wrapper-grid, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper, .autocomplete-search > .product-list > .panel {
+  .autocomplete-search > .product-list > .media {
     margin-top: 0.3125rem;
     padding-right: 0.625rem; }
-    .autocomplete-search > .product-list > .card > .image, .autocomplete-search > .product-list > .module-item-wrapper-grid > .image, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .image, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .image, .autocomplete-search > .product-list > .panel > .image {
+    .autocomplete-search > .product-list > .media > .media-left > .image {
       margin: 0.3125rem;
       max-height: 2.5rem; }
-    .autocomplete-search > .product-list > .card > .label, .autocomplete-search > .product-list > .module-item-wrapper-grid > .label, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .label, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .label, .autocomplete-search > .product-list > .panel > .label {
+    .autocomplete-search > .product-list > .media > .media-body > .label {
       font-weight: 600; }
-    .autocomplete-search > .product-list > .card > .delete, .autocomplete-search > .product-list > .module-item-wrapper-grid > .delete, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .delete, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .delete, .autocomplete-search > .product-list > .panel > .delete {
-      line-height: 3.125rem; }
-      .autocomplete-search > .product-list > .card > .delete:hover, .autocomplete-search > .product-list > .module-item-wrapper-grid > .delete:hover, .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .delete:hover, .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .delete:hover, .autocomplete-search > .product-list > .panel > .delete:hover {
+    .autocomplete-search > .product-list > .media > .media-body > .delete {
+      line-height: 1.5625rem; }
+      .autocomplete-search > .product-list > .media > .media-body > .delete:hover {
         cursor: pointer; }
 
 .input-group .input-group-addon {
@@ -7233,7 +7212,7 @@ xs, .xs, .xsmall, xsmall {
     .dropdown-form .input-group-addon.search-bar button {
       background: transparent;
       border: none; }
-    .dropdown-form .input-group-addon.search-bar .material-icons, .dropdown-form .input-group-addon.search-bar .switch-input:after {
+    .dropdown-form .input-group-addon.search-bar .material-icons, .dropdown-form .input-group-addon.search-bar .switch-input:after, .dropdown-form .input-group-addon.search-bar .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after {
       vertical-align: bottom;
       margin-left: 0.3125rem;
       font-size: 1.125rem;
@@ -8316,13 +8295,7 @@ xs, .xs, .xsmall, xsmall {
   .subheader-quicknav .subheader-quicknav-item > i,
   .subheader-quicknav .subheader-quicknav-item .material-icons,
   .subheader-quicknav .subheader-quicknav-item .switch-input:after,
-  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .card > .switch-input.label:after,
-  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .module-item-wrapper-grid > .switch-input.label:after,
-  .subheader-quicknav .subheader-quicknav-item .module-addons-item-grid .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label:after, .module-addons-item-grid
-  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .module-addons-item-wrapper-grid > .switch-input.label:after,
-  .subheader-quicknav .subheader-quicknav-item .module-placeholders-wrapper .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label:after, .module-placeholders-wrapper
-  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .timeline-item-wrapper > .switch-input.label:after,
-  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .panel > .switch-input.label:after {
+  .subheader-quicknav .subheader-quicknav-item .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after {
     font-size: 1.875rem; }
 
 .progress[width^="0"] {

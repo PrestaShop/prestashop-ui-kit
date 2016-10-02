@@ -56,11 +56,11 @@
 .form-search[type=search] {
   background: $white url($search-icon) center no-repeat;
   border: solid 1px #ccc;
+  box-sizing: content-box;
   width: 16px;
   cursor: pointer;
   text-indent: 2.5rem;
 
-  @include box-sizing(content-box);
   @include border-radius(10em);
   @include transition( all .5s);
 

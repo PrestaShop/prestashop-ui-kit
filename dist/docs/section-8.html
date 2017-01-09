@@ -59,6 +59,8 @@
                             <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Progress bar</span></a></li>
                         </ul>
                         <ul class="kss-menu-child">
+                            <li class="kss-menu-item"><a href="#section-8.1"><span class="kss-ref">8.1</span><span class="kss-name">Simple pagination</span></a></li>
+                            <li class="kss-menu-item"><a href="#section-8.2"><span class="kss-ref">8.2</span><span class="kss-name">Multiple pagination</span></a></li>
                         </ul>
                     </nav>
 
@@ -69,17 +71,16 @@
                 <article class="kss-article">
                     <section id="section-8" class="kss-section kss-depth-1">
                         <h1 class="kss-title"><span class="kss-ref">8</span> Pagination</h1>
+
+
+                    </section>
+                    <section id="section-8.1" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">8.1</span> Simple pagination</h1>
                         <div class="kss-modifier-block">
                             <div class="kss-modifier kss-modifier-original">
                                 <div class="kss-modifier-example">
                                     <nav>
   <ul class="pagination">
-    <li class="page-item">
-    <a class="page-link" href="#" aria-label="Previous">
-        <i class="zmdi zmdi-chevron-left"></i>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
     <li class="page-item active">
      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
     </li>
@@ -87,9 +88,141 @@
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">4</a></li>
     <li class="page-item"><a class="page-link" href="#">5</a></li>
+  </ul>
+</nav>
+                                </div>
+                            </div>
+
+                            <div class="kss-markup">
+                                <pre><code class="lang-html">&lt;nav&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;page-item active&quot;&gt;
+     &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section id="section-8.2" class="kss-section kss-depth-2">
+                        <h1 class="kss-title"><span class="kss-ref">8.2</span> Multiple pagination</h1>
+                        <div class="kss-description">
+                            <script class="text/javascript">
+    $( document ).ready( function () {
+
+      var lng = $('.js-page-link').length;
+      var mid = Math.round(lng / 2);
+      var multi = '<li class="page-item js-multi"><span class="page-link">...</span></li>';
+      var displayNumber = $('.multi').data('display-number'); // Number of pages to display after the first
+      var current = 1;
+
+      if(lng > 6) {
+        $('.js-page-link').on('click', function(event) {
+          event.preventDefault();
+          $('.active').removeClass('active');
+          $(event.currentTarget).parent().addClass('active');
+          current = $(event.currentTarget).data('page');
+          checkCurrentPage(current);
+        });
+        checkCurrentPage(current);
+      }
+
+      $('.js-arrow').on('click', function(event) {
+        event.preventDefault();
+        if($(event.currentTarget).data('direction') === 'prev' && !$(event.currentTarget).parent().next().hasClass('active')) {
+          $('.active').removeClass('active').prev().addClass('active');
+        }
+        else if($(event.currentTarget).data('direction') === 'next' && !$(event.currentTarget).parent().prev().hasClass('active')) {
+          $('.active').removeClass('active').next().addClass('active');
+        }
+        if($(event.currentTarget).data('direction') === 'prev' && current === 1) {
+          return false;
+        }
+        current = $('.active .js-page-link').data('page');
+        checkCurrentPage(current);
+      });
+
+     function checkCurrentPage(current) {
+       $('.js-page-link').each(function(index, item) {
+          var dots = $('.js-multi');
+          if(current && index > displayNumber && index !== lng-1 && current < displayNumber) {
+            $(item).hide();
+          }
+          else if(index >= lng-1 && current === 1) {
+            $(item).parent().before(multi);
+          }
+          if(current > displayNumber + 1 && index === 0 && $('[data-page=1]').parent().next('.js-multi').length === 0) {
+            $(item).parent().after(multi);
+          }
+          if(current > displayNumber + 1 ) {
+            if(index >= current - 1 && index <= current + displayNumber) {
+              $(item).show();
+            }
+            else if(index !== 0 && index !== lng-1 && (lng - current) > displayNumber) {
+              $(item).hide();
+              if( $('.js-multi').get(1)) {
+                $('.js-multi').get(1).remove();
+              }
+            }
+            else if(current === lng){
+              $('[data-page='+lng+']').parent().prev('.js-multi').remove();
+              if(index <= displayNumber && index !==0) {
+                $(item).hide();
+              }
+              else {
+                $(item).show();
+              }
+            }
+          }
+          else {
+            if(index > displayNumber && index !== lng-1) {
+              $(item).hide();
+            }
+            else {
+              $(item).show();
+              if(index === 0 && dots.length !== 0) {
+                dots.remove();
+              }
+              else if(index === lng-1 && dots.length === 0 && current > 1) {
+                $(item).parent().before(multi);
+              }
+            }
+          }
+       });
+      }
+    });
+</script>
+                        </div>
+                        <div class="kss-modifier-block">
+                            <div class="kss-modifier kss-modifier-original">
+                                <div class="kss-modifier-example">
+                                    <nav class="row">
+  <ul class="multi pagination col-md-10" data-display-number="3">
     <li class="page-item">
-    <a class="page-link" href="#" aria-label="Next">
-        <i class="zmdi zmdi-chevron-right"></i>
+      <a class="page-link arrow js-arrow" href="#" aria-label="Previous" data-direction="prev">
+        <i class="material-icons">keyboard_arrow_left</i>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item active">
+     <a class="page-link js-page-link" href="#" data-page="1">1 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="2">2</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="3">3</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="4">4</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="5">5</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="6">6</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="7">7</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="8">8</a></li>
+    <li class="page-item"><a class="page-link js-page-link" href="#" data-page="9">9</a></li>
+    <li class="page-item">
+      <a class="page-link arrow js-arrow" href="#" aria-label="Next" data-direction="next">
+        <i class="material-icons">keyboard_arrow_right</i>
         <span class="sr-only">Next</span>
       </a>
     </li>
@@ -99,24 +232,28 @@
                             </div>
 
                             <div class="kss-markup">
-                                <pre><code class="lang-html">&lt;nav&gt;
-  &lt;ul class=&quot;pagination&quot;&gt;
+                                <pre><code class="lang-html">&lt;nav class=&quot;row&quot;&gt;
+  &lt;ul class=&quot;multi pagination col-md-10&quot; data-display-number=&quot;3&quot;&gt;
     &lt;li class=&quot;page-item&quot;&gt;
-    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;i class=&quot;zmdi zmdi-chevron-left&quot;&gt;&lt;/i&gt;
+      &lt;a class=&quot;page-link arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; data-direction=&quot;prev&quot;&gt;
+        &lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_left&lt;/i&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li class=&quot;page-item active&quot;&gt;
-     &lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+     &lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;1&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;5&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;6&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;7&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;8&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot; data-page=&quot;9&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
     &lt;li class=&quot;page-item&quot;&gt;
-    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;i class=&quot;zmdi zmdi-chevron-right&quot;&gt;&lt;/i&gt;
+      &lt;a class=&quot;page-link arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; data-direction=&quot;next&quot;&gt;
+        &lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_right&lt;/i&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;

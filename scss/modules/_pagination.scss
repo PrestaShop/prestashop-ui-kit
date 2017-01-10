@@ -1,14 +1,12 @@
 // Pagination
 //
+// Styleguide 8
+
+// Simple pagination
+//
 // Markup:
 // <nav>
 //   <ul class="pagination">
-//     <li class="page-item">
-//     <a class="page-link" href="#" aria-label="Previous">
-//         <i class="zmdi zmdi-chevron-left"></i>
-//         <span class="sr-only">Previous</span>
-//       </a>
-//     </li>
 //     <li class="page-item active">
 //      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
 //     </li>
@@ -16,19 +14,131 @@
 //     <li class="page-item"><a class="page-link" href="#">3</a></li>
 //     <li class="page-item"><a class="page-link" href="#">4</a></li>
 //     <li class="page-item"><a class="page-link" href="#">5</a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide 8.1
+
+// Multiple pagination
+//
+// Markup:
+// <nav class="row">
+//   <ul class="multi pagination col-md-10" data-display-number="3">
 //     <li class="page-item">
-//     <a class="page-link" href="#" aria-label="Next">
-//         <i class="zmdi zmdi-chevron-right"></i>
+//       <a class="page-link arrow js-arrow" href="#" aria-label="Previous" data-direction="prev">
+//         <i class="material-icons">keyboard_arrow_left</i>
+//         <span class="sr-only">Previous</span>
+//       </a>
+//     </li>
+//     <li class="page-item active">
+//      <a class="page-link js-page-link" href="#" data-page="1">1 <span class="sr-only">(current)</span></a>
+//     </li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="2">2</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="3">3</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="4">4</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="5">5</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="6">6</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="7">7</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="8">8</a></li>
+//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="9">9</a></li>
+//     <li class="page-item">
+//       <a class="page-link arrow js-arrow" href="#" aria-label="Next" data-direction="next">
+//         <i class="material-icons">keyboard_arrow_right</i>
 //         <span class="sr-only">Next</span>
 //       </a>
 //     </li>
 //   </ul>
 // </nav>
 //
-// Styleguide 8
+// <script class="text/javascript">
+//     $( document ).ready( function () {
+//
+//       var lng = $('.js-page-link').length;
+//       var mid = Math.round(lng / 2);
+//       var multi = '<li class="page-item js-multi"><span class="page-link">...</span></li>';
+//       var displayNumber = $('.multi').data('display-number'); // Number of pages to display after the first
+//       var current = 1;
+//
+//       if(lng > 6) {
+//         $('.js-page-link').on('click', function(event) {
+//           event.preventDefault();
+//           $('.active').removeClass('active');
+//           $(event.currentTarget).parent().addClass('active');
+//           current = $(event.currentTarget).data('page');
+//           checkCurrentPage(current);
+//         });
+//         checkCurrentPage(current);
+//       }
+//
+//       $('.js-arrow').on('click', function(event) {
+//         event.preventDefault();
+//         if($(event.currentTarget).data('direction') === 'prev' && !$(event.currentTarget).parent().next().hasClass('active')) {
+//           $('.active').removeClass('active').prev().addClass('active');
+//         }
+//         else if($(event.currentTarget).data('direction') === 'next' && !$(event.currentTarget).parent().prev().hasClass('active')) {
+//           $('.active').removeClass('active').next().addClass('active');
+//         }
+//         if($(event.currentTarget).data('direction') === 'prev' && current === 1) {
+//           return false;
+//         }
+//         current = $('.active .js-page-link').data('page');
+//         checkCurrentPage(current);
+//       });
+//
+//      function checkCurrentPage(current) {
+//        $('.js-page-link').each(function(index, item) {
+//           var dots = $('.js-multi');
+//           if(current && index > displayNumber && index !== lng-1 && current < displayNumber) {
+//             $(item).hide();
+//           }
+//           else if(index >= lng-1 && current === 1) {
+//             $(item).parent().before(multi);
+//           }
+//           if(current > displayNumber + 1 && index === 0 && $('[data-page=1]').parent().next('.js-multi').length === 0) {
+//             $(item).parent().after(multi);
+//           }
+//           if(current > displayNumber + 1 ) {
+//             if(index >= current - 1 && index <= current + displayNumber) {
+//               $(item).show();
+//             }
+//             else if(index !== 0 && index !== lng-1 && (lng - current) > displayNumber) {
+//               $(item).hide();
+//               if( $('.js-multi').get(1)) {
+//                 $('.js-multi').get(1).remove();
+//               }
+//             }
+//             else if(current === lng){
+//               $('[data-page='+lng+']').parent().prev('.js-multi').remove();
+//               if(index <= displayNumber && index !==0) {
+//                 $(item).hide();
+//               }
+//               else {
+//                 $(item).show();
+//               }
+//             }
+//           }
+//           else {
+//             if(index > displayNumber && index !== lng-1) {
+//               $(item).hide();
+//             }
+//             else {
+//               $(item).show();
+//               if(index === 0 && dots.length !== 0) {
+//                 dots.remove();
+//               }
+//               else if(index === lng-1 && dots.length === 0 && current > 1) {
+//                 $(item).parent().before(multi);
+//               }
+//             }
+//           }
+//        });
+//       }
+//     });
+// </script>
+//
+// Styleguide 8.2
 
 .page-item {
-
   &.active .page-link {
     @include plain-hover-focus {
       z-index: 2;
@@ -37,15 +147,21 @@
       background-color: $white;
     }
   }
-
+  .arrow {
+      display: inline-block;
+      line-height: 2;
+  }
 }
 
 .page-link {
     font-weight: 600;
     color: $gray-medium;
     border: none;
-
-    @include hover-focus {
+    cursor: pointer;
+    @include plain-hover-focus {
+        background-color: $white;
+    }
+    @include hover-focus:not(span) {
         text-decoration: none;
         color: $primary;
         background-color: $white;

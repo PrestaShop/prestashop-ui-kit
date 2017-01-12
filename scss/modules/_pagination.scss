@@ -22,25 +22,25 @@
 // Multiple pagination
 //
 // Markup:
-// <nav class="row">
-//   <ul class="multi pagination col-md-10" data-display-number="3">
+// <nav>
+//   <ul class="multi pagination" data-display-number="3">
 //     <li class="page-item">
 //       <a class="page-link arrow js-arrow" href="#" aria-label="Previous" data-direction="prev">
 //         <i class="material-icons">keyboard_arrow_left</i>
 //         <span class="sr-only">Previous</span>
 //       </a>
 //     </li>
-//     <li class="page-item active">
-//      <a class="page-link js-page-link" href="#" data-page="1">1 <span class="sr-only">(current)</span></a>
+//     <li class="page-item active" data-page-index="1">
+//      <a class="page-link js-page-link" href="#">1 <span class="sr-only">(current)</span></a>
 //     </li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="2">2</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="3">3</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="4">4</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="5">5</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="6">6</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="7">7</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="8">8</a></li>
-//     <li class="page-item"><a class="page-link js-page-link" href="#" data-page="9">9</a></li>
+//     <li class="page-item" data-page-index="2"><a class="page-link js-page-link" href="#">2</a></li>
+//     <li class="page-item" data-page-index="3"><a class="page-link js-page-link" href="#">3</a></li>
+//     <li class="page-item" data-page-index="4"><a class="page-link js-page-link" href="#">4</a></li>
+//     <li class="page-item" data-page-index="5"><a class="page-link js-page-link" href="#">5</a></li>
+//     <li class="page-item" data-page-index="6"><a class="page-link js-page-link" href="#">6</a></li>
+//     <li class="page-item" data-page-index="7"><a class="page-link js-page-link" href="#">7</a></li>
+//     <li class="page-item" data-page-index="8"><a class="page-link js-page-link" href="#">8</a></li>
+//     <li class="page-item" data-page-index="9"><a class="page-link js-page-link" href="#">9</a></li>
 //     <li class="page-item">
 //       <a class="page-link arrow js-arrow" href="#" aria-label="Next" data-direction="next">
 //         <i class="material-icons">keyboard_arrow_right</i>
@@ -53,24 +53,23 @@
 // <script class="text/javascript">
 //     $( document ).ready( function () {
 //
-//       var lng = $('.js-page-link').length;
-//       var mid = Math.round(lng / 2);
+//       var lng = $('.multi .js-page-link').length;
 //       var multi = '<li class="page-item js-multi"><span class="page-link">...</span></li>';
 //       var displayNumber = $('.multi').data('display-number'); // Number of pages to display after the first
-//       var current = 1;
 //
 //       if(lng > 6) {
-//         $('.js-page-link').on('click', function(event) {
+//         $('.multi .js-page-link').on('click', function(event) {
 //           event.preventDefault();
-//           $('.active').removeClass('active');
+//           $('.multi .active').removeClass('active');
 //           $(event.currentTarget).parent().addClass('active');
-//           current = $(event.currentTarget).data('page');
+//           current = $(event.currentTarget).parent().data('page-index');
 //           checkCurrentPage(current);
 //         });
-//         checkCurrentPage(current);
+//         checkCurrentPage(lng, multi, displayNumber);
 //       }
 //
 //       $('.js-arrow').on('click', function(event) {
+//         var current = $('.multi.pagination:first .active').data('page-index');
 //         event.preventDefault();
 //         if($(event.currentTarget).data('direction') === 'prev' && !$(event.currentTarget).parent().next().hasClass('active')) {
 //           $('.active').removeClass('active').prev().addClass('active');
@@ -81,34 +80,36 @@
 //         if($(event.currentTarget).data('direction') === 'prev' && current === 1) {
 //           return false;
 //         }
-//         current = $('.active .js-page-link').data('page');
-//         checkCurrentPage(current);
+//         checkCurrentPage(lng, multi, displayNumber);
 //       });
 //
 //      function checkCurrentPage(current) {
+//        var current = $('.multi.pagination:first .active').data('page-index');
+//        var prevDots = $('[data-page-index=1]').next('.js-multi');
+//        var nextDots = $('[data-page-index='+lng+']').prev('.js-multi');
+//
 //        $('.js-page-link').each(function(index, item) {
-//           var dots = $('.js-multi');
 //           if(current && index > displayNumber && index !== lng-1 && current < displayNumber) {
 //             $(item).hide();
 //           }
-//           else if(index >= lng-1 && current === 1) {
+//           else if(index === lng-1 && current === 1 && nextDots.length ===0) {
 //             $(item).parent().before(multi);
 //           }
-//           if(current > displayNumber + 1 && index === 0 && $('[data-page=1]').parent().next('.js-multi').length === 0) {
+//           if(current >= displayNumber + 1 && index === 0 && prevDots.length === 0) {
 //             $(item).parent().after(multi);
 //           }
-//           if(current > displayNumber + 1 ) {
+//           if(current >= displayNumber + 1 ) {
 //             if(index >= current - 1 && index <= current + displayNumber) {
 //               $(item).show();
 //             }
-//             else if(index !== 0 && index !== lng-1 && (lng - current) > displayNumber) {
+//             else if(index !== 0 && index !== lng-1 && (lng-1 - current) > displayNumber) {
 //               $(item).hide();
-//               if( $('.js-multi').get(1)) {
-//                 $('.js-multi').get(1).remove();
+//               if(nextDots.length) {
+//                 nextDots.remove();
 //               }
 //             }
 //             else if(current === lng){
-//               $('[data-page='+lng+']').parent().prev('.js-multi').remove();
+//               nextDots.remove();
 //               if(index <= displayNumber && index !==0) {
 //                 $(item).hide();
 //               }
@@ -123,10 +124,10 @@
 //             }
 //             else {
 //               $(item).show();
-//               if(index === 0 && dots.length !== 0) {
-//                 dots.remove();
+//               if(index === 0 && prevDots.length !== 0) {
+//                 prevDots.remove();
 //               }
-//               else if(index === lng-1 && dots.length === 0 && current > 1) {
+//               else if(index === lng-1 && nextDots.length === 0 && current > 1) {
 //                 $(item).parent().before(multi);
 //               }
 //             }

@@ -7979,7 +7979,7 @@ xs, .xs, .xsmall, xsmall {
       padding: 0.5rem;
       margin-left: -0.125rem; }
     .module-item-wrapper-grid .module-quick-action-grid .onclick, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid .onclick, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid .onclick {
-      margin-bottom: -10px; }
+      margin-bottom: -7px; }
   .module-item-wrapper-grid .module-quick-description-grid, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-description-grid, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-description-grid {
     margin: 15px 0;
     height: 100px; }

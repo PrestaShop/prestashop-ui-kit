@@ -110,7 +110,7 @@
 //             }
 //             else if(current === lng){
 //               nextDots.remove();
-//               if(index <= displayNumber && index !==0) {
+//               if(index < displayNumber && index !==0) {
 //                 $(item).hide();
 //               }
 //               else {

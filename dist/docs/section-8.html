@@ -151,12 +151,6 @@
        var nextDots = $('[data-page-index='+lng+']').prev('.js-multi');
 
        $('.js-page-link').each(function(index, item) {
-          if(current && index > displayNumber && index !== lng-1 && current < displayNumber) {
-            $(item).hide();
-          }
-          else if(index === lng-1 && current === 1 && nextDots.length ===0) {
-            $(item).parent().before(multi);
-          }
           if(current >= displayNumber + 1 && index === 0 && prevDots.length === 0) {
             $(item).parent().after(multi);
           }
@@ -179,6 +173,12 @@
                 $(item).show();
               }
             }
+          }
+          else if(current && index > displayNumber && index !== lng-1 && current < displayNumber) {
+            $(item).hide();
+          }
+          else if(index === lng-1 && current === 1 && nextDots.length ===0) {
+            $(item).parent().before(multi);
           }
           else {
             if(index > displayNumber && index !== lng-1) {
@@ -205,7 +205,7 @@
                                     <nav>
   <ul class="multi pagination" data-display-number="3">
     <li class="page-item">
-      <a class="page-link arrow js-arrow" href="#" aria-label="Previous" data-direction="prev">
+      <a class="pull-left arrow js-arrow" href="#" aria-label="Previous" data-direction="prev">
         <i class="material-icons">keyboard_arrow_left</i>
         <span class="sr-only">Previous</span>
       </a>
@@ -222,7 +222,7 @@
     <li class="page-item" data-page-index="8"><a class="page-link js-page-link" href="#">8</a></li>
     <li class="page-item" data-page-index="9"><a class="page-link js-page-link" href="#">9</a></li>
     <li class="page-item">
-      <a class="page-link arrow js-arrow" href="#" aria-label="Next" data-direction="next">
+      <a class="pull-left arrow js-arrow" href="#" aria-label="Next" data-direction="next">
         <i class="material-icons">keyboard_arrow_right</i>
         <span class="sr-only">Next</span>
       </a>
@@ -236,7 +236,7 @@
                                 <pre><code class="lang-html">&lt;nav&gt;
   &lt;ul class=&quot;multi pagination&quot; data-display-number=&quot;3&quot;&gt;
     &lt;li class=&quot;page-item&quot;&gt;
-      &lt;a class=&quot;page-link arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; data-direction=&quot;prev&quot;&gt;
+      &lt;a class=&quot;pull-left arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; data-direction=&quot;prev&quot;&gt;
         &lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_left&lt;/i&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
       &lt;/a&gt;
@@ -253,7 +253,7 @@
     &lt;li class=&quot;page-item&quot; data-page-index=&quot;8&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
     &lt;li class=&quot;page-item&quot; data-page-index=&quot;9&quot;&gt;&lt;a class=&quot;page-link js-page-link&quot; href=&quot;#&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
     &lt;li class=&quot;page-item&quot;&gt;
-      &lt;a class=&quot;page-link arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; data-direction=&quot;next&quot;&gt;
+      &lt;a class=&quot;pull-left arrow js-arrow&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; data-direction=&quot;next&quot;&gt;
         &lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_right&lt;/i&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
       &lt;/a&gt;

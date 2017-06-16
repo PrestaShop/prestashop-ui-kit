@@ -1,3 +1,75 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
 /*!
 * Prestige v1.0.0 (http://getbootstrap.com)
 * Copyright 2015-2015
@@ -19,10 +91,10 @@
   *
   * @TODO Add templateResult
   */
-  var initSelect2 = function() {
+  var initSelect2 = function () {
     jQuery('[data-toggle="select2"]').each(function () {
 
-      var newObj = {"minimumResultsForSearch": -1};
+      var newObj = { "minimumResultsForSearch": -1 };
 
       for (var attr in $(this).data()) {
         if (!attr.localeCompare('templateresult')) {
@@ -38,38 +110,38 @@
 
       jQuery(this).select2(newObj);
     });
-  }
+  };
 
   /**
   * Enable all toggle buttons
   */
-  var initToggleButtons = function() {
-    jQuery('[data-toggle="switch"]').each(function() {
+  var initToggleButtons = function () {
+    jQuery('[data-toggle="switch"]').each(function () {
       var checkbox = jQuery(this);
       if (checkbox.data('activated') == undefined) {
         checkbox.data('activated', true);
 
         var baseClass = checkbox.prop('checked') ? '-checked' : '';
 
-        checkbox.wrap('<div class="switch-input '+baseClass+'"></div>');
+        checkbox.wrap('<div class="switch-input ' + baseClass + '"></div>');
         var parent = checkbox.parent();
         parent.addClass(checkbox.attr('class'));
 
-        checkbox.on('change', function() {
+        checkbox.on('change', function () {
           parent.toggleClass('-checked', checkbox.prop('checked'));
         });
 
-        parent.click(function(event) {
-          if (event.srcElement == parent[0] || event.srcElement == undefined) {
+        parent.click(function (event) {
+          if (event.srcElement == parent[0] || event.srcElement == undefined) {
             checkbox.prop('checked', !checkbox.prop('checked'));
             return false;
           }
         });
       }
     });
-  }
+  };
 
-  var initAlerts = function() {
+  var initAlerts = function () {
     jQuery('.alert-text').each(function () {
       var $this = jQuery(this);
       var height = $this.height();
@@ -80,24 +152,22 @@
       if (Math.ceil(rows) > lines) {
         var actualHtml = $this.html();
         var actualClass = $this.parent().attr('class');
-        $this.parent().addClass( "alert-drop" );
+        $this.parent().addClass("alert-drop");
 
-        if (typeof($this.data('title')) != 'undefined' && $this.data('title') !== '') {
+        if (typeof $this.data('title') != 'undefined' && $this.data('title') !== '') {
           $this.html('<b>' + $this.data('title') + '</b>');
         } else {
           $this.html('<b>Read More</b>');
         }
         $this.css('cursor', 'pointer');
-        $this.parent().after(
-          '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
-        );
+        $this.parent().after('<div class="' + actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>');
         jQuery('.alert-down-text').html(actualHtml);
       }
     });
 
-    $('.alert-drop').each(function(){
+    $('.alert-drop').each(function () {
       var $this = jQuery(this);
-      $this.click(function(){
+      $this.click(function () {
         var radius = $this.css('border-radius');
         if ($this.next('div').is(':hidden')) {
           $this.css('border-radius', '0');
@@ -109,23 +179,23 @@
         $this.next('div').slideToggle(400);
       });
     });
-  }
+  };
 
-  var initToolTips = function() {
+  var initToolTips = function () {
     jQuery('.tooltip-error').tooltip({
       template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
     });
     jQuery('[data-toggle="tooltip"]').tooltip();
     jQuery('[data-toggle="popover"]').popover();
-  }
+  };
 
-  var initSearchBar = function() {
-    $('.js-form-search').on('focusin', function() {
-       if (!$('.js-dropdown-form').hasClass('expanded')) {
-         $('.js-dropdown-form').addClass('expanded');
-       }
-     });
-  }
+  var initSearchBar = function () {
+    $('.js-form-search').on('focusin', function () {
+      if (!$('.js-dropdown-form').hasClass('expanded')) {
+        $('.js-dropdown-form').addClass('expanded');
+      }
+    });
+  };
 
   global.prestaShopUiKit = {
 
@@ -134,13 +204,13 @@
     *
     * Initilialize some jQuery components, settings and existings elements.
     */
-    init: function() {
-      jQuery(function(){
+    init: function () {
+      jQuery(function () {
 
         // Add a jQuery listener to the checkbox change value
         jQuery.propHooks.checked = {
-          set: function(elem, value, name) {
-            var ret = (elem[ name ] = value);
+          set: function (elem, value, name) {
+            var ret = elem[name] = value;
             $(elem).trigger('change');
             return ret;
           }
@@ -160,21 +230,17 @@
       });
     },
 
-    initSelects: function() {
+    initSelects: function () {
       initSelect2();
     },
 
-    initToolTips: function() {
+    initToolTips: function () {
       initToolTips();
     }
   };
 
   global.prestaShopUiKit.init();
-
 })(typeof window !== 'undefined' ? window : this, $);
-
-
-
 
 // Other initializations
 // @TODO: Move the needed initializations into the object
@@ -197,11 +263,11 @@ $(function () {
   // Spinner
   // @TODO: Add addEventListener, prototype, callback
   // 1.0.0
-  $.fn.psdwl = function(_config) {
+  $.fn.psdwl = function (_config) {
     var config = null;
 
     // Default Configuration
-    var defaultConfig =  {
+    var defaultConfig = {
       hover: 'install',
       validate: '<i class="material-icons">check</i>',
       text: 'default',
@@ -217,7 +283,7 @@ $(function () {
       psdwl.attr('class', value);
     }
 
-    if(typeof($(psdwl.selector).html()) != "undefined" && $(psdwl.selector).html() !== '') {
+    if (typeof $(psdwl.selector).html() != "undefined" && $(psdwl.selector).html() !== '') {
       config.text = $(psdwl.selector).text();
     }
 
@@ -235,13 +301,13 @@ $(function () {
 
     psdwl.hover(function () {
       psdwl.html(config.hover);
-    }, function() {
+    }, function () {
       psdwl.html(config.text);
     });
 
-    psdwl.click(function() {
+    psdwl.click(function () {
       psdwl.css('border-left-color', psdwl.css('border-color'));
-      psdwl.addClass( 'onclick' );
+      psdwl.addClass('onclick');
       psdwl.unbind('mouseenter').unbind('mouseleave').unbind('click');
       var nw = parseInt(width, 10);
       psdwl.css({
@@ -250,13 +316,13 @@ $(function () {
         'margin-right': nw / 4
       });
 
-      setTimeout(function() {
-        psdwl.removeClass( "onclick" );
+      setTimeout(function () {
+        psdwl.removeClass("onclick");
         psdwl.css({
           'margin-left': '',
           'margin-right': '',
           'width': width,
-          'border-left-color' : ''
+          'border-left-color': ''
         });
         psdwl.html(config.validate);
 
@@ -264,9 +330,24 @@ $(function () {
           var value = psdwl.attr('class').replace('-reverse', '');
           psdwl.attr('class', value);
         }
-      }, config.time );
-
+      }, config.time);
     });
-
   };
 });
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
+
+
+/***/ })
+/******/ ]);

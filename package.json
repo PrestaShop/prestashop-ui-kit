@@ -29,6 +29,7 @@
     "file-loader": "^0.11.2",
     "material-design-icons": "^3.0.1",
     "node-sass": "^4.5.3",
+    "notosans-fontface": "^1.0.1",
     "postcss-cssnext": "^2.11.0",
     "postcss-loader": "^2.0.6",
     "pstagger": "git+https://github.com/PrestaShop/pstagger.git",

@@ -119,10 +119,10 @@ $display4-weight:                             $font-weight-normal;
 
 $font-weight-url:                             $font-weight-semibold;
 
-$font-family-sans-serif:                      Open Sans, sans-serif;
-$font-family-serif:                           Open Sans, serif;
-$font-family-monospace:                       Open Sans, monospace;
-$font-family-base:                            Open Sans, sans-serif;
+$font-family-sans-serif:                      Noto Sans, sans-serif;
+$font-family-serif:                           Noto Sans, serif;
+$font-family-monospace:                       Noto Sans, monospace;
+$font-family-base:                            Noto Sans, sans-serif;
 
 $headings-font-family:                        $font-family-base;
 
@@ -996,3 +996,5 @@ $pre-bg:                                      #f7f7f9 !default;
 $pre-color:                                   $gray-dark !default;
 $pre-border-color:                            #ccc !default;
 $pre-scrollable-max-height:                   340px !default;
+
+$notosans-fontface-path:                      '~notosans-fontface/fonts';

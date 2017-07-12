@@ -7238,16 +7238,22 @@ xs, .xs, .xsmall, xsmall {
 
 .ps-dropdown {
   font-size: 1em;
-  border: #BBCDD2 1px solid;
   padding: .3em .5em;
+  background: #FFFFFF;
+  width: 100%;
   cursor: pointer; }
+  .ps-dropdown.bordered {
+    border: #BBCDD2 1px solid; }
   .ps-dropdown .arrow-down {
     font-size: 1.8em;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #6C868E; }
   .ps-dropdown > .ps-dropdown-menu {
+    z-index: 1;
     width: 100%;
-    border-radius: 0; }
+    border-radius: 0;
+    min-width: 300px; }
     .ps-dropdown > .ps-dropdown-menu .dropdown-item {
       cursor: pointer;
       display: -webkit-box;

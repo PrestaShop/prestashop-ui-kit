@@ -33,7 +33,7 @@
 //
 //
 // Markup:
-// <div class="ps-dropdown dropdown open">
+// <div class="ps-dropdown bordered dropdown open">
 //   <div id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 //     <span class="js-selected-item selected-item">Categories</span>
 //     <i class="material-icons arrow-down pull-right">keyboard_arrow_down</i>
@@ -64,18 +64,24 @@
 
 .ps-dropdown{
   font-size: 1em;
-  border:$gray-light 1px solid;
   padding: .3em .5em;
+  background: $white;
+  width: 100%;
   cursor: pointer;
+  &.bordered {
+    border:$gray-light 1px solid;
+  }
   .arrow-down{
     font-size: 1.8em;
     position: relative;
     cursor: pointer;
+    color: $gray-medium;
   }
-  > .ps-dropdown-menu{
+  > .ps-dropdown-menu {
+    z-index:1;
     width: 100%;
     border-radius: 0;
-
+    min-width: 300px;
     .dropdown-item{
       cursor: pointer;
       @include display(flex);

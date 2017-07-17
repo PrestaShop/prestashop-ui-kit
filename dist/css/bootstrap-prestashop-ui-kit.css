@@ -7241,6 +7241,7 @@ xs, .xs, .xsmall, xsmall {
   padding: .3em .5em;
   background: #FFFFFF;
   width: 100%;
+  line-height: 1.7rem;
   cursor: pointer; }
   .ps-dropdown.bordered {
     border: #BBCDD2 1px solid; }

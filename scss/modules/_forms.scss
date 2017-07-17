@@ -1,29 +1,3 @@
-// Forms
-//
-// Styleguide 4
-
-// Inputs (width build on grid)
-//
-// Remember, since Bootstrap utilizes the HTML5 doctype, all inputs must have a type attribute.
-//
-// Markup:
-// <fieldset class="form-group">
-// <label class="form-control-label" for="exampleInput1">Input</label>
-//  <input type="text" class="form-control" {{modifier_class}}></input>
-// </fieldset>
-// Markup:
-// <fieldset class="form-group">
-// <label class="form-control-label" for="exampleInput2">Input - Placeholder</label>
-//  <input type="text" class="form-control" placeholder="Wake me up!"></input>
-// </fieldset>
-// Markup:
-// <fieldset class="form-group">
-// <label class="form-control-label" for="exampleInput3">Input - edit</label>
-//  <input type="text" class="form-control edit"></input>
-// </fieldset>
-//
-// Styleguide 4.1
-
 .form-group {
   .form-control-label {
     color: $gray-medium;
@@ -50,20 +24,6 @@
 .search {
   @include ps-form-icon-right($search-icon);
 }
-
-// Form validation states
-//
-// success - Success
-// warning - Warning
-// danger - Error
-//
-// Markup:
-// <div class="form-group has-{{modifier_class}}">
-//  <label class="form-control-label" for="input{{modifier_class}}">Input {{modifier_class}}</label>
-//  <input type="text" class="form-control form-control-{{modifier_class}}" id="input{{modifier_class}}">
-// </div>
-//
-// Styleguide 4.2
 
 .has-success {
   .form-control-success {
@@ -94,54 +54,6 @@
     color: $brand-danger;
   }
 }
-
-// Select (Bootstrap)
-//
-// Markup:
-// <select class="c-select {{modifier_class}}">
-//   <option selected>Open this select menu</option>
-//   <option value="1">One</option>
-//   <option value="2">Two</option>
-//   <option value="3">Three</option>
-// </select>
-//
-// Styleguide 4.3
-
-// Dropdown
-//
-// Markup:
-// <div class="row">
-// <div class="col-md-6">
-// <select data-toggle="select2">
-//   <option selected>Open this select menu</option>
-//   <option value="1">One</option>
-//   <option value="2">Two</option>
-//   <option value="3">Three</option>
-// </select>
-// </div>
-// </div>
-//
-// Styleguide 4.4
-
-// Autocomplete search with items selected
-//
-// Markup:
-// <div class="autocomplete-search">
-//   <input type="text" class="form-control search" placeholder="Search and add a related product" autocomplete="off">
-//   <ul class="product-list">
-//     <li class="media">
-//       <div class="media-left">
-//         <img class="media-object image" src="./img/autocomplete-seach.png">
-//       </div>
-//       <div class="media-body media-middle">
-//         <span class="label">Faded Short Sleeves T-shirt (ref: demo_1)</span>
-//         <i class="material-icons delete">clear</i>
-//       </div>
-//     </li>
-//   </ul>
-// </div>
-//
-// Styleguide 4.5
 
 .select2-container--prestakit {
   display: block;
@@ -570,10 +482,6 @@
 .form-inline .select2-container--prestakit {
   display: inline-block;
 }
-
-//
-// Help boxes
-//
 
 $help-box-size: 16px;
 

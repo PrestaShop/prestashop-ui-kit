@@ -1,36 +1,3 @@
-// Content
-//
-// Styleguide 1
-
-// Headings
-//
-// Heading 1
-// Markup:
-// <h1> The quick brown fox jumps over the lazy dog </h1>
-// Heading 2
-// Markup:
-// <h2> The quick brown fox jumps over the lazy dog </h2>
-// Heading 3
-// Markup:
-// <h3> The quick brown fox jumps over the lazy dog </h3>
-// Heading 4
-// Markup:
-// <h4> The quick brown fox jumps over the lazy dog </h4>
-//
-// Styleguide 1.1
-
-// Paragraphs
-//
-// p - Normal
-// small - Small Text
-// xsmall - Extra Small Text
-//
-// Markup:
-// <p class="{{modifier_class}}"> Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget! <a class="url" href="#"> And this is a link</a></p>
-// <p class="{{modifier_class}} font-secondary">Enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget!<a class="url" href="#"> And this is a link</a></p>
-//
-// Styleguide 1.2
-
 h1 {
   font-weight: $font-weight-h1;
   color: $font-color-h1;

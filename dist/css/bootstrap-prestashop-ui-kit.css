@@ -8806,7 +8806,3 @@ xs, .xs, .xsmall, xsmall {
 
 textarea:focus:focus, input[type="text"]:focus:focus, input[type="password"]:focus:focus, input[type="datetime"]:focus:focus, input[type="datetime-local"]:focus:focus, input[type="date"]:focus:focus, input[type="month"]:focus:focus, input[type="time"]:focus:focus, input[type="week"]:focus:focus, input[type="number"]:focus:focus, input[type="email"]:focus:focus, input[type="url"]:focus:focus, input[type="search"]:focus:focus, input[type="tel"]:focus:focus, input[type="color"]:focus:focus, .uneditable-input:focus:focus {
   background-color: #FAFBFC; }
-
-/* .btn.btn-primary { */
-/*     @extend .btn-primary; */
-/* } */

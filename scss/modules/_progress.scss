@@ -1,17 +1,3 @@
-// Progress bar
-//
-// Styleguide 18
-
-// Light
-//
-// Markup:
-// <progress class="progress progress-primary" value="25" max="100">25%</progress>
-// <progress class="progress progress-primary" value="50" max="100">50%</progress>
-// <progress class="progress progress-primary" value="75" max="100">75%</progress>
-// <progress class="progress progress-primary" value="100" max="100">100%</progress>
-//
-// Styleguide 18.1
-
 .progress[width^="0"] {
   min-width: 2rem;
   color: $gray-light;
@@ -54,16 +40,6 @@
     border-radius: $progress-border-radius;
   }
 }
-
-// Dark
-//
-// Markup:
-// <progress class="progress progress-dark" value="25" max="100">25%</progress>
-// <progress class="progress progress-dark" value="50" max="100">50%</progress>
-// <progress class="progress progress-dark" value="75" max="100">75%</progress>
-// <progress class="progress progress-dark" value="100" max="100">100%</progress>
-//
-// Styleguide 18.2
 
 .progress-dark {
   @include progress-variant($progress-bar-bg);

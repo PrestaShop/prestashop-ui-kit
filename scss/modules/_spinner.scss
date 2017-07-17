@@ -1,16 +1,3 @@
-// Spinner
-//
-// Styleguide 11
-
-// Loading
-//
-// Dynamic Mode
-//
-// Markup:
-// <div class="loading-spinner"><div class="dot1"></div><div class="dot2"></div><div class="dot3"></div></div>
-//
-// Styleguide 11.1
-
 .loading-spinner {
   position: absolute;
 }
@@ -182,35 +169,6 @@
   100% {
   }
 }
-
-// Download
-//
-// Static Mode
-// <div class="row">
-// <div class="col-md-3"><button class="btn btn-primary-reverse btn-lg unbind">€ 199.99</button></div>
-// <div class="col-md-3"><button class="btn btn-primary btn-lg unbind">install</button></div>
-// <div class="col-md-3"><button class="btn btn-primary-reverse onclick btn-lg unbind"></button></div>
-// <div class="col-md-3"><button style="width: 94px" class="btn btn-primary btn-lg unbind"><i class="material-icons">check</i></button></div>
-// </div>
-//
-// Dynamic Mode
-//
-// Markup:
-// <div class="row">
-// <div style="text-align:center;" class="col-md-6"><button id="psdwl" class="btn btn-primary btn-lg">€ 199,99</button></div>
-// <div style="text-align:center;" class="col-md-6"><button id="psdwl-2" class="btn btn-primary btn-lg"></button></div>
-// </div>
-// <script class="text/javascript">
-//     $( document ).ready( function () {
-//     $("#psdwl").psdwl({});   $("#psdwl-2").psdwl({
-//                                text: '€199,99',
-//                                hover: 'discover',
-//                                default: false
-//                              });
-//      });
-// </script>
-//
-// Styleguide 11.2
 
 .unbind {
   margin-left: 15%;

@@ -1,34 +1,3 @@
-// Modals
-//
-// Markup:
-// <!-- Button trigger modal -->
-// <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-//   Launch demo modal
-// </button>
-// <!-- Modal -->
-// <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-//   <div class="modal-dialog" role="document">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//           <span aria-hidden="true">&times;</span>
-//         </button>
-//         <h4 class="modal-title" id="myModalLabel">Lorem ipsum</h4>
-//       </div>
-//       <div class="modal-body">
-//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui sem, egestas non luctus et, semper sed risus. Etiam vel quam et eros pharetra volutpat. Sed faucibus hendrerit diam vitae hendrerit.
-//       <br/><br/>Donec mollis pretium ex luctus molestie. Pellentesque imperdiet libero eget metus gravida dictum.
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-tertiary-outline btn-lg" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary btn-lg">Save changes</button>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-//
-// Styleguide 9
-
 .modal-content {
   padding: 12px;
 }

@@ -1,20 +1,3 @@
-// Buttons
-//
-// Styleguide 3
-
-// Base styles
-//
-// Markup:
-// <button type="button" class="btn btn-primary">Primary</button>
-// <button type="button" class="btn btn-secondary">Secondary</button>
-// <button type="button" class="btn btn-tertiary">Tertiary</button>
-// <button type="button" class="btn btn-success">Success</button>
-// <button type="button" class="btn btn-warning">Warning</button>
-// <button type="button" class="btn btn-danger">Danger</button>
-// <button type="button" class="btn btn-invisible"><i class="material-icons">cake</i> The cake is a lie</button>
-//
-// Styleguide 3.1
-
 .btn-primary {
   @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border, $primary-hover);
 }
@@ -46,18 +29,6 @@
 .btn-invisible {
   @include ps-button-variant($gray-medium, rgba($white, 0), rgba($gray-light, 0), $gray-light);
 }
-
-// Outline Styles
-//
-// Markup:
-// <button type="button" class="btn btn-primary-outline">Primary</button>
-// <button type="button" class="btn btn-secondary-outline">Secondary</button>
-// <button type="button" class="btn btn-tertiary-outline">Tertiary</button>
-// <button type="button" class="btn btn-success-outline">Success</button>
-// <button type="button" class="btn btn-warning-outline">Warning</button>
-// <button type="button" class="btn btn-danger-outline">Danger</button>
-//
-// Styleguide 3.2
 
 .btn-primary-outline {
   @include ps-button-outline-variant($btn-primary-bg, $primary-hover);
@@ -119,20 +90,6 @@
   @include ps-button-reverse($btn-danger-bg, $danger-hover);
 }
 
-// Sizes
-//
-// Add .btn-lg or .btn-sm for additional sizes.
-//
-// .btn-lg      - Large Button.
-// .btn-sm      - Small Button.
-// .btn-block   - Block Button.
-//
-// Markup:
-// <button type="button" class="btn btn-primary {{modifier_class}}">Primary Button</button>
-// <button type="button" class="btn btn-primary-outline {{modifier_class}}">Primary Button</button>
-//
-// Styleguide 3.4
-
 .btn {
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -172,13 +129,6 @@
   }
 }
 
-// Action button
-//
-// Markup:
-// <button type="button" class="btn btn-action"><i class="material-icons">add</i>Button</button>
-//
-// Styleguide 3.5
-
 .btn-action {
   @include ps-button-outline-variant($gray-light, $gray-light);
   color: $primary;
@@ -195,27 +145,6 @@
   }
 }
 
-// States
-//
-// Markup:
-// <button type="button" class="btn btn-primary">Button</button>
-// <button type="button" class="btn btn-primary active">Button</button>
-// <button type="button" class="btn" disabled>Button</button>
-//
-// Styleguide 3.6
-
-// Switch Button
-//
-// There are multiple sizes.
-//
-// .small - Small switch
-// .tiny - Tiny switch (Usefull for inline)
-//
-// Markup:
-// <label for="switch{{modifier_class}}"><input data-toggle="switch" class="{{modifier_class}}" id="switch{{modifier_class}}" data-inverse="true" type="checkbox" name="my-checkbox" checked> I love cats.</label>
-//
-// Styleguide 3.7
-
 .switch-input {
   @include ps-switch(30px, 60px, -3px, 24px);
 
@@ -227,16 +156,6 @@
     @include ps-switch(16px, 28px, -1px, 12px);
   }
 }
-
-// Examples Buttons
-//
-// Markup:
-// <button type="button" class="btn btn-primary-outline sensitive"><i class="material-icons">add_circle</i> Add a new feature</button>
-// <a href="#" class="btn sensitive external-link"><i class="material-icons">open_in_new</i> Create a new warehouse</a>
-// <button type="button" class="btn btn-tertiary-outline sensitive"><i class="material-icons">visibility</i> Show disabled modules</button>
-// <button type="button" class="btn btn-tertiary-outline sensitive">Show disabled modules <i class="material-icons">visibility</i></button>
-//
-// Styleguide 3.8
 
 .btn {
   > .material-icons {

@@ -1,24 +1,3 @@
-// Alerts
-//
-// Styleguide 7
-
-// Small Medium & Large Alerts
-//
-//
-//
-// Markup:
-// <div class="alert alert-info" role="alert">
-//   <i class="material-icons">help</i><p class="alert-text">Small notice message <a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a></p>
-// </div>
-// <div class="alert alert-warning" role="alert">
-//   <i class="material-icons">info_outline</i><p class="alert-text">Medium warning message Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
-// </div>
-// <div class="alert alert-danger" role="alert">
-//   <i class="material-icons">error_outline</i><p data-title="Read More" class="alert-text"><a class="alert-link" href="http://www.prestashop.com" target="_blank">PrestaShop</a> amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. <b>Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.Bacon ipsum dolor amet </b> biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef. Bacon ipsum dolor amet biltong pork loin pastrami, hamburger landjaeger prosciutto filet mignon tail beef ball tip shank doner. Bresaola frankfurter strip steak pastrami andouille prosciutto filet mignon tail beef.</p>
-// </div>
-//
-// Styleguide 7.1
-
 .alert {
   position: relative;
 }
@@ -35,30 +14,6 @@
   @include ps-alert-variant($danger-hover, $danger, $gray-dark);
 }
 
-// Dismissing
-//
-// Markup:
-// <div class="alert alert-info" role="alert">
-// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-//    <span aria-hidden="true">&times;</span>
-// </button>
-//   <i class="material-icons">help</i><p class="alert-text">Notice message</p>
-// </div>
-// <div class="alert alert-warning" role="alert">
-// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-//    <span aria-hidden="true">&times;</span>
-// </button>
-//   <i class="material-icons">info_outline</i><p class="alert-text">Warning message</p>
-// </div>
-// <div class="alert alert-danger" role="alert">
-// <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-//    <span aria-hidden="true">&times;</span>
-// </button>
-//   <i class="material-icons">error_outline</i><p class="alert-text">Danger message</p>
-// </div>
-//
-// Styleguide 7.2
-
 .alert-drop {
   margin-bottom: 0;
 }
@@ -69,46 +24,6 @@
   border-radius: 0;
   border-top: none;
 }
-
-// Feedbacks
-//
-// Dynamic
-// **[jquery.growl](http://ksylvest.github.io/jquery-growl/)**
-//
-// ```
-// [...]
-// <link rel="stylesheet" href="dist/css/jquery.growl.css"/>
-// <script src="dist/js/jquery.growl.js"></script>
-// [...]
-// ```
-//
-// Markup:
-// <button class="btn btn-success" id="test-notice">Click on me</button>
-// <button class="btn btn-danger" id="test-error">Click on me</button>
-// <script class="text/javascript">
-//     $( document ).ready( function () {
-//          $('#test-error').click(function(event) {
-//              event.preventDefault();
-//              event.stopPropagation();
-//              return $.growl.error({
-//                  title: "",
-//                  size: "large",
-//                  message: "The kitten is attacking!"
-//              });
-//          });
-//          $('#test-notice').click(function(event) {
-//              event.preventDefault();
-//              event.stopPropagation();
-//              return $.growl.notice({
-//                  title: "",
-//                  size: "large",
-//                  message: "The kitten is cute!"
-//              });
-//          });
-//      });
-// </script>
-//
-// Styleguide 7.3
 
 .growl-notice {
   @include ps-growl($success, "\E876");

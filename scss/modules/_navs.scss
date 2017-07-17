@@ -1,79 +1,3 @@
-// Navigation
-//
-// Styleguide 15
-
-// Nav tabs
-//
-// Markup:
-// <div style="background-color: #eaebec; padding: 20px;">
-// <ul class="nav nav-tabs" id="myTab" role="tablist">
-//   <li class="nav-item">
-//     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
-//   </li>
-// </ul>
-// <div class="tab-content">
-//   <div class="tab-pane active" id="home" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
-//   <div class="tab-pane" id="profile" role="tabpanel">Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.</div>
-//   <div class="tab-pane" id="messages" role="tabpanel">Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</div>
-//   <div class="tab-pane" id="settings" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
-// </div>
-// <script type="text/javascript">
-// $(document).ready(function(){
-//   $('#myTab a').click(function (e) {
-//     e.preventDefault()
-//     $(this).tab('show')
-//   });
-// });
-// </script>
-// </div>
-//
-// Styleguide 15.1
-
-// Nav tabs bordered
-//
-// Markup:
-// <div style="background-color: #eaebec; padding: 20px;">
-// <ul class="nav nav-tabs bordered" id="myTabBordered" role="tablist">
-//   <li class="nav-item">
-//     <a class="nav-link active" data-toggle="tab" href="#homeBordered" role="tab">Home</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#profileBordered" role="tab">Profile</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#messagesBordered" role="tab">Messages</a>
-//   </li>
-//   <li class="nav-item">
-//     <a class="nav-link" data-toggle="tab" href="#settingsBordered" role="tab">Settings</a>
-//   </li>
-// </ul>
-// <div class="tab-content bordered">
-//   <div class="tab-pane active" id="homeBordered" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
-//   <div class="tab-pane" id="profileBordered" role="tabpanel">Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.</div>
-//   <div class="tab-pane" id="messagesBordered" role="tabpanel">Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</div>
-//   <div class="tab-pane" id="settingsBordered" role="tabpanel">Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.</div>
-// </div>
-// <script type="text/javascript">
-// $(document).ready(function(){
-//   $('#myTabBordered a').click(function (e) {
-//     e.preventDefault()
-//     $(this).tab('show')
-//   });
-// });
-// </script>
-// </div>
-//
-// Styleguide 15.2
-
 .nav-tabs {
   background-color: inherit;
 
@@ -115,30 +39,6 @@
     border: solid 1px $nav-tab-content-border-color;
   }
 }
-
-// Nav bars
-//
-// Markup:
-// <div style="background-color: #eaebec; ">
-// <nav class="navbar navbar-light">
-//   <ul class="nav navbar-nav navbar-separator">
-//     <li class="nav-item active">
-//       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">Features</a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">Pricing</a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">About</a>
-//     </li>
-//   </ul>
-// </nav>
-// </div>
-//
-// Styleguide 15.3
 
 .navbar {
   background-color: #fff;
@@ -191,45 +91,6 @@
     width: 100%;
   }
 }
-
-// Subheader
-//
-// Markup:
-// <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
-// <nav class="subheader">
-//   <!-- Breadcrumb -->
-//   <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
-//     <li><a href="#">Home</a></li>
-//     <li><a href="#">Library</a></li>
-//     <li class="active">Data</li>
-//   </ol>
-//   <!-- QuickNav -->
-//   <ul class="subheader-quicknav">
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">insert_chart</i>
-//           <p>Sales</p>
-//        </a>
-//     </li>
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">view_list</i>
-//           <p>product List</p>
-//        </a>
-//     </li>
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">tag_faces</i>
-//           <p>Funny joke</p>
-//        </a>
-//     </li>
-//   </ul>
-//   <!-- Title -->
-//   <div class="subheader-title">Subheader</div>
-// </nav>
-// </div>
-//
-// Styleguide 15.4
 
 .subheader {
   @extend .navbar;
@@ -286,57 +147,3 @@
     }
   }
 }
-
-// Subheader with navbar
-//
-// Markup:
-// <div style="background-color: #eaebec; padding: 40px 0; border-left: 10px solid #363a41;">
-// <nav class="subheader">
-//   <!-- Breadcrumb -->
-//   <ol class="subheader-breadcrumb" style="margin-bottom: 5px;">
-//     <li><a href="#">Home</a></li>
-//     <li><a href="#">Library</a></li>
-//     <li class="active">Data</li>
-//   </ol>
-//   <!-- QuickNav -->
-//   <ul class="subheader-quicknav">
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">insert_chart</i>
-//           <p>Sales</p>
-//        </a>
-//     </li>
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">view_list</i>
-//           <p>product List</p>
-//        </a>
-//     </li>
-//     <li class="subheader-quicknav-item">
-//        <a class="subheader-quicknav-link" href="#">
-//           <i class="material-icons">tag_faces</i>
-//           <p>Funny joke</p>
-//        </a>
-//     </li>
-//   </ul>
-//   <!-- Title -->
-//   <div class="subheader-title">Subheader</div>
-//   <!-- Navbar -->
-//   <ul class="nav subheader-navbar">
-//     <li class="nav-item active">
-//       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">Features</a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">Pricing</a>
-//     </li>
-//     <li class="nav-item">
-//       <a class="nav-link" href="#">About</a>
-//     </li>
-//   </ul>
-// </nav>
-// </div>
-//
-// Styleguide 15.5

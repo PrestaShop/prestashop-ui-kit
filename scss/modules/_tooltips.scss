@@ -1,29 +1,3 @@
-// Tooltips
-//
-// Styleguide 10
-
-// Static demo
-//
-// Four options are available: top, right, bottom, and left aligned.
-// <div class="row">
-// <div class="col-md-6"><div class="tooltip-arrow"></div><div class="tooltip-inner">Default Tooltip</div></div>
-// <div class="col-md-6"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner">Error Message</div></div></div>
-// </div>
-//
-// Styleguide 10.1
-
-// Interactive demo
-//
-// Markup:
-// <div class="row">
-// <div class="col-md-3"><button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button></div>
-// <div class="col-md-3"><button type="button" class="btn" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button></div>
-// <div class="col-md-3"><button type="button" class="btn tooltip-error" data-toggle="tooltip" data-placement="right" title="Error on right"> Error on right</button></div>
-// <div class="col-md-3"><button type="button" class="btn tooltip-error" data-toggle="tooltip" data-placement="bottom" title="Error on bottom"> Error on bottom</button></div>
-// </div>
-//
-// Styleguide 10.2
-
 .tooltip-error {
   .tooltip-inner {
     background-color: $danger-hover;

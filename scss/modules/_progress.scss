@@ -13,45 +13,46 @@
 // Styleguide 18.1
 
 .progress[width^="0"] {
-    min-width: 2rem;
-    color: $gray-light;
-    background-color: transparent;
-    background-image: none;
+  min-width: 2rem;
+  color: $gray-light;
+  background-color: transparent;
+  background-image: none;
 }
+
 .progress[width="100%"] {
-    border-top-right-radius: $progress-border-radius;
-    border-bottom-right-radius: $progress-border-radius;
+  border-top-right-radius: $progress-border-radius;
+  border-bottom-right-radius: $progress-border-radius;
 }
 
 .progress[value]::-webkit-progress-bar {
-    border-radius: $progress-border-radius;
+  border-radius: $progress-border-radius;
 
-    @include border-radius($progress-border-radius);
-    @include box-shadow(inset 0 .1rem .1rem rgba(0,0,0,.1));
+  @include border-radius($progress-border-radius);
+  @include box-shadow(inset 0 .1rem .1rem rgba(0, 0, 0, .1));
 }
 
 .progress[value]::-webkit-progress-value::before {
-    content: attr(value);
+  content: attr(value);
 }
 
 .progress[value]::-webkit-progress-value {
-    background-color: $white;
-    border-radius: $progress-border-radius;
+  background-color: $white;
+  border-radius: $progress-border-radius;
 }
 
 .progress[value="100"]::-webkit-progress-value {
-    border-top-right-radius: $progress-border-radius;
-    border-bottom-right-radius: $progress-border-radius;
+  border-top-right-radius: $progress-border-radius;
+  border-bottom-right-radius: $progress-border-radius;
 }
 
 .progress-primary {
-    @include progress-variant($progress-bar-bg);
-    
-    &[value]::-webkit-progress-bar {
-        background-color: $white;
-        border: 1px solid $gray-light;
-        border-radius: $progress-border-radius;
-    }    
+  @include progress-variant($progress-bar-bg);
+
+  &[value]::-webkit-progress-bar {
+    background-color: $white;
+    border: 1px solid $gray-light;
+    border-radius: $progress-border-radius;
+  }
 }
 
 // Dark
@@ -65,9 +66,9 @@
 // Styleguide 18.2
 
 .progress-dark {
-    @include progress-variant($progress-bar-bg);
+  @include progress-variant($progress-bar-bg);
 
-    &[value]::-webkit-progress-bar {
-        background-color: $gray-dark;    
-    }    
+  &[value]::-webkit-progress-bar {
+    background-color: $gray-dark;
+  }
 }

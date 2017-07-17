@@ -8,13 +8,11 @@
 // + Custom <blockquote> styling has moved to classes—.blockquote and the
 //   .blockquote-reverse modifier.
 @import "typography";
-
 // ==========================================================================
 // Images
 // =========================================================================
 // + Renamed .img-responsive to .img-fluid.                                    @alias
 @import "images";
-
 // ==========================================================================
 // Tables
 // =========================================================================
@@ -28,7 +26,6 @@
 // + Added a new .table-reflow option.
 // + Added table header modifers: .thead-default and .thead-inverse
 @import "tables";
-
 // ==========================================================================
 // Forms
 // =========================================================================
@@ -44,25 +41,22 @@
 //     layouts. Added new .form-control-label class to vertically center labels with
 //     .form-controls.
 @import "forms";
-
 // ==========================================================================
 // Buttons
 // =========================================================================
 // + Renamed .btn-default to .btn-secondary.                                   @alias
 // + Dropped the .btn-xs class entirely.
-// + The stateful button feature of the button.js jQuery plugin has been 
+// + The stateful button feature of the button.js jQuery plugin has been
 //   dropped. This includes the $().button(string) and $().button('reset') methods.
 //   We advise using a tiny bit of custom JavaScript instead, which will have the
 //   benefit of behaving exactly the way you want it to.
 //      o Note that the other features of the plugin (button checkboxes, button
 //        radios, single-toggle buttons) have been retained in v4.
 @import "buttons";
-
 // ==========================================================================
 // Button group
 // =========================================================================
 // + Dropped the .btn-group-xs class entirely.
-
 // ==========================================================================
 // navs
 // =========================================================================
@@ -71,13 +65,11 @@
 //   classes for .navs, .nav-items, and .nav-links. This makes your HTML more
 //   flexible while bringing along increased extensibility.
 @import "navs";
-
 // ==========================================================================
 // Pager
 // =========================================================================
 // + Renamed .previous and .next to .pager-prev and .pager-next.
 @import "pager";
-
 // ==========================================================================
 // Panels
 // =========================================================================
@@ -93,13 +85,11 @@
 // + .panel-warning to .card-warning and .card-inverse                         @alias
 // + .panel-danger to .card-danger and .card-inverse                           @alias
 @import "panels";
-
 // ==========================================================================
 // Carousel
 // =========================================================================
 // + Renamed .item to .carousel-item.                                          @alias
 @import "carousel";
-
 // ==========================================================================
 // Carousel
 // =========================================================================

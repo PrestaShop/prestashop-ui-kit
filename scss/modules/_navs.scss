@@ -75,45 +75,45 @@
 // Styleguide 15.2
 
 .nav-tabs {
-    background-color: inherit;
+  background-color: inherit;
 
-    .nav-link {
-        font-weight: $nav-tabs-unactive-link-hover-font-weight;
-        background-color: $nav-tabs-unactive-link-hover-bg;
-        color: $nav-tabs-unactive-link-hover-color;
-        padding: $nav-link-unactive-padding;
-        @include border-radius(0);
+  .nav-link {
+    font-weight: $nav-tabs-unactive-link-hover-font-weight;
+    background-color: $nav-tabs-unactive-link-hover-bg;
+    color: $nav-tabs-unactive-link-hover-color;
+    padding: $nav-link-unactive-padding;
+    @include border-radius(0);
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      border-top: 3px solid $nav-tabs-active-link-hover-border-color;
+      background-color: $nav-tabs-active-link-hover-bg;
+      color: $nav-tabs-active-link-hover-color;
+      font-weight: $nav-tabs-active-link-hover-font-weight;
+      padding: $nav-link-active-padding;
     }
+  }
+
+  &.bordered {
+    border-bottom: 0;
 
     .nav-link.active,
     .nav-item.open .nav-link {
-        @include plain-hover-focus {
-            border-top: 3px solid $nav-tabs-active-link-hover-border-color;
-            background-color: $nav-tabs-active-link-hover-bg;
-            color: $nav-tabs-active-link-hover-color;
-            font-weight: $nav-tabs-active-link-hover-font-weight;
-            padding: $nav-link-active-padding;
-        }
+      border-left: 1px solid $nav-tab-content-border-color;
+      border-right: 1px solid $nav-tab-content-border-color;
     }
-
-    &.bordered {
-      border-bottom: 0;
-
-      .nav-link.active,
-      .nav-item.open .nav-link {
-        border-left: 1px solid $nav-tab-content-border-color;
-        border-right: 1px solid $nav-tab-content-border-color;
-      }
-    }
+  }
 }
 
 .tab-content {
-    background-color: $nav-tab-content-bg;
-    padding: 20px;
+  background-color: $nav-tab-content-bg;
+  padding: 20px;
 
-    &.bordered {
-      border: solid 1px $nav-tab-content-border-color;
-    }
+  &.bordered {
+    border: solid 1px $nav-tab-content-border-color;
+  }
 }
 
 // Nav bars
@@ -141,57 +141,56 @@
 // Styleguide 15.3
 
 .navbar {
-    background-color: #fff;
-    width: 100%;
+  background-color: #fff;
+  width: 100%;
 
-    &.navbar-light {
-      padding-bottom: 0;
-    }
+  &.navbar-light {
+    padding-bottom: 0;
+  }
 }
 
 .navbar-nav {
 
+  background-color: #fff;
+  margin-left: 10px;
+
+  .nav-link {
+    font-weight: $nav-tabs-unactive-link-hover-font-weight;
     background-color: #fff;
-    margin-left: 10px;
+    color: $nav-tabs-unactive-link-hover-color;
+    padding: $nav-link-unactive-padding;
+    @include border-radius(0);
 
-    .nav-link {
-        font-weight: $nav-tabs-unactive-link-hover-font-weight;
-        background-color: #fff;
-        color: $nav-tabs-unactive-link-hover-color;
-        padding: $nav-link-unactive-padding;
-        @include border-radius(0);
-
-        + .nav-link {
-            margin-left: 0;
-        }
+    + .nav-link {
+      margin-left: 0;
     }
+  }
 
-    .nav-link.active,
-    .nav-item.active .nav-link {
-        @include plain-hover-focus {
-            border-bottom: 3px solid $nav-tabs-active-link-hover-border-color;
-            background-color: $nav-tabs-active-link-hover-bg;
-            color: $nav-tabs-active-link-hover-color;
-            font-weight: $nav-tabs-active-link-hover-font-weight;
-            padding: $nav-link-active-padding;
-        }
+  .nav-link.active,
+  .nav-item.active .nav-link {
+    @include plain-hover-focus {
+      border-bottom: 3px solid $nav-tabs-active-link-hover-border-color;
+      background-color: $nav-tabs-active-link-hover-bg;
+      color: $nav-tabs-active-link-hover-color;
+      font-weight: $nav-tabs-active-link-hover-font-weight;
+      padding: $nav-link-active-padding;
     }
+  }
 
-    .nav-item + .nav-item {
-        margin-left: 0;
-    }
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
 
-    &.navbar-separator:after {
-        content: " ";
-        left: 0;
-        bottom: 0;
-        display: table-cell;
-        border-bottom: 1px solid $navbar-bottom-separtor-color;
-        position: absolute;
-        width: 100%;
-    }
+  &.navbar-separator:after {
+    content: " ";
+    left: 0;
+    bottom: 0;
+    display: table-cell;
+    border-bottom: 1px solid $navbar-bottom-separtor-color;
+    position: absolute;
+    width: 100%;
+  }
 }
-
 
 // Subheader
 //
@@ -233,59 +232,59 @@
 // Styleguide 15.4
 
 .subheader {
-    @extend .navbar;
-    @extend .navbar-light;
-    padding: 0 1.25em;
+  @extend .navbar;
+  @extend .navbar-light;
+  padding: 0 1.25em;
 
-    .subheader-breadcrumb {
-        @extend .breadcrumb;
-        width: 100%;
-        background-color: inherit;
-        padding: 20px 12px 12px 12px;
-    }
+  .subheader-breadcrumb {
+    @extend .breadcrumb;
+    width: 100%;
+    background-color: inherit;
+    padding: 20px 12px 12px 12px;
+  }
 
-    .subheader-title {
-        font-size: $subheader-title-font-size;
-        font-weight: $font-weight-semibold;
-        display: inline-block;
-    }
+  .subheader-title {
+    font-size: $subheader-title-font-size;
+    font-weight: $font-weight-semibold;
+    display: inline-block;
+  }
 
-    .subheader-quicknav {
-        @include pull-right;
-        @extend .navbar-nav;
-        @extend .nav;
-        display: inline-block;
-    }
+  .subheader-quicknav {
+    @include pull-right;
+    @extend .navbar-nav;
+    @extend .nav;
+    display: inline-block;
+  }
 
-    .subheader-navbar {
-        @include pull-left;
-        @extend .navbar-nav;
-        @extend .nav;
-        width: 100%;
-    }
+  .subheader-navbar {
+    @include pull-left;
+    @extend .navbar-nav;
+    @extend .nav;
+    width: 100%;
+  }
 }
 
 .subheader-quicknav {
 
-    .subheader-quicknav-item {
-        @extend .nav-item;
-        text-align: center;
-        line-height: 1em;
+  .subheader-quicknav-item {
+    @extend .nav-item;
+    text-align: center;
+    line-height: 1em;
 
-        .subheader-quicknav-link {
-            display: block;
-            font-weight: 400;
-            background-color: #fff;
-            color: #6C868E;
-            padding: 0 .65em;
-            border-radius: 0;
-        }
-
-        > i,
-        .material-icons {
-            font-size: 1.875rem;
-        }
+    .subheader-quicknav-link {
+      display: block;
+      font-weight: 400;
+      background-color: #fff;
+      color: #6C868E;
+      padding: 0 .65em;
+      border-radius: 0;
     }
+
+    > i,
+    .material-icons {
+      font-size: 1.875rem;
+    }
+  }
 }
 
 // Subheader with navbar

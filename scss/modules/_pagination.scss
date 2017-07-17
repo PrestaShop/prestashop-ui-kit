@@ -149,25 +149,26 @@
     }
   }
   .arrow {
-      display: inline-block;
-      line-height: 2;
-      padding-top: 0.5rem;
+    display: inline-block;
+    line-height: 2;
+    padding-top: 0.5rem;
   }
 }
 
 .page-link {
-    font-weight: 600;
-    color: $gray-medium;
-    border: none;
-    cursor: pointer;
-    @include plain-hover-focus {
-        background-color: $white;
-    }
-    @include hover-focus:not(span) {
-        text-decoration: none;
-        color: $primary;
-        background-color: $white;
-        border-color: $pagination-hover-border;
-    }
+  font-weight: 600;
+  color: $gray-medium;
+  border: none;
+  cursor: pointer;
+  @include plain-hover-focus {
+    background-color: $white;
+  }
+  @include hover-focus
+  :not(span) {
+    text-decoration: none;
+    color: $primary;
+    background-color: $white;
+    border-color: $pagination-hover-border;
+  }
 
 }

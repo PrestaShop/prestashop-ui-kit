@@ -4,17 +4,17 @@
 // and disabled options for all buttons
 
 @mixin ps-color($color) {
+  background-color: $color;
+  color: white;
+  &:hover {
     background-color: $color;
-    color: white;
-    &:hover {
-        background-color: $color;
-    }
+  }
 }
 
 @mixin ps-gradient($colora, $colorb, $deg: 90, $prcts: 20%) {
-    background-image: linear-gradient(#{$deg}deg, $colora $prcts, $colorb 100%);
-    background-image: -moz-linear-gradient(left, $colora $prcts, $colorb 100%);
-    background-image: -webkit-linear-gradient(left, $colora $prcts, $colorb 100%);
-    background-image: -o-linear-gradient(left, $colora $prcts, $colorb 100%);
-    background-image: -ms-linear-gradient(left, $colora $prcts, $colorb 100%);
+  background-image: linear-gradient(#{$deg}deg, $colora $prcts, $colorb 100%);
+  background-image: -moz-linear-gradient(left, $colora $prcts, $colorb 100%);
+  background-image: -webkit-linear-gradient(left, $colora $prcts, $colorb 100%);
+  background-image: -o-linear-gradient(left, $colora $prcts, $colorb 100%);
+  background-image: -ms-linear-gradient(left, $colora $prcts, $colorb 100%);
 }

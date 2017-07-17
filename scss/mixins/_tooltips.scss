@@ -3,13 +3,13 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin error-tooptip ($pos1, $pos2) { 
-    .bs-tether-element-attached-#{$pos1} {
-        .tooltip-error {
-            .tooltip-arrow {
-                border-#{$pos2}-color: $danger-hover;
-            }
-        }
-    }   
+@mixin error-tooptip($pos1, $pos2) {
+  .bs-tether-element-attached-#{$pos1} {
+    .tooltip-error {
+      .tooltip-arrow {
+        border-#{$pos2}-color: $danger-hover;
+      }
+    }
+  }
 }
 

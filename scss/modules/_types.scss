@@ -32,58 +32,75 @@
 // Styleguide 1.2
 
 h1 {
-    font-weight : $font-weight-h1;
-    color       : $font-color-h1;
+  font-weight: $font-weight-h1;
+  color: $font-color-h1;
 }
 
 h2 {
-    font-weight : $font-weight-h2;
-    color       : $font-color-h2;
+  font-weight: $font-weight-h2;
+  color: $font-color-h2;
 }
 
 h3 {
-    font-weight : $font-weight-h3;
-    color       : $font-color-h3;
+  font-weight: $font-weight-h3;
+  color: $font-color-h3;
 }
 
 h4 {
-    font-weight : $font-weight-h4;
-    color       : $font-color-h4;
+  font-weight: $font-weight-h4;
+  color: $font-color-h4;
 }
 
 h1, h2, h3, h4 {
-    margin-bottom: $grid-gutter-width / 2;
+  margin-bottom: $grid-gutter-width / 2;
 }
 
 .url {
-    font-weight: $font-weight-url;
+  font-weight: $font-weight-url;
 }
 
 .font-primary {
-    font-weight : $font-weight-primary;
-    color: $font-color-primary;
+  font-weight: $font-weight-primary;
+  color: $font-color-primary;
 }
 
 .font-secondary {
-    font-weight : $font-weight-secondary;
-    color: $font-color-secondary;
+  font-weight: $font-weight-secondary;
+  color: $font-color-secondary;
 }
 
 sm, small {
-    @extend .font-primary;
-    font-size: $font-size-sm;
-    line-height: 1.1rem;
+  @extend .font-primary;
+  font-size: $font-size-sm;
+  line-height: 1.1rem;
 }
 
 xs, xsmall {
-    @extend .font-primary;
-    font-size: $font-size-xs;
-    line-height: 1.1rem;
+  @extend .font-primary;
+  font-size: $font-size-xs;
+  line-height: 1.1rem;
 }
 
-.h1          { @extend h1; }
-.h2          { @extend h2; }
-.h3          { @extend h3; }
-.h4          { @extend h4; }
-.sm, .small  { @extend sm; }
-.xs, .xsmall { @extend xs; }
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.sm, .small {
+  @extend sm;
+}
+
+.xs, .xsmall {
+  @extend xs;
+}

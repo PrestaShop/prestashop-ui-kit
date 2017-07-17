@@ -4,56 +4,55 @@
 // and disabled options for all buttons
 
 @mixin ps-button-variant($color, $background, $border, $hover) {
-    @include button-variant($color, $background, $border);
+  @include button-variant($color, $background, $border);
 
-    @include hover {
-        color: $color;
-        background-color: $hover;
-        border-color: $hover;
-    }
+  @include hover {
+    color: $color;
+    background-color: $hover;
+    border-color: $hover;
+  }
 
-
-    &:focus,
-    &.focus {
-        color: $color;
-        background-color: lighten($background, 8%);
-        border-color: lighten($border, 8%);
-    }
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: lighten($background, 8%);
+    border-color: lighten($border, 8%);
+  }
 }
 
 @mixin ps-button-outline-variant($btn-primary-bg, $hover) {
-    @include button-outline-variant($btn-primary-bg);
-    border: 0.125rem solid $btn-primary-bg;
-    @include hover {
-        color: $hover;
-        background-color: #fff;
-        border-color: $hover;
-    }
+  @include button-outline-variant($btn-primary-bg);
+  border: 0.125rem solid $btn-primary-bg;
+  @include hover {
+    color: $hover;
+    background-color: #fff;
+    border-color: $hover;
+  }
 
-    &:focus,
-    &.focus {
-        color: lighten($btn-primary-bg, 8%);
-        background-color: #fff;
-        border-color: lighten($btn-primary-bg, 8%);
-    }
+  &:focus,
+  &.focus {
+    color: lighten($btn-primary-bg, 8%);
+    background-color: #fff;
+    border-color: lighten($btn-primary-bg, 8%);
+  }
 }
 
 @mixin ps-button-reverse($btn-primary-bg, $hover) {
-    @include button-outline-variant($btn-primary-bg);
-    border: 0.15em solid $btn-primary-bg;
+  @include button-outline-variant($btn-primary-bg);
+  border: 0.15em solid $btn-primary-bg;
 
-    @include hover {
-        color: #fff;
-        background-color: $hover;
-        border-color: $hover;
-    }
+  @include hover {
+    color: #fff;
+    background-color: $hover;
+    border-color: $hover;
+  }
 
-    &:focus,
-    &.focus {
-        color: #fff;
-        background-color: lighten($btn-primary-bg, 8%);
-        border-color: lighten($btn-primary-bg, 8%);
-    }
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: lighten($btn-primary-bg, 8%);
+    border-color: lighten($btn-primary-bg, 8%);
+  }
 }
 
 // Switch
@@ -61,59 +60,58 @@
 // Help creates the differents switchs sizes
 
 @mixin ps-switch($height, $width, $margin, $icon-size, $align-margin: 2px) {
-    height: $height;
-    width: $width;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
+  height: $height;
+  width: $width;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  @if $margin < 0 {
+    margin: -$align-margin 2px - $margin 0 0;
+  } @else {
+    margin: -$align-margin 2px 0 0;
+  }
+
+  &, &:after {
+    background: $white;
+    border: 2px solid $gray-light;
+    border-radius: $height;
+    box-sizing: border-box;
+    color: $gray-medium;
+    transition: all 0.5s;
+  }
+  & {
+    background: $secondary;
+  }
+
+  > input {
+    display: none;
+  }
+
+  &:after {
+    @extend .material-icons;
+    display: block;
+    content: 'close';
+    height: $height + (2 * -$margin);
+    width: $height + (2 * -$margin);
+    position: absolute;
+    top: $margin - 2px;
+    left: $margin - 2px;
+    transform: rotate(-180deg);
+    line-height: $height - (2 * $margin) - 4px;
     vertical-align: middle;
-    @if $margin < 0 {
-        margin: -$align-margin 2px - $margin 0 0;
-    }
-    @else {
-        margin: -$align-margin 2px 0 0;
-    }
+    text-align: center;
+    font-size: $icon-size;
+  }
 
-    &, &:after {
-        background: $white;
-        border: 2px solid $gray-light;
-        border-radius: $height;
-        box-sizing: border-box;
-        color: $gray-medium;
-        transition: all 0.5s;
-    }
-    &{
-      background: $secondary;
-    }
-
-    > input {
-        display: none;
-    }
+  &.-checked {
+    background: $primary;
 
     &:after {
-        @extend .material-icons;
-        display: block;
-        content: 'close';
-        height: $height + (2 * -$margin);
-        width: $height + (2 * -$margin);
-        position: absolute;
-        top: $margin - 2px;
-        left: $margin - 2px;
-        transform: rotate(-180deg);
-        line-height: $height - (2 * $margin) - 4px;
-        vertical-align: middle;
-        text-align: center;
-        font-size: $icon-size;
+      content: 'check';
+      left: $width - $height - 2px + $margin;
+      color: $primary;
+      transform: rotate(0deg);
     }
-
-    &.-checked {
-        background: $primary;
-
-        &:after {
-            content: 'check';
-            left: $width - $height - 2px + $margin;
-            color: $primary;
-            transform: rotate(0deg);
-        }
-    }
+  }
 }

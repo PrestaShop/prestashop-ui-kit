@@ -25,65 +25,65 @@
 // Styleguide 2.1
 
 .primary {
-    @include ps-color($primary);
+  @include ps-color($primary);
 }
 
 .primary-hover {
-    @include ps-color($primary-hover);
+  @include ps-color($primary-hover);
 }
 
 .secondary {
-    @include ps-color($secondary);
+  @include ps-color($secondary);
 }
 
 .secondary-hover {
-    @include ps-color($secondary-hover);
+  @include ps-color($secondary-hover);
 }
 
 .gray-dark {
-    @include ps-color($gray-dark);
+  @include ps-color($gray-dark);
 }
 
 .gray-medium {
-    @include ps-color($gray-medium);
+  @include ps-color($gray-medium);
 }
 
 .gray-light {
-    @include ps-color($gray-light);
+  @include ps-color($gray-light);
 }
 
 .gray-soft {
-    @include ps-color($gray-soft);
+  @include ps-color($gray-soft);
 }
 
 .white {
-    @include ps-color($white);
+  @include ps-color($white);
 }
 
 .notice {
-    @include ps-color($notice);
+  @include ps-color($notice);
 }
 
 .success {
-    @include ps-color($success);
+  @include ps-color($success);
 }
 
 .success-hover {
-    @include ps-color($success-hover);
+  @include ps-color($success-hover);
 }
 
 .warning {
-    @include ps-color($warning);
+  @include ps-color($warning);
 }
 
 .warning-hover {
-    @include ps-color($warning-hover);
+  @include ps-color($warning-hover);
 }
 
 .danger {
-    @include ps-color($danger);
+  @include ps-color($danger);
 }
 
 .danger-hover {
-    @include ps-color($danger-hover);
+  @include ps-color($danger-hover);
 }

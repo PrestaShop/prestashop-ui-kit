@@ -38,26 +38,25 @@
 //
 // Styleguide 14.1
 
-
 .table {
 
-    tbody {
-        border: 2px solid $gray-light;
-    }
+  tbody {
+    border: 2px solid $gray-light;
+  }
 
-    th, td {
-        font-weight: 400;
-        color: $gray-dark;
-        border: none;
-    }
+  th, td {
+    font-weight: 400;
+    color: $gray-dark;
+    border: none;
+  }
 
-    thead {
-        border: 2px solid $gray-light;
-        th {
-            font-weight: 600;
-            color: $gray-medium;
-            border-top: 2px solid $gray-light;
-            border-bottom: 2px solid $gray-light;
-        }
+  thead {
+    border: 2px solid $gray-light;
+    th {
+      font-weight: 600;
+      color: $gray-medium;
+      border-top: 2px solid $gray-light;
+      border-bottom: 2px solid $gray-light;
     }
+  }
 }

@@ -61,19 +61,19 @@
 //
 // Styleguide 6.2
 
-.ps-dropdown{
+.ps-dropdown {
   font-size: 1.125rem;
-  .arrow-down{
+  .arrow-down {
     font-size: 1.563rem;
     top: 0.375rem;
     left: 0.375rem;
     position: relative;
     cursor: pointer;
   }
-  > .ps-dropdown-menu{
+  > .ps-dropdown-menu {
     min-width: 220px;
     border: none;
-    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     &:before {
       position: absolute;
       top: -7px;
@@ -97,24 +97,24 @@
       content: '';
     }
 
-    .dropdown-item{
+    .dropdown-item {
       cursor: pointer;
       display: flex;
       justify-content: space-between;
     }
-    .items-list{
+    .items-list {
       list-style-type: none;
       padding: 0;
-      .dropdown-item{
+      .dropdown-item {
         margin: 0.625rem 0;
-        &.selected{
+        &.selected {
           color: $gray-light;
         }
-        &.selected span{
+        &.selected span {
           color: $gray-light;
           border-color: $gray-light;
         }
-        span{
+        span {
           color: $brand-info;
           border: $brand-info 1px solid;
           font-size: 0.75rem;

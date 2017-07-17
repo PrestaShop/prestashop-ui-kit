@@ -4,7 +4,7 @@
 
 // Small Medium & Large Alerts
 //
-// 
+//
 //
 // Markup:
 // <div class="alert alert-info" role="alert">
@@ -20,19 +20,19 @@
 // Styleguide 7.1
 
 .alert {
-    position: relative;
+  position: relative;
 }
 
 .alert-info {
-    @include ps-alert-variant($notice, $primary, $gray-dark);
+  @include ps-alert-variant($notice, $primary, $gray-dark);
 }
 
 .alert-warning {
-    @include ps-alert-variant($warning-hover, $warning, $gray-dark);
+  @include ps-alert-variant($warning-hover, $warning, $gray-dark);
 }
 
 .alert-danger {
-    @include ps-alert-variant($danger-hover, $danger, $gray-dark);
+  @include ps-alert-variant($danger-hover, $danger, $gray-dark);
 }
 
 // Dismissing
@@ -60,14 +60,14 @@
 // Styleguide 7.2
 
 .alert-drop {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .alert-down {
-    display: none;
-    background-color: $white;
-    border-radius: 0;
-    border-top: none;
+  display: none;
+  background-color: $white;
+  border-radius: 0;
+  border-top: none;
 }
 
 // Feedbacks
@@ -110,10 +110,10 @@
 //
 // Styleguide 7.3
 
-.growl-notice {    
-    @include ps-growl($success, "\E876");
+.growl-notice {
+  @include ps-growl($success, "\E876");
 }
 
 .growl-error {
-    @include ps-growl($danger, "\E88F");
+  @include ps-growl($danger, "\E88F");
 }

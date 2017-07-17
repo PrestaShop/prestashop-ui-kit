@@ -25,10 +25,10 @@
 // Styleguide 10.2
 
 .tooltip-error {
-        .tooltip-inner {
-            background-color: $danger-hover;
-            color: $danger;
-        }    
+  .tooltip-inner {
+    background-color: $danger-hover;
+    color: $danger;
+  }
 }
 
 @include error-tooptip(right, left);

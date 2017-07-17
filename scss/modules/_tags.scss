@@ -41,32 +41,32 @@
 
 .pstaggerAddTagInput,
 .pstaggerTagsWrapper {
-    @include reset-text();
+  @include reset-text();
 
-    font-size: $font-size-sm;
-    font-weight: $tags-font-weight;
-    padding: $tags-space-y $input-padding-x;
-    color: $input-color-placeholder;
-    width: 100%;
-    min-height: $input-height;
-    height: inherit;
+  font-size: $font-size-sm;
+  font-weight: $tags-font-weight;
+  padding: $tags-space-y $input-padding-x;
+  color: $input-color-placeholder;
+  width: 100%;
+  min-height: $input-height;
+  height: inherit;
+
+  @include border-radius($border-radius);
+
+  .pstaggerTag {
+    font-size: 1rem;
+    margin: 0 $tags-space-x;
+    position: relative;
+    height: $tags-height;
+    padding: 0 8px;
+    color: $tags-color;
+    text-align: center;
+    background-color: $tags-bg;
 
     @include border-radius($border-radius);
 
-    .pstaggerTag {
-        font-size: 1rem;
-        margin: 0 $tags-space-x;
-        position: relative;
-        height: $tags-height;
-        padding: 0 8px;
-        color: $tags-color;
-        text-align: center;
-        background-color: $tags-bg;
-
-        @include border-radius($border-radius);
-
-        & a {
-            color: $tags-cross-color;
-        }
+    & a {
+      color: $tags-cross-color;
     }
+  }
 }

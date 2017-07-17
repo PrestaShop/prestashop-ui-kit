@@ -7075,16 +7075,7 @@ xs, .xs, .xsmall, xsmall {
 
 .form-control {
   border-radius: 0.25rem; }
-  .form-control::-webkit-input-placeholder {
-    font-style: italic;
-    color: #6C868E; }
-  .form-control::-moz-placeholder {
-    font-style: italic;
-    color: #6C868E; }
-  .form-control:-moz-placeholder {
-    font-style: italic;
-    color: #6C868E; }
-  .form-control:-ms-input-placeholder {
+  .form-control::-webkit-input-placeholder, .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control:-moz-placeholder {
     font-style: italic;
     color: #6C868E; }
   .form-control:focus {
@@ -7139,30 +7130,30 @@ xs, .xs, .xsmall, xsmall {
 .select2-container--prestakit {
   display: block;
   /**
-     * Search field in the Select2 dropdown.
-     */
+   * Search field in the Select2 dropdown.
+   */
   /**
-     * No outline for all search fields - in the dropdown
-     * and inline in multi Select2s.
-     */
+   * No outline for all search fields - in the dropdown
+   * and inline in multi Select2s.
+   */
   /**
-     * Adjust Select2's choices hover and selected styles to match
-     */
+   * Adjust Select2's choices hover and selected styles to match
+   */
   /**
-     * Clear the selection.
-     */
+   * Clear the selection.
+   */
   /**
-     * Address disabled Select2 styles.
-     *
-     * @see https://select2.github.io/examples.html#disabled
-     */
+   * Address disabled Select2 styles.
+   *
+   * @see https://select2.github.io/examples.html#disabled
+   */
   /* dropdown */
   /**
-     * Dropdown border color and box-shadow.
-     */
+   * Dropdown border color and box-shadow.
+   */
   /**
-     * Limit the dropdown height.
-     */
+   * Limit the dropdown height.
+   */
   /* select2 single selection */
   /* multiple selection */
   /* rtl support */ }
@@ -7190,8 +7181,8 @@ xs, .xs, .xsmall, xsmall {
     outline: 0;
     /* Firefox 18- */
     /**
-         * Firefox 19+
-         */ }
+     * Firefox 19+
+     */ }
     .select2-container--prestakit .select2-search__field::-webkit-input-placeholder {
       color: #6C868E; }
     .select2-container--prestakit .select2-search__field:-moz-placeholder {
@@ -7203,14 +7194,14 @@ xs, .xs, .xsmall, xsmall {
       color: #6C868E; }
   .select2-container--prestakit .select2-results__option {
     /**
-         * Disabled results.
-         */
+     * Disabled results.
+     */
     /**
-         * Hover state.
-         */
+     * Hover state.
+     */
     /**
-         * Selected state.
-         */ }
+     * Selected state.
+     */ }
     .select2-container--prestakit .select2-results__option[role=group] {
       padding: 0; }
     .select2-container--prestakit .select2-results__option[aria-disabled=true] {
@@ -7266,11 +7257,11 @@ xs, .xs, .xsmall, xsmall {
     border-color: #3ED2F0; }
   .select2-container--prestakit.select2-container--open {
     /**
-         * Make the dropdown arrow point up while the dropdown is visible.
-         */
+     * Make the dropdown arrow point up while the dropdown is visible.
+     */
     /**
-         * Handle border radii of the container when the dropdown is showing.
-         */ }
+     * Handle border radii of the container when the dropdown is showing.
+     */ }
     .select2-container--prestakit.select2-container--open .select2-selection .select2-selection__arrow b {
       border-color: transparent transparent #6C868E transparent;
       border-width: 0 4.8px 4.8px 4.8px;
@@ -7319,8 +7310,8 @@ xs, .xs, .xsmall, xsmall {
     padding: 6px 23.408px 6px 9.008px;
     padding: 0.375rem 1.463rem 0.375rem 0.563rem;
     /**
-         * Adjust the single Select2's dropdown arrow button appearance.
-         */ }
+     * Adjust the single Select2's dropdown arrow button appearance.
+     */ }
     .select2-container--prestakit .select2-selection--single .select2-selection__arrow {
       position: absolute;
       bottom: 0;
@@ -7354,14 +7345,14 @@ xs, .xs, .xsmall, xsmall {
     padding: 3px 4.504px;
     padding: 0.1875rem 0.2815rem;
     /**
-         * Make Multi Select2's choices match Bootstrap 3's default button styles.
-         */
+     * Make Multi Select2's choices match Bootstrap 3's default button styles.
+     */
     /**
-         * Minus 2px borders.
-         */
+     * Minus 2px borders.
+     */
     /**
-         * Clear the selection.
-         */ }
+     * Clear the selection.
+     */ }
     .select2-container--prestakit .select2-selection--multiple .select2-selection__rendered {
       box-sizing: border-box;
       display: block;
@@ -7411,14 +7402,14 @@ xs, .xs, .xsmall, xsmall {
       margin-top: 0.375rem; }
   .select2-container--prestakit[dir="rtl"] {
     /**
-         * Single Select2
-         *
-         * 1. Makes sure that .select2-selection__placeholder is positioned
-         *    correctly.
-         */
+     * Single Select2
+     *
+     * 1. Makes sure that .select2-selection__placeholder is positioned
+     *    correctly.
+     */
     /**
-         * Multiple Select2
-         */ }
+     * Multiple Select2
+     */ }
     .select2-container--prestakit[dir="rtl"] .select2-selection--single {
       padding-left: 23.408px;
       padding-left: 1.463rem;
@@ -7539,8 +7530,8 @@ xs, .xs, .xsmall, xsmall {
     .autocomplete-search > .product-list > .media > .media-body > .label {
       font-weight: 600; }
     .autocomplete-search > .product-list > .media > .media-body > .delete {
-      line-height: 25px;
-      line-height: 1.5625rem; }
+      line-height: 25.008px;
+      line-height: 1.563rem; }
       .autocomplete-search > .product-list > .media > .media-body > .delete:hover {
         cursor: pointer; }
 
@@ -7562,7 +7553,7 @@ xs, .xs, .xsmall, xsmall {
   text-indent: 2.5rem;
   box-sizing: content-box;
   border-radius: 10em;
-  transition: all 0.5s; }
+  transition: all .5s; }
   .input-group .form-search[type=search] {
     border-radius: 10em; }
   .form-search[type=search]:hover {
@@ -7575,19 +7566,7 @@ xs, .xs, .xsmall, xsmall {
     text-indent: 0;
     box-shadow: 0 0 5px rgba(109, 207, 246, .5); }
 
-.form-search::-webkit-input-placeholder {
-  color: #999;
-  color: transparent; }
-
-.form-search::-moz-placeholder {
-  color: #999;
-  color: transparent; }
-
-.form-search:-moz-placeholder {
-  color: #999;
-  color: transparent; }
-
-.form-search:-ms-input-placeholder {
+.form-search::-webkit-input-placeholder, .form-search::-moz-placeholder, .form-search:-ms-input-placeholder, .form-search:-moz-placeholder {
   color: #999;
   color: transparent; }
 
@@ -7602,13 +7581,7 @@ xs, .xs, .xsmall, xsmall {
   font-size: 0.8125rem;
   text-indent: 10px;
   text-indent: 0.625rem; }
-  .dropdown-form .dropdown-form-search::-webkit-input-placeholder {
-    visibility: hidden; }
-  .dropdown-form .dropdown-form-search::-moz-placeholder {
-    visibility: hidden; }
-  .dropdown-form .dropdown-form-search:-moz-placeholder {
-    visibility: hidden; }
-  .dropdown-form .dropdown-form-search:-ms-input-placeholder {
+  .dropdown-form .dropdown-form-search::-webkit-input-placeholder, .dropdown-form .dropdown-form-search::-moz-placeholder, .dropdown-form .dropdown-form-search:-ms-input-placeholder, .dropdown-form .dropdown-form-search:-moz-placeholder {
     visibility: hidden; }
 
 .dropdown-form .input-group {
@@ -7616,7 +7589,7 @@ xs, .xs, .xsmall, xsmall {
   width: 32px;
   width: 2rem;
   border-radius: 10em;
-  transition: all 0.5s; }
+  transition: all .5s; }
   .dropdown-form .input-group:hover {
     border-color: #25B9D7; }
 
@@ -7632,19 +7605,13 @@ xs, .xs, .xsmall, xsmall {
   padding-top: 0.125rem;
   padding-bottom: 2px;
   padding-bottom: 0.125rem;
-  -webkit-animation: fadeIn 1s ease-in;
-  animation: fadeIn 1s ease-in; }
+  -webkit-animation: fadeIn 1.0s ease-in;
+  animation: fadeIn 1.0s ease-in; }
 
 .dropdown-form.expanded .dropdown-form-search {
   background: none;
   cursor: text; }
-  .dropdown-form.expanded .dropdown-form-search::-webkit-input-placeholder {
-    visibility: visible; }
-  .dropdown-form.expanded .dropdown-form-search::-moz-placeholder {
-    visibility: visible; }
-  .dropdown-form.expanded .dropdown-form-search:-moz-placeholder {
-    visibility: visible; }
-  .dropdown-form.expanded .dropdown-form-search:-ms-input-placeholder {
+  .dropdown-form.expanded .dropdown-form-search::-webkit-input-placeholder, .dropdown-form.expanded .dropdown-form-search::-moz-placeholder, .dropdown-form.expanded .dropdown-form-search:-ms-input-placeholder, .dropdown-form.expanded .dropdown-form-search:-moz-placeholder {
     visibility: visible; }
 
 .dropdown-form .dropdown-toggle {
@@ -7692,11 +7659,15 @@ xs, .xs, .xsmall, xsmall {
     opacity: 1; } }
 
 .ps-dropdown {
-  font-size: 1.125em; }
+  font-size: 18px;
+  font-size: 1.125rem; }
   .ps-dropdown .arrow-down {
-    font-size: 1.5625em;
-    top: 0.375em;
-    left: 0.375em;
+    font-size: 25.008px;
+    font-size: 1.563rem;
+    top: 6px;
+    top: 0.375rem;
+    left: 6px;
+    left: 0.375rem;
     position: relative;
     cursor: pointer; }
   .ps-dropdown > .ps-dropdown-menu {
@@ -7725,23 +7696,17 @@ xs, .xs, .xsmall, xsmall {
     .ps-dropdown > .ps-dropdown-menu .dropdown-item {
       cursor: pointer;
       display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
-      box-pack: justify;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      -o-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: justify; }
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
     .ps-dropdown > .ps-dropdown-menu .items-list {
       list-style-type: none;
       padding: 0; }
       .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item {
-        margin: 0.625em 0; }
+        margin: 10px 0;
+        margin: 0.625rem 0; }
         .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item.selected {
           color: #BBCDD2; }
         .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item.selected span {
@@ -7750,9 +7715,11 @@ xs, .xs, .xsmall, xsmall {
         .ps-dropdown > .ps-dropdown-menu .items-list .dropdown-item span {
           color: #5bc0de;
           border: #5bc0de 1px solid;
-          font-size: 0.75em;
-          padding: 0.25em;
-          border-radius: 0.125em; }
+          font-size: 12px;
+          font-size: 0.75rem;
+          padding: 4px;
+          padding: 0.25rem;
+          border-radius: 0.125rem; }
 
 .alert {
   position: relative; }
@@ -7967,7 +7934,7 @@ xs, .xs, .xsmall, xsmall {
   width: 8px; }
 
 .dot1 {
-  -webkit-animation: dotOneKeyframes 5s ease  infinite;
+  -webkit-animation: dotOneKeyframes 5s ease infinite;
   background: #24ABCE;
   top: 0;
   left: 0; }
@@ -8444,7 +8411,8 @@ xs, .xs, .xsmall, xsmall {
       margin-left: -2px;
       margin-left: -0.125rem; }
     .module-item-wrapper-grid .module-quick-action-grid .onclick, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid .onclick, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid .onclick {
-      margin-bottom: -7px; }
+      margin-bottom: -7px;
+      margin-bottom: -0.4375rem; }
   .module-item-wrapper-grid .module-quick-description-grid, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-description-grid, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-description-grid {
     margin: 15px 0;
     height: 100px; }

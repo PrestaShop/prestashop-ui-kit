@@ -59,10 +59,9 @@
   width: 16px;
   cursor: pointer;
   text-indent: 2.5rem;
-
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   @include border-radius(10em);
-  @include transition( all .5s);
+  transition: all .5s;
 
   .input-group & {
     @include border-radius(10em);
@@ -83,7 +82,10 @@
 }
 
 .form-search {
-  @include placeholder {
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:-moz-placeholder {
     color: #999;
     color: transparent;
   }
@@ -119,38 +121,45 @@
     @include border-radius(10em);
     background: transparent url($search-icon) center no-repeat;
     cursor: pointer;
-    height: rem(30px);
-    font-size: rem(13px);
-    text-indent: rem(10px);
-    @include placeholder {
+    height: 1.875rem;
+    font-size: 0.8125rem;
+    text-indent: 0.625rem;
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
       visibility: hidden;
     }
   }
   .input-group {
     border: solid 1px $gray-light;
-    width: rem(32px);
+    width: 2rem;
     @include border-radius(10em);
-    @include transition( all .5s);
+    transition: all .5s;
     &:hover {
       border-color: $primary;
     }
   }
   &.expanded .input-group {
-    width: rem(600px);
+    width: 37.5rem;
     .form-control:not(:last-child) {
       border-right: solid 1px $gray-light;
     }
   }
   &.expanded .input-group-addon {
     display: table-cell;
-    padding-top: rem(2px);
-    padding-bottom: rem(2px);
-    @include animation(fadeIn 1.0s ease-in);
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    -webkit-animation: fadeIn 1.0s ease-in;
+    animation: fadeIn 1.0s ease-in;
   }
   &.expanded .dropdown-form-search {
     background: none;
     cursor: text;
-    @include placeholder {
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
       visibility: visible;
     }
   }
@@ -159,8 +168,8 @@
     cursor: pointer;
   }
   .dropdown-menu {
-    margin-top: rem(15px);
-    margin-left: rem(-10px);
+    margin-top: 0.9375rem;
+    margin-left: -0.625rem;
   }
   .input-group-addon {
     border:none;
@@ -169,23 +178,23 @@
       border-top-right-radius: 10em;
       background: $primary;
       color:$white;
-      width: rem(120px);
+      width: 7.5rem;
       button{
         background: transparent;
         border:none;
       }
       .material-icons{
         vertical-align: bottom;
-        margin-left: rem(5px);
-        font-size: rem(18px);
-        padding-top: rem(2px);
+        margin-left: 0.3125rem;
+        font-size: 1.125rem;
+        padding-top: 0.125rem;
       }
     }
     display: none;
   }
 }
 
-@include keyframes(fadeIn) {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }

@@ -62,11 +62,11 @@
 // Styleguide 6.2
 
 .ps-dropdown{
-  font-size: em(18px);
+  font-size: 1.125rem;
   .arrow-down{
-    font-size: em(25px);
-    top: em(6px);
-    left: em(6px);
+    font-size: 1.563rem;
+    top: 0.375rem;
+    left: 0.375rem;
     position: relative;
     cursor: pointer;
   }
@@ -99,14 +99,14 @@
 
     .dropdown-item{
       cursor: pointer;
-      @include display(flex);
-      @include justify-content(space-between);
+      display: flex;
+      justify-content: space-between;
     }
     .items-list{
       list-style-type: none;
       padding: 0;
       .dropdown-item{
-        margin: em(10px) 0;
+        margin: 0.625rem 0;
         &.selected{
           color: $gray-light;
         }
@@ -115,11 +115,11 @@
           border-color: $gray-light;
         }
         span{
-          color:$brand-info;
-          border:$brand-info 1px solid;
-          font-size: em(12px);
-          padding: em(4px);
-          border-radius: em(2px);
+          color: $brand-info;
+          border: $brand-info 1px solid;
+          font-size: 0.75rem;
+          padding: 0.25rem;
+          border-radius: 0.125rem;
         }
       }
     }

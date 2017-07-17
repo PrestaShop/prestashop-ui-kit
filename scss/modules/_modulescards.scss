@@ -135,12 +135,12 @@
         display: inline;
         color: $gray-light;
         .light-button{
-            font-size: rem(10px);
-            padding: rem(8px);
-            margin-left: rem(-2px);
+            font-size: 0.625rem;
+            padding: 0.5rem;
+            margin-left: -0.125rem;
         }
         .onclick {
-            margin-bottom: -7px;
+            margin-bottom: -0.4375rem;
         }
     }
 

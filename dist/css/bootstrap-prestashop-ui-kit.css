@@ -7267,12 +7267,12 @@ xs, .xs, .xsmall, xsmall {
       border-width: 0 4.8px 4.8px 4.8px;
       border-width: 0 0.3rem 0.3rem 0.3rem; }
     .select2-container--prestakit.select2-container--open.select2-container--below .select2-selection {
-      border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
       border-bottom-color: transparent; }
     .select2-container--prestakit.select2-container--open.select2-container--above .select2-selection {
-      border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border-top-left-radius: 0;
       border-top-color: transparent; }
   .select2-container--prestakit .select2-selection__clear {
     color: #6C868E;

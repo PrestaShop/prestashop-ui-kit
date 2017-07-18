@@ -1,3 +1,8 @@
+import 'bootstrap';
+import 'select2';
+import 'jquery.growl';
+import 'pstagger';
+
 /*!
 * Prestige v1.0.0 (http://getbootstrap.com)
 * Copyright 2015-2015

@@ -20,6 +20,14 @@ let config = {
         loader: 'babel-loader'
       },
       {
+        test: require.resolve('jquery'),
+        loader: 'expose-loader?jQuery!expose-loader?$'
+      },
+      {
+        test: require.resolve('tether'),
+        loader: 'expose-loader?tether!expose-loader?Tether'
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -57,12 +65,13 @@ let config = {
       }
     ]
   },
-  externals: {
-    $: '$',
-    jquery: 'jQuery'
-  },
   plugins: [
-    new ExtractTextPlugin(path.join('..', 'css', 'bootstrap-prestashop-ui-kit.css'))
+    new ExtractTextPlugin(path.join('..', 'css', 'bootstrap-prestashop-ui-kit.css')),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      "window.Tether": 'tether',
+    })
   ]
 };
 

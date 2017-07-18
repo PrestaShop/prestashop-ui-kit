@@ -49,17 +49,6 @@ let config = {
         })
       },
       {
-        test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '../fonts/[hash].[ext]'
-            }
-          }
-        ]
-      },
-      {
         test : /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader']
       }

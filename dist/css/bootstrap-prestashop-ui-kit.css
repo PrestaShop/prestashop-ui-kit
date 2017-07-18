@@ -1,4 +1,4 @@
-/*
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=latin-ext);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*
 * jQuery pstagger plugin
 * https://www.prestashop.com
 *
@@ -157,67 +157,6 @@
 @charset "UTF-8";
 /* not used */
 /* TODO change padding */
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(../fonts/3d4a907b1b7a232654324a3dd7ae4aa3.eot);
-  src: local("Noto Sans Regular"), local("NotoSans-Regular"), url(../fonts/3d4a907b1b7a232654324a3dd7ae4aa3.eot?#iefix) format("embedded-opentype"), url(../fonts/19c1b868764c0e4d15a45d3f61250488.woff2) format("woff2"), url(../fonts/846c191efd3d0aacde5a916cf2ebf1a4.woff) format("woff"), url(../fonts/2fd9c16b805724d590c0cff96da070a4.ttf) format("truetype"), url(../fonts/5ea9fdf2293930126fa9c544968009ae.svg#NotoSans-Regular) format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(../fonts/eeb9224f85430652fd070e4e64129aa4.eot);
-  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url(../fonts/eeb9224f85430652fd070e4e64129aa4.eot?#iefix) format("embedded-opentype"), url(../fonts/199038f07312bfc6f0aabd3ed6a2b64d.woff2) format("woff2"), url(../fonts/c2183257e7a697769df4200c547551f1.woff) format("woff"), url(../fonts/a165a42685795361b25593effb32fdb1.ttf) format("truetype"), url(../fonts/5dc400bcedda37b13f35cb44623193cf.svg#NotoSans-Bold) format("svg");
-  font-weight: 700;
-  font-style: standard; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(../fonts/a77ade19de3d3762dfbf1fe553b293cc.eot);
-  src: local("Noto Sans Italic"), local("NotoSans-Italic"), url(../fonts/a77ade19de3d3762dfbf1fe553b293cc.eot?#iefix) format("embedded-opentype"), url(../fonts/7a3ebca0cba2e2c6090e84e1d77e0f94.woff2) format("woff2"), url(../fonts/332f555bb44cdc394d6c799df0c03389.woff) format("woff"), url(../fonts/154da4697acc779b55af0a67f1241e4e.ttf) format("truetype"), url(../fonts/3d34be670a7f15086e512282b97ae35e.svg#NotoSans-Italic) format("svg");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(../fonts/b467416c449eb823029e16347b2ea510.eot);
-  src: local("Noto Sans BoldItalic"), local("NotoSans-BoldItalic"), url(../fonts/b467416c449eb823029e16347b2ea510.eot?#iefix) format("embedded-opentype"), url(../fonts/a68cfe9d548950edf5df102269877edd.woff2) format("woff2"), url(../fonts/3f81521029cc8a9a703419c4a74704a0.woff) format("woff"), url(../fonts/4f6ff3639c1e5728b905b650c1a06e75.ttf) format("truetype"), url(../fonts/80e74ff9406650e53bbec1e292c2c094.svg#NotoSans-BoldItalic) format("svg");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/e79bfd88537def476913f3ed52f4f4b3.eot);
-  /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/570eb83859dc23dd0eec423a49e147fe.woff2) format("woff2"), url(../fonts/012cf6a10129e2275d79d6adac7f3b02.woff) format("woff"), url(../fonts/a37b0c01c0baf1888ca812cc0508f6e2.ttf) format("truetype"); }
-
-.material-icons, .switch-input:after, .switch-input.small:after, .autocomplete-search > .product-list > .media > .media-body > .switch-input.label:after, .switch-input.tiny:after {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  /* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga'; }
-
 .select2-container {
   box-sizing: border-box;
   display: inline-block;

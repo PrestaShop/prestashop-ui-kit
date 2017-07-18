@@ -10,7 +10,7 @@ let config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, './dist/js'),
+    path: path.resolve(__dirname, './releases/develop/js'),
     filename: 'prestashop-ui-kit.js'
   },
   module: {

@@ -13,6 +13,7 @@ let config = {
     path: path.resolve(__dirname, './releases/develop/js'),
     filename: 'prestashop-ui-kit.js'
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -35,7 +36,8 @@ let config = {
             {
               loader: 'css-loader',
               options: {
-                minimize: false,
+                minimize: true,
+                sourceMap: true,
               }
             },
             'postcss-loader',
@@ -55,7 +57,7 @@ let config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin(path.join('..', 'css', 'bootstrap-prestashop-ui-kit.css')),
+    new ExtractTextPlugin(path.join('..', 'css', 'bootstrap-prestashop-ui-kit.css') + '?sourceMap'),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
       $: 'jquery',
@@ -65,21 +67,21 @@ let config = {
 };
 
 config.plugins.push(
-  // new webpack.optimize.UglifyJsPlugin({
-  //   sourceMap: false,
-  //   compress: {
-  //     sequences: true,
-  //     conditionals: true,
-  //     booleans: true,
-  //     if_return: true,
-  //     join_vars: true,
-  //     drop_console: true
-  //   },
-  //   output: {
-  //     comments: false
-  //   },
-  //   minimize: true
-  // })
+  new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
+    compress: {
+      sequences: true,
+      conditionals: true,
+      booleans: true,
+      if_return: true,
+      join_vars: true,
+      drop_console: true
+    },
+    output: {
+      comments: false
+    },
+    minimize: true
+  })
 );
 
 module.exports = config;

@@ -527,7 +527,7 @@ $help-box-size: 16px;
         }
 
         > .delete {
-          @extend .pull-xs-right;
+          @extend .float-sm-right;
           line-height: 1.563rem;
 
           &:hover {

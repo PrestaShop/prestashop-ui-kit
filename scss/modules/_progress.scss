@@ -32,19 +32,45 @@
 }
 
 .progress-primary {
-  @include progress-variant($progress-bar-bg);
+  &[value]::-webkit-progress-value {
+    background-color: $progress-bar-bg;
+  }
 
   &[value]::-webkit-progress-bar {
     background-color: $white;
     border: 1px solid $gray-light;
     border-radius: $progress-border-radius;
   }
+
+  &[value]::-moz-progress-bar {
+    background-color: $progress-bar-bg;
+  }
+
+  // IE9
+  @media screen and (min-width:0\0) {
+    .progress-bar {
+      background-color: $progress-bar-bg;
+    }
+  }
 }
 
 .progress-dark {
-  @include progress-variant($progress-bar-bg);
+  &[value]::-webkit-progress-value {
+    background-color: $progress-bar-bg;
+  }
+
+  &[value]::-moz-progress-bar {
+    background-color: $progress-bar-bg;
+  }
 
   &[value]::-webkit-progress-bar {
     background-color: $gray-dark;
+  }
+
+  // IE9
+  @media screen and (min-width:0\0) {
+    .progress-bar {
+      background-color: $progress-bar-bg;
+    }
   }
 }

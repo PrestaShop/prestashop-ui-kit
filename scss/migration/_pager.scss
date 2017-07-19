@@ -1,7 +1,13 @@
 .previous {
-  @extend .pager-prev;
+  > a,
+  > span {
+    float: left;
+  }
 }
 
 .next {
-  @extend .pager-next;
+  > a,
+  > span {
+    float: right;
+  }
 }

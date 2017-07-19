@@ -111,14 +111,14 @@
   }
 
   .subheader-quicknav {
-    @include pull-right;
+    @include float-right;
     @extend .navbar-nav;
     @extend .nav;
     display: inline-block;
   }
 
   .subheader-navbar {
-    @include pull-left;
+    @include float-left;
     @extend .navbar-nav;
     @extend .nav;
     width: 100%;

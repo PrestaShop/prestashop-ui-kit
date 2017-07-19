@@ -54,7 +54,7 @@
 //             ( 42 )
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test2" class="btn btn-primary light-button btn-sm pull-xs-right">Free</button>
+//                 <button id="test2" class="btn btn-primary btn-block btn-lg light-button btn-sm pull-xs-right">Free</button>
 //             </div>
 //         </div>
 //     </div>
@@ -80,12 +80,14 @@
     border: none;
     border-radius: 0;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    min-height: 300px;
 
     .module-item-heading-grid {
         position: relative;
-        height: 55px;
 
         .module-logo-thumb-grid {
+          text-align: center;
+          width: 100%;
             > img {
                 max-width: $module-logo-size;
                 max-height: $module-logo-size;
@@ -93,32 +95,30 @@
             width: $module-logo-size;
             height: $module-logo-size;
             text-align: center;
-            float: left;
-
+            margin: 0 auto;
             @include border-radius($border-radius);
         }
 
         .module-name-grid {
             @extend .card-title;
             position: relative;
-            margin: 0 0 0 57px;
+            text-align: center;
             font-weight: bolder;
             color: $gray;
+            margin: 1rem 0 .5rem;
         }
 
         .module-version-author-grid {
             @extend .card-title;
 
-            margin: 0 0 0 57px;
-            position: relative;
-            font-weight: bold;
+            text-align: center;
+            font-weight: lighter;
             color: $gray-medium;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             b {
-                font-weight: bold;
-                color: $gray-dark;
+                font-weight: lighter;
             }
         }
     }
@@ -129,6 +129,10 @@
 
     .module-star-ranking-grid {
         @include stars($ps-stars);
+    }
+
+    .module-quick-description-grid {
+      text-align: center;
     }
 
     .module-quick-action-grid {
@@ -146,7 +150,6 @@
 
     .module-quick-description-grid {
         margin: 15px 0;
-        height: 100px;
 
         .module-read-more-grid {
             display: inline-block;

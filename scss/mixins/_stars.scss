@@ -26,12 +26,12 @@ $ps-stars: (
 @mixin stars($map) {
     @each $theme, $stars in $map {
         @include m($theme) {
-            display :inline;
+            display: inline-block;
             position: absolute;
-            left: 5%;
-            bottom: 10%;
             color: $gray-medium;
-        
+            text-align: right;
+            left: 90px;
+
             &:before {
                 font-family: 'Material Icons';
                 content: "\E838\E838\E838\E838\E838";
@@ -39,6 +39,9 @@ $ps-stars: (
                 float: left;
                 font-size: 1.1em;
                 margin-right: 0.5em;
+                position: absolute;
+                left: -70px;
+                top: 0;
             }
 
             &:after {
@@ -47,8 +50,8 @@ $ps-stars: (
                 content: $stars;
                 color: $secondary-hover;
                 font-size: 1.1em;
-                left: 0;
-                bottom: 0;
+                left: -70px;
+                top: 0;
             }
         }
     }

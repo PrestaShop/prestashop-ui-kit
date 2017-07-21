@@ -22,12 +22,12 @@
   @include plain-hover-focus {
     background-color: $white;
   }
-  @include hover-focus
-  :not(span) {
-    text-decoration: none;
-    color: $primary;
-    background-color: $white;
-    border-color: $pagination-hover-border;
+  @include hover-focus {
+    &:not(span) {
+      text-decoration: none;
+      color: $primary;
+      background-color: $white;
+      border-color: $pagination-hover-border;
+    }
   }
-
 }

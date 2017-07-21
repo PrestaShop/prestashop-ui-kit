@@ -2,8 +2,8 @@
   @extend .card;
   @extend .card-block;
 
-  border: none;
-  border-radius: 0;
+  border: 1px solid $card-border-color;
+  border-radius: 0.25rem;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 
   .module-item-heading-grid {
@@ -71,7 +71,6 @@
 
   .module-quick-description-grid {
     margin: 15px 0;
-    height: 100px;
 
     .module-read-more-grid {
       display: inline-block;

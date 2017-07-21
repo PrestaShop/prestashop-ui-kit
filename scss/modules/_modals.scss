@@ -11,6 +11,11 @@
 .modal-header .close {
   font-size: 2.3rem;
   font-weight: 400;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .modal-header {

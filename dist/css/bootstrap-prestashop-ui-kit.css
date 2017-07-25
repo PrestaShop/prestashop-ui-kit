@@ -8014,13 +8014,17 @@ xs, .xs, .xsmall, xsmall {
   .module-item-wrapper-grid .module-quick-action-grid, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid {
     display: inline;
     color: #363A41; }
+    .module-item-wrapper-grid .module-quick-action-grid .btn-group, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid .btn-group, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid .btn-group {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      left: 0; }
     .module-item-wrapper-grid .module-quick-action-grid .light-button, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid .light-button, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid .light-button {
       font-size: 0.625rem;
       padding: 0.5rem;
-      margin-left: -0.125rem;
-      position: absolute;
-      bottom: 10px;
-      width: 92%; }
+      width: 92%;
+      float: none;
+      margin: 0 auto; }
     .module-item-wrapper-grid .module-quick-action-grid .onclick, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-action-grid .onclick, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-action-grid .onclick {
       margin-bottom: -7px; }
   .module-item-wrapper-grid .module-quick-description-grid, .module-addons-item-grid .module-addons-item-wrapper-grid .module-quick-description-grid, .module-placeholders-wrapper .timeline-item-wrapper .module-quick-description-grid {

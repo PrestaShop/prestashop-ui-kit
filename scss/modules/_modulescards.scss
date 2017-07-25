@@ -6,7 +6,41 @@
 //
 // Markup:
 // <div class="row">
-//     <div class="col-sm-6">
+//     <div class="col-sm-4">
+//         <div class="module-item-wrapper-grid">
+//             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
+//                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
+//                 <h3 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
+//                     Call Back
+//                 </h3>
+//                 <div class="text-ellipsis xsmall module-version-author-grid">
+//                     v1.0.3 by <a class="url" href="#">PrestaShop</a>
+//                 </div>
+//             </div>
+//             <div class="module-quick-description-grid small no-padding">
+//                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
+//                 <div class="module-read-more-grid">
+//                     <a class="module-read-more-grid-btn url" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
+//                 </div>
+//             </div>
+//             <div class="module-container">
+//                <div class="badges-container">
+//                  <img src="https://medias2.prestastore.com/themes/prestastore/img/front/sprites/badges/made-by-prestashop.png" alt="Réalisé par PrestaShop">
+//                  Réalisé par PrestaShop
+//                </div>
+//             <hr>
+//             <div class="module-star-ranking-grid-3">
+//               <span class="m-l-1">( 42 )</span>
+//             </div>
+//             <div class="module-quick-action-grid clearfix">
+//                <div class="btn-group">
+//                  <button id="test1" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm">199.99 €</button>
+//                </div>
+//              </div>
+//           </div>
+//         </div>
+//     </div>
+//     <div class="col-sm-4">
 //         <div class="module-item-wrapper-grid">
 //             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
 //                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
@@ -23,38 +57,13 @@
 //                     <a class="module-read-more-grid-btn url" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
 //                 </div>
 //             </div><hr>
-//             <div class="module-container">
-//             <div class="module-star-ranking-grid-3">
-//               <span class="m-l-1">( 42 )</span>
-//             </div>
-//             <div class="module-quick-action-grid clearfix">
-//                 <button id="test1" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm pull-xs-right">199.99 €</button>
-//             </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-sm-6">
-//         <div class="module-item-wrapper-grid">
-//             <div class="module-item-heading-grid" data-toggle="modal" data-target="#module-modal-read-more-webcallback">
-//                 <img class="module-logo-thumb-grid" src="http://addons-media.prestashop.com/img/pico/3162.jpg" alt="Call Back">
-//                 <h3 class="text-ellipsis module-name-grid" data-toggle="tooltip" data-placement="top" title="" data-original-title="Call Back">
-//                     Call Back
-//                 </h3>
-//                 <div class="text-ellipsis xsmall-text module-version-author-grid">
-//                     v1.0.3 by <a class="url" href="#">PrestaShop</a>
-//                 </div>
-//             </div>
-//             <div class="module-quick-description-grid small no-padding">
-//                 Organic man bun trust fund bushwick, retro plaid messenger bag blog etsy occupy before they sold out scenester fingerstache selvage pinterest
-//                 <div class="module-read-more-grid">
-//                     <a class="module-read-more-grid-btn url" href="#" data-toggle="modal" data-target="#module-modal-read-more-webcallback">Read More</a>
-//                 </div>
-//             </div><hr>
 //             <div class="module-star-ranking-grid-45">
 //                <span class="m-l-1">( 42 )</span>
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                 <button id="test2" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm pull-xs-right">Free</button>
+//               <div class="btn-group">
+//                 <button id="test2" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm">Free</button>
+//               </div>
 //             </div>
 //         </div>
 //     </div>
@@ -127,13 +136,18 @@
     .module-quick-action-grid {
         display: inline;
         color: $gray-dark;
+        .btn-group {
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          left: 0;
+        }
         .light-button{
             font-size: rem(10px);
             padding: rem(8px);
-            margin-left: rem(-2px);
-            position: absolute;
-            bottom: 10px;
             width: 92%;
+            float: none;
+            margin: 0 auto;
         }
         .onclick {
             margin-bottom: -7px;

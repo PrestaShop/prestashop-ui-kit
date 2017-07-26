@@ -105,28 +105,31 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
+
+    &:hover {
+      cursor: $cursor-disabled;
+    }
+  }
 }
 
 .btn-sm {
   padding: 0.25rem 0.5rem;
   font-size: 0.5rem;
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
 }
 
 .btn-lg {
   padding: 1.25em 1.5em;
   font-size: 0.75rem;
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
-  }
 }
 
 .btn-action {

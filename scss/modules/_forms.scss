@@ -494,6 +494,8 @@ $help-box-size: 16px;
       @extend .card;
       margin-top: 0.3125rem;
       padding-right: 0.625rem;
+      flex-direction: row;
+      align-items: center;
       > .media-left {
         > .image {
           margin: 0.3125rem;

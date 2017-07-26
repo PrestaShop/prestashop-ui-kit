@@ -6,10 +6,7 @@
 }
 
 .form-control {
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
-  &:-moz-placeholder {
+  &::placeholder {
     font-style: $input-font-style;
     color: $input-color-placeholder;
   }
@@ -80,23 +77,7 @@
   .select2-search__field {
     outline: 0;
 
-    &::-webkit-input-placeholder {
-      color: $input-color-placeholder;
-    }
-
-    /* Firefox 18- */
-    &:-moz-placeholder {
-      color: $input-color-placeholder;
-    }
-
-    /**
-     * Firefox 19+
-     */
-    &::-moz-placeholder {
-      color: $input-color-placeholder;
-      opacity: 1;
-    }
-    &:-ms-input-placeholder {
+    &::placeholder {
       color: $input-color-placeholder;
     }
   }

@@ -2,11 +2,15 @@
   .input-group-addon {
     color: $input-group-addon-color;
   }
-  .form-control:not(:first-child) {
-    border-left: none;
-  }
-  .form-control:not(:last-child) {
-    border-right: none;
+  .form-control {
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+
+    &:not(:last-child) {
+      border-right: none;
+    }
   }
 }
 
@@ -39,10 +43,7 @@
 }
 
 .form-search {
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
-  &:-moz-placeholder {
+  &::placeholder{
     color: #999;
     color: transparent;
   }
@@ -57,10 +58,7 @@
     height: 1.875rem;
     font-size: 0.8125rem;
     text-indent: 0.625rem;
-    &::-webkit-input-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder,
-    &:-moz-placeholder {
+    &::placeholder {
       visibility: hidden;
     }
   }
@@ -80,7 +78,7 @@
     }
   }
   &.expanded .input-group-addon {
-    display: table-cell;
+    display: flex;
     padding-top: 0.125rem;
     padding-bottom: 0.125rem;
     -webkit-animation: fadeIn 1.0s ease-in;
@@ -89,10 +87,7 @@
   &.expanded .dropdown-form-search {
     background: none;
     cursor: text;
-    &::-webkit-input-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder,
-    &:-moz-placeholder {
+    &::placeholder {
       visibility: visible;
     }
   }
@@ -115,6 +110,8 @@
       button {
         background: transparent;
         border: none;
+        color: $white;
+        text-transform: uppercase;
       }
       .material-icons {
         vertical-align: bottom;

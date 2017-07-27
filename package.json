@@ -1,6 +1,6 @@
 {
-  "name": "PrestaKit",
-  "version": "0.0.34",
+  "name": "prestakit",
+  "version": "1.0.0-alpha-1",
   "description": "Prestashop UI Kit integration",
   "repository": {
     "type": "git",

@@ -1,0 +1,8 @@
+node_modules/*
+
+releases/*
+
+# Editor
+.projectile
+.tern-port
+TAGS

@@ -33,7 +33,7 @@
 //               <span class="m-l-1">( 42 )</span>
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//                <div class="btn-group">
+//                <div class="form-action-button-container">
 //                  <button id="test1" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm">199.99 €</button>
 //                </div>
 //              </div>
@@ -61,7 +61,7 @@
 //                <span class="m-l-1">( 42 )</span>
 //             </div>
 //             <div class="module-quick-action-grid clearfix">
-//               <div class="btn-group">
+//               <div class="form-action-button-container">
 //                 <button id="test2" class="btn btn-primary-outline btn-block btn-lg light-button btn-sm">Free</button>
 //               </div>
 //             </div>
@@ -136,7 +136,7 @@
     .module-quick-action-grid {
         display: inline;
         color: $gray-dark;
-        .btn-group {
+        .form-action-button-container {
           position: absolute;
           bottom: 10px;
           width: 100%;

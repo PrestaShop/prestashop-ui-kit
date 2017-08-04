@@ -186,6 +186,9 @@
         height: 100%;
         vertical-align: middle;
         text-align: center;
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
         .module-icon-addons-exit-grid {
             display: block;
             padding-bottom: 20px;

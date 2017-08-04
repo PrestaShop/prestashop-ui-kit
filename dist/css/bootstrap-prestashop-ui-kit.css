@@ -8051,7 +8051,7 @@ xs, .xs, .xsmall, xsmall {
   user-select: none;
   cursor: pointer; }
   .module-addons-item-grid .module-addons-item-wrapper-grid {
-    display: table-cell;
+    height: 100%;
     vertical-align: middle;
     text-align: center; }
     .module-addons-item-grid .module-addons-item-wrapper-grid .module-icon-addons-exit-grid {

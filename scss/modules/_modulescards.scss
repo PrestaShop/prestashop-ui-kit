@@ -183,7 +183,7 @@
     cursor: pointer;
     .module-addons-item-wrapper-grid {
         @extend .module-item-wrapper-grid;
-        display: table-cell;
+        height: 100%;
         vertical-align: middle;
         text-align: center;
         .module-icon-addons-exit-grid {

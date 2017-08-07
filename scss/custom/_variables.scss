@@ -63,3 +63,12 @@ $dropdown-arrow-color: $input-color-placeholder;
 $caret-width: .3rem;
 
 $module-logo-size: 45px;
+
+$spacing-base: 30px;
+$spacing-widths: (
+  xxs: $spacing-base / 6,
+  xs: $spacing-base / 3,
+  s: $spacing-base / 2,
+  n: $spacing-base,
+  l: $spacing-base * 2
+);

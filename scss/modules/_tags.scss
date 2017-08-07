@@ -3,8 +3,8 @@
   @include reset-text();
 
   font-size: $font-size-sm;
-  font-weight: $tags-font-weight;
-  padding: $tags-space-y $input-padding-x;
+  font-weight: $font-weight-semibold;
+  padding: .375rem $input-padding-x;
   color: $input-color-placeholder;
   width: 100%;
   min-height: $input-height;
@@ -14,18 +14,18 @@
 
   .pstaggerTag {
     font-size: 1rem;
-    margin: 0 $tags-space-x;
+    margin: 0 .156rem;
     position: relative;
-    height: $tags-height;
+    height: $input-height - ($input-padding-y * 2);
     padding: 0 8px;
-    color: $tags-color;
+    color: $white;
     text-align: center;
-    background-color: $tags-bg;
+    background-color: $primary-hover;
 
     @include border-radius($border-radius);
 
     & a {
-      color: $tags-cross-color;
+      color: $gray-dark;
     }
   }
 }

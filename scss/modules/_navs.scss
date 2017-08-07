@@ -6,10 +6,10 @@
   }
 
   .nav-link {
-    font-weight: $nav-tabs-unactive-link-hover-font-weight;
-    background-color: $nav-tabs-unactive-link-hover-bg;
-    color: $nav-tabs-unactive-link-hover-color;
-    padding: $nav-link-unactive-padding;
+    font-weight: $font-weight-normal;
+    background-color: inherit;
+    color: $gray-medium;
+    padding: 1em 2.5em;
     border: 0;
     @include border-radius(0);
   }
@@ -20,8 +20,8 @@
       border-top: 3px solid $nav-tabs-active-link-hover-border-color;
       background-color: $nav-tabs-active-link-hover-bg;
       color: $nav-tabs-active-link-hover-color;
-      font-weight: $nav-tabs-active-link-hover-font-weight;
-      padding: $nav-link-active-padding;
+      font-weight: $font-weight-normal;
+      padding: 0.75em 2.5em 1em 2.5em;
     }
   }
 
@@ -30,18 +30,18 @@
 
     .nav-link.active,
     .nav-item.open .nav-link {
-      border-left: 1px solid $nav-tab-content-border-color;
-      border-right: 1px solid $nav-tab-content-border-color;
+      border-left: 1px solid $primary-border-color;
+      border-right: 1px solid $primary-border-color;
     }
   }
 }
 
 .tab-content {
-  background-color: $nav-tab-content-bg;
+  background-color: $body-bg;
   padding: 20px;
 
   &.bordered {
-    border: solid 1px $nav-tab-content-border-color;
+    border: solid 1px $primary-border-color;
   }
 }
 
@@ -67,10 +67,10 @@
     margin-left: 10px;
 
     .nav-link {
-      font-weight: $nav-tabs-unactive-link-hover-font-weight;
+      font-weight: $font-weight-normal;
       background-color: #fff;
-      color: $nav-tabs-unactive-link-hover-color;
-      padding: $nav-link-unactive-padding;
+      color: $gray-medium;
+      padding: 1em 2.5em;
       @include border-radius(0);
 
       + .nav-link {
@@ -82,10 +82,10 @@
     .nav-item.active .nav-link {
       @include plain-hover-focus {
         border-bottom: 3px solid $nav-tabs-active-link-hover-border-color;
-        background-color: $nav-tabs-active-link-hover-bg;
-        color: $nav-tabs-active-link-hover-color;
-        font-weight: $nav-tabs-active-link-hover-font-weight;
-        padding: $nav-link-active-padding;
+        background-color: $body-bg;
+        color: $gray-dark;
+        font-weight: $font-weight-semibold;
+        padding: 0.75em 2.5em 1em 2.5em;
       }
     }
 
@@ -98,7 +98,7 @@
       left: 0;
       bottom: 0;
       display: table-cell;
-      border-bottom: 1px solid $navbar-bottom-separtor-color;
+      border-bottom: 1px solid $gray-light;
       position: absolute;
       width: 100%;
     }
@@ -118,7 +118,7 @@
   }
 
   .subheader-title {
-    font-size: $subheader-title-font-size;
+    font-size: $font-size-h1;
     font-weight: $font-weight-semibold;
     display: inline-block;
   }

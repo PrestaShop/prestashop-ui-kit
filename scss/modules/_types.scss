@@ -1,21 +1,21 @@
 h1 {
-  font-weight: $font-weight-h1;
-  color: $font-color-h1;
+  font-weight: $font-weight-semibold;
+  color: $gray-dark;
 }
 
 h2 {
-  font-weight: $font-weight-h2;
-  color: $font-color-h2;
+  font-weight: $font-weight-semibold;
+  color: $gray-dark;
 }
 
 h3 {
-  font-weight: $font-weight-h3;
-  color: $font-color-h3;
+  font-weight: $font-weight-bold;
+  color: $gray-dark;
 }
 
 h4 {
-  font-weight: $font-weight-h4;
-  color: $font-color-h4;
+  font-weight: $font-weight-semibold;
+  color: $gray-medium;
 }
 
 h1, h2, h3, h4 {
@@ -23,17 +23,17 @@ h1, h2, h3, h4 {
 }
 
 .url {
-  font-weight: $font-weight-url;
+  font-weight: $font-weight-semibold;
 }
 
 .font-primary {
-  font-weight: $font-weight-primary;
-  color: $font-color-primary;
+  font-weight: $font-weight-normal;
+  color: $gray-dark;
 }
 
 .font-secondary {
-  font-weight: $font-weight-secondary;
-  color: $font-color-secondary;
+  font-weight: $font-weight-normal;
+  color: $gray-medium;
 }
 
 sm, small {

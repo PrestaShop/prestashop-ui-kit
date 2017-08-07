@@ -7,7 +7,7 @@
 
 .form-control {
   &::placeholder {
-    font-style: $input-font-style;
+    font-style: italic;
     color: $input-color-placeholder;
   }
   @include border-radius($border-radius);
@@ -156,8 +156,8 @@
   &.select2-container--focus,
   &.select2-container--open {
     .select2-selection {
-      @include box-shadow($form-control-focus-box-shadow);
-      transition: $form-control-transition;
+      @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+      transition: border-color ease-in-out .15s;
       border-color: $input-border-focus;
     }
   }
@@ -194,7 +194,7 @@
    * Clear the selection.
    */
   .select2-selection__clear {
-    color: $clear-selection-color;
+    color: $input-color-placeholder;
     cursor: pointer;
     float: right;
     font-weight: bold;
@@ -213,7 +213,6 @@
   &.select2-container--disabled {
 
     .select2-selection {
-      border-color: $input-border;
       @include box-shadow(none);
     }
 

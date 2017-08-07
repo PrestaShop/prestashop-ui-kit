@@ -45,6 +45,8 @@ $brand-success: $success;
 $brand-warning: $warning;
 $brand-danger: $danger;
 
+$link-hover-color: $primary-hover;
+
 $btn-tertiary-color: #fff;
 $btn-tertiary-bg: $brand-tertiary;
 $btn-tertiary-border: $btn-tertiary-bg;
@@ -72,3 +74,8 @@ $spacing-widths: (
   n: $spacing-base,
   l: $spacing-base * 2
 );
+
+$breadcrumb-divider: '>';
+$breadcrumb-divider-color: $gray-extra-dark;
+$breadcrumb-active-color: $gray-extra-dark;
+$breadcrumb-item-padding: map-get($spacing-widths, 'xxs');

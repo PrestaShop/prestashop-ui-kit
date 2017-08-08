@@ -1,33 +1,76 @@
 .alert {
+  border-radius: 0;
+  padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
   position: relative;
-  padding: 0.9375rem;
+
+  &::before {
+    font-family: 'Material Icons';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2.875rem;
+    height: 100%;
+    text-align: center;
+    font-size: 1.563rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   p {
-    margin-bottom: 0;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  > * {
+    padding: 0 $alert-padding-x;
+  }
+
+  .close {
+    opacity: 1;
+    margin-right: 0.625rem;
+
+    .material-icons {
+      font-size: 1.125rem;
+    }
   }
 }
 
 .alert-info {
-  @include ps-alert-variant($notice, $primary, $gray-dark);
+  &::before {
+    content: '\E88F';
+    background-color: $notice;
+    color: $alert-info-border;
+  }
+
+  .close {
+    color: $alert-info-border;
+  }
 }
 
 .alert-warning {
-  @include ps-alert-variant($warning-hover, $warning, $gray-dark);
+  &::before {
+    content: '\E001';
+    background-color: $warning-hover;
+    color: $alert-warning-border;
+  }
+
+  .close {
+    color: $alert-warning-border;
+  }
 }
 
 .alert-danger {
-  @include ps-alert-variant($danger-hover, $danger, $gray-dark);
-}
+  &::before {
+    content: '\E001';
+    background-color: $danger-hover;
+    color: $alert-danger-border;
+  }
 
-.alert-drop {
-  margin-bottom: 0;
-}
-
-.alert-down {
-  display: none;
-  background-color: $white;
-  border-radius: 0;
-  border-top: none;
+  .close {
+    color: $alert-danger-border;
+  }
 }
 
 .growl-notice {

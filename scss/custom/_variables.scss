@@ -35,8 +35,8 @@ $success: #78D07D;
 $success-hover: #70B580;
 $warning: #CD9321;
 $warning-hover: #FDE7BB;
-$danger: #C45C67;
-$danger-hover: #EFC8Cb;
+$danger: #c05c67;
+$danger-hover: #fde1e1;
 
 $brand-primary: $primary;
 $brand-secondary: $secondary;
@@ -79,3 +79,18 @@ $breadcrumb-divider: '>';
 $breadcrumb-divider-color: $gray-extra-dark;
 $breadcrumb-active-color: $gray-extra-dark;
 $breadcrumb-item-padding: map-get($spacing-widths, 'xxs');
+
+$alert-padding-x: 10px;
+
+$alert-border-width: 2px;
+$alert-info-bg: #ffffff;
+$alert-info-text: $gray-dark;
+$alert-info-border: $primary;
+
+$alert-warning-bg: #ffffff;
+$alert-warning-text: $gray-dark;
+$alert-warning-border: $warning;
+
+$alert-danger-bg: #ffffff;
+$alert-danger-text: $gray-dark;
+$alert-danger-border: $danger;

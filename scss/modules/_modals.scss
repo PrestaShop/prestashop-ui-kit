@@ -1,27 +1,31 @@
-.modal-content {
-  padding: 12px;
-}
+.modal {
+  background-color: #eff1f2;
 
-.modal-title {
-  color: $gray-dark;
-  font-size: $font-size-h1;
-  font-weight: 600;
-}
+  .modal-content {
+    padding: 15px;
+    box-shadow: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+    border: none;
+    @include border-radius(0);
 
-.modal-header .close {
-  font-size: 2.3rem;
-  font-weight: 400;
-  opacity: 0.2;
+    .modal-header {
+      border-bottom: none;
 
-  &:hover {
-    opacity: 0.5;
+      .modal-title {
+        @extend h1;
+        margin-bottom: 0;
+      }
+
+      @include close-button();
+    }
+
+    .modal-body {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .modal-footer {
+      border-top: none;
+    }
   }
-}
-
-.modal-header {
-  border-bottom: none;
-}
-
-.modal-footer {
-  border-top: none;
 }

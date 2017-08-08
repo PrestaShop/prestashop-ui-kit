@@ -27,14 +27,7 @@
     padding: 0 $alert-padding-x;
   }
 
-  .close {
-    opacity: 1;
-    margin-right: 0.625rem;
-
-    .material-icons {
-      font-size: 1.125rem;
-    }
-  }
+  @include close-button(0.625rem);
 
   &.medium-alert {
     p {

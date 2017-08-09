@@ -20,7 +20,7 @@ Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit + Javascript.
 
 ```
 [...]
-<link href="dist/css/prestashop-ui-kit.css" rel="stylesheet">
+<link href="dist/css/bootstrap-prestashop-ui-kit.css" rel="stylesheet">
 <script src="dist/docs/public/jquery-1.9.1.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
 <script src="dist/js/prestashop-ui-kit.js"></script>

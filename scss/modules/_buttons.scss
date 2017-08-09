@@ -1,151 +1,84 @@
-.btn-primary {
-  @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border, $primary-hover);
-}
-
-.btn-secondary {
-  @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border, $secondary-hover);
-}
-
-.btn-tertiary {
-  @include ps-button-variant($btn-tertiary-color, $btn-tertiary-bg, $btn-tertiary-border, $tertiary-hover);
-}
-
-.btn-info {
-  @include ps-button-variant($btn-info-color, $btn-info-bg, $btn-info-border, $primary-hover);
-}
-
-.btn-success {
-  @include ps-button-variant($btn-success-color, $btn-success-bg, $btn-success-border, $success-hover);
-}
-
-.btn-warning {
-  @include ps-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, $warning-hover);
-}
-
-.btn-danger {
-  @include ps-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $danger-hover);
-}
-
-.btn-invisible {
-  @include ps-button-variant($gray-medium, rgba($white, 0), rgba($gray-light, 0), $gray-light);
-}
-
-.btn-primary-outline {
-  @include ps-button-outline-variant($btn-primary-bg, $primary-hover);
-  border-color: $btn-primary-border;
-  &.sensitive {
-    border-color: $primary-border-color;
-  }
-}
-
-.btn-secondary-outline {
-  @include ps-button-outline-variant($btn-secondary-border, $secondary-hover);
-}
-
-.btn-tertiary-outline {
-  @include ps-button-outline-variant($btn-tertiary-border, $tertiary-hover);
-}
-
-.btn-info-outline {
-  @include ps-button-outline-variant($btn-info-bg, $primary-hover);
-}
-
-.btn-success-outline {
-  @include ps-button-outline-variant($btn-success-bg, $success-hover);
-}
-
-.btn-warning-outline {
-  @include ps-button-outline-variant($btn-warning-bg, $warning-hover);
-}
-
-.btn-danger-outline {
-  @include ps-button-outline-variant($btn-danger-bg, $danger-hover);
-}
-
-.btn-primary-reverse {
-  @include ps-button-reverse($btn-primary-bg, $primary-hover);
-}
-
-.btn-secondary-reverse {
-  @include ps-button-reverse($btn-secondary-border, $secondary-hover);
-}
-
-.btn-tertiary-reverse {
-  @include ps-button-reverse($btn-tertiary-border, $tertiary-hover);
-}
-
-.btn-info-reverse {
-  @include ps-button-reverse($btn-info-bg, $primary-hover);
-}
-
-.btn-success-reverse {
-  @include ps-button-reverse($btn-success-bg, $success-hover);
-}
-
-.btn-warning-reverse {
-  @include ps-button-reverse($btn-warning-bg, $warning-hover);
-}
-
-.btn-danger-reverse {
-  @include ps-button-reverse($btn-danger-bg, $danger-hover);
-}
-
 .btn {
-  text-transform: uppercase;
+  font-family: $font-family-base;
+  color: #fff;
   letter-spacing: .1em;
-  font-size: .75em;
-  border-radius: 3px;
-  border-width: 2px;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  padding: map-get($spacing-widths, 'xs');
 
-  &.sensitive {
-    text-transform: none;
-    letter-spacing: 0;
-    font-size: 0.75rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  &.btn-sm {
+    padding: map-get($spacing-widths, 'xxs');
+    font-weight: $font-weight-normal;
+  }
+
+  &.btn-lg {
+    padding: map-get($spacing-widths, 's');
+    font-weight: $font-weight-bold;
   }
 
   &:hover {
     cursor: pointer;
+    color: #fff;
   }
 
   &.disabled,
   &:disabled {
+    opacity: 1;
     cursor: $cursor-disabled;
-    opacity: .65;
-    @include box-shadow(none);
 
     &:hover {
       cursor: $cursor-disabled;
     }
   }
-}
-
-.btn-sm {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.5rem;
-}
-
-.btn-lg {
-  padding: 1.25em 1.5em;
-  font-size: 0.75rem;
-}
-
-.btn-action {
-  @include ps-button-outline-variant($gray-light, $gray-light);
-  color: $primary;
 
   > .material-icons {
-    color: $primary;
+    vertical-align: middle;
   }
+}
 
-  &:hover {
-    color: $primary-hover;
+a {
+  font-size: 0.75rem;
+  font-weight: $font-weight-bold;
+
+  &.tooltip-link {
     > .material-icons {
-      color: $primary-hover;
+      color: $gray-medium;
+      vertical-align: middle;
+
+      &:hover {
+        color: $primary;
+      }
     }
   }
+
+  &.external-link {
+    &::before {
+      font-family: 'Material Icons';
+      content: '\E89E';
+      font-size: 1.20rem;
+      font-weight: $font-weight-normal;
+      margin-right: 0.125rem;
+      display:inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+  }
+}
+
+.btn-primary {
+  @include ps-button-variant($primary, $primary-hover, $primary);
+}
+
+.btn-secondary {
+  @include ps-button-variant($gray-medium, $gray-dark, #000);
+}
+
+.btn-primary-outline {
+  @include ps-button-outline-variant($primary, $primary-hover, $primary);
+}
+
+.btn-secondary-outline {
+  @include ps-button-outline-variant($gray-medium, $gray-dark, #000);
 }
 
 .switch-input {
@@ -157,13 +90,5 @@
 
   &.tiny {
     @include ps-switch(16px, 28px, -1px, 12px);
-  }
-}
-
-.btn {
-  > .material-icons {
-    font-size: 1.25rem;
-    vertical-align: -0.375rem;
-    margin: -0.25rem 0;
   }
 }

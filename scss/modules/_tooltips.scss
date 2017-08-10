@@ -1,13 +1,3 @@
-.tooltip-error {
-  .tooltip-inner {
-    background-color: $danger-hover;
-    color: $danger;
-  }
+.tooltip-inner {
+  @include border-radius(0);
 }
-
-@include error-tooptip(right, left);
-@include error-tooptip(left, right);
-@include error-tooptip(top, bottom);
-@include error-tooptip(bottom, top);
-
-

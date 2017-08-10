@@ -68,13 +68,14 @@ a {
 }
 
 .show {
-  &>.btn-primary {
+  & > .btn-primary {
     &.dropdown-toggle {
       background-color: $btn-primary-bg;
       @include ps-shadow-button($btn-primary-bg, $btn-primary-border);
     }
   }
-  &>.btn-secondary {
+
+  & > .btn-secondary {
     &.dropdown-toggle {
       background-color: $btn-secondary-bg;
       color: #fff;

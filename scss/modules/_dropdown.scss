@@ -3,7 +3,7 @@
     margin-left: 0.0625rem;
   }
 
-  >.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     border-right: none;
   }
 
@@ -28,6 +28,7 @@
       border: solid $btn-primary-color;
       border-width: 0 3px 3px 0;
     }
+
     &:hover,
     &:focus,
     &:active {
@@ -42,6 +43,7 @@
       border: solid $btn-secondary-color;
       border-width: 0 3px 3px 0;
     }
+    
     &:hover,
     &:focus,
     &:active {

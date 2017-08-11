@@ -13,6 +13,10 @@ $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+$font-size-n: 0.875rem;
+$font-size-s: 0.75rem;
+$font-size-xs: 0.625rem;
+
 $font-size-h1: 1.5rem;
 
 $gray-extra-dark: #282B30;
@@ -77,6 +81,19 @@ $spacing-widths: (
   l: $spacing-base * 2
 );
 
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 1024px,
+  // Extra large screen / wide desktop
+  xl: 1300px
+) !default;
+
 $breadcrumb-divider: '>';
 $breadcrumb-divider-color: $gray-extra-dark;
 $breadcrumb-active-color: $gray-extra-dark;
@@ -127,3 +144,10 @@ $dropdown-link-hover-color: $primary;
 $dropdown-link-hover-bg: #fff;
 $dropdown-border-color: $gray-light;
 $dropdown-divider-bg: $gray-light;
+
+$nav-tabs-active-link-hover-border-color: $brand-primary;
+
+$link-color: $brand-primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;

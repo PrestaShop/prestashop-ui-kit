@@ -1,4 +1,5 @@
 .btn {
+  text-transform: uppercase;
   font-family: $font-family-base;
   color: #fff;
   letter-spacing: .1em;
@@ -9,6 +10,7 @@
   &.btn-sm {
     padding: map-get($spacing-widths, 'xxs');
     font-weight: $font-weight-normal;
+    text-transform: inherit;
   }
 
   &.btn-lg {
@@ -65,20 +67,37 @@ a {
   }
 }
 
+.show {
+  & > .btn-primary {
+    &.dropdown-toggle {
+      background-color: $btn-primary-bg;
+      @include ps-shadow-button($btn-primary-bg, $btn-primary-border);
+    }
+  }
+
+  & > .btn-secondary {
+    &.dropdown-toggle {
+      background-color: $btn-secondary-bg;
+      color: #fff;
+      @include ps-shadow-button($btn-secondary-bg, $btn-secondary-border);
+    }
+  }
+}
+
 .btn-primary {
-  @include ps-button-variant($primary, $primary-hover, $primary);
+  @include ps-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
 .btn-secondary {
-  @include ps-button-variant($gray-medium, $gray-dark, #000);
+  @include ps-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
 .btn-primary-outline {
-  @include ps-button-outline-variant($primary, $primary-hover, $primary);
+  @include ps-button-outline-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
 .btn-secondary-outline {
-  @include ps-button-outline-variant($gray-medium, $gray-dark, #000);
+  @include ps-button-outline-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
 .switch-input {

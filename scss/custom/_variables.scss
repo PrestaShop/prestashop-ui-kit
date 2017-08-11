@@ -27,8 +27,8 @@ $grid-gutter-width: 1.875rem !default; // 30px
 //UI Kit variables
 $primary: #25B9D7;
 $primary-hover: #3ED2F0;
-$secondary: #FFBB00;
-$secondary-hover: #FFD100;
+$secondary: $gray-medium;
+$secondary-hover: $gray-dark;
 //$white: #FFFFFF;
 $notice: #DFF5F9;
 $tertiary: $gray-medium;
@@ -101,6 +101,29 @@ $btn-border-radius: 0;
 $btn-border-radius-lg: 0;
 $btn-border-radius-sm: 0;
 
+$btn-primary-color: $primary;
+$btn-primary-bg: $primary-hover;
+$btn-primary-border: $primary;
+
+$btn-secondary-color: $gray-medium;
+$btn-secondary-bg: $gray-dark;
+$btn-secondary-border: #000;
+
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
 $tooltip-bg: $gray-medium;
 $tooltip-padding-y: 10px;
 $tooltip-padding-x: 20px;
+
+$dropdown-item-padding-x: 0.3125rem;
+$dropdown-padding-y: 0;
+$dropdown-margin-top: 0;
+$dropdown-min-width: 0;
+$dropdown-box-shadow: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+$dropdown-link-color: $gray-medium;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: #fff;
+$dropdown-border-color: $gray-light;
+$dropdown-divider-bg: $gray-light;

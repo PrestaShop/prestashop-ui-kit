@@ -1,6 +1,15 @@
 // Button variants
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
+@mixin ps-shadow-button($color, $shadow) {
+  border-top-color: $shadow;
+  border-left-color: $shadow;
+  border-bottom-color: $color;
+  border-right-color: $color;
+  box-shadow: 0 0 1px 0 $shadow, inset 1px 1px 3px 0 $shadow;
+  color: #fff;
+}
+
 @mixin ps-button-variant($color, $hover, $shadow) {
   background: $color;
   border: solid 2px $color;
@@ -20,15 +29,15 @@
   &.active {
     color: #fff;
     background-color: $hover;
-    border-top-color: $shadow;
-    border-left-color: $shadow;
-    box-shadow: 0 0 1px 0 $shadow, inset 1px 1px 3px 0 $shadow;
+    border-color: $hover;
+    @include ps-shadow-button($hover, $shadow);
   }
 
   &.disabled,
   &:disabled {
     background-color: $gray-light;
     border-color: $gray-light;
+    box-shadow: none
   }
 }
 

@@ -4,7 +4,7 @@
 
   font-size: $font-size-sm;
   font-weight: $font-weight-semibold;
-  padding: .375rem $input-padding-x;
+  padding: .375rem $input-btn-padding-x;
   color: $input-color-placeholder;
   width: 100%;
   min-height: $input-height;
@@ -16,7 +16,7 @@
     font-size: 1rem;
     margin: 0 .156rem;
     position: relative;
-    height: $input-height - ($input-padding-y * 2);
+    height: $input-height - ($input-btn-padding-y * 2);
     padding: 0 8px;
     color: $white;
     text-align: center;

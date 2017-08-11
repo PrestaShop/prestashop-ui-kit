@@ -1,33 +1,70 @@
 .page-item {
-  &.active .page-link {
-    @include plain-hover-focus {
-      z-index: 2;
-      color: $primary;
-      cursor: default;
-      background-color: $white;
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+      @include border-left-radius(0);
     }
   }
-  .arrow {
-    display: inline-block;
-    line-height: 2;
-    padding-top: 0.5rem;
+
+  &:last-child {
+    .page-link {
+      @include border-right-radius(0);
+    }
+  }
+
+  &.previous,
+  &.next {
+    .page-link {
+      padding: 0.4rem;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        padding: 0.1875rem;
+        border: solid $gray-light;
+        border-width: 0 2px 2px 0;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.previous {
+      .page-link {
+        &::after {
+          transform: rotate(135deg);
+          -webkit-transform: rotate(135deg);
+        }
+      }
+    }
+
+    &.next {
+      .page-link {
+        &::after {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &.active .page-link {
+    font-weight: $font-weight-bold;
+  }
+
+  &.disabled .page-link {
+    padding: 0.4rem;
+    line-height: 1.5rem;
   }
 }
 
 .page-link {
-  font-weight: 600;
-  color: $gray-medium;
-  border: none;
-  cursor: pointer;
-  @include plain-hover-focus {
-    background-color: $white;
-  }
+  font-weight: $font-weight-normal;
+  font-size: 0.875rem;
+
   @include hover-focus {
-    &:not(span) {
-      text-decoration: none;
-      color: $primary;
-      background-color: $white;
-      border-color: $pagination-hover-border;
-    }
+    text-decoration: underline;
   }
 }

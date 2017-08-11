@@ -151,3 +151,23 @@ $link-color: $brand-primary;
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: underline;
+
+$pagination-padding-x: .65rem;
+$pagination-padding-y: .5rem;
+
+$pagination-color: $gray-medium;
+$pagination-bg: #fff;
+$pagination-border-width: 0;
+$pagination-border-color: #fff;
+
+$pagination-hover-color: $gray-medium;
+$pagination-hover-bg: #fff;
+$pagination-hover-border: #fff;
+
+$pagination-active-color: $primary;
+$pagination-active-bg: #fff;
+$pagination-active-border: #fff;
+
+$pagination-disabled-color: $gray-light;
+$pagination-disabled-bg: #fff;
+$pagination-disabled-border: #fff;

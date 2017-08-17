@@ -1,0 +1,9 @@
+.custom-file {
+  font-size: 0.875rem;
+}
+
+.custom-file-input {
+  &:focus ~ .custom-file-control {
+    border-color: $primary-hover;
+  }
+}

@@ -97,13 +97,13 @@ $breadcrumb-item-padding: map-get($spacing-widths, 'xxs');
 // alerts
 $alert-padding-x: 10px;
 $alert-border-width: 2px;
-$alert-info-bg: #ffffff;
+$alert-info-bg: #fff;
 $alert-info-text: $gray-dark;
 $alert-info-border: $primary;
-$alert-warning-bg: #ffffff;
+$alert-warning-bg: #fff;
 $alert-warning-text: $gray-dark;
 $alert-warning-border: $warning;
-$alert-danger-bg: #ffffff;
+$alert-danger-bg: #fff;
 $alert-danger-text: $gray-dark;
 $alert-danger-border: $danger;
 
@@ -162,20 +162,30 @@ $input-padding-x-lg: $input-padding-x;
 $input-height: 2.125rem;
 $input-height-lg: 2.8125rem;
 
-$form-text-margin-top:     .25rem;
+$form-text-margin-top: .25rem;
 $form-feedback-margin-top: $form-text-margin-top;
 
 $input-group-addon-bg: $gray-extra-light;
 
-$custom-file-height: 2.125rem;
+$custom-file-height: $input-height;
 $custom-file-focus-box-shadow: none;
 $custom-file-padding-x: $input-padding-x;
 $custom-file-padding-y: $input-padding-y;
-$custom-file-color: $gray-dark;
+$custom-file-color: $input-color;
 $custom-file-border-radius: 0;
 $custom-file-box-shadow: none;
 $custom-file-button-color: $custom-file-color;
 $custom-file-button-bg: $gray-light;
+
+$custom-select-padding-x: $input-padding-x;
+$custom-select-padding-y: $input-padding-y;
+$custom-select-color: $input-color;
+$custom-select-disabled-bg: #eceeef;
+$custom-select-indicator-color: $input-color;
+$custom-select-disabled-color: $gray-medium;
+$custom-select-border-radius: $input-border-radius;
+$custom-select-focus-border-color: $input-border-focus;
+$custom-select-focus-box-shadow: $input-box-shadow-focus;
 
 // dropdowns
 $dropdown-item-padding-x: 0.3125rem;

@@ -1,4 +1,11 @@
+input,
+label,
+select {
+  font-family: $font-family-sans-serif;
+}
+
 .form {
+  font-family: $font-family-sans-serif;
   padding: 3.125rem;
 
   &.form-background {
@@ -24,6 +31,11 @@
 .form-control {
   font-size: 0.875rem;
   border-radius: 0;
+
+  &.disabled,
+  :disabled {
+    color: $gray-medium;
+  }
 }
 
 .form-control-feedback {
@@ -88,7 +100,16 @@
   color: $gray-dark;
   font-size: 0.875rem;
 
-  &.disabled {
+  .form-check-input {
+    margin-left: 0
+  }
+
+  .form-check-label {
+    padding-left: 0;
+  }
+
+  &.disabled,
+  :disabled {
     .form-check-label {
       color: $gray-medium;
     }

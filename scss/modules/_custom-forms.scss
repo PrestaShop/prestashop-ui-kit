@@ -1,9 +1,31 @@
 .custom-file {
   font-size: 0.875rem;
+  width: 100%;
 }
 
 .custom-file-input {
   &:focus ~ .custom-file-control {
     border-color: $primary-hover;
   }
+
+  &.disabled,
+  :disabled {
+    cursor: $cursor-disabled;
+  }
+
+  &.disabled ~ .custom-file-control,
+  :disabled ~ .custom-file-control {
+    color: $custom-select-disabled-color;
+    cursor: $cursor-disabled;
+    background-color: $custom-select-disabled-bg;
+  }
+}
+
+.form-select {
+  position: relative;
+}
+
+.custom-select {
+  font-size: 0.875rem;
+  width: 100%;
 }

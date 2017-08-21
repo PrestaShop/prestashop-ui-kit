@@ -2,13 +2,15 @@ $enable-gradients: true;
 $enable-hover-media-query: true;
 
 $line-height: 1.5 !default;
+$grid-gutter-width: 1.875rem !default; // 30px
+$background-color: #eff1f2;
 
+// fonts
 $font-family-sans-serif: Noto Sans, sans-serif;
 $font-family-serif: Noto Sans, serif;
 $font-family-monospace: Noto Sans, monospace;
 $font-family-base: Noto Sans, sans-serif;
 
-// Fonts weight
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
@@ -19,21 +21,20 @@ $font-size-xs: 0.625rem;
 
 $font-size-h1: 1.5rem;
 
+// colors
 $gray-extra-dark: #282B30;
 $gray-dark: #363A41;
 $gray-medium: #6C868E;
 $gray-light: #BBCDD2;
-$grey-extra-light: #FAFBFC;
-$gray-soft: $grey-extra-light;
+$gray-extra-light: #FAFBFC;
+$gray-soft: $gray-extra-light;
 
-$grid-gutter-width: 1.875rem !default; // 30px
-
-//UI Kit variables
+// UI Kit variables
 $primary: #25B9D7;
 $primary-hover: #3ED2F0;
+$primary-border-color: #c7d6db;
 $secondary: $gray-medium;
 $secondary-hover: $gray-dark;
-//$white: #FFFFFF;
 $notice: #DFF5F9;
 $tertiary: $gray-medium;
 $tertiary-hover: $gray-light;
@@ -51,25 +52,10 @@ $brand-success: $success;
 $brand-warning: $warning;
 $brand-danger: $danger;
 
-$link-hover-color: $primary;
-
-$btn-tertiary-color: #fff;
-$btn-tertiary-bg: $brand-tertiary;
-$btn-tertiary-border: $btn-tertiary-bg;
-
-$primary-border-color: #c7d6db;
-
-$form-icon-success: "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzhEMDdEIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40TDkgMTYuMnoiLz4NCjwvc3ZnPg==";
-$form-icon-warning: "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0Q5MzIxIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQogICAgPHBhdGggZD0iTTExIDE3aDJ2LTZoLTJ2NnptMS0xNUM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6TTExIDloMlY3aC0ydjJ6Ii8+DQo8L3N2Zz4=";
-$form-icon-danger: "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjQzQ1QzY3IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz4NCiAgICA8cGF0aCBkPSJNMTEgMTVoMnYyaC0yem0wLThoMnY2aC0yem0uOTktNUM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPg0KPC9zdmc+";
 $search-icon: "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNkM4NjhFIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHoiLz4NCiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+DQo8L3N2Zz4=";
 $edit-icon: "data: image/svg+xml;base64,PHN2ZyBmaWxsPSIjNmM4NjhlIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTMgMTcuMjVWMjFoMy43NUwxNy44MSA5Ljk0bC0zLjc1LTMuNzVMMyAxNy4yNXpNMjAuNzEgNy4wNGMuMzktLjM5LjM5LTEuMDIgMC0xLjQxbC0yLjM0LTIuMzRjLS4zOS0uMzktMS4wMi0uMzktMS40MSAwbC0xLjgzIDEuODMgMy43NSAzLjc1IDEuODMtMS44M3oiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==";
 
-$input-color-placeholder: $gray-medium;
-$dropdown-arrow-color: $input-color-placeholder;
-
 $caret-width: .3rem;
-
 $module-logo-size: 45px;
 
 $spacing-base: 30px;
@@ -94,46 +80,114 @@ $grid-breakpoints: (
   xl: 1300px
 ) !default;
 
+$nav-tabs-active-link-hover-border-color: $brand-primary;
+
+// links
+$link-color: $brand-primary;
+$link-decoration: none;
+$link-hover-color: $primary;
+$link-hover-decoration: underline;
+
+// breadcrumb
 $breadcrumb-divider: '>';
 $breadcrumb-divider-color: $gray-extra-dark;
 $breadcrumb-active-color: $gray-extra-dark;
 $breadcrumb-item-padding: map-get($spacing-widths, 'xxs');
 
+// alerts
 $alert-padding-x: 10px;
-
 $alert-border-width: 2px;
-$alert-info-bg: #ffffff;
+$alert-info-bg: #fff;
 $alert-info-text: $gray-dark;
 $alert-info-border: $primary;
-
-$alert-warning-bg: #ffffff;
+$alert-warning-bg: #fff;
 $alert-warning-text: $gray-dark;
 $alert-warning-border: $warning;
-
-$alert-danger-bg: #ffffff;
+$alert-danger-bg: #fff;
 $alert-danger-text: $gray-dark;
 $alert-danger-border: $danger;
 
+// buttons
 $btn-border-radius: 0;
 $btn-border-radius-lg: 0;
 $btn-border-radius-sm: 0;
-
 $btn-primary-color: $primary;
 $btn-primary-bg: $primary-hover;
 $btn-primary-border: $primary;
-
 $btn-secondary-color: $gray-medium;
 $btn-secondary-bg: $gray-dark;
 $btn-secondary-border: #000;
-
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
+$btn-tertiary-color: #fff;
+$btn-tertiary-bg: $brand-tertiary;
+$btn-tertiary-border: $btn-tertiary-bg;
 
+// tooltips
 $tooltip-bg: $gray-medium;
 $tooltip-padding-y: 10px;
 $tooltip-padding-x: 20px;
 
+// pagination
+$pagination-padding-x: .65rem;
+$pagination-padding-y: .5rem;
+$pagination-color: $gray-medium;
+$pagination-bg: #fff;
+$pagination-border-width: 0;
+$pagination-border-color: #fff;
+$pagination-hover-color: $gray-medium;
+$pagination-hover-bg: #fff;
+$pagination-hover-border: #fff;
+$pagination-active-color: $primary;
+$pagination-active-bg: #fff;
+$pagination-active-border: #fff;
+$pagination-disabled-color: $gray-light;
+$pagination-disabled-bg: #fff;
+$pagination-disabled-border: #fff;
+
+// forms, inputs
+$input-color-placeholder: $gray-medium;
+$input-padding-x: 0.3125rem;
+$input-padding-y: 0.4375rem;
+$input-color: $gray-dark;
+$input-border-color: $gray-light;
+$input-box-shadow: none;
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+$input-border-focus: $primary-hover;
+$input-box-shadow-focus: none;
+$input-padding-x-lg: $input-padding-x;
+$input-height: 2.125rem;
+$input-height-lg: 2.8125rem;
+
+$form-text-margin-top: .25rem;
+$form-feedback-margin-top: $form-text-margin-top;
+
+$input-group-addon-bg: $gray-extra-light;
+
+$custom-file-height: $input-height;
+$custom-file-focus-box-shadow: none;
+$custom-file-padding-x: $input-padding-x;
+$custom-file-padding-y: $input-padding-y;
+$custom-file-color: $input-color;
+$custom-file-border-radius: 0;
+$custom-file-box-shadow: none;
+$custom-file-button-color: $custom-file-color;
+$custom-file-button-bg: $gray-light;
+
+$custom-select-padding-x: $input-padding-x;
+$custom-select-padding-y: $input-padding-y;
+$custom-select-color: $input-color;
+$custom-select-disabled-bg: #eceeef;
+$custom-select-indicator-color: $input-color;
+$custom-select-disabled-color: $gray-medium;
+$custom-select-border-radius: $input-border-radius;
+$custom-select-focus-border-color: $input-border-focus;
+$custom-select-focus-box-shadow: $input-box-shadow-focus;
+
+// dropdowns
 $dropdown-item-padding-x: 0.3125rem;
 $dropdown-padding-y: 0;
 $dropdown-margin-top: 0;
@@ -144,30 +198,4 @@ $dropdown-link-hover-color: $primary;
 $dropdown-link-hover-bg: #fff;
 $dropdown-border-color: $gray-light;
 $dropdown-divider-bg: $gray-light;
-
-$nav-tabs-active-link-hover-border-color: $brand-primary;
-
-$link-color: $brand-primary;
-$link-decoration: none;
-$link-hover-color: darken($link-color, 15%);
-$link-hover-decoration: underline;
-
-$pagination-padding-x: .65rem;
-$pagination-padding-y: .5rem;
-
-$pagination-color: $gray-medium;
-$pagination-bg: #fff;
-$pagination-border-width: 0;
-$pagination-border-color: #fff;
-
-$pagination-hover-color: $gray-medium;
-$pagination-hover-bg: #fff;
-$pagination-hover-border: #fff;
-
-$pagination-active-color: $primary;
-$pagination-active-bg: #fff;
-$pagination-active-border: #fff;
-
-$pagination-disabled-color: $gray-light;
-$pagination-disabled-bg: #fff;
-$pagination-disabled-border: #fff;
+$dropdown-arrow-color: $input-color-placeholder;

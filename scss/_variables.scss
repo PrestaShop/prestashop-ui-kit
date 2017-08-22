@@ -74,6 +74,17 @@ $theme-colors-hover: (
   dark: $gray-100
 );
 
+$theme-colors-shadow: (
+  primary: theme-color('primary'),
+  secondary: $black,
+  success: theme-color('success'),
+  info: theme-color('info'),
+  warning: theme-color('warning'),
+  danger: theme-color('danger'),
+  light: theme-color('light'),
+  dark: theme-color('dark')
+);
+
 // Options
 $enable-rounded: false;
 $enable-shadows: true;

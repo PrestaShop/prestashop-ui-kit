@@ -1,27 +1,30 @@
 @mixin ps-shadow-button($color) {
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 1px 1px 3px 0 $color;
+  @if $enable-shadows {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 1px 1px 3px 0 theme-color-shadow($color);
+    border-top-color: theme-color-shadow($color);
+    border-left-color: theme-color-shadow($color);
+  } @else {
+    box-shadow: none;
+  }
 }
 
-@mixin ps-button-variant($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%)) {
-  @include color-yiq($background);
+@mixin ps-button-variant($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%), $color-name: 'primary') {
+  color: $white;
   background-color: $background;
   border-color: $border;
-  @include box-shadow($btn-box-shadow);
+  box-shadow: none;
 
   &:hover {
-    @include color-yiq($background);
+    color: $white;
     background-color: $active-background;
     border-color: $active-border;
   }
 
   &:focus,
   &.focus {
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: $btn-box-shadow, 0 0 0 3px rgba($border, .5);
-    } @else {
-      box-shadow: 0 0 0 3px rgba($border, .5);
-    }
+    background-color: $active-background;
+    border-color: $active-border;
+    @include ps-shadow-button($color-name);
   }
 
   // Disabled comes first so active can properly restyle
@@ -35,13 +38,12 @@
   &.active,
   .show > &.dropdown-toggle {
     background-color: $active-background;
-    background-image: none; // Remove the gradient for the pressed/active state
     border-color: $active-border;
-    @include box-shadow($btn-active-box-shadow);
+    @include ps-shadow-button($color-name);
   }
 }
 
-@mixin ps-button-outline-variant($color, $color-hover: #fff, $background-hover: theme-color-hover($color)) {
+@mixin ps-button-outline-variant($color, $color-hover: #fff, $color-name: 'primary') {
   color: $color;
   background-color: transparent;
   background-image: none;
@@ -49,26 +51,31 @@
 
   @include hover {
     color: $color-hover;
-    background-color: $background-hover;
-    border-color: $background-hover;
+    background-color: theme-color-hover($color-name);
+    border-color: theme-color-hover($color-name);
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 3px rgba($color, .5);
+    color: $color-hover;
+    background-color: theme-color-hover($color-name);
+    border-color: theme-color-hover($color-name);
+    @include ps-shadow-button($color-name);
   }
 
   &.disabled,
   &:disabled {
     color: $color;
     background-color: transparent;
+    border-color: $color;
   }
 
   &:active,
   &.active,
   .show > &.dropdown-toggle {
     color: $color-hover;
-    background-color: $color;
-    border-color: $color;
+    background-color: theme-color-hover($color-name);
+    border-color: theme-color-hover($color-name);
+    @include ps-shadow-button($color-name);
   }
 }

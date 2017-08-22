@@ -30,12 +30,12 @@
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include ps-button-variant($value, $value, theme-color-hover($color), theme-color-hover($color));
+    @include ps-button-variant($value, $value, theme-color-hover($color), theme-color-hover($color), $color);
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @include ps-button-outline-variant($value, #fff, theme-color-hover($color));
+    @include ps-button-outline-variant($value, #fff, $color);
   }
 }

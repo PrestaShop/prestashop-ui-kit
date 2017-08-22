@@ -1,5 +1,27 @@
 a {
-  font-weight: $font-weight-bold;
+  &.tooltip-link {
+    > .material-icons {
+      color: $medium-gray;
+      vertical-align: middle;
+
+      &:hover {
+        color: theme-color('primary');
+      }
+    }
+  }
+
+  &.external-link {
+    &::before {
+      @include material-content('\E89E');
+      font-size: 1.20rem;
+      font-weight: $font-weight-normal;
+      margin-right: .125rem;
+      display:inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+  }
+
 }
 
 .small-text {

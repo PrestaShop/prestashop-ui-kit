@@ -1,0 +1,3 @@
+@function theme-color-hover($key: "primary") {
+  @return map-get($theme-colors-hover, $key);
+}

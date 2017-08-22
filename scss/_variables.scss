@@ -59,6 +59,7 @@ $gray-800: #363a41;
 $gray-900: #282b30;
 $black: #000;
 
+// PS Vars
 $extra-light-gray: $gray-100;
 $light-gray: $gray-300;
 $medium-gray: $gray-500;
@@ -76,8 +77,12 @@ $pink:    #e83e8c !default;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
 
+$notice: #dff5f9;
 $primary-hover: #3ed2f0;
 $secondary-hover: $dark-gray;
+$success-hover: #70b580;
+$warning-hover: #fde7bb;
+$danger-hover: #fde1e1;
 
 $colors: (
         blue: $blue,
@@ -106,11 +111,22 @@ $theme-colors: (
         dark: $gray-800
 );
 
+$theme-colors-hover: (
+        primary: $primary-hover,
+        secondary: $secondary-hover,
+        success: $success-hover,
+        info: $primary-hover,
+        warning: $warning-hover,
+        danger: $danger-hover,
+        light: $gray-800,
+        dark: $gray-100
+);
+
 // Options
 $enable-rounded: false;
 $enable-shadows: true;
 $enable-gradients: false;
-$enable-transitions: true;
+$enable-transitions: false;
 $enable-hover-media-query: true;
 $enable-grid-classes: true;
 $enable-print-styles: true;
@@ -137,12 +153,15 @@ $spacers: (
 // Body
 $body-color: $dark-gray;
 
+
 // Links
 $link-hover-color: theme-color("primary");
 $link-hover-decoration: underline;
 
+
 // Paragraphs
 $paragraph-margin-bottom: 1rem;
+
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -170,6 +189,7 @@ $container-max-widths: (
 //$line-height-sm:         1.5 !default;
 
 $border-color: $light-gray;
+$box-shadow: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
 
 //$component-active-color: $white !default;
 //$component-active-bg:    theme-color("primary") !default;
@@ -212,66 +232,48 @@ $text-muted: $medium-gray;
 
 $hr-border-color: $light-gray;
 
+
 // Tables
-//
-// Customizes the `.table` component with basic values, each used across all table variations.
-//
 //$table-cell-padding:            .75rem !default;
 //$table-cell-padding-sm:         .3rem !default;
-//
+
 //$table-bg:                      transparent !default;
 //$table-accent-bg:               rgba($black,.05) !default;
 //$table-hover-bg:                rgba($black,.075) !default;
 //$table-active-bg:               $table-hover-bg !default;
-//
+
 //$table-border-width:            $border-width !default;
 //$table-border-color:            $gray-200 !default;
-//
+
 //$table-head-bg:                 $gray-200 !default;
 //$table-head-color:              $gray-700 !default;
-//
+
 //$table-inverse-bg:              $gray-900 !default;
 //$table-inverse-accent-bg:       rgba($white, .05) !default;
 //$table-inverse-hover-bg:        rgba($white, .075) !default;
 //$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
 //$table-inverse-color:           $body-bg !default;
-//
-//
-//// Buttons
-////
-//// For each of Bootstrap's buttons, define text, background and border color.
-//
-//$input-btn-padding-y:       .5rem !default;
-//$input-btn-padding-x:       .75rem !default;
-//$input-btn-line-height:     1.25 !default;
-//
-//$input-btn-padding-y-sm:    .25rem !default;
-//$input-btn-padding-x-sm:    .5rem !default;
-//$input-btn-line-height-sm:  1.5 !default;
-//
-//$input-btn-padding-y-lg:    .5rem !default;
-//$input-btn-padding-x-lg:    1rem !default;
-//$input-btn-line-height-lg:  1.5 !default;
-//
-//$btn-font-weight:                $font-weight-normal !default;
-//$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
-//$btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
-//$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
-//
-//$btn-link-disabled-color:        $gray-600 !default;
-//
-//$btn-block-spacing-y:            .5rem !default;
-//
-//// Allows for customizing button radius independently from global border radius
-//$btn-border-radius:              $border-radius !default;
-//$btn-border-radius-lg:           $border-radius-lg !default;
-//$btn-border-radius-sm:           $border-radius-sm !default;
-//
-//$btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-//
-//
-//// Forms
-//
+
+
+// Buttons
+$input-btn-padding-y: map-get($spacing-widths, 'xs');
+$input-btn-padding-x: map-get($spacing-widths, 'xs');
+
+$input-btn-padding-y-sm: map-get($spacing-widths, 'xxs');
+$input-btn-padding-x-sm: map-get($spacing-widths, 'xxs');
+
+$input-btn-padding-y-lg: map-get($spacing-widths, 's');
+$input-btn-padding-x-lg: map-get($spacing-widths, 's');
+
+$btn-font-weight: $font-weight-semibold;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$btn-link-disabled-color:        $gray-600 !default;
+
+
+// Forms
 //$input-bg:                       $white !default;
 //$input-disabled-bg:              $gray-200 !default;
 //
@@ -403,12 +405,9 @@ $hr-border-color: $light-gray;
 //// Form validation
 //$form-feedback-valid-color:   theme-color("success") !default;
 //$form-feedback-invalid-color: theme-color("danger") !default;
-//
-//
-//// Dropdowns
-////
-//// Dropdown menu container and contents.
-//
+
+
+// Dropdowns
 //$dropdown-min-width:             10rem !default;
 //$dropdown-padding-y:             .5rem !default;
 //$dropdown-spacer:                .125rem !default;
@@ -417,27 +416,23 @@ $hr-border-color: $light-gray;
 //$dropdown-border-width:          $border-width !default;
 //$dropdown-divider-bg:            $gray-200 !default;
 //$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
-//
+
 //$dropdown-link-color:            $gray-900 !default;
 //$dropdown-link-hover-color:      darken($gray-900, 5%) !default;
 //$dropdown-link-hover-bg:         $gray-100 !default;
-//
+
 //$dropdown-link-active-color:     $component-active-color !default;
 //$dropdown-link-active-bg:        $component-active-bg !default;
-//
+
 //$dropdown-link-disabled-color:   $gray-600 !default;
-//
+
 //$dropdown-item-padding-y:        .25rem !default;
 //$dropdown-item-padding-x:        1.5rem !default;
-//
+
 //$dropdown-header-color:          $gray-600 !default;
-//
-//
-//// Z-index master list
-////
-//// Warning: Avoid customizing these values. They're used for a bird's eye view
-//// of components dependent on the z-axis and are designed to all work together.
-//
+
+
+// Z-index master list
 //$zindex-dropdown:           1000 !default;
 //$zindex-sticky:             1020 !default;
 //$zindex-fixed:              1030 !default;
@@ -445,13 +440,13 @@ $hr-border-color: $light-gray;
 //$zindex-modal:              1050 !default;
 //$zindex-popover:            1060 !default;
 //$zindex-tooltip:            1070 !default;
-//
-//// Navs
-//
+
+
+// Navs
 //$nav-link-padding-y:            .5rem !default;
 //$nav-link-padding-x:            1rem !default;
 //$nav-link-disabled-color:       $gray-600 !default;
-//
+
 //$nav-tabs-border-color:                       #ddd !default;
 //$nav-tabs-border-width:                       $border-width !default;
 //$nav-tabs-border-radius:                      $border-radius !default;
@@ -459,77 +454,69 @@ $hr-border-color: $light-gray;
 //$nav-tabs-link-active-color:                  $gray-700 !default;
 //$nav-tabs-link-active-bg:                     $body-bg !default;
 //$nav-tabs-link-active-border-color:           #ddd !default;
-//
+
 //$nav-pills-border-radius:     $border-radius !default;
 //$nav-pills-link-active-color: $component-active-color !default;
 //$nav-pills-link-active-bg:    $component-active-bg !default;
-//
-//// Navbar
-//
+
+
+// Navbar
 //$navbar-padding-y:                  ($spacer / 2) !default;
 //$navbar-padding-x:                  $spacer !default;
-//
+
 //$navbar-brand-font-size:            $font-size-lg !default;
-//// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+
 //$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
 //$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 //$navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2 !default;
-//
+
 //$navbar-toggler-padding-y:           .25rem !default;
 //$navbar-toggler-padding-x:           .75rem !default;
 //$navbar-toggler-font-size:           $font-size-lg !default;
 //$navbar-toggler-border-radius:       $btn-border-radius !default;
-//
+
 //$navbar-dark-color:                 rgba($white,.5) !default;
 //$navbar-dark-hover-color:           rgba($white,.75) !default;
 //$navbar-dark-active-color:          rgba($white,1) !default;
 //$navbar-dark-disabled-color:        rgba($white,.25) !default;
 //$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$navbar-dark-toggler-border-color:  rgba($white,.1) !default;
-//
+
 //$navbar-light-color:                rgba($black,.5) !default;
 //$navbar-light-hover-color:          rgba($black,.7) !default;
 //$navbar-light-active-color:         rgba($black,.9) !default;
 //$navbar-light-disabled-color:       rgba($black,.3) !default;
 //$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$navbar-light-toggler-border-color: rgba($black,.1) !default;
-//
-//// Pagination
-//
-//$pagination-padding-y:                .5rem !default;
-//$pagination-padding-x:                .75rem !default;
-//$pagination-padding-y-sm:             .25rem !default;
-//$pagination-padding-x-sm:             .5rem !default;
-//$pagination-padding-y-lg:             .75rem !default;
-//$pagination-padding-x-lg:             1.5rem !default;
-//$pagination-line-height:              1.25 !default;
-//
-//$pagination-color:                     $link-color !default;
-//$pagination-bg:                        $white !default;
-//$pagination-border-width:              $border-width !default;
-//$pagination-border-color:              #ddd !default;
-//
-//$pagination-hover-color:               $link-hover-color !default;
-//$pagination-hover-bg:                  $gray-200 !default;
-//$pagination-hover-border-color:        #ddd !default;
-//
-//$pagination-active-color:              $white !default;
-//$pagination-active-bg:                 theme-color("primary") !default;
-//$pagination-active-border-color:       theme-color("primary") !default;
-//
-//$pagination-disabled-color:            $gray-600 !default;
-//$pagination-disabled-bg:               $white !default;
-//$pagination-disabled-border-color:     #ddd !default;
-//
-//
-//// Jumbotron
-//
+
+
+// Pagination
+$pagination-padding-y: .65rem;
+$pagination-padding-x: .5rem;
+
+$pagination-color: $medium-gray;
+$pagination-bg: $white;
+$pagination-border-color: $white;
+
+$pagination-hover-color: $pagination-color;
+$pagination-hover-bg: $pagination-bg;
+$pagination-hover-border-color: $pagination-border-color;
+
+$pagination-active-color: theme-color("primary");
+$pagination-active-bg: $pagination-bg;
+$pagination-active-border-color: $pagination-border-color;
+
+$pagination-disabled-color: $light-gray;
+$pagination-disabled-bg: $pagination-bg;
+$pagination-disabled-border-color: $pagination-border-color;
+
+
+// Jumbotron
 //$jumbotron-padding:              2rem !default;
 //$jumbotron-bg:                   $gray-200 !default;
-//
-//
-//// Cards
-//
+
+
+// Cards
 //$card-spacer-y:            .75rem !default;
 //$card-spacer-x:            1.25rem !default;
 //$card-border-width:        1px !default;
@@ -538,109 +525,74 @@ $hr-border-color: $light-gray;
 //$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 //$card-cap-bg:              rgba($black, .03) !default;
 //$card-bg:                  $white !default;
-//
+
 //$card-img-overlay-padding: 1.25rem !default;
-//
+
 //$card-deck-margin:          ($grid-gutter-width / 2) !default;
-//
+
 //$card-columns-count:        3 !default;
 //$card-columns-gap:          1.25rem !default;
 //$card-columns-margin:       $card-spacer-y !default;
-//
-//
-//// Tooltips
-//
-//$tooltip-max-width:           200px !default;
-//$tooltip-color:               $white !default;
-//$tooltip-bg:                  $black !default;
-//$tooltip-opacity:             .9 !default;
-//$tooltip-padding-y:           3px !default;
-//$tooltip-padding-x:           8px !default;
-//$tooltip-margin:              0 !default;
-//
-//
-//$tooltip-arrow-width:         5px !default;
-//$tooltip-arrow-height:        5px !default;
-//$tooltip-arrow-color:         $tooltip-bg !default;
-//
-//
-//// Popovers
-//
+
+
+// Tooltips
+$tooltip-bg: $medium-gray;
+$tooltip-padding-y: .625rem;
+$tooltip-padding-x: 1.25rem;
+
+
+// Popovers
 //$popover-inner-padding:               1px !default;
 //$popover-bg:                          $white !default;
 //$popover-max-width:                   276px !default;
 //$popover-border-width:                $border-width !default;
 //$popover-border-color:                rgba($black,.2) !default;
 //$popover-box-shadow:                  0 5px 10px rgba($black,.2) !default;
-//
+
 //$popover-header-bg:                    darken($popover-bg, 3%) !default;
 //$popover-header-color:                 $headings-color !default;
 //$popover-header-padding-y:             8px !default;
 //$popover-header-padding-x:             14px !default;
-//
+
 //$popover-body-color:               $body-color !default;
 //$popover-body-padding-y:           9px !default;
 //$popover-body-padding-x:           14px !default;
-//
+
 //$popover-arrow-width:                 10px !default;
 //$popover-arrow-height:                5px !default;
 //$popover-arrow-color:                 $popover-bg !default;
-//
+
 //$popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
 //$popover-arrow-outer-color:           fade-in($popover-border-color, .05) !default;
 
 
 // Badges
-//$badge-color:                 $white !default;
-//$badge-font-size:             75% !default;
-//$badge-font-weight:           $font-weight-bold !default;
 $badge-padding-x: .4rem;
 $badge-padding-y: .4rem;
-
 //$badge-pill-padding-x:        .6em !default;
-//// Use a higher than normal value to ensure completely rounded edges when
-//// customizing padding or font-size on labels.
 //$badge-pill-border-radius:    10rem !default;
-//
-//
-//// Modals
-//
-//// Padding applied to the modal body
-//$modal-inner-padding:         15px !default;
-//
-//$modal-dialog-margin:         10px !default;
-//$modal-dialog-margin-y-sm-up: 30px !default;
-//
-//$modal-title-line-height:     $line-height-base !default;
-//
-//$modal-content-bg:               $white !default;
-//$modal-content-border-color:     rgba($black,.2) !default;
-//$modal-content-border-width:     $border-width !default;
-//$modal-content-box-shadow-xs:    0 3px 9px rgba($black,.5) !default;
-//$modal-content-box-shadow-sm-up: 0 5px 15px rgba($black,.5) !default;
-//
-//$modal-backdrop-bg:           $black !default;
-//$modal-backdrop-opacity:      .5 !default;
-//$modal-header-border-color:   $gray-200 !default;
-//$modal-footer-border-color:   $modal-header-border-color !default;
-//$modal-header-border-width:   $modal-content-border-width !default;
-//$modal-footer-border-width:   $modal-header-border-width !default;
-//$modal-header-padding:        15px !default;
-//
-//$modal-lg:                    800px !default;
-//$modal-md:                    500px !default;
-//$modal-sm:                    300px !default;
-//
-//$modal-transition:            transform .3s ease-out !default;
-//
-//
+
+
+// Modals
+$modal-inner-padding: 1.875rem;
+$modal-header-padding: $modal-inner-padding;
+$modal-header-border-color: none;
+
+$modal-content-border-color: none;
+$modal-content-box-shadow-xs: $box-shadow;
+$modal-content-box-shadow-sm-up: $box-shadow;
+
+$modal-lg: 900px;
+$modal-md: 680px;
+$modal-sm: 400px;
+
+
 // Alerts
-$alert-padding-x: 0.625rem;
+$alert-padding-x: .625rem;
 $alert-border-width: 2px;
 
 
-//// Progress bars
-//
+// Progress bars
 //$progress-height:               1rem !default;
 //$progress-font-size:            .75rem !default;
 //$progress-bg:                   $gray-200 !default;
@@ -650,34 +602,34 @@ $alert-border-width: 2px;
 //$progress-bar-bg:               theme-color("primary") !default;
 //$progress-bar-animation-timing: 1s linear infinite !default;
 //$progress-bar-transition:       width .6s ease !default;
-//
-//// List group
-//
+
+
+// List group
 //$list-group-bg:                  $white !default;
 //$list-group-border-color:        rgba($black,.125) !default;
 //$list-group-border-width:        $border-width !default;
 //$list-group-border-radius:       $border-radius !default;
-//
+
 //$list-group-item-padding-y:      .75rem !default;
 //$list-group-item-padding-x:      1.25rem !default;
-//
+
 //$list-group-hover-bg:                 $gray-100 !default;
 //$list-group-active-color:             $component-active-color !default;
 //$list-group-active-bg:                $component-active-bg !default;
 //$list-group-active-border-color:      $list-group-active-bg !default;
-//
+
 //$list-group-disabled-color:      $gray-600 !default;
 //$list-group-disabled-bg:         $list-group-bg !default;
-//
+
 //$list-group-action-color:             $gray-700 !default;
 //$list-group-action-hover-color:       $list-group-action-color !default;
-//
+
 //$list-group-action-active-color:      $body-color !default;
 //$list-group-action-active-bg:         $gray-200 !default;
-//
-//
-//// Image thumbnails
-//
+
+
+// Image thumbnails
+
 //$thumbnail-padding:           .25rem !default;
 //$thumbnail-bg:                $body-bg !default;
 //$thumbnail-border-width:      $border-width !default;
@@ -685,14 +637,13 @@ $alert-border-width: 2px;
 //$thumbnail-border-radius:     $border-radius !default;
 //$thumbnail-box-shadow:        0 1px 2px rgba($black,.075) !default;
 //$thumbnail-transition:        all .2s ease-in-out !default;
-//
-//
-//// Figures
-//
+
+
+// Figures
 //$figure-caption-font-size: 90% !default;
 //$figure-caption-color:     $gray-600 !default;
-//
-//
+
+
 // Breadcrumbs
 $breadcrumb-bg: $white;
 $breadcrumb-divider-color: $extra-dark-gray;
@@ -700,45 +651,43 @@ $breadcrumb-active-color: $extra-dark-gray;
 $breadcrumb-divider:            ">";
 
 
-//// Carousel
-//
+// Carousel
 //$carousel-control-color:                      $white !default;
 //$carousel-control-width:                      15% !default;
 //$carousel-control-opacity:                    .5 !default;
-//
+
 //$carousel-indicator-width:                    30px !default;
 //$carousel-indicator-height:                   3px !default;
 //$carousel-indicator-spacer:                   3px !default;
 //$carousel-indicator-active-bg:                $white !default;
-//
+
 //$carousel-caption-width:                      70% !default;
 //$carousel-caption-color:                      $white !default;
-//
+
 //$carousel-control-icon-width:                 20px !default;
-//
+
 //$carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
-//
+
 //$carousel-transition:           transform .6s ease !default;
-//
-//
-//// Close
-//
+
+
+// Close
 //$close-font-size:             $font-size-base * 1.5 !default;
 //$close-font-weight:           $font-weight-bold !default;
 //$close-color:                 $black !default;
 //$close-text-shadow:           0 1px 0 $white !default;
-//
-//// Code
-//
+
+
+// Code
 //$code-font-size:              90% !default;
 //$code-padding-y:              .2rem !default;
 //$code-padding-x:              .4rem !default;
 //$code-color:                  #bd4147 !default;
 //$code-bg:                     $gray-100 !default;
-//
+
 //$kbd-color:                   $white !default;
 //$kbd-bg:                      $gray-900 !default;
-//
+
 //$pre-color:                   $gray-900 !default;
 //$pre-scrollable-max-height:   340px !default;

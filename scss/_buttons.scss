@@ -1,0 +1,41 @@
+.btn {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-width: .125rem;
+
+  @include hover-focus {
+    cursor: pointer;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+  }
+
+  &.btn-sm {
+    font-weight: $font-weight-normal;
+    text-transform: inherit;
+  }
+
+  &.btn-lg {
+    font-weight: $font-weight-bold;
+  }
+
+  > .material-icons {
+    vertical-align: middle;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value, theme-color-hover($color), theme-color-hover($color));
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include ps-button-outline-variant($value, #fff, theme-color-hover($color));
+  }
+}

@@ -1,0 +1,12 @@
+@mixin close-button($margin-right: 0, $color: $medium-gray) {
+  .close {
+    color: $color;
+    margin-right: $margin-right;
+    opacity: 1;
+    cursor: pointer;
+
+    .material-icons {
+      font-size: 1.125rem;
+    }
+  }
+}

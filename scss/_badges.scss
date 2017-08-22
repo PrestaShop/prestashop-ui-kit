@@ -1,0 +1,9 @@
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    color: $white;
+
+    &[href] {
+      color: $white;
+    }
+  }
+}

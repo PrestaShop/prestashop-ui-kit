@@ -1,10 +1,10 @@
 .alert {
-  border-radius: 0;
   padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
+  background-color: $white;
   position: relative;
 
   &::before {
-    font-family: 'Material Icons';
+    @include use-material-icon();
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,7 +19,7 @@
   }
 
   p {
-    font-size: 0.875rem;
+    font-size: .875rem;
     margin: 0;
   }
 
@@ -27,18 +27,18 @@
     padding: 0 $alert-padding-x;
   }
 
-  //@include close-button(0.625rem);
+  @include close-button(.625rem);
 
   &.medium-alert {
     p {
-      font-size: 0.75rem;
+      font-size: .75rem;
     }
   }
 
   &.expandable-alert {
     .read-more {
       @extend .close;
-      font-size: 0.875rem;
+      font-size: .875rem;
       line-height: 1.375rem;
 
       &:hover {
@@ -51,12 +51,12 @@
     }
 
     .alert-more {
-      //color: $gray-medium;
-      margin: 1.375rem 0 0.75rem 0;
+      color: $medium-gray;
+      margin: 1.375rem 0 .75rem 0;
 
       p {
         color: inherit;
-        font-size: 0.75rem;
+        font-size: .75rem;
       }
     }
   }
@@ -65,44 +65,44 @@
 .alert-info {
   &::before {
     content: '\E88F';
-    //background-color: $notice;
-    //color: $alert-info-border;
+    background-color: $notice;
+    color: theme-color('info')
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus {
-    //color: $alert-info-border;
+    color: theme-color('info')
   }
 }
 
 .alert-warning {
   &::before {
     content: '\E001';
-    //background-color: $warning-hover;
-    //color: $alert-warning-border;
+    background-color: $warning-hover;
+    color: theme-color('warning')
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    //color: $alert-warning-border;
+    color: theme-color('warning')
   }
 }
 
 .alert-danger {
   &::before {
     content: '\E001';
-    //background-color: $danger-hover;
-    //color: $alert-danger-border;
+    background-color: $danger-hover;
+    color: theme-color('danger');
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    //color: $alert-danger-border;
+    color: theme-color('danger');
   }
 }

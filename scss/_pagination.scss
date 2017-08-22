@@ -1,0 +1,45 @@
+.page-item {
+  &.previous,
+  &.next {
+    .page-link {
+      padding: 0;
+
+      &::after {
+        @include use-material-icon();
+        line-height: 2.375rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.previous {
+      .page-link {
+        &::after {
+          content: '\E314';
+        }
+      }
+    }
+
+    &.next {
+      .page-link {
+        &::after {
+          content: '\E315';
+        }
+      }
+    }
+  }
+
+  &.active .page-link {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.page-link {
+  font-weight: $font-weight-normal;
+
+  @include hover-focus {
+    text-decoration: underline;
+  }
+}

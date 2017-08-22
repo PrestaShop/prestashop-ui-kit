@@ -1,0 +1,32 @@
+@mixin ps-button-outline-variant($color, $color-hover: #fff, $background-hover: theme-color-hover($color)) {
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $color;
+
+  @include hover {
+    color: $color-hover;
+    background-color: $background-hover;
+    border-color: $background-hover;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+    border-color: $color;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+}

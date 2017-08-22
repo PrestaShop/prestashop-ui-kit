@@ -1,20 +1,27 @@
-// Imports & variables PS
+// Custom PS
 @import "~bootstrap/scss/functions";
+@import "functions";
 @import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";// Imports & variables PS
 
 // Mixins
 @import "mixins/fonts";
 @import "imports"; // need fonts first
+@import "mixins/close-button";
+@import "mixins/buttons";
 
 // Components
 @import "type";
+@import "alerts";
+@import "badges";
+@import "buttons";
 @import "breadcrumb";
-//@import "alerts";
+@import "modal";
+@import "pagination";
 
 // Addons
 //@import "~select2/src/scss/core.scss";
 //@import "~pstagger/jquery.pstagger.css";
 //@import "~jquery.growl/stylesheets/jquery.growl.css";
-
-// Bootstrap
-@import "~bootstrap/scss/bootstrap";

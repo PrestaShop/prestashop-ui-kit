@@ -1,0 +1,19 @@
+.modal-header,
+.modal-body {
+  padding-bottom: 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-header {
+  .close {
+    cursor: pointer;
+  }
+}
+
+.modal-title {
+  @extend h1;
+  margin-bottom: 0;
+}

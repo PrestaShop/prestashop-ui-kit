@@ -1,3 +1,46 @@
+@mixin ps-shadow-button($color) {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), inset 1px 1px 3px 0 $color;
+}
+
+@mixin ps-button-variant($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%)) {
+  @include color-yiq($background);
+  background-color: $background;
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  &:hover {
+    @include color-yiq($background);
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 3px rgba($border, .5);
+    } @else {
+      box-shadow: 0 0 0 3px rgba($border, .5);
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: $background;
+    border-color: $border;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    background-color: $active-background;
+    background-image: none; // Remove the gradient for the pressed/active state
+    border-color: $active-border;
+    @include box-shadow($btn-active-box-shadow);
+  }
+}
+
 @mixin ps-button-outline-variant($color, $color-hover: #fff, $background-hover: theme-color-hover($color)) {
   color: $color;
   background-color: transparent;
@@ -19,7 +62,6 @@
   &:disabled {
     color: $color;
     background-color: transparent;
-    border-color: $color;
   }
 
   &:active,

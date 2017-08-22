@@ -1,0 +1,13 @@
+.btn-group {
+  .btn:not([class*='outline']) +.btn:not([class*='outline']) {
+    margin-left: 0.0625rem;
+  }
+
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-right: none;
+  }
+
+  .btn + .btn.dropdown-toggle {
+    margin-left: 0;
+  }
+}

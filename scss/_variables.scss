@@ -1,51 +1,3 @@
-// Variables
-//
-// Copy settings from this file into the provided `_custom.scss` to override
-// the Bootstrap defaults without modifying key, versioned files.
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
-// Table of Contents
-//
-// Color system
-// Options
-// Spacing
-// Body
-// Links
-// Paragraphs
-// Grid breakpoints
-// Grid containers
-// Grid columns
-// Fonts
-// Components
-// Tables
-// Buttons
-// Forms
-// Dropdowns
-// Z-index master list
-// Navs
-// Navbar
-// Pagination
-// Jumbotron
-// Form states and alerts
-// Cards
-// Tooltips
-// Popovers
-// Badges
-// Modals
-// Alerts
-// Progress bars
-// List group
-// Image thumbnails
-// Figures
-// Breadcrumbs
-// Carousel
-// Close
-// Code
-
-
-
 // Color system
 $white: #fff;
 $gray-100: #fafbfc;
@@ -68,7 +20,7 @@ $extra-dark-gray: $gray-900;
 
 $blue: #25b9d7;
 $red: #c05c67;
-$yellow:  #cd9321;
+$yellow: #cd9321;
 $green: #78d07d;
 $cyan: $blue;
 $indigo:  #6610f2 !default;
@@ -85,41 +37,41 @@ $warning-hover: #fde7bb;
 $danger-hover: #fde1e1;
 
 $colors: (
-        blue: $blue,
-        indigo: $indigo,
-        purple: $purple,
-        pink: $pink,
-        red: $red,
-        orange: $orange,
-        yellow: $yellow,
-        green: $green,
-        teal: $teal,
-        cyan: $cyan,
-        white: $white,
-        gray: $gray-600,
-        gray-dark: $gray-800
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800
 );
 
 $theme-colors: (
-        primary: $blue,
-        secondary: $medium-gray,
-        success: $green,
-        info: $cyan,
-        warning: $yellow,
-        danger: $red,
-        light: $gray-100,
-        dark: $gray-800
+  primary: $blue,
+  secondary: $medium-gray,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
 );
 
 $theme-colors-hover: (
-        primary: $primary-hover,
-        secondary: $secondary-hover,
-        success: $success-hover,
-        info: $primary-hover,
-        warning: $warning-hover,
-        danger: $danger-hover,
-        light: $gray-800,
-        dark: $gray-100
+  primary: $primary-hover,
+  secondary: $secondary-hover,
+  success: $success-hover,
+  info: $primary-hover,
+  warning: $warning-hover,
+  danger: $danger-hover,
+  light: $gray-800,
+  dark: $gray-100
 );
 
 // Options
@@ -134,20 +86,20 @@ $enable-print-styles: true;
 // Spacing
 $spacer: 1.875rem;
 $spacing-widths: (
-        xxs: ($spacer / 6),
-        xs: ($spacer / 3),
-        s: ($spacer / 2),
-        n: $spacer,
-        l: ($spacer * 2)
+  xxs: ($spacer / 6),
+  xs: ($spacer / 3),
+  s: ($spacer / 2),
+  n: $spacer,
+  l: ($spacer * 2)
 );
 
 $spacers: (
-        0: 0,
-        1: ($spacer / 6),
-        2: ($spacer / 3),
-        3: ($spacer / 2),
-        4: ($spacer),
-        5: ($spacer * 2)
+  0: 0,
+  1: ($spacer / 6),
+  2: ($spacer / 3),
+  3: ($spacer / 2),
+  4: ($spacer),
+  5: ($spacer * 2)
 );
 
 // Body
@@ -189,7 +141,6 @@ $container-max-widths: (
 //$line-height-sm:         1.5 !default;
 
 $border-color: $light-gray;
-$box-shadow: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
 
 //$component-active-color: $white !default;
 //$component-active-bg:    theme-color("primary") !default;
@@ -408,28 +359,16 @@ $btn-link-disabled-color:        $gray-600 !default;
 
 
 // Dropdowns
-//$dropdown-min-width:             10rem !default;
-//$dropdown-padding-y:             .5rem !default;
-//$dropdown-spacer:                .125rem !default;
-//$dropdown-bg:                    $white !default;
-//$dropdown-border-color:          rgba($black,.15) !default;
-//$dropdown-border-width:          $border-width !default;
-//$dropdown-divider-bg:            $gray-200 !default;
-//$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
+$dropdown-padding-y: 0;
+$dropdown-border-color: $light-gray;
+$dropdown-divider-bg: $light-gray;
 
-//$dropdown-link-color:            $gray-900 !default;
-//$dropdown-link-hover-color:      darken($gray-900, 5%) !default;
-//$dropdown-link-hover-bg:         $gray-100 !default;
+$dropdown-link-color: $medium-gray;
+$dropdown-link-hover-color: theme-color('primary');
+$dropdown-link-hover-bg: $white;
 
-//$dropdown-link-active-color:     $component-active-color !default;
-//$dropdown-link-active-bg:        $component-active-bg !default;
-
-//$dropdown-link-disabled-color:   $gray-600 !default;
-
-//$dropdown-item-padding-y:        .25rem !default;
-//$dropdown-item-padding-x:        1.5rem !default;
-
-//$dropdown-header-color:          $gray-600 !default;
+$dropdown-item-padding-x: .3125rem;
+$dropdown-item-padding-y: .3125rem;
 
 
 // Z-index master list
@@ -579,8 +518,8 @@ $modal-header-padding: $modal-inner-padding;
 $modal-header-border-color: none;
 
 $modal-content-border-color: none;
-$modal-content-box-shadow-xs: $box-shadow;
-$modal-content-box-shadow-sm-up: $box-shadow;
+$modal-content-box-shadow-xs: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+$modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
 
 $modal-lg: 900px;
 $modal-md: 680px;

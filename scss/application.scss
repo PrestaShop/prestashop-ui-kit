@@ -1,26 +1,20 @@
-// =============================================================================
-// Core Variables
-// =============================================================================
-@import "custom/index";
-// =============================================================================
+// Imports & variables PS
+@import "~bootstrap/scss/functions";
+@import "variables";
+
+// Mixins
+@import "mixins/fonts";
+@import "imports"; // need fonts first
+
+// Components
+@import "type";
+@import "breadcrumb";
+//@import "alerts";
+
 // Addons
-// =============================================================================
-@import "~select2/src/scss/core.scss";
-@import "~pstagger/jquery.pstagger.css";
-@import "~jquery.growl/stylesheets/jquery.growl.css";
-// =============================================================================
+//@import "~select2/src/scss/core.scss";
+//@import "~pstagger/jquery.pstagger.css";
+//@import "~jquery.growl/stylesheets/jquery.growl.css";
+
 // Bootstrap
-// =============================================================================
 @import "~bootstrap/scss/bootstrap";
-// =============================================================================
-// Mixin
-// =============================================================================
-@import "mixins/index";
-// =============================================================================
-// Modules
-// =============================================================================
-@import "modules/index";
-// =============================================================================
-// Migration
-// =============================================================================
-@import "migration/index";

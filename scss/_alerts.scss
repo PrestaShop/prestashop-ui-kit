@@ -27,7 +27,7 @@
     padding: 0 $alert-padding-x;
   }
 
-  @include close-button(0.625rem);
+  //@include close-button(0.625rem);
 
   &.medium-alert {
     p {
@@ -51,7 +51,7 @@
     }
 
     .alert-more {
-      color: $gray-medium;
+      //color: $gray-medium;
       margin: 1.375rem 0 0.75rem 0;
 
       p {
@@ -65,44 +65,44 @@
 .alert-info {
   &::before {
     content: '\E88F';
-    background-color: $notice;
-    color: $alert-info-border;
+    //background-color: $notice;
+    //color: $alert-info-border;
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus {
-    color: $alert-info-border;
+    //color: $alert-info-border;
   }
 }
 
 .alert-warning {
   &::before {
     content: '\E001';
-    background-color: $warning-hover;
-    color: $alert-warning-border;
+    //background-color: $warning-hover;
+    //color: $alert-warning-border;
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    color: $alert-warning-border;
+    //color: $alert-warning-border;
   }
 }
 
 .alert-danger {
   &::before {
     content: '\E001';
-    background-color: $danger-hover;
-    color: $alert-danger-border;
+    //background-color: $danger-hover;
+    //color: $alert-danger-border;
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    color: $alert-danger-border;
+    //color: $alert-danger-border;
   }
 }

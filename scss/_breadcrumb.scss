@@ -1,17 +1,19 @@
 .breadcrumb {
-  background-color: transparent;
   flex: 0 1 100%;
   padding: map-get($spacing-widths, 's') 0 map-get($spacing-widths, 's') map-get($spacing-widths, 's');
   margin: 0;
 }
 
 .breadcrumb-item {
-  a {
-    color: $gray-dark;
+  color: $dark-gray;
+  font-weight: $font-weight-normal;
 
-    &:hover {
-      @extend a:hover;
-    }
+  + .breadcrumb-item::before {
+    font-weight: $font-weight-bold;
+  }
+
+  &:hover {
+    @extend a:hover;
   }
 
   &.active {

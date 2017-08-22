@@ -62,6 +62,7 @@ let config = {
       jQuery: 'jquery',
       $: 'jquery',
       "window.Tether": 'tether',
+      Popper: ['popper.js', 'default'],
     })
   ]
 };

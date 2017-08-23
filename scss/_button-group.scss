@@ -1,6 +1,7 @@
-.btn-group {
+.btn-group,
+.btn-group-vertical {
   .btn:not([class*='outline']) +.btn:not([class*='outline']) {
-    margin-left: 0.0625rem;
+    margin-left: .0625rem;
   }
 
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -9,5 +10,14 @@
 
   .btn + .btn.dropdown-toggle {
     margin-left: 0;
+  }
+
+  &.dropup {
+    .btn:not([class*='outline']) +.btn:not([class*='outline']) {
+      margin-left: -.125rem;
+    }
+    .btn + .btn.dropdown-toggle {
+      margin-left: -.1875rem
+    }
   }
 }

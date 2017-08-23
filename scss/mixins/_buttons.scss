@@ -30,8 +30,8 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    background-color: $background;
-    border-color: $border;
+    background-color: $light-gray;
+    border-color: $light-gray;
   }
 
   &:active,
@@ -65,9 +65,9 @@
 
   &.disabled,
   &:disabled {
-    color: $color;
+    color: $light-gray;
     background-color: transparent;
-    border-color: $color;
+    border-color: $light-gray;
   }
 
   &:active,

@@ -1,9 +1,26 @@
+.dropdown,
+.dropup {
+  display: inline-block;
+}
+
+.dropup {
+  .dropdown-toggle {
+    &::after {
+      display: inline-block;
+      border: none;
+      margin-top: inherit;
+      content: '\E316';
+    }
+  }
+}
+
 .dropdown-toggle {
   &::after {
     @include use-material-icon();
     content: '\E313';
     border: none;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     width: auto;
     line-height: 0;
     font-weight: $font-weight-bold;
@@ -16,20 +33,8 @@
   }
 }
 
-.dropup {
-  .dropdown-toggle {
-    &::after {
-      border: none;
-      margin-top: inherit;
-      content: '\E316';
-    }
-  }
-}
-
 .dropdown-menu {
   top: 103%;
-  right: 0;
-  left: inherit;
   border: solid 1px #b9cdd2;
 
   &.menu-sm {

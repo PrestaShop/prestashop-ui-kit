@@ -1,0 +1,27 @@
+.custom-file,
+.custom-select {
+  width: 100%;
+}
+
+.custom-file-input {
+  &:focus ~ .custom-file-control {
+    border-color: theme-color-hover('primary');
+  }
+
+  &.disabled,
+  :disabled {
+    cursor: $cursor-disabled;
+  }
+
+  &.disabled ~ .custom-file-control,
+  :disabled ~ .custom-file-control {
+    color: $custom-select-disabled-color;
+    cursor: $cursor-disabled;
+    background-color: $custom-select-disabled-bg;
+
+  }
+}
+
+.form-select {
+  position: relative;
+}

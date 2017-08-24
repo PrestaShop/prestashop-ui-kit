@@ -11,7 +11,7 @@
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    border-top: solid 3px $nav-tabs-link-active-border-color;
+    border-top: solid .1875rem $nav-tabs-link-active-border-color;
   }
 }
 
@@ -21,7 +21,7 @@
   .nav-link {
     &.active,
     .show > & {
-      border-bottom: solid 3px $nav-pills-link-active-border-color;
+      border-bottom: solid .1875rem $nav-pills-link-active-border-color;
     }
   }
 }

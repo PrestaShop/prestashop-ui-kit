@@ -50,6 +50,6 @@
 
 .dropdown-item {
   &:not(:last-child) {
-    border-bottom: solid 1px $light-gray;
+    border-bottom: solid $border-width $light-gray;
   }
 }

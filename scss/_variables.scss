@@ -198,25 +198,21 @@ $hr-border-color: $light-gray;
 
 
 // Tables
-//$table-cell-padding:            .75rem !default;
-//$table-cell-padding-sm:         .3rem !default;
+$table-cell-padding: .4rem;
+$table-cell-padding-sm: .25rem;
 
-//$table-bg:                      transparent !default;
-//$table-accent-bg:               rgba($black,.05) !default;
-//$table-hover-bg:                rgba($black,.075) !default;
-//$table-active-bg:               $table-hover-bg !default;
+$table-accent-bg: $background-color;
+$table-hover-bg: theme-color-hover('primary');
+$table-active-bg:theme-color-hover('primary');
+$table-border-color: $light-gray;
 
-//$table-border-width:            $border-width !default;
-//$table-border-color:            $gray-200 !default;
+$table-head-bg: $background-color;
+$table-head-color: $body-color;
 
-//$table-head-bg:                 $gray-200 !default;
-//$table-head-color:              $gray-700 !default;
-
-//$table-inverse-bg:              $gray-900 !default;
-//$table-inverse-accent-bg:       rgba($white, .05) !default;
-//$table-inverse-hover-bg:        rgba($white, .075) !default;
-//$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
-//$table-inverse-color:           $body-bg !default;
+$table-inverse-bg: $body-color;
+$table-inverse-accent-bg: $extra-dark-gray;
+$table-inverse-hover-bg: theme-color-hover('primary');
+$table-inverse-border-color: $medium-gray;
 
 
 // Buttons
@@ -448,7 +444,7 @@ $modal-sm: 400px;
 
 // Alerts
 $alert-padding-x: .625rem;
-$alert-border-width: 2px;
+$alert-border-width: .125rem;
 
 
 // Progress bars

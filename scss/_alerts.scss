@@ -2,6 +2,7 @@
   padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
   background-color: $white;
   position: relative;
+  color: $body-color;
 
   &::before {
     @include use-material-icon();

@@ -10,6 +10,7 @@
 @import "mixins/fonts";
 @import "imports"; // need fonts first
 @import "mixins/close-button";
+@import "mixins/shadows";
 @import "mixins/buttons";
 @import "mixins/forms";
 
@@ -24,6 +25,7 @@
 @import "dropdown";
 @import "forms";
 @import "input-groups";
+@import "list-group";
 @import "modal";
 @import "navs";
 @import "pagination";

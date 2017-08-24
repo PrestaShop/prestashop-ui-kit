@@ -1,0 +1,20 @@
+.list-group-item-action {
+  &:active {
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+
+    @include ps-shadow-custom('primary');
+  }
+
+  .badge {
+    float: right;
+  }
+
+  &:hover,
+  &.active {
+    .badge {
+      background: $extra-light-gray;
+      color: $body-color;
+    }
+  }
+}

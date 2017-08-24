@@ -191,7 +191,7 @@ $font-size-h6: .625rem;
 
 $headings-font-family: $font-family-sans-serif;
 $headings-font-weight: $font-weight-bold;
-$headings-color: $dark-gray;
+$headings-color: $body-color;
 
 $text-muted: $medium-gray;
 $hr-border-color: $light-gray;
@@ -237,7 +237,7 @@ $btn-active-box-shadow: none;
 
 // Forms
 $cursor-disabled: not-allowed;
-$input-color: $dark-gray;
+$input-color: $body-color;
 $input-disabled-bg: #eceeef;
 $input-padding-x: .3125rem;
 $input-padding-y: .4375rem;
@@ -339,7 +339,7 @@ $nav-link-disabled-color: $light-gray;
 $nav-tabs-border-color: $white;
 
 $nav-tabs-link-hover-border-color: theme-color('primary');
-$nav-tabs-link-active-color: $dark-gray;
+$nav-tabs-link-active-color: $body-color;
 $nav-tabs-link-active-bg: $body-bg;
 $nav-tabs-link-active-border-color: theme-color('primary');
 
@@ -464,42 +464,26 @@ $alert-border-width: 2px;
 
 
 // List group
-//$list-group-bg:                  $white !default;
-//$list-group-border-color:        rgba($black,.125) !default;
-//$list-group-border-width:        $border-width !default;
-//$list-group-border-radius:       $border-radius !default;
+$list-group-border-color: $light-gray;
 
-//$list-group-item-padding-y:      .75rem !default;
-//$list-group-item-padding-x:      1.25rem !default;
+$list-group-item-padding-y: $input-padding-y;
+$list-group-item-padding-x: $input-padding-x;
 
-//$list-group-hover-bg:                 $gray-100 !default;
-//$list-group-active-color:             $component-active-color !default;
-//$list-group-active-bg:                $component-active-bg !default;
-//$list-group-active-border-color:      $list-group-active-bg !default;
+$list-group-hover-bg: theme-color-hover('primary');
+$list-group-active-bg: theme-color-hover('primary');
 
-//$list-group-disabled-color:      $gray-600 !default;
-//$list-group-disabled-bg:         $list-group-bg !default;
-
-//$list-group-action-color:             $gray-700 !default;
-//$list-group-action-hover-color:       $list-group-action-color !default;
-
-//$list-group-action-active-color:      $body-color !default;
-//$list-group-action-active-bg:         $gray-200 !default;
+$list-group-disabled-color: $light-gray;
+$list-group-action-hover-color: $white;
 
 
 // Image thumbnails
-//$thumbnail-padding:           .25rem !default;
-//$thumbnail-bg:                $body-bg !default;
-//$thumbnail-border-width:      $border-width !default;
-//$thumbnail-border-color:      #ddd !default;
-//$thumbnail-border-radius:     $border-radius !default;
-//$thumbnail-box-shadow:        0 1px 2px rgba($black,.075) !default;
-//$thumbnail-transition:        all .2s ease-in-out !default;
+$thumbnail-padding: .5rem;
+$thumbnail-border-color: $light-gray;
+$thumbnail-box-shadow: none;
 
 
 // Figures
-//$figure-caption-font-size: 90% !default;
-//$figure-caption-color:     $gray-600 !default;
+$figure-caption-color: $medium-gray;
 
 
 // Breadcrumbs
@@ -538,14 +522,10 @@ $breadcrumb-divider: ">";
 
 
 // Code
-//$code-font-size:              90% !default;
-//$code-padding-y:              .2rem !default;
-//$code-padding-x:              .4rem !default;
-//$code-color:                  #bd4147 !default;
-//$code-bg:                     $gray-100 !default;
+$code-color: $body-color;
+$code-bg: $light-gray;
 
-//$kbd-color:                   $white !default;
-//$kbd-bg:                      $gray-900 !default;
+$kbd-color: $white;
+$kbd-bg: $extra-dark-gray;
 
-//$pre-color:                   $gray-900 !default;
-//$pre-scrollable-max-height:   340px !default;
+$pre-color: $body-color;

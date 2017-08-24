@@ -1,5 +1,27 @@
 @each $color, $value in $theme-colors {
   .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors-hover {
+  .badge-#{$color}-hover {
+    @include badge-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    color: $white;
+
+    &[href] {
+      color: $white;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors-hover {
+  .badge-#{$color}-hover {
     color: $white;
 
     &[href] {

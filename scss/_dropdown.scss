@@ -35,7 +35,7 @@
 
 .dropdown-menu {
   top: 103%;
-  border: solid 1px #b9cdd2;
+  border: solid $border-width #b9cdd2;
 
   &.menu-sm {
     .dropdown-item {

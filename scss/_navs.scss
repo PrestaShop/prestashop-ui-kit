@@ -1,0 +1,32 @@
+.nav-link {
+  color: $medium-gray;
+}
+
+.nav-tabs {
+  border: none;
+
+  .nav-link {
+    border: none;
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-top: solid 3px $nav-tabs-link-active-border-color;
+  }
+}
+
+.nav-pills {
+  border-bottom: solid 1px $light-gray;
+
+  .nav-link {
+    &.active,
+    .show > & {
+      border-bottom: solid 3px $nav-pills-link-active-border-color;
+    }
+  }
+}
+
+.tab-content {
+  background-color: $nav-tabs-link-active-bg;
+  padding: $nav-link-padding-y;
+}

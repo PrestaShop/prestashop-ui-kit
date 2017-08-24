@@ -24,6 +24,8 @@ $red: #c05c67;
 $yellow: #cd9321;
 $green: #78d07d;
 $cyan: $blue;
+
+// @todo: change if needed
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -86,6 +88,7 @@ $theme-colors-shadow: (
   dark: theme-color('dark')
 );
 
+
 // Options
 $enable-rounded: false;
 $enable-shadows: true;
@@ -94,6 +97,7 @@ $enable-transitions: false;
 $enable-hover-media-query: true;
 $enable-grid-classes: true;
 $enable-print-styles: true;
+
 
 // Spacing
 $spacer: 1.875rem;
@@ -115,17 +119,15 @@ $spacers: (
 );
 
 // Body
+$body-bg: $white;
 $body-color: $dark-gray;
 
-
 // Links
-$link-hover-color: theme-color("primary");
+$link-hover-color: theme-color('primary');
 $link-hover-decoration: underline;
-
 
 // Paragraphs
 $paragraph-margin-bottom: 1rem;
-
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -301,8 +303,9 @@ $custom-file-focus-box-shadow: $input-focus-box-shadow;
 
 
 // Form validation
-//$form-feedback-valid-color:   theme-color("success") !default;
-//$form-feedback-invalid-color: theme-color("danger") !default;
+$form-feedback-valid-color: theme-color('success');
+$form-feedback-invalid-color: theme-color('danger');
+$form-feedback-warning-color: theme-color('warning');
 
 
 // Dropdowns
@@ -329,21 +332,21 @@ $dropdown-item-padding-y: .3125rem;
 
 
 // Navs
-//$nav-link-padding-y:            .5rem !default;
-//$nav-link-padding-x:            1rem !default;
-//$nav-link-disabled-color:       $gray-600 !default;
+$nav-link-padding-y: .9375rem;
+$nav-link-padding-x: 2.25rem;
+$nav-link-disabled-color: $light-gray;
 
-//$nav-tabs-border-color:                       #ddd !default;
-//$nav-tabs-border-width:                       $border-width !default;
-//$nav-tabs-border-radius:                      $border-radius !default;
-//$nav-tabs-link-hover-border-color:            $gray-200 !default;
-//$nav-tabs-link-active-color:                  $gray-700 !default;
-//$nav-tabs-link-active-bg:                     $body-bg !default;
-//$nav-tabs-link-active-border-color:           #ddd !default;
+$nav-tabs-border-color: $white;
 
-//$nav-pills-border-radius:     $border-radius !default;
-//$nav-pills-link-active-color: $component-active-color !default;
-//$nav-pills-link-active-bg:    $component-active-bg !default;
+$nav-tabs-link-hover-border-color: theme-color('primary');
+$nav-tabs-link-active-color: $dark-gray;
+$nav-tabs-link-active-bg: $body-bg;
+$nav-tabs-link-active-border-color: theme-color('primary');
+
+$nav-pills-link-hover-border-color: $nav-tabs-link-hover-border-color;
+$nav-pills-link-active-color: $nav-tabs-link-active-color;
+$nav-pills-link-active-bg: $nav-tabs-link-active-bg;
+$nav-pills-link-active-border-color: $nav-tabs-link-active-border-color;
 
 
 // Navbar
@@ -388,7 +391,7 @@ $pagination-hover-color: $pagination-color;
 $pagination-hover-bg: $pagination-bg;
 $pagination-hover-border-color: $pagination-border-color;
 
-$pagination-active-color: theme-color("primary");
+$pagination-active-color: theme-color('primary');
 $pagination-active-bg: $pagination-bg;
 $pagination-active-border-color: $pagination-border-color;
 
@@ -503,7 +506,7 @@ $alert-border-width: 2px;
 $breadcrumb-bg: $white;
 $breadcrumb-divider-color: $extra-dark-gray;
 $breadcrumb-active-color: $extra-dark-gray;
-$breadcrumb-divider:            ">";
+$breadcrumb-divider: ">";
 
 
 // Carousel

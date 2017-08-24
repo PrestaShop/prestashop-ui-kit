@@ -1,4 +1,4 @@
-form {
+.form {
   &.form-background {
     background-color: $background-color;
     padding: 2rem;
@@ -22,6 +22,10 @@ form {
   }
 }
 
+.form-control-lg {
+  padding: $input-btn-padding-y $input-btn-padding-x;
+}
+
 .has-success,
 .has-warning,
 .has-danger {
@@ -43,13 +47,13 @@ form {
     font-weight: $font-weight-normal;
     position: absolute;
     right: .3125rem;
-    bottom: 1.375rem;
+    bottom: 2rem;
     vertical-align: middle;
   }
 
   &.form-group-lg {
     &::after {
-      bottom: 1.6875rem
+      bottom: 2.3125rem;
     }
   }
 }
@@ -83,3 +87,7 @@ form {
     }
   }
 }
+
+@include ps-form-validation-state('valid', $form-feedback-valid-color);
+@include ps-form-validation-state('invalid', $form-feedback-invalid-color);
+@include ps-form-validation-state('warning', $form-feedback-warning-color);

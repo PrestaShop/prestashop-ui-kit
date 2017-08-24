@@ -11,6 +11,7 @@
 @import "imports"; // need fonts first
 @import "mixins/close-button";
 @import "mixins/buttons";
+@import "mixins/forms";
 
 // Components
 @import "type";
@@ -24,6 +25,7 @@
 @import "forms";
 @import "input-groups";
 @import "modal";
+@import "navs";
 @import "pagination";
 
 // Addons

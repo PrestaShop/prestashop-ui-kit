@@ -1,0 +1,17 @@
+@mixin ps-form-validation-state($state, $color) {
+  .form-control.is-#{$state},
+  .is-#{$state} {
+    border-color: $color;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .#{$state}-feedback {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $color;
+    margin-top: .3125rem;
+  }
+}

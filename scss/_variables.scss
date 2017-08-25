@@ -118,6 +118,7 @@ $spacers: (
   5: ($spacer * 2)
 );
 
+
 // Body
 $body-bg: $white;
 $body-color: $dark-gray;
@@ -131,21 +132,21 @@ $paragraph-margin-bottom: 1rem;
 
 // Grid breakpoints
 $grid-breakpoints: (
-        xs: 0,
-        sm: 544px,
-        md: 768px,
-        lg: 1024px,
-        xl: 1300px
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1300px
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
 // Grid containers
 $container-max-widths: (
-        sm: 576px,
-        md: 720px,
-        lg: 972px,
-        xl: 1240px
+  sm: 576px,
+  md: 720px,
+  lg: 972px,
+  xl: 1240px
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -216,14 +217,14 @@ $table-inverse-border-color: $medium-gray;
 
 
 // Buttons
-$input-btn-padding-y: map-get($spacing-widths, 'xs');
-$input-btn-padding-x: map-get($spacing-widths, 'xs');
+$input-btn-padding-y: .4375rem;
+$input-btn-padding-x: .4375rem;
 
-$input-btn-padding-y-sm: map-get($spacing-widths, 'xxs');
-$input-btn-padding-x-sm: map-get($spacing-widths, 'xxs');
+$input-btn-padding-y-sm: .1875rem;
+$input-btn-padding-x-sm: .125rem;
 
-$input-btn-padding-y-lg: map-get($spacing-widths, 's');
-$input-btn-padding-x-lg: map-get($spacing-widths, 's');
+$input-btn-padding-y-lg: .625rem;
+$input-btn-padding-x-lg: .625rem;
 
 $btn-font-weight: $font-weight-semibold;
 $btn-box-shadow: none;

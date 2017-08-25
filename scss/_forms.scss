@@ -47,13 +47,13 @@
     font-weight: $font-weight-normal;
     position: absolute;
     right: .3125rem;
-    bottom: 2rem;
+    bottom: 1.8rem;
     vertical-align: middle;
   }
 
   &.form-group-lg {
     &::after {
-      bottom: 2.3125rem;
+      bottom: 2.125rem;
     }
   }
 }

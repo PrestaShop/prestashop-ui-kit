@@ -5,3 +5,7 @@
     color: $medium-gray;
   }
 }
+
+.input-group-btn {
+  border: $input-btn-border-width solid $input-group-btn-border-color;
+}

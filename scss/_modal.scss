@@ -10,10 +10,11 @@
 .modal-header {
   .close {
     cursor: pointer;
+    font-size: 2rem;
   }
 }
 
 .modal-title {
-  @extend h1;
+  @extend h2;
   margin-bottom: 0;
 }

@@ -19,15 +19,25 @@
     font-weight: $font-weight-normal;
     text-transform: inherit;
     line-height: .9rem;
+
+    > .material-icons {
+      font-size: 1rem;
+    }
   }
 
   &.btn-lg {
     font-weight: $font-weight-bold;
     font-size: $font-size-base;
+
+    > .material-icons {
+      font-size: 1.5rem;
+    }
   }
 
   > .material-icons {
     vertical-align: middle;
+    font-size: 1.25rem;
+    line-height: .8125rem;
   }
 }
 

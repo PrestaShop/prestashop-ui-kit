@@ -1,8 +1,10 @@
 .table {
-  border-left: $table-border-width solid $table-border-color;
-  border-right: $table-border-width solid $table-border-color;
   border-bottom: $table-border-width solid $table-border-color;
 
+  thead th {
+    border-bottom: solid .125rem theme-color('primary');
+    border-top: none;
+  }
 
   td,
   th,

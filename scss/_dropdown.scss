@@ -40,6 +40,11 @@
   &.menu-sm {
     .dropdown-item {
       font-size: $font-size-sm;
+
+      > .material-icons {
+        font-size: $font-size-base;
+        vertical-align: sub;
+      }
     }
   }
 }
@@ -51,5 +56,10 @@
 .dropdown-item {
   &:not(:last-child) {
     border-bottom: solid $border-width $light-gray;
+  }
+
+  > .material-icons {
+    font-size: 1.125rem;
+    vertical-align: middle;
   }
 }

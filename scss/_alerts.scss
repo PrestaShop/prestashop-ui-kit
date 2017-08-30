@@ -32,7 +32,7 @@
 
   &.medium-alert {
     p {
-      font-size: .75rem;
+      font-size: $font-size-sm;
     }
   }
 
@@ -57,7 +57,7 @@
 
       p {
         color: inherit;
-        font-size: .75rem;
+        font-size: $font-size-sm;
       }
     }
   }

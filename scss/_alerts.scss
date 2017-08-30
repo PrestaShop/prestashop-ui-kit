@@ -19,7 +19,8 @@
     flex-direction: column;
   }
 
-  p {
+  p,
+  ul {
     font-size: $font-size-base;
     margin: 0;
   }
@@ -64,9 +65,11 @@
 }
 
 .alert-info {
+  border-color: theme-color('info');
+
   &::before {
     content: '\E88F';
-    background-color: $notice;
+    background-color: theme-color-background('info');
     color: theme-color('info')
   }
 
@@ -78,10 +81,29 @@
   }
 }
 
+.alert-success {
+  border-color: theme-color('success');
+
+  &::before {
+    content: '\E5CA';
+    background-color: theme-color-background('success');
+    color: theme-color('success')
+  }
+
+  .close,
+  &.expandable-alert .read-more,
+  &.expandable-alert .read-more:hover,
+  &.expandable-alert .read-more:focus {
+    color: theme-color('success')
+  }
+}
+
 .alert-warning {
+  border-color: theme-color('warning');
+
   &::before {
     content: '\E001';
-    background-color: $warning-hover;
+    background-color: theme-color-background('warning');
     color: theme-color('warning')
   }
 
@@ -94,9 +116,11 @@
 }
 
 .alert-danger {
+  border-color: theme-color('danger');
+
   &::before {
     content: '\E001';
-    background-color: $danger-hover;
+    background-color: theme-color-background('danger');
     color: theme-color('danger');
   }
 

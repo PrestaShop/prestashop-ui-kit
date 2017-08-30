@@ -2,6 +2,11 @@
   @return map-get($theme-colors-hover, $key);
 }
 
+@function theme-color-background($key: 'primary') {
+  @return map-get($theme-colors-background, $key);
+}
+
 @function theme-color-shadow($key: 'primary') {
   @return map-get($theme-colors-shadow, $key);
 }
+

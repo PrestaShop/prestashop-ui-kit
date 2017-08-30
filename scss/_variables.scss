@@ -22,7 +22,7 @@ $background-color: #eff1f2;
 $blue: #25b9d7;
 $red: #c05c67;
 $yellow: #cd9321;
-$green: #78d07d;
+$green: #70b580;
 $cyan: $blue;
 
 // @todo: change if needed
@@ -32,12 +32,8 @@ $pink:    #e83e8c !default;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
 
-$notice: #dff5f9;
 $primary-hover: #3ed2f0;
 $secondary-hover: $dark-gray;
-$success-hover: #70b580;
-$warning-hover: #fde7bb;
-$danger-hover: #fde1e1;
 
 $colors: (
   blue: $blue,
@@ -69,12 +65,23 @@ $theme-colors: (
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
-  success: $success-hover,
+  success: #78d07d,
   info: $primary-hover,
-  warning: $warning-hover,
-  danger: $danger-hover,
+  warning: #f1b746,
+  danger: #e76d7a,
   light: $gray-800,
   dark: $gray-100
+);
+
+$theme-colors-background: (
+  primary: #dff5f9,
+  secondary: $black,
+  success: #d6f0d8,
+  info: #dff5f9,
+  warning: #fde7bb,
+  danger: #fde1e1,
+  light: $gray-200,
+  dark: $gray-700
 );
 
 $theme-colors-shadow: (

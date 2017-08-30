@@ -24,7 +24,7 @@
 
 .table-form {
   tbody tr:nth-of-type(odd) {
-    background-color: $notice;
+    background-color: theme-color-background('info');
   }
 }
 
@@ -46,7 +46,7 @@
 .table-inverse {
   &.table-form {
     tbody tr:nth-of-type(odd) {
-      background-color: $notice;
+      background-color: theme-color-background('info');
     }
   }
 }

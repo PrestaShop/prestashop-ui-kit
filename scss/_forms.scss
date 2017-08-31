@@ -91,3 +91,15 @@
 @include ps-form-validation-state('valid', $form-feedback-valid-color);
 @include ps-form-validation-state('invalid', $form-feedback-invalid-color);
 @include ps-form-validation-state('warning', $form-feedback-warning-color);
+
+.switch-input {
+  @include ps-switch(20px, 40px, -2px, 16px);
+
+  &.switch-input-lg {
+    @include ps-switch(30px, 60px, -3px, 24px);
+  }
+
+  &.switch-input-sm {
+    @include ps-switch(16px, 28px, -1px, 12px);
+  }
+}

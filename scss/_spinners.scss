@@ -1,0 +1,46 @@
+.spinner {
+  color: $white;
+  background-color: $white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  border-right-color: theme-color('primary');
+  border-bottom-color: theme-color('primary');
+  border-width: .1875rem;
+  border-style: solid;
+  font-size: 0;
+  outline: none;
+  display: inline-block;
+  border-left-color: $light-gray;
+  border-top-color: $light-gray;
+  animation: rotating 2s linear infinite;
+}
+
+@each $color, $value in $theme-colors-hover {
+  .spinner-#{$color} {
+    border-right-color: $value;
+    border-bottom-color: $value;
+  }
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

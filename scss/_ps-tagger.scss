@@ -1,0 +1,39 @@
+.pstaggerWrapper {
+  position: relative;
+
+  .pstaggerTagsWrapper {
+    display: none;
+    position: relative;
+    padding: $badge-padding-y $badge-padding-x;
+    border: solid $border-width $border-color;
+  }
+
+  .pstaggerTag {
+    display: inline-block;
+    padding: $badge-padding-y $badge-padding-x;
+    margin-right: $badge-padding-x;
+    line-height: 1;
+    color: $badge-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius();
+
+    @include badge-variant(theme-color('primary'));
+
+    .pstaggerClosingCross {
+      margin: 0 $badge-padding-x;
+      color: $body-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $body-color;
+      }
+    }
+  }
+}
+
+.pstaggerAddTagInput,
+.form-control-tagger {
+  @extend .form-control;
+}

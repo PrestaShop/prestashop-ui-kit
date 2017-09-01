@@ -1,0 +1,33 @@
+.select2-container--bootstrap {
+
+  .select2-dropdown {
+    padding: $input-btn-padding-x $input-btn-padding-y;
+    border-radius: 0;
+  }
+
+  .select2-search--dropdown {
+    padding: 0;
+    margin-bottom: $input-btn-padding-x;
+  }
+
+  .select2-selection--single {
+    padding: $input-btn-padding-x $input-btn-padding-y;
+
+    .select2-selection__arrow {
+      margin-right: .625rem;
+
+      b {
+        right: .625rem;
+      }
+    }
+
+    .select2-selection__rendered {
+      line-height: 1.125rem;
+      padding: 0 $input-padding-y;
+    }
+  }
+
+  .select2-results {
+    padding: 0;
+  }
+}

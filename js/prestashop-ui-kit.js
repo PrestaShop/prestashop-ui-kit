@@ -153,7 +153,7 @@ import 'pstagger';
         };
 
         // Set default theme to prestakit for Select2
-        jQuery.fn.select2.defaults.set('theme', 'prestakit');
+        jQuery.fn.select2.defaults.set('theme', 'bootstrap');
 
         // Set default width on auto to fix responsive content for Select2
         jQuery.fn.select2.defaults.set('width', 'auto');

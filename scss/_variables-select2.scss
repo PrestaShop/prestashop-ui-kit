@@ -1,0 +1,52 @@
+// Redefine Select2 vars for bootstrap (issue from bootstrap alpha, not final variable of BS4..)
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+$btn-default-bg: theme-color-background('primary');
+$btn-default-border: $border-color;
+$btn-default-color: theme-color('primary');
+
+$caret-width-base: $caret-width;
+$caret-width-large: $caret-width;
+
+$font-size-large: $font-size-lg;
+$font-size-small: $font-size-sm;
+
+$padding-base-horizontal: $input-btn-padding-x-sm;
+$padding-large-horizontal: $input-btn-padding-x-lg;
+$padding-small-horizontal: $input-btn-padding-x-sm;
+$padding-base-vertical: $input-btn-padding-y;
+$padding-large-vertical: $input-btn-padding-y-lg;
+$padding-small-vertical: $input-btn-padding-y-sm;
+
+$line-height-large: $line-height-lg;
+$line-height-small: $line-height-sm;
+$input-bg-disabled: $input-disabled-bg;
+
+$input-color-placeholder: $input-placeholder-color;
+$input-border: $input-border-color;
+$input-border-focus: $input-focus-border-color;
+$input-height-base: $input-height;
+$input-height-large: $input-height-lg;
+$input-height-small: $input-height-sm;
+
+$state-warning-text: theme-color('warning');
+$state-danger-text: theme-color('danger');
+$state-success-text: theme-color('success');
+
+$screen-sm-min: map-get($grid-breakpoints, 'sm');
+
+
+// Now customise!
+$s2bs-border-radius-base: 0;
+$s2bs-border-radius-large: 0;
+$s2bs-border-radius-small: 0;
+$s2bs-input-border-focus: $input-border-focus;
+$s2bs-input-border-radius: 0;
+$s2bs-dropdown-box-shadow: none;
+$s2bs-dropdown-box-shadow-above: none;
+$s2bs-selection-choice-border-radius: 0;
+//
+$s2bs-form-control-default-box-shadow: none;
+$s2bs-form-control-focus-box-shadow: none;

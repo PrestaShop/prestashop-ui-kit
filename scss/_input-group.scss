@@ -3,6 +3,10 @@
     padding: $input-padding-y $input-padding-y * 1.5;
     font-size: $font-size-base;
     color: $medium-gray;
+
+    .material-icons {
+      font-size: $font-size-base;
+    }
   }
 }
 

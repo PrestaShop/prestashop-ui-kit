@@ -1,5 +1,6 @@
 .pstaggerWrapper {
   position: relative;
+  flex: 1;
 }
 
 .pstaggerTagsWrapper {
@@ -37,4 +38,11 @@
 .pstaggerAddTagInput,
 .form-control-tagger {
   @extend .form-control;
+
+  height: 2.563rem;
+}
+
+.input-group .pstaggerAddTagInput {
+  display: block;
+  width: 100%;
 }

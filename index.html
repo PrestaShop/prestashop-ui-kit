@@ -2223,13 +2223,13 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
         <h2>Tag & Ps-tagger</h2>
 
         <div class="wrapper">
-            <label for="pstagger-input">Tape your tags</label>
+            <label for="pstagger-input">Type your tags</label>
             <input class="form-control-tagger" id="pstagger-input" type="text" placeholder="Add tags">
         </div>
 
         <script type="text/javascript">
             $(document).ready(function(){
-                $('#pstagger-input').pstagger({
+                $('.form-control-tagger').pstagger({
                     inputPlaceholder: 'Add tags',
                     onTagsChanged: onTagsChange,
                     onResetTags: onReset,

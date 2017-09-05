@@ -1,6 +1,12 @@
 .pstaggerWrapper {
   position: relative;
   flex: 1;
+
+  + .input-group-btn {
+    .btn {
+      height: 2.438rem;
+    }
+  }
 }
 
 .pstaggerTagsWrapper {
@@ -8,6 +14,7 @@
   position: relative;
   padding: $badge-padding-y $badge-padding-x 0 $badge-padding-x;
   border: solid $border-width $border-color;
+  background: $white;
 }
 
 .pstaggerTag {

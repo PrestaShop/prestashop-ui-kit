@@ -4,6 +4,8 @@ import 'select2';
 import 'jquery.growl';
 import 'pstagger';
 
+$.fn.pstooltip = $.fn.tooltip;
+
 /*!
 * Prestige v1.0.0 (http://getbootstrap.com)
 * Copyright 2015-2015
@@ -118,10 +120,10 @@ import 'pstagger';
   }
 
   var initToolTips = function() {
-    jQuery('.tooltip-error').tooltip({
-      template: '<div class="tooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
+    jQuery('.tooltip-error').pstooltip({
+      template: '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
     });
-    jQuery('[data-toggle="tooltip"]').tooltip();
+    jQuery('[data-toggle="pstooltip"]').pstooltip();
     jQuery('[data-toggle="popover"]').popover();
   }
 

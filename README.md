@@ -13,6 +13,14 @@ You can install by just typing `npm install`.
 npm install
 ```
 
+Or use it directly through our CDN:
+```
+[...]
+<link https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css rel="stylesheet">
+<script https://ui-kit.prestashop.com/backoffice/latest/js/prestashop-ui-kit.js</script>
+[...]
+```
+
 Get Started
 -----------
 
@@ -20,9 +28,7 @@ Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit + Javascript.
 
 ```
 [...]
-<link href="dist/css/prestashop-ui-kit.css" rel="stylesheet">
-<script src="dist/docs/public/jquery-1.9.1.min.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
+<link href="dist/css/bootstrap-prestashop-ui-kit.css" rel="stylesheet">
 <script src="dist/js/prestashop-ui-kit.js"></script>
 [...]
 ```
@@ -30,7 +36,6 @@ Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit + Javascript.
 Github devDependencies
 
 **[pstagger](https://github.com/PrestaShop/pstagger)**
-**[jquery-growl](https://github.com/ksylvest/jquery-growl.git)**
 
 About PrestaShop
 -------

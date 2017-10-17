@@ -103,3 +103,24 @@
     @include ps-switch(16px, 28px, -1px, 12px);
   }
 }
+
+.search {
+  position: relative;
+  input[type="text"] {
+    padding-right: 1.6rem;
+  }
+  input::placeholder {
+    font-style: italic;
+  }
+  &::after {
+    @include use-material-icon();
+    content: '\E8B6';
+    color: $medium-gray;
+    font-size: 1.20rem;
+    font-weight: $font-weight-normal;
+    position: absolute;
+    right: .3125rem;
+    bottom: 0.4rem;
+    vertical-align: middle;
+  }
+}

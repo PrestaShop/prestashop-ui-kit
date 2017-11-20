@@ -23,7 +23,7 @@
   margin-bottom: $badge-padding-y;
   margin-right: $badge-padding-x;
   line-height: 1;
-  color: $badge-color;
+  color: theme-color('primary');
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

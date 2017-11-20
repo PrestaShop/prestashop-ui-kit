@@ -37,13 +37,13 @@
   }
 }
 
-.thead-inverse {
+.thead-dark {
   th {
     background-color: $extra-dark-gray;
   }
 }
 
-.table-inverse {
+.table-dark {
   &.table-form {
     tbody tr:nth-of-type(odd) {
       background-color: theme-color-background('info');

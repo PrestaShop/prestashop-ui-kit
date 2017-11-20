@@ -2273,11 +2273,19 @@
         </article>
 
         <article id="tagger">
-            <h2>Tag &amp; Ps-tagger</h2>
+            <h2>Ps-tagger (Old, jQuery-based)</h2>
 
             <div class="wrapper">
                 <label for="pstagger-input">Type your tags</label>
-                <input class="form-control-tagger" id="pstagger-input" type="text" placeholder="Add tags">
+                <div class="input-group">
+                    <input class="form-control-tagger" id="pstagger-input" type="text" placeholder="Add tags">
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary">
+                        <i class="material-icons">search</i>
+                        Search
+                    </button>
+                </span>
+                </div>
             </div>
 
             <script type="text/javascript">
@@ -2297,6 +2305,33 @@
                     }
                 });
             </script>
+
+            <h2 class="mt-2">Ps-tags</h2>
+            <div id="search">
+                <div class="input-group">
+                    <!-- start PSTags -->
+                    <div class="tags-input search-input search d-flex flex-wrap">
+                        <div class="tags-wrapper">
+                            <span class="tag">Sample tag<i class="material-icons">close</i></span>
+                            <span class="tag">Another sample<i class="material-icons">close</i></span>
+                        </div>
+                        <input
+                               type="text"
+                               placeholder="Type some tags..."
+                               class="form-control input"
+                        />
+                    </div>
+                    <!-- end PSTags -->
+                    <!-- start PSButton -->
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary">
+                            <i class="material-icons">search</i>
+                            Search
+                        </button>
+                    </span>
+                    <!-- start PSButton -->
+                </div>
+            </div>
         </article>
 
         <article id="tooltips">

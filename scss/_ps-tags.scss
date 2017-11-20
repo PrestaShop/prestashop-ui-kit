@@ -1,0 +1,48 @@
+.tags-input {
+  width: 100%;
+  border: $input-btn-border-width solid $input-border-color;
+  background-color: $input-bg;
+
+  // css 4, but nice to have
+  &:focus-within {
+    border-color: $input-focus-border-color;
+  }
+
+  .tags-wrapper {
+    font-size: 0; // collapses whitespace between tags
+
+    &:not(:empty) {
+      padding: $badge-padding-y $badge-padding-x;
+      padding-right: 0;
+    }
+  }
+
+  .tag {
+    font-size: .75rem;
+    display: inline-block;
+    padding: $badge-padding-y/2 $badge-padding-x;
+    margin: 0 $badge-padding-x 0 0;
+    color: theme-color('primary');
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius();
+    @include badge-variant(theme-color('primary'));
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > .material-icons {
+      margin: 0 0 0 $badge-padding-x;
+      color: $body-color;
+      cursor: pointer;
+      font-size: 1.063rem;
+    }
+  }
+
+  input[type="text"] {
+    border: none;
+    min-width: 75px;
+  }
+}

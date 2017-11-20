@@ -6,10 +6,20 @@
 .dropup {
   .dropdown-toggle {
     &::after {
-      display: inline-block;
-      border: none;
-      margin-top: inherit;
+      @include use-material-icon();
       content: '\E316';
+      border: none;
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      line-height: 0;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &.btn-sm {
+    &::after {
+      font-weight: $font-weight-normal;
     }
   }
 }

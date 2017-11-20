@@ -2211,6 +2211,27 @@
                     </li>
                 </ul>
             </nav>
+
+            <h4>Pagination with jump to page</h4>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item previous">
+                        <a class="page-link" aria-label="Previous" href="#"><span class="sr-only">Previous</span></a>
+                    </li>
+                    <li class="page-item active">
+                        <input name="paginator_jump_page" class="jump-to-page" type="text" value="7" psurl="#" psmax="16" pslimit="20" />
+                    </li>
+                    <li class="page-item next">
+                        <a class="page-link" aria-label="Next" id="pagination_next_url" href="#"><span class="sr-only">Next</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">16</a>
+                    </li>
+                </ul>
+            </nav>
         </article>
 
         <article id="popovers">

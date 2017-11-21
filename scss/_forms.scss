@@ -15,6 +15,8 @@
 }
 
 .form-control {
+  line-height: 1;
+
   &.disabled,
   :disabled {
     color: $medium-gray;
@@ -43,17 +45,17 @@
   &::after {
     @include use-material-icon();
     content: '\E876';
-    font-size: 1.20rem;
+    font-size: 1.438rem;
     font-weight: $font-weight-normal;
     position: absolute;
     right: .3125rem;
-    bottom: 1.8rem;
+    bottom: 1.813rem;
     vertical-align: middle;
   }
 
   &.form-group-lg {
     &::after {
-      bottom: 2.125rem;
+      bottom: 1.875rem;
     }
   }
 }
@@ -117,12 +119,12 @@
       @include use-material-icon();
       content: '\E8B6';
       color: $medium-gray;
-      font-size: 1.20rem;
+      font-size: 1.375rem;
       font-weight: $font-weight-normal;
       position: absolute;
       right: .3125rem;
-      bottom: 25%;
-      vertical-align: middle;
+      top: 50%;
+      margin-top: -(1.375rem/2);
     }
   }
 }

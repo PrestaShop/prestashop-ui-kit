@@ -1,0 +1,19 @@
+$color-icons: #6c868e;
+
+.toolbar-button {
+  color: $color-icons;
+  text-align: center;
+  display: inline-block;
+  margin: 0 0.3125rem;
+  > .material-icons {
+    font-size: 1.5rem;
+  }
+  > .title {
+    font-size: 0.75rem;
+    color: $color-icons;
+    display: block;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

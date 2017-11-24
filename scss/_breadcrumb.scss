@@ -1,7 +1,16 @@
 .breadcrumb {
-  flex: 0 1 100%;
-  padding: map-get($spacing-widths, 's') 0 map-get($spacing-widths, 's') map-get($spacing-widths, 's');
   margin: 0;
+  padding: 0.3125rem;
+  background: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  > li + li::before {
+    padding-right: 0;
+    padding-left: 0.1875rem;
+  }
+  > li > a {
+    color: #363A41; // TODO: Place the text color
+  }
 }
 
 .breadcrumb-item {

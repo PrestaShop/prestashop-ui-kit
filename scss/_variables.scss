@@ -119,16 +119,8 @@ $enable-hover-media-query: true;
 $enable-grid-classes: true;
 $enable-print-styles: true;
 
-
 // Spacing
 $spacer: 1.875rem;
-$spacing-widths: (
-  xxs: ($spacer / 6),
-  xs: ($spacer / 3),
-  s: ($spacer / 2),
-  n: $spacer,
-  l: ($spacer * 2)
-);
 
 $spacers: (
   0: 0,

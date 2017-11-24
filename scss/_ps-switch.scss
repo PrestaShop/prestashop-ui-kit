@@ -1,0 +1,83 @@
+// on-off switch control
+.ps-switch {
+  position: relative;
+  display: inline-block;
+  min-width: 8.125rem;
+  margin-top: 3px;
+  font-size: 0.813rem;
+  background-color: #eff1f2;
+  border-radius: 1px;
+  text-align: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+
+    &:disabled {
+      + label {
+        cursor: not-allowed;
+      }
+
+      &:checked + label {
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 0.231em 0.769em; // relative to current font size, so 'em'
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-gray;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+  }
+
+  // color for the currently selected label
+  input:checked + label {
+    color: $white;
+  }
+
+  // color for "off"
+  > .slide-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    background-color: #c05c67;
+    transition: all .3s ease-out;
+  }
+
+  // color for "on"
+  input:last-of-type:checked ~ .slide-button {
+    background-color: #2eacce;
+    left: 50%;
+  }
+
+  &.ps-switch-sm {
+    min-width: 6.250rem;
+    font-size: $font-size-sm;
+  }
+
+  &.ps-switch-lg {
+    font-size: $font-size-lg;
+  }
+
+  // a description below this component
+  + .form-text {
+    font-style: italic;
+    color: $medium-gray;
+  }
+}

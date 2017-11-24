@@ -32,8 +32,11 @@ $pink:    #e83e8c !default;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
 
+// main button background colors
 $primary-hover: #3ed2f0;
+$primary-active: #19a9c6;
 $secondary-hover: $dark-gray;
+$secondary-active: #f6fdff;
 
 $colors: (
   blue: $blue,
@@ -71,6 +74,17 @@ $theme-colors-hover: (
   danger: #e76d7a,
   light: $gray-800,
   dark: $gray-100
+);
+
+$theme-colors-active: (
+  primary: $primary-active,
+  secondary: $extra-dark-gray,
+  success: darken(map-get($theme-colors, 'success'), 10%),
+  info: darken(map-get($theme-colors, 'info'), 10%),
+  warning: darken(map-get($theme-colors, 'warning'), 10%),
+  danger: darken(map-get($theme-colors, 'danger'), 10%),
+  light: darken(map-get($theme-colors, 'light'), 10%),
+  dark: darken(map-get($theme-colors, 'dark'), 10%)
 );
 
 $theme-colors-background: (
@@ -237,7 +251,7 @@ $btn-font-weight: $font-weight-semibold;
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
-
+$btn-border-radius: 0.063rem;
 
 // Forms
 $cursor-disabled: not-allowed;

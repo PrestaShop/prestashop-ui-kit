@@ -1,4 +1,12 @@
-@mixin ps-button-variant($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%), $color-name: 'primary') {
+@mixin ps-button-variant(
+  $background,
+  $border,
+  $hover-background: lighten($background, 7.5%),
+  $hover-border: lighten($border, 7.5%),
+  $active-background: darken($background, 7.5%),
+  $active-border: darken($border, 10%),
+  $color-name: 'primary'
+) {
   color: $white;
   background-color: $background;
   border-color: $border;
@@ -6,15 +14,13 @@
 
   &:hover {
     color: $white;
-    background-color: $active-background;
-    border-color: $active-border;
+    background-color: $hover-background;
+    border-color: $hover-border;
   }
 
   &:focus,
   &.focus {
-    background-color: $active-background;
-    border-color: $active-border;
-    @include ps-shadow-custom($color-name);
+    box-shadow: none;
   }
 
   // Disabled comes first so active can properly restyle
@@ -24,16 +30,20 @@
     border-color: $light-gray;
   }
 
-  &:active,
-  &.active,
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
   .show > &.dropdown-toggle {
     background-color: $active-background;
     border-color: $active-border;
-    @include ps-shadow-custom($color-name);
+    box-shadow: none;
   }
 }
 
-@mixin ps-button-outline-variant($color, $color-hover: #fff, $color-name: 'primary') {
+@mixin ps-button-outline-variant(
+  $color,
+  $color-hover: #fff,
+  $color-name: 'primary'
+) {
   color: $color;
   background-color: transparent;
   background-image: none;
@@ -47,10 +57,7 @@
 
   &:focus,
   &.focus {
-    color: $color-hover;
-    background-color: theme-color-hover($color-name);
-    border-color: theme-color-hover($color-name);
-    @include ps-shadow-custom($color-name);
+    box-shadow: none;
   }
 
   &.disabled,
@@ -60,12 +67,12 @@
     border-color: $light-gray;
   }
 
-  &:active,
-  &.active,
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: $color-hover;
-    background-color: theme-color-hover($color-name);
-    border-color: theme-color-hover($color-name);
-    @include ps-shadow-custom($color-name);
+    background-color: theme-color-active($color-name);
+    border-color: theme-color-active($color-name);
+    box-shadow: none;
   }
 }

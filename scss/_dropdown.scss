@@ -1,75 +1,73 @@
-.dropdown,
-.dropup {
-  display: inline-block;
-}
+.dropdown-toggle,
+.dropup .dropdown-toggle {
+  padding-right: $input-btn-padding-x * .75;
 
-.dropup {
-  .dropdown-toggle {
-    &::after {
-      @include use-material-icon();
-      content: '\E316';
-      border: none;
-      display: inline-block;
-      vertical-align: middle;
-      width: auto;
-      line-height: 0;
-      font-weight: $font-weight-bold;
-    }
+  &.btn-lg {
+    padding-right: $input-btn-padding-x-lg * .75;
   }
 
-  &.btn-sm {
-    &::after {
-      font-weight: $font-weight-normal;
-    }
-  }
-}
-
-.dropdown-toggle {
+  // use material icons for dropdown and dropup
   &::after {
     @include use-material-icon();
-    content: '\E313';
+    content: 'expand_more';
     border: none;
     display: inline-block;
     vertical-align: middle;
     width: auto;
     line-height: 0;
-    font-weight: $font-weight-bold;
   }
+}
 
-  &.btn-sm {
+// dropup icon
+.dropup {
+  .dropdown-toggle {
     &::after {
-      font-weight: $font-weight-normal;
+      content: 'expand_less';
     }
+  }
+}
+
+// add a bigger margin between the text and the dropdown icon
+.dropdown-toggle:not(.dropdown-toggle-split) {
+  &:after {
+    margin-left: 0.625rem;
   }
 }
 
 .dropdown-menu {
-  top: 103%;
-  border: solid $border-width #b9cdd2;
+  border: solid $border-width #bbcdd2;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
 
-  &.menu-sm {
-    .dropdown-item {
-      font-size: $font-size-sm;
+  color: #576c72;
+  padding: 0.313rem 0;
+  min-width: 15.625rem;
 
-      > .material-icons {
-        font-size: $font-size-base;
-        vertical-align: sub;
+  .material-icons {
+    color: $medium-gray;
+    font-size: 1.125rem;
+    vertical-align: text-bottom;
+    padding-right: 0.5rem;
+  }
+
+  > .dropdown-item {
+    color: inherit;
+    line-height: normal;
+    border-bottom: 0;
+    padding: 0.375rem 0.938rem {
+      right: 1.5rem;
+    };
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+
+      .material-icons {
+        color: $white;
       }
     }
   }
-}
 
-.dropdown-divider {
-  margin: .2rem 0;
-}
-
-.dropdown-item {
-  &:not(:last-child) {
-    border-bottom: solid $border-width $light-gray;
-  }
-
-  > .material-icons {
-    font-size: 1.125rem;
-    vertical-align: middle;
+  > .dropdown-divider {
+    margin: 0.313rem 0;
   }
 }

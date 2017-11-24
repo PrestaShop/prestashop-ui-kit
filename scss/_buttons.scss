@@ -1,8 +1,9 @@
 .btn {
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  border-width: .125rem;
-  font-size: $font-size-sm;
+  border-width: $border-width;
+  padding: 0.375rem 0.838rem;
+  font-weight: $font-weight-semibold;
+  border-radius: $btn-border-radius;
+  white-space: nowrap;
 
   @include hover-focus {
     cursor: pointer;
@@ -15,35 +16,41 @@
     cursor: not-allowed;
   }
 
-  &.btn-sm {
-    font-weight: $font-weight-normal;
-    text-transform: inherit;
-    line-height: .9rem;
-
-    > .material-icons {
-      font-size: $font-size-lg;
-    }
-  }
-
-  &.btn-lg {
-    font-weight: $font-weight-bold;
-    font-size: $font-size-base;
-
-    > .material-icons {
-      font-size: 1.5rem;
-    }
-  }
-
   > .material-icons {
     vertical-align: middle;
     font-size: 1.25rem;
-    line-height: .8125rem;
+    margin-top: -0.083em;
+  }
+}
+
+.btn-sm {
+  padding: 0.313rem 0.625rem;
+
+  > .material-icons {
+    font-size: $font-size-lg;
+  }
+}
+
+.btn-lg {
+  padding: 0.438rem 0.838rem;
+
+  > .material-icons {
+    font-size: 1.5rem;
+    line-height: 1rem;
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include ps-button-variant($value, $value, theme-color-hover($color), theme-color-hover($color), $color);
+    @include ps-button-variant(
+      $value,
+      $value,
+      theme-color-hover($color),
+      theme-color-hover($color),
+      theme-color-active($color),
+      theme-color-active($color),
+      $color
+    );
   }
 }
 
@@ -53,10 +60,20 @@
   }
 }
 
-.btn-lg {
-  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
-}
+// special case for secondary outline button
+.btn-outline-secondary {
+  &:hover,
+  &.hover {
+    color: $blue;
+    background-color: $white;
+    border-color: $primary;
+  }
 
-.btn-sm {
-  @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $primary-active;
+    background-color: $secondary-active;
+    border-color: $primary-hover; // <-- that's "hover" and not "active"
+  }
 }

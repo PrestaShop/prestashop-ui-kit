@@ -1,23 +1,8 @@
-.btn-group,
-.btn-group-vertical {
-  .btn:not([class*='outline']) +.btn:not([class*='outline']) {
-    margin-left: .0625rem;
-  }
+.btn-group {
 
-  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-right: none;
-  }
-
-  .btn + .btn.dropdown-toggle {
-    margin-left: 0;
-  }
-
-  &.dropup {
-    .btn:not([class*='outline']) +.btn:not([class*='outline']) {
-      margin-left: -.125rem;
-    }
-    .btn + .btn.dropdown-toggle {
-      margin-left: -.1875rem
-    }
+  // add spacing between button and dropdown button in split dropdown buttons,
+  // except on outline buttons (which already have a border separating them)
+  .btn + .dropdown-toggle-split:not([class*='outline']) {
+    margin-left: $border-width;
   }
 }

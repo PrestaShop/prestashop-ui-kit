@@ -175,10 +175,10 @@ $caret-width: .25rem;
 
 
 // Fonts
-$font-family-sans-serif: Noto Sans, sans-serif;
-$font-family-serif: Noto Sans, serif;
-$font-family-monospace: Noto Sans, monospace;
-$font-family-base: Noto Sans, sans-serif;
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+//$font-family-serif: "Open Sans", serif;
+//$font-family-monospace: "Open Sans", monospace;
+$font-family-base: $font-family-sans-serif;
 
 $font-size-base: .875rem;
 $font-size-lg: 1rem;

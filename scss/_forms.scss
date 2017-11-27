@@ -10,8 +10,13 @@
   color: $dark-gray;
 }
 
-label + .form-text {
-  float: right;
+// help labels around form elements
+.form-text {
+  color: $medium-gray;
+
+  label + & {
+    float: right;
+  }
 }
 
 .form-control {

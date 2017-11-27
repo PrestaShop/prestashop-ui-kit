@@ -40,11 +40,17 @@ let config = {
                 sourceMap: true,
               }
             },
-            'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+              }
+            },
             {
               loader: 'sass-loader',
               options: {
-                includePaths: [ path.resolve(__dirname, './node_modules') ]
+                includePaths: [ path.resolve(__dirname, './node_modules') ],
+                sourceMap: true,
               }
             }
           ]

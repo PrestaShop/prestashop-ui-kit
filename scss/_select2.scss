@@ -12,6 +12,7 @@
 
   .select2-selection--single {
     padding: $input-btn-padding-x $input-btn-padding-y;
+    height: $input-height;
 
     .select2-selection__arrow {
       margin-right: .625rem;

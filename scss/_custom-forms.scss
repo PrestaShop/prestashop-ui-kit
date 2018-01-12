@@ -1,9 +1,12 @@
 .custom-file,
 .custom-select {
   width: 100%;
+  height: $input-height;
 }
 
 .custom-file-input {
+  height: $input-height;
+
   &:focus ~ .custom-file-control {
     border-color: theme-color-hover('primary');
   }
@@ -18,7 +21,6 @@
     color: $custom-select-disabled-color;
     cursor: $cursor-disabled;
     background-color: $custom-select-disabled-bg;
-
   }
 }
 

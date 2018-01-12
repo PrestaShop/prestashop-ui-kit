@@ -1,12 +1,9 @@
-.input-group {
-  .input-group-addon {
-    padding: $input-padding-y $input-padding-y * 1.5;
-    font-size: $font-size-base;
-    color: $medium-gray;
+.input-group-addon {
+  padding: $input-padding-y 0.625rem;
+  font-size: $font-size-base;
+  color: $medium-gray;
 
-    .material-icons {
-      font-size: $font-size-base;
-    }
+  .material-icons {
+    font-size: $font-size-base;
   }
 }
-

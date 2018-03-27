@@ -1,8 +1,13 @@
 .btn-group {
 
-  // add spacing between button and dropdown button in split dropdown buttons,
-  // except on outline buttons (which already have a border separating them)
-  .btn + .dropdown-toggle-split:not([class*='outline']) {
-    margin-left: $border-width;
+  .btn.dropdown-toggle-split {
+    // fix spacing to the left of chevron in split dropdown due to class order (.btn overrides it because it's load after)
+    @extend .dropdown-toggle-split;
+
+    // add spacing between button and dropdown button in split dropdown buttons,
+    // except on outline buttons (which already have a border separating them)
+    &:not([class*='outline']) {
+      margin-left: $border-width;
+    }
   }
 }

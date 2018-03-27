@@ -2,10 +2,6 @@
 .dropup .dropdown-toggle {
   padding-right: $input-btn-padding-x * .75;
 
-  &.btn-lg {
-    padding-right: $input-btn-padding-x-lg * .75;
-  }
-
   // use material icons for dropdown and dropup
   &::after {
     @include use-material-icon();

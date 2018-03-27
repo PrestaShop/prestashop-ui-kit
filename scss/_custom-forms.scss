@@ -4,23 +4,39 @@
   height: $input-height;
 }
 
-.custom-file-input {
-  height: $input-height;
+.custom-file {
+  .custom-file-input {
+    height: $input-height;
 
-  &:focus ~ .custom-file-control {
-    border-color: theme-color-hover('primary');
+    &:focus ~ .custom-file-label {
+      border-color: theme-color-hover('primary');
+    }
+
+    &.disabled,
+    :disabled {
+      cursor: $cursor-disabled;
+    }
+
+    &.disabled ~ .custom-file-label,
+    :disabled ~ .custom-file-label {
+      color: $custom-select-disabled-color;
+      cursor: $cursor-disabled;
+      background-color: $custom-select-disabled-bg;
+
+      &:after {
+        @extend .btn-primary:disabled;
+      }
+    }
   }
+  .custom-file-label:after {
+    @extend .btn;
+    @extend .btn-primary;
 
-  &.disabled,
-  :disabled {
-    cursor: $cursor-disabled;
-  }
-
-  &.disabled ~ .custom-file-control,
-  :disabled ~ .custom-file-control {
-    color: $custom-select-disabled-color;
-    cursor: $cursor-disabled;
-    background-color: $custom-select-disabled-bg;
+    // make the button overlap the border
+    top: $input-border-width * -1;
+    right: $input-border-width * -1;
+    bottom: $input-border-width * -1;
+    height: auto;
   }
 }
 

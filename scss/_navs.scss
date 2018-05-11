@@ -16,7 +16,10 @@
 }
 
 .nav-pills {
-  border-bottom: solid $border-width $light-gray;
+  border-top: solid $border-width #dfdfdf;
+  border-bottom: solid $border-width #dfdfdf;
+
+  font-weight: 600;
 
   .nav-link {
     &.active,

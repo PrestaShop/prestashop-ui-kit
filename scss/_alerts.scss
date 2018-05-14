@@ -54,7 +54,10 @@
 
     .alert-more {
       color: $medium-gray;
-      margin: 1.375rem 0 .75rem 0;
+      padding: {
+        top: 1.375rem;
+        bottom: .75rem;
+      }
 
       p {
         color: inherit;

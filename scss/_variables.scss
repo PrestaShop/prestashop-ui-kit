@@ -1,5 +1,5 @@
 // Color system
-$white: #fff;
+$white:    #fff;
 $gray-100: #fafbfc;
 $gray-200: #fafbfc;
 $gray-300: #bbcdd2;
@@ -9,60 +9,53 @@ $gray-600: #6c868e;
 $gray-700: #363a41;
 $gray-800: #363a41;
 $gray-900: #282b30;
-$black: #000;
+$black:    #000;
+
 
 // PS Vars
 $extra-light-gray: $gray-100;
-$light-gray: $gray-300;
-$medium-gray: $gray-500;
-$dark-gray: $gray-700;
-$extra-dark-gray: $gray-900;
+$light-gray:       $gray-300;
+$medium-gray:      $gray-500;
+$dark-gray:        $gray-700;
+$extra-dark-gray:  $gray-900;
 $background-color: #eff1f2;
 
-$blue: #25b9d7;
-$red: #c05c67;
-$yellow: #cd9321;
-$green: #70b580;
-$cyan: $blue;
-
-// @todo: change if needed
+$blue:    #25b9d7;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
+$red:     #c05c67;
+$orange:  #fd7e14 !default;
+$yellow:  #cd9321;
+$green:   #70b580;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
+$cyan:    $blue;
 
 // main button background colors
-$primary-hover: #3ed2f0;
-$primary-active: #19a9c6;
-$secondary-hover: $dark-gray;
-$secondary-active: #f6fdff;
+$primary-hover:     #3ed2f0;
+$primary-active:    #19a9c6;
+$secondary-hover:   $dark-gray;
+$secondary-active:  #f6fdff;
 
-$colors: (
-  blue: $blue,
-  indigo: $indigo,
-  purple: $purple,
-  pink: $pink,
-  red: $red,
-  orange: $orange,
-  yellow: $yellow,
-  green: $green,
-  teal: $teal,
-  cyan: $cyan,
-  white: $white,
-  gray: $gray-600,
-  gray-dark: $gray-800
-);
+$primary:       $blue !default;
+$secondary:     $medium-gray;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
 
 $theme-colors: (
-  primary: $blue,
-  secondary: $medium-gray,
-  success: $green,
-  info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
-  dark: $gray-800
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
 );
 
 $theme-colors-hover: (
@@ -111,13 +104,14 @@ $theme-colors-shadow: (
 
 
 // Options
-$enable-rounded: false;
-$enable-shadows: true;
-$enable-gradients: false;
-$enable-transitions: true;
-$enable-hover-media-query: true;
-$enable-grid-classes: true;
-$enable-print-styles: true;
+$enable-caret:              true !default;
+$enable-rounded:            false;
+$enable-shadows:            true;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
 
 // Spacing
 $spacer: 1.875rem;
@@ -127,21 +121,24 @@ $spacers: (
   1: ($spacer / 6),
   2: ($spacer / 3),
   3: ($spacer / 2),
-  4: ($spacer),
+  4: $spacer,
   5: ($spacer * 2)
 );
 
 
 // Body
-$body-bg: $white;
-$body-color: $dark-gray;
+$body-bg:                   $white !default;
+$body-color:                $dark-gray;
+
 
 // Links
-$link-hover-color: theme-color('primary');
-$link-hover-decoration: underline;
+$link-hover-color:          theme-color('primary') !default;
+$link-hover-decoration:     underline;
+
 
 // Paragraphs
-$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom:   1rem;
+
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -150,7 +147,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1300px,
-  xxl: 1600px
+  xxl: 1600px // PS custom
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
@@ -165,336 +162,599 @@ $container-max-widths: (
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
+// Grid columns
+//$grid-columns:                12 !default;
+//$grid-gutter-width:           30px !default;
+
+
 // Components
-//$line-height-lg:         1.5 !default;
-//$line-height-sm:         1.5 !default;
+//$line-height-lg:              1.5 !default;
+//$line-height-sm:              1.5 !default;
 
-$border-color: $light-gray;
+//$border-width:                1px !default;
+//$border-color:                $gray-300 !default;
 
-//$component-active-color: $white !default;
-//$component-active-bg:    theme-color("primary") !default;
+//$border-radius:               .25rem !default;
+//$border-radius-lg:            .3rem !default;
+//$border-radius-sm:            .2rem !default;
 
-$caret-width: .25rem;
+//$component-active-color:      $white !default;
+//$component-active-bg:         theme-color("primary") !default;
 
-//$transition-base:        all .2s ease-in-out !default;
-//$transition-fade:        opacity .15s linear !default;
-//$transition-collapse:    height .35s ease !default;
+$caret-width:                 .25rem;
+
+//$transition-base:             all .2s ease-in-out !default;
+//$transition-fade:             opacity .15s linear !default;
+//$transition-collapse:         height .35s ease !default;
 
 
 // Fonts
-$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
-//$font-family-serif: "Open Sans", serif;
-//$font-family-monospace: "Open Sans", monospace;
-$font-family-base: $font-family-sans-serif;
+$font-family-sans-serif:      "Open Sans", Helvetica, Arial, sans-serif;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+//$font-family-base:            $font-family-sans-serif !default;
 
-$font-size-base: .875rem;
-$font-size-lg: 1rem;
-$font-size-sm: .75rem;
-$font-size-xs: .625rem;
+$font-size-base:              .875rem;
+$font-size-lg:                1rem;
+$font-size-sm:                .75rem;
+$font-size-xs:                .625rem; // PS custom
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+//$font-weight-light:           300;
+//$font-weight-normal:          400;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
 
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.125rem;
-$h3-font-size: 1rem;
-$h4-font-size: .875rem;
-$h5-font-size: .75rem;
-$h6-font-size: .625rem;
+$h1-font-size:                1.5rem;
+$h2-font-size:                1.125rem;
+$h3-font-size:                1rem;
+$h4-font-size:                .875rem;
+$h5-font-size:                .75rem;
+$h6-font-size:                .625rem;
 
-$headings-font-family: $font-family-sans-serif;
-$headings-font-weight: $font-weight-bold;
-$headings-color: $body-color;
+//$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        $font-family-sans-serif;
+$headings-font-weight:        $font-weight-bold;
+$headings-color:              $body-color;
+
+//$display1-size:               6rem !default;
+//$display2-size:               5.5rem !default;
+//$display3-size:               4.5rem !default;
+//$display4-size:               3.5rem !default;
+
+//$display1-weight:             300 !default;
+//$display2-weight:             300 !default;
+//$display3-weight:             300 !default;
+//$display4-weight:             300 !default;
+//$display-line-height:         $headings-line-height !default;
+
+//$lead-font-size:              ($font-size-base * 1.25) !default;
+//$lead-font-weight:            300 !default;
+
+//$small-font-size:             80% !default;
 
 $text-muted: $medium-gray;
-$hr-border-color: $light-gray;
+
+//$blockquote-small-color:      $gray-600 !default;
+//$blockquote-font-size:        ($font-size-base * 1.25) !default;
+
+$hr-border-color:             $light-gray;
+//$hr-border-width:             $border-width !default;
+
+//$mark-padding:                .2em !default;
+
+//$dt-font-weight:              $font-weight-bold !default;
+
+//$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
+//$nested-kbd-font-weight:      $font-weight-bold !default;
+
+//$list-inline-padding:         .5rem !default;
+
+//$mark-bg:                     #fcf8e3 !default;
+
+//$hr-margin-y:                 $spacer !default;
 
 
 // Tables
-$table-cell-padding: .4rem;
-$table-cell-padding-sm: .25rem;
+$table-cell-padding:          .4rem;
+$table-cell-padding-sm:       .25rem;
 
-$table-accent-bg: $background-color;
-$table-hover-bg: theme-color-hover('primary');
-$table-active-bg:theme-color-hover('primary');
-$table-border-color: $light-gray;
+//$table-bg:                    transparent !default;
+$table-accent-bg:             $background-color;
+$table-hover-bg:              theme-color-hover('primary');
+$table-active-bg:             theme-color-hover('primary');
 
-$table-head-bg: $background-color;
-$table-head-color: $body-color;
+//$table-border-width:          $border-width !default;
+//$table-border-color:          $gray-300 !default;
 
-$table-dark-bg: $body-color;
-$table-dark-accent-bg: $extra-dark-gray;
-$table-dark-hover-bg: theme-color-hover('primary');
-$table-dark-border-color: $medium-gray;
+$table-head-bg:               $background-color;
+$table-head-color:            $body-color;
+
+$table-dark-bg:               $body-color;
+$table-dark-accent-bg:        $extra-dark-gray;
+$table-dark-hover-bg:         theme-color-hover('primary');
+$table-dark-border-color:     $medium-gray;
+//$table-dark-color:            $body-bg !default;
 
 
 // Buttons
-$input-btn-padding-y: .4375rem;
-$input-btn-padding-x: .4375rem;
+$input-btn-padding-y:         .4375rem;
+$input-btn-padding-x:         .4375rem;
+//$input-btn-line-height:       $line-height-base !default;
 
-$input-btn-padding-y-sm: .1875rem;
-$input-btn-padding-x-sm: .125rem;
+//$input-btn-focus-width:       .2rem !default;
+//$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+//$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-lg: .625rem;
-$input-btn-padding-x-lg: .625rem;
+$input-btn-padding-y-sm:      .1875rem;
+$input-btn-padding-x-sm:      .125rem;
+//$input-btn-line-height-sm:    $line-height-sm !default;
 
-$btn-font-weight: $font-weight-semibold;
-$btn-box-shadow: none;
-$btn-focus-box-shadow: none;
-$btn-active-box-shadow: none;
-$btn-border-radius: 0.063rem;
+$input-btn-padding-y-lg:      .625rem;
+$input-btn-padding-x-lg:      .625rem;
+//$input-btn-line-height-lg:    $line-height-lg !default;
+
+//$input-btn-border-width:      $border-width !default;
+
+
+// Buttons
+//$btn-padding-y:               $input-btn-padding-y !default;
+//$btn-padding-x:               $input-btn-padding-x !default;
+//$btn-line-height:             $input-btn-line-height !default;
+
+//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+//$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+//$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+//$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+//$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+//$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+//$btn-border-width:            $input-btn-border-width !default;
+
+$btn-font-weight:             $font-weight-semibold;
+$btn-box-shadow:              none;
+//$btn-focus-width:             $input-btn-focus-width !default;
+$btn-focus-box-shadow:        none;
+//$btn-disabled-opacity:        .65 !default;
+$btn-active-box-shadow:       none;
+
+//$btn-link-disabled-color:     $gray-600 !default;
+
+//$btn-block-spacing-y:         .5rem !default;
+
+$btn-border-radius:           0.063rem;
+//$btn-border-radius-lg:        $border-radius-lg !default;
+//$btn-border-radius-sm:        $border-radius-sm !default;
+
+//$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
 
 // Forms
-$cursor-disabled: not-allowed;
-$input-color: $body-color;
-$input-disabled-bg: #eceeef;
-$input-padding-x: .4375rem;
-$input-padding-y: .375rem;
-$input-border-color: $light-gray;
-$input-box-shadow: none;
-$input-placeholder-color: $medium-gray;
+$input-padding-y:                       .375rem;
+$input-padding-x:                       .4375rem;
+//$input-line-height:                     $input-btn-line-height !default;
 
-$input-focus-border-color: theme-color-hover('primary');
-$input-focus-box-shadow: none;
-$input-height: 2.188rem;
-$input-height-lg: 2.188rem;
+//$input-padding-y-sm:                    $input-btn-padding-y-sm !default;
+//$input-padding-x-sm:                    $input-btn-padding-x-sm !default;
+//$input-line-height-sm:                  $input-btn-line-height-sm !default;
 
-$input-group-addon-bg: $extra-light-gray;
+//$input-padding-y-lg:                    $input-btn-padding-y-lg !default;
+//$input-padding-x-lg:                    $input-btn-padding-x-lg !default;
+//$input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-//$form-check-margin-bottom:  .5rem !default;
-//$form-check-input-gutter:   1.25rem !default;
-//$form-check-input-margin-y: .25rem !default;
-//$form-check-input-margin-x: .25rem !default;
+//$input-bg:                              $white !default;
+$input-disabled-bg:                     #eceeef;
 
-//$form-check-inline-margin-x: .75rem !default;
+$input-color:                           $body-color;
+$input-border-color:                    $light-gray;
+//$input-border-width:                    $input-btn-border-width !default;
+$input-box-shadow:                      none;
 
-//$custom-control-gutter:   1.5rem !default;
-//$custom-control-spacer-y: .25rem !default;
-//$custom-control-spacer-x: 1rem !default;
+//$input-border-radius:                   $border-radius !default;
+//$input-border-radius-lg:                $border-radius-lg !default;
+//$input-border-radius-sm:                $border-radius-sm !default;
 
-//$custom-control-indicator-size:       1rem !default;
-//$custom-control-indicator-bg:         #ddd !default;
-//$custom-control-indicator-bg-size:    50% 50% !default;
-//$custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba($black,.1) !default;
+//$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              theme-color-hover('primary');
+//$input-focus-color:                     $input-color !default;
+//$input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow:                none;
 
-//$custom-control-indicator-disabled-bg:       $gray-200 !default;
-//$custom-control-description-disabled-color:  $gray-600 !default;
+$input-placeholder-color:               $medium-gray;
 
-//$custom-control-indicator-checked-color:      $white !default;
-//$custom-control-indicator-checked-bg:         theme-color("primary") !default;
-//$custom-control-indicator-checked-box-shadow: none !default;
+//$input-height-border:                   $input-border-width * 2 !default;
 
-//$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px theme-color("primary") !default;
+//$input-height-inner:                    ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
+$input-height:                          2.188rem;
 
-//$custom-control-indicator-active-color:      $white !default;
-//$custom-control-indicator-active-bg:         lighten(theme-color("primary"), 35%) !default;
-//$custom-control-indicator-active-box-shadow: none !default;
+//$input-height-inner-sm:                 ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
+//$input-height-sm:                       calc(#{$input-height-inner-sm} + #{$input-height-border}) !default;
 
-//$custom-checkbox-indicator-border-radius: $border-radius !default;
-//$custom-checkbox-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$input-height-inner-lg:                 ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
+$input-height-lg:                       2.188rem;
 
-//$custom-checkbox-indicator-indeterminate-bg: theme-color("primary") !default;
+//$input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+//$form-text-margin-top:                  .25rem !default;
+
+//$form-check-input-gutter:               1.25rem !default;
+//$form-check-input-margin-y:             .3rem !default;
+//$form-check-input-margin-x:             .25rem !default;
+
+//$form-check-inline-margin-x:            .75rem !default;
+//$form-check-inline-input-margin-x:      .3125rem !default;
+
+//$form-group-margin-bottom:              1rem !default;
+
+//$input-group-addon-color:               $input-color !default;
+$input-group-addon-bg:                  $extra-light-gray;
+//$input-group-addon-border-color:        $input-border-color !default;
+
+//$custom-control-gutter:                 1.5rem !default;
+//$custom-control-spacer-x:               1rem !default;
+
+//$custom-control-indicator-size:         1rem !default;
+//$custom-control-indicator-bg:           $gray-300 !default;
+//$custom-control-indicator-bg-size:      50% 50% !default;
+//$custom-control-indicator-box-shadow:   inset 0 .25rem .25rem rgba($black, .1) !default;
+
+//$custom-control-indicator-disabled-bg:          $gray-200 !default;
+//$custom-control-label-disabled-color:     $gray-600 !default;
+
+//$custom-control-indicator-checked-color:        $component-active-color !default;
+//$custom-control-indicator-checked-bg:           $component-active-bg !default;
+//$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
+//$custom-control-indicator-checked-box-shadow:   none !default;
+
+//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default;
+
+//$custom-control-indicator-active-color:         $component-active-color !default;
+//$custom-control-indicator-active-bg:            lighten($component-active-bg, 35%) !default;
+//$custom-control-indicator-active-box-shadow:    none !default;
+
+//$custom-checkbox-indicator-border-radius:       $border-radius !default;
+//$custom-checkbox-indicator-icon-checked:        str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+//$custom-checkbox-indicator-indeterminate-bg:    $component-active-bg !default;
 //$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
-//$custom-checkbox-indicator-icon-indeterminate: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$custom-checkbox-indicator-icon-indeterminate:  str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 
-//$custom-radio-indicator-border-radius: 50% !default;
-//$custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$custom-radio-indicator-border-radius:          50% !default;
+//$custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23") !default;
 
-$custom-select-disabled-color: $medium-gray;
-$custom-select-disabled-bg: $input-disabled-bg;
-$custom-select-indicator-color: $input-color;
-$custom-select-focus-border-color: $input-focus-border-color;
-$custom-select-focus-box-shadow: $input-focus-box-shadow;
+//$custom-select-padding-y:           .375rem !default;
+//$custom-select-padding-x:          .75rem !default;
+//$custom-select-height:              $input-height !default;
+//$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
+//$custom-select-line-height:         $input-btn-line-height !default;
+//$custom-select-color:               $input-color !default;
+$custom-select-disabled-color:      $medium-gray;
+//$custom-select-bg:                  $white !default;
+$custom-select-disabled-bg:         $input-disabled-bg;
+$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
+$custom-select-indicator-color:     $input-color;
+//$custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$custom-select-border-width:        $input-btn-border-width !default;
+//$custom-select-border-color:        $input-border-color !default;
+//$custom-select-border-radius:       $border-radius !default;
 
-$custom-file-width: 100%;
-$custom-file-focus-box-shadow: $input-focus-box-shadow;
+$custom-select-focus-border-color:  $input-focus-border-color;
+$custom-select-focus-box-shadow:    $input-focus-box-shadow;
+
+//$custom-select-font-size-sm:        75% !default;
+//$custom-select-height-sm:           $input-height-sm !default;
+
+//$custom-select-font-size-lg:        125% !default;
+//$custom-select-height-lg:           $input-height-lg !default;
+
+//$custom-file-height:                $input-height !default;
+//$custom-file-focus-border-color:    $input-focus-border-color !default;
+$custom-file-focus-box-shadow:      $input-focus-box-shadow;
+
+//$custom-file-padding-y:             $input-btn-padding-y !default;
+//$custom-file-padding-x:             $input-btn-padding-x !default;
+//$custom-file-line-height:           $input-btn-line-height !default;
+//$custom-file-color:                 $input-color !default;
+//$custom-file-bg:                    $input-bg !default;
+//$custom-file-border-width:          $input-btn-border-width !default;
+//$custom-file-border-color:          $input-border-color !default;
+//$custom-file-border-radius:         $input-border-radius !default;
+//$custom-file-box-shadow:            $input-box-shadow !default;
+//$custom-file-button-color:          $custom-file-color !default;
+//$custom-file-button-bg:             $input-group-addon-bg !default;
+//$custom-file-text: (
+//        en: "Browse"
+//) !default;
+
+$cursor-disabled: not-allowed; // PS custom
 
 
 // Form validation
-$form-feedback-valid-color: theme-color('success');
-$form-feedback-invalid-color: theme-color('danger');
-$form-feedback-warning-color: theme-color('warning');
+//$form-feedback-margin-top:          $form-text-margin-top !default;
+//$form-feedback-font-size:           $small-font-size !default;
+$form-feedback-valid-color:         theme-color('success');
+$form-feedback-invalid-color:       theme-color('danger');
+$form-feedback-warning-color:       theme-color('warning'); // PS custom
 
 
 // Dropdowns
-$dropdown-padding-y: 0;
-$dropdown-border-color: $light-gray;
-$dropdown-divider-bg: $light-gray;
+//$dropdown-min-width:                10rem !default;
+$dropdown-padding-y:                0;
+//$dropdown-padding-y:                .5rem !default;
+//$dropdown-spacer:                   .125rem !default;
+//$dropdown-bg:                       $white !default;
+$dropdown-border-color:             $light-gray;
+//$dropdown-border-radius:            $border-radius !default;
+//$dropdown-border-width:             $border-width !default;
+$dropdown-divider-bg:               $light-gray;
+//$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
 
-$dropdown-link-color: $medium-gray;
-$dropdown-link-hover-color: theme-color('primary');
-$dropdown-link-hover-bg: $white;
+$dropdown-link-color:               $medium-gray;
+$dropdown-link-hover-color:         theme-color('primary');
+$dropdown-link-hover-bg:            $white;
 
-$dropdown-item-padding-x: .3125rem;
-$dropdown-item-padding-y: .3125rem;
+//$dropdown-link-active-color:        $component-active-color !default;
+//$dropdown-link-active-bg:           $component-active-bg !default;
 
+//$dropdown-link-disabled-color:      $gray-600 !default;
 
-// Z-index master list
-//$zindex-dropdown:           1000 !default;
-//$zindex-sticky:             1020 !default;
-//$zindex-fixed:              1030 !default;
-//$zindex-modal-backdrop:     1040 !default;
-//$zindex-modal:              1050 !default;
-//$zindex-popover:            1060 !default;
-//$zindex-tooltip:            1070 !default;
+$dropdown-item-padding-x:           .3125rem;
+$dropdown-item-padding-y:           .3125rem;
+
+//$dropdown-header-color:             $gray-600 !default;
 
 
 // Navs
-$nav-link-padding-y: .9375rem;
-$nav-link-padding-x: 1.25rem;
-$nav-link-disabled-color: $light-gray;
+$nav-link-padding-y:                .9375rem;
+$nav-link-padding-x:                1.25rem;
+$nav-link-disabled-color:           $light-gray;
 
-$nav-tabs-border-color: $white;
-
-$nav-tabs-link-hover-border-color: theme-color('primary');
-$nav-tabs-link-active-color: $body-color;
-$nav-tabs-link-active-bg: $body-bg;
+$nav-tabs-border-color:             $white;
+//$nav-tabs-border-width:             $border-width !default;
+//$nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-link-hover-border-color:  theme-color('primary');
+$nav-tabs-link-active-color:        $body-color;
+$nav-tabs-link-active-bg:           $body-bg;
 $nav-tabs-link-active-border-color: theme-color('primary');
 
 $nav-pills-link-hover-border-color: $nav-tabs-link-hover-border-color;
-$nav-pills-link-active-color: $nav-tabs-link-active-color;
-$nav-pills-link-active-bg: #F4F9FB;
-$nav-pills-link-active-border-color: $nav-tabs-link-active-border-color;
+$nav-pills-link-active-color:       $nav-tabs-link-active-color;
+$nav-pills-link-active-bg:          #F4F9FB;
+$nav-pills-link-active-border-color: $nav-tabs-link-active-border-color; // PS custom
+
+//$nav-pills-border-radius:           $border-radius !default;
+//$nav-pills-link-active-color:       $component-active-color !default;
+//$nav-pills-link-active-bg:          $component-active-bg !default;
 
 
 // Navbar
 //$navbar-padding-y:                  ($spacer / 2) !default;
 //$navbar-padding-x:                  $spacer !default;
 
+//$navbar-nav-link-padding-x:         .5rem !default;
+
 //$navbar-brand-font-size:            $font-size-lg !default;
 
-//$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
-//$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-//$navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2 !default;
+//$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
+//$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+//$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
 
-//$navbar-toggler-padding-y:           .25rem !default;
-//$navbar-toggler-padding-x:           .75rem !default;
-//$navbar-toggler-font-size:           $font-size-lg !default;
-//$navbar-toggler-border-radius:       $btn-border-radius !default;
+//$navbar-toggler-padding-y:          .25rem !default;
+//$navbar-toggler-padding-x:          .75rem !default;
+//$navbar-toggler-font-size:          $font-size-lg !default;
+//$navbar-toggler-border-radius:      $btn-border-radius !default;
 
-//$navbar-dark-color:                 rgba($white,.5) !default;
-//$navbar-dark-hover-color:           rgba($white,.75) !default;
-//$navbar-dark-active-color:          rgba($white,1) !default;
-//$navbar-dark-disabled-color:        rgba($white,.25) !default;
-//$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$navbar-dark-toggler-border-color:  rgba($white,.1) !default;
+//$navbar-dark-color:                 rgba($white, .5) !default;
+//$navbar-dark-hover-color:           rgba($white, .75) !default;
+//$navbar-dark-active-color:          $white !default;
+//$navbar-dark-disabled-color:        rgba($white, .25) !default;
+//$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-//$navbar-light-color:                rgba($black,.5) !default;
-//$navbar-light-hover-color:          rgba($black,.7) !default;
-//$navbar-light-active-color:         rgba($black,.9) !default;
-//$navbar-light-disabled-color:       rgba($black,.3) !default;
-//$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$navbar-light-toggler-border-color: rgba($black,.1) !default;
+//$navbar-light-color:                rgba($black, .5) !default;
+//$navbar-light-hover-color:          rgba($black, .7) !default;
+//$navbar-light-active-color:         rgba($black, .9) !default;
+//$navbar-light-disabled-color:       rgba($black, .3) !default;
+//$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 
 // Pagination
-$pagination-padding-y: .65rem;
-$pagination-padding-x: .5rem;
+$pagination-padding-y:              .65rem;
+$pagination-padding-x:              .5rem;
+//$pagination-padding-y-sm:           .25rem !default;
+//$pagination-padding-x-sm:           .5rem !default;
+//$pagination-padding-y-lg:           .75rem !default;
+//$pagination-padding-x-lg:           1.5rem !default;
+//$pagination-line-height:            1.25 !default;
 
-$pagination-color: $medium-gray;
-$pagination-bg: $white;
-$pagination-border-color: $white;
+$pagination-color:                  $medium-gray;
+$pagination-bg:                     $white;
+//$pagination-border-width:           $border-width !default;
+$pagination-border-color:           $white;
 
-$pagination-hover-color: $pagination-color;
-$pagination-hover-bg: $pagination-bg;
-$pagination-hover-border-color: $pagination-border-color;
+//$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
-$pagination-active-color: theme-color('primary');
-$pagination-active-bg: $pagination-bg;
-$pagination-active-border-color: $pagination-border-color;
+$pagination-hover-color:            $pagination-color;
+$pagination-hover-bg:               $pagination-bg;
+$pagination-hover-border-color:     $pagination-border-color;
 
-$pagination-disabled-color: $light-gray;
-$pagination-disabled-bg: $pagination-bg;
-$pagination-disabled-border-color: $pagination-border-color;
+$pagination-active-color:           theme-color('primary');
+$pagination-active-bg:              $pagination-bg;
+$pagination-active-border-color:    $pagination-border-color;
+
+$pagination-disabled-color:         $light-gray;
+$pagination-disabled-bg:            $pagination-bg;
+$pagination-disabled-border-color:  $pagination-border-color;
 
 
 // Jumbotron
-$jumbotron-bg: $extra-light-gray;
+$jumbotron-padding:                 2rem !default;
+$jumbotron-bg:                      $extra-light-gray;
 
 
 // Cards
-$card-border-color: $light-gray;
+//$card-spacer-y:                     .75rem !default;
+//$card-spacer-x:                     1.25rem !default;
+//$card-border-width:                 $border-width !default;
+//$card-border-radius:                $border-radius !default;
+$card-border-color:                 $light-gray;
+//$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
+//$card-cap-bg:                       rgba($black, .03) !default;
+//$card-bg:                           $white !default;
+
+//$card-img-overlay-padding:          1.25rem !default;
+
+//$card-group-margin:                 ($grid-gutter-width / 2) !default;
+//$card-deck-margin:                  $card-group-margin !default;
+
+//$card-columns-count:                3 !default;
+//$card-columns-gap:                  1.25rem !default;
+//$card-columns-margin:               $card-spacer-y !default;
 
 
 // Tooltips
-$tooltip-bg: $medium-gray;
-$tooltip-padding-y: .625rem;
-$tooltip-padding-x: 1.25rem;
+//$tooltip-font-size:           $font-size-sm !default;
+//$tooltip-max-width:           200px !default;
+//$tooltip-color:               $white !default;
+$tooltip-bg:                  $medium-gray;
+//$tooltip-border-radius:        $border-radius !default;
+//$tooltip-opacity:             .9 !default;
+$tooltip-padding-y:           .625rem;
+$tooltip-padding-x:           1.25rem;
+//$tooltip-margin:              0 !default;
+
+//$tooltip-arrow-width:         .8rem !default;
+//$tooltip-arrow-height:        .4rem !default;
+//$tooltip-arrow-color:         $tooltip-bg !default;
 
 
 // Popovers
-$popover-inner-padding: 0;
-$popover-border-color: $light-gray;
-$popover-box-shadow: none;
+//$popover-font-size:                 $font-size-sm !default;
+//$popover-bg:                        $white !default;
+//$popover-max-width:                 276px !default;
+//$popover-border-width:              $border-width !default;
+$popover-border-color:              $light-gray;
+//$popover-border-radius:             $border-radius-lg !default;
+$popover-box-shadow:                none;
 
-$popover-header-bg: $extra-light-gray;
-$popover-header-padding-y: .625rem;
-$popover-header-padding-x: 1.25rem;
+$popover-header-bg:                 $extra-light-gray;
+//$popover-header-color:              $headings-color !default;
+$popover-header-padding-y:          .625rem;
+$popover-header-padding-x:          1.25rem;
 
-$popover-body-padding-y: .625rem;
-$popover-body-padding-x: 1.25rem;
+//$popover-body-color:                $body-color !default;
+$popover-body-padding-y:            .625rem;
+$popover-body-padding-x:            1.25rem;
+
+//$popover-arrow-width:               1rem !default;
+//$popover-arrow-height:              .5rem !default;
+//$popover-arrow-color:               $popover-bg !default;
+
+//$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
 
 // Badges
-$badge-padding-x: .4rem;
-$badge-padding-y: .4rem;
+//$badge-font-size:                   75% !default;
+//$badge-font-weight:                 $font-weight-bold !default;
+$badge-padding-y:                   .4rem;
+$badge-padding-x:                   .4rem;
+//$badge-border-radius:               $border-radius !default;
+
+//$badge-pill-padding-x:              .6em !default;
+//$badge-pill-border-radius:          10rem !default;
 
 
 // Modals
-$modal-inner-padding: 1.875rem;
-$modal-header-padding: $modal-inner-padding;
-$modal-header-border-color: none;
+$modal-inner-padding:         1.875rem;
 
-$modal-content-border-color: none;
-$modal-content-box-shadow-xs: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+//$modal-dialog-margin:         .5rem !default;
+//$modal-dialog-margin-y-sm-up: 1.75rem !default;
+
+//$modal-title-line-height:           $line-height-base !default;
+
+//$modal-content-bg:               $white !default;
+$modal-content-border-color:     none;
+//$modal-content-border-width:     $border-width !default;
+$modal-content-box-shadow-xs:    1px 2px 3px 0 rgba(108, 134, 142, 0.3);
 $modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
 
-$modal-lg: 900px;
-$modal-md: 680px;
-$modal-sm: 400px;
+//$modal-backdrop-bg:           $black !default;
+//$modal-backdrop-opacity:      .5 !default;
+$modal-header-border-color:   none;
+//$modal-footer-border-color:   $modal-header-border-color !default;
+//$modal-header-border-width:   $modal-content-border-width !default;
+//$modal-footer-border-width:   $modal-header-border-width !default;
+$modal-header-padding:        $modal-inner-padding;
+
+$modal-lg:                    900px;
+$modal-md:                    680px;
+$modal-sm:                    400px;
+
+//$modal-transition:                  transform .3s ease-out !default;
 
 
 // Alerts
-$alert-padding-x: .625rem;
+//$alert-padding-y:                   .75rem !default;
+$alert-padding-x:                   .625rem;
+//$alert-margin-bottom:               1rem !default;
+//$alert-border-radius:               $border-radius !default;
+//$alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width: .125rem;
+
+//$alert-bg-level:                    -10 !default;
+//$alert-border-level:                -9 !default;
+//$alert-color-level:                 6 !default;
 
 
 // Progress bars
-//$progress-height:               1rem !default;
-//$progress-font-size:            .75rem !default;
-//$progress-bg:                   $gray-200 !default;
-//$progress-border-radius:        $border-radius !default;
-//$progress-box-shadow:           inset 0 .1rem .1rem rgba($black,.1) !default;
-//$progress-bar-color:            $white !default;
-//$progress-bar-bg:               theme-color("primary") !default;
-//$progress-bar-animation-timing: 1s linear infinite !default;
-//$progress-bar-transition:       width .6s ease !default;
+//$progress-height:                   1rem !default;
+//$progress-font-size:                ($font-size-base * .75) !default;
+//$progress-bg:                       $gray-200 !default;
+//$progress-border-radius:            $border-radius !default;
+//$progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1) !default;
+//$progress-bar-color:                $white !default;
+//$progress-bar-bg:                   theme-color("primary") !default;
+//$progress-bar-animation-timing:     1s linear infinite !default;
+//$progress-bar-transition:           width .6s ease !default;
 
 
 // List group
-$list-group-border-color: $light-gray;
+//$list-group-bg:                     $white !default;
+$list-group-border-color:           $light-gray;
+//$list-group-border-width:           $border-width !default;
+//$list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y: $input-padding-y;
-$list-group-item-padding-x: $input-padding-x;
+$list-group-item-padding-y:         $input-padding-y;
+$list-group-item-padding-x:         $input-padding-x;
 
-$list-group-hover-bg: theme-color-hover('primary');
-$list-group-active-bg: theme-color-hover('primary');
+$list-group-hover-bg:               theme-color-hover('primary');
+//$list-group-active-color:           $component-active-color !default;
+$list-group-active-bg:              theme-color-hover('primary');
+//$list-group-active-border-color:    $list-group-active-bg !default;
 
-$list-group-disabled-color: $light-gray;
-$list-group-action-hover-color: $white;
+$list-group-disabled-color:         $light-gray;
+//$list-group-disabled-bg:            $list-group-bg !default;
+
+//$list-group-action-color:           $gray-700 !default;
+$list-group-action-hover-color:     $white;
+
+$list-group-action-active-color:    $body-color !default;
+$list-group-action-active-bg:       $gray-200 !default;
 
 
 // Image thumbnails
-$thumbnail-padding: 0;
-$thumbnail-border-color: $light-gray;
-$thumbnail-box-shadow: none;
+$thumbnail-padding:                 0;
+//$thumbnail-bg:                      $body-bg !default;
+//$thumbnail-border-width:            $border-width !default;
+$thumbnail-border-color:            $light-gray;
+//$thumbnail-border-radius:           $border-radius !default;
+$thumbnail-box-shadow:              none;
 
 
 // Figures
-$figure-caption-color: $medium-gray;
+//$figure-caption-font-size:          90% !default;
+$figure-caption-color:              $medium-gray;
 
 
 // Breadcrumbs
@@ -510,24 +770,24 @@ $breadcrumb-active-color:           $extra-dark-gray;
 $breadcrumb-divider:                "/";
 
 // Carousel
-//$carousel-control-color:                      $white !default;
-//$carousel-control-width:                      15% !default;
-//$carousel-control-opacity:                    .5 !default;
+//$carousel-control-color:            $white !default;
+//$carousel-control-width:            15% !default;
+//$carousel-control-opacity:          .5 !default;
 
-//$carousel-indicator-width:                    30px !default;
-//$carousel-indicator-height:                   3px !default;
-//$carousel-indicator-spacer:                   3px !default;
-//$carousel-indicator-active-bg:                $white !default;
+//$carousel-indicator-width:          30px !default;
+//$carousel-indicator-height:         3px !default;
+//$carousel-indicator-spacer:         3px !default;
+//$carousel-indicator-active-bg:      $white !default;
 
-//$carousel-caption-width:                      70% !default;
-//$carousel-caption-color:                      $white !default;
+//$carousel-caption-width:            70% !default;
+//$carousel-caption-color:            $white !default;
 
-//$carousel-control-icon-width:                 20px !default;
+//$carousel-control-icon-width:       20px !default;
 
-//$carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$carousel-control-prev-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
-//$carousel-transition:           transform .6s ease !default;
+//$carousel-transition:               transform .6s ease !default;
 
 
 // Close
@@ -538,10 +798,19 @@ $breadcrumb-divider:                "/";
 
 
 // Code
-$code-color: $body-color;
-$code-bg: $light-gray;
+//$code-font-size:                    87.5% !default;
+$code-color:                        $body-color;
 
-$kbd-color: $white;
-$kbd-bg: $extra-dark-gray;
+//$kbd-padding-y:                     .2rem !default;
+//$kbd-padding-x:                     .4rem !default;
+//$kbd-font-size:                     $code-font-size !default;
+$kbd-color:                         $white;
+$kbd-bg:                            $extra-dark-gray;
 
-$pre-color: $body-color;
+$pre-color:                         $body-color;
+//$pre-scrollable-max-height:         340px !default;
+
+
+// Printing
+//$print-page-size:                   a3 !default;
+//$print-body-min-width:              map-get($grid-breakpoints, "lg") !default;

@@ -498,11 +498,16 @@ $figure-caption-color: $medium-gray;
 
 
 // Breadcrumbs
-$breadcrumb-bg: $white;
-$breadcrumb-divider-color: $extra-dark-gray;
-$breadcrumb-active-color: $extra-dark-gray;
-$breadcrumb-divider: ">";
+$breadcrumb-padding-y:              .3125rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           .3rem;
 
+$breadcrumb-margin-bottom:          0;
+
+$breadcrumb-bg:                     none;
+$breadcrumb-divider-color:          $dark-gray;
+$breadcrumb-active-color:           $extra-dark-gray;
+$breadcrumb-divider:                "/";
 
 // Carousel
 //$carousel-control-color:                      $white !default;

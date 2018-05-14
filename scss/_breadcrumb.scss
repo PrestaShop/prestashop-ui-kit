@@ -1,31 +1,25 @@
 .breadcrumb {
   margin: 0;
-  padding: 0.3125rem;
-  background: none;
-  border-radius: 0;
   font-size: 0.75rem;
-  > li + li::before {
-    padding-right: 0;
-    padding-left: 0.1875rem;
-  }
-  > li > a {
-    color: #363A41; // TODO: Place the text color
+
+  li {
+
+    & + li:before {
+      padding-right: 0;
+      padding-left: 0.1875rem;
+    }
+
+    > a {
+      color: $dark-gray;
+
+      &:hover {
+        @extend a:hover;
+      }
+    }
   }
 }
 
 .breadcrumb-item {
   color: $dark-gray;
   font-weight: $font-weight-normal;
-
-  + .breadcrumb-item::before {
-    font-weight: $font-weight-bold;
-  }
-
-  &:hover {
-    @extend a:hover;
-  }
-
-  &.active {
-    font-weight: $font-weight-bold;
-  }
 }

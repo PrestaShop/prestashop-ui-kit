@@ -29,6 +29,12 @@
     padding: 0 $alert-padding-x;
   }
 
+  // make bullet points visible
+  > ul,
+  > ol {
+    margin-left: 1.5rem;
+  }
+
   @include close-button(.625rem);
 
   &.medium-alert {

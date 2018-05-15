@@ -4,8 +4,7 @@
 
   // use material icons for dropdown and dropup
   &::after {
-    @include use-material-icon();
-    content: 'expand_more';
+    @include material-icon('expand_more');
     border: none;
     display: inline-block;
     vertical-align: middle;

@@ -1,17 +1,17 @@
 .select2-container--bootstrap {
 
   .select2-dropdown {
-    padding: $input-btn-padding-x $input-btn-padding-y;
+    padding: $input-padding-x $input-padding-y;
     border-radius: 0;
   }
 
   .select2-search--dropdown {
     padding: 0;
-    margin-bottom: $input-btn-padding-x;
+    margin-bottom: $input-padding-x;
   }
 
   .select2-selection--single {
-    padding: $input-btn-padding-x $input-btn-padding-y;
+    padding: $input-padding-x $input-padding-y;
     height: $input-height;
     cursor: default;
 

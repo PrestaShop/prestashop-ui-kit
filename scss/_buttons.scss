@@ -1,6 +1,5 @@
 .btn {
   border-width: $border-width;
-  padding: 0.375rem 0.838rem;
   font-weight: $font-weight-semibold;
   border-radius: $btn-border-radius;
   white-space: nowrap;
@@ -17,26 +16,8 @@
   }
 
   > .material-icons {
-    vertical-align: middle;
-    font-size: 1.25rem;
+    font-size: 1.4em;
     margin-top: -0.083em;
-  }
-}
-
-.btn-sm {
-  padding: 0.313rem 0.625rem;
-
-  > .material-icons {
-    font-size: $font-size-lg;
-  }
-}
-
-.btn-lg {
-  padding: 0.438rem 0.838rem;
-
-  > .material-icons {
-    font-size: 1.5rem;
-    line-height: 1rem;
   }
 }
 

@@ -39,8 +39,7 @@
     font-size: 0;
 
     &::after {
-      @include use-material-icon;
-      content: "\E5CD";
+      @include material-icon('\E5CD');
       font-size: 1.063rem;
       vertical-align: bottom;
     }

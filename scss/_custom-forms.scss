@@ -28,15 +28,31 @@
       }
     }
   }
-  .custom-file-label:after {
-    @extend .btn;
-    @extend .btn-primary;
+  .custom-file-label {
+    &:after {
+      font-weight: $font-weight-semibold;
 
-    // make the button overlap the border
-    top: $input-border-width * -1;
-    right: $input-border-width * -1;
-    bottom: $input-border-width * -1;
-    height: auto;
+      @include hover-focus {
+        cursor: pointer;
+      }
+
+      $color: map-get($theme-colors, 'primary');
+      @include ps-button-variant(
+                      $color,
+                      $color,
+                      theme-color-hover($color),
+                      theme-color-hover($color),
+                      theme-color-active($color),
+                      theme-color-active($color),
+                      $color
+      );
+
+      // make the button overlap the border
+      top: $input-border-width * -1;
+      right: $input-border-width * -1;
+      bottom: $input-border-width * -1;
+      height: auto;
+    }
   }
 }
 

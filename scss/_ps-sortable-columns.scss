@@ -1,0 +1,84 @@
+$icon-margin-left: .5rem;
+
+.ps-sortable-column {
+
+  display: flex;
+  flex-wrap: nowrap;
+  [role="columnheader"] {
+    text-overflow: ellipsis;
+  }
+
+  // sort button
+  .ps-sort {
+    @include use-material-icon();
+    align-self: flex-end;
+    margin-left: $icon-margin-left;
+    margin-bottom: .125rem;
+    opacity: 0;
+    color: $gray-500;
+    transition: all .2s;
+    font-size: 1rem;
+    transform: rotate(90deg);
+
+    &:before {
+      content: "code";
+    }
+  }
+
+  // current sorted column
+  &[data-sort-is-current] {
+    .ps-sort {
+      opacity: 1;
+      color: $primary;
+      transform: rotate(0deg);
+      font-weight: bold;
+    }
+
+    &[data-sort-direction="asc"] {
+      .ps-sort {
+        &:before {
+          content: "keyboard_arrow_up";
+        }
+      }
+    }
+
+    &[data-sort-direction="desc"] {
+      .ps-sort {
+        &:before {
+          content: "keyboard_arrow_down";
+        }
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // show rollover icon on sortable columns
+  &:not([data-current]):hover {
+    .ps-sort {
+      width: auto;
+      opacity: 1;
+    }
+  }
+
+}
+
+.text-center > .ps-sortable-column {
+  justify-content: center;
+
+  > .ps-sort {
+    width: 0;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    > .ps-sort {
+      height: initial;
+      width: initial;
+      margin-left: $icon-margin-left;
+    }
+  }
+}

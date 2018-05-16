@@ -1,9 +1,33 @@
 .table {
   border-bottom: $table-border-width solid $table-border-color;
 
-  thead th {
-    border-bottom: solid .125rem theme-color('primary');
-    border-top: none;
+  thead {
+    // normal header row
+    th {
+      border-bottom: solid .125rem theme-color('primary');
+      border-top: none;
+    }
+
+    // filter row
+    tr {
+      &.column-filters {
+        background: $gray-200;
+        th {
+          border-bottom: none;
+          padding: {
+            top: 1rem;
+            bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    // remove border from tables with filter row
+    &.with-filters + tbody > tr:first-of-type {
+      td, th {
+        border-top: none;
+      }
+    }
   }
 
   td,

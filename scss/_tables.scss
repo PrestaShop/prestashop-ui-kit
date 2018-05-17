@@ -6,6 +6,11 @@
     th {
       border-bottom: solid .125rem theme-color('primary');
       border-top: none;
+
+      > .material-icons {
+        color: $gray-500;
+        margin-top: -.5rem;
+      }
     }
 
     // filter row

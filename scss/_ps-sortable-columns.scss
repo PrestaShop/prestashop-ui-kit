@@ -56,7 +56,7 @@ $icon-margin-left: .5rem;
   }
 
   // show rollover icon on sortable columns
-  &:not([data-current]):hover {
+  &:not([data-sort-is-current="true"]):hover {
     .ps-sort {
       width: auto;
       opacity: 1;
@@ -65,20 +65,32 @@ $icon-margin-left: .5rem;
 
 }
 
-.text-center > .ps-sortable-column {
-  justify-content: center;
+.text-center,
+.text-right {
+  > .ps-sortable-column:not([data-sort-is-current="true"]) {
+    // hide sort buttons and show them on rollover
 
-  > .ps-sort {
-    width: 0;
-    margin-left: 0;
-    overflow: hidden;
-  }
-
-  &:hover {
     > .ps-sort {
-      height: initial;
-      width: initial;
-      margin-left: $icon-margin-left;
+      width: 0;
+      margin-left: 0;
+      overflow: hidden;
+    }
+
+    &:hover {
+      > .ps-sort {
+        height: initial;
+        width: initial;
+        margin-left: $icon-margin-left;
+      }
     }
   }
 }
+
+.text-center > .ps-sortable-column {
+  justify-content: center;
+}
+
+.text-right > .ps-sortable-column {
+  justify-content: flex-end;
+}
+

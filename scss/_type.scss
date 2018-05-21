@@ -12,7 +12,7 @@ a {
 
   &.external-link {
     &::before {
-      @include material-content('\E89E');
+      @include material-icon('\E89E');
       font-size: 1.20rem;
       font-weight: $font-weight-normal;
       margin-right: .125rem;

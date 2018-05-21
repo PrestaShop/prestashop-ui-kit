@@ -49,9 +49,8 @@
   }
 
   &:after {
-    @extend .material-icons;
+    @include material-icon('close');
     display: block;
-    content: 'close';
     height: $height + (2 * -$margin);
     width: $height + (2 * -$margin);
     position: absolute;

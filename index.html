@@ -41,7 +41,6 @@
             <li><a href="#modal">Modal</a></li>
             <li><a href="#nav-tabs">Nav tabs</a></li>
             <li><a href="#nav-pills">Nav pills</a></li>
-            <li><a href="#nav-pills">Nav pills</a></li>
             <li><a href="#pagination">Pagination</a></li>
             <li><a href="#tagger">Tag &amp; PS-tagger</a></li>
             <li><a href="#tooltips">Tooltips</a></li>
@@ -141,18 +140,18 @@
 
             <div class="row">
                 <div class="col col-sm-4">
-                    <img src="http://lorempixel.com/400/200/fashion/" alt="..." class="img-thumbnail">
+                    <img src="img/sample1.jpg" alt="..." class="img-thumbnail">
                 </div>
 
                 <div class="col col-sm-4">
                     <figure class="figure">
-                        <img src="http://lorempixel.com/400/200/animals/" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="img/sample2.jpg" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption">A caption for the above image.</figcaption>
                     </figure>
                 </div>
                 <div class="col col-sm-4">
                     <figure class="figure">
-                        <img src="http://lorempixel.com/400/200/food/" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        <img src="img/sample3.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                         <figcaption class="figure-caption">A caption for the above image.</figcaption>
                     </figure>
                 </div>
@@ -310,25 +309,161 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th class="form-group"><input type="checkbox" class="form-check" name="checkbox[]"></th>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]">
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
                     <td>Mark</td>
                     <td class="active">Otto</td>
                     <td>@mdo</td>
                     <td><input type="text" class="form-control" name="input[]"></td>
                 </tr>
                 <tr>
-                    <th class="form-group"><input type="checkbox" class="form-check" name="checkbox[]"></th>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]">
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
                     <td><input type="text" class="form-control" name="input[]"></td>
                 </tr>
                 <tr>
-                    <th class="form-group"><input type="checkbox" class="form-check" name="checkbox[]"></th>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]">
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
                     <td>Larry</td>
                     <td>the Bird</td>
                     <td>@twitter</td>
                     <td><input type="text" class="form-control" name="input[]"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <h4>With Filters</h4>
+            <table class="table">
+                <thead class="with-filters">
+                <tr class="column-headers">
+                    <th></th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                <tr class="column-filters">
+                    <td></td>
+                    <th><input type="text" class="form-control" placeholder="Search first name" name="search_first_name" value=""></th>
+                    <th><input type="text" class="form-control" placeholder="Search last name" name="search_last_name" value=""></th>
+                    <th><input type="text" class="form-control" placeholder="Search username" name="search_user_name" value=""></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]" checked>
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
+                    <td>Mark</td>
+                    <td class="active">Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]" checked disabled>
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td class="form-group">
+                        <div class="md-checkbox md-checkbox-inline">
+                            <label>
+                                <input type="checkbox" name="checkbox[]">
+                                <i class="md-checkbox-control"></i>
+                            </label>
+                        </div>
+                    </td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <h4>Sortable</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="ps-sortable-column" data-sort-col-name="id" data-sort-is-current="true" data-sort-direction="desc">
+                            <span role="columnheader">ID</span>
+                            <span role="button" class="ps-sort" aria-label="Sort"></span>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="ps-sortable-column">
+                            <span role="columnheader">First Name</span>
+                            <span role="button" class="ps-sort" aria-label="Sort"></span>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="ps-sortable-column">
+                            <span role="columnheader">Last Name</span>
+                            <span role="button" class="ps-sort" aria-label="Sort"></span>
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="ps-sortable-column">
+                            <span role="columnheader">Username</span>
+                            <span role="button" class="ps-sort" aria-label="Sort"></span>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td class="active">Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
                 </tr>
                 </tbody>
             </table>
@@ -623,6 +758,14 @@
                 </p>
             </div>
 
+            <div class="alert alert-danger" role="alert">
+                <p class="alert-text">This alert has bullet points</p>
+                <ul>
+                    <li>One thing</li>
+                    <li>Another thing</li>
+                </ul>
+            </div>
+
             <div class="alert expandable-alert alert-danger" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="material-icons">close</i></span>
@@ -630,13 +773,17 @@
                 <button type="button" class="read-more btn-link" data-toggle="collapse" data-target="#collapseDanger" aria-expanded="false" aria-controls="collapseDanger">
                     Read more
                 </button>
-                <p class="alert-text">Alert with very long text. Close by default...</p>
+                <p class="alert-text">Alert with very long text. Closed by default...</p>
                 <div class="alert-more collapse" id="collapseDanger">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mauris tellus, et dapibus velit posuere in. Maecenas quis ipsum tellus. Praesent maximus tristique enim, in hendrerit nunc imperdiet in.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius mauris tellus,
+                        et dapibus velit posuere in. Maecenas quis ipsum tellus. Praesent maximus tristique enim, in
+                        hendrerit nunc imperdiet in.
                     </p>
                     <p>
-                        Vivamus nulla lectus, bibendum vel sodales ut, gravida quis turpis. Nunc neque neque, congue quis libero sit amet, mollis vulputate justo. Sed pretium mauris sed libero maximus volutpat. Quisque ultrices velit nec aliquet tincidunt.
+                        Vivamus nulla lectus, bibendum vel sodales ut, gravida quis turpis. Nunc neque neque, congue
+                        quis libero sit amet, mollis vulputate justo. Sed pretium mauris sed libero maximus
+                        volutpat. Quisque ultrices velit nec aliquet tincidunt.
                     </p>
                 </div>
             </div>
@@ -658,11 +805,13 @@
 
         <article id="breadcrumb">
             <h2>Breadcrumb</h2>
-            <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="#">Home</a>
-                <a class="breadcrumb-item" href="#">Library</a>
-                <a class="breadcrumb-item" href="#">Data</a>
-                <span class="breadcrumb-item active">Bootstrap</span>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item"><a href="#">Data</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Bootstrap</a></li>
+                </ol>
             </nav>
         </article>
 
@@ -715,6 +864,12 @@
             <button type="button" class="btn btn-outline-secondary btn-lg">Large button</button>
             <button type="button" class="btn btn-outline-secondary">Normal button</button>
             <button type="button" class="btn btn-outline-secondary btn-sm">Small button</button>
+
+            <br><br>
+
+            <h3>Text/transparent button</h3>
+            <button type="button" class="btn btn-text">This is a button</button>
+            <button type="button" class="btn btn-text"><i class="material-icons">ac_unit</i> Button with icon</button>
 
             <br><br>
 
@@ -818,23 +973,38 @@
 
             <br><br>
 
-            <h3>Tooltips</h3>
+            <h3 id="tooltips">Tooltips</h3>
+
+            <button type="button" class="btn btn-primary" data-toggle="pstooltip" data-placement="left" title="Tooltip on left">
+                Tooltip on left
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-toggle="pstooltip" data-placement="top" title="Tooltip on top">
+                Tooltip on top
+            </button>
+            <button type="button" class="btn btn-secondary" data-toggle="pstooltip" data-placement="bottom" title="Tooltip on bottom">
+                Tooltip on bottom
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-toggle="pstooltip" data-placement="right" title="Tooltip on right">
+                Tooltip on right
+            </button>
+
+            <br><br>
 
             <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="left"><i class="material-icons">delete</i></a> |
             <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete"><i class="material-icons">delete</i></a> |
             <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="bottom"><i class="material-icons">delete</i></a> |
             <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="right"><i class="material-icons">delete</i></a>
             <br><br>
-            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="left">Delete</a> | 
-            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete">Delete</a> |
-            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="bottom">Delete</a> |
-            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="right">Delete</a>
+            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="left">Left</a> |
+            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete">Top</a> |
+            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="bottom">Bottom</a> |
+            <a href="#" class="tooltip-link" data-toggle="pstooltip" title="Delete" data-placement="right">Right</a>
 
             <br><br>
 
             <h3>External link</h3>
 
-            <a href="#" class="external-link">This is an another beautiful link</a>
+            <a href="#" class="external-link">This is another beautiful link</a>
 
             <br><br>
 
@@ -1523,7 +1693,7 @@
 
                 <div class="col col-sm-4">
                     <div class="card">
-                        <img class="card-img-top" src="http://lorempixel.com/400/200/city/" alt="Card image cap">
+                        <img class="card-img-top" src="img/sample1.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Card title</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -1534,7 +1704,7 @@
 
                 <div class="col col-sm-4">
                     <div class="card">
-                        <img class="card-img-top" src="http://lorempixel.com/400/200/sports/" alt="Card image cap">
+                        <img class="card-img-top" src="img/sample2.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Card title</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -1600,7 +1770,7 @@
 
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="">
+                                <input class="form-check-input" type="checkbox" value="" checked>
                                 Option one is this and that&mdash;be sure to include why it's great
                             </label>
                         </div>
@@ -1613,8 +1783,56 @@
                         <div class="form-check disabled">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox" value="" disabled>
-                                Option two is disabled
+                                Option three is disabled
                             </label>
+                        </div>
+
+                        <br><br>
+
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" checked>
+                                    <i class="md-checkbox-control"></i>
+                                    This is a Material Design checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]">
+                                    <i class="md-checkbox-control"></i>
+                                    This is an unchecked Material Design checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox disabled">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" disabled>
+                                    <i class="md-checkbox-control"></i>
+                                    This option is disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox disabled">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" disabled checked>
+                                    <i class="md-checkbox-control"></i>
+                                    This option is checked and disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" class="indeterminate">
+                                    <i class="md-checkbox-control"></i>
+                                    This option is in an indeterminate state
+                                </label>
+                            </div>
                         </div>
 
                         <br><br>
@@ -1684,7 +1902,7 @@
                         <br><br>
 
                         <div class="form-select">
-                            <select class="custom-select">
+                            <select class="form-control custom-select">
                                 <option selected>Open this select menu</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -1695,7 +1913,7 @@
                         <br><br>
 
                         <div class="form-select">
-                            <select class="custom-select disabled" disabled>
+                            <select class="form-control custom-select disabled" disabled>
                                 <option selected>Open this select menu</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -1705,17 +1923,17 @@
 
                         <br><br>
 
-                        <label class="custom-file">
+                        <div class="custom-file">
                             <input type="file" class="custom-file-input" id="file1">
-                            <span class="custom-file-control"></span>
-                        </label>
+                            <label class="custom-file-label" for="file1">Choose file...</label>
+                        </div>
 
                         <br><br>
 
-                        <label class="custom-file">
+                        <div class="custom-file">
                             <input type="file" class="custom-file-input disabled" id="file2" disabled>
-                            <span class="custom-file-control"></span>
-                        </label>
+                            <label class="custom-file-label" for="file2">Choose file...</label>
+                        </div>
                     </form>
                 </div>
                 <div class="col-sm-6">
@@ -1762,6 +1980,54 @@
 
                         <br><br>
 
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" checked>
+                                    <i class="md-checkbox-control"></i>
+                                    This is a Material Design checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]">
+                                    <i class="md-checkbox-control"></i>
+                                    This is an unchecked Material Design checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox disabled">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" disabled>
+                                    <i class="md-checkbox-control"></i>
+                                    This option is disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox disabled">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" disabled checked>
+                                    <i class="md-checkbox-control"></i>
+                                    This option is checked and disabled
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="md-checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox[]" class="indeterminate">
+                                    <i class="md-checkbox-control"></i>
+                                    This option is in an indeterminate state
+                                </label>
+                            </div>
+                        </div>
+
+                        <br><br>
+
                         <label for="switch4">
                             <input data-toggle="switch" class="switch-input-sm" id="switch4" data-inverse="true" type="checkbox" name="switch[]"> I love cats.
                         </label>
@@ -1781,7 +2047,7 @@
                         <br><br>
 
                         <div class="form-group">
-                            <span class="ps-switch ps-switch-sm">
+                            <span class="ps-switch ps-switch-sm border">
                                 <input type="radio" name="example_ps_switch_1b" id="example_off_1b" value="0" checked>
                                 <label for="example_off_1b">Off</label>
                                 <input type="radio" name="example_ps_switch_1b" id="example_on_1b" value="1">
@@ -1792,7 +2058,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch">
+                            <span class="ps-switch border">
                                 <input type="radio" name="example_ps_switch_2b" id="example_off_2b" value="0" checked>
                                 <label for="example_off_2b">Off</label>
                                 <input type="radio" name="example_ps_switch_2b" id="example_on_2b" value="1">
@@ -1803,7 +2069,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch ps-switch-lg">
+                            <span class="ps-switch ps-switch-lg border">
                                 <input type="radio" name="example_ps_switch_3b" id="example_off_3b" value="0" checked>
                                 <label for="example_off_3b">Off</label>
                                 <input type="radio" name="example_ps_switch_3b" id="example_on_3b" value="1">
@@ -1814,7 +2080,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch">
+                            <span class="ps-switch border">
                                 <input type="radio" name="example_ps_switch_4b" id="example_off_4b" value="0" disabled checked>
                                 <label for="example_off_4b">Off</label>
                                 <input type="radio" name="example_ps_switch_4b" id="example_on_4b" value="1" disabled>
@@ -1850,17 +2116,17 @@
 
                         <br><br>
 
-                        <label class="custom-file">
+                        <div class="custom-file">
                             <input type="file" class="custom-file-input" id="file3">
-                            <span class="custom-file-control"></span>
-                        </label>
+                            <label class="custom-file-label" for="file3">Choose file...</label>
+                        </div>
 
                         <br><br>
 
-                        <label class="custom-file">
+                        <div class="custom-file">
                             <input type="file" class="custom-file-input disabled" id="file4" disabled>
-                            <span class="custom-file-control"></span>
-                        </label>
+                            <label class="custom-file-label" for="file4">Choose file...</label>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -1932,33 +2198,45 @@
                     <form class="form" style="padding: 2rem;">
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">@</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                </div>
                                 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-addon" id="basic-addon2">@example.com</span>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                </div>
                                 <input type="text" class="form-control" aria-describedby="basic-addon3">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">$</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
                                 <input type="text" class="form-control form-control-lg" aria-label="Amount (to the nearest dollar)">
-                                <span class="input-group-addon">.00</span>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">$</span>
-                                <span class="input-group-addon">0.00</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                             </div>
                         </div>
@@ -1968,33 +2246,45 @@
                     <form class="form form-background">
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon4">@</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon4">@</span>
+                                </div>
                                 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" value="myBeautiful name">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2" value="myBeautiful site">
-                                <span class="input-group-addon" id="basic-addon5">@example.com</span>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon5">@example.com</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon6">https://example.com/users/</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon6">https://example.com/users/</span>
+                                </div>
                                 <input type="text" class="form-control" aria-describedby="basic-addon3" value="toto/tata">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">$</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
                                 <input type="text" class="form-control form-control-lg" aria-label="Amount (to the nearest dollar)" value="1.000.000">
-                                <span class="input-group-addon">.00</span>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">$</span>
-                                <span class="input-group-addon">0.00</span>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="so much dollar">
                             </div>
                         </div>
@@ -2007,7 +2297,7 @@
             <div class="form-row">
                 <div class="col-lg-6">
                     <div class="input-group">
-                        <span class="input-group-btn">
+                        <div class="input-group-prepend">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action
                             </button>
@@ -2016,14 +2306,14 @@
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
-                        </span>
+                        </div>
                         <input type="text" class="form-control" aria-label="Text input with dropdown button">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="input-group">
                         <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                        <span class="input-group-btn">
+                        <div class="input-group-append">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action
                             </button>
@@ -2032,7 +2322,7 @@
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2048,7 +2338,9 @@
                     <div class="col-sm-3">
                         <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
                         <div class="input-group">
-                            <div class="input-group-addon">@</div>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
                             <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
                         </div>
                     </div>
@@ -2387,16 +2679,16 @@
         <article id="tagger">
             <h2>Ps-tagger (Old, jQuery-based)</h2>
 
-            <div class="wrapper">
+            <div class="form-group">
                 <label for="pstagger-input">Type your tags</label>
                 <div class="input-group">
                     <input class="form-control-tagger" id="pstagger-input" type="text" placeholder="Add tags">
-                    <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary">
-                        <i class="material-icons">search</i>
-                        Search
-                    </button>
-                </span>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary">
+                            <i class="material-icons">search</i>
+                            Search
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -2435,32 +2727,15 @@
                     </div>
                     <!-- end PSTags -->
                     <!-- start PSButton -->
-                    <span class="input-group-btn">
+                    <div class="input-group-append">
                         <button type="button" class="btn btn-primary">
                             <i class="material-icons">search</i>
                             Search
                         </button>
-                    </span>
+                    </div>
                     <!-- start PSButton -->
                 </div>
             </div>
-        </article>
-
-        <article id="tooltips">
-            <h2>Tooltips @TODO</h2>
-
-            <button type="button" class="btn btn-primary" data-toggle="pstooltip" data-placement="left" title="Tooltip on left">
-                Tooltip on left
-            </button>
-            <button type="button" class="btn btn-outline-primary" data-toggle="pstooltip" data-placement="top" title="Tooltip on top">
-                Tooltip on top
-            </button>
-            <button type="button" class="btn btn-secondary" data-toggle="pstooltip" data-placement="bottom" title="Tooltip on bottom">
-                Tooltip on bottom
-            </button>
-            <button type="button" class="btn btn-outline-secondary" data-toggle="pstooltip" data-placement="right" title="Tooltip on right">
-                Tooltip on right
-            </button>
         </article>
 
         <article id="spinner">

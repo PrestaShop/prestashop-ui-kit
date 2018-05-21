@@ -1,5 +1,7 @@
 .tags-input {
-  width: 100%;
+  @extend .form-control;
+
+  padding: 0;
   border: $input-btn-border-width solid $input-border-color;
   background-color: $input-bg;
 
@@ -44,5 +46,7 @@
   input[type="text"] {
     border: none;
     min-width: 75px;
+    flex-grow: 1;
+    width: auto;
   }
 }

@@ -29,6 +29,12 @@
     padding: 0 $alert-padding-x;
   }
 
+  // make bullet points visible
+  > ul,
+  > ol {
+    margin-left: 1.5rem;
+  }
+
   @include close-button(.625rem);
 
   &.medium-alert {
@@ -54,7 +60,10 @@
 
     .alert-more {
       color: $medium-gray;
-      margin: 1.375rem 0 .75rem 0;
+      padding: {
+        top: 1.375rem;
+        bottom: .75rem;
+      }
 
       p {
         color: inherit;

@@ -2,7 +2,7 @@
 
 UI Kit integration for PrestaShop – Based on Bootstrap 4.
 
-**[pretashop-ui-kit](http://build.prestashop.com/prestashop-ui-kit/)**
+**[prestashop-ui-kit](http://build.prestashop.com/prestashop-ui-kit/)**
 
 ## Installation
 
@@ -33,7 +33,7 @@ Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit + Javascript.
 [...]
 ```
 
-Github devDependencies
+Github dev Dependencies
 
 **[pstagger](https://github.com/PrestaShop/pstagger)**
 

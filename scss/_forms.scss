@@ -13,6 +13,7 @@
 // help labels around form elements
 .form-text {
   color: $medium-gray;
+  font-size: .75rem;
 
   label + & {
     float: right;

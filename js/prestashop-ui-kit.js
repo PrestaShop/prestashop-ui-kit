@@ -118,6 +118,27 @@ $.fn.pstooltip = $.fn.tooltip;
       });
     });
   }
+  
+  var initInputFileChangeEvent = function () {
+    jQuery('.custom-file input').on('change', function () {
+      var $input = $(this);
+      var files = $input[0].files;
+      var filesCount = files.length;
+      var $label = $input.next('label');
+
+      if (1 === filesCount) {
+        $label.text(files[0].name);
+      } else if (1 < filesCount) {
+        var multipleFilesTranslationText = $input.attr('data-multiple-files-text');
+
+        if (typeof multipleFilesTranslationText !== 'undefined') {
+          $label.text(filesCount + ' ' + multipleFilesTranslationText);
+        } else {
+          $label.text(filesCount + ' files');
+        }
+      }
+    })
+  }
 
   var initToolTips = function() {
     jQuery('.tooltip-error').pstooltip({
@@ -165,6 +186,7 @@ $.fn.pstooltip = $.fn.tooltip;
         initAlerts();
         initToolTips();
         initSearchBar();
+        initInputFileChangeEvent();
       });
     },
 

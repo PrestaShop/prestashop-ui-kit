@@ -730,7 +730,7 @@ $list-group-item-padding-x:         $input-padding-x;
 
 $list-group-hover-bg:               theme-color-hover('primary');
 //$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg:              theme-color-hover('primary');
+$list-group-active-bg:              $blue;
 //$list-group-active-border-color:    $list-group-active-bg !default;
 
 $list-group-disabled-color:         $light-gray;

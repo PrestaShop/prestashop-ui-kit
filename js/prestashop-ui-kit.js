@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'select2';
 import 'jquery.growl';
 import 'pstagger';
+import { initInputFileChangeEvent } from './events';
 
 $.fn.pstooltip = $.fn.tooltip;
 
@@ -117,27 +118,6 @@ $.fn.pstooltip = $.fn.tooltip;
         $this.next('div').slideToggle(400);
       });
     });
-  }
-  
-  var initInputFileChangeEvent = function () {
-    jQuery('.custom-file input').on('change', function () {
-      var $input = $(this);
-      var files = $input[0].files;
-      var filesCount = files.length;
-      var $label = $input.next('label');
-
-      if (1 === filesCount) {
-        $label.text(files[0].name);
-      } else if (1 < filesCount) {
-        var multipleFilesTranslationText = $input.attr('data-multiple-files-text');
-
-        if (typeof multipleFilesTranslationText !== 'undefined') {
-          $label.text(filesCount + ' ' + multipleFilesTranslationText);
-        } else {
-          $label.text(filesCount + ' files');
-        }
-      }
-    })
   }
 
   var initToolTips = function() {

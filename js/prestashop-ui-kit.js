@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'select2';
 import 'jquery.growl';
 import 'pstagger';
-import { initInputFileChangeEvent } from './events/file-input';
+var initInputFileChangeEvent = require('./events/file-input.js');
 
 $.fn.pstooltip = $.fn.tooltip;
 

@@ -39,7 +39,7 @@ var initInputFileChangeEvent = function () {
     var $label = $input.next('label');
 
     $label.text(
-      getTextByFilesCount(files, $input.attr('data-multiple-files-text'), $input.attr('data-locale')),
+      getTextByFilesCount(files, $input.attr('data-multiple-files-text'), $input.attr('data-locale'))
     );
   });
 };

@@ -1,14 +1,12 @@
-var LangPluralization = require('../utils/LanguagePluralization.js');
+var Translator = require('../utils/Translator.js');
 
-var getTextByFiles = function ($label, files) {
-  var filesCount = files.length;
-
+var getTextByFilesCount = function (filesCount) {
   if (filesCount === 1) {
     return files[0].name;
   }
 
-  var langPluralization = new LangPluralization();
-  
+  var translator = new Translator();
+
   return '';
 };
 
@@ -18,8 +16,7 @@ var initInputFileChangeEvent = function () {
     var files = $input[0].files;
     var $label = $input.next('label');
 
-
-    $label.text(getTextByFiles($label, files));
+    $label.text(getTextByFilesCount(files.length));
   });
 };
 

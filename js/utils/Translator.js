@@ -1,12 +1,3 @@
-/*!
- *  Lang.js for Laravel localization in JavaScript.
- *
- *  @version 1.1.12
- *  @license MIT https://github.com/rmariuzzo/Lang.js/blob/master/LICENSE
- *  @site    https://github.com/rmariuzzo/Lang.js
- *  @author  Rubens Mariuzzo <rubens@mariuzzo.com>
- */
-
 (function (root, factory) {
   'use strict';
   module.exports = factory();
@@ -25,34 +16,30 @@
   // Derived from: https://github.com/symfony/translation/blob/460390765eb7bb9338a4a323b8a4e815a47541ba/Interval.php
   var intervalRegexp = /^({\s*(\-?\d+(\.\d+)?[\s*,\s*\-?\d+(\.\d+)?]*)\s*})|([\[\]])\s*(-Inf|\*|\-?\d+(\.\d+)?)\s*,\s*(\+?Inf|\*|\-?\d+(\.\d+)?)\s*([\[\]])$/;
   var anyIntervalRegexp = /({\s*(\-?\d+(\.\d+)?[\s*,\s*\-?\d+(\.\d+)?]*)\s*})|([\[\]])\s*(-Inf|\*|\-?\d+(\.\d+)?)\s*,\s*(\+?Inf|\*|\-?\d+(\.\d+)?)\s*([\[\]])/;
+  var placeHolderPrefix = '%';
+  var placeHolderSuffix = '%';
 
   // Default options //
-
   var defaults = {
-    locale: 'en'/** The default locale if not set. */
+    locale: 'en',
   };
 
   // Constructor //
-  var LangPluralization = function () {};
+  var Translator = function () {};
 
   /**
    * Gets the plural or singular form of the message specified based on an integer value.
    *
    * @param message {string} The key of the message.
-   * @param count {number} The number of elements.
-   * @param replacements {object} The replacements to be done in the message.
+   * @param number {number} The number of elements.
+   * @param placeholders {object} The replacements to be done in the message.
    * @param locale {string} The locale to use, if not passed use the default locale.
    *
    * @return {string} The translation message according to an integer value.
    */
-  LangPluralization.prototype.transChoice = function (message, number, replacements, locale) {
-    // Set default values for parameters replace and locale
-    replacements = typeof replacements !== 'undefined'
-      ? replacements
-      : {};
-
-    // The count must be replaced if found in the message
-    replacements.count = number;
+  Translator.prototype.transChoice = function (message, number, placeholders, locale) {
+    placeholders = typeof placeholders !== 'undefined' ? placeholders : {};
+    placeholders.count = number;
 
     // Separate the plural from the singular, if any
     var messageParts = message.split('|');
@@ -70,6 +57,7 @@
       }
     }
 
+    locale = locale || defaults.locale;
 
     // Check if there's only one message
     if (messageParts.length === 1) {
@@ -80,90 +68,65 @@
     // Check the explicit rules
     for (var j = 0; j < explicitRules.length; j++) {
       if (this._testInterval(number, explicitRules[j])) {
-        return messageParts[j];
+        return this.replacePlaceholders(messageParts[j], placeholders);
       }
     }
 
-    locale = locale || defaults.locale;
     var pluralForm = this._getPluralForm(number, locale);
 
-    return messageParts[pluralForm];
+    return this.replacePlaceholders(messageParts[pluralForm], placeholders);
   };
 
   /**
-   * Sort replacement keys by length in descending order.
+   * Replace placeholders in given message.
    *
-   * @param a {string} Replacement key
-   * @param b {string} Sibling replacement key
-   * @return {number}
-   * @private
+   * **WARNING:** used placeholders are removed.
+   *
+   * @param {String} message      The translated message
+   * @param {Object} placeholders The placeholders to replace
+   * @return {String}             A human readable message
+   * @api private
    */
-  LangPluralization.prototype._sortReplacementKeys = function (a, b) {
-    return b.length - a.length;
-  };
+  Translator.prototype.replacePlaceholders = function (message, placeholders) {
+    var _i;
+    var _prefix = placeHolderPrefix;
+    var _suffix = placeHolderSuffix;
 
-  /**
-   * Apply replacements to a string message containing placeholders.
-   *
-   * @param message {string} The text message.
-   * @param replacements {object} The replacements to be done in the message.
-   *
-   * @return {string} The string message with replacements applied.
-   */
-  LangPluralization.prototype._applyReplacements = function (message, replacements) {
-    var keys = Object.keys(replacements).sort(this._sortReplacementKeys);
+    for (_i in placeholders) {
+      var _r = new RegExp(_prefix + _i + _suffix, 'g');
 
-    keys.forEach(function (replace) {
-      message = message.replace(new RegExp(':' + replace, 'gi'), function (match) {
-        var value = replacements[replace];
+      if (_r.test(message)) {
+        var _v = String(placeholders[_i]).replace(new RegExp('\\$', 'g'), '$$$$');
+        message = message.replace(_r, _v);
+      }
+    }
 
-        // Capitalize all characters.
-        var allCaps = match === match.toUpperCase();
-        if (allCaps) {
-          return value.toUpperCase();
-        }
-
-        // Capitalize first letter.
-        var firstCap = match === match.replace(/\w/i, function (letter) {
-          return letter.toUpperCase();
-        });
-        if (firstCap) {
-          return value.charAt(0).toUpperCase() + value.slice(1);
-        }
-
-        return value;
-      });
-    });
     return message;
   };
 
   /**
    * Checks if the given `count` is within the interval defined by the {string} `interval`
+   * From the Symfony\Component\Translation\Interval Docs
+   * Tests if a given number belongs to a given math interval.
+   *
+   * An interval can represent a finite set of numbers:
+   *
+   *  {1,2,3,4}
+   *
+   * An interval can represent numbers between two numbers:
+   *
+   *  [1, +Inf]
+   *  ]-1,2[
+   *
+   * The left delimiter can be [ (inclusive) or ] (exclusive).
+   * The right delimiter can be [ (exclusive) or ] (inclusive).
+   * Beside numbers, you can use -Inf and +Inf for the infinite.
    *
    * @param  count     {int}    The amount of items.
    * @param  interval  {string} The interval to be compared with the count.
    * @return {boolean}          Returns true if count is within interval; false otherwise.
    */
-  LangPluralization.prototype._testInterval = function (count, interval) {
-    /**
-     * From the Symfony\Component\Translation\Interval Docs
-     *
-     * Tests if a given number belongs to a given math interval.
-     *
-     * An interval can represent a finite set of numbers:
-     *
-     *  {1,2,3,4}
-     *
-     * An interval can represent numbers between two numbers:
-     *
-     *  [1, +Inf]
-     *  ]-1,2[
-     *
-     * The left delimiter can be [ (inclusive) or ] (exclusive).
-     * The right delimiter can be [ (exclusive) or ] (inclusive).
-     * Beside numbers, you can use -Inf and +Inf for the infinite.
-     */
-
+  Translator.prototype._testInterval = function (count, interval) {
     if (typeof interval !== 'string') {
       throw 'Invalid interval: should be a string.';
     }
@@ -214,7 +177,7 @@
    * @param {String} locale
    * @return {Number}
    */
-  LangPluralization.prototype._getPluralForm = function (count, locale) {
+  Translator.prototype._getPluralForm = function (count, locale) {
     switch (locale) {
     case 'az':
     case 'bo':
@@ -409,5 +372,5 @@
     }
   };
 
-  return LangPluralization;
+  return Translator;
 }));

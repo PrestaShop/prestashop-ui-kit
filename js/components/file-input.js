@@ -1,4 +1,4 @@
-var Translator = require('../utils/Translator.js');
+import Pluralizer from '../utils/pluralizer.js';
 
 /**
  * When there's only one file it displays name. However if there are more files it displays the text, which is retrieved
@@ -16,9 +16,9 @@ var getTextByFilesCount = function (files, multipleFilesPluralisedMessage, local
     return files[0].name;
   }
 
-  var translator = new Translator();
+  var pluralizer = new Pluralizer();
 
-  return translator.transChoice(
+  return pluralizer.transChoice(
     multipleFilesPluralisedMessage,
     filesCount,
     {
@@ -32,7 +32,7 @@ var getTextByFilesCount = function (files, multipleFilesPluralisedMessage, local
  * Event listener for file import event - can be executed within selecting the files or
  * just by drag and drop action applied.
  */
-var initInputFileChangeEvent = function () {
+var initInputFile = function () {
   jQuery('.custom-file-input').on('change', function () {
     var $input = jQuery(this);
     var files = $input[0].files;
@@ -44,4 +44,4 @@ var initInputFileChangeEvent = function () {
   });
 };
 
-module.exports = initInputFileChangeEvent;
+export default initInputFile;

@@ -1,10 +1,7 @@
 /*!
- *  Lang.js for Laravel localization in JavaScript.
+ * This file has been derived from "Lang.js - Laravel Translator class in JavaScript", v1.1.12 by Rubens Mariuzzo <rubens@mariuzzo.com>, distributed under the MIT licence.
  *
- *  @version 1.1.12
- *  @license MIT https://github.com/rmariuzzo/Lang.js/blob/master/LICENSE
- *  @site    https://github.com/rmariuzzo/Lang.js
- *  @author  Rubens Mariuzzo <rubens@mariuzzo.com>
+ * @site https://github.com/rmariuzzo/Lang.js
  */
 
 /**

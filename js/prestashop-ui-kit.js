@@ -172,9 +172,21 @@ $.fn.pstooltip = $.fn.tooltip;
       initSelect2();
     },
 
+    initToggleButtons: function() {
+      initToggleButtons();
+    },
+
+    initAlerts: function() {
+      initAlerts();
+    },
+
     initToolTips: function() {
       initToolTips();
     }
+
+    initSearchBar: function() {
+      initSearchBar();
+    },
   };
 
   global.prestaShopUiKit.init();

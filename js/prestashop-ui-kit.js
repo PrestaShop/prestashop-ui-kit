@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'select2';
 import 'jquery.growl';
 import 'pstagger';
+import initInputFile from './components/file-input.js';
 
 $.fn.pstooltip = $.fn.tooltip;
 
@@ -165,6 +166,7 @@ $.fn.pstooltip = $.fn.tooltip;
         initAlerts();
         initToolTips();
         initSearchBar();
+        initInputFile();
       });
     },
 

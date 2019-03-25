@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 let config = {
   entry: {
     main: [
@@ -13,7 +15,7 @@ let config = {
     path: path.resolve(__dirname, './dist/js'),
     filename: 'prestashop-ui-kit.js'
   },
-  devtool: "source-map",
+  devtool: devMode ? "inline-source-map" : "source-map",
   module: {
     rules: [
       {
@@ -36,7 +38,7 @@ let config = {
             {
               loader: 'css-loader',
               options: {
-                minimize: true,
+                minimize: !devMode,
                 sourceMap: true,
               }
             },
@@ -73,22 +75,24 @@ let config = {
   ]
 };
 
-config.plugins.push(
-  new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true,
-    compress: {
-      sequences: true,
-      conditionals: true,
-      booleans: true,
-      if_return: true,
-      join_vars: true,
-      drop_console: true
-    },
-    output: {
-      comments: false
-    },
-    minimize: true
-  })
-);
+if (!devMode) {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        sequences: true,
+        conditionals: true,
+        booleans: true,
+        if_return: true,
+        join_vars: true,
+        drop_console: true
+      },
+      output: {
+        comments: false
+      },
+      minimize: true
+    })
+  );
+}
 
 module.exports = config;

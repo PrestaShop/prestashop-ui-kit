@@ -11,8 +11,8 @@
     "uikit"
   ],
   "scripts": {
-    "watch": "webpack -w --progress",
-    "build": "webpack --progress --debug"
+    "watch": "webpack -w --progress --debug",
+    "build": "NODE_ENV=production webpack --progress --debug"
   },
   "author": "PrestaShop",
   "license": "OSL-3.0",

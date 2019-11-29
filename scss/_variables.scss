@@ -22,7 +22,7 @@ $dark-gray:        $gray-700;
 $extra-dark-gray:  $gray-900;
 $background-color: #eff1f2;
 
-$blue:    #25b9d7;
+$blue:    #25B9D7;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -35,9 +35,10 @@ $teal:    #20c997 !default;
 $cyan:    $blue;
 
 // main button background colors
-$primary-hover:     #3ed2f0;
-$primary-active:    #19a9c6;
-$secondary-hover:   $dark-gray;
+$primary-hover:     #7CD5E7;
+$primary-active:    #21A6C1;
+$primary-disabled:  #D3F1F7;
+$secondary-hover:   #759299;
 $secondary-active:  #f6fdff;
 
 $primary:       $blue !default;
@@ -298,8 +299,8 @@ $input-btn-padding-x-lg:      .838rem;
 
 
 // Buttons
-//$btn-padding-y:               $input-btn-padding-y !default;
-//$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-y:               0.44rem!default;
+$btn-padding-x:               0.936rem !default;
 //$btn-line-height:             $input-btn-line-height !default;
 
 //$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -323,7 +324,11 @@ $btn-active-box-shadow:       none;
 
 //$btn-block-spacing-y:         .5rem !default;
 
+<<<<<<< HEAD
 $btn-border-radius:           .063rem;
+=======
+$btn-border-radius:           4px;
+>>>>>>> Adjusting colors, sizes or primary buttons and icons
 //$btn-border-radius-lg:        $border-radius-lg !default;
 //$btn-border-radius-sm:        $border-radius-sm !default;
 

@@ -23,20 +23,20 @@
 
   &-default {
     @include ps-button-outline-variant(
-      #363a41,
+      $gray-700,
       $primary,
       'default'
     );
 
-    border-color: #dedede;
+    border-color: $gray-300;
 
     &:hover {
-      border-color: #dedede;
+      border-color: $gray-300;
     }
 
     &:not([disabled]):not(.disabled):active,
     &:not([disabled]):not(.disabled).active {
-      color: white;
+      color: $white;
     }
   }
 }

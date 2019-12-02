@@ -30,11 +30,21 @@
 }
 
 .dropdown-menu {
+<<<<<<< HEAD
   padding: 1px 0 0;
+=======
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #576c72;
+  padding: 0;
+>>>>>>> Adjusting dropdown paddings and color of items active
   box-sizing: border-box;
   min-width: 8.625rem;
   border: 1px solid $primary;
   margin: 0.125rem -.1px 0;
+<<<<<<< HEAD
+=======
+  padding-bottom: 1px;
+>>>>>>> Adjusting dropdown paddings and color of items active
 
   .material-icons {
     padding-right: .5rem;
@@ -60,6 +70,16 @@
 
       .material-icons {
         color: $primary;
+      }
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+      color: $white;
+      background-color: $primary;
+
+      .material-icons {
+        color: $white;
       }
     }
   }

@@ -20,19 +20,40 @@
     margin-top: -0.083em;
     margin-right: .4em;
   }
+
+  &-default {
+    @include ps-button-outline-variant(
+      #363a41,
+      $primary,
+      'default'
+    );
+
+    border-color: #dedede;
+
+    &:hover {
+      border-color: #dedede;
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+      color: white;
+    }
+  }
 }
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include ps-button-variant(
-      $value,
-      $value,
-      theme-color-hover($color),
-      theme-color-hover($color),
-      theme-color-active($color),
-      theme-color-active($color),
-      $color
-    );
+    @if $color != default {
+      @include ps-button-variant(
+        $value,
+        $value,
+        theme-color-hover($color),
+        theme-color-hover($color),
+        theme-color-active($color),
+        theme-color-active($color),
+        $color
+      );
+    }
   }
 }
 

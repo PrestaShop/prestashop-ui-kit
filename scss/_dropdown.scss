@@ -30,12 +30,11 @@
 }
 
 .dropdown-menu {
-  min-width: 15.625rem;
-  padding: .313rem 0;
-
-  color: #576c72;
-  border: solid $border-width #bbcdd2;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+  padding: 1px 0 0;
+  box-sizing: border-box;
+  min-width: 8.625rem;
+  border: 1px solid $primary;
+  margin: 0.125rem -.1px 0;
 
   .material-icons {
     padding-right: .5rem;
@@ -51,13 +50,16 @@
     line-height: normal;
     color: inherit;
     border-bottom: 0;
+    padding: 0.438rem 0.938rem {
+      right: 1rem;
+    };
 
     &:hover {
-      color: $white;
-      background-color: $primary;
+      color: $primary;
+      background-color: $light-blue;
 
       .material-icons {
-        color: $white;
+        color: $primary;
       }
     }
   }

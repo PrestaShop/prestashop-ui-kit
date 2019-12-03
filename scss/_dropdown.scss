@@ -2,7 +2,7 @@
 .dropup .dropdown-toggle {
   padding-right: $input-btn-padding-x * .75;
 
-  &[aria-expanded="true"] {
+  &[aria-expanded="true"]:not(button) {
     &::after {
       transform: rotate(-180deg);
     }
@@ -37,12 +37,14 @@
 }
 
 .dropdown-menu {
-  min-width: 15.625rem;
-  padding: .313rem 0;
-
-  color: #576c72;
   border: solid $border-width #bbcdd2;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #576c72;
+  padding: 1px 0 0;
+  box-sizing: border-box;
+  min-width: 8.625rem;
+  border: 1px solid $gray-450;
+  margin: 0.125rem -.1px 0;
 
   .material-icons {
     padding-right: .5rem;

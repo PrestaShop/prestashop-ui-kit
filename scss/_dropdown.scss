@@ -30,28 +30,14 @@
 }
 
 .dropdown-menu {
-<<<<<<< HEAD
-  padding: 1px 0 0;
-=======
   box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
   color: #576c72;
-<<<<<<< HEAD
-  padding: 0;
->>>>>>> Adjusting dropdown paddings and color of items active
-=======
   padding: 1px 0 0;
->>>>>>> Adjusting dropdown padding
   box-sizing: border-box;
   min-width: 8.625rem;
   border: 1px solid $primary;
   margin: 0.125rem -.1px 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   padding-bottom: 1px;
->>>>>>> Adjusting dropdown paddings and color of items active
-=======
->>>>>>> Adjusting dropdown padding
 
   .material-icons {
     padding-right: .5rem;
@@ -93,5 +79,26 @@
 
   > .dropdown-divider {
     margin: .313rem 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  .btn-outline-#{$color} {
+    + .dropdown-menu {
+      border: 1px solid $value;
+
+      > .dropdown-item {
+        &:hover {
+          color: $value;
+          background-color: rgba($value, .1);
+        }
+
+        &:not([disabled]):not(.disabled):active,
+        &:not([disabled]):not(.disabled).active {
+          background-color: $value;
+        }
+      }
+    }
   }
 }

@@ -2,6 +2,12 @@
 .dropup .dropdown-toggle {
   padding-right: $input-btn-padding-x * .75;
 
+  &[aria-expanded="true"] {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+
   // use material icons for dropdown and dropup
   &::after {
     @include material-icon("expand_more");
@@ -10,6 +16,7 @@
     line-height: 0;
     vertical-align: middle;
     border: none;
+    transition: .15s ease-out;
   }
 }
 

@@ -9,7 +9,7 @@
     height: $input-height;
 
     &:focus ~ .custom-file-label {
-      border-color: theme-color-hover('primary');
+      border-color: theme-color-hover("primary");
     }
 
     &.disabled,
@@ -23,22 +23,28 @@
       cursor: $cursor-disabled;
       background-color: $custom-select-disabled-bg;
 
-      &:after {
+      &::after {
         @extend .btn-primary:disabled;
       }
     }
   }
   .custom-file-label {
-    &:after {
+    &::after {
+
+      // make the button overlap the border
+      top: $input-border-width * -1;
+      right: $input-border-width * -1;
+      bottom: $input-border-width * -1;
+      height: auto;
       font-weight: $font-weight-semibold;
 
-      @include hover-focus {
+      @include hover-focus () {
         cursor: pointer;
       }
 
-      $color: map-get($theme-colors, 'primary');
+      $color: map-get($theme-colors, "primary");
       @include ps-button-variant(
-                      $color,
+        $color,
                       $color,
                       theme-color-hover($color),
                       theme-color-hover($color),
@@ -46,12 +52,6 @@
                       theme-color-active($color),
                       $color
       );
-
-      // make the button overlap the border
-      top: $input-border-width * -1;
-      right: $input-border-width * -1;
-      bottom: $input-border-width * -1;
-      height: auto;
     }
   }
 }

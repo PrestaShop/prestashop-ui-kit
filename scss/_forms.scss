@@ -1,7 +1,7 @@
 .form {
   &.form-background {
-    background-color: $background-color;
     padding: 2rem;
+    background-color: $background-color;
   }
 }
 
@@ -12,8 +12,8 @@
 
 // help labels around form elements
 .form-text {
-  color: $medium-gray;
   font-size: .75rem;
+  color: $medium-gray;
 
   label + & {
     float: right;
@@ -44,17 +44,17 @@
   }
 
   .form-control {
-    background-image: none;
     padding-right: 1.5625rem;
+    background-image: none;
   }
 
   &::after {
-    @include material-icon('\E876');
-    font-size: 1.438rem;
-    font-weight: $font-weight-normal;
+    @include material-icon("\E876");
     position: absolute;
     right: .3125rem;
     bottom: 1.813rem;
+    font-size: 1.438rem;
+    font-weight: $font-weight-normal;
     vertical-align: middle;
   }
 
@@ -67,22 +67,22 @@
 
 .has-success {
   &::after {
-    content: '\E876';
-    color: theme-color('success');
+    color: theme-color("success");
+    content: "\E876";
   }
 }
 
 .has-warning {
   &::after {
-    content: '\E001';
-    color: theme-color('warning');
+    color: theme-color("warning");
+    content: "\E001";
   }
 }
 
 .has-danger {
   &::after {
-    content: '\E001';
-    color: theme-color('danger');
+    color: theme-color("danger");
+    content: "\E001";
   }
 }
 
@@ -95,9 +95,9 @@
   }
 }
 
-@include ps-form-validation-state('valid', $form-feedback-valid-color);
-@include ps-form-validation-state('invalid', $form-feedback-invalid-color);
-@include ps-form-validation-state('warning', $form-feedback-warning-color);
+@include ps-form-validation-state("valid", $form-feedback-valid-color);
+@include ps-form-validation-state("invalid", $form-feedback-invalid-color);
+@include ps-form-validation-state("warning", $form-feedback-warning-color);
 
 .switch-input {
   @include ps-switch(20px, 40px, -2px, 16px);
@@ -117,18 +117,18 @@
   }
   &.search-with-icon {
     position: relative;
-    input[type="text"] {
+    input {
       padding-right: 1.6rem;
     }
     &::after {
-      @include material-icon('\E8B6');
-      color: $medium-gray;
+      @include material-icon("\E8B6");
+      position: absolute;
+      top: 50%;
+      right: .3125rem;
+      margin-top: -(1.375rem / 2);
       font-size: 1.375rem;
       font-weight: $font-weight-normal;
-      position: absolute;
-      right: .3125rem;
-      top: 50%;
-      margin-top: -(1.375rem/2);
+      color: $medium-gray;
     }
   }
 }

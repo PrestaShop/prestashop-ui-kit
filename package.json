@@ -13,7 +13,7 @@
   "scripts": {
     "watch": "webpack -w --progress --debug",
     "build": "NODE_ENV=production webpack --progress --debug",
-    "css-lint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache"
+    "scss-lint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache"
   },
   "author": "PrestaShop",
   "license": "OSL-3.0",

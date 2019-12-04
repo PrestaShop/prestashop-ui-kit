@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 // Color system
 $white:    #fff;
 $gray-100: #fafbfc;
@@ -72,12 +74,12 @@ $theme-colors-hover: (
 $theme-colors-active: (
   primary: $primary-active,
   secondary: $extra-dark-gray,
-  success: darken(map-get($theme-colors, 'success'), 10%),
-  info: darken(map-get($theme-colors, 'info'), 10%),
-  warning: darken(map-get($theme-colors, 'warning'), 10%),
-  danger: darken(map-get($theme-colors, 'danger'), 10%),
-  light: darken(map-get($theme-colors, 'light'), 10%),
-  dark: darken(map-get($theme-colors, 'dark'), 10%)
+  success: darken(map-get($theme-colors, "success"), 10%),
+  info: darken(map-get($theme-colors, "info"), 10%),
+  warning: darken(map-get($theme-colors, "warning"), 10%),
+  danger: darken(map-get($theme-colors, "danger"), 10%),
+  light: darken(map-get($theme-colors, "light"), 10%),
+  dark: darken(map-get($theme-colors, "dark"), 10%)
 );
 
 $theme-colors-background: (
@@ -92,20 +94,20 @@ $theme-colors-background: (
 );
 
 $theme-colors-shadow: (
-  primary: theme-color('primary'),
+  primary: theme-color("primary"),
   secondary: $black,
-  success: theme-color('success'),
-  info: theme-color('info'),
-  warning: theme-color('warning'),
-  danger: theme-color('danger'),
-  light: theme-color('light'),
-  dark: theme-color('dark')
+  success: theme-color("success"),
+  info: theme-color("info"),
+  warning: theme-color("warning"),
+  danger: theme-color("danger"),
+  light: theme-color("light"),
+  dark: theme-color("dark")
 );
 
 
 // Options
 $enable-caret:              true !default;
-$enable-rounded:            false;
+$enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
@@ -132,7 +134,7 @@ $body-color:                $dark-gray;
 
 
 // Links
-$link-hover-color:          theme-color('primary') !default;
+$link-hover-color:          theme-color("primary") !default;
 $link-hover-decoration:     underline;
 
 
@@ -189,7 +191,7 @@ $caret-width:                 .25rem;
 
 
 // Fonts
-$font-family-sans-serif:      "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:      "Open Sans", helvetica, arial, sans-serif;
 //$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //$font-family-base:            $font-family-sans-serif !default;
 
@@ -259,8 +261,8 @@ $table-cell-padding-sm:       .25rem;
 
 //$table-bg:                    transparent !default;
 $table-accent-bg:             $background-color;
-$table-hover-bg:              theme-color-hover('primary');
-$table-active-bg:             theme-color-hover('primary');
+$table-hover-bg:              theme-color-hover("primary");
+$table-active-bg:             theme-color-hover("primary");
 
 //$table-border-width:          $border-width !default;
 //$table-border-color:          $gray-300 !default;
@@ -270,7 +272,7 @@ $table-head-color:            $body-color;
 
 $table-dark-bg:               $body-color;
 $table-dark-accent-bg:        $extra-dark-gray;
-$table-dark-hover-bg:         theme-color-hover('primary');
+$table-dark-hover-bg:         theme-color-hover("primary");
 $table-dark-border-color:     $medium-gray;
 //$table-dark-color:            $body-bg !default;
 
@@ -321,7 +323,7 @@ $btn-active-box-shadow:       none;
 
 //$btn-block-spacing-y:         .5rem !default;
 
-$btn-border-radius:           0.063rem;
+$btn-border-radius:           .063rem;
 //$btn-border-radius-lg:        $border-radius-lg !default;
 //$btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -354,7 +356,7 @@ $input-box-shadow:                      none;
 //$input-border-radius-sm:                $border-radius-sm !default;
 
 //$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              theme-color-hover('primary');
+$input-focus-border-color:              theme-color-hover("primary");
 //$input-focus-color:                     $input-color !default;
 //$input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                none;
@@ -472,9 +474,9 @@ $cursor-disabled: not-allowed; // PS custom
 // Form validation
 //$form-feedback-margin-top:          $form-text-margin-top !default;
 //$form-feedback-font-size:           $small-font-size !default;
-$form-feedback-valid-color:         theme-color('success');
-$form-feedback-invalid-color:       theme-color('danger');
-$form-feedback-warning-color:       theme-color('warning'); // PS custom
+$form-feedback-valid-color:         theme-color("success");
+$form-feedback-invalid-color:       theme-color("danger");
+$form-feedback-warning-color:       theme-color("warning"); // PS custom
 
 
 // Dropdowns
@@ -490,7 +492,7 @@ $dropdown-divider-bg:               $light-gray;
 //$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
 
 $dropdown-link-color:               $medium-gray;
-$dropdown-link-hover-color:         theme-color('primary');
+$dropdown-link-hover-color:         theme-color("primary");
 $dropdown-link-hover-bg:            $white;
 
 //$dropdown-link-active-color:        $component-active-color !default;
@@ -512,14 +514,14 @@ $nav-link-disabled-color:           $light-gray;
 $nav-tabs-border-color:             $white;
 //$nav-tabs-border-width:             $border-width !default;
 //$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  theme-color('primary');
+$nav-tabs-link-hover-border-color:  theme-color("primary");
 $nav-tabs-link-active-color:        $body-color;
 $nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: theme-color('primary');
+$nav-tabs-link-active-border-color: theme-color("primary");
 
 $nav-pills-link-hover-border-color: $nav-tabs-link-hover-border-color;
 $nav-pills-link-active-color:       $nav-tabs-link-active-color;
-$nav-pills-link-active-bg:          #F4F9FB;
+$nav-pills-link-active-bg:          #f4f9fb;
 $nav-pills-link-active-border-color: $nav-tabs-link-active-border-color; // PS custom
 
 //$nav-pills-border-radius:           $border-radius !default;
@@ -579,7 +581,7 @@ $pagination-hover-color:            $pagination-color;
 $pagination-hover-bg:               $pagination-bg;
 $pagination-hover-border-color:     $pagination-border-color;
 
-$pagination-active-color:           theme-color('primary');
+$pagination-active-color:           theme-color("primary");
 $pagination-active-bg:              $pagination-bg;
 $pagination-active-border-color:    $pagination-border-color;
 
@@ -676,8 +678,8 @@ $modal-inner-padding:         1.875rem;
 //$modal-content-bg:               $white !default;
 $modal-content-border-color:     none;
 //$modal-content-border-width:     $border-width !default;
-$modal-content-box-shadow-xs:    1px 2px 3px 0 rgba(108, 134, 142, 0.3);
-$modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+$modal-content-box-shadow-xs:    1px 2px 3px 0 rgba(108, 134, 142, .3);
+$modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, .3);
 
 //$modal-backdrop-bg:           $black !default;
 //$modal-backdrop-opacity:      .5 !default;
@@ -728,9 +730,9 @@ $list-group-border-color:           $light-gray;
 $list-group-item-padding-y:         $input-padding-y;
 $list-group-item-padding-x:         $input-padding-x;
 
-$list-group-hover-bg:               theme-color-hover('primary');
+$list-group-hover-bg:               theme-color-hover("primary");
 //$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg:              theme-color-hover('primary');
+$list-group-active-bg:              theme-color-hover("primary");
 //$list-group-active-border-color:    $list-group-active-bg !default;
 
 $list-group-disabled-color:         $light-gray;

@@ -48,10 +48,6 @@ $md-checkmark-color: $white !default;
       @include border-radius(2px);
       @include transition(background .3s);
     }
-
-    &::after {
-      // checkmark
-    }
   }
 
   [type="checkbox"] {

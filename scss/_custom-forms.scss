@@ -45,7 +45,7 @@
       $color: map-get($theme-colors, "primary");
       @include ps-button-variant(
         $color,
-                      $color,
+        $color,
                       theme-color-hover($color),
                       theme-color-hover($color),
                       theme-color-active($color),

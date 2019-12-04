@@ -46,11 +46,11 @@
       @include ps-button-variant(
         $color,
         $color,
-                      theme-color-hover($color),
-                      theme-color-hover($color),
-                      theme-color-active($color),
-                      theme-color-active($color),
-                      $color
+        theme-color-hover($color),
+        theme-color-hover($color),
+        theme-color-active($color),
+        theme-color-active($color),
+        $color
       );
     }
   }

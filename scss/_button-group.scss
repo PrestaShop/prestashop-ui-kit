@@ -6,21 +6,20 @@
 
     // add spacing between button and dropdown button in split dropdown buttons,
     // except on outline buttons (which already have a border separating them)
-    &:not([class*='outline']) {
+    &:not([class*="outline"]) {
       margin-left: $border-width;
     }
 
     // increased horizontal spacing on the dropdown button of large split dropdowns
     &.btn-lg {
-      padding-right: 0.563rem;
-      padding-left: 0.563rem;
+      padding-right: .563rem;
+      padding-left: .563rem;
     }
   }
 
   // collapse borders on split buttons with outline
-  .btn.dropdown-toggle-split[class*='outline'] {
+  .btn.dropdown-toggle-split[class*="outline"] {
     margin-left: -$border-width;
   }
 }
-
 

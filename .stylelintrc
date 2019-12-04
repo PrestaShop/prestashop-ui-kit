@@ -18,6 +18,7 @@
         "ignore": "local"
       }
     ],
-    "unicode-bom": "never"
+    "unicode-bom": "never",
+    "indentation": 2
   }
 }

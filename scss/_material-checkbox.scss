@@ -86,8 +86,6 @@ $md-checkmark-color: $white !default;
         border-right-style: none;
 
         transform: rotate(-45deg);
-
-        /*! @noflip */ // for RTL compatibility
       }
     }
   }

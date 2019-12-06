@@ -1,10 +1,10 @@
 $component-name: alert !default;
 
 .#{$component-name} {
-  padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
+  padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
   background-color: $white;
   position: relative;
-  color: $body-color;
+  color: $gray-700;
   @include border-radius(5px);
 
   &::before {
@@ -12,8 +12,7 @@ $component-name: alert !default;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    width: 2.875rem;
+    left: 15px;
     height: 100%;
     text-align: center;
     font-size: 1.563rem;
@@ -24,9 +23,9 @@ $component-name: alert !default;
 
   &.toast {
     box-shadow: 0 8px 16px 0 rgba(black, 0.1);
-    padding: 15px;
     display: flex;
     align-items: center;
+    padding: 15px;
     justify-content: space-between;
 
     &::before {
@@ -37,13 +36,12 @@ $component-name: alert !default;
       color: $white;
     }
 
-    a {
-      font-weight: 600;
-    }
-
     .close {
       margin-right: 0;
-      margin-left: 20px;
+    }
+
+    a {
+      font-weight: 600;
     }
 
     &-fixed-right,
@@ -61,6 +59,10 @@ $component-name: alert !default;
     &-fixed-right {
       right: 10vh;
     }
+  }
+
+  .close {
+    margin-left: 20px;
   }
 
   .close {
@@ -127,7 +129,8 @@ $component-name: alert !default;
 
 @each $color, $value in $theme-alerts-icons {
   .#{$component-name}-#{$color} {
-    border-color: theme-color($color);
+    background-color: theme-color-background($color);
+    border: none;
 
     &.toast {
       background: theme-color($color);
@@ -143,7 +146,6 @@ $component-name: alert !default;
 
     &::before {
       content: $value;
-      background-color: theme-color-background($color);
       color: theme-color($color);
     }
 

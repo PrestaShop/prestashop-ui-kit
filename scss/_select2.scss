@@ -4,27 +4,56 @@ $component-name: select2 !default;
   .#{$component-name} {
     &-dropdown {
       padding: $input-padding-x $input-padding-y;
-      @include border-radius(0);
+      border-top: 1px solid;
+      border-color: $gray-300;
+      padding: 0;
     }
 
     &-search--dropdown {
-      padding: 0;
+      padding: 10px;
       margin-bottom: $input-padding-x;
+      background: $gray-250;
+
+      .#{$component-name}-search__field {
+        background: white;
+        border: 1px solid $gray-300;
+        @include border-radius(4px);
+      }
+    }
+
+    &-results {
+      &__option {
+        &:hover {
+          color: $primary;
+          background: rgba($primary, .1);
+        }
+
+        &:focus,
+        &:active {
+          background: $primary;
+          color: white;
+        }
+      }
     }
 
     &-selection--single {
       height: $input-height;
       padding: $input-padding-x $input-padding-y;
       cursor: default;
+      border-color: $gray-300;
+      padding-left: 15px;
+      @include border-radius(4px);
 
       .#{$component-name}-selection__arrow {
         margin-right: .625rem;
+        right: 15px;
 
         b {
           width: auto;
           height: auto;
           font-size: 0;
           border: none;
+          margin-top: 0;
 
           &::after {
             @include material-icon("expand_more");
@@ -34,10 +63,7 @@ $component-name: select2 !default;
             vertical-align: middle;
             border: none;
             @include transition(.15s ease-out);
-
-            @at-root .#{$component-name}-container--open .#{$component-name}-selection__arrow b::after {
-              transform: rotate(-180deg);
-            }
+            color: $gray-600;
           }
         }
       }
@@ -50,6 +76,16 @@ $component-name: select2 !default;
 
     &-results {
       padding: 0;
+    }
+  }
+
+  &.#{$component-name}-container--open {
+    .#{$component-name}-selection__arrow b::after {
+      transform: rotate(-180deg);
+    }
+
+    .#{$component-name}-selection {
+      border-color: $gray-300;
     }
   }
 }

@@ -18,6 +18,9 @@
 @import "~select2/src/scss/core.scss";
 @import "~jquery.growl/stylesheets/jquery.growl.css";
 
+// Utils
+@import "utils/animations";
+
 // Components
 @import "type";
 @import "alerts";

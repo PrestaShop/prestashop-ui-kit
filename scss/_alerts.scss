@@ -1,8 +1,11 @@
-.alert {
+$component-name: alert !default;
+
+.#{$component-name} {
   padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
   background-color: $white;
   position: relative;
   color: $body-color;
+  @include border-radius(5px);
 
   &::before {
     @include use-material-icon();
@@ -17,6 +20,55 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+
+  &.toast {
+    box-shadow: 0 8px 16px 0 rgba(black, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before {
+      content: none;
+    };
+
+    p, a {
+      color: $white;
+    }
+
+    a {
+      font-weight: 600;
+    }
+
+    .close {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+
+    &-fixed-right,
+    &-fixed-left {
+      position: fixed;
+      bottom: 20px;
+      animation-name: fromTop;
+      animation-duration: .5s;
+    }
+
+    &-fixed-left {
+      left: 10vh;
+    }
+
+    &-fixed-right {
+      right: 10vh;
+    }
+  }
+
+  .close {
+    line-height: 0.8;
+  }
+
+  & &-action {
+    margin-left: 15px;
   }
 
   p,
@@ -58,7 +110,7 @@
       }
     }
 
-    .alert-more {
+    .#{$component-name}-more {
       color: $medium-gray;
       padding: {
         top: 1.375rem;
@@ -73,70 +125,33 @@
   }
 }
 
-.alert-info {
-  border-color: theme-color('info');
+@each $color, $value in $theme-alerts-icons {
+  .#{$component-name}-#{$color} {
+    border-color: theme-color($color);
 
-  &::before {
-    content: '\E88F';
-    background-color: theme-color-background('info');
-    color: theme-color('info')
-  }
+    &.toast {
+      background: theme-color($color);
+      color: $white;
 
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus {
-    color: theme-color('info')
-  }
-}
+      .close,
+      &.expandable-alert .read-more,
+      &.expandable-alert .read-more:hover,
+      &.expandable-alert .read-more:focus {
+        color: $white;
+      }
+    }
 
-.alert-success {
-  border-color: theme-color('success');
+    &::before {
+      content: $value;
+      background-color: theme-color-background($color);
+      color: theme-color($color);
+    }
 
-  &::before {
-    content: '\E5CA';
-    background-color: theme-color-background('success');
-    color: theme-color('success')
-  }
-
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus {
-    color: theme-color('success')
-  }
-}
-
-.alert-warning {
-  border-color: theme-color('warning');
-
-  &::before {
-    content: '\E001';
-    background-color: theme-color-background('warning');
-    color: theme-color('warning')
-  }
-
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus  {
-    color: theme-color('warning')
-  }
-}
-
-.alert-danger {
-  border-color: theme-color('danger');
-
-  &::before {
-    content: '\E001';
-    background-color: theme-color-background('danger');
-    color: theme-color('danger');
-  }
-
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus  {
-    color: theme-color('danger');
+    .close,
+    &.expandable-alert .read-more,
+    &.expandable-alert .read-more:hover,
+    &.expandable-alert .read-more:focus  {
+      color: theme-color($color);
+    }
   }
 }

@@ -2,6 +2,7 @@
 $white:    #fff;
 $gray-100: #fafbfc;
 $gray-200: #fafbfc;
+$gray-250: #fafbfc;
 $gray-300: #bbcdd2;
 $gray-400: #bbcdd2;
 $gray-500: #6c868e;
@@ -58,6 +59,13 @@ $theme-colors: (
   "dark":       $dark
 );
 
+$theme-alerts-icons: (
+  success: '\E5CA',
+  info: '\E88F',
+  warning: '\E001',
+  danger: '\E001'
+);
+
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
@@ -105,7 +113,7 @@ $theme-colors-shadow: (
 
 // Options
 $enable-caret:              true !default;
-$enable-rounded:            false;
+$enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;

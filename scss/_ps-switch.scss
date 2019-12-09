@@ -1,77 +1,149 @@
 // on-off switch control
 .ps-switch {
-  position: relative;
-  display: inline-block;
-  min-width: 8.125rem;
-  margin-top: 3px;
-  font-size: 0.813rem;
-  background-color: #eff1f2;
-  border-radius: 1px;
-  text-align: center;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 20px;
 
-  input {
-    position: absolute;
-    opacity: 0;
+    &-nolabel {
+        label {
+            display: none;
+        }
+    }
 
-    &:disabled {
-      + label {
-        cursor: not-allowed;
-      }
+    label {
+        position: absolute;
+        left: 0;
+        padding-left: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        opacity: 0;
+    }
 
-      &:checked + label {
-        background-color: $light-gray;
-      }
+    .slide-button {
+        width: 35px;
+        height: 20px;
+        display: block;
+        @include border-radius(1000px);
+        transition: .25s ease-out;
+        position: relative;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+
+        &::after {
+            content: "";
+            height: calc(100% - 4px);
+            width: 46%;
+            background: $white;
+            position: absolute;
+            top: 50%;
+            border-radius: 50%;
+            transition: .25s ease-out;
+            transform: translate(2px, -50%);
+        }
+    }
+
+    &-center {
+        .slide-button {
+            margin: auto;
+            position: inherit;
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        cursor: pointer;
+
+        &:disabled {
+            + label {
+                cursor: not-allowed;
+            }
+
+            ~ .slide-button {
+                opacity: .2;
+            }
+        }
+
+        &:checked {
+            z-index: 0;
+        }
+
+        &:first-of-type:checked {
+            ~ label:first-of-type {
+                opacity: 1;
+            }
+
+            &:disabled ~ label:first-of-type {
+                opacity: .2;
+            }
+
+            ~ .slide-button {
+                background: $gray-250;
+            }
+        }
+
+        &:last-of-type:checked {
+            ~ label:last-of-type {
+                opacity: 1;
+            }
+
+            &:disabled ~ label:last-of-type {
+                opacity: .2;
+            }
+
+            ~ .slide-button {
+                background: $success;
+
+                &::after {
+                    transform: translate(17px, -50%);
+                }
+            }
+        }
+    }
+
+    &.ps-switch-sm {
+      min-width: 6.250rem;
+      font-size: $font-size-sm;
+      height: 15px;
+
+        label {
+            padding-left: 40px;
+        }
+
+        .slide-button {
+            width: 30px;
+            height: 15px;
+
+            &::after {
+                width: 37%;
+            }
+        }
+    }
+
+    &.ps-switch-lg {
+        font-size: $font-size-lg;
+        height: 30px;
+
+        label {
+            padding-left: 65px;
+        }
+
+        .slide-button {
+            width: 55px;
+            height: 30px;
+        }
+
+        input:last-of-type:checked ~ .slide-button {
+            &::after {
+                transform: translate(28px, -50%);
+            }
+        }
     }
   }
-
-  label {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 50%;
-    height: 100%;
-    padding: 0.231em 0.769em; // relative to current font size, so 'em'
-    margin: 0;
-    vertical-align: middle;
-    text-align: center;
-    text-transform: uppercase;
-    color: $light-gray;
-    font-weight: 400;
-    cursor: pointer;
-    transition: color 0.2s ease-out;
-  }
-
-  // color for the currently selected label
-  input:checked + label {
-    color: $white;
-  }
-
-  // color for "off"
-  > .slide-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    z-index: 1;
-    width: 50%;
-    height: 100%;
-    color: #fff;
-    background-color: #c05c67;
-    transition: all .3s ease-out;
-  }
-
-  // color for "on"
-  input:last-of-type:checked ~ .slide-button {
-    background-color: #2eacce;
-    left: 50%;
-  }
-
-  &.ps-switch-sm {
-    min-width: 6.250rem;
-    font-size: $font-size-sm;
-  }
-
-  &.ps-switch-lg {
-    font-size: $font-size-lg;
-  }
-}

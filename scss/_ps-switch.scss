@@ -3,7 +3,7 @@
     display: block;
     position: relative;
     width: 100%;
-    height: 20px;
+    height: 21px;
 
     &-nolabel {
         label {
@@ -23,7 +23,7 @@
 
     .slide-button {
         width: 35px;
-        height: 20px;
+        height: 21px;
         display: block;
         @include border-radius(1000px);
         transition: .25s ease-out;
@@ -111,7 +111,7 @@
     &.ps-switch-sm {
       min-width: 6.250rem;
       font-size: $font-size-sm;
-      height: 15px;
+      height: 16px;
 
         label {
             padding-left: 40px;
@@ -119,7 +119,7 @@
 
         .slide-button {
             width: 30px;
-            height: 15px;
+            height: 16px;
 
             &::after {
                 width: 37%;

@@ -5,8 +5,10 @@ $gray-200: #fafbfc;
 $gray-300: #bbcdd2;
 $gray-400: #bbcdd2;
 $gray-500: #6c868e;
+$gray-550: #708090;
 $gray-600: #6c868e;
 $gray-700: #363a41;
+$gray-750: #363A41;
 $gray-800: #363a41;
 $gray-900: #282b30;
 $black:    #000;
@@ -105,7 +107,7 @@ $theme-colors-shadow: (
 
 // Options
 $enable-caret:              true !default;
-$enable-rounded:            false;
+$enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
@@ -596,8 +598,8 @@ $jumbotron-bg:                      $extra-light-gray;
 // Cards
 //$card-spacer-y:                     .75rem !default;
 //$card-spacer-x:                     1.25rem !default;
-//$card-border-width:                 $border-width !default;
-//$card-border-radius:                $border-radius !default;
+$card-border-width:                 0 !default;
+$card-border-radius:                5px !default;
 $card-border-color:                 $light-gray;
 //$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 //$card-cap-bg:                       rgba($black, .03) !default;

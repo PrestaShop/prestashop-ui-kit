@@ -105,7 +105,7 @@ $theme-colors-shadow: (
 
 // Options
 $enable-caret:              true !default;
-$enable-rounded:            false;
+$enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
@@ -676,8 +676,8 @@ $modal-inner-padding:         1.875rem;
 //$modal-content-bg:               $white !default;
 $modal-content-border-color:     none;
 //$modal-content-border-width:     $border-width !default;
-$modal-content-box-shadow-xs:    1px 2px 3px 0 rgba(108, 134, 142, 0.3);
-$modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, 0.3);
+$modal-content-box-shadow-xs:    0 8px 16px 0 rgba(0, 0, 0, .1);
+$modal-content-box-shadow-sm-up: 0 8px 16px 0 rgba(0, 0, 0, .1);
 
 //$modal-backdrop-bg:           $black !default;
 //$modal-backdrop-opacity:      .5 !default;

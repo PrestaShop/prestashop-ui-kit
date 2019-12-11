@@ -1,8 +1,8 @@
 .alert {
-  padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
-  background-color: $white;
   position: relative;
+  padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
   color: $body-color;
+  background-color: $white;
 
   &::before {
     @include use-material-icon();
@@ -10,19 +10,19 @@
     top: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 2.875rem;
     height: 100%;
-    text-align: center;
     font-size: 1.563rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    text-align: center;
   }
 
   p,
   ul {
-    font-size: $font-size-base;
     margin: 0;
+    font-size: $font-size-base;
   }
 
   > * {
@@ -66,77 +66,77 @@
       }
 
       p {
-        color: inherit;
         font-size: $font-size-sm;
+        color: inherit;
       }
     }
   }
 }
 
 .alert-info {
-  border-color: theme-color('info');
+  border-color: theme-color("info");
 
   &::before {
-    content: '\E88F';
-    background-color: theme-color-background('info');
-    color: theme-color('info')
+    color: theme-color("info");
+    content: "\E88F";
+    background-color: theme-color-background("info");
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus {
-    color: theme-color('info')
+    color: theme-color("info");
   }
 }
 
 .alert-success {
-  border-color: theme-color('success');
+  border-color: theme-color("success");
 
   &::before {
-    content: '\E5CA';
-    background-color: theme-color-background('success');
-    color: theme-color('success')
+    color: theme-color("success");
+    content: "\E5CA";
+    background-color: theme-color-background("success");
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus {
-    color: theme-color('success')
+    color: theme-color("success");
   }
 }
 
 .alert-warning {
-  border-color: theme-color('warning');
+  border-color: theme-color("warning");
 
   &::before {
-    content: '\E001';
-    background-color: theme-color-background('warning');
-    color: theme-color('warning')
+    color: theme-color("warning");
+    content: "\E001";
+    background-color: theme-color-background("warning");
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    color: theme-color('warning')
+    color: theme-color("warning");
   }
 }
 
 .alert-danger {
-  border-color: theme-color('danger');
+  border-color: theme-color("danger");
 
   &::before {
-    content: '\E001';
-    background-color: theme-color-background('danger');
-    color: theme-color('danger');
+    color: theme-color("danger");
+    content: "\E001";
+    background-color: theme-color-background("danger");
   }
 
   .close,
   &.expandable-alert .read-more,
   &.expandable-alert .read-more:hover,
   &.expandable-alert .read-more:focus  {
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
 }

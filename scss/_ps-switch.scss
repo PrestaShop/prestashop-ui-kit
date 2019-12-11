@@ -4,10 +4,10 @@
   display: inline-block;
   min-width: 8.125rem;
   margin-top: 3px;
-  font-size: 0.813rem;
-  background-color: #eff1f2;
-  border-radius: 1px;
+  font-size: .813rem;
   text-align: center;
+  background-color: #eff1f2;
+  @include border-radius(1px);
 
   input {
     position: absolute;
@@ -30,15 +30,15 @@
     float: left;
     width: 50%;
     height: 100%;
-    padding: 0.231em 0.769em; // relative to current font size, so 'em'
+    padding: .231em .769em; // relative to current font size, so 'em'
     margin: 0;
-    vertical-align: middle;
+    font-weight: 400;
+    color: $light-gray;
     text-align: center;
     text-transform: uppercase;
-    color: $light-gray;
-    font-weight: 400;
+    vertical-align: middle;
     cursor: pointer;
-    transition: color 0.2s ease-out;
+    @include transition(color .2s ease-out);
   }
 
   // color for the currently selected label
@@ -51,23 +51,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0;
     z-index: 1;
     width: 50%;
     height: 100%;
+    padding: 0;
     color: #fff;
     background-color: #c05c67;
-    transition: all .3s ease-out;
+    @include transition(all .3s ease-out);
   }
 
   // color for "on"
   input:last-of-type:checked ~ .slide-button {
-    background-color: #2eacce;
     left: 50%;
+    background-color: #2eacce;
   }
 
   &.ps-switch-sm {
-    min-width: 6.250rem;
+    min-width: 6.25rem;
     font-size: $font-size-sm;
   }
 

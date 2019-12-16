@@ -1,0 +1,43 @@
+$component-name: popover;
+
+.#{$component-name} {
+    padding: 5px;
+    background: $gray-700;
+    border: none;
+
+    & &-header,
+    & &-body {
+        color: #ffffff;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    &.bs-popover-right .arrow {
+        &::before,
+        &::after {
+            border-right-color: $gray-700;
+        }
+    }
+
+    &.bs-popover-left .arrow {
+        &::before,
+        &::after {
+            border-left-color: $gray-700;
+        }
+    }
+
+    &.bs-popover-bottom .arrow {
+        &::before,
+        &::after {
+            border-bottom-color: $gray-700;
+        }
+    }
+
+    &.bs-popover-top .arrow {
+        &::before,
+        &::after {
+            border-top-color: $gray-700;
+        }
+    }
+}

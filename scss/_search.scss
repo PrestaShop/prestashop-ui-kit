@@ -1,0 +1,13 @@
+$component-name: search;
+
+.#{$component-name} {
+    &.input-group {
+        .#{$component-name}-input {
+            padding: 0 15px;
+
+            &:focus {
+                border-color: $primary;
+            }
+        }
+    }
+}

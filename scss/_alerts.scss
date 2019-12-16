@@ -63,9 +63,6 @@ $component-name: alert !default;
 
   .close {
     margin-left: 20px;
-  }
-
-  .close {
     line-height: 0.8;
   }
 
@@ -98,10 +95,20 @@ $component-name: alert !default;
   }
 
   &.expandable-alert {
+    &::before {
+      height: 45px;
+    }
+
     .read-more {
       @extend .close;
       font-size: $font-size-base;
       line-height: 1.375rem;
+      float: inherit;
+      color: $primary;
+
+      &-container {
+        text-align: right;
+      }
 
       &:hover {
         opacity: 1;
@@ -148,12 +155,14 @@ $component-name: alert !default;
       content: $value;
       color: theme-color($color);
     }
+    .close {
+      color: theme-color($color);
+    }
 
-    .close,
     &.expandable-alert .read-more,
     &.expandable-alert .read-more:hover,
     &.expandable-alert .read-more:focus  {
-      color: theme-color($color);
+      color: $gray-900;
     }
   }
 }

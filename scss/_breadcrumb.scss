@@ -3,14 +3,14 @@
   font-size: 0.75rem;
 
   li {
-
     & + li:before {
       padding-right: 0;
       padding-left: 0.1875rem;
     }
 
     > a {
-      color: $dark-gray;
+      color: $primary;
+      font-weight: 600;
 
       &:hover {
         @extend a:hover;

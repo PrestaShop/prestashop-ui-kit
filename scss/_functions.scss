@@ -1,16 +1,16 @@
-@function theme-color-hover($key: 'primary') {
+@function theme-color-hover($key: "primary") {
   @return map-get($theme-colors-hover, $key);
 }
 
-@function theme-color-active($key: 'primary') {
+@function theme-color-active($key: "primary") {
   @return map-get($theme-colors-active, $key);
 }
 
-@function theme-color-background($key: 'primary') {
+@function theme-color-background($key: "primary") {
   @return map-get($theme-colors-background, $key);
 }
 
-@function theme-color-shadow($key: 'primary') {
+@function theme-color-shadow($key: "primary") {
   @return map-get($theme-colors-shadow, $key);
 }
 

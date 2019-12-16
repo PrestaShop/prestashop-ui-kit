@@ -1,4 +1,4 @@
-$icon-margin-left: .5rem;
+$icon-margin-left: .5rem !default;
 
 .ps-sortable-column {
 
@@ -12,15 +12,15 @@ $icon-margin-left: .5rem;
   .ps-sort {
     @include use-material-icon();
     align-self: flex-end;
-    margin-left: $icon-margin-left;
     margin-bottom: .125rem;
-    opacity: 0;
-    color: $gray-500;
-    transition: all .2s;
+    margin-left: $icon-margin-left;
     font-size: 1rem;
+    color: $gray-500;
+    opacity: 0;
+    @include transition(all .2s);
     transform: rotate(90deg);
 
-    &:before {
+    &::before {
       content: "code";
     }
   }
@@ -28,15 +28,15 @@ $icon-margin-left: .5rem;
   // current sorted column
   &[data-sort-is-current] {
     .ps-sort {
-      opacity: 1;
+      font-weight: 700;
       color: $primary;
+      opacity: 1;
       transform: rotate(0deg);
-      font-weight: bold;
     }
 
     &[data-sort-direction="asc"] {
       .ps-sort {
-        &:before {
+        &::before {
           content: "keyboard_arrow_up";
         }
       }
@@ -44,7 +44,7 @@ $icon-margin-left: .5rem;
 
     &[data-sort-direction="desc"] {
       .ps-sort {
-        &:before {
+        &::before {
           content: "keyboard_arrow_down";
         }
       }
@@ -78,8 +78,8 @@ $icon-margin-left: .5rem;
 
     &:hover {
       > .ps-sort {
-        height: initial;
         width: initial;
+        height: initial;
         margin-left: $icon-margin-left;
       }
     }

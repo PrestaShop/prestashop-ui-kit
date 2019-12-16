@@ -1,11 +1,12 @@
 // Redefine Select2 vars for bootstrap (issue from bootstrap alpha, not final variable of BS4..)
+/* stylelint-disable */
 $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
 
-$btn-default-bg: theme-color-background('primary');
+$btn-default-bg: theme-color-background("primary");
 $btn-default-border: $border-color;
-$btn-default-color: theme-color('primary');
+$btn-default-color: theme-color("primary");
 
 $caret-width-base: $caret-width;
 $caret-width-large: $caret-width;
@@ -31,11 +32,11 @@ $input-height-base: $input-height;
 $input-height-large: $input-height-lg;
 $input-height-small: $input-height-sm;
 
-$state-warning-text: theme-color('warning');
-$state-danger-text: theme-color('danger');
-$state-success-text: theme-color('success');
+$state-warning-text: theme-color("warning");
+$state-danger-text: theme-color("danger");
+$state-success-text: theme-color("success");
 
-$screen-sm-min: map-get($grid-breakpoints, 'sm');
+$screen-sm-min: map-get($grid-breakpoints, "sm");
 
 
 // Now customise!

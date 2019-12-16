@@ -10,13 +10,13 @@
 
   // use material icons for dropdown and dropup
   &::after {
-    @include material-icon('expand_more');
-    border: none;
+    @include material-icon("expand_more");
     display: inline-block;
-    vertical-align: middle;
     width: auto;
     line-height: 0;
     transition: .15s ease-out;
+    vertical-align: middle;
+    border: none;
   }
 }
 
@@ -24,15 +24,15 @@
 .dropup {
   .dropdown-toggle {
     &::after {
-      content: 'expand_less';
+      content: "expand_less";
     }
   }
 }
 
 // add a bigger margin between the text and the dropdown icon
 .dropdown-toggle:not(.dropdown-toggle-split) {
-  &:after {
-    margin-left: 0.625rem;
+  &::after {
+    margin-left: .625rem;
   }
 }
 
@@ -47,19 +47,19 @@
   margin: 0.125rem -.1px 0;
 
   .material-icons {
-    color: $medium-gray;
+    padding-right: .5rem;
     font-size: 1.125rem;
+    color: $medium-gray;
     vertical-align: text-bottom;
-    padding-right: 0.5rem;
   }
 
   > .dropdown-item {
-    color: inherit;
-    line-height: normal;
-    border-bottom: 0;
-    padding: 0.375rem 0.938rem {
+    padding: .375rem .938rem{
       right: 1.5rem;
-    };
+    }
+    line-height: normal;
+    color: inherit;
+    border-bottom: 0;
 
     &:hover {
       color: $white;
@@ -72,6 +72,6 @@
   }
 
   > .dropdown-divider {
-    margin: 0.313rem 0;
+    margin: .313rem 0;
   }
 }

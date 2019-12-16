@@ -1,18 +1,18 @@
 .spinner {
-  color: $white;
-  background-color: $white;
+  display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 2.5rem;
-  border-right-color: theme-color('primary');
-  border-bottom-color: theme-color('primary');
-  border-width: .1875rem;
-  border-style: solid;
   font-size: 0;
-  outline: none;
-  display: inline-block;
-  border-left-color: $light-gray;
+  color: $white;
+  background-color: $white;
+  border-style: solid;
+  border-width: .1875rem;
   border-top-color: $light-gray;
+  border-right-color: theme-color("primary");
+  border-bottom-color: theme-color("primary");
+  border-left-color: $light-gray;
+  @include border-radius(2.5rem);
+  outline: none;
   animation: rotating 2s linear infinite;
 }
 
@@ -23,24 +23,11 @@
   }
 }
 
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes rotating {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }

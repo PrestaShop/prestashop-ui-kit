@@ -3,11 +3,7 @@
   font-size: .75rem;
 
   li {
-<<<<<<< HEAD
     & + li::before {
-=======
-    & + li:before {
->>>>>>> 88e983d... Adjusting bootstrap breadcrumb
       padding-right: 0;
       padding-left: .1875rem;
     }

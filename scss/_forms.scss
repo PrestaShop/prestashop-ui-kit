@@ -23,6 +23,13 @@
 .form-control {
   padding: .375rem .4375rem;
 
+  &[type="text"] {
+    &:hover,
+    &:focus {
+      background: $primary-lighten;
+    }
+  }
+
   &.disabled,
   :disabled {
     color: $medium-gray;
@@ -52,8 +59,8 @@
     @include material-icon("\E876");
     position: absolute;
     right: .3125rem;
-    bottom: 1.813rem;
-    font-size: 1.438rem;
+    bottom: 1.8rem;
+    font-size: 1rem;
     font-weight: $font-weight-normal;
     vertical-align: middle;
   }
@@ -82,7 +89,7 @@
 .has-danger {
   &::after {
     color: theme-color("danger");
-    content: "\E001";
+    content: "\E000";
   }
 }
 

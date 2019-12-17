@@ -1,23 +1,23 @@
 .btn {
-  border-width: $border-width;
   font-weight: $font-weight-semibold;
-  border-radius: $btn-border-radius;
   white-space: nowrap;
+  border-width: $border-width;
+  @include border-radius($btn-border-radius);
 
-  @include hover-focus {
+  @include hover-focus () {
     cursor: pointer;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: 1;
     cursor: not-allowed;
+    opacity: 1;
   }
 
   > .material-icons {
+    margin-top: -.083em;
     font-size: 1.4em;
-    margin-top: -0.083em;
   }
 }
 

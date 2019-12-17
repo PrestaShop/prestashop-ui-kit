@@ -1,8 +1,9 @@
 /**
- * When there's only one file it displays name. However if there are more files it displays the text, which is retrieved
- * by pluralisation rules according to file count.
+ * Permit to create an input number element as PrestaShop wants it
  *
- * @param {string} selector
+ * @param {DOM Element Object} element
+ * @method validate
+ * @method updateValue
  * @returns {Object}
  */
 const PSNumberInput = function(element) {
@@ -81,10 +82,10 @@ const PSNumberInput = function(element) {
 };
 
 /**
- * When there's only one file it displays name. However if there are more files it displays the text, which is retrieved
- * by pluralisation rules according to file count.
+ * Permit to init every PSInputNumber object on the page
  *
  * @param {string} selector
+ * @method init
  * @returns {Object}
  */
 const PSNumbers = function(selector) {

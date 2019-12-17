@@ -15,13 +15,24 @@ const PSNumberInput = function PSNumberInput(element) {
     this.incrementButton = element.querySelector('.ps-number-increment');
     this.decrementButton = element.querySelector('.ps-number-decrement');
     this.input = element.querySelector('input');
-    this.value = Number(this.input.value);
     this.invalidElement = element.querySelector('.invalid-feedback');
+
+    this.initValue = () => {
+        if(this.input.value.replace('.', '') !== this.input.value || this.input.value.replace(',', '') !== this.input.value) {
+            this.value = parseInt(this.input.value.replace(',', '') !== this.input.value ? this.input.value.replace(',', '.') : this.input.value);
+        }else {
+            this.value = Number(this.input.value);
+        }
+    }
+
+    this.initValue();
 
     this.validate = () => {
       const maxCond = this.value > this.max;
       const minCond = this.value < this.min;
-      const checkNumber = Number.isNaN(this.value);
+      let checkNumber;
+
+      checkNumber = Number.isNaN(this.value);
 
       if (!maxCond && !minCond && !checkNumber) {
         this.invalidElement.classList.remove('show');
@@ -72,17 +83,17 @@ const PSNumberInput = function PSNumberInput(element) {
     });
 
     this.input.addEventListener('keyup', () => {
-      this.value = Number(this.input.value);
+      this.initValue();
       this.validate();
     });
 
     this.input.addEventListener('cut', () => {
-      this.value = Number(this.input.value);
+      this.initValue();
       this.validate();
     });
 
     this.input.addEventListener('paste', () => {
-      this.value = Number(this.input.value);
+      this.initValue();
       this.validate();
     });
 };

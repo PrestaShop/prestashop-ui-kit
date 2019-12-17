@@ -7,19 +7,19 @@ import PSNumberInput from './ps-number-input.js';
  * @method init
  * @returns {Object}
  */
-const PSNumbers = function(selector) {
+const PSNumbers = function PSNumbers(selector) {
     this.selector = selector;
     this.arrayInputs = [];
-
+  ​
     this.init = () => {
-        document.querySelectorAll(selector).forEach((e) => {
-            this.arrayInputs.push(new PSNumberInput(e));
-        })
-    }
-
+      document.querySelectorAll(selector).forEach((e) => {
+        this.arrayInputs.push(new PSNumberInput(e));
+      });
+    };
+  ​
     this.init();
-
+  ​
     return this.arrayInputs;
-}
+};
 
 export default PSNumbers;

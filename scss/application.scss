@@ -4,7 +4,7 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";// Imports & variables PS
+@import "~bootstrap/scss/bootstrap"; // Imports & variables PS
 
 // Mixins
 @import "mixins/fonts";
@@ -45,6 +45,7 @@
 @import "ps-switch";
 @import "ps-sortable-columns";
 @import "ps-dropdown";
+@import "ps-number";
 @import "tables";
 @import "spinners";
 @import "material-checkbox";

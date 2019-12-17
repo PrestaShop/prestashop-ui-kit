@@ -23,7 +23,8 @@
 .form-control {
   padding: .375rem .4375rem;
 
-  &[type="text"] {
+  &[type="text"],
+  &[type="number'] {
     &:hover,
     &:focus {
       background: $primary-lighten;

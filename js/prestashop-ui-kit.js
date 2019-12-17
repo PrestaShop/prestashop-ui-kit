@@ -4,7 +4,7 @@ import 'select2';
 import 'jquery.growl';
 import 'pstagger';
 import initInputFile from './components/file-input.js';
-import PSNumbers from './components/number-input.js';
+import PSNumbers from './components/ps-numbers.js';
 
 $.fn.pstooltip = $.fn.tooltip;
 

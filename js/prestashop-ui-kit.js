@@ -4,6 +4,7 @@ import 'select2';
 import 'jquery.growl';
 import 'pstagger';
 import initInputFile from './components/file-input.js';
+import PSNumbers from './components/number-input.js';
 
 $.fn.pstooltip = $.fn.tooltip;
 
@@ -167,6 +168,7 @@ $.fn.pstooltip = $.fn.tooltip;
         initToolTips();
         initSearchBar();
         initInputFile();
+        new PSNumbers('.ps-number');
       });
     },
 

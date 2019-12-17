@@ -17,16 +17,16 @@ const PSNumberInput = function PSNumberInput(element) {
     this.input = element.querySelector('input');
     this.value = Number(this.input.value);
     this.invalidElement = element.querySelector('.invalid-feedback');
-  ​
+
     this.validate = () => {
       const maxCond = this.value > this.max;
       const minCond = this.value < this.min;
       const checkNumber = Number.isNaN(this.value);
-  ​
+
       if (!maxCond && !minCond && !checkNumber) {
         this.invalidElement.classList.remove('show');
         this.input.classList.remove('is-invalid');
-  ​
+
         return true;
       }
 
@@ -34,47 +34,53 @@ const PSNumberInput = function PSNumberInput(element) {
         this.invalidElement.classList.add('show');
         this.input.classList.add('is-invalid');
       }
-  ​
+
       if (checkNumber) {
         this.invalidElement.innerHTML = this.labelNan;
-  ​
+
         return false;
       }
-  ​
+
       this.invalidElement.innerHTML = `${maxCond ? this.labelMax : this.labelMin} ${maxCond ? this.max : this.min}.`;
-  ​
+
       return false;
     };
-  ​
+
     this.updateValue = (increment) => {
-      if (increment) {
-        this.value += 1;
+      const checkNumber = Number.isNaN(this.value);
+
+      if (checkNumber) {
+        this.value = 0;
       } else {
-        this.value -= 1;
+        if (increment) {
+          this.value += 1;
+        } else {
+          this.value -= 1;
+        }
       }
-  ​
+
       this.input.value = this.value;
       this.validate();
     };
-  ​
+
     this.incrementButton.addEventListener('click', () => {
       this.updateValue(true);
     });
-  ​
+
     this.decrementButton.addEventListener('click', () => {
       this.updateValue(false);
     });
-  ​
+
     this.input.addEventListener('keyup', () => {
       this.value = Number(this.input.value);
       this.validate();
     });
-  ​
+
     this.input.addEventListener('cut', () => {
       this.value = Number(this.input.value);
       this.validate();
     });
-  ​
+
     this.input.addEventListener('paste', () => {
       this.value = Number(this.input.value);
       this.validate();

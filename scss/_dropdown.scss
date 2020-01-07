@@ -2,6 +2,12 @@
 .dropup .dropdown-toggle {
   padding-right: $input-btn-padding-x * .75;
 
+  &[aria-expanded="true"] {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+
   // use material icons for dropdown and dropup
   &::after {
     @include material-icon("expand_more");
@@ -10,6 +16,7 @@
     line-height: 0;
     vertical-align: middle;
     border: none;
+    transition: .15s ease-out;
   }
 }
 
@@ -30,12 +37,14 @@
 }
 
 .dropdown-menu {
-  min-width: 15.625rem;
-  padding: .313rem 0;
-
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
   color: #576c72;
-  border: solid $border-width #bbcdd2;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+  padding: 1px 0 0;
+  box-sizing: border-box;
+  min-width: 8.625rem;
+  border: 1px solid $primary;
+  margin: 0.125rem -.1px 0;
+  padding-bottom: 1px;
 
   .material-icons {
     padding-right: .5rem;
@@ -51,8 +60,21 @@
     line-height: normal;
     color: inherit;
     border-bottom: 0;
+    padding: 0.438rem 0.938rem {
+      right: 1rem;
+    };
 
     &:hover {
+      color: $primary;
+      background-color: $light-blue;
+
+      .material-icons {
+        color: $primary;
+      }
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
       color: $white;
       background-color: $primary;
 
@@ -64,5 +86,26 @@
 
   > .dropdown-divider {
     margin: .313rem 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  .btn-outline-#{$color} {
+    + .dropdown-menu {
+      border: 1px solid $value;
+
+      > .dropdown-item {
+        &:hover {
+          color: $value;
+          background-color: rgba($value, .1);
+        }
+
+        &:not([disabled]):not(.disabled):active,
+        &:not([disabled]):not(.disabled).active {
+          background-color: $value;
+        }
+      }
+    }
   }
 }

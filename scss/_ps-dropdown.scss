@@ -1,5 +1,5 @@
 .ps-dropdown {
-    font-size: 1em;
+    font-size: 14px;
     padding: .188em 0;
     background: #fff;
     width: 100%;
@@ -24,7 +24,7 @@
       flex-grow: 1;
     }
 
-    .arrow-down{
+    .arrow-down {
       font-size: 1.8em;
       position: relative;
       cursor: pointer;
@@ -52,7 +52,7 @@
         border-color: $gray-300;
         border-top: 0;
         box-shadow: inherit;
-      
+
       .dropdown-item {
         cursor: pointer;
         display: flex;
@@ -61,4 +61,3 @@
       }
     }
   }
-  

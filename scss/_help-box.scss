@@ -1,0 +1,11 @@
+$component-name: help-box;
+
+.#{$component-name} {
+    margin: 0 10px;
+    cursor: pointer;
+
+    i {
+        font-size: 14px;
+        color: $primary;
+    }
+}

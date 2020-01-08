@@ -1,6 +1,6 @@
 $md-checkbox-margin: initial !default;
 $md-checkbox-checked-color: $primary !default;
-$md-checkbox-border-color: $gray-300 !default;
+$md-checkbox-border-color: $gray-450 !default;
 $md-checkbox-disabled-opacity: .5 !default;
 
 $md-checkbox-size: 20px !default;
@@ -13,6 +13,7 @@ $md-checkmark-color: $white !default;
   position: relative;
   margin: $md-checkbox-margin;
   text-align: left;
+  margin-bottom: 10px;
 
   &.md-checkbox-inline {
     display: inline-block;

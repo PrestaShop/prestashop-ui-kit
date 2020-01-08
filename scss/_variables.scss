@@ -4,6 +4,7 @@
 $white:    #fff;
 $gray-100: #fafbfc;
 $gray-200: #fafbfc;
+$gray-250: #fafbfc;
 $gray-300: #bbcdd2;
 $gray-400: #bbcdd2;
 $gray-500: #6c868e;
@@ -28,7 +29,7 @@ $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #c05c67;
 $orange:  #fd7e14 !default;
-$yellow:  #cd9321;
+$yellow:  #d9d701;
 $green:   #70b580;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
@@ -62,6 +63,13 @@ $theme-colors: (
   "dark":       $dark
 );
 
+$theme-alerts-icons: (
+  success: '\E5CA',
+  info: '\E88F',
+  warning: '\E002',
+  danger: '\E14B'
+);
+
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
@@ -91,7 +99,7 @@ $theme-colors-background: (
   secondary: $black,
   success: #d6f0d8,
   info: #dff5f9,
-  warning: #fde7bb,
+  warning: #fff8b3,
   danger: #fde1e1,
   light: $gray-200,
   dark: $gray-700

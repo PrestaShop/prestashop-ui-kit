@@ -131,6 +131,12 @@ $form-check-name: form-check;
         }
       }
     }
+
+    input:disabled {
+      ~ .#{$form-check-name}-round {
+        cursor: not-allowed;
+      }
+    }
   }
 
   &-round {

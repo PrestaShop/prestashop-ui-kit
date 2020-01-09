@@ -17,7 +17,7 @@
     &.previous {
       .page-link {
         &::after {
-          content: '\E314';
+          content: "\E314";
         }
       }
     }
@@ -25,7 +25,7 @@
     &.next {
       .page-link {
         &::after {
-          content: '\E315';
+          content: "\E315";
         }
       }
     }
@@ -39,7 +39,7 @@
 .page-link {
   font-weight: $font-weight-normal;
 
-  @include hover-focus {
+  @include hover-focus () {
     text-decoration: underline;
   }
 }
@@ -47,13 +47,13 @@
 // input used to jump to a page
 .pagination .jump-to-page {
   @extend .form-control;
-  color: $pagination-active-color;
-  font-weight: 700;
   width: 3rem;
-  margin-right: 1px; // fixes weird bug where right border disappears
   margin-top: 2px;
+  margin-right: 1px; // fixes weird bug where right border disappears
+  font-weight: 700;
+  color: $pagination-active-color;
 
   &:focus {
-    font-weight: normal;
+    font-weight: 400;
   }
 }

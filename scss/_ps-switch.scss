@@ -14,7 +14,7 @@
     label {
         position: absolute;
         left: 0;
-        padding-left: 45px;
+        padding-left: 2.8rem;
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
@@ -62,9 +62,7 @@
         cursor: pointer;
 
         &:disabled {
-            + label {
-                cursor: not-allowed;
-            }
+            cursor: not-allowed;
 
             ~ .slide-button {
                 opacity: .2;
@@ -114,7 +112,7 @@
       height: 16px;
 
         label {
-            padding-left: 40px;
+            padding-left: 2.5rem;
         }
 
         .slide-button {
@@ -132,7 +130,7 @@
         height: 30px;
 
         label {
-            padding-left: 65px;
+            padding-left: 4.075rem;
         }
 
         .slide-button {

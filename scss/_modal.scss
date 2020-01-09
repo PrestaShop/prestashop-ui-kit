@@ -1,20 +1,59 @@
-.modal-header,
-.modal-body {
-  padding-bottom: 0;
+$component-name: modal !default;
 
-  p:last-child {
+.#{$component-name} {
+  &.show {
+    .#{$component-name}-dialog {
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  &-header {
+    .close {
+      cursor: pointer;
+      font-size: 2rem;
+      padding: 1.25rem;
+      margin: -1.825rem -1.25rem -1.25rem auto;
+
+      i {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &-header,
+  &-body {
+    padding: 1.25rem;
+    padding-bottom: 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    font-size: 1rem;
+  }
+
+  &-content {
+    @include border-radius(6px);
+  }
+
+  &-footer {
+    padding: 1.25rem;
+    padding-top: 1.875rem;
+
+    > :not(:first-child) {
+      margin-right: .3125rem;
+    }
+
+    > :not(:first-child) {
+      margin-left: .3125rem;
+    }
+  }
+
+  &-title {
+    @extend h2;
     margin-bottom: 0;
   }
-}
-
-.modal-header {
-  .close {
-    cursor: pointer;
-    font-size: 2rem;
-  }
-}
-
-.modal-title {
-  @extend h2;
-  margin-bottom: 0;
 }

@@ -1,9 +1,9 @@
 @mixin close-button($margin-right: 0, $color: $medium-gray) {
   .close {
-    color: $color;
     margin-right: $margin-right;
-    opacity: 1;
+    color: $color;
     cursor: pointer;
+    opacity: 1;
 
     .material-icons {
       font-size: 1.125rem;

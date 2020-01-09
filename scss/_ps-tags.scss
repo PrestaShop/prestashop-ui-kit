@@ -2,8 +2,8 @@
   @extend .form-control;
 
   padding: 0;
-  border: $input-btn-border-width solid $input-border-color;
   background-color: $input-bg;
+  border: $input-btn-border-width solid $input-border-color;
 
   // css 4, but nice to have
   &:focus-within {
@@ -20,16 +20,16 @@
   }
 
   .tag {
-    font-size: .75rem;
     display: inline-block;
-    padding: $badge-padding-y/2 $badge-padding-x;
+    padding: ($badge-padding-y / 2) $badge-padding-x;
     margin: 0 $badge-padding-x 0 0;
-    color: theme-color('primary');
+    font-size: .75rem;
+    color: theme-color("primary");
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     @include border-radius();
-    @include badge-variant(theme-color('primary'));
+    @include badge-variant(theme-color("primary"));
 
     &:last-child {
       margin-right: 0;
@@ -37,16 +37,16 @@
 
     > .material-icons {
       margin: 0 0 0 $badge-padding-x;
+      font-size: 1.063rem;
       color: $body-color;
       cursor: pointer;
-      font-size: 1.063rem;
     }
   }
 
-  input[type="text"] {
-    border: none;
-    min-width: 75px;
+  [type="text"] {
     flex-grow: 1;
     width: auto;
+    min-width: 75px;
+    border: none;
   }
 }

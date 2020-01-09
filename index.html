@@ -739,16 +739,10 @@
             <h1>Alerts</h1>
 
             <div class="alert alert-info" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
                 <p class="alert-text">This is a info alert with <a href="#">an example link</a>. Click me to delete</p>
             </div>
 
             <div class="alert alert-success" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
                 <p class="alert-text">This is a success alert with <a href="#">an example link</a>. Click me to delete</p>
             </div>
 
@@ -766,13 +760,7 @@
                 </ul>
             </div>
 
-            <div class="alert expandable-alert alert-danger" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-                <button type="button" class="read-more btn-link" data-toggle="collapse" data-target="#collapseDanger" aria-expanded="false" aria-controls="collapseDanger">
-                    Read more
-                </button>
+            <div class="alert expandable-alert alert-warning" role="alert">
                 <p class="alert-text">Alert with very long text. Closed by default...</p>
                 <div class="alert-more collapse" id="collapseDanger">
                     <p>
@@ -786,6 +774,43 @@
                         volutpat. Quisque ultrices velit nec aliquet tincidunt.
                     </p>
                 </div>
+                <div class="read-more-container">
+                    <button type="button" class="read-more btn-link" data-toggle="collapse" data-target="#collapseDanger" aria-expanded="false" aria-controls="collapseDanger">
+                        Read more
+                    </button>
+                </div>
+            </div>
+
+            <div class="alert alert-success toast" role="alert">
+                <p class="alert-text">This is a success alert with<a href="#" class="alert-action">Configure</a></p>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+
+            <div class="alert alert-danger toast" role="alert">
+                <p class="alert-text">This is a danger alert with<a href="#" class="alert-action">Configure</a></p>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+
+            <div class="alert alert-warning toast" role="alert">
+                <p class="alert-text">This is a warning alert with<a href="#" class="alert-action">Configure</a></p>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
+            </div>
+
+            <div class="alert alert-info toast" role="alert">
+                <p class="alert-text">This is an info alert with<a href="#" class="alert-action">Configure</a></p>
+
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                </button>
             </div>
         </article>
 
@@ -810,7 +835,7 @@
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Library</a></li>
                     <li class="breadcrumb-item"><a href="#">Data</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Bootstrap</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
                 </ol>
             </nav>
         </article>
@@ -906,69 +931,69 @@
             <h3>Buttons with icons</h3>
 
             <button type="button" class="btn btn-primary">
-                <i class="material-icons">ac_unit</i> Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
             <button type="button" class="btn btn-outline-primary">
-                <i class="material-icons">ac_unit</i> Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
             <button type="button" class="btn btn-secondary">
-                <i class="material-icons">ac_unit</i> Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
             <button type="button" class="btn btn-outline-secondary">
-                <i class="material-icons">ac_unit</i> Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
             <button type="button" class="btn btn-primary" disabled>
-                Iceberg <i class="material-icons">ac_unit</i>
+                Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
             <button type="button" class="btn btn-outline-primary" disabled>
-                Iceberg <i class="material-icons">ac_unit</i>
+                Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
             <br><br>
 
             <button type="button" class="btn btn-primary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-primary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-primary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-outline-primary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-primary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-primary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-secondary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-secondary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-secondary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-outline-secondary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-secondary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-secondary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
@@ -1016,6 +1041,19 @@
             <button type="button" class="btn btn-outline-danger">Danger</button>
             <button type="button" class="btn btn-warning">Warning</button>
             <button type="button" class="btn btn-outline-warning">Warning</button>
+
+            <br><br>
+
+            <h3>Button group</h3>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
         </article>
 
         <article id="dropdowns">
@@ -2660,6 +2698,10 @@
             <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on right  (with title)
             </button>
+
+            <span class="help-box" data-container="body" data-toggle="popover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                <i class="material-icons">info</i>
+            </span>
         </article>
 
         <article id="progress">

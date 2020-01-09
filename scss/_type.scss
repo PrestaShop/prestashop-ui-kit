@@ -1,27 +1,24 @@
-a {
-  &.tooltip-link {
-    > .material-icons {
-      color: $medium-gray;
-      vertical-align: middle;
+.tooltip-link {
+  > .material-icons {
+    color: $medium-gray;
+    vertical-align: middle;
 
-      &:hover {
-        color: theme-color('primary');
-      }
+    &:hover {
+      color: theme-color("primary");
     }
   }
+}
 
-  &.external-link {
-    &::before {
-      @include material-icon('\E89E');
-      font-size: 1.20rem;
-      font-weight: $font-weight-normal;
-      margin-right: .125rem;
-      display:inline-block;
-      vertical-align: middle;
-      text-decoration: none;
-    }
+.external-link {
+  &::before {
+    @include material-icon("\E89E");
+    display: inline-block;
+    margin-right: .125rem;
+    font-size: 1.2rem;
+    font-weight: $font-weight-normal;
+    text-decoration: none;
+    vertical-align: middle;
   }
-
 }
 
 .small-text {

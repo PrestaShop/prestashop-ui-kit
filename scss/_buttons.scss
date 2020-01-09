@@ -1,37 +1,59 @@
 .btn {
-  border-width: $border-width;
   font-weight: $font-weight-semibold;
-  border-radius: $btn-border-radius;
   white-space: nowrap;
+  border-width: $border-width;
+  @include border-radius($btn-border-radius);
 
-  @include hover-focus {
+  @include hover-focus () {
     cursor: pointer;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: 1;
     cursor: not-allowed;
+    opacity: 1;
   }
 
   > .material-icons {
-    font-size: 1.4em;
+    font-size: 1.45em;
     margin-top: -0.083em;
+    margin-right: .4em;
+  }
+
+  &-default {
+    @include ps-button-outline-variant(
+      $gray-700,
+      $primary,
+      'default'
+    );
+
+    border-color: $gray-300;
+
+    &:hover {
+      border-color: $gray-300;
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+      color: $white;
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include ps-button-variant(
-      $value,
-      $value,
-      theme-color-hover($color),
-      theme-color-hover($color),
-      theme-color-active($color),
-      theme-color-active($color),
-      $color
-    );
+    @if $color != default {
+      @include ps-button-variant(
+        $value,
+        $value,
+        theme-color-hover($color),
+        theme-color-hover($color),
+        theme-color-active($color),
+        theme-color-active($color),
+        $color
+      );
+    }
   }
 }
 

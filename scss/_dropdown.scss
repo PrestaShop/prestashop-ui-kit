@@ -38,7 +38,6 @@
 }
 
 .dropdown-menu {
-  border: solid $border-width #bbcdd2;
   box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
   color: #576c72;
   padding: 1px 0 0;
@@ -46,6 +45,7 @@
   min-width: 8.625rem;
   border: 1px solid $gray-450;
   margin: 0.125rem -.1px 0;
+  padding-bottom: 1px;
 
   .material-icons {
     padding-right: .5rem;
@@ -61,8 +61,21 @@
     line-height: normal;
     color: inherit;
     border-bottom: 0;
+    padding: 0.438rem 0.938rem {
+      right: 1rem;
+    };
 
     &:hover {
+      color: $primary;
+      background-color: $light-blue;
+
+      .material-icons {
+        color: $primary;
+      }
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
       color: $white;
       background-color: $primary;
 
@@ -74,5 +87,26 @@
 
   > .dropdown-divider {
     margin: .313rem 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  .btn-outline-#{$color} {
+    + .dropdown-menu {
+      border: 1px solid $value;
+
+      > .dropdown-item {
+        &:hover {
+          color: $value;
+          background-color: rgba($value, .1);
+        }
+
+        &:not([disabled]):not(.disabled):active,
+        &:not([disabled]):not(.disabled).active {
+          background-color: $value;
+        }
+      }
+    }
   }
 }

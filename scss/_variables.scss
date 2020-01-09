@@ -4,6 +4,7 @@
 $white:    #fff;
 $gray-100: #fafbfc;
 $gray-200: #fafbfc;
+$gray-250: #fafbfc;
 $gray-300: #bbcdd2;
 $gray-400: #bbcdd2;
 $gray-450: #b3c7cd;
@@ -29,11 +30,12 @@ $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #c05c67;
 $orange:  #fd7e14 !default;
-$yellow:  #cd9321;
+$yellow:  #d9d701;
 $green:   #70b580;
 $orange:  #fd7e14 !default;
 $teal:    #20c997 !default;
 $cyan:    $blue;
+$light-blue: #f4fcfd;
 
 // main button background colors
 $primary-hover:     #7CD5E7;
@@ -62,6 +64,13 @@ $theme-colors: (
   "dark":       $dark
 );
 
+$theme-alerts-icons: (
+  success: '\E5CA',
+  info: '\E88F',
+  warning: '\E002',
+  danger: '\E14B'
+);
+
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
@@ -70,7 +79,8 @@ $theme-colors-hover: (
   warning: #f1b746,
   danger: #e76d7a,
   light: $gray-800,
-  dark: $gray-100
+  dark: $gray-100,
+  default: $light-blue
 );
 
 $theme-colors-active: (
@@ -90,7 +100,7 @@ $theme-colors-background: (
   secondary: $black,
   success: #d6f0d8,
   info: #dff5f9,
-  warning: #fde7bb,
+  warning: #fff8b3,
   danger: #fde1e1,
   light: $gray-200,
   dark: $gray-700
@@ -681,8 +691,8 @@ $modal-inner-padding:         1.875rem;
 //$modal-content-bg:               $white !default;
 $modal-content-border-color:     none;
 //$modal-content-border-width:     $border-width !default;
-$modal-content-box-shadow-xs:    1px 2px 3px 0 rgba(108, 134, 142, .3);
-$modal-content-box-shadow-sm-up: 1px 2px 3px 0 rgba(108, 134, 142, .3);
+$modal-content-box-shadow-xs:    0 8px 16px 0 rgba(0, 0, 0, .1);
+$modal-content-box-shadow-sm-up: 0 8px 16px 0 rgba(0, 0, 0, .1);
 
 //$modal-backdrop-bg:           $black !default;
 //$modal-backdrop-opacity:      .5 !default;

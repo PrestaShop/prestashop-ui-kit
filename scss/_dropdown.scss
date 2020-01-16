@@ -2,7 +2,7 @@
 .dropup .dropdown-toggle {
   padding-right: $input-btn-padding-x * .75;
 
-  &[aria-expanded="true"] {
+  &[aria-expanded="true"]:not(.no-rotate) {
     &::after {
       transform: rotate(-180deg);
     }

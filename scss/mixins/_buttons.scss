@@ -74,5 +74,9 @@
     background-color: theme-color-active($color-name);
     border-color: theme-color-active($color-name);
     box-shadow: none;
+
+    &:focus {
+       box-shadow: none; 
+    }
   }
 }

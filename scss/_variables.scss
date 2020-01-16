@@ -7,6 +7,7 @@ $gray-200: #fafbfc;
 $gray-250: #fafbfc;
 $gray-300: #bbcdd2;
 $gray-400: #bbcdd2;
+$gray-450: #b3c7cd;
 $gray-500: #6c868e;
 $gray-550: #708090;
 $gray-600: #6c868e;
@@ -43,8 +44,8 @@ $light-blue: #f4fcfd;
 $primary-hover:     #7CD5E7;
 $primary-active:    #21A6C1;
 $primary-disabled:  #D3F1F7;
-$secondary-hover:   #759299;
-$secondary-active:  #f6fdff;
+$secondary-hover:   #B7CED3;
+$secondary-active:  #889DA2;
 
 $primary:       $blue !default;
 $secondary:     $medium-gray;
@@ -73,6 +74,16 @@ $theme-alerts-icons: (
   danger: '\E14B'
 );
 
+$theme-colors-icons: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    #FFE700,
+  "danger":     $danger,
+  "light":      $light,
+);
+
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
@@ -87,7 +98,7 @@ $theme-colors-hover: (
 
 $theme-colors-active: (
   primary: $primary-active,
-  secondary: $extra-dark-gray,
+  secondary: $secondary-active,
   success: darken(map-get($theme-colors, 'success'), 10%),
   info: darken(map-get($theme-colors, 'info'), 10%),
   warning: darken(map-get($theme-colors, 'warning'), 10%),
@@ -102,7 +113,7 @@ $theme-colors-background: (
   secondary: $black,
   success: #d6f0d8,
   info: #dff5f9,
-  warning: #fff8b3,
+  warning: #FFFBD3,
   danger: #fde1e1,
   light: $gray-200,
   dark: $gray-700

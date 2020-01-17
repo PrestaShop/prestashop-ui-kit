@@ -1,4 +1,7 @@
 .btn-group {
+  input[type="radio"] {
+    display: none; 
+  }
 
   .btn.dropdown-toggle-split {
     // fix spacing to the left of chevron in split dropdown due to class order (.btn overrides it because it's load after)

@@ -1046,13 +1046,29 @@
 
             <h3>Button group</h3>
 
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group" data-toggle="buttons" aria-label="Basic example">
                 <button type="button" class="btn btn-default">Left</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Right</button>
+            </div>
+
+            <br><br>
+
+            <h3>Button group with radio handling</h3>
+
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option2"> Radio 2
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option3"> Radio 3
+              </label>
             </div>
         </article>
 

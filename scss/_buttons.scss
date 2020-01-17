@@ -63,20 +63,3 @@
   }
 }
 
-// special case for secondary outline button
-//.btn-outline-secondary {
-//  &:not([disabled]):not(.disabled):hover,
-//  &:not([disabled]):not(.disabled).hover {
-//    color: $blue;
-//    background-color: $white;
-//    border-color: $primary;
-//  }
-//
-//  &:not([disabled]):not(.disabled):active,
-//  &:not([disabled]):not(.disabled).active,
-//  .show > &.dropdown-toggle {
-//    color: $primary-active;
-//    background-color: $secondary-active;
-//    border-color: $primary-hover; // <-- that's "hover" and not "active"
-//  }
-//}

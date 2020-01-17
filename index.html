@@ -930,22 +930,22 @@
 
             <h3>Buttons with icons</h3>
 
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" aria-label="Iceberg">
                 <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-outline-primary">
+            <button type="button" class="btn btn-outline-primary" aria-label="Iceberg">
                 <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" aria-label="Iceberg">
                 <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-outline-secondary">
+            <button type="button" class="btn btn-outline-secondary" aria-label="Iceberg">
                 <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-primary" disabled>
+            <button type="button" class="btn btn-primary"  aria-label="Iceberg" disabled>
                 Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
-            <button type="button" class="btn btn-outline-primary" disabled>
+            <button type="button" class="btn btn-outline-primary"  aria-label="Iceberg" disabled>
                 Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
             <br><br>
@@ -1058,6 +1058,21 @@
 
         <article id="dropdowns">
             <h2>Dropdowns</h2>
+
+            <div class="ps-dropdown dropdown btn-group bordered">
+                <div class="dropdown-label" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-flip="false" data-display="static">
+                    <span class="js-selected-item selected-item module-status-selector-label">See all items</span>
+                    <i class="material-icons arrow-down float-right">keyboard_arrow_down</i>
+                </div>
+
+                <div class="ps-dropdown-menu dropdown-menu" aria-labelledby="module-status-dropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+            <br><br>
 
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

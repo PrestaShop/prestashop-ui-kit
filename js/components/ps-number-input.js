@@ -12,20 +12,20 @@ const PSNumberInput = function PSNumberInput(element) {
   const labelMin = element.dataset.labelMin;
   const labelMax = element.dataset.labelMax;
   const labelNan = element.dataset.labelNan;
-  let incrementButton = element.querySelector(".ps-number-increment");
-  let decrementButton = element.querySelector(".ps-number-decrement");
-  let input = element.querySelector("input");
-  let invalidElement = element.querySelector(".invalid-feedback");
+  let incrementButton = element.querySelector('.ps-number-increment');
+  let decrementButton = element.querySelector('.ps-number-decrement');
+  let input = element.querySelector('input');
+  let invalidElement = element.querySelector('.invalid-feedback');
   let value = input.value;
 
   let initValue = () => {
     if (
-      input.value.replace(".", "") !== input.value ||
-      input.value.replace(",", "") !== input.value
+      input.value.replace('.', '') !== input.value ||
+      input.value.replace(',', '') !== input.value
     ) {
       value = parseInt(
-        input.value.replace(",", "") !== input.value
-          ? input.value.replace(",", ".")
+        input.value.replace(',', '') !== input.value
+          ? input.value.replace(',', '.')
           : input.value
       );
     } else {
@@ -43,18 +43,18 @@ const PSNumberInput = function PSNumberInput(element) {
     checkNumber = Number.isNaN(value);
 
     if (!maxCond && !minCond && !checkNumber) {
-      invalidElement.classList.remove("show");
-      input.classList.remove("is-invalid");
+      invalidElement.classList.remove('show');
+      input.classList.remove('is-invalid');
 
       return true;
     }
 
     if (
-      !invalidElement.classList.contains("show") &&
-      !input.classList.contains("is-invalid")
+      !invalidElement.classList.contains('show') &&
+      !input.classList.contains('is-invalid')
     ) {
-      invalidElement.classList.add("show");
-      input.classList.add("is-invalid");
+      invalidElement.classList.add('show');
+      input.classList.add('is-invalid');
     }
 
     if (checkNumber) {
@@ -87,25 +87,25 @@ const PSNumberInput = function PSNumberInput(element) {
     validate();
   };
 
-  incrementButton.addEventListener("click", () => {
+  incrementButton.addEventListener('click', () => {
     updateValue(true);
   });
 
-  decrementButton.addEventListener("click", () => {
+  decrementButton.addEventListener('click', () => {
     updateValue(false);
   });
 
-  input.addEventListener("keyup", () => {
+  input.addEventListener('keyup', () => {
     initValue();
     validate();
   });
 
-  input.addEventListener("cut", () => {
+  input.addEventListener('cut', () => {
     initValue();
     validate();
   });
 
-  input.addEventListener("paste", () => {
+  input.addEventListener('paste', () => {
     initValue();
     validate();
   });

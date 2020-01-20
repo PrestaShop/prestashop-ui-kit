@@ -7,95 +7,108 @@
  * @returns {Object}
  */
 const PSNumberInput = function PSNumberInput(element) {
-    this.min = Number(element.dataset.min);
-    this.max = Number(element.dataset.max);
-    this.labelMin = element.dataset.labelMin;
-    this.labelMax = element.dataset.labelMax;
-    this.labelNan = element.dataset.labelNan;
-    this.incrementButton = element.querySelector('.ps-number-increment');
-    this.decrementButton = element.querySelector('.ps-number-decrement');
-    this.input = element.querySelector('input');
-    this.invalidElement = element.querySelector('.invalid-feedback');
+  const min = Number(element.dataset.min);
+  const max = Number(element.dataset.max);
+  const labelMin = element.dataset.labelMin;
+  const labelMax = element.dataset.labelMax;
+  const labelNan = element.dataset.labelNan;
+  let incrementButton = element.querySelector(".ps-number-increment");
+  let decrementButton = element.querySelector(".ps-number-decrement");
+  let input = element.querySelector("input");
+  let invalidElement = element.querySelector(".invalid-feedback");
+  let value = input.value;
 
-    this.initValue = () => {
-        if(this.input.value.replace('.', '') !== this.input.value || this.input.value.replace(',', '') !== this.input.value) {
-            this.value = parseInt(this.input.value.replace(',', '') !== this.input.value ? this.input.value.replace(',', '.') : this.input.value);
-        }else {
-            this.value = Number(this.input.value);
-        }
+  let initValue = () => {
+    if (
+      input.value.replace(".", "") !== input.value ||
+      input.value.replace(",", "") !== input.value
+    ) {
+      value = parseInt(
+        input.value.replace(",", "") !== input.value
+          ? input.value.replace(",", ".")
+          : input.value
+      );
+    } else {
+      value = Number(input.value);
+    }
+  };
+
+  initValue();
+
+  let validate = () => {
+    const maxCond = value > max;
+    const minCond = value < min;
+    let checkNumber;
+
+    checkNumber = Number.isNaN(value);
+
+    if (!maxCond && !minCond && !checkNumber) {
+      invalidElement.classList.remove("show");
+      input.classList.remove("is-invalid");
+
+      return true;
     }
 
-    this.initValue();
+    if (
+      !invalidElement.classList.contains("show") &&
+      !input.classList.contains("is-invalid")
+    ) {
+      invalidElement.classList.add("show");
+      input.classList.add("is-invalid");
+    }
 
-    this.validate = () => {
-      const maxCond = this.value > this.max;
-      const minCond = this.value < this.min;
-      let checkNumber;
-
-      checkNumber = Number.isNaN(this.value);
-
-      if (!maxCond && !minCond && !checkNumber) {
-        this.invalidElement.classList.remove('show');
-        this.input.classList.remove('is-invalid');
-
-        return true;
-      }
-
-      if (!this.invalidElement.classList.contains('show') && !this.input.classList.contains('is-invalid')) {
-        this.invalidElement.classList.add('show');
-        this.input.classList.add('is-invalid');
-      }
-
-      if (checkNumber) {
-        this.invalidElement.innerHTML = this.labelNan;
-
-        return false;
-      }
-
-      this.invalidElement.innerHTML = `${maxCond ? this.labelMax : this.labelMin} ${maxCond ? this.max : this.min}.`;
+    if (checkNumber) {
+      invalidElement.innerHTML = labelNan;
 
       return false;
-    };
+    }
 
-    this.updateValue = (increment) => {
-      const checkNumber = Number.isNaN(this.value);
+    invalidElement.innerHTML = `${maxCond ? labelMax : labelMin} ${
+      maxCond ? max : min
+    }.`;
 
-      if (checkNumber) {
-        this.value = 0;
+    return false;
+  };
+
+  let updateValue = increment => {
+    const checkNumber = Number.isNaN(value);
+
+    if (checkNumber) {
+      value = 0;
+    } else {
+      if (increment) {
+        value += 1;
       } else {
-        if (increment) {
-          this.value += 1;
-        } else {
-          this.value -= 1;
-        }
+        value -= 1;
       }
+    }
 
-      this.input.value = this.value;
-      this.validate();
-    };
+    input.value = value;
+    validate();
+  };
 
-    this.incrementButton.addEventListener('click', () => {
-      this.updateValue(true);
-    });
+  incrementButton.addEventListener("click", () => {
+    updateValue(true);
+  });
 
-    this.decrementButton.addEventListener('click', () => {
-      this.updateValue(false);
-    });
+  decrementButton.addEventListener("click", () => {
+    updateValue(false);
+  });
 
-    this.input.addEventListener('keyup', () => {
-      this.initValue();
-      this.validate();
-    });
+  input.addEventListener("keyup", () => {
+    initValue();
+    validate();
+  });
 
-    this.input.addEventListener('cut', () => {
-      this.initValue();
-      this.validate();
-    });
+  input.addEventListener("cut", () => {
+    initValue();
+    validate();
+  });
 
-    this.input.addEventListener('paste', () => {
-      this.initValue();
-      this.validate();
-    });
+  input.addEventListener("paste", () => {
+    initValue();
+    validate();
+  });
 };
 
 export default PSNumberInput;

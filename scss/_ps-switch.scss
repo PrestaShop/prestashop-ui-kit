@@ -1,147 +1,149 @@
 // on-off switch control
 .ps-switch {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 21px;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 21px;
 
-    &-nolabel {
-        label {
-            display: none;
-        }
+  &-nolabel {
+    label {
+      display: none;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    padding-left: 2.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .slide-button {
+    width: 35px;
+    height: 21px;
+    display: block;
+    @include border-radius(1000px);
+    transition: 0.25s ease-out;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+
+    &::after {
+      content: "";
+      height: calc(100% - 4px);
+      width: 46%;
+      background: $white;
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      transition: 0.25s ease-out;
+      transform: translate(2px, -50%);
+      left: 0;
+    }
+  }
+
+  &-center {
+    .slide-button {
+      margin: auto;
+      position: inherit;
+    }
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+
+      ~ .slide-button {
+        opacity: 0.2;
+      }
     }
 
+    &:checked {
+      z-index: 0;
+    }
+
+    &:first-of-type:checked {
+      ~ label:first-of-type {
+        opacity: 1;
+      }
+
+      &:disabled ~ label:first-of-type {
+        opacity: 0.2;
+      }
+
+      ~ .slide-button {
+        background: $gray-450;
+      }
+    }
+
+    &:last-of-type:checked {
+      ~ label:last-of-type {
+        opacity: 1;
+      }
+
+      &:disabled ~ label:last-of-type {
+        opacity: 0.2;
+      }
+
+      ~ .slide-button {
+        background: $success;
+
+        &::after {
+          transform: translate(17px, -50%);
+        }
+      }
+    }
+  }
+
+  &.ps-switch-sm {
+    min-width: 6.25rem;
+    font-size: $font-size-sm;
+    height: 16px;
+
     label {
-        position: absolute;
-        left: 0;
-        padding-left: 2.8rem;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-        opacity: 0;
+      padding-left: 2.5rem;
     }
 
     .slide-button {
-        width: 35px;
-        height: 21px;
-        display: block;
-        @include border-radius(1000px);
-        transition: .25s ease-out;
-        position: relative;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 0;
-
-        &::after {
-            content: "";
-            height: calc(100% - 4px);
-            width: 46%;
-            background: $white;
-            position: absolute;
-            top: 50%;
-            border-radius: 50%;
-            transition: .25s ease-out;
-            transform: translate(2px, -50%);
-        }
-    }
-
-    &-center {
-        .slide-button {
-            margin: auto;
-            position: inherit;
-        }
-    }
-
-    input {
-        position: absolute;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        cursor: pointer;
-
-        &:disabled {
-            cursor: not-allowed;
-
-            ~ .slide-button {
-                opacity: .2;
-            }
-        }
-
-        &:checked {
-            z-index: 0;
-        }
-
-        &:first-of-type:checked {
-            ~ label:first-of-type {
-                opacity: 1;
-            }
-
-            &:disabled ~ label:first-of-type {
-                opacity: .2;
-            }
-
-            ~ .slide-button {
-                background: $gray-450;
-            }
-        }
-
-        &:last-of-type:checked {
-            ~ label:last-of-type {
-                opacity: 1;
-            }
-
-            &:disabled ~ label:last-of-type {
-                opacity: .2;
-            }
-
-            ~ .slide-button {
-                background: $success;
-
-                &::after {
-                    transform: translate(17px, -50%);
-                }
-            }
-        }
-    }
-
-    &.ps-switch-sm {
-      min-width: 6.250rem;
-      font-size: $font-size-sm;
+      width: 30px;
       height: 16px;
 
-        label {
-            padding-left: 2.5rem;
-        }
-
-        .slide-button {
-            width: 30px;
-            height: 16px;
-
-            &::after {
-                width: 37%;
-            }
-        }
-    }
-
-    &.ps-switch-lg {
-        font-size: $font-size-lg;
-        height: 30px;
-
-        label {
-            padding-left: 4.075rem;
-        }
-
-        .slide-button {
-            width: 55px;
-            height: 30px;
-        }
-
-        input:last-of-type:checked ~ .slide-button {
-            &::after {
-                transform: translate(28px, -50%);
-            }
-        }
+      &::after {
+        width: 37%;
+      }
     }
   }
+
+  &.ps-switch-lg {
+    font-size: $font-size-lg;
+    height: 30px;
+
+    label {
+      padding-left: 4.075rem;
+    }
+
+    .slide-button {
+      width: 55px;
+      height: 30px;
+    }
+
+    input:last-of-type:checked ~ .slide-button {
+      &::after {
+        transform: translate(28px, -50%);
+      }
+    }
+  }
+}

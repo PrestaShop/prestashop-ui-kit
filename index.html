@@ -2852,11 +2852,16 @@
         </article>
 
         <article id="search-form">
-            <h1>Search form @TODO</h1>
+            <h1>Search form</h1>
 
             <div class="wrapper">
-                <div class="search search-with-icon">
-                    <input type="text" class="form-control" id="input-search" placeholder="Search something...">
+                <div class="input-group search search-with-icon">
+                    <input type="text" class="form-control search-input" placeholder="Search something..." aria-describedby="basic-search">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </article>

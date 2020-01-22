@@ -1,37 +1,91 @@
-/* stylelint-disable selector-class-pattern */
-.select2-container--bootstrap {
+$component-name: select2 !default;
 
-  .select2-dropdown {
-    padding: $input-padding-x $input-padding-y;
-    @include border-radius(0);
-  }
+.#{$component-name}-container--bootstrap {
+  .#{$component-name} {
+    &-dropdown {
+      padding: $input-padding-x $input-padding-y;
+      border-top: 1px solid;
+      border-color: $gray-300;
+      padding: 0;
+    }
 
-  .select2-search--dropdown {
-    padding: 0;
-    margin-bottom: $input-padding-x;
-  }
+    &-search--dropdown {
+      padding: 10px;
+      margin-bottom: $input-padding-x;
+      background: $gray-250;
 
-  .select2-selection--single {
-    height: $input-height;
-    padding: $input-padding-x $input-padding-y;
-    cursor: default;
-
-    .select2-selection__arrow {
-      margin-right: .625rem;
-
-      b {
-        right: .625rem;
+      .#{$component-name}-search__field {
+        background: white;
+        border: 1px solid $gray-300;
+        @include border-radius(4px);
       }
     }
 
-    .select2-selection__rendered {
+    &-results {
+      &__option {
+        &:hover {
+          color: $primary;
+          background: rgba($primary, .1);
+        }
+
+        &:focus,
+        &:active {
+          background: $primary;
+          color: white;
+        }
+      }
+    }
+
+    &-selection--single {
+      height: $input-height;
+      padding: $input-padding-x $input-padding-y;
+      cursor: default;
+      border-color: $gray-300;
+      padding-left: 15px;
+      @include border-radius(4px);
+
+      .#{$component-name}-selection__arrow {
+        margin-right: .625rem;
+        right: 15px;
+
+        b {
+          width: auto;
+          height: auto;
+          font-size: 0;
+          border: none;
+          margin-top: 0;
+
+          &::after {
+            @include material-icon("expand_more");
+            display: inline-block;
+            width: auto;
+            line-height: 0;
+            vertical-align: middle;
+            border: none;
+            @include transition(.15s ease-out);
+            color: $gray-600;
+          }
+        }
+      }
+    }
+
+    &-selection__rendered {
       padding: 0 $input-padding-y;
       line-height: 1.125rem;
     }
+
+    &-results {
+      padding: 0;
+    }
   }
 
-  .select2-results {
-    padding: 0;
+  &.#{$component-name}-container--open {
+    .#{$component-name}-selection__arrow b::after {
+      transform: rotate(-180deg);
+    }
+
+    .#{$component-name}-selection {
+      border-color: $gray-300;
+    }
   }
 }
-/* stylelint-enable selector-class-pattern */

@@ -1,4 +1,5 @@
-$component-name: modal !default;
+/* stylelint-disable */
+$component-name: modal;
 
 .#{$component-name} {
   &.show {
@@ -44,11 +45,11 @@ $component-name: modal !default;
     padding-top: 1.875rem;
 
     > :not(:first-child) {
-      margin-right: .3125rem;
+      margin-right: 0.3125rem;
     }
 
     > :not(:first-child) {
-      margin-left: .3125rem;
+      margin-left: 0.3125rem;
     }
   }
 

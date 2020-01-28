@@ -2,10 +2,13 @@
 $component-name: modal;
 
 .#{$component-name} {
+  .#{$component-name}-dialog {
+    top: 50%;
+  }
+
   &.show {
     .#{$component-name}-dialog {
       transform: translateY(-50%);
-      top: 50%;
     }
   }
 

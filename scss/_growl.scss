@@ -8,6 +8,8 @@ $component-name: growl;
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
+  animation-name: fromLeft;
+  animation-duration: 0.25s;
 
   &.#{$component-name}-medium {
     padding: 15px;

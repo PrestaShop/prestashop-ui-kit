@@ -4,7 +4,7 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";// Imports & variables PS
+@import "~bootstrap/scss/bootstrap"; // Imports & variables PS
 
 // Mixins
 @import "mixins/fonts";
@@ -48,7 +48,7 @@
 @import "tables";
 @import "spinners";
 @import "material-checkbox";
-
+@import "growl";
 @import "variables-select2";
 @import "~select2-bootstrap-theme/src/select2-bootstrap";
 @import "select2";

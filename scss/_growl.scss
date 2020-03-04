@@ -1,0 +1,43 @@
+$component-name: growl;
+
+.#{$component-name} {
+  color: white;
+  opacity: 1;
+  box-shadow: 0 8px 16px 0 rgba(black, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  &.#{$component-name}-medium {
+    padding: 15px;
+    max-width: 800px;
+    width: auto;
+  }
+
+  & &-close {
+    font-size: 1.125rem;
+    float: initial;
+    margin-left: 10px;
+  }
+
+  & &-message {
+    font-size: 0.875rem;
+  }
+
+  &.#{$component-name}-default {
+    background: $info;
+  }
+
+  &.#{$component-name}-error {
+    background: $danger;
+  }
+
+  &.#{$component-name}-notice {
+    background: $success;
+  }
+
+  &.#{$component-name}-warning {
+    background: $warning;
+  }
+}

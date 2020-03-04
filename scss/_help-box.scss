@@ -1,11 +1,22 @@
 $component-name: help-box;
 
 .#{$component-name} {
-    margin: 0 10px;
-    cursor: pointer;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 19px;
+  height: 1.2rem;
+  width: 1.4rem;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px 2px;
 
-    i {
-        font-size: 19px;
-        color: $primary;
-    }
+  i,
+  &::after {
+    content: "\e88e";
+    font-size: 19px;
+    color: $primary;
+    font-family: "Material Icons";
+  }
 }

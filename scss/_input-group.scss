@@ -24,8 +24,7 @@ $component-name: input-group;
     .form-control {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-      padding: .375rem .625rem;
-      padding-right: 2rem;
+      padding: .375rem 2rem .375rem .625rem;
     }
 
     + .#{$component-name}-append {

@@ -4,17 +4,17 @@ import 'select2';
 import 'jquery.growl';
 import 'pstagger';
 import initInputFile from './components/file-input.js';
+import PSNumbers from './components/ps-numbers.js';
 
 $.fn.pstooltip = $.fn.tooltip;
 
 /*!
-* Prestige v1.0.0 (http://getbootstrap.com)
-* Copyright 2015-2015
-* Copy License
-*/
+ * Prestige v1.0.0 (http://getbootstrap.com)
+ * Copyright 2015-2015
+ * Copy License
+ */
 
-(function (global, jQuery) {
-
+(function(global, jQuery) {
   if (typeof global === 'undefined' && typeof window !== 'undefined') {
     global = window;
   }
@@ -24,22 +24,21 @@ $.fn.pstooltip = $.fn.tooltip;
   }
 
   /**
-  * Enable all Select2
-  *
-  * @TODO Add templateResult
-  */
+   * Enable all Select2
+   *
+   * @TODO Add templateResult
+   */
   var initSelect2 = function() {
-    jQuery('[data-toggle="select2"]').each(function () {
-
-      var newObj = {"minimumResultsForSearch": -1};
+    jQuery('[data-toggle="select2"]').each(function() {
+      var newObj = { minimumResultsForSearch: -1 };
 
       for (var attr in $(this).data()) {
         if (!attr.localeCompare('templateresult')) {
-          newObj["templateResult"] = eval($(this).data()[attr]);
+          newObj['templateResult'] = eval($(this).data()[attr]);
         } else if (!attr.localeCompare('templateselection')) {
-          newObj["templateSelection"] = eval($(this).data()[attr]);
+          newObj['templateSelection'] = eval($(this).data()[attr]);
         } else if (!attr.localeCompare('minimumresultsforsearch')) {
-          newObj["minimumResultsForSearch"] = $(this).data()[attr];
+          newObj['minimumResultsForSearch'] = $(this).data()[attr];
         } else if (attr.localeCompare('toggle')) {
           newObj[attr] = $(this).data()[attr];
         }
@@ -47,11 +46,11 @@ $.fn.pstooltip = $.fn.tooltip;
 
       jQuery(this).select2(newObj);
     });
-  }
+  };
 
   /**
-  * Enable all toggle buttons
-  */
+   * Enable all toggle buttons
+   */
   var initToggleButtons = function() {
     jQuery('[data-toggle="switch"]').each(function() {
       var checkbox = jQuery(this);
@@ -60,7 +59,7 @@ $.fn.pstooltip = $.fn.tooltip;
 
         var baseClass = checkbox.prop('checked') ? '-checked' : '';
 
-        checkbox.wrap('<div class="switch-input '+baseClass+'"></div>');
+        checkbox.wrap('<div class="switch-input ' + baseClass + '"></div>');
         var parent = checkbox.parent();
         parent.addClass(checkbox.attr('class'));
 
@@ -69,17 +68,17 @@ $.fn.pstooltip = $.fn.tooltip;
         });
 
         parent.click(function(event) {
-          if (event.srcElement == parent[0] || event.srcElement == undefined) {
+          if (event.srcElement == parent[0] || event.srcElement == undefined) {
             checkbox.prop('checked', !checkbox.prop('checked'));
             return false;
           }
         });
       }
     });
-  }
+  };
 
   var initAlerts = function() {
-    jQuery('.alert-text').each(function () {
+    jQuery('.alert-text').each(function() {
       var $this = jQuery(this);
       var height = $this.height();
       var lineHeight = parseFloat($this.css('lineHeight'));
@@ -89,24 +88,31 @@ $.fn.pstooltip = $.fn.tooltip;
       if (Math.ceil(rows) > lines) {
         var actualHtml = $this.html();
         var actualClass = $this.parent().attr('class');
-        $this.parent().addClass( "alert-drop" );
+        $this.parent().addClass('alert-drop');
 
-        if (typeof($this.data('title')) != 'undefined' && $this.data('title') !== '') {
+        if (
+          typeof $this.data('title') != 'undefined' &&
+          $this.data('title') !== ''
+        ) {
           $this.html('<b>' + $this.data('title') + '</b>');
         } else {
           $this.html('<b>Read More</b>');
         }
         $this.css('cursor', 'pointer');
-        $this.parent().after(
-          '<div class="'+ actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
-        );
+        $this
+          .parent()
+          .after(
+            '<div class="' +
+              actualClass +
+              ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
+          );
         jQuery('.alert-down-text').html(actualHtml);
       }
     });
 
-    $('.alert-drop').each(function(){
+    $('.alert-drop').each(function() {
       var $this = jQuery(this);
-      $this.click(function(){
+      $this.click(function() {
         var radius = $this.css('border-radius');
         if ($this.next('div').is(':hidden')) {
           $this.css('border-radius', '0');
@@ -118,41 +124,40 @@ $.fn.pstooltip = $.fn.tooltip;
         $this.next('div').slideToggle(400);
       });
     });
-  }
+  };
 
   var initToolTips = function() {
     jQuery('.tooltip-error').pstooltip({
-      template: '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
+      template:
+        '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>',
     });
     jQuery('[data-toggle="pstooltip"]').pstooltip();
     jQuery('[data-toggle="popover"]').popover();
-  }
+  };
 
   var initSearchBar = function() {
     $('.js-form-search').on('focusin', function() {
-       if (!$('.js-dropdown-form').hasClass('expanded')) {
-         $('.js-dropdown-form').addClass('expanded');
-       }
-     });
-  }
+      if (!$('.js-dropdown-form').hasClass('expanded')) {
+        $('.js-dropdown-form').addClass('expanded');
+      }
+    });
+  };
 
   global.prestaShopUiKit = {
-
     /**
-    * PrestaShop UI initialization.
-    *
-    * Initilialize some jQuery components, settings and existings elements.
-    */
+     * PrestaShop UI initialization.
+     *
+     * Initilialize some jQuery components, settings and existings elements.
+     */
     init: function() {
-      jQuery(function(){
-
+      jQuery(function() {
         // Add a jQuery listener to the checkbox change value
         jQuery.propHooks.checked = {
           set: function(elem, value, name) {
-            var ret = (elem[ name ] = value);
+            var ret = (elem[name] = value);
             $(elem).trigger('change');
             return ret;
-          }
+          },
         };
 
         // Set default theme to prestakit for Select2
@@ -167,6 +172,7 @@ $.fn.pstooltip = $.fn.tooltip;
         initToolTips();
         initSearchBar();
         initInputFile();
+        PSNumbers('.ps-number');
       });
     },
 
@@ -176,23 +182,18 @@ $.fn.pstooltip = $.fn.tooltip;
 
     initToolTips: function() {
       initToolTips();
-    }
+    },
   };
 
   global.prestaShopUiKit.init();
-
 })(typeof window !== 'undefined' ? window : this, $);
-
-
-
 
 // Other initializations
 // @TODO: Move the needed initializations into the object
 // @TODO: Redo the psdwl to allow an external control for the different states
-$(function () {
-
+$(function() {
   // Keep unique configuration
-  var setConfig = function (givenConfig, defaultConfig) {
+  var setConfig = function(givenConfig, defaultConfig) {
     var finalConfig = {};
     for (var property in defaultConfig) {
       if (givenConfig.hasOwnProperty(property)) {
@@ -211,12 +212,12 @@ $(function () {
     var config = null;
 
     // Default Configuration
-    var defaultConfig =  {
+    var defaultConfig = {
       hover: 'install',
       validate: '<i class="material-icons">check</i>',
       text: 'default',
       time: 3000,
-      default: true
+      default: true,
     };
 
     var psdwl = this;
@@ -227,7 +228,10 @@ $(function () {
       psdwl.attr('class', value);
     }
 
-    if(typeof($(psdwl.selector).html()) != "undefined" && $(psdwl.selector).html() !== '') {
+    if (
+      typeof $(psdwl.selector).html() != 'undefined' &&
+      $(psdwl.selector).html() !== ''
+    ) {
       config.text = $(psdwl.selector).text();
     }
 
@@ -243,30 +247,36 @@ $(function () {
 
     psdwl.css('width', width);
 
-    psdwl.hover(function () {
-      psdwl.html(config.hover);
-    }, function() {
-      psdwl.html(config.text);
-    });
+    psdwl.hover(
+      function() {
+        psdwl.html(config.hover);
+      },
+      function() {
+        psdwl.html(config.text);
+      }
+    );
 
     psdwl.click(function() {
       psdwl.css('border-left-color', psdwl.css('border-color'));
-      psdwl.addClass( 'onclick' );
-      psdwl.unbind('mouseenter').unbind('mouseleave').unbind('click');
+      psdwl.addClass('onclick');
+      psdwl
+        .unbind('mouseenter')
+        .unbind('mouseleave')
+        .unbind('click');
       var nw = parseInt(width, 10);
       psdwl.css({
-        'width': '',
+        width: '',
         'margin-left': nw / 4,
-        'margin-right': nw / 4
+        'margin-right': nw / 4,
       });
 
       setTimeout(function() {
-        psdwl.removeClass( "onclick" );
+        psdwl.removeClass('onclick');
         psdwl.css({
           'margin-left': '',
           'margin-right': '',
-          'width': width,
-          'border-left-color' : ''
+          width: width,
+          'border-left-color': '',
         });
         psdwl.html(config.validate);
 
@@ -274,9 +284,7 @@ $(function () {
           var value = psdwl.attr('class').replace('-reverse', '');
           psdwl.attr('class', value);
         }
-      }, config.time );
-
+      }, config.time);
     });
-
   };
 });

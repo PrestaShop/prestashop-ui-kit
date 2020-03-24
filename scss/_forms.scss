@@ -94,11 +94,72 @@
   }
 }
 
-.form-check {
+$form-check-name: form-check;
+
+.#{$form-check-name} {
   &.disabled,
   :disabled {
     .form-check-label {
       color: $medium-gray;
+    }
+  }
+
+  &-radio {
+    padding: 0;
+    margin-bottom: 10px;
+
+    .#{$form-check-name}-label {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked {
+      ~ .#{$form-check-name}-round {
+        border-color: $primary;
+
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+      }
+    }
+
+    input:disabled {
+      ~ .#{$form-check-name}-round {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-round {
+    width: 20px;
+    height: 20px;
+    @include border-radius(50%);
+    border: 2px solid $gray-450;
+    margin-right: 10px;
+    position: relative;
+    transition: .25s ease-out;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      @include border-radius(50%);
+      background: $primary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transition: .25s ease-out;
+      transform: translate(-50%, -50%) scale(0);
     }
   }
 }

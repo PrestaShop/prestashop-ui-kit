@@ -56,7 +56,7 @@
     background-image: none;
   }
 
-  &::after {
+  &:not(.multiple)::after {
     @include material-icon("\E876");
     position: absolute;
     right: .3125rem;
@@ -64,6 +64,21 @@
     font-size: 1rem;
     font-weight: $font-weight-normal;
     vertical-align: middle;
+  }
+
+  &.multiple {
+   .input-group-input {
+    &::after {
+      @include material-icon("\E876");
+      position: absolute;
+      right: .625rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.438rem;
+      font-weight: $font-weight-normal;
+      vertical-align: middle;
+    }
+   }
   }
 
   &.form-group-lg {
@@ -74,21 +89,24 @@
 }
 
 .has-success {
-  &::after {
+  &:not(.multiple)::after,
+  &.multiple .input-group-input::after {
     color: theme-color("success");
     content: "\E876";
   }
 }
 
 .has-warning {
-  &::after {
+  &:not(.multiple)::after,
+  &.multiple .input-group-input::after {
     color: theme-color("warning");
     content: "\E001";
   }
 }
 
 .has-danger {
-  &::after {
+  &:not(.multiple)::after,
+  &.multiple .input-group-input::after {
     color: theme-color("danger");
     content: "\E000";
   }

@@ -1,11 +1,11 @@
-$component-name: card;
+$component-name: ps-card;
 
 .#{$component-name} {
   padding: 10px;
-  transition: .25s ease-out;
+  transition: 0.25s ease-out;
 
   &:hover {
-    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, .1));
+    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, 0.1));
   }
 
   .list-group-item {
@@ -23,7 +23,9 @@ $component-name: card;
   }
 
   & &-img {
-    &, &-top {
+    &,
+    &-top {
+      width: 100%;
       @include border-radius(0);
     }
   }
@@ -46,5 +48,11 @@ $component-name: card;
     font-size: 14px;
     font-weight: 700;
     color: $gray-550;
+  }
+}
+
+.card {
+  .list-group-item {
+    padding: $card-spacer-y $card-spacer-x;
   }
 }

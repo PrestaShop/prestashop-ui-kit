@@ -199,9 +199,6 @@ $form-check-name: form-check;
 }
 
 .search {
-  input::placeholder {
-    font-style: italic;
-  }
   &.search-with-icon {
     position: relative;
     input {

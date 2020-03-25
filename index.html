@@ -739,11 +739,11 @@
             <h1>Alerts</h1>
 
             <div class="alert alert-info" role="alert">
-                <p class="alert-text">This is a info alert with <a href="#">an example link</a>. Click me to delete</p>
+                <p class="alert-text">This is a info alert with <a href="#">an example link</a>.</p>
             </div>
 
             <div class="alert alert-success" role="alert">
-                <p class="alert-text">This is a success alert with <a href="#">an example link</a>. Click me to delete</p>
+                <p class="alert-text">This is a success alert with <a href="#">an example link</a>.</p>
             </div>
 
             <div class="alert medium-alert alert-warning" role="alert">
@@ -1046,13 +1046,29 @@
 
             <h3>Button group</h3>
 
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group" data-toggle="buttons" aria-label="Basic example">
                 <button type="button" class="btn btn-default">Left</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Middle</button>
                 <button type="button" class="btn btn-default">Right</button>
+            </div>
+
+            <br><br>
+
+            <h3>Button group with radio handling</h3>
+
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option2"> Radio 2
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option3"> Radio 3
+              </label>
             </div>
         </article>
 
@@ -1776,33 +1792,33 @@
                 </div>
 
                 <div class="col col-sm-4">
-                    <div class="card">
-                        <a href="#" class="card-link card-link-full">
-                           <div class="card-img">
-                                <img class="card-img-top" src="img/sample2.jpg" alt="Card image cap">
+                    <div class="ps-card card">
+                        <a href="#" class="ps-card-link card-link-full">
+                           <div class="ps-card-img">
+                                <img class="ps-card-img-top" src="img/sample2.jpg" alt="Card image cap">
                            </div>
 
-                            <div class="card-body">
-                                <h4 class="card-title">Lorem ipsum sit dolor amet</h4>
-                                <div class="card-body-bottom">
-                                    <h6 class="card-subtitle  text-muted">89,99 €</h6>
-                                    <p href="#" class="card-button">Discover</p>
+                            <div class="ps-card-body">
+                                <h4 class="ps-card-title">Lorem ipsum sit dolor amet</h4>
+                                <div class="ps-card-body-bottom">
+                                    <h6 class="ps-card-subtitle  text-muted">89,99 €</h6>
+                                    <p href="#" class="ps-card-button">Discover</p>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="card card-module">
-                        <a href="#" class="card-link card-link-full">
-                            <div class="card-img">
-                                <img class="card-img-top" src="img/sample2.jpg" alt="Card image cap">
+                    <div class="ps-card ps-card-module card">
+                        <a href="#" class="ps-card-link ps-card-link-full">
+                            <div class="ps-card-img">
+                                <img class="ps-card-img-top" src="img/sample2.jpg" alt="Card image cap">
                             </div>
 
-                            <div class="card-body">
-                                <h4 class="card-title">Lorem ipsum sit dolor amet</h4>
-                                <div class="card-body-bottom">
-                                    <h6 class="card-subtitle  text-muted">89,99 €</h6>
-                                    <p href="#" class="card-button">Discover</p>
+                            <div class="ps-card-body">
+                                <h4 class="ps-card-title">Lorem ipsum sit dolor amet</h4>
+                                <div class="ps-card-body-bottom">
+                                    <h6 class="ps-card-subtitle  text-muted">89,99 €</h6>
+                                    <p href="#" class="ps-card-button">Discover</p>
                                 </div>
                             </div>
                         </a>
@@ -2773,21 +2789,21 @@
         <article id="popovers">
             <h2>Popovers @TODO</h2>
 
-            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="left" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on left (with title)
             </button>
-            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on top
             </button>
-            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vivamus
     sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on bottom
             </button>
-            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on right  (with title)
             </button>
 
-            <span class="help-box" data-container="body" data-toggle="popover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <span class="help-box" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 <i class="material-icons">info</i>
             </span>
         </article>

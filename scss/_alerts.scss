@@ -10,10 +10,8 @@ $component-name: alert !default;
   &::before {
     @include use-material-icon();
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 15px;
-    height: 100%;
+    top: 10px;
     text-align: center;
     font-size: 1.563rem;
     display: flex;
@@ -30,9 +28,10 @@ $component-name: alert !default;
 
     &::before {
       content: none;
-    };
+    }
 
-    p, a {
+    p,
+    a {
       color: $white;
     }
 
@@ -49,7 +48,7 @@ $component-name: alert !default;
       position: fixed;
       bottom: 20px;
       animation-name: fromTop;
-      animation-duration: .5s;
+      animation-duration: 0.5s;
     }
 
     &-fixed-left {
@@ -86,7 +85,7 @@ $component-name: alert !default;
     margin-left: 1.5rem;
   }
 
-  @include close-button(.625rem);
+  @include close-button(0.625rem);
 
   &.medium-alert {
     p {
@@ -95,23 +94,20 @@ $component-name: alert !default;
   }
 
   &.expandable-alert {
-    &::before {
-      height: 45px;
-    }
-
     .read-more {
       @extend .close;
       font-size: $font-size-base;
       line-height: 1.375rem;
       float: inherit;
       color: $primary;
+      opacity: 1;
 
       &-container {
         text-align: right;
       }
 
       &:hover {
-        opacity: 1;
+        opacity: 0.8;
       }
 
       &:focus {
@@ -123,7 +119,7 @@ $component-name: alert !default;
       color: $medium-gray;
       padding: {
         top: 1.375rem;
-        bottom: .75rem;
+        bottom: 0.75rem;
       }
 
       p {
@@ -153,16 +149,16 @@ $component-name: alert !default;
 
     &::before {
       content: $value;
-      color: theme-color($color);
+      color: map-get($theme-colors-icons, $color);
     }
+
     .close {
       color: theme-color($color);
     }
 
     &.expandable-alert .read-more,
-    &.expandable-alert .read-more:hover,
-    &.expandable-alert .read-more:focus  {
-      color: $gray-900;
+    &.expandable-alert .read-more:hover {
+      color: $gray-750;
     }
   }
 }

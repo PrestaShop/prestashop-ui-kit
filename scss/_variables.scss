@@ -23,6 +23,10 @@ $light-gray: $gray-300;
 $medium-gray: $gray-500;
 $dark-gray: $gray-700;
 $extra-dark-gray: $gray-900;
+$gray-light: $light-gray;
+$gray-medium: $medium-gray;
+$gray-dark: $dark-gray;
+$gray-soft: $gray-200;
 $background-color: #eff1f2;
 $primary-lighten: #f4fcfd;
 
@@ -54,6 +58,20 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
+
+$brand-primary: $primary !default;
+$brand-secondary: $secondary !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-success: $success !default;
+$brand-danger: $danger !default;
+
+$btn-primary-bg: $primary-hover;
+$btn-secondary-border: #000;
+$btn-info-bg: $brand-info !default;
+$btn-success-bg: $brand-success !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-danger-bg: $brand-danger !default;
 
 $theme-colors: (
   "primary": $primary,
@@ -192,7 +210,7 @@ $container-max-widths: (
 
 // Grid columns
 //$grid-columns:                12 !default;
-//$grid-gutter-width:           30px !default;
+$grid-gutter-width: 1.875rem !default;
 
 // Components
 //$line-height-lg:              1.5 !default;
@@ -609,10 +627,14 @@ $jumbotron-padding: 2rem !default;
 $jumbotron-bg: $extra-light-gray;
 
 // Cards
-//$card-spacer-y:                     .75rem !default;
-//$card-spacer-x:                     1.25rem !default;
-$card-border-width: 0 !default;
+$card-spacer-x: 0.625rem !default;
+$card-spacer-y: 0.625rem !default;
+$card-border-width: 1px !default;
 $card-border-radius: 5px !default;
+$card-border-radius-inner: $card-border-radius !default;
+$card-cap-bg: $gray-200 !default;
+$card-bg: #fff !default;
+$card-link-hover-color: #fff !default;
 $card-border-color: $light-gray;
 //$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 //$card-cap-bg:                       rgba($black, .03) !default;

@@ -4,7 +4,7 @@
   border-width: $border-width;
   @include border-radius($btn-border-radius);
 
-  @include hover-focus () {
+  @include hover-focus() {
     cursor: pointer;
   }
 
@@ -18,15 +18,10 @@
   > .material-icons {
     font-size: 1.45em;
     margin-top: -0.083em;
-    margin-right: .4em;
   }
 
   &-default {
-    @include ps-button-outline-variant(
-      $gray-700,
-      $primary,
-      'default'
-    );
+    @include ps-button-outline-variant($gray-700, $primary, "default");
 
     border-color: $gray-300;
 
@@ -62,4 +57,3 @@
     @include ps-button-outline-variant($value, #fff, $color);
   }
 }
-

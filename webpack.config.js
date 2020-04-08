@@ -18,7 +18,10 @@ let config = {
     rules: [
       {
         test: /\.js/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: [['env', {useBuiltIns: 'usage', modules: false}]]
+        }
       },
       {
         test: require.resolve('jquery'),

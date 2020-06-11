@@ -6,13 +6,13 @@
 }
 
 .form-control-label {
-  margin-bottom: .3125rem;
+  margin-bottom: 0.3125rem;
   color: $dark-gray;
 }
 
 // help labels around form elements
 .form-text {
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: $medium-gray;
 
   label + & {
@@ -21,13 +21,13 @@
 }
 
 .form-control {
-  padding: .375rem .4375rem;
+  padding: 0.375rem 0.4375rem;
 
   &[type="text"],
   &[type="number"] {
     &:hover,
     &:focus {
-      background: $primary-lighten;
+      background-color: $primary-lighten;
     }
   }
 
@@ -53,62 +53,38 @@
 
   .form-control {
     padding-right: 1.5625rem;
-    background-image: none;
-  }
-
-  &:not(.multiple)::after {
-    @include material-icon("\E876");
-    position: absolute;
-    right: .3125rem;
-    bottom: 1.8rem;
-    font-size: 1rem;
-    font-weight: $font-weight-normal;
-    vertical-align: middle;
-  }
-
-  &.multiple {
-   .input-group-input {
-    &::after {
-      @include material-icon("\E876");
-      position: absolute;
-      right: .625rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.438rem;
-      font-weight: $font-weight-normal;
-      vertical-align: middle;
-    }
-   }
-  }
-
-  &.form-group-lg {
-    &::after {
-      bottom: 1.875rem;
-    }
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23f54c3e' d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
   }
 }
 
 .has-success {
-  &:not(.multiple)::after,
-  &.multiple .input-group-input::after {
-    color: theme-color("success");
-    content: "\E876";
+  &:not(.multiple) .form-control {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%2370b580' d='M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
   }
 }
 
 .has-warning {
-  &:not(.multiple)::after,
-  &.multiple .input-group-input::after {
-    color: theme-color("warning");
-    content: "\E001";
+  &:not(.multiple) .form-control {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23d9d701' d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
   }
 }
 
 .has-danger {
-  &:not(.multiple)::after,
-  &.multiple .input-group-input::after {
-    color: theme-color("danger");
-    content: "\E000";
+  &:not(.multiple) .form-control {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23f54c3e' d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+}
+
+.has-danger,
+.has-success,
+.has-warning {
+  .form-control {
+    background-repeat: no-repeat;
   }
 }
 
@@ -164,10 +140,10 @@ $form-check-name: form-check;
     border: 2px solid $gray-450;
     margin-right: 10px;
     position: relative;
-    transition: .25s ease-out;
+    transition: 0.25s ease-out;
 
     &::after {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       @include border-radius(50%);
@@ -176,7 +152,7 @@ $form-check-name: form-check;
       top: 50%;
       left: 50%;
       opacity: 0;
-      transition: .25s ease-out;
+      transition: 0.25s ease-out;
       transform: translate(-50%, -50%) scale(0);
     }
   }
@@ -208,7 +184,7 @@ $form-check-name: form-check;
       @include material-icon("\E8B6");
       position: absolute;
       top: 50%;
-      right: .3125rem;
+      right: 0.3125rem;
       margin-top: -(1.375rem / 2);
       font-size: 1.375rem;
       font-weight: $font-weight-normal;

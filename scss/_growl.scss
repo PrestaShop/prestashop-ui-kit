@@ -7,6 +7,7 @@ $component-name: growl;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
   animation-name: fromLeft;
   animation-duration: 0.25s;
@@ -23,8 +24,13 @@ $component-name: growl;
     margin-left: 10px;
   }
 
+  & &-title {
+    min-width: 50%;
+  }
+
   & &-message {
     font-size: 0.875rem;
+    flex-grow: 1;
   }
 
   &.#{$component-name}-default {

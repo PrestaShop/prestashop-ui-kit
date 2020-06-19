@@ -1,7 +1,7 @@
 // on-off switch control
 .ps-switch {
-  display: block;
   position: relative;
+  display: block;
   width: 100%;
   height: 21px;
 
@@ -13,61 +13,61 @@
 
   label {
     position: absolute;
-    left: 0;
-    padding-left: 2.8rem;
     top: 50%;
-    transform: translateY(-50%);
+    left: 0;
     z-index: 1;
+    padding-left: 2.8rem;
     opacity: 0;
+    transform: translateY(-50%);
   }
 
   .slide-button {
-    width: 35px;
-    height: 21px;
-    display: block;
-    @include border-radius(1000px);
-    transition: 0.25s ease-out;
     position: relative;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 0;
+    display: block;
+    width: 35px;
+    height: 21px;
+    @include transition(.25s ease-out);
+    transform: translateY(-50%);
+    @include border-radius(1000px);
 
     &::after {
-      content: "";
-      height: calc(100% - 4px);
-      width: 46%;
-      background: $white;
       position: absolute;
       top: 50%;
-      border-radius: 50%;
-      transition: 0.25s ease-out;
-      transform: translate(2px, -50%);
       left: 0;
+      width: 46%;
+      height: calc(100% - 4px);
+      content: "";
+      background: $white;
+      @include border-radius(50%);
+      @include transition(.25s ease-out);
+      transform: translate(2px, -50%);
     }
   }
 
   &-center {
     .slide-button {
-      margin: auto;
       position: inherit;
+      margin: auto;
     }
   }
 
   input {
     position: absolute;
     left: 0;
-    opacity: 0;
+    z-index: 3;
     width: 100%;
     height: 100%;
-    z-index: 3;
     cursor: pointer;
+    opacity: 0;
 
     &:disabled {
       cursor: not-allowed;
 
       ~ .slide-button {
-        opacity: 0.2;
+        opacity: .2;
       }
     }
 
@@ -81,7 +81,7 @@
       }
 
       &:disabled ~ label:first-of-type {
-        opacity: 0.2;
+        opacity: .2;
       }
 
       ~ .slide-button {
@@ -95,7 +95,7 @@
       }
 
       &:disabled ~ label:last-of-type {
-        opacity: 0.2;
+        opacity: .2;
       }
 
       ~ .slide-button {
@@ -110,8 +110,8 @@
 
   &.ps-switch-sm {
     min-width: 6.25rem;
-    font-size: $font-size-sm;
     height: 16px;
+    font-size: $font-size-sm;
 
     label {
       padding-left: 2.5rem;
@@ -128,8 +128,8 @@
   }
 
   &.ps-switch-lg {
-    font-size: $font-size-lg;
     height: 30px;
+    font-size: $font-size-lg;
 
     label {
       padding-left: 4.075rem;

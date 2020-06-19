@@ -2,6 +2,10 @@ node_modules/*
 .idea/*
 .cache
 
+# VIM
+.swp
+.swo
+
 # Editor
 .projectile
 .tern-port

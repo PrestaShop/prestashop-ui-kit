@@ -1,30 +1,30 @@
 $component-name: alert !default;
 
 .#{$component-name} {
-  padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
-  background-color: $white;
   position: relative;
+  padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
   color: $gray-700;
+  background-color: $white;
   @include border-radius(5px);
 
   &::before {
     @include use-material-icon();
     position: absolute;
-    left: 15px;
     top: 10px;
-    text-align: center;
-    font-size: 1.563rem;
+    left: 15px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    font-size: 1.563rem;
+    text-align: center;
   }
 
   &.toast {
-    box-shadow: 0 8px 16px 0 rgba(black, 0.1);
     display: flex;
     align-items: center;
-    padding: 15px;
     justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 8px 16px 0 rgba(#000, .1);
 
     &::before {
       content: none;
@@ -48,7 +48,7 @@ $component-name: alert !default;
       position: fixed;
       bottom: 20px;
       animation-name: fromTop;
-      animation-duration: 0.5s;
+      animation-duration: .5s;
     }
 
     &-fixed-left {
@@ -62,7 +62,7 @@ $component-name: alert !default;
 
   .close {
     margin-left: 20px;
-    line-height: 0.8;
+    line-height: .8;
   }
 
   & &-action {
@@ -71,8 +71,8 @@ $component-name: alert !default;
 
   p,
   ul {
-    font-size: $font-size-base;
     margin: 0;
+    font-size: $font-size-base;
   }
 
   > * {
@@ -85,7 +85,7 @@ $component-name: alert !default;
     margin-left: 1.5rem;
   }
 
-  @include close-button(0.625rem);
+  @include close-button(.625rem);
 
   &.medium-alert {
     p {
@@ -96,9 +96,9 @@ $component-name: alert !default;
   &.expandable-alert {
     .read-more {
       @extend .close;
+      float: inherit;
       font-size: $font-size-base;
       line-height: 1.375rem;
-      float: inherit;
       color: $primary;
       opacity: 1;
 
@@ -107,7 +107,7 @@ $component-name: alert !default;
       }
 
       &:hover {
-        opacity: 0.8;
+        opacity: .8;
       }
 
       &:focus {
@@ -119,12 +119,12 @@ $component-name: alert !default;
       color: $medium-gray;
       padding: {
         top: 1.375rem;
-        bottom: 0.75rem;
+        bottom: .75rem;
       }
 
       p {
-        color: inherit;
         font-size: $font-size-sm;
+        color: inherit;
       }
     }
   }
@@ -136,8 +136,8 @@ $component-name: alert !default;
     border: none;
 
     &.toast {
-      background: theme-color($color);
       color: $white;
+      background: theme-color($color);
 
       .close,
       &.expandable-alert .read-more,
@@ -148,8 +148,8 @@ $component-name: alert !default;
     }
 
     &::before {
-      content: $value;
       color: map-get($theme-colors-icons, $color);
+      content: $value;
     }
 
     .close {

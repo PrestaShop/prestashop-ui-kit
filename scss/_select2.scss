@@ -1,12 +1,13 @@
+/* stylelint-disable-next-line */
 $component-name: select2;
 
 .#{$component-name}-container--bootstrap {
   .#{$component-name} {
     &-dropdown {
       padding: $input-padding-x $input-padding-y;
-      border-top: 1px solid;
-      border-color: $gray-300;
       padding: 0;
+      border-color: $gray-300;
+      border-top: 1px solid;
     }
 
     &-search--dropdown {
@@ -14,23 +15,25 @@ $component-name: select2;
       background: $gray-250;
 
       .#{$component-name}-search__field {
-        background: white;
+        background: #fff;
         border: 1px solid $gray-300;
         @include border-radius(4px);
       }
     }
 
     &-results {
+      padding: 0;
+
       &__option {
         &:hover {
           color: $primary;
-          background: rgba($primary, 0.1);
+          background: rgba($primary, .1);
         }
 
         &:focus,
         &:active {
+          color: #fff;
           background: $primary;
-          color: white;
         }
       }
     }
@@ -38,31 +41,31 @@ $component-name: select2;
     &-selection--single {
       height: $input-height;
       padding: $input-padding-x $input-padding-y;
+      padding-left: 15px;
       cursor: default;
       border-color: $gray-300;
-      padding-left: 15px;
       @include border-radius(4px);
 
       .#{$component-name}-selection__arrow {
-        margin-right: 0.625rem;
         right: 15px;
+        margin-right: .625rem;
 
         b {
           width: auto;
           height: auto;
+          margin-top: 0;
           font-size: 0;
           border: none;
-          margin-top: 0;
 
           &::after {
             @include material-icon("expand_more");
             display: inline-block;
             width: auto;
             line-height: 0;
+            color: $gray-600;
             vertical-align: middle;
             border: none;
-            @include transition(0.15s ease-out);
-            color: $gray-600;
+            @include transition(.15s ease-out);
           }
         }
       }
@@ -71,10 +74,6 @@ $component-name: select2;
     &-selection__rendered {
       padding: 0 $input-padding-y;
       line-height: 1.125rem;
-    }
-
-    &-results {
-      padding: 0;
     }
   }
 

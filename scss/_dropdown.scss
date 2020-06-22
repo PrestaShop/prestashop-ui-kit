@@ -54,12 +54,11 @@
   }
 
   > .dropdown-item {
-    padding: .375rem .938rem{
-      right: 1.5rem;
-    }
+    /* stylelint-disable */
     padding: .438rem .938rem{
       right: 1rem;
     }
+    /* stylelint-enable */
     line-height: normal;
     color: inherit;
     border-bottom: 0;

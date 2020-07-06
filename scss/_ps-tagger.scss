@@ -59,5 +59,7 @@
 .input-group .pstaggerAddTagInput {
   display: block;
   width: 100%;
+  @include border-top-right-radius(0);
+  @include border-bottom-right-radius(0);
 }
 /* stylelint-enable selector-class-pattern */

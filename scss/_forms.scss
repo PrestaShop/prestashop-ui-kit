@@ -6,13 +6,13 @@
 }
 
 .form-control-label {
-  margin-bottom: 0.3125rem;
+  margin-bottom: .3125rem;
   color: $dark-gray;
 }
 
 // help labels around form elements
 .form-text {
-  font-size: 0.75rem;
+  font-size: .75rem;
   color: $medium-gray;
 
   label + & {
@@ -21,7 +21,9 @@
 }
 
 .form-control {
-  padding: 0.375rem 0.4375rem;
+  height: auto;
+  min-height: $input-height;
+  padding: .375rem .4375rem;
 
   &[type="text"],
   &[type="number"] {
@@ -54,8 +56,11 @@
   .form-control {
     padding-right: 1.5625rem;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23f54c3e' d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    background-repeat: no-repeat;
+    /* stylelint-disable */
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    /* stylelint-enable */
   }
 }
 
@@ -79,15 +84,7 @@
     background-repeat: no-repeat;
   }
 }
-
-.has-danger,
-.has-success,
-.has-warning {
-  .form-control {
-    background-repeat: no-repeat;
-  }
-}
-
+// stylelint-disable-next-line
 $form-check-name: form-check;
 
 .#{$form-check-name} {
@@ -109,10 +106,10 @@ $form-check-name: form-check;
 
     input {
       position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
       width: 0;
+      height: 0;
+      cursor: pointer;
+      opacity: 0;
     }
 
     input:checked {
@@ -120,8 +117,8 @@ $form-check-name: form-check;
         border-color: $primary;
 
         &::after {
-          transform: translate(-50%, -50%) scale(1);
           opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
         }
       }
     }
@@ -134,26 +131,26 @@ $form-check-name: form-check;
   }
 
   &-round {
+    position: relative;
     width: 20px;
     height: 20px;
-    @include border-radius(50%);
-    border: 2px solid $gray-450;
     margin-right: 10px;
-    position: relative;
-    transition: 0.25s ease-out;
+    border: 2px solid $gray-450;
+    @include transition(.25s ease-out);
+    @include border-radius(50%);
 
     &::after {
-      content: "";
-      width: 10px;
-      height: 10px;
-      @include border-radius(50%);
-      background: $primary;
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 10px;
+      height: 10px;
+      content: "";
+      background: $primary;
       opacity: 0;
-      transition: 0.25s ease-out;
+      @include transition(.25s ease-out);
       transform: translate(-50%, -50%) scale(0);
+      @include border-radius(50%);
     }
   }
 }
@@ -184,7 +181,7 @@ $form-check-name: form-check;
       @include material-icon("\E8B6");
       position: absolute;
       top: 50%;
-      right: 0.3125rem;
+      right: .3125rem;
       margin-top: -(1.375rem / 2);
       font-size: 1.375rem;
       font-weight: $font-weight-normal;

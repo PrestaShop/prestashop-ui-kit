@@ -1,30 +1,37 @@
+// stylelint-disable-next-line
 $component-name: growl;
 
 .#{$component-name} {
-  color: white;
-  opacity: 1;
-  box-shadow: 0 8px 16px 0 rgba(black, 0.1);
   display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(#000, .1);
+  opacity: 1;
   animation-name: fromLeft;
-  animation-duration: 0.25s;
+  animation-duration: .25s;
 
   &.#{$component-name}-medium {
-    padding: 15px;
-    max-width: 800px;
     width: auto;
+    max-width: 800px;
+    padding: 15px;
   }
 
   & &-close {
-    font-size: 1.125rem;
     float: initial;
     margin-left: 10px;
+    font-size: 1.125rem;
+  }
+
+  & &-title {
+    min-width: 50%;
   }
 
   & &-message {
-    font-size: 0.875rem;
+    flex-grow: 1;
+    font-size: .875rem;
   }
 
   &.#{$component-name}-default {

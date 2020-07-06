@@ -1,22 +1,22 @@
+// stylelint-disable-next-line
 $component-name: help-box;
 
 .#{$component-name} {
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  line-height: 19px;
-  height: 1.2rem;
   width: 1.4rem;
-  vertical-align: middle;
-  cursor: pointer;
+  height: 1.2rem;
   padding: 0;
   margin: 0 5px 2px;
+  line-height: 19px;
+  vertical-align: middle;
+  cursor: pointer;
 
   i,
   &::after {
-    content: "\e88e";
+    font-family: "Material Icons", Arial, sans-serif;
     font-size: 19px;
     color: $primary;
-    font-family: "Material Icons";
+    content: "\e88e";
   }
 }

@@ -1,6 +1,7 @@
 .btn-group {
+  /* stylelint-disable-next-line */
   input[type="radio"] {
-    display: none; 
+    display: none;
   }
 
   .btn.dropdown-toggle-split {
@@ -25,4 +26,3 @@
     margin-left: -$border-width;
   }
 }
-

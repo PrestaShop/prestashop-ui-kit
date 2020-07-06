@@ -9,8 +9,8 @@
     }
 
     > a {
-      color: $primary;
       font-weight: 700;
+      color: $primary;
 
       &:hover {
         @extend a:hover;

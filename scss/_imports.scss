@@ -1,5 +1,7 @@
 // Open Sans
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&subset=latin-ext");
+// stylelint-disable-next-line
+$FontPathOpenSans: "../node_modules/open-sans-fonts/open-sans";
+@import "~open-sans-fonts/open-sans.scss";
 
 // Material Icons
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");

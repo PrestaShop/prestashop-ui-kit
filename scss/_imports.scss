@@ -3,8 +3,19 @@
 $FontPathOpenSans: "../node_modules/open-sans-fonts/open-sans";
 @import "~open-sans-fonts/open-sans.scss";
 
-// Material Icons
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot"); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url("../node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2")
+      format("woff2"),
+    url("../node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff")
+      format("woff"),
+    url("../node_modules/material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf")
+      format("truetype");
+}
 
 .material-icons {
   @include use-material-icon();

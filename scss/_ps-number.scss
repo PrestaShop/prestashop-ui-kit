@@ -7,10 +7,20 @@ $component-name: ps-number;
   & &-inputs {
     display: flex;
     align-items: center;
+
+    .btn {
+      padding: 0.44rem 0.47rem;
+      min-width: 2.5rem;
+
+      > .material-icons {
+        font-size: 1.2em;
+      }
+    }
   }
 
   & &-controls {
     margin-left: 5px;
+    height: 2.2rem;
   }
 
   .invalid-feedback {

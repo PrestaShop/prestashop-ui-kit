@@ -19,15 +19,8 @@ const PSNumberInput = function PSNumberInput(element) {
   let value = input.value;
 
   let initValue = () => {
-    if (
-      input.value.replace('.', '') !== input.value ||
-      input.value.replace(',', '') !== input.value
-    ) {
-      value = parseInt(
-        input.value.replace(',', '') !== input.value
-          ? input.value.replace(',', '.')
-          : input.value
-      );
+    if (input.value.replace('.', '') !== input.value || input.value.replace(',', '') !== input.value) {
+      value = parseInt(input.value.replace(',', '') !== input.value ? input.value.replace(',', '.') : input.value);
     } else {
       value = Number(input.value);
     }
@@ -44,17 +37,14 @@ const PSNumberInput = function PSNumberInput(element) {
 
     if (!maxCond && !minCond && !checkNumber) {
       invalidElement.classList.remove('show');
-      input.classList.remove('is-invalid');
+      input.classList.remove('has-danger', 'is-invalid');
 
       return true;
     }
 
-    if (
-      !invalidElement.classList.contains('show') &&
-      !input.classList.contains('is-invalid')
-    ) {
+    if (!invalidElement.classList.contains('show') && !input.classList.contains('has-danger')) {
       invalidElement.classList.add('show');
-      input.classList.add('is-invalid');
+      input.classList.add('has-danger', 'is-invalid');
     }
 
     if (checkNumber) {
@@ -63,9 +53,7 @@ const PSNumberInput = function PSNumberInput(element) {
       return false;
     }
 
-    invalidElement.innerHTML = `${maxCond ? labelMax : labelMin} ${
-      maxCond ? max : min
-    }.`;
+    invalidElement.innerHTML = `${maxCond ? labelMax : labelMin} ${maxCond ? max : min}.`;
 
     return false;
   };

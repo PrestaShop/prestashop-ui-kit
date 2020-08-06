@@ -67,7 +67,9 @@ let config = {
           {
             loader: 'file-loader',
             options: {
-              name: '[hash].[ext]'
+              name: '[hash].[ext]',
+              esModule: false,
+              outputPath: '../css'
             }
           }
         ]

@@ -10,16 +10,18 @@ $component-name: ps-number-input;
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
+      // stylelint-disable-next-line
       -webkit-appearance: none;
     }
 
     input[type="number"] {
+      // stylelint-disable-next-line
       -moz-appearance: textfield; /* Firefox */
     }
 
     .btn {
       min-width: 2.5rem;
-      padding: 0.44rem 0.47rem;
+      padding: .44rem .47rem;
 
       > .material-icons {
         font-size: 1.2em;
@@ -31,10 +33,12 @@ $component-name: ps-number-input;
     .#{$component-name}-inputs {
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
+        // stylelint-disable-next-line
         -webkit-appearance: auto;
       }
 
       input[type="number"] {
+        // stylelint-disable-next-line
         -moz-appearance: auto; /* Firefox */
 
         &.is-invalid {

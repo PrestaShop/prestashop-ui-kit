@@ -92,16 +92,6 @@ const PSNumberInput = function PSNumberInput(element) {
     validate();
   });
 
-  input.addEventListener('keydown', e => {
-    if (e.keyCode == '38') {
-      updateValue(true);
-    } else if (e.keyCode == '40') {
-      updateValue(false);
-    }
-
-    validate();
-  });
-
   input.addEventListener('cut', () => {
     initValue();
     validate();

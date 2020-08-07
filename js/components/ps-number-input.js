@@ -37,14 +37,16 @@ const PSNumberInput = function PSNumberInput(element) {
 
     if (!maxCond && !minCond && !checkNumber) {
       invalidElement.classList.remove('show');
-      input.classList.remove('has-danger', 'is-invalid');
+      input.classList.remove('is-invalid');
+      element.classList.remove('has-danger');
 
       return true;
     }
 
-    if (!invalidElement.classList.contains('show') && !input.classList.contains('has-danger')) {
+    if (!invalidElement.classList.contains('show') && !input.classList.contains('is-invalid')) {
       invalidElement.classList.add('show');
-      input.classList.add('has-danger', 'is-invalid');
+      element.classList.add('has-danger');
+      input.classList.add('is-invalid');
     }
 
     if (checkNumber) {

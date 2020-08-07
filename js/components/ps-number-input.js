@@ -77,16 +77,28 @@ const PSNumberInput = function PSNumberInput(element) {
     validate();
   };
 
-  incrementButton.addEventListener('click', () => {
-    updateValue(true);
-  });
+  if (incrementButton && decrementButton) {
+    incrementButton.addEventListener('click', () => {
+      updateValue(true);
+    });
 
-  decrementButton.addEventListener('click', () => {
-    updateValue(false);
-  });
+    decrementButton.addEventListener('click', () => {
+      updateValue(false);
+    });
+  }
 
   input.addEventListener('keyup', () => {
     initValue();
+    validate();
+  });
+
+  input.addEventListener('keydown', e => {
+    if (e.keyCode == '38') {
+      updateValue(true);
+    } else if (e.keyCode == '40') {
+      updateValue(false);
+    }
+
     validate();
   });
 

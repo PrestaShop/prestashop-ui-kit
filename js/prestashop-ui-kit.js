@@ -30,7 +30,7 @@ $.fn.pstooltip = $.fn.tooltip;
    */
   var initSelect2 = function() {
     jQuery('[data-toggle="select2"]').each(function() {
-      var newObj = {minimumResultsForSearch: -1};
+      var newObj = { minimumResultsForSearch: -1 };
 
       for (var attr in $(this).data()) {
         if (!attr.localeCompare('templateresult')) {
@@ -90,7 +90,10 @@ $.fn.pstooltip = $.fn.tooltip;
         var actualClass = $this.parent().attr('class');
         $this.parent().addClass('alert-drop');
 
-        if (typeof $this.data('title') != 'undefined' && $this.data('title') !== '') {
+        if (
+          typeof $this.data('title') != 'undefined' &&
+          $this.data('title') !== ''
+        ) {
           $this.html('<b>' + $this.data('title') + '</b>');
         } else {
           $this.html('<b>Read More</b>');
@@ -98,7 +101,11 @@ $.fn.pstooltip = $.fn.tooltip;
         $this.css('cursor', 'pointer');
         $this
           .parent()
-          .after('<div class="' + actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>');
+          .after(
+            '<div class="' +
+              actualClass +
+              ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
+          );
         jQuery('.alert-down-text').html(actualHtml);
       }
     });
@@ -122,7 +129,7 @@ $.fn.pstooltip = $.fn.tooltip;
   var initToolTips = function() {
     jQuery('.tooltip-error').pstooltip({
       template:
-        '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>'
+        '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>',
     });
     jQuery('[data-toggle="pstooltip"]').pstooltip();
     jQuery('[data-toggle="popover"]').popover();
@@ -150,7 +157,7 @@ $.fn.pstooltip = $.fn.tooltip;
             var ret = (elem[name] = value);
             $(elem).trigger('change');
             return ret;
-          }
+          },
         };
 
         // Set default theme to prestakit for Select2
@@ -175,7 +182,7 @@ $.fn.pstooltip = $.fn.tooltip;
 
     initToolTips: function() {
       initToolTips();
-    }
+    },
   };
 
   global.prestaShopUiKit.init();
@@ -210,7 +217,7 @@ $(function() {
       validate: '<i class="material-icons">check</i>',
       text: 'default',
       time: 3000,
-      default: true
+      default: true,
     };
 
     var psdwl = this;
@@ -221,7 +228,10 @@ $(function() {
       psdwl.attr('class', value);
     }
 
-    if (typeof $(psdwl.selector).html() != 'undefined' && $(psdwl.selector).html() !== '') {
+    if (
+      typeof $(psdwl.selector).html() != 'undefined' &&
+      $(psdwl.selector).html() !== ''
+    ) {
       config.text = $(psdwl.selector).text();
     }
 
@@ -257,7 +267,7 @@ $(function() {
       psdwl.css({
         width: '',
         'margin-left': nw / 4,
-        'margin-right': nw / 4
+        'margin-right': nw / 4,
       });
 
       setTimeout(function() {
@@ -266,7 +276,7 @@ $(function() {
           'margin-left': '',
           'margin-right': '',
           width: width,
-          'border-left-color': ''
+          'border-left-color': '',
         });
         psdwl.html(config.validate);
 

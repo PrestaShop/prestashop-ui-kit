@@ -19,11 +19,8 @@ const PSNumberInput = function PSNumberInput(element) {
   let value = input.value;
 
   let initValue = () => {
-    if (input.value.replace('.', '') !== input.value || input.value.replace(',', '') !== input.value) {
-      value = parseInt(input.value.replace(',', '') !== input.value ? input.value.replace(',', '.') : input.value);
-    } else {
-      value = Number(input.value);
-    }
+    const sanitized = input.value.replace(/[.,]/g, '.');
+    value = parseInt(sanitized);
   };
 
   initValue();

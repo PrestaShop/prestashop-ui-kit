@@ -62,6 +62,9 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
+$toast-success: #53D572 !default;
+$toast-warning: #FAB000 !default;
+
 $brand-primary: $primary !default;
 $brand-secondary: $secondary !default;
 $brand-info: #5bc0de !default;
@@ -99,7 +102,7 @@ $theme-colors-icons: (
   "secondary": $secondary,
   "success": $success,
   "info": $info,
-  "warning": #ffe700,
+  "warning": #FAB000,
   "danger": $danger,
   "light": $light
 );

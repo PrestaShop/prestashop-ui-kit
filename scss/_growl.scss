@@ -8,10 +8,10 @@ $component-name: growl;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  box-shadow: 0 8px 16px 0 rgba(#000, .1);
+  box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
   opacity: 1;
   animation-name: fromLeft;
-  animation-duration: .25s;
+  animation-duration: 0.25s;
 
   &.#{$component-name}-medium {
     width: auto;
@@ -31,7 +31,7 @@ $component-name: growl;
 
   & &-message {
     flex-grow: 1;
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   &.#{$component-name}-default {
@@ -43,10 +43,10 @@ $component-name: growl;
   }
 
   &.#{$component-name}-notice {
-    background: $success;
+    background: $toast-success;
   }
 
   &.#{$component-name}-warning {
-    background: $warning;
+    background: $toast-warning;
   }
 }

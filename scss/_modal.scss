@@ -14,10 +14,10 @@ $component-name: modal;
 
   &-header {
     .close {
-      cursor: pointer;
-      font-size: 2rem;
       padding: 1.25rem;
       margin: -1.825rem -1.25rem -1.25rem auto;
+      font-size: 2rem;
+      cursor: pointer;
 
       i {
         font-size: 1.7rem;
@@ -48,11 +48,11 @@ $component-name: modal;
     padding-top: 1.875rem;
 
     > :not(:first-child) {
-      margin-right: 0.3125rem;
+      margin-right: .3125rem;
     }
 
     > :not(:first-child) {
-      margin-left: 0.3125rem;
+      margin-left: .3125rem;
     }
   }
 

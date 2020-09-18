@@ -13,8 +13,8 @@
   "scripts": {
     "watch": "webpack -w --progress --debug",
     "build": "NODE_ENV=production webpack --progress --debug",
-    "scss-lint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache",
-    "scss-fix": "stylelint \"**/*.scss\" --fix --cache --cache-location .cache/.stylelintcache"
+    "scss-lint": "stylelint \"**/*.scss\"",
+    "scss-fix": "stylelint \"**/*.scss\" --fix"
   },
   "author": "PrestaShop",
   "license": "OSL-3.0",
@@ -31,11 +31,13 @@
     "bootstrap": "^4.4.1",
     "css-loader": "^0.28.11",
     "expose-loader": "^0.7.5",
-    "file-loader": "^0.11.2",
+    "file-loader": "^6.0.0",
     "jquery": "^3.5.0",
     "jquery.growl": "^1.3.5",
+    "material-design-icons-iconfont": "^5.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
+    "open-sans-fonts": "^1.6.2",
     "popper.js": "^1.14.1",
     "postcss-cssnext": "^2.11.0",
     "postcss-loader": "^2.1.3",

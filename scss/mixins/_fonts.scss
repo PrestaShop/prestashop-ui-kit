@@ -1,7 +1,7 @@
 @mixin use-material-icon {
   display: inline-block;
   font-family: "Material Icons", Arial, Verdana, Tahoma, sans-serif;
-  font-size: 1.5rem;  /* Preferred icon size */
+  font-size: 1.5rem; /* Preferred icon size */
   font-style: normal;
   font-weight: 400;
   line-height: 1;
@@ -26,7 +26,7 @@
 }
 
 @mixin material-icon($content) {
-  @include use-material-icon ();
+  @include use-material-icon();
 
   content: $content;
 }

@@ -1,8 +1,180 @@
 // Open Sans
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&subset=latin-ext");
+/* stylelint-disable */
 
-// Material Icons
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+$FontPathOpenSans: "~prestakit/node_modules/open-sans-fonts/open-sans";
+
+@mixin setFont() {
+  @if $local-font {
+    @font-face {
+      font-family: "Material Icons";
+      font-style: normal;
+      font-weight: 400;
+      src: url("~material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.eot"); /* For IE6-8 */
+      src:
+        local("Material Icons"), local("MaterialIcons-Regular"), url("~material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff2")
+        format("woff2"), url("~material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.woff")
+        format("woff"), url("~material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf")
+        format("truetype");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 300;
+      src:
+        url("#{$FontPathOpenSans}/Light/OpenSans-Light.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.woff") format("woff"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.ttf") format("truetype"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.svg#OpenSansLight")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: 300;
+      src:
+        url("#{$FontPathOpenSans}/LightItalic/OpenSans-LightItalic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/LightItalic/OpenSans-LightItalic.woff")
+        format("woff"), url("#{$FontPathOpenSans}/LightItalic/OpenSans-LightItalic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/LightItalic/OpenSans-LightItalic.svg#OpenSansLightItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      src:
+        url("#{$FontPathOpenSans}/Regular/OpenSans-Regular.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/Regular/OpenSans-Regular.woff") format("woff"), url("#{$FontPathOpenSans}/Regular/OpenSans-Regular.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/Regular/OpenSans-Regular.svg#OpenSansRegular")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: normal;
+      src:
+        url("#{$FontPathOpenSans}/Italic/OpenSans-Italic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/Italic/OpenSans-Italic.woff") format("woff"), url("#{$FontPathOpenSans}/Italic/OpenSans-Italic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/Italic/OpenSans-Italic.svg#OpenSansItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      src:
+        url("#{$FontPathOpenSans}/Semibold/OpenSans-Semibold.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/Semibold/OpenSans-Semibold.woff")
+        format("woff"), url("#{$FontPathOpenSans}/Semibold/OpenSans-Semibold.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/Semibold/OpenSans-Semibold.svg#OpenSansSemibold")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: 600;
+      src:
+        url("#{$FontPathOpenSans}/SemiboldItalic/OpenSans-SemiboldItalic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/SemiboldItalic/OpenSans-SemiboldItalic.woff")
+        format("woff"), url("#{$FontPathOpenSans}/SemiboldItalic/OpenSans-SemiboldItalic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/SemiboldItalic/OpenSans-SemiboldItalic.svg#OpenSansSemiboldItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: bold;
+      src:
+        url("#{$FontPathOpenSans}/Bold/OpenSans-Bold.woff2") format("woff2"), url("#{$FontPathOpenSans}/Bold/OpenSans-Bold.woff") format("woff"), url("#{$FontPathOpenSans}/Bold/OpenSans-Bold.ttf") format("truetype"), url("#{$FontPathOpenSans}/Bold/OpenSans-Bold.svg#OpenSansBold")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: bold;
+      src:
+        url("#{$FontPathOpenSans}/BoldItalic/OpenSans-BoldItalic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/BoldItalic/OpenSans-BoldItalic.woff")
+        format("woff"), url("#{$FontPathOpenSans}/BoldItalic/OpenSans-BoldItalic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/BoldItalic/OpenSans-BoldItalic.svg#OpenSansBoldItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 800;
+      src:
+        url("#{$FontPathOpenSans}/ExtraBold/OpenSans-ExtraBold.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/ExtraBold/OpenSans-ExtraBold.woff")
+        format("woff"), url("#{$FontPathOpenSans}/ExtraBold/OpenSans-ExtraBold.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: 800;
+      src:
+        url("#{$FontPathOpenSans}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff")
+        format("woff"), url("#{$FontPathOpenSans}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg#OpenSansExtraboldItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans Condensed";
+      font-style: normal;
+      font-weight: 300;
+      src:
+        url("#{$FontPathOpenSans}/CondensedLight/OpenSans-CondensedLight.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/CondensedLight/OpenSans-CondensedLight.woff")
+        format("woff"), url("#{$FontPathOpenSans}/CondensedLight/OpenSans-CondensedLight.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/CondensedLight/OpenSans-CondensedLight.svg#OpenSansCondensedLight")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans Condensed";
+      font-style: italic;
+      font-weight: 300;
+      src:
+        url("#{$FontPathOpenSans}/CondensedLightItalic/OpenSans-CondensedLightItalic.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/CondensedLightItalic/OpenSans-CondensedLightItalic.woff")
+        format("woff"), url("#{$FontPathOpenSans}/CondensedLightItalic/OpenSans-CondensedLightItalic.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/CondensedLightItalic/OpenSans-CondensedLightItalic.svg#OpenSansCondensedLightItalic")
+        format("svg");
+    }
+
+    @font-face {
+      font-family: "Open Sans Condensed";
+      font-style: normal;
+      font-weight: 700;
+      src:
+        url("#{$FontPathOpenSans}/CondensedBold/OpenSans-CondensedBold.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/CondensedBold/OpenSans-CondensedBold.woff")
+        format("woff"), url("#{$FontPathOpenSans}/CondensedBold/OpenSans-CondensedBold.ttf")
+        format("truetype"), url("#{$FontPathOpenSans}/CondensedBold/OpenSans-CondensedBold.svg#OpenSansCondensedBold")
+        format("svg");
+    }
+  } @else {
+    // Open Sans
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&subset=latin-ext");
+
+    // Material Icons
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+  }
+}
+
+@include setFont();
 
 .material-icons {
   @include use-material-icon();

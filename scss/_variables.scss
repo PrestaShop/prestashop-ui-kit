@@ -37,7 +37,7 @@ $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #f54c3e;
 $orange: #fd7e14 !default;
-$yellow: #d9d701;
+$yellow: #fab000;
 $green: #70b580;
 $orange: #fd7e14 !default;
 $teal: #20c997 !default;
@@ -62,8 +62,8 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
-$toast-success: #53D572 !default;
-$toast-warning: #FAB000 !default;
+$toast-success: #53d572 !default;
+$toast-warning: #fab000 !default;
 
 $brand-primary: $primary !default;
 $brand-secondary: $secondary !default;
@@ -102,7 +102,7 @@ $theme-colors-icons: (
   "secondary": $secondary,
   "success": $success,
   "info": $info,
-  "warning": #FAB000,
+  "warning": #fab000,
   "danger": $danger,
   "light": $light
 );
@@ -112,7 +112,7 @@ $theme-colors-hover: (
   secondary: $secondary-hover,
   success: #78d07d,
   info: $primary-hover,
-  warning: #f1b746,
+  warning: #e6b045,
   danger: #e76d7a,
   light: $gray-800,
   dark: $gray-100,
@@ -254,7 +254,7 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 $h1-font-size: 1.5rem;
-$h2-font-size: 1.125rem;
+$h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
 $h4-font-size: .875rem;
 $h5-font-size: .75rem;

@@ -7,11 +7,12 @@
 
   .nav-link {
     border: none;
+    @include border-radius(0);
   }
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    border-top: solid .1875rem $nav-tabs-link-active-border-color;
+    border-top: solid 0.1875rem $nav-tabs-link-active-border-color;
   }
 }
 
@@ -20,9 +21,11 @@
   border-bottom: solid $border-width #dfdfdf;
 
   .nav-link {
+    @include border-radius(0);
+
     &.active,
     .show > & {
-      border-bottom: solid .1875rem $nav-pills-link-active-border-color;
+      border-bottom: solid 0.1875rem $nav-pills-link-active-border-color;
     }
   }
 }

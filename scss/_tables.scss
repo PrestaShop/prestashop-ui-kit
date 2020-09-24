@@ -5,10 +5,10 @@
     // normal header row
     th {
       border-top: none;
-      border-bottom: solid 0.125rem theme-color("primary");
+      border-bottom: solid .125rem theme-color("primary");
 
       > .material-icons {
-        margin-top: -0.5rem;
+        margin-top: -.5rem;
         color: $gray-500;
       }
     }
@@ -46,7 +46,7 @@
   }
 
   td {
-    font-size: 0.815rem;
+    font-size: .815rem;
   }
 
   .form-group {

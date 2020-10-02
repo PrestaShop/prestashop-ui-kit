@@ -5,28 +5,28 @@ $component-name: alert !default;
   padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
   color: $gray-700;
   background-color: $white;
-  @include border-radius(5px);
+  @include border-radius(8px);
 
   a {
     font-weight: 600;
     color: $gray-700;
     text-decoration: underline;
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
 
     &:hover {
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 
   &::before {
     @include use-material-icon();
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.563rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -35,7 +35,7 @@ $component-name: alert !default;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    box-shadow: 0 8px 16px 0 rgba(#000, .1);
+    box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
 
     &::before {
       content: none;
@@ -59,7 +59,7 @@ $component-name: alert !default;
       position: fixed;
       bottom: 20px;
       animation-name: fromTop;
-      animation-duration: .5s;
+      animation-duration: 0.5s;
     }
 
     &-fixed-left {
@@ -73,7 +73,7 @@ $component-name: alert !default;
 
   .close {
     margin-left: 20px;
-    line-height: .8;
+    line-height: 0.8;
   }
 
   & &-action {
@@ -96,7 +96,7 @@ $component-name: alert !default;
     margin-left: 1.5rem;
   }
 
-  @include close-button(.625rem);
+  @include close-button(0.625rem);
 
   &.medium-alert {
     p {
@@ -116,6 +116,7 @@ $component-name: alert !default;
       font-size: $font-size-base;
       line-height: 1.375rem;
       color: $primary;
+      font-weight: 600;
       opacity: 1;
 
       &-container {
@@ -123,7 +124,7 @@ $component-name: alert !default;
       }
 
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
 
       &:focus {
@@ -135,7 +136,7 @@ $component-name: alert !default;
       color: $gray-700;
       padding: {
         top: 1.375rem;
-        bottom: .75rem;
+        bottom: 0.75rem;
       }
 
       p {
@@ -148,12 +149,12 @@ $component-name: alert !default;
 
 @each $color, $value in $theme-alerts-icons {
   .#{$component-name}-#{$color} {
-    background-color: theme-color-background($color);
-    border: 1px solid theme-color($color);
+    background-color: map-get($alerts-background-colors, $color);
+    border: 1px solid map-get($alerts-second-colors, $color);
 
     &.toast {
       color: $white;
-      background: theme-color($color);
+      background: map-get($alerts-background-colors, $color);
 
       .close,
       &.expandable-alert .read-more,
@@ -164,7 +165,7 @@ $component-name: alert !default;
     }
 
     &::before {
-      color: map-get($theme-colors-icons, $color);
+      color: map-get($alerts-second-colors, $color);
       content: $value;
     }
 

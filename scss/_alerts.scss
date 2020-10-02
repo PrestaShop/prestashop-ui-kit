@@ -11,10 +11,10 @@ $component-name: alert !default;
     font-weight: 600;
     color: $gray-700;
     text-decoration: underline;
-    @include transition(0.25s ease-out);
+    @include transition(.25s ease-out);
 
     &:hover {
-      opacity: 0.6;
+      opacity: .6;
     }
   }
 
@@ -35,7 +35,7 @@ $component-name: alert !default;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(#000, .1);
 
     &::before {
       content: none;
@@ -59,7 +59,7 @@ $component-name: alert !default;
       position: fixed;
       bottom: 20px;
       animation-name: fromTop;
-      animation-duration: 0.5s;
+      animation-duration: .5s;
     }
 
     &-fixed-left {
@@ -73,7 +73,7 @@ $component-name: alert !default;
 
   .close {
     margin-left: 20px;
-    line-height: 0.8;
+    line-height: .8;
   }
 
   & &-action {
@@ -96,7 +96,7 @@ $component-name: alert !default;
     margin-left: 1.5rem;
   }
 
-  @include close-button(0.625rem);
+  @include close-button(.625rem);
 
   &.medium-alert {
     p {
@@ -114,9 +114,9 @@ $component-name: alert !default;
       @extend .close;
       float: inherit;
       font-size: $font-size-base;
+      font-weight: 600;
       line-height: 1.375rem;
       color: $primary;
-      font-weight: 600;
       opacity: 1;
 
       &-container {
@@ -124,7 +124,7 @@ $component-name: alert !default;
       }
 
       &:hover {
-        opacity: 0.8;
+        opacity: .8;
       }
 
       &:focus {
@@ -136,7 +136,7 @@ $component-name: alert !default;
       color: $gray-700;
       padding: {
         top: 1.375rem;
-        bottom: 0.75rem;
+        bottom: .75rem;
       }
 
       p {

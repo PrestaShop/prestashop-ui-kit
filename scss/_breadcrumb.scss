@@ -1,11 +1,11 @@
 .breadcrumb {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: .75rem;
 
   li {
     & + li::before {
       padding-right: 0;
-      padding-left: 0.1875rem;
+      padding-left: .1875rem;
     }
 
     > a {

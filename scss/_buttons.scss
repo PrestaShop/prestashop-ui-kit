@@ -12,14 +12,14 @@
   &.disabled,
   &:disabled {
     cursor: not-allowed;
-    opacity: 1;
     background-color: $gray-disabled;
+    opacity: 1;
   }
 
   > .material-icons {
-    margin-top: -0.083em;
+    margin-top: -.083em;
+    margin-right: .4rem;
     font-size: 1.45em;
-    margin-right: 0.4rem;
   }
 
   &-default {

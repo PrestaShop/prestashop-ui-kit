@@ -27,8 +27,8 @@
   &.disabled,
   &:disabled {
     color: $gray-450;
-    border-color: $gray-disabled;
     background-color: $gray-disabled;
+    border-color: $gray-disabled;
   }
 
   &:not([disabled]):not(.disabled):active,

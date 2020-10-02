@@ -8,10 +8,10 @@ $component-name: growl;
   align-items: center;
   justify-content: space-between;
   color: $gray-700;
-  box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
+  box-shadow: 0 8px 16px 0 rgba(#000, .1);
   opacity: 1;
   animation-name: fromLeft;
-  animation-duration: 0.25s;
+  animation-duration: .25s;
 
   &.#{$component-name}-medium {
     width: auto;
@@ -31,7 +31,7 @@ $component-name: growl;
 
   & &-message {
     flex-grow: 1;
-    font-size: 0.875rem;
+    font-size: .875rem;
   }
 
   &.#{$component-name}-default {

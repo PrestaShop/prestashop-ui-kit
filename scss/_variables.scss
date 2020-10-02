@@ -2,6 +2,7 @@
 
 // Color system
 $white: #fff;
+$gray-disabled: #EAEBEC;
 $gray-100: #fafbfc;
 $gray-200: #fafbfc;
 $gray-250: #fafbfc;
@@ -357,8 +358,8 @@ $input-btn-padding-x-lg: 0.838rem;
 //$input-btn-border-width:      $border-width !default;
 
 // Buttons
-$btn-padding-y: 0.44rem !default;
-$btn-padding-x: 0.936rem !default;
+$btn-padding-y: 0.5rem !default;
+$btn-padding-x: 1rem !default;
 //$btn-line-height:             $input-btn-line-height !default;
 
 //$btn-padding-y-sm:            $input-btn-padding-y-sm !default;

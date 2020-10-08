@@ -14,7 +14,7 @@
     font-size: 0; // collapses whitespace between tags
 
     &:not(:empty) {
-      padding: $badge-padding-y $badge-padding-x;
+      padding: .5rem 1rem;
       padding-right: 0;
     }
   }

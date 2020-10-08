@@ -21,7 +21,7 @@
     font-size: 1.45em;
   }
 
-  &.not(.btn-icon-only) {
+  &:not(.btn-icon-only) {
     > .material-icons {
       margin-right: .4rem;
     }

@@ -18,8 +18,13 @@
 
   > .material-icons {
     margin-top: -.083em;
-    margin-right: .4rem;
     font-size: 1.45em;
+  }
+
+  &.not(.btn-icon-only) {
+    > .material-icons {
+      margin-right: .4rem;
+    }
   }
 
   &-default {

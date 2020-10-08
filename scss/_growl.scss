@@ -35,21 +35,25 @@ $component-name: growl;
   }
 
   &.#{$component-name}-default {
+    color: $gray-700;
     background: map-get($alerts-background-colors, success);
     border: 1px solid map-get($alerts-second-colors, success);
   }
 
   &.#{$component-name}-error {
+    color: $gray-700;
     background: map-get($alerts-background-colors, danger);
     border: 1px solid map-get($alerts-second-colors, danger);
   }
 
   &.#{$component-name}-notice {
+    color: $gray-700;
     background: map-get($alerts-background-colors, info);
     border: 1px solid map-get($alerts-second-colors, info);
   }
 
   &.#{$component-name}-warning {
+    color: $gray-700;
     background: map-get($alerts-background-colors, warning);
     border: 1px solid map-get($alerts-second-colors, warning);
   }

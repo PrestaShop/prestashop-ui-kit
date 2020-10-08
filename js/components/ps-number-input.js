@@ -20,7 +20,7 @@ const PSNumberInput = function PSNumberInput(element) {
 
   let initValue = () => {
     const sanitized = input.value.replace(/[.,]/g, '.');
-    value = parseInt(sanitized);
+    value = parseInt(sanitized, 10);
   };
 
   initValue();

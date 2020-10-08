@@ -21,12 +21,6 @@
     font-size: 1.45em;
   }
 
-  &:not(.btn-icon-only) {
-    > .material-icons {
-      margin-right: .4rem;
-    }
-  }
-
   &-default {
     @include ps-button-outline-variant($gray-700, $primary, "default");
 

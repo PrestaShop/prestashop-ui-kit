@@ -43,7 +43,7 @@
       background: $white;
       @include border-radius(50%);
       @include transition(.25s ease-out);
-      transform: translate(2px, -50%);
+      transform: translate(2px, -48%);
     }
   }
 
@@ -102,7 +102,7 @@
         background: $success;
 
         &::after {
-          transform: translate(17px, -50%);
+          transform: translate(17px, -48%);
         }
       }
     }

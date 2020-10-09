@@ -173,22 +173,45 @@
               [zip] or
             </p>
             <pre><code>git clone https://github.com/PrestaShop/prestashop-ui-kit</code></pre>
+            <p>or if you use npm</p>
+            <pre><code>npm install prestakit</code></pre>
 
             <h2 id="installation">Installation</h2>
-            <p>You can install by just typing <code>npm install</code>.</p>
+            <strong>
+              If you cloned it, you can install by just typing
+              <code>npm install</code>.
+            </strong>
             <pre><code>npm install</code></pre>
 
             <h2 id="get-started">Get Started</h2>
+
+            <strong>
+              If you installed it with npm, you've multiple ways to add the
+              UIKit to your project:
+            </strong>
+            <p>import built files to your main scss file:</p>
+            <pre><code>@import '~prestakit/dist/css/bootstrap-prestashop-ui-kit'</code></pre>
+
+            <p>or import source files to your main scss file:</p>
+            <pre><code>@import '~prestakit/scss/application.scss'</code></pre>
+
             <p>
-              Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit +
-              Javascript.
+              depending on how your project is setup, you may need to adjust a
+              bit which file you import depending on your need.
             </p>
+
+            <strong>
+              If you cloned or downloaded the project, include the dependencies:
+              jQuery and Bootstrap PrestaShop UI Kit + Javascript.
+            </strong>
             <pre><code>[...]
 &lt;link href=&quot;dist/css/prestashop-ui-kit.css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;script src=&quot;dist/docs/public/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;dist/js/prestashop-ui-kit.js&quot;&gt;&lt;/script&gt;
 [...]</code></pre>
+
+            <p>These paths may differ if you directly installed it with npm.</p>
 
             <p>Github devDependencies</p>
             <p>

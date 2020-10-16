@@ -12,6 +12,7 @@
   &.disabled,
   &:disabled {
     cursor: not-allowed;
+    background-color: $gray-disabled;
     opacity: 1;
   }
 

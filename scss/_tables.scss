@@ -45,6 +45,10 @@
     vertical-align: middle;
   }
 
+  td {
+    font-size: .815rem;
+  }
+
   .form-group {
     text-align: center;
 
@@ -63,7 +67,7 @@
 
 .table-hover {
   tbody tr {
-    @include hover () {
+    @include hover() {
       color: $white;
       cursor: pointer;
     }

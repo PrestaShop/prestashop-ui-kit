@@ -5,17 +5,28 @@ $component-name: alert !default;
   padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
   color: $gray-700;
   background-color: $white;
-  @include border-radius(5px);
+  @include border-radius(8px);
+
+  a {
+    font-weight: 600;
+    color: $gray-700;
+    text-decoration: underline;
+    @include transition(.25s ease-out);
+
+    &:hover {
+      opacity: .6;
+    }
+  }
 
   &::before {
     @include use-material-icon();
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.563rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -94,10 +105,16 @@ $component-name: alert !default;
   }
 
   &.expandable-alert {
+    .alert-text {
+      font-weight: 600;
+      color: $gray-700;
+    }
+
     .read-more {
       @extend .close;
       float: inherit;
       font-size: $font-size-base;
+      font-weight: 600;
       line-height: 1.375rem;
       color: $primary;
       opacity: 1;
@@ -116,7 +133,7 @@ $component-name: alert !default;
     }
 
     .#{$component-name}-more {
-      color: $medium-gray;
+      color: $gray-700;
       padding: {
         top: 1.375rem;
         bottom: .75rem;
@@ -132,12 +149,12 @@ $component-name: alert !default;
 
 @each $color, $value in $theme-alerts-icons {
   .#{$component-name}-#{$color} {
-    background-color: theme-color-background($color);
-    border: none;
+    background-color: map-get($alerts-background-colors, $color);
+    border: 1px solid map-get($alerts-second-colors, $color);
 
     &.toast {
       color: $white;
-      background: theme-color($color);
+      background: map-get($alerts-background-colors, $color);
 
       .close,
       &.expandable-alert .read-more,
@@ -148,7 +165,7 @@ $component-name: alert !default;
     }
 
     &::before {
-      color: map-get($theme-colors-icons, $color);
+      color: map-get($alerts-second-colors, $color);
       content: $value;
     }
 

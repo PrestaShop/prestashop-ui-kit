@@ -9,7 +9,7 @@
     }
 
     > a {
-      font-weight: 700;
+      font-weight: 600;
       color: $primary;
 
       &:hover {
@@ -22,4 +22,8 @@
 .breadcrumb-item {
   font-weight: $font-weight-normal;
   color: $dark-gray;
+
+  + .breadcrumb-item::before {
+    content: ">";
+  }
 }

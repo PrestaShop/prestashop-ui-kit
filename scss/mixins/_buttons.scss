@@ -26,8 +26,9 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    background-color: $primary-disabled;
-    border-color: $primary-disabled;
+    color: $gray-450;
+    background-color: $gray-disabled;
+    border-color: $gray-disabled;
   }
 
   &:not([disabled]):not(.disabled):active,
@@ -49,7 +50,7 @@
   background-image: none;
   border-color: $color;
 
-  @include hover () {
+  @include hover() {
     color: $color-hover;
     background-color: theme-color-hover($color-name);
     border-color: theme-color-hover($color-name);
@@ -62,9 +63,9 @@
 
   &.disabled,
   &:disabled {
-    color: $primary-disabled;
+    color: $gray-450;
     background-color: transparent;
-    border-color: $primary-disabled;
+    border-color: $gray-disabled;
   }
 
   &:not([disabled]):not(.disabled):active,

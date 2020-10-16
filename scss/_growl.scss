@@ -7,7 +7,7 @@ $component-name: growl;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: $gray-700;
   box-shadow: 0 8px 16px 0 rgba(#000, .1);
   opacity: 1;
   animation-name: fromLeft;
@@ -35,18 +35,26 @@ $component-name: growl;
   }
 
   &.#{$component-name}-default {
-    background: $info;
+    color: $gray-700;
+    background: map-get($alerts-background-colors, success);
+    border: 1px solid map-get($alerts-second-colors, success);
   }
 
   &.#{$component-name}-error {
-    background: $danger;
+    color: $gray-700;
+    background: map-get($alerts-background-colors, danger);
+    border: 1px solid map-get($alerts-second-colors, danger);
   }
 
   &.#{$component-name}-notice {
-    background: $success;
+    color: $gray-700;
+    background: map-get($alerts-background-colors, info);
+    border: 1px solid map-get($alerts-second-colors, info);
   }
 
   &.#{$component-name}-warning {
-    background: $warning;
+    color: $gray-700;
+    background: map-get($alerts-background-colors, warning);
+    border: 1px solid map-get($alerts-second-colors, warning);
   }
 }

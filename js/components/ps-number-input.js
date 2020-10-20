@@ -84,6 +84,11 @@ const PSNumberInput = function PSNumberInput(element) {
     });
   }
 
+  input.addEventListener('change', () => {
+    initValue();
+    validate();
+  });
+
   input.addEventListener('keyup', () => {
     initValue();
     validate();

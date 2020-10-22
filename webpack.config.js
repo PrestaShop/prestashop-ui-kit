@@ -1,57 +1,59 @@
-const webpack = require('webpack');
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 let config = {
   entry: {
-    main: ['./js/prestashop-ui-kit.js', './scss/application.scss']
+    main: ["./js/prestashop-ui-kit.js", "./scss/application.scss"]
   },
   output: {
-    path: path.resolve(__dirname, './dist/js'),
-    filename: 'prestashop-ui-kit.js'
+    path: path.resolve(__dirname, "./dist/js"),
+    filename: "prestashop-ui-kit.js"
   },
-  devtool: devMode ? 'inline-source-map' : 'source-map',
+  devtool: devMode ? "inline-source-map" : "source-map",
   module: {
     rules: [
       {
         test: /\.js/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: [['env', {useBuiltIns: 'usage', modules: false}]]
+          presets: [
+            ["@babel/preset-env", { useBuiltIns: "entry", modules: false }]
+          ]
         }
       },
       {
-        test: require.resolve('jquery'),
-        loader: 'expose-loader?jQuery!expose-loader?$'
+        test: require.resolve("jquery"),
+        loader: "expose-loader?jQuery!expose-loader?$"
       },
       {
-        test: require.resolve('tether'),
-        loader: 'expose-loader?tether!expose-loader?Tether'
+        test: require.resolve("tether"),
+        loader: "expose-loader?tether!expose-loader?Tether"
       },
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               minimize: !devMode,
               sourceMap: true
             }
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               sourceMap: true
             }
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
-              includePaths: [path.resolve(__dirname, './node_modules')],
+              includePaths: [path.resolve(__dirname, "./node_modules")],
               sourceMap: true
             }
           }
@@ -59,17 +61,22 @@ let config = {
       },
       {
         test: /\.css$/,
-        use: [{loader: MiniCssExtractPlugin.loader}, 'style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ]
       },
       {
         test: /.(gif|png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[hash].[ext]',
+              name: "[hash].[ext]",
               esModule: false,
-              outputPath: '../css'
+              outputPath: "../css"
             }
           }
         ]
@@ -78,13 +85,13 @@ let config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../css/bootstrap-prestashop-ui-kit.css'
+      filename: "../css/bootstrap-prestashop-ui-kit.css"
     }),
     new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      $: 'jquery',
-      'window.Tether': 'tether',
-      Popper: ['popper.js', 'default']
+      jQuery: "jquery",
+      $: "jquery",
+      "window.Tether": "tether",
+      Popper: ["popper.js", "default"]
     })
   ]
 };

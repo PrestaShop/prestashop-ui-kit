@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import basicsContent from './basics.html'
+import expandableContent from './expandable.html'
+
+<Meta title="Alerts" />
+
+# Basics
+
+These alerts are used to display messages inside the backoffice.
+
+<Canvas>
+  <Story name="Basics" parameters={{ docs: { source: { code: basicsContent } } }}>
+    {() => basicsContent}
+  </Story>
+</Canvas>
+
+# Expandable
+
+These alerts are used to display long message inside the backoffice.
+
+<Canvas>
+  <Story name="Expandable" parameters={{ docs: { source: { code: expandableContent } } }}>
+    {() => expandableContent}
+  </Story>
+</Canvas>

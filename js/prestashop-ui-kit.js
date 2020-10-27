@@ -172,7 +172,7 @@ $.fn.pstooltip = $.fn.tooltip;
         initToolTips();
         initSearchBar();
         initInputFile();
-        PSNumbers('.ps-number');
+        PSNumbers('.ps-number-input');
       });
     },
 

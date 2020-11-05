@@ -15,11 +15,11 @@ $component-name: popover;
   }
 
   & &-header {
-    margin-bottom: 0.2rem;
+    margin-bottom: .2rem;
   }
 
   &.bs-popover-right .arrow {
-    left: calc((0.5rem) * -1);
+    left: calc((.5rem) * -1);
 
     &::before,
     &::after {
@@ -28,7 +28,7 @@ $component-name: popover;
   }
 
   &.bs-popover-left .arrow {
-    right: calc((0.5rem) * -1);
+    right: calc((.5rem) * -1);
 
     &::before,
     &::after {
@@ -37,7 +37,7 @@ $component-name: popover;
   }
 
   &.bs-popover-bottom .arrow {
-    top: calc((0.5rem) * -1);
+    top: calc((.5rem) * -1);
 
     &::before,
     &::after {
@@ -46,7 +46,7 @@ $component-name: popover;
   }
 
   &.bs-popover-top .arrow {
-    bottom: calc((0.5rem) * -1);
+    bottom: calc((.5rem) * -1);
 
     &::before,
     &::after {

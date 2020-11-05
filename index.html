@@ -780,6 +780,12 @@
                     </button>
                 </div>
             </div>
+
+
+            <button type="button" class="btn btn-success" onclick="$.growl({ title: 'Success', message: 'The kitten is awake!', url: '/kittens' });">Success toast</button>
+            <button type="button" class="btn btn-danger" onclick="$.growl.error({ message: 'The kitten is awake!' });">Error toast</button>
+            <button type="button" class="btn btn-primary" onclick="$.growl.notice({ message: 'The kitten is awake!' });">Warning toast</button>
+            <button type="button" class="btn btn-warning" onclick="$.growl.warning({ message: 'The kitten is awake!' });">Warning toast</button>
         </article>
 
         <article id="badges">

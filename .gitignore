@@ -10,3 +10,4 @@ node_modules/*
 .projectile
 .tern-port
 TAGS
+.DS_Store

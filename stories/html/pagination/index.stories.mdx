@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import basicContent from './basic.html';
+import withInputContent from './pagination-with-input.html';
+
+<Meta title="Pagination" />
+
+# Basic
+
+<Canvas>
+  <Story name="Basic" parameters={{ docs: { source: { code: basicContent } } }}>
+    {() => basicContent}
+  </Story>
+</Canvas>
+
+# With input (for jump to page for example)
+
+<Canvas>
+  <Story name="With input" parameters={{ docs: { source: { code: withInputContent } } }}>
+    {() => withInputContent}
+  </Story>
+</Canvas>

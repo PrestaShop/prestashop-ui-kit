@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import tagsContent from './tags.html'
+
+<Meta title="PS Tags" />
+
+# PS Tags
+
+<Canvas>
+  <Story name="PS Tags" parameters={{ docs: { source: { code: tagsContent } } }}>
+    {() => tagsContent}
+  </Story>
+</Canvas>
+

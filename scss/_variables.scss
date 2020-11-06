@@ -215,7 +215,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1300px,
-  xxl: 1600px // PS custom,
+  xxl: 1600px // PS custom
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
@@ -247,7 +247,7 @@ $border-radius: 4px !default;
 //$component-active-color:      $white !default;
 //$component-active-bg:         theme-color("primary") !default;
 
-$caret-width: .25rem;
+$caret-width: 0.25rem;
 
 //$transition-base:             all .2s ease-in-out !default;
 //$transition-fade:             opacity .15s linear !default;
@@ -258,10 +258,10 @@ $font-family-sans-serif: "Open Sans", helvetica, arial, sans-serif;
 //$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //$font-family-base:            $font-family-sans-serif !default;
 
-$font-size-base: .875rem;
+$font-size-base: 0.875rem;
 $font-size-lg: 1rem;
-$font-size-sm: .75rem;
-$font-size-xs: .625rem; // PS custom
+$font-size-sm: 0.75rem;
+$font-size-xs: 0.625rem; // PS custom
 
 //$font-weight-light:           300;
 //$font-weight-normal:          400;
@@ -271,9 +271,9 @@ $font-weight-bold: 700;
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
-$h4-font-size: .875rem;
-$h5-font-size: .75rem;
-$h6-font-size: .625rem;
+$h4-font-size: 0.875rem;
+$h5-font-size: 0.75rem;
+$h6-font-size: 0.625rem;
 
 //$headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family: $font-family-sans-serif;
@@ -318,8 +318,8 @@ $hr-border-color: $light-gray;
 //$hr-margin-y:                 $spacer !default;
 
 // Tables
-$table-cell-padding: .4rem;
-$table-cell-padding-sm: .25rem;
+$table-cell-padding: 0.4rem;
+$table-cell-padding-sm: 0.25rem;
 
 //$table-bg:                    transparent !default;
 $table-accent-bg: $background-color;
@@ -339,26 +339,26 @@ $table-dark-border-color: $medium-gray;
 //$table-dark-color:            $body-bg !default;
 
 // Buttons
-$input-btn-padding-y: .375rem;
-$input-btn-padding-x: .838rem;
+$input-btn-padding-y: 0.375rem;
+$input-btn-padding-x: 0.838rem;
 //$input-btn-line-height:       $line-height-base !default;
 
 //$input-btn-focus-width:       .2rem !default;
 //$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 //$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: .313rem;
-$input-btn-padding-x-sm: .625rem;
+$input-btn-padding-y-sm: 0.313rem;
+$input-btn-padding-x-sm: 0.625rem;
 //$input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg: .438rem;
-$input-btn-padding-x-lg: .838rem;
+$input-btn-padding-y-lg: 0.438rem;
+$input-btn-padding-x-lg: 0.838rem;
 //$input-btn-line-height-lg:    $line-height-lg !default;
 
 //$input-btn-border-width:      $border-width !default;
 
 // Buttons
-$btn-padding-y: .5rem !default;
+$btn-padding-y: 0.5rem !default;
 $btn-padding-x: 1rem !default;
 //$btn-line-height:             $input-btn-line-height !default;
 
@@ -390,8 +390,8 @@ $btn-border-radius: 4px;
 //$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Forms
-$input-padding-y: .375rem;
-$input-padding-x: .4375rem;
+$input-padding-y: 0.375rem;
+$input-padding-x: 0.4375rem;
 //$input-line-height:                     $input-btn-line-height !default;
 
 //$input-padding-y-sm:                    $input-btn-padding-y-sm !default;
@@ -557,13 +557,13 @@ $dropdown-link-hover-bg: $white;
 
 //$dropdown-link-disabled-color:      $gray-600 !default;
 
-$dropdown-item-padding-x: .3125rem;
-$dropdown-item-padding-y: .3125rem;
+$dropdown-item-padding-x: 0.3125rem;
+$dropdown-item-padding-y: 0.3125rem;
 
 //$dropdown-header-color:             $gray-600 !default;
 
 // Navs
-$nav-link-padding-y: .9375rem;
+$nav-link-padding-y: 0.9375rem;
 $nav-link-padding-x: 1.25rem;
 $nav-link-disabled-color: $light-gray;
 
@@ -616,8 +616,8 @@ $nav-pills-link-active-border-color: $nav-tabs-link-active-border-color; // PS c
 //$navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 // Pagination
-$pagination-padding-y: .65rem;
-$pagination-padding-x: .5rem;
+$pagination-padding-y: 0.65rem;
+$pagination-padding-x: 0.5rem;
 //$pagination-padding-y-sm:           .25rem !default;
 //$pagination-padding-x-sm:           .5rem !default;
 //$pagination-padding-y-lg:           .75rem !default;
@@ -648,8 +648,8 @@ $jumbotron-padding: 2rem !default;
 $jumbotron-bg: $extra-light-gray;
 
 // Cards
-$card-spacer-x: .625rem !default;
-$card-spacer-y: .625rem !default;
+$card-spacer-x: 0.625rem !default;
+$card-spacer-y: 0.625rem !default;
 $card-border-width: 1px !default;
 $card-border-radius: 5px !default;
 $card-border-radius-inner: $card-border-radius !default;
@@ -677,7 +677,7 @@ $card-border-color: #dbe6e9 !default;
 $tooltip-bg: $medium-gray;
 //$tooltip-border-radius:        $border-radius !default;
 //$tooltip-opacity:             .9 !default;
-$tooltip-padding-y: .625rem;
+$tooltip-padding-y: 0.625rem;
 $tooltip-padding-x: 1.25rem;
 //$tooltip-margin:              0 !default;
 
@@ -696,11 +696,11 @@ $popover-box-shadow: none;
 
 $popover-header-bg: $extra-light-gray;
 //$popover-header-color:              $headings-color !default;
-$popover-header-padding-y: .625rem;
+$popover-header-padding-y: 0.625rem;
 $popover-header-padding-x: 1.25rem;
 
 //$popover-body-color:                $body-color !default;
-$popover-body-padding-y: .625rem;
+$popover-body-padding-y: 0.625rem;
 $popover-body-padding-x: 1.25rem;
 
 //$popover-arrow-width:               1rem !default;
@@ -710,10 +710,10 @@ $popover-body-padding-x: 1.25rem;
 //$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
 // Badges
-$badge-font-size: .625rem !default;
+$badge-font-size: 0.625rem !default;
 $badge-font-weight: 500 !default;
-$badge-padding-y: .25rem;
-$badge-padding-x: .5rem;
+$badge-padding-y: 0.25rem;
+$badge-padding-x: 0.5rem;
 //$badge-border-radius:               $border-radius !default;
 
 //$badge-pill-padding-x:              .6em !default;
@@ -730,8 +730,8 @@ $modal-inner-padding: 1.875rem;
 //$modal-content-bg:               $white !default;
 $modal-content-border-color: none;
 //$modal-content-border-width:     $border-width !default;
-$modal-content-box-shadow-xs: 0 8px 16px 0 rgba(0, 0, 0, .1);
-$modal-content-box-shadow-sm-up: 0 8px 16px 0 rgba(0, 0, 0, .1);
+$modal-content-box-shadow-xs: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+$modal-content-box-shadow-sm-up: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 
 //$modal-backdrop-bg:           $black !default;
 //$modal-backdrop-opacity:      .5 !default;
@@ -753,7 +753,7 @@ $alert-padding-x: 1rem;
 //$alert-margin-bottom:               1rem !default;
 //$alert-border-radius:               $border-radius !default;
 //$alert-link-font-weight:            $font-weight-bold !default;
-$alert-border-width: .125rem;
+$alert-border-width: 0.125rem;
 
 //$alert-bg-level:                    -10 !default;
 //$alert-border-level:                -9 !default;
@@ -806,9 +806,9 @@ $thumbnail-box-shadow: none;
 $figure-caption-color: $medium-gray;
 
 // Breadcrumbs
-$breadcrumb-padding-y: .3125rem;
-$breadcrumb-padding-x: .3125rem;
-$breadcrumb-item-padding: .3rem;
+$breadcrumb-padding-y: 0.3125rem;
+$breadcrumb-padding-x: 0.3125rem;
+$breadcrumb-item-padding: 0.3rem;
 
 $breadcrumb-margin-bottom: 0;
 

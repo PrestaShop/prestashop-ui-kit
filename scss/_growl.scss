@@ -38,7 +38,9 @@ $component-name: growl;
 
   & &-title {
     display: none;
-    min-width: 50%;
+    min-width: 100%;
+    margin-bottom: .3rem;
+    font-weight: 600;
   }
 
   & &-message {

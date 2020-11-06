@@ -15,6 +15,10 @@
   font-size: .75rem;
   color: $medium-gray;
 
+  a {
+    color: $primary;
+  }
+
   label + & {
     float: right;
   }

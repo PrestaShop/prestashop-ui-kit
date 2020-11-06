@@ -14,6 +14,10 @@ $component-name: popover;
     border: none;
   }
 
+  & &-header {
+    margin-bottom: .2rem;
+  }
+
   &.bs-popover-right .arrow {
     left: calc((.5rem) * -1);
 

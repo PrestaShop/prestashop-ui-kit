@@ -125,7 +125,7 @@ $theme-colors-icons: (
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
-  success: #78d07d,
+  success: #9bcba6,
   info: $primary-hover,
   warning: #e6b045,
   danger: #e76d7a,
@@ -137,10 +137,10 @@ $theme-colors-hover: (
 $theme-colors-active: (
   primary: $primary-active,
   secondary: $secondary-active,
-  success: darken(map-get($theme-colors, "success"), 10%),
+  success: #5a9166,
   info: darken(map-get($theme-colors, "info"), 10%),
   warning: darken(map-get($theme-colors, "warning"), 10%),
-  danger: darken(map-get($theme-colors, "danger"), 10%),
+  danger: #c3362b,
   light: darken(map-get($theme-colors, "light"), 10%),
   dark: darken(map-get($theme-colors, "dark"), 10%),
   default: $primary

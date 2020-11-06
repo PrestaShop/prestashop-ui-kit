@@ -21,6 +21,8 @@
   &:focus,
   &.focus {
     color: $white;
+    background-color: $background;
+    border-color: $background;
     box-shadow: none;
   }
 
@@ -75,10 +77,5 @@
     color: $color-hover;
     background-color: theme-color-active($color-name);
     border-color: theme-color-active($color-name);
-    box-shadow: none;
-
-    &:focus {
-      box-shadow: none;
-    }
   }
 }

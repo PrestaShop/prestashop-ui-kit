@@ -14,7 +14,7 @@ $.fn.pstooltip = $.fn.tooltip;
  * Copy License
  */
 
-(function(global, jQuery) {
+(function (global, jQuery) {
   if (typeof global === 'undefined' && typeof window !== 'undefined') {
     global = window;
   }
@@ -28,9 +28,9 @@ $.fn.pstooltip = $.fn.tooltip;
    *
    * @TODO Add templateResult
    */
-  var initSelect2 = function() {
-    jQuery('[data-toggle="select2"]').each(function() {
-      var newObj = { minimumResultsForSearch: -1 };
+  var initSelect2 = function () {
+    jQuery('[data-toggle="select2"]').each(function () {
+      var newObj = {minimumResultsForSearch: -1};
 
       for (var attr in $(this).data()) {
         if (!attr.localeCompare('templateresult')) {
@@ -51,8 +51,8 @@ $.fn.pstooltip = $.fn.tooltip;
   /**
    * Enable all toggle buttons
    */
-  var initToggleButtons = function() {
-    jQuery('[data-toggle="switch"]').each(function() {
+  var initToggleButtons = function () {
+    jQuery('[data-toggle="switch"]').each(function () {
       var checkbox = jQuery(this);
       if (checkbox.data('activated') == undefined) {
         checkbox.data('activated', true);
@@ -63,11 +63,11 @@ $.fn.pstooltip = $.fn.tooltip;
         var parent = checkbox.parent();
         parent.addClass(checkbox.attr('class'));
 
-        checkbox.on('change', function() {
+        checkbox.on('change', function () {
           parent.toggleClass('-checked', checkbox.prop('checked'));
         });
 
-        parent.click(function(event) {
+        parent.click(function (event) {
           if (event.srcElement == parent[0] || event.srcElement == undefined) {
             checkbox.prop('checked', !checkbox.prop('checked'));
             return false;
@@ -77,8 +77,8 @@ $.fn.pstooltip = $.fn.tooltip;
     });
   };
 
-  var initAlerts = function() {
-    jQuery('.alert-text').each(function() {
+  var initAlerts = function () {
+    jQuery('.alert-text').each(function () {
       var $this = jQuery(this);
       var height = $this.height();
       var lineHeight = parseFloat($this.css('lineHeight'));
@@ -90,10 +90,7 @@ $.fn.pstooltip = $.fn.tooltip;
         var actualClass = $this.parent().attr('class');
         $this.parent().addClass('alert-drop');
 
-        if (
-          typeof $this.data('title') != 'undefined' &&
-          $this.data('title') !== ''
-        ) {
+        if (typeof $this.data('title') != 'undefined' && $this.data('title') !== '') {
           $this.html('<b>' + $this.data('title') + '</b>');
         } else {
           $this.html('<b>Read More</b>');
@@ -101,18 +98,14 @@ $.fn.pstooltip = $.fn.tooltip;
         $this.css('cursor', 'pointer');
         $this
           .parent()
-          .after(
-            '<div class="' +
-              actualClass +
-              ' alert-down" role="alert"><p class="alert-down-text"></p></div>'
-          );
+          .after('<div class="' + actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>');
         jQuery('.alert-down-text').html(actualHtml);
       }
     });
 
-    $('.alert-drop').each(function() {
+    $('.alert-drop').each(function () {
       var $this = jQuery(this);
-      $this.click(function() {
+      $this.click(function () {
         var radius = $this.css('border-radius');
         if ($this.next('div').is(':hidden')) {
           $this.css('border-radius', '0');
@@ -126,17 +119,20 @@ $.fn.pstooltip = $.fn.tooltip;
     });
   };
 
-  var initToolTips = function() {
+  var initToolTips = function () {
     jQuery('.tooltip-error').pstooltip({
       template:
         '<div class="pstooltip"><div class="tooltip-error"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>',
     });
-    jQuery('[data-toggle="pstooltip"]').pstooltip();
+    jQuery('[data-toggle="pstooltip"]').pstooltip({
+      container: 'body',
+      boundary: 'window',
+    });
     jQuery('[data-toggle="popover"]').popover();
   };
 
-  var initSearchBar = function() {
-    $('.js-form-search').on('focusin', function() {
+  var initSearchBar = function () {
+    $('.js-form-search').on('focusin', function () {
       if (!$('.js-dropdown-form').hasClass('expanded')) {
         $('.js-dropdown-form').addClass('expanded');
       }
@@ -149,11 +145,11 @@ $.fn.pstooltip = $.fn.tooltip;
      *
      * Initilialize some jQuery components, settings and existings elements.
      */
-    init: function() {
-      jQuery(function() {
+    init: function () {
+      jQuery(function () {
         // Add a jQuery listener to the checkbox change value
         jQuery.propHooks.checked = {
-          set: function(elem, value, name) {
+          set: function (elem, value, name) {
             var ret = (elem[name] = value);
             $(elem).trigger('change');
             return ret;
@@ -176,11 +172,11 @@ $.fn.pstooltip = $.fn.tooltip;
       });
     },
 
-    initSelects: function() {
+    initSelects: function () {
       initSelect2();
     },
 
-    initToolTips: function() {
+    initToolTips: function () {
       initToolTips();
     },
   };
@@ -191,9 +187,9 @@ $.fn.pstooltip = $.fn.tooltip;
 // Other initializations
 // @TODO: Move the needed initializations into the object
 // @TODO: Redo the psdwl to allow an external control for the different states
-$(function() {
+$(function () {
   // Keep unique configuration
-  var setConfig = function(givenConfig, defaultConfig) {
+  var setConfig = function (givenConfig, defaultConfig) {
     var finalConfig = {};
     for (var property in defaultConfig) {
       if (givenConfig.hasOwnProperty(property)) {
@@ -208,7 +204,7 @@ $(function() {
   // Spinner
   // @TODO: Add addEventListener, prototype, callback
   // 1.0.0
-  $.fn.psdwl = function(_config) {
+  $.fn.psdwl = function (_config) {
     var config = null;
 
     // Default Configuration
@@ -228,10 +224,7 @@ $(function() {
       psdwl.attr('class', value);
     }
 
-    if (
-      typeof $(psdwl.selector).html() != 'undefined' &&
-      $(psdwl.selector).html() !== ''
-    ) {
+    if (typeof $(psdwl.selector).html() != 'undefined' && $(psdwl.selector).html() !== '') {
       config.text = $(psdwl.selector).text();
     }
 
@@ -248,21 +241,18 @@ $(function() {
     psdwl.css('width', width);
 
     psdwl.hover(
-      function() {
+      function () {
         psdwl.html(config.hover);
       },
-      function() {
+      function () {
         psdwl.html(config.text);
       }
     );
 
-    psdwl.click(function() {
+    psdwl.click(function () {
       psdwl.css('border-left-color', psdwl.css('border-color'));
       psdwl.addClass('onclick');
-      psdwl
-        .unbind('mouseenter')
-        .unbind('mouseleave')
-        .unbind('click');
+      psdwl.unbind('mouseenter').unbind('mouseleave').unbind('click');
       var nw = parseInt(width, 10);
       psdwl.css({
         width: '',
@@ -270,7 +260,7 @@ $(function() {
         'margin-right': nw / 4,
       });
 
-      setTimeout(function() {
+      setTimeout(function () {
         psdwl.removeClass('onclick');
         psdwl.css({
           'margin-left': '',

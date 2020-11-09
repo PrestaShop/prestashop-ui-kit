@@ -10,15 +10,31 @@
   color: $dark-gray;
 }
 
+// stylelint-disable
 // help labels around form elements
 .form-text {
   font-size: .75rem;
   color: $medium-gray;
 
+  a.btn,
+  a {
+    color: $primary;
+  }
+
   label + & {
     float: right;
   }
 }
+
+.form-group {
+  .small {
+    a,
+    a.btn {
+      color: $primary;
+    }
+  }
+}
+// stylelint-enable
 
 .form-control {
   height: auto;

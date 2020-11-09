@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import toastsContent from './toasts.html';
 import markupContent from './markup.html';
@@ -11,7 +12,13 @@ JQuery Growl is used to display toasts, here is the markup of toasts, but don't 
 
 <Canvas>
   <Story name="Toasts" parameters={{ docs: { source: { code: toastsContent } } }}>
-    {() => toastsContent}
+    {() => {
+      useEffect(() => {
+        console.log('test')
+      }])
+
+      return toastsContent;
+    }}
   </Story>
 </Canvas>
 
@@ -30,4 +37,3 @@ Here is the markup of every toasts, but never use these like this. Prefer using 
     {() => markupContent}
   </Story>
 </Canvas>
-

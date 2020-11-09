@@ -1,77 +1,149 @@
 // on-off switch control
 .ps-switch {
   position: relative;
-  display: inline-block;
-  min-width: 8.125rem;
-  margin-top: 3px;
-  font-size: 0.813rem;
-  background-color: #eff1f2;
-  border-radius: 1px;
-  text-align: center;
+  display: block;
+  width: 100%;
+  height: 21px;
 
-  input {
-    position: absolute;
-    opacity: 0;
-
-    &:disabled {
-      + label {
-        cursor: not-allowed;
-      }
-
-      &:checked + label {
-        background-color: $light-gray;
-      }
+  &-nolabel {
+    label {
+      display: none;
     }
   }
 
   label {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 50%;
-    height: 100%;
-    padding: 0.231em 0.769em; // relative to current font size, so 'em'
-    margin: 0;
-    vertical-align: middle;
-    text-align: center;
-    text-transform: uppercase;
-    color: $light-gray;
-    font-weight: 400;
-    cursor: pointer;
-    transition: color 0.2s ease-out;
-  }
-
-  // color for the currently selected label
-  input:checked + label {
-    color: $white;
-  }
-
-  // color for "off"
-  > .slide-button {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    padding: 0;
     z-index: 1;
-    width: 50%;
-    height: 100%;
-    color: #fff;
-    background-color: #c05c67;
-    transition: all .3s ease-out;
+    padding-left: 2.8rem;
+    opacity: 0;
+    transform: translateY(-50%);
   }
 
-  // color for "on"
-  input:last-of-type:checked ~ .slide-button {
-    background-color: #2eacce;
-    left: 50%;
+  .slide-button {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+    display: block;
+    width: 35px;
+    height: 21px;
+    @include transition(.25s ease-out);
+    transform: translateY(-50%);
+    @include border-radius(1000px);
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 46%;
+      height: calc(100% - 4px);
+      content: "";
+      background: $white;
+      @include border-radius(50%);
+      @include transition(.25s ease-out);
+      transform: translate(2px, -48%);
+    }
+  }
+
+  &-center {
+    .slide-button {
+      position: inherit;
+      margin: auto;
+    }
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+
+    &:disabled {
+      cursor: not-allowed;
+
+      ~ .slide-button {
+        opacity: .2;
+      }
+    }
+
+    &:checked {
+      z-index: 0;
+    }
+
+    &:first-of-type:checked {
+      ~ label:first-of-type {
+        opacity: 1;
+      }
+
+      &:disabled ~ label:first-of-type {
+        opacity: .2;
+      }
+
+      ~ .slide-button {
+        background: $gray-450;
+      }
+    }
+
+    &:last-of-type:checked {
+      ~ label:last-of-type {
+        opacity: 1;
+      }
+
+      &:disabled ~ label:last-of-type {
+        opacity: .2;
+      }
+
+      ~ .slide-button {
+        background: $success;
+
+        &::after {
+          transform: translate(17px, -48%);
+        }
+      }
+    }
   }
 
   &.ps-switch-sm {
-    min-width: 6.250rem;
+    min-width: 6.25rem;
+    height: 16px;
     font-size: $font-size-sm;
+
+    label {
+      padding-left: 2.5rem;
+    }
+
+    .slide-button {
+      width: 30px;
+      height: 16px;
+
+      &::after {
+        width: 37%;
+      }
+    }
   }
 
   &.ps-switch-lg {
+    height: 30px;
     font-size: $font-size-lg;
+
+    label {
+      padding-left: 4.075rem;
+    }
+
+    .slide-button {
+      width: 55px;
+      height: 30px;
+    }
+
+    input:last-of-type:checked ~ .slide-button {
+      &::after {
+        transform: translate(28px, -50%);
+      }
+    }
   }
 }

@@ -1,26 +1,27 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
 let config = {
   entry: {
-    main: [
-      './js/prestashop-ui-kit.js',
-      './scss/application.scss'
-    ]
+    main: ['./js/prestashop-ui-kit.js', './scss/application.scss']
   },
   output: {
     path: path.resolve(__dirname, './dist/js'),
     filename: 'prestashop-ui-kit.js'
   },
-  devtool: devMode ? "inline-source-map" : "source-map",
+  devtool: devMode ? 'inline-source-map' : 'source-map',
   module: {
     rules: [
       {
         test: /\.js/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: [['env', {useBuiltIns: 'usage', modules: false}]]
+        }
       },
       {
         test: require.resolve('jquery'),
@@ -32,67 +33,86 @@ let config = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: !devMode,
-                sourceMap: true,
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true,
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                includePaths: [ path.resolve(__dirname, './node_modules') ],
-                sourceMap: true,
-              }
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: !devMode,
+              sourceMap: true
             }
-          ]
-        })
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve(__dirname, './node_modules')],
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
-        test : /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        test: /\.css$/,
+        use: [{loader: MiniCssExtractPlugin.loader}, 'style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /.(gif|png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash].[ext]',
+              esModule: false,
+              outputPath: '../css'
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin(path.join('..', 'css', 'bootstrap-prestashop-ui-kit.css') + '?sourceMap'),
+    new MiniCssExtractPlugin({
+      filename: '../css/bootstrap-prestashop-ui-kit.css'
+    }),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
       $: 'jquery',
-      "window.Tether": 'tether',
-      Popper: ['popper.js', 'default'],
+      'window.Tether': 'tether',
+      Popper: ['popper.js', 'default']
     })
   ]
 };
 
 if (!devMode) {
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        sequences: true,
-        conditionals: true,
-        booleans: true,
-        if_return: true,
-        join_vars: true,
-        drop_console: true
-      },
-      output: {
-        comments: false
-      },
-      minimize: true
-    })
-  );
+  Object.assign(config, {
+    optimization: {
+      minimizer: [
+        new UglifyJsPlugin({
+          sourceMap: true,
+          uglifyOptions: {
+            compress: {
+              drop_console: true,
+              sequences: true,
+              conditionals: true,
+              booleans: true,
+              if_return: true,
+              join_vars: true,
+              drop_console: true
+            },
+            output: {
+              comments: false
+            }
+          }
+        })
+      ]
+    }
+  });
 }
 
 module.exports = config;

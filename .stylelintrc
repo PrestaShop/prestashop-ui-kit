@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "stylelint-config-prestashop"
+  ],
+  "rules": {
+    "function-blacklist": null
+  }
+}

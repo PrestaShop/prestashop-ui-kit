@@ -1,0 +1,61 @@
+/* stylelint-disable-next-line */
+$component-name: ps-number-input;
+
+.#{$component-name} {
+  position: relative;
+
+  & &-inputs {
+    display: flex;
+    align-items: center;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      // stylelint-disable-next-line
+      -webkit-appearance: none;
+    }
+
+    input[type="number"] {
+      // stylelint-disable-next-line
+      -moz-appearance: textfield; /* Firefox */
+    }
+
+    .btn {
+      min-width: 2.5rem;
+      padding: .44rem .47rem;
+
+      > .material-icons {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  &.#{$component-name}-enable-arrows {
+    .#{$component-name}-inputs {
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        // stylelint-disable-next-line
+        -webkit-appearance: auto;
+      }
+
+      input[type="number"] {
+        // stylelint-disable-next-line
+        -moz-appearance: auto; /* Firefox */
+
+        &.is-invalid {
+          padding-right: 1.7625rem;
+        }
+      }
+    }
+  }
+
+  & &-controls {
+    height: 2.2rem;
+    margin-left: 5px;
+  }
+
+  .invalid-feedback {
+    &.show {
+      display: block;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   $hover-border: lighten($border, 7.5%),
   $active-background: darken($background, 7.5%),
   $active-border: darken($border, 10%),
-  $color-name: 'primary'
+  $color-name: "primary"
 ) {
   color: $white;
   background-color: $background;
@@ -20,14 +20,18 @@
 
   &:focus,
   &.focus {
+    color: $white;
+    background-color: $background;
+    border-color: $background;
     box-shadow: none;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    background-color: $light-gray;
-    border-color: $light-gray;
+    color: $gray-450;
+    background-color: $gray-disabled;
+    border-color: $gray-disabled;
   }
 
   &:not([disabled]):not(.disabled):active,
@@ -42,14 +46,14 @@
 @mixin ps-button-outline-variant(
   $color,
   $color-hover: #fff,
-  $color-name: 'primary'
+  $color-name: "primary"
 ) {
   color: $color;
   background-color: transparent;
   background-image: none;
   border-color: $color;
 
-  @include hover {
+  @include hover() {
     color: $color-hover;
     background-color: theme-color-hover($color-name);
     border-color: theme-color-hover($color-name);
@@ -62,9 +66,9 @@
 
   &.disabled,
   &:disabled {
-    color: $light-gray;
+    color: $gray-450;
     background-color: transparent;
-    border-color: $light-gray;
+    border-color: $gray-disabled;
   }
 
   &:not([disabled]):not(.disabled):active,
@@ -73,6 +77,5 @@
     color: $color-hover;
     background-color: theme-color-active($color-name);
     border-color: theme-color-active($color-name);
-    box-shadow: none;
   }
 }

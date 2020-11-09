@@ -17,8 +17,8 @@ npm install --save-dev prestakit
 Or use it directly through our CDN:
 ```
 [...]
-<link https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css rel="stylesheet">
-<script https://ui-kit.prestashop.com/backoffice/latest/js/prestashop-ui-kit.js</script>
+<link href="https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css" rel="stylesheet">
+<script src="https://ui-kit.prestashop.com/backoffice/latest/js/prestashop-ui-kit.js"></script>
 [...]
 ```
 

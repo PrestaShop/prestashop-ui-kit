@@ -1,35 +1,89 @@
-.select2-container--bootstrap {
+/* stylelint-disable-next-line */
+$component-name: select2;
 
-  .select2-dropdown {
-    padding: $input-padding-x $input-padding-y;
-    border-radius: 0;
-  }
+.#{$component-name}-container--bootstrap {
+  .#{$component-name} {
+    &-dropdown {
+      padding: $input-padding-x $input-padding-y;
+      padding: 0;
+      border-color: $gray-300;
+      border-top: 1px solid;
+    }
 
-  .select2-search--dropdown {
-    padding: 0;
-    margin-bottom: $input-padding-x;
-  }
+    &-search--dropdown {
+      padding: 10px;
+      background: $gray-250;
 
-  .select2-selection--single {
-    padding: $input-padding-x $input-padding-y;
-    height: $input-height;
-    cursor: default;
-
-    .select2-selection__arrow {
-      margin-right: .625rem;
-
-      b {
-        right: .625rem;
+      .#{$component-name}-search__field {
+        background: #fff;
+        border: 1px solid $gray-300;
+        @include border-radius(4px);
       }
     }
 
-    .select2-selection__rendered {
-      line-height: 1.125rem;
+    &-results {
+      padding: 0;
+
+      &__option {
+        &:hover {
+          color: $primary;
+          background: rgba($primary, .1);
+        }
+
+        &:focus,
+        &:active {
+          color: #fff;
+          background: $primary;
+        }
+      }
+    }
+
+    &-selection--single {
+      height: $input-height;
+      padding: $input-padding-x $input-padding-y;
+      padding-left: 15px;
+      cursor: default;
+      border-color: $gray-300;
+      @include border-radius(4px);
+
+      .#{$component-name}-selection__arrow {
+        right: 15px;
+        margin-right: .625rem;
+
+        b {
+          width: auto;
+          height: auto;
+          margin-top: 0;
+          font-size: 0;
+          border: none;
+
+          &::after {
+            @include material-icon("expand_more");
+            display: inline-block;
+            width: auto;
+            line-height: 0;
+            color: $gray-600;
+            vertical-align: middle;
+            border: none;
+            @include transition(.15s ease-out);
+          }
+        }
+      }
+    }
+
+    &-selection__rendered {
       padding: 0 $input-padding-y;
+      line-height: 1.125rem;
     }
   }
 
-  .select2-results {
-    padding: 0;
+  &.#{$component-name}-container--open {
+    .#{$component-name}-selection__arrow b::after {
+      transform: rotate(-180deg);
+    }
+
+    .#{$component-name}-selection {
+      border-color: $gray-300;
+    }
   }
 }

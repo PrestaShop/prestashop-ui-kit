@@ -1,0 +1,56 @@
+/* stylelint-disable-next-line */
+$component-name: popover;
+
+.#{$component-name} {
+  padding: 10px;
+  background: $gray-700;
+  border: none;
+
+  & &-header,
+  & &-body {
+    padding: 0;
+    color: #fff;
+    background: none;
+    border: none;
+  }
+
+  & &-header {
+    margin-bottom: .2rem;
+  }
+
+  &.bs-popover-right .arrow {
+    left: calc((.5rem) * -1);
+
+    &::before,
+    &::after {
+      border-right-color: $gray-700;
+    }
+  }
+
+  &.bs-popover-left .arrow {
+    right: calc((.5rem) * -1);
+
+    &::before,
+    &::after {
+      border-left-color: $gray-700;
+    }
+  }
+
+  &.bs-popover-bottom .arrow {
+    top: calc((.5rem) * -1);
+
+    &::before,
+    &::after {
+      border-bottom-color: $gray-700;
+    }
+  }
+
+  &.bs-popover-top .arrow {
+    bottom: calc((.5rem) * -1);
+
+    &::before,
+    &::after {
+      border-top-color: $gray-700;
+    }
+  }
+}

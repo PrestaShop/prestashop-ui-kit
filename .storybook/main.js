@@ -6,9 +6,6 @@ module.exports = {
     '@storybook/addon-a11y',
     {
       name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false,
-      },
     },
   ],
   webpackFinal: (config) => {

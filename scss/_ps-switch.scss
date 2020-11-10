@@ -75,7 +75,8 @@
       z-index: 0;
     }
 
-    &:first-of-type:checked {
+    &:first-of-type:checked,
+    &:first-of-type:disabled {
       ~ label:first-of-type {
         opacity: 1;
       }

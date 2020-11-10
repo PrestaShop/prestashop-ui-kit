@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import popoversContent from './popovers.html'
 
@@ -7,7 +8,12 @@ import popoversContent from './popovers.html'
 
 <Canvas>
   <Story name="Popovers" parameters={{ docs: { source: { code: popoversContent } } }}>
-    {() => popoversContent}
+    {() => {
+      useEffect(() => {
+        window.prestaShopUiKit.init();
+      });
+      return popoversContent;
+    }}
   </Story>
 </Canvas>
 

@@ -14,9 +14,8 @@ JQuery Growl is used to display toasts, here is the markup of toasts, but don't 
   <Story name="Toasts" parameters={{ docs: { source: { code: toastsContent } } }}>
     {() => {
       useEffect(() => {
-        console.log('test')
-      }])
-
+        window.prestaShopUiKit.init();
+      });
       return toastsContent;
     }}
   </Story>

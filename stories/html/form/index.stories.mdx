@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import '../../../dist/js/prestashop-ui-kit.js';
 import inputContent from './input.html'
@@ -100,7 +101,12 @@ import loginContent from './login-example.html'
 
 <Canvas>
   <Story name="Switch" parameters={{ docs: { source: { code: switchContent } } }}>
-    {() => switchContent}
+    {() => {
+      useEffect(() => {
+        window.prestaShopUiKit.init();
+      });
+      return switchContent;
+    }}
   </Story>
 </Canvas>
 

@@ -15,6 +15,7 @@ npm install --save-dev prestakit
 ```
 
 Or use it directly through our CDN:
+
 ```
 [...]
 <link href="https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css" rel="stylesheet">
@@ -53,16 +54,16 @@ Open up `admin-dev/themes/new-theme/package.json` of your PrestaShop install, an
 ```js
 {
   // ...
-  prestakit: "1.0.0"
+  prestakit: "1.2.0";
   // ...
-} 
+}
 ```
 
 Change the version so it looks like this:
 
 ```js
 {
-  prestakit: "/path/to/your/local/ui-kit"
+  prestakit: "/path/to/your/local/ui-kit";
 }
 ```
 

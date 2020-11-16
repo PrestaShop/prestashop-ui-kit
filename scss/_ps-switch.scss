@@ -29,8 +29,9 @@
     display: block;
     width: 35px;
     height: 21px;
-    @include transition(.25s ease-out);
+    background: $gray-450;
     transform: translateY(-50%);
+    @include transition(.25s ease-out);
     @include border-radius(1000px);
 
     &::after {
@@ -41,9 +42,9 @@
       height: calc(100% - 4px);
       content: "";
       background: $white;
+      transform: translate(2px, -48%);
       @include border-radius(50%);
       @include transition(.25s ease-out);
-      transform: translate(2px, -48%);
     }
   }
 

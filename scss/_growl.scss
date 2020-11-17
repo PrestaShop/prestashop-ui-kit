@@ -1,0 +1,74 @@
+// stylelint-disable-next-line
+$component-name: growl;
+
+.#{$component-name} {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4rem;
+  color: $gray-700;
+  box-shadow: 0 8px 16px 0 rgba(#000, .1);
+  opacity: 1;
+  animation-name: fromLeft;
+  animation-duration: .25s;
+
+  &.#{$component-name}-medium {
+    width: auto;
+    max-width: 800px;
+    padding: 15px;
+    padding-right: 4rem;
+  }
+
+  & &-close {
+    position: absolute;
+    top: 50%;
+    right: 1.125rem;
+    float: initial;
+    font-size: 1.6rem;
+    font-weight: 300;
+    transform: translateY(-60%);
+    @include transition(.25s ease-out);
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  & &-title {
+    display: none;
+    min-width: 100%;
+    margin-bottom: .3rem;
+    font-weight: 600;
+  }
+
+  & &-message {
+    flex-grow: 1;
+    font-size: .875rem;
+  }
+
+  &.#{$component-name}-default {
+    color: $gray-700;
+    background: map-get($alerts-background-colors, success);
+    border: 1px solid map-get($alerts-second-colors, success);
+  }
+
+  &.#{$component-name}-error {
+    color: $gray-700;
+    background: map-get($alerts-background-colors, danger);
+    border: 1px solid map-get($alerts-second-colors, danger);
+  }
+
+  &.#{$component-name}-notice {
+    color: $gray-700;
+    background: map-get($alerts-background-colors, info);
+    border: 1px solid map-get($alerts-second-colors, info);
+  }
+
+  &.#{$component-name}-warning {
+    color: $gray-700;
+    background: map-get($alerts-background-colors, warning);
+    border: 1px solid map-get($alerts-second-colors, warning);
+  }
+}

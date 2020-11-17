@@ -1,3 +1,57 @@
+/* stylelint-disable-next-line */
+$component-name: ps-card;
+
+.#{$component-name} {
+  padding: 10px;
+  @include transition(.25s ease-out);
+
+  &:hover {
+    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, .1));
+  }
+
+  .list-group-item {
+    padding: $card-spacer-y $card-spacer-x;
+  }
+
+  & &-body {
+    padding: 0;
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  & &-img {
+    &,
+    &-top {
+      width: 100%;
+      @include border-radius(0);
+    }
+  }
+
+  & &-title {
+    margin: .625rem 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-750;
+  }
+
+  & &-button {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  & &-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-550;
+  }
+}
+
 .card {
   .list-group-item {
     padding: $card-spacer-y $card-spacer-x;

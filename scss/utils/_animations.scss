@@ -1,0 +1,35 @@
+@keyframes fromTop {
+  from {
+    transform: translateY(-2rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translateY(2rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(-2rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(2rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

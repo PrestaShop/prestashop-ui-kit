@@ -1,14 +1,49 @@
-.input-group-text {
-  padding: $input-padding-y 0.625rem;
-  font-size: $font-size-base;
-  color: $medium-gray;
+// stylelint-disable-next-line
+$component-name: input-group;
 
-  .material-icons {
+.#{$component-name} {
+  &-text {
+    padding: $input-padding-y .625rem;
     font-size: $font-size-base;
+    color: $medium-gray;
+
+    .material-icons {
+      font-size: $font-size-base;
+    }
+
+    // collapse borders
+    & + .input-group-text {
+      margin-left: $input-border-width * -1;
+    }
   }
 
-  // collapse borders
-  & + .input-group-text {
-    margin-left: $input-border-width * -1;
+  & &-input {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+
+    .form-control {
+      padding: .375rem 2rem .375rem .625rem;
+      @include border-top-right-radius(0);
+      @include border-bottom-right-radius(0);
+    }
+
+    + .#{$component-name}-append {
+      > span {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.multiple {
+  &.has-danger,
+  &.has-warning,
+  &.has-success {
+    .valid-feedback,
+    .warning-feedback,
+    .invalid-feedback {
+      display: block;
+    }
   }
 }

@@ -4,7 +4,7 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";// Imports & variables PS
+@import "~bootstrap/scss/bootstrap"; // Imports & variables PS
 
 // Mixins
 @import "mixins/fonts";
@@ -16,11 +16,16 @@
 
 // Addons
 @import "~select2/src/scss/core.scss";
-@import "~jquery.growl/stylesheets/jquery.growl.css";
+@import "~jquery.growl/stylesheets/jquery.growl.sass";
+
+// Utils
+@import "utils/animations";
 
 // Components
 @import "type";
 @import "alerts";
+@import "help-box";
+@import "popover";
 @import "badges";
 @import "buttons";
 @import "button-group";
@@ -39,9 +44,13 @@
 @import "ps-tags";
 @import "ps-switch";
 @import "ps-sortable-columns";
+@import "ps-dropdown";
+@import "ps-number";
 @import "tables";
 @import "spinners";
 @import "material-checkbox";
+@import "growl";
+@import "search";
 
 @import "variables-select2";
 @import "~select2-bootstrap-theme/src/select2-bootstrap";

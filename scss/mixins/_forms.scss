@@ -9,20 +9,20 @@
   }
 
   .#{$state}-feedback {
-    font-size: $font-size-sm;
+    margin-top: .3125rem;
+    font-size: $font-size-xs;
     font-weight: $font-weight-bold;
     color: $color;
-    margin-top: .3125rem;
   }
 }
 
 @mixin ps-switch($height, $width, $margin, $icon-size, $align-margin: 2px) {
-  height: $height;
-  width: $width;
   position: relative;
-  cursor: pointer;
   display: inline-block;
+  width: $width;
+  height: $height;
   vertical-align: middle;
+  cursor: pointer;
 
   @if $margin < 0 {
     margin: -$align-margin 2px - $margin 0 0;
@@ -31,46 +31,49 @@
     margin: -$align-margin 2px 0 0;
   }
 
-  &, &:after {
-    background: $white;
-    border: 2px solid $light-gray;
-    border-radius: $height;
+  &,
+  &::after {
     box-sizing: border-box;
     color: $medium-gray;
-    transition: all 0.5s;
+    background: $white;
+    border: 2px solid $light-gray;
+    @include border-radius($height);
+    @include transition(all .5s);
   }
 
   &{
-    background: theme-color-background('warning');
+    background: theme-color-background("warning");
   }
 
   > input {
     display: none;
   }
 
-  &:after {
-    @include material-icon('close');
-    display: block;
-    height: $height + (2 * -$margin);
-    width: $height + (2 * -$margin);
+  &::after {
+    @include material-icon("close");
     position: absolute;
     top: $margin - 2px;
     left: $margin - 2px;
-    transform: rotate(-180deg);
-    line-height: $height - (2 * $margin) - 4px;
-    vertical-align: middle;
-    text-align: center;
+    display: block;
+    width: $height + (2 * -$margin);
+    height: $height + (2 * -$margin);
     font-size: $icon-size;
+    line-height: $height - (2 * $margin) - 4px;
+    text-align: center;
+    vertical-align: middle;
+    transform: rotate(-180deg);
   }
 
+  /* stylelint-disable selector-class-pattern */
   &.-checked {
-    background: theme-color('primary');
+    background: theme-color("primary");
 
-    &:after {
-      content: 'check';
+    &::after {
       left: $width - $height - 2px + $margin;
-      color: theme-color('primary');
+      color: theme-color("primary");
+      content: "check";
       transform: rotate(0deg);
     }
   }
+  /* stylelint-enable */
 }

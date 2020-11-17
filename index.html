@@ -739,17 +739,11 @@
             <h1>Alerts</h1>
 
             <div class="alert alert-info" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-                <p class="alert-text">This is a info alert with <a href="#">an example link</a>. Click me to delete</p>
+                <p class="alert-text">This is a info alert with <a href="#">an example link</a>.</p>
             </div>
 
             <div class="alert alert-success" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-                <p class="alert-text">This is a success alert with <a href="#">an example link</a>. Click me to delete</p>
+                <p class="alert-text">This is a success alert with <a href="#">an example link</a>.</p>
             </div>
 
             <div class="alert medium-alert alert-warning" role="alert">
@@ -766,13 +760,7 @@
                 </ul>
             </div>
 
-            <div class="alert expandable-alert alert-danger" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">close</i></span>
-                </button>
-                <button type="button" class="read-more btn-link" data-toggle="collapse" data-target="#collapseDanger" aria-expanded="false" aria-controls="collapseDanger">
-                    Read more
-                </button>
+            <div class="alert expandable-alert alert-warning" role="alert">
                 <p class="alert-text">Alert with very long text. Closed by default...</p>
                 <div class="alert-more collapse" id="collapseDanger">
                     <p>
@@ -786,14 +774,27 @@
                         volutpat. Quisque ultrices velit nec aliquet tincidunt.
                     </p>
                 </div>
+                <div class="read-more-container">
+                    <button type="button" class="read-more btn-link" data-toggle="collapse" data-target="#collapseDanger" aria-expanded="false" aria-controls="collapseDanger">
+                        Read more
+                    </button>
+                </div>
             </div>
+
+
+            <button type="button" class="btn btn-success" onclick="$.growl({ title: 'Success', message: 'The kitten is awake!', url: '/kittens' });">Success toast</button>
+            <button type="button" class="btn btn-danger" onclick="$.growl.error({ message: 'The kitten is awake!' });">Error toast</button>
+            <button type="button" class="btn btn-primary" onclick="$.growl.notice({ message: 'The kitten is awake!' });">Notice toast</button>
+            <button type="button" class="btn btn-warning" onclick="$.growl.warning({ message: 'The kitten is awake!' });">Warning toast</button>
         </article>
 
         <article id="badges">
             <h2>Badges @TODO</h2>
             <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-primary status">Primary Status</span>
             <span class="badge badge-primary-hover">Primary hover </span>
             <span class="badge badge-success">Success</span>
+            <span class="badge badge-success status">Success Status</span>
             <span class="badge badge-success-hover">Success hover </span>
             <span class="badge badge-danger">Danger</span>
             <span class="badge badge-danger-hover">Danger hover </span>
@@ -810,7 +811,7 @@
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Library</a></li>
                     <li class="breadcrumb-item"><a href="#">Data</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Bootstrap</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
                 </ol>
             </nav>
         </article>
@@ -905,70 +906,70 @@
 
             <h3>Buttons with icons</h3>
 
-            <button type="button" class="btn btn-primary">
-                <i class="material-icons">ac_unit</i> Iceberg
+            <button type="button" class="btn btn-primary" aria-label="Iceberg">
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-outline-primary">
-                <i class="material-icons">ac_unit</i> Iceberg
+            <button type="button" class="btn btn-outline-primary" aria-label="Iceberg">
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-secondary">
-                <i class="material-icons">ac_unit</i> Iceberg
+            <button type="button" class="btn btn-secondary" aria-label="Iceberg">
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-outline-secondary">
-                <i class="material-icons">ac_unit</i> Iceberg
+            <button type="button" class="btn btn-outline-secondary" aria-label="Iceberg">
+                <i class="material-icons">vertical_align_bottom</i> Iceberg
             </button>
-            <button type="button" class="btn btn-primary" disabled>
-                Iceberg <i class="material-icons">ac_unit</i>
+            <button type="button" class="btn btn-primary"  aria-label="Iceberg" disabled>
+                Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
-            <button type="button" class="btn btn-outline-primary" disabled>
-                Iceberg <i class="material-icons">ac_unit</i>
+            <button type="button" class="btn btn-outline-primary"  aria-label="Iceberg" disabled>
+                Iceberg <i class="material-icons">vertical_align_bottom</i>
             </button>
             <br><br>
 
             <button type="button" class="btn btn-primary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-primary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-primary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-outline-primary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-primary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-primary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-secondary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-secondary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-secondary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
 
             <button type="button" class="btn btn-outline-secondary btn-sm">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-secondary">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
             <button type="button" class="btn btn-outline-secondary btn-lg">
-                <i class="material-icons">ac_unit</i> Very very long Iceberg
+                <i class="material-icons">vertical_align_bottom</i> Very very long Iceberg
             </button>
 
             <br><br>
@@ -1016,10 +1017,54 @@
             <button type="button" class="btn btn-outline-danger">Danger</button>
             <button type="button" class="btn btn-warning">Warning</button>
             <button type="button" class="btn btn-outline-warning">Warning</button>
+
+            <br><br>
+
+            <h3>Button group</h3>
+
+            <div class="btn-group" role="group" data-toggle="buttons" aria-label="Basic example">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+
+            <br><br>
+
+            <h3>Button group with radio handling</h3>
+
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option2"> Radio 2
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="options" id="option3"> Radio 3
+              </label>
+            </div>
         </article>
 
         <article id="dropdowns">
             <h2>Dropdowns</h2>
+
+            <div class="ps-dropdown dropdown btn-group bordered">
+                <div class="dropdown-label" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-flip="false" data-display="static">
+                    <span class="js-selected-item selected-item module-status-selector-label">See all items</span>
+                    <i class="material-icons arrow-down float-right">keyboard_arrow_down</i>
+                </div>
+
+                <div class="ps-dropdown-menu dropdown-menu" aria-labelledby="module-status-dropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+
+            <br><br>
 
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1721,6 +1766,40 @@
                     </div>
 
                 </div>
+
+                <div class="col col-sm-4">
+                    <div class="ps-card card">
+                        <a href="#" class="ps-card-link card-link-full">
+                           <div class="ps-card-img">
+                                <img class="ps-card-img-top" src="img/sample2.jpg" alt="Card image cap">
+                           </div>
+
+                            <div class="ps-card-body">
+                                <h4 class="ps-card-title">Lorem ipsum sit dolor amet</h4>
+                                <div class="ps-card-body-bottom">
+                                    <h6 class="ps-card-subtitle  text-muted">89,99 €</h6>
+                                    <p href="#" class="ps-card-button">Discover</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="ps-card ps-card-module card">
+                        <a href="#" class="ps-card-link ps-card-link-full">
+                            <div class="ps-card-img">
+                                <img class="ps-card-img-top" src="img/sample2.jpg" alt="Card image cap">
+                            </div>
+
+                            <div class="ps-card-body">
+                                <h4 class="ps-card-title">Lorem ipsum sit dolor amet</h4>
+                                <div class="ps-card-body-bottom">
+                                    <h6 class="ps-card-subtitle  text-muted">89,99 €</h6>
+                                    <p href="#" class="ps-card-button">Discover</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </article>
 
@@ -1731,6 +1810,26 @@
                 <div class="form-group">
                     <label class="form-control-label" for="input1">Normal input</label>
                     <input type="text" class="form-control" id="input1">
+                </div>
+                <div class="form-group ps-number-input" data-max="300" data-min="0" data-label-max="Maximum:" data-label-min="Minimum:" data-label-nan="Not a number.">
+                    <label class="form-control-label" for="input1">Normal number input</label>
+                    <div class="ps-number-input-inputs">
+                        <input class="form-control" type="number" value="0" id="input1">
+
+                        <div class="ps-number-input-controls input-group-append btn-group">
+                            <button type="button" class="btn btn-default ps-number-decrement"><i class="material-icons">remove</i></button>
+                            <button type="button" class="btn btn-default ps-number-increment"><i class="material-icons">add</i></button>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">Maximum: <span></span>.</div>
+                </div>
+
+                <div class="form-group ps-number-input ps-number-input-enable-arrows" data-max="300" data-min="0" data-label-max="Maximum:" data-label-min="Minimum:" data-label-nan="Not a number.">
+                    <label class="form-control-label" for="input1">Normal number input witout buttons</label>
+                    <div class="ps-number-input-inputs">
+                        <input class="form-control" type="number" value="0" id="input1">
+                    </div>
+                    <div class="invalid-feedback">Maximum: <span></span>.</div>
                 </div>
                 <div class="form-group form-group-lg">
                     <label class="form-control-label" for="input2">Big input</label>
@@ -1889,6 +1988,28 @@
                         </div>
 
                         <div class="form-group">
+                            <span class="ps-switch ps-switch-lg ps-switch-nolabel">
+                                <input type="radio" name="example_ps_switch_5" id="example_off_5" value="0">
+                                <label for="example_off_5">Off</label>
+                                <input type="radio" name="example_ps_switch_5" id="example_on_5" value="1" checked>
+                                <label for="example_on_5">On</label>
+                                <span class="slide-button"></span>
+                            </span>
+                            <small class="form-text">Description for a large on-off switch without label</small>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="ps-switch ps-switch-lg ps-switch-nolabel ps-switch-center">
+                                <input type="radio" name="example_ps_switch_6" id="example_off_6" value="0">
+                                <label for="example_off_6">Off</label>
+                                <input type="radio" name="example_ps_switch_6" id="example_on_6" value="1" checked>
+                                <label for="example_on_6">On</label>
+                                <span class="slide-button"></span>
+                            </span>
+                            <small class="form-text">Description for a large on-off switch without label centered</small>
+                        </div>
+
+                        <div class="form-group">
                             <span class="ps-switch">
                                 <input type="radio" name="example_ps_switch_4" id="example_off_4" value="0" disabled>
                                 <label for="example_off_4">Off</label>
@@ -1959,22 +2080,27 @@
 
                         <br><br>
 
-                        <div class="form-check">
+                        <div class="form-check form-check-radio">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <i class="form-check-round"></i>
                                 Option one is this and that&mdash;be sure to include why it's great
                             </label>
                         </div>
-                        <div class="form-check">
+
+                        <div class="form-check form-check-radio">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                Option two can be something else and selecting it will deselect option one
+                                <i class="form-check-round"></i>
+                                Option one is this and that&mdash;be sure to include why it's great
                             </label>
                         </div>
-                        <div class="form-check disabled">
+
+                        <div class="form-check form-check-radio disabled">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-                                Option three is disabled
+                                <i class="form-check-round"></i>
+                                Option one is this and that&mdash;be sure to include why it's great
                             </label>
                         </div>
 
@@ -2047,7 +2173,7 @@
                         <br><br>
 
                         <div class="form-group">
-                            <span class="ps-switch ps-switch-sm border">
+                            <span class="ps-switch ps-switch-sm">
                                 <input type="radio" name="example_ps_switch_1b" id="example_off_1b" value="0" checked>
                                 <label for="example_off_1b">Off</label>
                                 <input type="radio" name="example_ps_switch_1b" id="example_on_1b" value="1">
@@ -2058,7 +2184,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch border">
+                            <span class="ps-switch">
                                 <input type="radio" name="example_ps_switch_2b" id="example_off_2b" value="0" checked>
                                 <label for="example_off_2b">Off</label>
                                 <input type="radio" name="example_ps_switch_2b" id="example_on_2b" value="1">
@@ -2069,7 +2195,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch ps-switch-lg border">
+                            <span class="ps-switch ps-switch-lg">
                                 <input type="radio" name="example_ps_switch_3b" id="example_off_3b" value="0" checked>
                                 <label for="example_off_3b">Off</label>
                                 <input type="radio" name="example_ps_switch_3b" id="example_on_3b" value="1">
@@ -2080,7 +2206,7 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="ps-switch border">
+                            <span class="ps-switch">
                                 <input type="radio" name="example_ps_switch_4b" id="example_off_4b" value="0" disabled checked>
                                 <label for="example_off_4b">Off</label>
                                 <input type="radio" name="example_ps_switch_4b" id="example_on_4b" value="1" disabled>
@@ -2117,15 +2243,21 @@
                         <br><br>
 
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="file3">
-                            <label class="custom-file-label" for="file3">Choose file...</label>
+                            <input
+                                    type="file"
+                                    class="custom-file-input"
+                                    id="file3"
+                                    data-multiple-files-text="%count% files"
+                                    multiple
+                            >
+                            <label class="custom-file-label" for="file3">Choose files...</label>
                         </div>
 
                         <br><br>
 
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input disabled" id="file4" disabled>
-                            <label class="custom-file-label" for="file4">Choose file...</label>
+                            <input type="file" class="custom-file-input disabled" id="file4" disabled multiple>
+                            <label class="custom-file-label" for="file4">Choose files...</label>
                         </div>
                     </form>
                 </div>
@@ -2204,9 +2336,9 @@
                                 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group has-danger">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control is-invalid" placeholder="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">@example.com</span>
                                 </div>
@@ -2641,19 +2773,22 @@
         <article id="popovers">
             <h2>Popovers @TODO</h2>
 
-            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="left" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on left (with title)
             </button>
-            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on top
             </button>
-            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Vivamus
     sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on bottom
             </button>
-            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                 Popover on right  (with title)
             </button>
+
+            <span class="help-box" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            </span>
         </article>
 
         <article id="progress">
@@ -2750,11 +2885,16 @@
         </article>
 
         <article id="search-form">
-            <h1>Search form @TODO</h1>
+            <h1>Search form</h1>
 
             <div class="wrapper">
-                <div class="search search-with-icon">
-                    <input type="text" class="form-control" id="input-search" placeholder="Search something...">
+                <div class="input-group search search-with-icon">
+                    <input type="text" class="form-control search-input" placeholder="Search something..." aria-describedby="basic-search">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </article>

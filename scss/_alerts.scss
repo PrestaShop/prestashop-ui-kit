@@ -1,28 +1,89 @@
-.alert {
-  padding: $alert-padding-y 0 $alert-padding-y 2.875rem;
-  background-color: $white;
+$component-name: alert !default;
+
+.#{$component-name} {
   position: relative;
-  color: $body-color;
+  padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
+  color: $gray-700;
+  background-color: $white;
+  @include border-radius(8px);
+
+  a {
+    font-weight: 600;
+    color: $gray-700;
+    text-decoration: underline;
+    @include transition(.25s ease-out);
+
+    &:hover {
+      opacity: .6;
+    }
+  }
 
   &::before {
     @include use-material-icon();
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 2.875rem;
-    height: 100%;
-    text-align: center;
-    font-size: 1.563rem;
+    top: 15px;
+    left: 15px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &.toast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 8px 16px 0 rgba(#000, .1);
+
+    &::before {
+      content: none;
+    }
+
+    p,
+    a {
+      color: $white;
+    }
+
+    .close {
+      margin-right: 0;
+    }
+
+    a {
+      font-weight: 600;
+    }
+
+    &-fixed-right,
+    &-fixed-left {
+      position: fixed;
+      bottom: 20px;
+      animation-name: fromTop;
+      animation-duration: .5s;
+    }
+
+    &-fixed-left {
+      left: 10vh;
+    }
+
+    &-fixed-right {
+      right: 10vh;
+    }
+  }
+
+  .close {
+    margin-left: 20px;
+    line-height: .8;
+  }
+
+  & &-action {
+    margin-left: 15px;
   }
 
   p,
   ul {
-    font-size: $font-size-base;
     margin: 0;
+    font-size: $font-size-base;
   }
 
   > * {
@@ -44,13 +105,26 @@
   }
 
   &.expandable-alert {
+    .alert-text {
+      font-weight: 600;
+      color: $gray-700;
+    }
+
     .read-more {
       @extend .close;
+      float: inherit;
       font-size: $font-size-base;
+      font-weight: 600;
       line-height: 1.375rem;
+      color: $primary;
+      opacity: 1;
+
+      &-container {
+        text-align: right;
+      }
 
       &:hover {
-        opacity: 1;
+        opacity: .8;
       }
 
       &:focus {
@@ -58,85 +132,50 @@
       }
     }
 
-    .alert-more {
-      color: $medium-gray;
+    .#{$component-name}-more {
+      color: $gray-700;
       padding: {
         top: 1.375rem;
         bottom: .75rem;
       }
 
       p {
-        color: inherit;
         font-size: $font-size-sm;
+        color: inherit;
       }
     }
   }
 }
 
-.alert-info {
-  border-color: theme-color('info');
+@each $color, $value in $theme-alerts-icons {
+  .#{$component-name}-#{$color} {
+    background-color: map-get($alerts-background-colors, $color);
+    border: 1px solid map-get($alerts-second-colors, $color);
 
-  &::before {
-    content: '\E88F';
-    background-color: theme-color-background('info');
-    color: theme-color('info')
-  }
+    &.toast {
+      color: $white;
+      background: map-get($alerts-background-colors, $color);
 
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus {
-    color: theme-color('info')
-  }
-}
+      .close,
+      &.expandable-alert .read-more,
+      &.expandable-alert .read-more:hover,
+      &.expandable-alert .read-more:focus {
+        color: $white;
+      }
+    }
 
-.alert-success {
-  border-color: theme-color('success');
+    &::before {
+      color: map-get($alerts-second-colors, $color);
+      content: $value;
+    }
 
-  &::before {
-    content: '\E5CA';
-    background-color: theme-color-background('success');
-    color: theme-color('success')
-  }
+    .close {
+      color: theme-color($color);
+    }
 
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus {
-    color: theme-color('success')
-  }
-}
-
-.alert-warning {
-  border-color: theme-color('warning');
-
-  &::before {
-    content: '\E001';
-    background-color: theme-color-background('warning');
-    color: theme-color('warning')
-  }
-
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus  {
-    color: theme-color('warning')
-  }
-}
-
-.alert-danger {
-  border-color: theme-color('danger');
-
-  &::before {
-    content: '\E001';
-    background-color: theme-color-background('danger');
-    color: theme-color('danger');
-  }
-
-  .close,
-  &.expandable-alert .read-more,
-  &.expandable-alert .read-more:hover,
-  &.expandable-alert .read-more:focus  {
-    color: theme-color('danger');
+    &.expandable-alert .read-more,
+    &.expandable-alert .read-more:hover {
+      color: $gray-750;
+    }
   }
 }

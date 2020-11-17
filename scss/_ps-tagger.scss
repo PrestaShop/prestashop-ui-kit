@@ -1,18 +1,19 @@
+/* stylelint-disable selector-class-pattern */
 .pstaggerWrapper {
   @extend .form-control;
+  padding: 0;
 
   border: 0;
-  padding: 0;
 }
 
 .pstaggerTagsWrapper {
-  display: none;
   position: relative;
+  display: none;
+  width: 100%;
   padding: $badge-padding-y $badge-padding-x;
   padding-bottom: 0;
-  border: solid $border-width $border-color;
   background: $white;
-  width: 100%;
+  border: solid $border-width $border-color;
 }
 
 .pstaggerAddTagWrapper {
@@ -21,25 +22,25 @@
 }
 
 .pstaggerTag {
-  font-size: .75rem;
   display: inline-block;
-  padding: $badge-padding-y/2 $badge-padding-x;
+  padding: ($badge-padding-y / 2) $badge-padding-x;
   margin: 0 $badge-padding-x $badge-padding-y 0;
-  color: theme-color('primary');
+  font-size: .75rem;
+  color: theme-color("primary");
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   @include border-radius();
-  @include badge-variant(theme-color('primary'));
+  @include badge-variant(theme-color("primary"));
 
   .pstaggerClosingCross {
     margin: 0 0 0 $badge-padding-x;
+    font-size: 0;
     color: $body-color;
     text-decoration: none;
-    font-size: 0;
 
     &::after {
-      @include material-icon('\E5CD');
+      @include material-icon("\E5CD");
       font-size: 1.063rem;
       vertical-align: bottom;
     }
@@ -58,4 +59,7 @@
 .input-group .pstaggerAddTagInput {
   display: block;
   width: 100%;
+  @include border-top-right-radius(0);
+  @include border-bottom-right-radius(0);
 }
+/* stylelint-enable selector-class-pattern */

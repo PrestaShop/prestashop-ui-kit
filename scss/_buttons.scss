@@ -1,60 +1,60 @@
 .btn {
-  border-width: $border-width;
   font-weight: $font-weight-semibold;
-  border-radius: $btn-border-radius;
   white-space: nowrap;
+  border-width: $border-width;
+  @include border-radius($btn-border-radius);
 
-  @include hover-focus {
+  @include hover-focus() {
     cursor: pointer;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: 1;
     cursor: not-allowed;
+    background-color: $gray-disabled;
+    opacity: 1;
   }
 
   > .material-icons {
-    font-size: 1.4em;
-    margin-top: -0.083em;
+    margin-top: -.083em;
+    font-size: 1.45em;
+  }
+
+  &-default {
+    @include ps-button-outline-variant($gray-700, $primary, "default");
+
+    border-color: $gray-300;
+
+    &:hover {
+      border-color: $gray-300;
+    }
+
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+      color: $white;
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include ps-button-variant(
-      $value,
-      $value,
-      theme-color-hover($color),
-      theme-color-hover($color),
-      theme-color-active($color),
-      theme-color-active($color),
-      $color
-    );
+    @if $color != default {
+      @include ps-button-variant(
+        $value,
+        $value,
+        theme-color-hover($color),
+        theme-color-hover($color),
+        theme-color-active($color),
+        theme-color-active($color),
+        $color
+      );
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include ps-button-outline-variant($value, #fff, $color);
-  }
-}
-
-// special case for secondary outline button
-.btn-outline-secondary {
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled).hover {
-    color: $blue;
-    background-color: $white;
-    border-color: $primary;
-  }
-
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active,
-  .show > &.dropdown-toggle {
-    color: $primary-active;
-    background-color: $secondary-active;
-    border-color: $primary-hover; // <-- that's "hover" and not "active"
   }
 }

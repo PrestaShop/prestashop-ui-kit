@@ -4,63 +4,70 @@
   thead {
     // normal header row
     th {
-      border-bottom: solid .125rem theme-color('primary');
       border-top: none;
+      border-bottom: solid .125rem theme-color("primary");
 
       > .material-icons {
-        color: $gray-500;
         margin-top: -.5rem;
+        color: $gray-500;
       }
     }
 
     // filter row
-    tr {
-      &.column-filters {
-        background: $gray-200;
-        th {
-          border-bottom: none;
-          vertical-align: top;
-          padding: {
-            top: 1rem;
-            bottom: 1rem;
-          }
+    .column-filters {
+      background: $gray-200;
+      th {
+        vertical-align: top;
+        border-bottom: none;
+        padding: {
+          top: 1rem;
+          bottom: 1rem;
         }
       }
     }
+  }
 
-    // remove border from tables with filter row
-    &.with-filters + tbody > tr:first-of-type {
-      td, th {
+  // remove border from tables with filter row
+  /* stylelint-disable */
+  .with-filters + tbody {
+    > tr:first-of-type {
+      td,
+      th {
         border-top: none;
       }
     }
   }
+  /* stylelint-enable */
 
   td,
   th,
   tr {
     vertical-align: middle;
+  }
 
-    &.form-group {
-      text-align: center;
+  td {
+    font-size: .815rem;
+  }
 
-      .form-check {
-        display: inherit;
-        margin-bottom: 0;
-      }
+  .form-group {
+    text-align: center;
+
+    .form-check {
+      display: inherit;
+      margin-bottom: 0;
     }
   }
 }
 
 .table-form {
   tbody tr:nth-of-type(odd) {
-    background-color: theme-color-background('info');
+    background-color: theme-color-background("info");
   }
 }
 
 .table-hover {
   tbody tr {
-    @include hover {
+    @include hover() {
       color: $white;
       cursor: pointer;
     }
@@ -76,7 +83,7 @@
 .table-dark {
   &.table-form {
     tbody tr:nth-of-type(odd) {
-      background-color: theme-color-background('info');
+      background-color: theme-color-background("info");
     }
   }
 }

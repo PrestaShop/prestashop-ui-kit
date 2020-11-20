@@ -12,12 +12,6 @@ module.exports = {
     config.resolve.alias['core-js/modules'] = '@storybook/core/node_modules/core-js/modules';
     config.module.rules[3].use = 'html-loader?minimize=false';
 
-    config.module.rules.push({
-      test: /\.js$/,
-      use: ['babel-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
-
     return config;
   },
 };

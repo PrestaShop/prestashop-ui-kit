@@ -33,6 +33,15 @@
       color: $primary;
     }
   }
+
+  .form-control-label {
+    display: flex;
+    align-items: flex-start;
+
+    .help-box {
+      margin-top: .125rem;
+    }
+  }
 }
 // stylelint-enable
 

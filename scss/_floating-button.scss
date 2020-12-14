@@ -9,9 +9,10 @@
     z-index: 1;
     width: 56px;
     height: 56px;
+    padding: .5rem;
+    font-size: 18px;
     @include border-radius(100%);
     @include transition(.25s ease-out);
-
 
     &:not(.collapsed) {
       background: $red;

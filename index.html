@@ -816,9 +816,9 @@
             </nav>
         </article>
 
-        <article id="toolbar">
-            <h2>Toolbar</h2>
-            <h3>Buttons</h3>
+        <article id="floating">
+            <h2>Floating</h2>
+            <h3>Button</h3>
             <div class="toolbar">
                 <a class="toolbar-button" href="#">
                     <i class="material-icons">assessment</i>
@@ -832,6 +832,23 @@
                     <i class="material-icons">help</i>
                     <span class="title">Help</span>
                 </a>
+            </div>
+        </article>
+
+        <article id="toolbar">
+            <h2>Toolbar</h2>
+            <h3>Buttons</h3>
+            <div class="floating-buttons">
+              <div class="btn-floating">
+                <button class="btn btn-primary collapsed" data-toggle="collapse" data-target=".btn-floating-container">
+                  <i class="material-icons">add</i>
+                </button>
+                <div class="btn-floating-container collapse">
+                  <div class="btn-floating-menu">
+                    <a class="btn btn-floating-item" href="#">Upload a module <i class="material-icons">download</i></a>
+                  </div>
+                </div>
+              </div>
             </div>
         </article>
 

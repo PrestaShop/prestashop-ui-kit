@@ -1,0 +1,38 @@
+import { useEffect } from '@storybook/client-api';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import toastsContent from './toasts.html';
+import markupContent from './markup.html';
+import LinkTo from '@storybook/addon-links/react';
+
+<Meta title="Toasts" />
+
+# Toasts
+
+JQuery Growl is used to display toasts, here is the markup of toasts, but don't use it like this.
+
+<Canvas>
+  <Story name="Toasts" parameters={{ docs: { source: { code: toastsContent } } }}>
+    {() => {
+      useEffect(() => {
+        window.prestaShopUiKit.init();
+      });
+      return toastsContent;
+    }}
+  </Story>
+</Canvas>
+
+You're able to launch toast using JavaScript:
+
+```js
+$.growl({ title: "Growl", message: "The kitten is awake!" });
+$.growl.error({ message: "The kitten is attacking!" });
+$.growl.notice({ message: "The kitten is cute!" });
+$.growl.warning({ message: "The kitten is ugly!" });
+```
+
+Here is the markup of every toasts, but never use these like this. Prefer using <LinkTo kind="alerts">**Alerts**</LinkTo>.
+<Canvas>
+  <Story name="Markup" parameters={{ docs: { source: { code: markupContent } } }}>
+    {() => markupContent}
+  </Story>
+</Canvas>

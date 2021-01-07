@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import imagesContent from './images.html'
+
+<Meta title="Images" />
+
+# Images
+
+You've multiple ways of displaying images using the UIKit.
+
+<Canvas>
+  <Story name="Images" parameters={{ docs: { source: { code: imagesContent } } }}>
+    {() => imagesContent}
+  </Story>
+</Canvas>
+

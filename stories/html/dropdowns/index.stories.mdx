@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import dropdownsContent from './dropdowns.html'
+import dropupContent from './dropup.html'
+import variationsContent from './variations.html'
+import withButtonSplitContent from './with-button-split.html'
+import menuContent from './menu.html'
+
+<Meta title="Dropdowns" />
+
+# Dropdowns
+
+<Canvas>
+  <Story name="Basics" parameters={{ docs: { source: { code: dropdownsContent } } }}>
+    {() => dropdownsContent}
+  </Story>
+</Canvas>
+
+# Dropup
+
+<Canvas>
+  <Story name="Dropup" parameters={{ docs: { source: { code: dropupContent } } }}>
+    {() => dropupContent}
+  </Story>
+</Canvas>
+
+# Variations
+
+<Canvas>
+  <Story name="Variations" parameters={{ docs: { source: { code: variationsContent } } }}>
+    {() => variationsContent}
+  </Story>
+</Canvas>
+
+# With button split
+
+<Canvas>
+  <Story name="With button split" parameters={{ docs: { source: { code: withButtonSplitContent } } }}>
+    {() => withButtonSplitContent}
+  </Story>
+</Canvas>
+
+# Menu example
+
+<Canvas>
+  <Story name="Menu example" parameters={{ docs: { source: { code: menuContent } } }}>
+    {() => menuContent}
+  </Story>
+</Canvas>

@@ -6,10 +6,7 @@
     "type": "git",
     "url": "https://github.com/PrestaShop/prestashop-ui-kit.git"
   },
-  "keywords": [
-    "prestashop",
-    "uikit"
-  ],
+  "keywords": ["prestashop", "uikit"],
   "scripts": {
     "watch": "webpack -w --progress --debug",
     "build": "NODE_ENV=production webpack --progress --debug",
@@ -23,7 +20,13 @@
   "bugs": {
     "url": "https://github.com/PrestaShop/prestashop-ui-kit/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery.growl": "^1.3.5",
+    "bootstrap": "^4.4.1",
+    "select2": "^4.0.5",
+    "select2-bootstrap-theme": "0.1.0-beta.10",
+    "open-sans-fonts": "^1.6.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.12.3",
@@ -36,7 +39,6 @@
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
-    "bootstrap": "^4.4.1",
     "chromatic": "^5.2.0",
     "core-js": "^2.6.11",
     "css-loader": "^0.28.11",

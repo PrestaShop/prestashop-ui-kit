@@ -1,15 +1,12 @@
 {
   "name": "prestakit",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Prestashop UI Kit integration",
   "repository": {
     "type": "git",
     "url": "https://github.com/PrestaShop/prestashop-ui-kit.git"
   },
-  "keywords": [
-    "prestashop",
-    "uikit"
-  ],
+  "keywords": ["prestashop", "uikit"],
   "scripts": {
     "watch": "webpack -w --progress --debug",
     "build": "NODE_ENV=production webpack --progress --debug",

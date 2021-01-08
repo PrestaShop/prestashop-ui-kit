@@ -1,99 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>PrestaShop PSUI</title>
-        <meta name="description" content="" />
-        <meta name="generator" content="kss-node" />
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Storybook</title><meta name="viewport" content="width=device-width,initial-scale=1"/><style>html, body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-        <link rel="stylesheet" href="css/kss.css" />
-        <link rel="stylesheet" href="css/jquery.growl.css"/>
+  * {
+    box-sizing: border-box;
+  }</style><script>/* globals window */
+  /* eslint-disable no-underscore-dangle */
+  try {
+    if (window.top !== window) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.top.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+    }
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('unable to connect to top frame for connecting dev tools');
+  }
 
-        <link rel="stylesheet" href="css/bootstrap-prestashop-ui-kit.css"/>
+  window.onerror = function onerror(message, source, line, column, err) {
+    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
+    // eslint-disable-next-line no-var, vars-on-top
+    var xhr = new window.XMLHttpRequest();
+    xhr.open('POST', '/runtime-error');
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.send(
+      JSON.stringify({
+        /* eslint-disable object-shorthand */
+        message: message,
+        source: source,
+        line: line,
+        column: column,
+        error: err && { message: err.message, name: err.name, stack: err.stack },
+        origin: 'manager',
+        /* eslint-enable object-shorthand */
+      })
+    );
+  };</script><style>#root[hidden],
+      #docs-root[hidden] {
+        display: none !important;
+      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
+            
         
-
-        <script src="public/jquery-1.9.1.min.js"></script>
-        <script src="public/kss.js"></script>
-        <script src="public/main.js"></script>
-        <!--[if gt IE 8]><!-->
-        <script src="public/highlight.pack.js"></script>
-        <!--<![endif]-->
-        <script src="js/jquery.growl.js"></script>
-        <script src="js/jquery.pstagger.min.js"></script>
-        <script src="js/tether.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/select2.min.js"></script>
-
-        <script src="js/prestashop-ui-kit.js"></script>
+            
+              window['LOGLEVEL'] = "info";
+            
         
-    </head>
-    <body id="kss-node">
-        <div class="kss-wrapper">
-            <div class="kss-sidebar">
-                <div class="kss-sidebar-inner">
-                    <header class="kss-header">
-                        <h1 class="kss-doc-title"><a href="./"><img style="width: 100%" src="./img/logo.png"></a></h1>
-                    </header>
-
-                    <nav class="kss-nav">
-                        <ul class="kss-menu" data-kss-ref="styleguide.homepage">
-                            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Get Started</span></a></li>
-                            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Content</span></a></li>
-                            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Colors</span></a></li>
-                            <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Buttons</span></a></li>
-                            <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Forms</span></a></li>
-                            <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Input groups</span></a></li>
-                            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdowns</span></a></li>
-                            <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Alerts</span></a></li>
-                            <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Pagination</span></a></li>
-                            <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Modals</span></a></li>
-                            <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Tooltips</span></a></li>
-                            <li class="kss-menu-item"><a href="section-11.html"><span class="kss-ref">11</span><span class="kss-name">Spinner</span></a></li>
-                            <li class="kss-menu-item"><a href="section-12.html"><span class="kss-ref">12</span><span class="kss-name">Tags</span></a></li>
-                            <li class="kss-menu-item"><a href="section-13.html"><span class="kss-ref">13</span><span class="kss-name">Modules Cards</span></a></li>
-                            <li class="kss-menu-item"><a href="section-14.html"><span class="kss-ref">14</span><span class="kss-name">Tables</span></a></li>
-                            <li class="kss-menu-item"><a href="section-15.html"><span class="kss-ref">15</span><span class="kss-name">Navigation</span></a></li>
-                            <li class="kss-menu-item"><a href="section-16.html"><span class="kss-ref">16</span><span class="kss-name">Tree</span></a></li>
-                            <li class="kss-menu-item"><a href="section-17.html"><span class="kss-ref">17</span><span class="kss-name">List group</span></a></li>
-                            <li class="kss-menu-item"><a href="section-18.html"><span class="kss-ref">18</span><span class="kss-name">Progress bar</span></a></li>
-                        </ul>
-                    </nav>
-
-                </div>
-            </div>
-            <div class="kss-content">
-
-                <article class="kss-article">
-                    <section id="section-0" class="kss-section kss-overview">
-                         <h1 id="prestashop-ui-kit">PrestaShop UI Kit</h1>
-<h2 id="download">Download</h2>
-<p><strong><a href="https://github.com/PrestaShop/prestashop-ui-kit">prestashop-ui-kit</a></strong> [zip] or</p>
-<pre><code>git clone https://github.com/PrestaShop/prestashop-ui-kit
-</code></pre><h2 id="installation">Installation</h2>
-<p>You can install by just typing <code>npm install</code>.</p>
-<pre><code>npm install
-</code></pre><h2 id="get-started">Get Started</h2>
-<p>Include the dependencies: jQuery and Bootstrap PrestaShop UI Kit + Javascript.</p>
-<pre><code>[...]
-&lt;link href=&quot;dist/css/prestashop-ui-kit.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;dist/docs/public/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;dist/js/prestashop-ui-kit.js&quot;&gt;&lt;/script&gt;
-[...]
-</code></pre><p>Github devDependencies</p>
-<p><strong><a href="https://github.com/PrestaShop/pstagger">pstagger</a></strong>
-<strong><a href="https://github.com/ksylvest/jquery-growl.git">jquery-growl</a></strong></p>
-<h2 id="about-prestashop">About PrestaShop</h2>
-<p>PrestaShop is a free and Open Source e-commerce web application, committed to providing the best shopping cart experience for both merchants and customers. It is written in PHP, is highly customizable, supports all the major payment services, is translated in many languages and localized for many countries, has a fully responsive design (both front and back office), etc. See all the available features.</p>
-<h2 id="license">License</h2>
-<p>This template is under the <a href="">MIT License</a>.</p>
-
-                    </section>
-                </article>
-                <footer class="kss-footer">
-                </footer>
-            </div>
-        </div>
-    </body>
-</html>
+            
+        
+            
+        
+            
+              window['DOCS_MODE'] = false;</script><script src="runtime~main.870e8ee0658e83d05c6b.bundle.js"></script><script src="vendors~main.c5ce5eadf2b48b1eefc8.bundle.js"></script><script src="main.c653e5fb5a9a3cdabee8.bundle.js"></script></body></html>

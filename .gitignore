@@ -10,3 +10,6 @@ node_modules/*
 .projectile
 .tern-port
 TAGS
+
+# Storybook
+storybook-static/*

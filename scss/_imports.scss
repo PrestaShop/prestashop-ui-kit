@@ -1,7 +1,7 @@
 // Open Sans
 /* stylelint-disable */
 
-$FontPathOpenSans: "~prestakit/node_modules/open-sans-fonts/open-sans";
+$FontPathOpenSans: "~open-sans-fonts/open-sans";
 
 @mixin setFont() {
   @if $local-font {

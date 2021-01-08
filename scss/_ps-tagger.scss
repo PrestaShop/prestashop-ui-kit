@@ -10,7 +10,8 @@
   position: relative;
   display: none;
   width: 100%;
-  padding: $badge-padding-y $badge-padding-x;
+  height: 100%;
+  padding: ($badge-padding-y * 1.75) $badge-padding-x;
   padding-bottom: 0;
   background: $white;
   border: solid $border-width $border-color;

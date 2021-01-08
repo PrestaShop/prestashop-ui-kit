@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import badgesContent from './badges.html'
+
+<Meta title="Badges" />
+
+# Badges
+
+Badges are used to display important content and order statuses.
+
+<Canvas>
+  <Story name="Badges" height="100px" parameters={{ docs: { source: { code: badgesContent } } }}>
+    {() => badgesContent}
+  </Story>
+</Canvas>
+

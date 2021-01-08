@@ -25,7 +25,7 @@ $component-name: select2;
       padding: 0;
 
       &__option {
-        &:hover {
+        &:not([role="group"]):hover {
           color: $primary;
           background: rgba($primary, .1);
         }

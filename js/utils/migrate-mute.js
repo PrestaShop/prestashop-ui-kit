@@ -24,7 +24,11 @@
  */
 
 (function () {
-  if (typeof jQuery.migrateMute === 'undefined' && typeof window.prestashop.debug !== 'undefined') {
+  if (
+    typeof jQuery.migrateMute === 'undefined' &&
+    typeof window.prestashop !== 'undefined' &&
+    typeof window.prestashop.debug !== 'undefined'
+  ) {
     jQuery.migrateMute = !window.prestashop.debug;
   }
 })();

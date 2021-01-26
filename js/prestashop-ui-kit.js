@@ -173,13 +173,26 @@ $.fn.pstooltip = $.fn.tooltip;
         PSNumbers('.ps-number-input');
       });
     },
-
     initSelects: function () {
       initSelect2();
     },
-
     initToolTips: function () {
       initToolTips();
+    },
+    initToggleButtons: function () {
+      initToggleButtons();
+    },
+    initAlerts: function () {
+      initAlerts();
+    },
+    initSearchBar: function () {
+      initSearchBar();
+    },
+    initInputFile: function () {
+      initInputFile();
+    },
+    initNumbers: function () {
+      PSNumbers('.ps-number-input');
     },
   };
 

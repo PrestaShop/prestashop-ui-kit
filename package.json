@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/PrestaShop/prestashop-ui-kit.git"
   },
-  "keywords": ["prestashop", "uikit"],
+  "keywords": [
+    "prestashop",
+    "uikit"
+  ],
   "scripts": {
     "watch": "webpack -w --progress --debug",
     "build": "NODE_ENV=production webpack --progress --debug",

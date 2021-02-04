@@ -1,3 +1,5 @@
+import './utils/migrate-mute';
+import 'jquery-migrate';
 import 'tether';
 import 'bootstrap';
 import 'select2';

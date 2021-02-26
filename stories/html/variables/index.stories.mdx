@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import basics from '../../../scss/export/_basic.scss';
+import principal from '../../../scss/export/_principal.scss';
+
+<Meta title="SASS Variables" />
+
+# Principals variables
+
+<Canvas>
+  <Story name="Principal colors">
+    {() => {
+      let principalContent = '';
+      Object.keys(principal).forEach(colorName => {
+        principalContent += `<div>${colorName} : <span style="background-color: ${principal[colorName]}; height: 15px; width: 15px; display: inline-block;border-radius: 2px;"></span> ${principal[colorName]}</div>`;
+      })
+      return principalContent;
+    }}
+  </Story>
+</Canvas>
+
+# Basic variables
+
+<Canvas>
+  <Story name="Basic colors">
+    {() => {
+      let principalContent = '';
+      Object.keys(basics).forEach(colorName => {
+        principalContent += `<div>${colorName} : <span style="background-color: ${basics[colorName]}; height: 15px; width: 15px; display: inline-block;border-radius: 2px;"></span> ${basics[colorName]}</div>`;
+      })
+      return principalContent;
+    }}
+  </Story>
+</Canvas>

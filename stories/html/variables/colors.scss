@@ -1,17 +1,18 @@
+// stylelint-disable
 .color {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 8px;
-  border-radius: 4px;
-  background: darken(white, 4%);
   padding: 8px;
-  border: 1px solid darken(white, 10%);
+  margin: 8px;
+  background: darken(#fff, 4%);
+  border: 1px solid darken(#fff, 10%);
+  border-radius: 4px;
 
   &-box {
-    height: 15px;
-    width: 15px;
     display: inline-block;
+    width: 15px;
+    height: 15px;
     border-radius: 2px;
   }
 
@@ -22,8 +23,8 @@
   }
 
   &-name {
-    font-size: 14px;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 600;
   }
 }

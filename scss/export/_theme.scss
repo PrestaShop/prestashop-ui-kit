@@ -1,0 +1,20 @@
+/* stylelint-disable */
+@import "../application";
+
+:export {
+  @each $name, $value in $theme-colors-icons {
+    theme-colors-icons-#{$name}: $value;
+  }
+
+  @each $name, $value in $theme-colors-hover {
+    theme-colors-hover-#{$name}: $value;
+  }
+
+  @each $name, $value in $theme-colors-active {
+    theme-colors-active-#{$name}: $value;
+  }
+
+  @each $name, $value in $theme-colors-background {
+    theme-colors-background-#{$name}: $value;
+  }
+}

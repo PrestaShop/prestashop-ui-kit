@@ -1,0 +1,29 @@
+.color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 8px;
+  border-radius: 4px;
+  background: darken(white, 4%);
+  padding: 8px;
+  border: 1px solid darken(white, 10%);
+
+  &-box {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &-name {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}

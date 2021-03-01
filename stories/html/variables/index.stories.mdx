@@ -15,7 +15,7 @@ import renderContent from './functions';
 # Principals variables
 
 <Canvas>
-  <Story name="Principal colors">
+  <Story name="Principal colors" parameters={{ docs: { source: { code: JSON.stringify(principal) } } }}>
     {() => renderContent(principal, true)}
   </Story>
 </Canvas>
@@ -23,7 +23,7 @@ import renderContent from './functions';
 # Principals variants
 
 <Canvas>
-  <Story name="Principal variants">
+  <Story name="Principal variants" parameters={{ docs: { source: { code: JSON.stringify(principalVariations) } } }}>
     {() => renderContent(principalVariations, true)}
   </Story>
 </Canvas>
@@ -31,7 +31,7 @@ import renderContent from './functions';
 # Basic variables
 
 <Canvas>
-  <Story name="Basic colors">
+  <Story name="Basic colors" parameters={{ docs: { source: { code: JSON.stringify(basics) } } }}>
     {() => renderContent(basics, true)}
   </Story>
 </Canvas>
@@ -41,7 +41,7 @@ import renderContent from './functions';
 These one are inside a map object (alerts-background-colors and alerts-second-colors)
 
 <Canvas>
-  <Story name="Alerts colors">
+  <Story name="Alerts colors" parameters={{ docs: { source: { code: JSON.stringify(alerts) } } }}>
     {() => renderContent(alerts, true)}
   </Story>
 </Canvas>
@@ -51,7 +51,7 @@ These one are inside a map object (alerts-background-colors and alerts-second-co
 These one are inside a map object
 
 <Canvas>
-  <Story name="Theme variables">
+  <Story name="Theme variables" parameters={{ docs: { source: { code: JSON.stringify(theme) } } }}>
     {() => renderContent(theme, true)}
   </Story>
 </Canvas>
@@ -61,7 +61,7 @@ These one are inside a map object
 These one are inside a map object (1rem = 16px)
 
 <Canvas>
-  <Story name="Spacers variables">
+  <Story name="Spacers variables" parameters={{ docs: { source: { code: JSON.stringify(spacers) } } }}>
     {() => renderContent(spacers)}
   </Story>
 </Canvas>
@@ -71,7 +71,7 @@ These one are inside a map object (1rem = 16px)
 These one are inside a map object
 
 <Canvas>
-  <Story name="Responsive breakpoints">
+  <Story name="Responsive breakpoints" parameters={{ docs: { source: { code: JSON.stringify(breakpoints) } } }}>
     {() => renderContent(breakpoints)}
   </Story>
 </Canvas>
@@ -81,7 +81,7 @@ These one are inside a map object
 These one are inside a map object
 
 <Canvas>
-  <Story name="Grid max widths">
+  <Story name="Grid max widths" parameters={{ docs: { source: { code: JSON.stringify(gridWidths) } } }}>
     {() => renderContent(gridWidths)}
   </Story>
 </Canvas>
@@ -89,7 +89,7 @@ These one are inside a map object
 # Fonts variables
 
 <Canvas>
-  <Story name="Fonts variables">
+  <Story name="Fonts variables" parameters={{ docs: { source: { code: JSON.stringify(fonts) } } }}>
     {() => renderContent(fonts)}
   </Story>
 </Canvas>

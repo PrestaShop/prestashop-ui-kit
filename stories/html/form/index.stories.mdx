@@ -119,7 +119,12 @@ import loginContent from './login-example.html'
 
 <Canvas>
   <Story name="Selects" parameters={{ docs: { source: { code: selectContent } } }}>
-    {() => selectContent}
+    {() => {
+      useEffect(() => {
+        window.prestaShopUiKit.init();
+      });
+      return selectContent;
+    }}
   </Story>
 </Canvas>
 

@@ -5,3 +5,7 @@
 body {
   background-color: transparent;
 }
+
+.os-host {
+  color: red;
+}

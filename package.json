@@ -15,7 +15,7 @@
     "build": "NODE_ENV=production webpack --progress --debug",
     "scss-lint": "stylelint \"**/*.scss\"",
     "scss-fix": "stylelint \"**/*.scss\" --fix",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook"
   },
   "author": "PrestaShop",
@@ -39,6 +39,7 @@
     "@storybook/addon-essentials": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
     "@storybook/html": "^6.2.8",
+    "@storybook/theming": "^6.2.8",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-preset-env": "^1.6.1",

@@ -4,6 +4,7 @@ $component-name: modal;
 .#{$component-name} {
   .#{$component-name}-dialog {
     top: 50%;
+    max-height: 100vh;
   }
 
   &.show {

@@ -1,3 +1,5 @@
+import './utils/migrate-mute';
+import 'jquery-migrate';
 import 'tether';
 import 'bootstrap';
 import 'select2';
@@ -171,13 +173,26 @@ $.fn.pstooltip = $.fn.tooltip;
         PSNumbers('.ps-number-input');
       });
     },
-
     initSelects: function () {
       initSelect2();
     },
-
     initToolTips: function () {
       initToolTips();
+    },
+    initToggleButtons: function () {
+      initToggleButtons();
+    },
+    initAlerts: function () {
+      initAlerts();
+    },
+    initSearchBar: function () {
+      initSearchBar();
+    },
+    initInputFile: function () {
+      initInputFile();
+    },
+    initNumbers: function () {
+      PSNumbers('.ps-number-input');
     },
   };
 

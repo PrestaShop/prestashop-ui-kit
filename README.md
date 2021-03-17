@@ -54,7 +54,7 @@ Open up `admin-dev/themes/new-theme/package.json` of your PrestaShop install, an
 ```js
 {
   // ...
-  prestakit: "1.2.0"
+  prestakit: "1.2.2";
   // ...
 }
 ```
@@ -63,7 +63,7 @@ Change the version so it looks like this:
 
 ```js
 {
-  prestakit: "/path/to/your/local/ui-kit"
+  prestakit: "/path/to/your/local/ui-kit";
 }
 ```
 

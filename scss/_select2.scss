@@ -30,8 +30,8 @@ $component-name: select2;
           background: rgba($primary, .1);
         }
 
-        &:focus,
-        &:active {
+        &:not([role="group"]):focus,
+        &:not([role="group"]):active {
           color: #fff;
           background: $primary;
         }

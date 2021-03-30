@@ -27,8 +27,10 @@
   if (
     typeof jQuery.migrateMute === 'undefined' &&
     typeof window.prestashop !== 'undefined' &&
-    typeof window.prestashop.debug !== 'undefined'
+    typeof window.prestashop.debug !== 'undefined' &&
+    typeof devMode !== 'undefined'
   ) {
     jQuery.migrateMute = !window.prestashop.debug;
+    jQuery.migrateTrace = devMode;
   }
 })();

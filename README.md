@@ -54,7 +54,7 @@ Open up `admin-dev/themes/new-theme/package.json` of your PrestaShop install, an
 ```js
 {
   // ...
-  prestakit: "1.2.2";
+  prestakit: "1.2.3";
   // ...
 }
 ```

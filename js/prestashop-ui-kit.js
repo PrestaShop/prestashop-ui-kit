@@ -98,25 +98,16 @@ $.fn.pstooltip = $.fn.tooltip;
           $this.html('<b>Read More</b>');
         }
         $this.css('cursor', 'pointer');
-        $this
-          .parent()
-          .after('<div class="' + actualClass + ' alert-down" role="alert"><p class="alert-down-text"></p></div>');
-        jQuery('.alert-down-text').html(actualHtml);
+        $this.parent().append('<div class="alert-down" role="alert"><p class="alert-down-text"></p></div>');
+        $this.parent().find('.alert-down').slideUp(0);
+        $this.parent().find('.alert-down-text').html(actualHtml);
       }
     });
 
     $('.alert-drop').each(function () {
       var $this = jQuery(this);
       $this.click(function () {
-        var radius = $this.css('border-radius');
-        if ($this.next('div').is(':hidden')) {
-          $this.css('border-radius', '0');
-          $this.css('border-bottom', 'none');
-        } else {
-          $this.css('border-radius', radius);
-          $this.css('border-bottom', '');
-        }
-        $this.next('div').slideToggle(400);
+        $('.alert-down', $this).slideToggle(400);
       });
     });
   };

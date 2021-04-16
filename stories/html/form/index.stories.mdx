@@ -6,6 +6,7 @@ import numberContent from './number.html'
 import disabledContent from './disabled.html'
 import helperContent from './helper.html'
 import checkboxesContent from './checkboxes.html'
+import radiosContent from './radios.html'
 import stylisedCheckboxesContent from './stylised-checkboxes.html'
 import switchContent from './switch.html'
 import selectContent from './selects.html'
@@ -99,6 +100,14 @@ import loginContent from './login-example.html'
 <Canvas>
   <Story name="Stylised checkboxes" parameters={{ docs: { source: { code: stylisedCheckboxesContent } } }}>
     {() => stylisedCheckboxesContent}
+  </Story>
+</Canvas>
+
+# Radio buttons
+
+<Canvas>
+  <Story name="Radio buttons" parameters={{ docs: { source: { code: radiosContent } } }}>
+    {() => radiosContent}
   </Story>
 </Canvas>
 

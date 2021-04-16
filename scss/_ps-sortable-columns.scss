@@ -1,9 +1,10 @@
-$icon-margin-left: .5rem !default;
+$icon-margin-left: 0.5rem !default;
 
 .ps-sortable-column {
 
   display: flex;
   flex-wrap: nowrap;
+
   [role="columnheader"] {
     text-overflow: ellipsis;
   }
@@ -12,12 +13,12 @@ $icon-margin-left: .5rem !default;
   .ps-sort {
     @include use-material-icon();
     align-self: flex-end;
-    margin-bottom: .125rem;
+    margin-bottom: 0.125rem;
     margin-left: $icon-margin-left;
     font-size: 1rem;
     color: $gray-500;
     opacity: 0;
-    @include transition(all .2s);
+    @include transition(all 0.2s);
     transform: rotate(90deg);
 
     &::before {

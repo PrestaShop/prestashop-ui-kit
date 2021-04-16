@@ -60,7 +60,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.18.2",
     "stylelint": "^12.0.0",
-    "stylelint-config-prestashop": "^1.0.2",
+    "stylelint-config-prestashop": "^1.0.5",
     "tether": "^1.4.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.0",

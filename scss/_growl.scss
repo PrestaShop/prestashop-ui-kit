@@ -9,10 +9,10 @@ $component-name: growl;
   justify-content: space-between;
   padding-right: 4rem;
   color: $gray-700;
-  box-shadow: 0 8px 16px 0 rgba(#000, .1);
+  box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
   opacity: 1;
   animation-name: fromLeft;
-  animation-duration: .25s;
+  animation-duration: 0.25s;
 
   &.#{$component-name}-medium {
     width: auto;
@@ -29,23 +29,23 @@ $component-name: growl;
     font-size: 1.6rem;
     font-weight: 300;
     transform: translateY(-60%);
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
 
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
   & &-title {
     display: none;
     min-width: 100%;
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
     font-weight: 600;
   }
 
   & &-message {
     flex-grow: 1;
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   &.#{$component-name}-default {

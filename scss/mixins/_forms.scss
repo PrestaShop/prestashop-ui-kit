@@ -9,7 +9,7 @@
   }
 
   .#{$state}-feedback {
-    margin-top: .3125rem;
+    margin-top: 0.3125rem;
     font-size: $font-size-xs;
     font-weight: $font-weight-bold;
     color: $color;
@@ -38,7 +38,7 @@
     background: $white;
     border: 2px solid $light-gray;
     @include border-radius($height);
-    @include transition(all .5s);
+    @include transition(all 0.5s);
   }
 
   &{

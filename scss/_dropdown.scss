@@ -1,6 +1,6 @@
 .dropdown-toggle,
 .dropup .dropdown-toggle {
-  padding-right: $input-btn-padding-x * .75;
+  padding-right: $input-btn-padding-x * 0.75;
 
   &[aria-expanded="true"]:not(.no-rotate) {
     &::after {
@@ -16,7 +16,7 @@
     line-height: 0;
     vertical-align: middle;
     border: none;
-    @include transition(.15s ease-out);
+    @include transition(0.15s ease-out);
   }
 }
 
@@ -32,7 +32,7 @@
 // add a bigger margin between the text and the dropdown icon
 .dropdown-toggle:not(.dropdown-toggle-split) {
   &::after {
-    margin-left: .625rem;
+    margin-left: 0.625rem;
   }
 }
 
@@ -41,13 +41,13 @@
   min-width: 8.625rem;
   padding: 1px 0 0;
   padding-bottom: 1px;
-  margin: .125rem -.1px 0;
+  margin: 0.125rem -0.1px 0;
   color: #576c72;
   border: 1px solid $gray-450;
-  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
 
   .material-icons {
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     font-size: 1.125rem;
     color: $medium-gray;
     vertical-align: text-bottom;
@@ -55,7 +55,7 @@
 
   > .dropdown-item {
     /* stylelint-disable */
-    padding: .438rem .938rem{
+    padding: 0.438rem 0.938rem{
       right: 1rem;
     }
     /* stylelint-enable */
@@ -84,7 +84,7 @@
   }
 
   > .dropdown-divider {
-    margin: .313rem 0;
+    margin: 0.313rem 0;
   }
 }
 
@@ -97,7 +97,7 @@
       > .dropdown-item {
         &:hover {
           color: $value;
-          background-color: rgba($value, .1);
+          background-color: rgba($value, 0.1);
         }
 
         &:not([disabled]):not(.disabled):active,

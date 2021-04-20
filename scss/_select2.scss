@@ -27,7 +27,7 @@ $component-name: select2;
       &__option {
         &:not([role="group"]):hover {
           color: $primary;
-          background: rgba($primary, .1);
+          background: rgba($primary, 0.1);
         }
 
         &:not([role="group"]):focus,
@@ -48,7 +48,7 @@ $component-name: select2;
 
       .#{$component-name}-selection__arrow {
         right: 15px;
-        margin-right: .625rem;
+        margin-right: 0.625rem;
 
         b {
           width: auto;
@@ -65,7 +65,7 @@ $component-name: select2;
             color: $gray-600;
             vertical-align: middle;
             border: none;
-            @include transition(.15s ease-out);
+            @include transition(0.15s ease-out);
           }
         }
       }

@@ -2,17 +2,20 @@ $color-icons: #6c868e !default;
 
 .toolbar-button {
   display: inline-block;
-  margin: 0 .3125rem;
+  margin: 0 0.3125rem;
   color: $color-icons;
   text-align: center;
+
   > .material-icons {
     font-size: 1.5rem;
   }
+
   > .title {
     display: block;
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: $color-icons;
   }
+
   &:hover {
     text-decoration: none;
   }

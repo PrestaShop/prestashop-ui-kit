@@ -9,10 +9,10 @@
     z-index: 1;
     width: 56px;
     height: 56px;
-    padding: .5rem;
+    padding: 0.5rem;
     font-size: 18px;
     @include border-radius(100%);
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
 
     &:not(.collapsed) {
       background: $red;
@@ -24,7 +24,7 @@
     }
 
     i {
-      @include transition(.25s ease-out);
+      @include transition(0.25s ease-out);
     }
   }
 
@@ -32,7 +32,7 @@
     position: absolute;
     right: 0;
     bottom: calc(100% + 1rem);
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
 
     &.collapsing {
       .btn-floating-menu {
@@ -51,7 +51,7 @@
     align-items: flex-start;
     width: 20rem;
     overflow: hidden;
-    @include border-radius(.5rem);
+    @include border-radius(0.5rem);
 
     a,
     button {
@@ -68,8 +68,8 @@
       height: 100%;
       content: "";
       background-color: $white;
-      @include border-radius(.5rem);
-      @include transition(.25s ease-out);
+      @include border-radius(0.5rem);
+      @include transition(0.25s ease-out);
     }
 
     &::after {
@@ -80,9 +80,9 @@
       width: 100vw;
       height: 100vh;
       content: "";
-      background: rgba(0, 0, 0, .8);
+      background: rgba(0, 0, 0, 0.8);
       opacity: 1;
-      @include transition(.25s ease-out);
+      @include transition(0.25s ease-out);
     }
   }
 
@@ -91,10 +91,10 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: .5rem .75rem;
+    padding: 0.5rem 0.75rem;
     font-weight: 500;
     color: $gray-750;
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
     @include border-radius(0);
 
     .material-icon {
@@ -102,11 +102,11 @@
     }
 
     &:first-of-type {
-      @include border-top-radius(.5rem);
+      @include border-top-radius(0.5rem);
     }
 
     &:last-of-type {
-      @include border-bottom-radius(.5rem);
+      @include border-bottom-radius(0.5rem);
     }
 
     &:hover {

@@ -3,10 +3,10 @@ $component-name: ps-card;
 
 .#{$component-name} {
   padding: 10px;
-  @include transition(.25s ease-out);
+  @include transition(0.25s ease-out);
 
   &:hover {
-    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, .1));
+    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, 0.1));
   }
 
   .list-group-item {
@@ -32,7 +32,7 @@ $component-name: ps-card;
   }
 
   & &-title {
-    margin: .625rem 0;
+    margin: 0.625rem 0;
     font-size: 14px;
     font-weight: 700;
     color: $gray-750;

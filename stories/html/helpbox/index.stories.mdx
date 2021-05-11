@@ -1,0 +1,19 @@
+import { useEffect } from '@storybook/client-api';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import helpboxContent from './helpbox.html'
+
+<Meta title="Helpbox" />
+
+# Helpbox
+
+<Canvas>
+  <Story name="Helpbox" parameters={{ docs: { source: { code: helpboxContent } } }}>
+    {() => {
+      useEffect(() => {
+        window.prestaShopUiKit.init();
+      });
+      return helpboxContent;
+    }}
+  </Story>
+</Canvas>
+

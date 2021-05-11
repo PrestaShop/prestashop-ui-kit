@@ -83,45 +83,45 @@ $btn-danger-bg: $brand-danger !default;
 $help-box-hover: #66cee3;
 
 $theme-colors: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'success': $success,
-  'info': $info,
-  'warning': $warning,
-  'danger': $danger,
-  'light': $light,
-  'dark': $dark,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
 );
 
 $alerts-background-colors: (
-  'success': #cbf2d4,
-  'info': #beeaf3,
-  'warning': #fffbd3,
-  'danger': #fbc6c3,
+  "success": #cbf2d4,
+  "info": #beeaf3,
+  "warning": #fffbd3,
+  "danger": #fbc6c3,
 );
 
 $alerts-second-colors: (
-  'success': #53d572,
-  'info': #25b9d7,
-  'warning': #fab000,
-  'danger': #f44336,
+  "success": #53d572,
+  "info": #25b9d7,
+  "warning": #fab000,
+  "danger": #f44336,
 );
 
 $theme-alerts-icons: (
-  success: '\E5CA',
-  info: '\e88e',
-  warning: '\E002',
-  danger: '\e000',
+  success: "\E5CA",
+  info: "\e88e",
+  warning: "\E002",
+  danger: "\e000",
 );
 
 $theme-colors-icons: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'success': $success,
-  'info': $info,
-  'warning': #fab000,
-  'danger': $danger,
-  'light': $light,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": #fab000,
+  "danger": $danger,
+  "light": $light,
 );
 
 $theme-colors-hover: (
@@ -140,11 +140,11 @@ $theme-colors-active: (
   primary: $primary-active,
   secondary: $secondary-active,
   success: #5a9166,
-  info: darken(map-get($theme-colors, 'info'), 10%),
-  warning: darken(map-get($theme-colors, 'warning'), 10%),
+  info: darken(map-get($theme-colors, "info"), 10%),
+  warning: darken(map-get($theme-colors, "warning"), 10%),
   danger: #c3362b,
-  light: darken(map-get($theme-colors, 'light'), 10%),
-  dark: darken(map-get($theme-colors, 'dark'), 10%),
+  light: darken(map-get($theme-colors, "light"), 10%),
+  dark: darken(map-get($theme-colors, "dark"), 10%),
   default: $primary,
 );
 
@@ -160,14 +160,14 @@ $theme-colors-background: (
 );
 
 $theme-colors-shadow: (
-  primary: theme-color('primary'),
+  primary: theme-color("primary"),
   secondary: $black,
-  success: theme-color('success'),
-  info: theme-color('info'),
-  warning: theme-color('warning'),
-  danger: theme-color('danger'),
-  light: theme-color('light'),
-  dark: theme-color('dark'),
+  success: theme-color("success"),
+  info: theme-color("info"),
+  warning: theme-color("warning"),
+  danger: theme-color("danger"),
+  light: theme-color("light"),
+  dark: theme-color("dark"),
 );
 
 // Options
@@ -204,7 +204,7 @@ $body-bg: $white !default;
 $body-color: $dark-gray;
 
 // Links
-$link-hover-color: theme-color('primary') !default;
+$link-hover-color: theme-color("primary") !default;
 $link-hover-decoration: underline;
 
 // Paragraphs
@@ -219,7 +219,7 @@ $grid-breakpoints: (
   xl: 1300px,
   xxl: 1600px // PS custom,
 );
-@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
 // Grid containers
@@ -229,7 +229,7 @@ $container-max-widths: (
   lg: 972px,
   xl: 1240px,
 );
-@include _assert-ascending($container-max-widths, '$container-max-widths');
+@include _assert-ascending($container-max-widths, "$container-max-widths");
 
 // Grid columns
 //$grid-columns:                12 !default;
@@ -256,7 +256,7 @@ $caret-width: 0.25rem;
 //$transition-collapse:         height .35s ease !default;
 
 // Fonts
-$font-family-sans-serif: 'Open Sans', helvetica, arial, sans-serif;
+$font-family-sans-serif: "Open Sans", helvetica, arial, sans-serif;
 //$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //$font-family-base:            $font-family-sans-serif !default;
 
@@ -325,8 +325,8 @@ $table-cell-padding-sm: 0.25rem;
 
 //$table-bg:                    transparent !default;
 $table-accent-bg: $background-color;
-$table-hover-bg: theme-color-hover('primary');
-$table-active-bg: theme-color-hover('primary');
+$table-hover-bg: theme-color-hover("primary");
+$table-active-bg: theme-color-hover("primary");
 
 //$table-border-width:          $border-width !default;
 //$table-border-color:          $gray-300 !default;
@@ -336,7 +336,7 @@ $table-head-color: $body-color;
 
 $table-dark-bg: $body-color;
 $table-dark-accent-bg: $extra-dark-gray;
-$table-dark-hover-bg: theme-color-hover('primary');
+$table-dark-hover-bg: theme-color-hover("primary");
 $table-dark-border-color: $medium-gray;
 //$table-dark-color:            $body-bg !default;
 
@@ -417,7 +417,7 @@ $input-box-shadow: none;
 //$input-border-radius-sm:                $border-radius-sm !default;
 
 //$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color: theme-color-hover('primary');
+$input-focus-border-color: theme-color-hover("primary");
 //$input-focus-color:                     $input-color !default;
 //$input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow: none;
@@ -534,9 +534,9 @@ $cursor-disabled: not-allowed; // PS custom
 // Form validation
 //$form-feedback-margin-top:          $form-text-margin-top !default;
 //$form-feedback-font-size:           $small-font-size !default;
-$form-feedback-valid-color: theme-color('success');
-$form-feedback-invalid-color: theme-color('danger');
-$form-feedback-warning-color: theme-color('warning'); // PS custom
+$form-feedback-valid-color: theme-color("success");
+$form-feedback-invalid-color: theme-color("danger");
+$form-feedback-warning-color: theme-color("warning"); // PS custom
 
 // Dropdowns
 //$dropdown-min-width:                10rem !default;
@@ -551,7 +551,7 @@ $dropdown-divider-bg: $light-gray;
 //$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
 
 $dropdown-link-color: $medium-gray;
-$dropdown-link-hover-color: theme-color('primary');
+$dropdown-link-hover-color: theme-color("primary");
 $dropdown-link-hover-bg: $white;
 
 //$dropdown-link-active-color:        $component-active-color !default;
@@ -572,10 +572,10 @@ $nav-link-disabled-color: $light-gray;
 $nav-tabs-border-color: $white;
 //$nav-tabs-border-width:             $border-width !default;
 //$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color: theme-color('primary');
+$nav-tabs-link-hover-border-color: theme-color("primary");
 $nav-tabs-link-active-color: $body-color;
 $nav-tabs-link-active-bg: $body-bg;
-$nav-tabs-link-active-border-color: theme-color('primary');
+$nav-tabs-link-active-border-color: theme-color("primary");
 
 $nav-pills-link-hover-border-color: $nav-tabs-link-hover-border-color;
 $nav-pills-link-active-color: $nav-tabs-link-active-color;
@@ -637,7 +637,7 @@ $pagination-hover-color: $pagination-color;
 $pagination-hover-bg: $pagination-bg;
 $pagination-hover-border-color: $pagination-border-color;
 
-$pagination-active-color: theme-color('primary');
+$pagination-active-color: theme-color("primary");
 $pagination-active-bg: $pagination-bg;
 $pagination-active-border-color: $pagination-border-color;
 
@@ -781,9 +781,9 @@ $list-group-border-color: $light-gray;
 $list-group-item-padding-y: $input-padding-y;
 $list-group-item-padding-x: $input-padding-x;
 
-$list-group-hover-bg: theme-color-hover('primary');
+$list-group-hover-bg: theme-color-hover("primary");
 //$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg: theme-color-hover('primary');
+$list-group-active-bg: theme-color-hover("primary");
 //$list-group-active-border-color:    $list-group-active-bg !default;
 
 $list-group-disabled-color: $light-gray;
@@ -817,7 +817,7 @@ $breadcrumb-margin-bottom: 0;
 $breadcrumb-bg: none;
 $breadcrumb-divider-color: $dark-gray;
 $breadcrumb-active-color: $extra-dark-gray;
-$breadcrumb-divider: '/';
+$breadcrumb-divider: "/";
 
 // Carousel
 //$carousel-control-color:            $white !default;

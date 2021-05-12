@@ -80,6 +80,8 @@ $btn-success-bg: $brand-success !default;
 $btn-warning-bg: $brand-warning !default;
 $btn-danger-bg: $brand-danger !default;
 
+$help-box-hover: #66cee3;
+
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -88,28 +90,28 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark
+  "dark": $dark,
 );
 
 $alerts-background-colors: (
   "success": #cbf2d4,
   "info": #beeaf3,
   "warning": #fffbd3,
-  "danger": #fbc6c3
+  "danger": #fbc6c3,
 );
 
 $alerts-second-colors: (
   "success": #53d572,
   "info": #25b9d7,
   "warning": #fab000,
-  "danger": #f44336
+  "danger": #f44336,
 );
 
 $theme-alerts-icons: (
   success: "\E5CA",
   info: "\e88e",
   warning: "\E002",
-  danger: "\e000"
+  danger: "\e000",
 );
 
 $theme-colors-icons: (
@@ -119,7 +121,7 @@ $theme-colors-icons: (
   "info": $info,
   "warning": #fab000,
   "danger": $danger,
-  "light": $light
+  "light": $light,
 );
 
 $theme-colors-hover: (
@@ -131,7 +133,7 @@ $theme-colors-hover: (
   danger: #e76d7a,
   light: $gray-800,
   dark: $gray-100,
-  default: $light-blue
+  default: $light-blue,
 );
 
 $theme-colors-active: (
@@ -143,7 +145,7 @@ $theme-colors-active: (
   danger: #c3362b,
   light: darken(map-get($theme-colors, "light"), 10%),
   dark: darken(map-get($theme-colors, "dark"), 10%),
-  default: $primary
+  default: $primary,
 );
 
 $theme-colors-background: (
@@ -154,7 +156,7 @@ $theme-colors-background: (
   warning: #fffbd3,
   danger: #fde1e1,
   light: $gray-200,
-  dark: $gray-700
+  dark: $gray-700,
 );
 
 $theme-colors-shadow: (
@@ -165,7 +167,7 @@ $theme-colors-shadow: (
   warning: theme-color("warning"),
   danger: theme-color("danger"),
   light: theme-color("light"),
-  dark: theme-color("dark")
+  dark: theme-color("dark"),
 );
 
 // Options
@@ -183,18 +185,18 @@ $spacer: 1.875rem;
 $spacers: (
   0: 0,
   1: (
-    $spacer / 6
+    $spacer / 6,
   ),
   2: (
-    $spacer / 3
+    $spacer / 3,
   ),
   3: (
-    $spacer / 2
+    $spacer / 2,
   ),
   4: $spacer,
   5: (
-    $spacer * 2
-  )
+    $spacer * 2,
+  ),
 );
 
 // Body
@@ -215,7 +217,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1300px,
-  xxl: 1600px // PS custom
+  xxl: 1600px // PS custom,
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
@@ -225,7 +227,7 @@ $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 972px,
-  xl: 1240px
+  xl: 1240px,
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 

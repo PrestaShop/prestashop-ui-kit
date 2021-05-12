@@ -18,5 +18,13 @@ $component-name: help-box;
     font-size: 19px;
     color: $primary;
     content: "\e88e";
+    @include transition(0.25s ease-out);
+  }
+
+  &:hover {
+    i,
+    &::after {
+      color: $help-box-hover;
+    }
   }
 }

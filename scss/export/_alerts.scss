@@ -1,0 +1,12 @@
+/* stylelint-disable */
+@import "../application";
+
+:export {
+  @each $name, $value in $alerts-background-colors {
+    #{$name}-background: $value;
+  }
+
+  @each $name, $value in $alerts-second-colors {
+    #{$name}-second: $value;
+  }
+}

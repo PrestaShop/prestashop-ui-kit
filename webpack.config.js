@@ -20,7 +20,9 @@ let config = {
         test: /\.js/,
         loader: 'babel-loader',
         options: {
-          presets: [['@babel/preset-env', {useBuiltIns: 'entry', modules: false}]],
+          presets: [
+            ['@babel/preset-env', { useBuiltIns: 'entry', modules: false }],
+          ],
         },
       },
       {
@@ -51,7 +53,9 @@ let config = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [path.resolve(__dirname, './node_modules')],
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, './node_modules')],
+              },
               sourceMap: true,
             },
           },
@@ -59,7 +63,12 @@ let config = {
       },
       {
         test: /\.css$/,
-        use: [{loader: MiniCssExtractPlugin.loader}, 'style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ],
       },
       {
         test: /.(gif|png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,

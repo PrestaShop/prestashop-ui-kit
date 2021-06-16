@@ -7,7 +7,7 @@ $component-name: alert !default;
   background-color: $white;
   @include border-radius(8px);
 
-  a {
+  a:not(.btn) {
     font-weight: 600;
     color: $gray-700;
     text-decoration: underline;

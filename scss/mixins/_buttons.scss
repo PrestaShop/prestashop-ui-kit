@@ -25,9 +25,8 @@
   &:focus,
   &.focus {
     color: $white;
-    background-color: $background;
-    border-color: $background;
-    box-shadow: none;
+    background-color: $hover-background;
+    border-color: $hover-border;
   }
 
   // Disabled comes first so active can properly restyle
@@ -65,7 +64,9 @@
 
   &:focus,
   &.focus {
-    box-shadow: none;
+    color: $color-hover;
+    background-color: theme-color-hover($color-name);
+    border-color: theme-color-hover($color-name);
   }
 
   &.disabled,

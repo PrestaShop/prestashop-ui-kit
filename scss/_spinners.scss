@@ -16,7 +16,7 @@
   animation: rotating 2s linear infinite;
 }
 
-@each $color, $value in $theme-colors-hover {
+@each $color, $value in $theme-colors {
   .spinner-#{$color} {
     border-right-color: $value;
     border-bottom-color: $value;

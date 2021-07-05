@@ -7,7 +7,11 @@
   $active-border: darken($border, 10%),
   $color-name: "primary"
 ) {
-  color: $white;
+  @if $color-name == "light" or $color-name == "warning" {
+    color: $gray-800;
+  } @else {
+    color: $white;
+  }
   background-color: $background;
   border-color: $border;
   box-shadow: none;

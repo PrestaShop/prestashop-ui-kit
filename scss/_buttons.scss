@@ -1,6 +1,6 @@
 .btn {
   font-weight: $font-weight-semibold;
-  white-space: nowrap;
+  white-space: normal;
   border-width: $border-width;
   @include border-radius($btn-border-radius);
 

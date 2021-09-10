@@ -29,6 +29,13 @@
     border-color: $hover-border;
   }
 
+  &:focus-visible {
+    // stylelint-disable-next-line
+    outline: 2px auto $outline-color !important;
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
@@ -67,6 +74,20 @@
     color: $color-hover;
     background-color: theme-color-hover($color-name);
     border-color: theme-color-hover($color-name);
+    outline: 2px solid #005FCC;
+    outline-offset: 3px;
+    outline-style: auto;
+
+    &:not(:focus-visible) {
+      outline: 0;
+    }
+  }
+
+  &:focus-visible {
+    // stylelint-disable-next-line
+    outline: 2px auto $outline-color !important;
+    outline-offset: 3px;
+    box-shadow: none;
   }
 
   &.disabled,

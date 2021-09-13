@@ -74,9 +74,9 @@
     color: $color-hover;
     background-color: theme-color-hover($color-name);
     border-color: theme-color-hover($color-name);
-    outline: 2px solid #005FCC;
-    outline-offset: 3px;
+    outline: 2px solid #005fcc;
     outline-style: auto;
+    outline-offset: 3px;
 
     &:not(:focus-visible) {
       outline: 0;

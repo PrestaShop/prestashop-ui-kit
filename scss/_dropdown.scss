@@ -63,6 +63,10 @@
     color: inherit;
     border-bottom: 0;
 
+    &.btn {
+      white-space: nowrap;
+    }
+
     &:hover {
       color: $primary;
       background-color: $light-blue;

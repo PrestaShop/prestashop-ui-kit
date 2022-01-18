@@ -1,7 +1,7 @@
 $md-checkbox-margin: initial !default;
 $md-checkbox-checked-color: $primary !default;
 $md-checkbox-border-color: $gray-450 !default;
-$md-checkbox-disabled-opacity: .5 !default;
+$md-checkbox-disabled-opacity: 0.5 !default;
 
 $md-checkbox-size: 20px !default;
 $md-checkbox-padding: 3px !default;
@@ -46,7 +46,7 @@ $md-checkmark-color: $white !default;
       background: #fff;
       border: 2px solid $md-checkbox-border-color;
       @include border-radius(2px);
-      @include transition(background .3s);
+      @include transition(background 0.3s);
     }
   }
 
@@ -73,6 +73,7 @@ $md-checkmark-color: $white !default;
         background: $md-checkbox-checked-color;
         border: none;
       }
+
       &::after {
         $md-checkmark-size: $md-checkbox-size - 2 * $md-checkbox-padding;
 

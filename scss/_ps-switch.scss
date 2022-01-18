@@ -3,7 +3,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 21px;
+  height: 22px;
 
   &-nolabel {
     label {
@@ -17,34 +17,32 @@
     left: 0;
     z-index: 1;
     padding-left: 2.8rem;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(-50%);
   }
 
   .slide-button {
-    position: relative;
     position: absolute;
-    top: 50%;
+    top: 0;
     z-index: 0;
     display: block;
-    width: 35px;
-    height: 21px;
+    width: 36px;
+    height: 22px;
     background: $gray-450;
-    transform: translateY(-50%);
-    @include transition(.25s ease-out);
+    @include transition(0.25s ease-out);
     @include border-radius(1000px);
 
     &::after {
       position: absolute;
-      top: 50%;
-      left: 0;
-      width: 46%;
-      height: calc(100% - 4px);
+      top: 2px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
       content: "";
       background: $white;
-      transform: translate(2px, -48%);
       @include border-radius(50%);
-      @include transition(.25s ease-out);
+      @include transition(0.25s ease-out);
     }
   }
 
@@ -68,7 +66,7 @@
       cursor: not-allowed;
 
       ~ .slide-button {
-        opacity: .2;
+        opacity: 0.2;
       }
     }
 
@@ -82,7 +80,7 @@
       }
 
       &:disabled ~ label:first-of-type {
-        opacity: .2;
+        opacity: 0.2;
       }
 
       ~ .slide-button {
@@ -96,14 +94,14 @@
       }
 
       &:disabled ~ label:last-of-type {
-        opacity: .2;
+        opacity: 0.2;
       }
 
       ~ .slide-button {
         background: $success;
 
         &::after {
-          transform: translate(17px, -48%);
+          transform: translateX(14px);
         }
       }
     }
@@ -123,7 +121,8 @@
       height: 16px;
 
       &::after {
-        width: 37%;
+        width: 12px;
+        height: 12px;
       }
     }
   }
@@ -137,13 +136,18 @@
     }
 
     .slide-button {
-      width: 55px;
+      width: 56px;
       height: 30px;
+
+      &::after {
+        width: 26px;
+        height: 26px;
+      }
     }
 
     input:last-of-type:checked ~ .slide-button {
       &::after {
-        transform: translate(28px, -50%);
+        transform: translateX(26px);
       }
     }
   }

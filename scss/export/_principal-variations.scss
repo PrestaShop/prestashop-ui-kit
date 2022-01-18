@@ -1,0 +1,12 @@
+/* stylelint-disable */
+@import "../application";
+
+:export {
+  primary-hover: $primary-hover;
+  primary-active: $primary-active;
+  primary-disabled: $primary-disabled;
+  secondary-hover: $secondary-hover;
+  secondary-active: $secondary-active;
+  danger-hover: $danger-hover;
+  notice: $notice;
+}

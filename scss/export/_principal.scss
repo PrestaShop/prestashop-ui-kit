@@ -1,0 +1,18 @@
+/* stylelint-disable */
+@import "../application";
+
+:export {
+  brand-primary: $brand-primary;
+  brand-secondary: $brand-secondary;
+  brand-info: $brand-info;
+  brand-warning: $brand-warning;
+  brand-success: $brand-success;
+  brand-danger: $brand-danger;
+  primary-hover: $primary-hover;
+  primary-active: $primary-active;
+  primary-disabled: $primary-disabled;
+  secondary-hover: $secondary-hover;
+  secondary-active: $secondary-active;
+  danger-hover: $danger-hover;
+  notice: $notice;
+}

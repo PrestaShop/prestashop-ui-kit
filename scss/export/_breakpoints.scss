@@ -1,0 +1,8 @@
+/* stylelint-disable */
+@import "../application";
+
+:export {
+  @each $name, $value in $grid-breakpoints {
+    #{$name}: $value;
+  }
+}

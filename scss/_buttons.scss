@@ -1,6 +1,6 @@
 .btn {
   font-weight: $font-weight-semibold;
-  white-space: nowrap;
+  white-space: normal;
   border-width: $border-width;
   @include border-radius($btn-border-radius);
 
@@ -17,7 +17,7 @@
   }
 
   > .material-icons {
-    margin-top: -.083em;
+    margin-top: -0.083em;
     font-size: 1.45em;
   }
 
@@ -26,7 +26,8 @@
 
     border-color: $gray-300;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $gray-300;
     }
 

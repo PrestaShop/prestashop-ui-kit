@@ -7,7 +7,11 @@
   $active-border: darken($border, 10%),
   $color-name: "primary"
 ) {
-  color: $white;
+  @if $color-name == "light" or $color-name == "warning" {
+    color: $gray-800;
+  } @else {
+    color: $white;
+  }
   background-color: $background;
   border-color: $border;
   box-shadow: none;
@@ -21,8 +25,14 @@
   &:focus,
   &.focus {
     color: $white;
-    background-color: $background;
-    border-color: $background;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus-visible {
+    // stylelint-disable-next-line
+    outline: 2px auto $outline-color !important;
+    outline-offset: 3px;
     box-shadow: none;
   }
 
@@ -61,6 +71,22 @@
 
   &:focus,
   &.focus {
+    color: $color-hover;
+    background-color: theme-color-hover($color-name);
+    border-color: theme-color-hover($color-name);
+    outline: 2px solid #005fcc;
+    outline-style: auto;
+    outline-offset: 3px;
+
+    &:not(:focus-visible) {
+      outline: 0;
+    }
+  }
+
+  &:focus-visible {
+    // stylelint-disable-next-line
+    outline: 2px auto $outline-color !important;
+    outline-offset: 3px;
     box-shadow: none;
   }
 

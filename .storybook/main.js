@@ -9,9 +9,16 @@ module.exports = {
     },
   ],
   webpackFinal: (config) => {
-    config.resolve.alias['core-js/modules'] = '@storybook/core/node_modules/core-js/modules';
     config.module.rules[3].use = 'html-loader?minimize=false';
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../'),
+    });
 
     return config;
+  },
+  addonActionsTheme: {
+    BASE_COLOR: 'red',
   },
 };

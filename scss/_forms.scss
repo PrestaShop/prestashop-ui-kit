@@ -56,6 +56,13 @@
     &:focus {
       background-color: $primary-lighten;
     }
+
+    &.disabled:hover,
+    &.disabled:focus,
+    :disabled:hover,
+    :disabled:focus {
+      background-color: $gray-disabled;
+    }
   }
 
   &.disabled,

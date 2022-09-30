@@ -3,7 +3,6 @@
 
 $FontPathOpenSans: "open-sans-fonts/open-sans";
 
-
 @mixin setFont() {
   @if $local-font {
     @font-face {

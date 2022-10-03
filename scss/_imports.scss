@@ -1,7 +1,7 @@
 // Open Sans
 /* stylelint-disable */
 
-$FontPathOpenSans: "open-sans-fonts/open-sans";
+$FontPathOpenSans: "~open-sans-fonts/open-sans";
 
 @mixin setFont() {
   @if $local-font {
@@ -22,8 +22,8 @@ $FontPathOpenSans: "open-sans-fonts/open-sans";
       font-style: normal;
       font-weight: 300;
       src:
-        url("open-sans-fonts/open-sans/Light/OpenSans-Light.woff2")
-        format("woff2"), url("open-sans-fonts/open-sans/Light/OpenSans-Light.woff") format("woff"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.ttf") format("truetype"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.svg#OpenSansLight")
+        url("#{$FontPathOpenSans}/Light/OpenSans-Light.woff2")
+        format("woff2"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.woff") format("woff"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.ttf") format("truetype"), url("#{$FontPathOpenSans}/Light/OpenSans-Light.svg#OpenSansLight")
         format("svg");
     }
 

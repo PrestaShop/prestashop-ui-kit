@@ -7,7 +7,6 @@ $component-name: select2;
       padding: $input-padding-x $input-padding-y;
       padding: 0;
       border-color: $gray-300;
-      border-top: 1px solid;
     }
 
     &-search--dropdown {
@@ -43,12 +42,17 @@ $component-name: select2;
       padding: $input-padding-x $input-padding-y;
       padding-left: 15px;
       cursor: default;
-      border-color: $gray-300;
+      border: 1px solid $gray-300;
       @include border-radius(4px);
 
       .#{$component-name}-selection__arrow {
-        right: 15px;
-        margin-right: 0.625rem;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
 
         b {
           width: auto;
@@ -77,6 +81,15 @@ $component-name: select2;
     }
   }
 
+  &.#{$component-name}-container--disabled {
+    color: $gray-500;
+    background: $input-disabled-bg;
+
+    .#{$component-name}-selection--single {
+      cursor: not-allowed;
+    }
+  }
+
   &.#{$component-name}-container--open {
     .#{$component-name}-selection__arrow b::after {
       transform: rotate(-180deg);
@@ -84,6 +97,8 @@ $component-name: select2;
 
     .#{$component-name}-selection {
       border-color: $gray-300;
+      @include border-bottom-right-radius(0);
+      @include border-bottom-left-radius(0);
     }
   }
 }

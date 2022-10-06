@@ -21,4 +21,7 @@ module.exports = {
   addonActionsTheme: {
     BASE_COLOR: 'red',
   },
+  core: {
+    builder: 'webpack5',
+  },
 };

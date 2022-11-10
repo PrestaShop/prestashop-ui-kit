@@ -12,7 +12,7 @@ $component-name: input-group;
     }
 
     // collapse borders
-    & + .input-group-text {
+    + .input-group-text {
       margin-left: $input-border-width * -1;
     }
   }

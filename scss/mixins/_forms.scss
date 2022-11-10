@@ -41,10 +41,6 @@
     @include transition(all 0.5s);
   }
 
-  &{
-    background: theme-color-background("warning");
-  }
-
   > input {
     display: none;
   }

@@ -32,7 +32,7 @@ let config = {
           {
             loader: 'expose-loader',
             options: {
-              exposes: '$',
+              exposes: ['$', 'jQuery'],
             },
           }
         ],
@@ -43,7 +43,7 @@ let config = {
           {
             loader: 'expose-loader',
             options: {
-              exposes: 'Tether',
+              exposes: ['Tether'],
             },
           }
         ],

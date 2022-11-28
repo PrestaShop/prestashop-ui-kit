@@ -23,6 +23,11 @@ $component-name: select2;
     &-results {
       padding: 0;
 
+      &__options {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
       &__option {
         &:not([role="group"]):hover {
           color: $primary;

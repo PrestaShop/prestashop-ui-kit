@@ -83,7 +83,7 @@ If you keep both instances of NPM running, all your changes in the UI kit will b
 
 ## About PrestaShop
 
-PrestaShop is a free and Open Source e-commerce web application written in PHP, committed to providing the best shopping cart experience for both merchants and customers. [Learn more about PrestaShop](http://www.prestashop.com)
+PrestaShop is a free and Open Source e-commerce web application written in PHP, committed to providing the best shopping cart experience for both merchants and customers. [Learn more about PrestaShop](https://www.prestashop-project.org)
 
 ## License
 

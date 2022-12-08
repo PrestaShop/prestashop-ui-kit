@@ -3,18 +3,15 @@
   font-size: 0.75rem;
 
   li {
-    & + li::before {
+    + li::before {
       padding-right: 0;
       padding-left: 0.1875rem;
     }
 
     > a {
+      @extend a;
       font-weight: 600;
       color: $primary;
-
-      &:hover {
-        @extend a:hover;
-      }
     }
   }
 }

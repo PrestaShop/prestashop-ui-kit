@@ -15,7 +15,7 @@
 @import "mixins/forms";
 
 // Addons
-@import "~select2/src/scss/core.scss";
+@import "~select2/src/scss/core";
 @import "~jquery.growl/stylesheets/jquery.growl.sass";
 
 // Utils
@@ -54,5 +54,5 @@
 @import "floating-button";
 
 @import "variables-select2";
-@import "~select2-bootstrap-theme/src/select2-bootstrap";
 @import "select2";
+@import "~@ttskch/select2-bootstrap4-theme/src/select2-bootstrap4";

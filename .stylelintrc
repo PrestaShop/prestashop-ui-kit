@@ -3,6 +3,7 @@
     "stylelint-config-prestashop"
   ],
   "rules": {
-    "function-blacklist": null
+    "function-disallowed-list": null,
+    "keyframes-name-pattern": null
   }
 }

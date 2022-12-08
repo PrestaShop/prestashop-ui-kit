@@ -4,7 +4,7 @@ import logoUrl from './logo-prestashop.svg';
 export default create({
   base: 'dark',
   brandTitle: 'PrestaShop',
-  brandUrl: 'https://www.prestashop.com',
+  brandUrl: 'https://www.prestashop-project.org',
   brandImage: logoUrl,
 
   colorPrimary: '#6c868e',

@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -27,11 +28,25 @@ let config = {
       },
       {
         test: require.resolve('jquery'),
-        loader: 'expose-loader?jQuery!expose-loader?$',
+        use: [
+          {
+            loader: 'expose-loader',
+            options: {
+              exposes: ['$', 'jQuery'],
+            },
+          }
+        ],
       },
       {
         test: require.resolve('tether'),
-        loader: 'expose-loader?tether!expose-loader?Tether',
+        use: [
+          {
+            loader: 'expose-loader',
+            options: {
+              exposes: ['Tether'],
+            },
+          }
+        ],
       },
       {
         test: /\.scss$/,
@@ -40,7 +55,6 @@ let config = {
           {
             loader: 'css-loader',
             options: {
-              minimize: !devMode,
               sourceMap: true,
             },
           },
@@ -104,23 +118,11 @@ let config = {
 if (!devMode) {
   Object.assign(config, {
     optimization: {
+      minimize: true,
       minimizer: [
-        new UglifyJsPlugin({
-          sourceMap: true,
-          uglifyOptions: {
-            compress: {
-              drop_console: true,
-              sequences: true,
-              conditionals: true,
-              booleans: true,
-              if_return: true,
-              join_vars: true,
-              pure_funcs: ['console.warn'],
-            },
-            output: {
-              comments: false,
-            },
-          },
+        new TerserPlugin({
+          parallel: true,
+          extractComments: false,
         }),
       ],
     },

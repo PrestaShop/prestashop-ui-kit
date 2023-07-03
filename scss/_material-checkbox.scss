@@ -79,12 +79,12 @@ $md-checkmark-color: $white !default;
 
         /* stylelint-disable */
         top:
-          ($md-checkbox-size / 2) - ($md-checkmark-size / 4) -
-          $md-checkbox-size / 10;
+          calc($md-checkbox-size / 2) - calc($md-checkmark-size / 4) -
+          calc($md-checkbox-size / 10);
         /* stylelint-enable */
         left: $md-checkbox-padding;
         width: $md-checkmark-size;
-        height: $md-checkmark-size / 2;
+        height: calc($md-checkmark-size / 2);
 
         border: $md-checkmark-width solid $md-checkmark-color;
         border-top-style: none;
@@ -98,7 +98,7 @@ $md-checkmark-color: $white !default;
   .indeterminate {
     + .md-checkbox-control {
       &::after {
-        top: ($md-checkbox-size / 2) - ($md-checkmark-width / 2);
+        top: calc($md-checkbox-size / 2) - calc($md-checkmark-width / 2);
         height: 0;
         transform: rotate(0);
       }

@@ -186,17 +186,17 @@ $spacer: 1.875rem;
 $spacers: (
   0: 0,
   1: (
-    $spacer / 6,
+    calc($spacer / 6),
   ),
   2: (
-    $spacer / 3,
+    calc($spacer / 3),
   ),
   3: (
-    $spacer / 2,
+    calc($spacer / 2),
   ),
   4: $spacer,
   5: (
-    $spacer * 2,
+    calc($spacer * 2),
   ),
 );
 

@@ -47,7 +47,7 @@
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
-    "chromatic": "^5.2.0",
+    "chromatic": "^6.19.9",
     "core-js": "^2.6.11",
     "css-loader": "^5.2.4",
     "expose-loader": "^4.0.0",

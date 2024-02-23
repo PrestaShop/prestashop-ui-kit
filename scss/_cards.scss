@@ -2,11 +2,11 @@
 $component-name: ps-card;
 
 .#{$component-name} {
-  padding: 10px;
-  @include transition(0.25s ease-out);
+  padding: var(--#{$cdk}size-10);
+  transition: var(--#{$cdk}default-transition);
 
   &:hover {
-    @include box-shadow(0 8px 16px 0 rgba(0, 0, 0, 0.1));
+    box-shadow: var(--#{$cdk}box-shadow-md);
   }
 
   .list-group-item {
@@ -27,33 +27,36 @@ $component-name: ps-card;
     &,
     &-top {
       width: 100%;
-      @include border-radius(0);
     }
   }
 
   & &-title {
-    margin: 0.625rem 0;
-    font-size: 14px;
-    font-weight: 700;
-    color: $gray-750;
+    margin: var(--#{$cdk}size-10) 0;
+    font-size: var(--#{$cdk}size-14);
+    font-weight: 600;
+    color: var(--#{$cdk}primary-700);
   }
 
   & &-button {
     margin: 0;
-    font-size: 14px;
-    font-weight: 700;
-    color: $primary;
+    font-size: var(--#{$cdk}size-14);
+    font-weight: 600;
+    color: var(--#{$cdk}primary-800);
   }
 
   & &-subtitle {
-    font-size: 14px;
-    font-weight: 700;
-    color: $gray-550;
+    font-size: var(--#{$cdk}size-14);
+    font-weight: 600;
+    color: var(--#{$cdk}primary-500);
   }
 }
 
+// Cards
 .card {
-  .list-group-item {
-    padding: $card-spacer-y $card-spacer-x;
+  &-header,
+  &-header-title {
+    font-size: var(--#{$cdk}size-24);
+    font-weight: 600;
+    border: none;
   }
 }

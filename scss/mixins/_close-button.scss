@@ -1,4 +1,4 @@
-@mixin close-button($margin-right: 0, $color: $medium-gray) {
+@mixin close-button($margin-right: 0, $color: var(--#{$cdk}primary-500)) {
   .close {
     margin-right: $margin-right;
     color: $color;
@@ -6,7 +6,7 @@
     opacity: 1;
 
     .material-icons {
-      font-size: 1.125rem;
+      font-size: var(--#{$cdk}size-18);
       vertical-align: middle;
     }
   }

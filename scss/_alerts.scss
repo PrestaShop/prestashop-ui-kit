@@ -3,30 +3,29 @@ $component-name: alert !default;
 .#{$component-name} {
   position: relative;
   padding: $alert-padding-y 15px $alert-padding-y 2.875rem;
-  color: $gray-700;
-  background-color: $white;
-  @include border-radius(8px);
+  color: var(--#{$cdk}primary-800);
+  background-color: var(--#{$cdk}white);
 
   a:not(.btn) {
-    font-weight: 600;
-    color: $gray-700;
+    font-weight: 500;
+    color: var(--#{$cdk}primary-800);
     text-decoration: underline;
-    @include transition(0.25s ease-out);
+    transition: var(--#{$cdk}default-transition);
 
     &:hover {
-      opacity: 0.6;
+      color: var(--#{$cdk}primary-700);
     }
   }
 
   &::before {
     @include use-material-icon();
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: var(--#{$cdk}size-16);
+    left: var(--#{$cdk}size-16);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: var(--#{$cdk}size-24);
     text-align: center;
   }
 
@@ -34,8 +33,8 @@ $component-name: alert !default;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    box-shadow: 0 8px 16px 0 rgba(#000, 0.1);
+    padding: var(--#{$cdk}size-16);
+    box-shadow: var(--#{$cdk}box-shadow-md);
 
     &::before {
       content: none;
@@ -43,7 +42,7 @@ $component-name: alert !default;
 
     p,
     a {
-      color: $white;
+      color: var(--#{$cdk}white);
     }
 
     .close {
@@ -51,13 +50,13 @@ $component-name: alert !default;
     }
 
     a {
-      font-weight: 600;
+      font-weight: 500;
     }
 
     &-fixed-right,
     &-fixed-left {
       position: fixed;
-      bottom: 20px;
+      bottom: var(--#{$cdk}size-20);
       animation-name: fromTop;
       animation-duration: 0.5s;
     }
@@ -72,12 +71,12 @@ $component-name: alert !default;
   }
 
   .close {
-    margin-left: 20px;
+    margin-left: var(--#{$cdk}size-20);
     line-height: 0.8;
   }
 
   & &-action {
-    margin-left: 15px;
+    margin-left: var(--#{$cdk}size-16);
   }
 
   p,
@@ -93,29 +92,23 @@ $component-name: alert !default;
   // make bullet points visible
   > ul,
   > ol {
-    margin-left: 1.5rem;
+    margin-left: var(--#{$cdk}size-24);
   }
 
-  @include close-button(0.625rem);
-
-  &.medium-alert {
-    p {
-      font-size: $font-size-sm;
-    }
-  }
+  @include close-button(var(--#{$cdk}size-10));
 
   &.expandable-alert {
     .alert-text {
-      font-weight: 600;
-      color: $gray-700;
+      font-weight: 500;
+      color: var(--#{$cdk}primary-800);
     }
 
     .read-more {
       @extend .close;
       float: inherit;
       font-size: $font-size-base;
-      font-weight: 600;
-      line-height: 1.375rem;
+      font-weight: 500;
+      line-height: var(--#{$cdk}size-20);
       color: $primary;
       opacity: 1;
 
@@ -133,10 +126,12 @@ $component-name: alert !default;
     }
 
     .#{$component-name}-more {
-      color: $gray-700;
+      font-size: $font-size-sm;
+      color: var(--#{$cdk}primary-800);
+
       padding: {
-        top: 1.375rem;
-        bottom: 0.75rem;
+        top: var(--#{$cdk}size-20);
+        bottom: var(--#{$cdk}size-12);
       }
 
       p {
@@ -153,14 +148,14 @@ $component-name: alert !default;
     border: 1px solid map-get($alerts-second-colors, $color);
 
     &.toast {
-      color: $white;
+      color: var(--#{$cdk}white);
       background: map-get($alerts-background-colors, $color);
 
       .close,
       &.expandable-alert .read-more,
       &.expandable-alert .read-more:hover,
       &.expandable-alert .read-more:focus {
-        color: $white;
+        color: var(--#{$cdk}white);
       }
     }
 
@@ -175,7 +170,7 @@ $component-name: alert !default;
 
     &.expandable-alert .read-more,
     &.expandable-alert .read-more:hover {
-      color: $gray-750;
+      color: var(--#{$cdk}primary-800);
     }
   }
 }

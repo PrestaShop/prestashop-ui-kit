@@ -2,21 +2,35 @@
 $component-name: select2;
 
 .#{$component-name}-container--bootstrap {
+  &.#{$component-name}-container {
+    background: var(--#{$cdk}white);
+
+    .#{$component-name} {
+      &-selection__rendered {
+        padding: 0;
+        line-height: var(--#{$cdk}size-28);
+      }
+    }
+  }
+
   .#{$component-name} {
     &-dropdown {
       padding: $input-padding-x $input-padding-y;
       padding: 0;
-      border-color: $gray-300;
+      border-color: var(--#{$cdk}primary-400);
+      border-radius: 0;
+      box-shadow: var(--#{$cdk}box-shadow-md);
     }
 
     &-search--dropdown {
-      padding: 10px;
-      background: $gray-250;
+      padding: var(--#{$cdk}size-10);
+      background: var(--#{$cdk}primary-200);
+      border-bottom: 1px solid var(--#{$cdk}primary-400);
 
       .#{$component-name}-search__field {
-        background: #fff;
-        border: 1px solid $gray-300;
-        @include border-radius(4px);
+        background: var(--#{$cdk}white);
+        border: 1px solid var(--#{$cdk}primary-400);
+        border-radius: 0;
       }
     }
 
@@ -29,31 +43,50 @@ $component-name: select2;
       }
 
       &__option {
+        padding: var(--#{$cdk}size-8);
+
         &:not([role="group"]):hover {
-          color: $primary;
-          background: rgba($primary, 0.1);
+          color: var(--#{$cdk}primary-800);
+          background: var(--#{$cdk}primary-200);
         }
 
         &:not([role="group"]):focus,
         &:not([role="group"]):active {
-          color: #fff;
-          background: $primary;
+          color: var(--#{$cdk}primary-800);
+          background: var(--#{$cdk}primary-300);
+        }
+
+        &[aria-selected="true"] {
+          display: flex;
+          gap: var(--#{$cdk}size-8);
+          align-items: center;
+          color: var(--#{$cdk}primary-800);
+          background-color: var(--#{$cdk}primary-300);
+
+          &::after {
+            margin-left: auto;
+            font-family: var(--#{$cdk}font-family-material-icons);
+            font-size: var(--#{$cdk}size-20);
+            line-height: 1;
+            content: "\e5ca";
+          }
         }
       }
     }
 
     &-selection--single {
-      height: $input-height;
-      padding: $input-padding-x $input-padding-y;
-      padding-left: 15px;
+      height: auto;
+      min-height: var(--#{$cdk}size-36);
+      padding: var(--#{$cdk}size-8) var(--#{$cdk}size-16);
+      padding-left: var(--#{$cdk}size-16);
       cursor: default;
-      border: 1px solid $gray-300;
-      @include border-radius(4px);
+      border: 1px solid var(--#{$cdk}primary-400);
+      border-radius: 0;
 
       .#{$component-name}-selection__arrow {
         position: absolute;
         top: 50%;
-        right: 5px;
+        right: var(--#{$cdk}size-5);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,23 +104,23 @@ $component-name: select2;
             display: inline-block;
             width: auto;
             line-height: 0;
-            color: $gray-600;
+            color: var(--#{$cdk}primary-600);
             vertical-align: middle;
             border: none;
-            @include transition(0.15s ease-out);
+            transition: var(--#{$cdk}default-transition);
           }
         }
       }
     }
 
     &-selection__rendered {
-      padding: 0 $input-padding-y;
-      line-height: 1.125rem;
+      padding: 0 $input-padding-y 0 0;
+      line-height: var(--#{$cdk}size-20);
     }
   }
 
   &.#{$component-name}-container--disabled {
-    color: $gray-500;
+    color: var(--#{$cdk}primary-500);
     background: $input-disabled-bg;
 
     .#{$component-name}-selection--single {
@@ -101,9 +134,8 @@ $component-name: select2;
     }
 
     .#{$component-name}-selection {
-      border-color: $gray-300;
-      @include border-bottom-right-radius(0);
-      @include border-bottom-left-radius(0);
+      border-color: var(--#{$cdk}primary-300);
+      border-radius: 0;
     }
   }
 }

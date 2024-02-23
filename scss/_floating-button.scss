@@ -1,22 +1,22 @@
 .btn-floating {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: var(--#{$cdk}size-16);
+  bottom: var(--#{$cdk}size-16);
   z-index: 999;
 
   > .btn {
     position: relative;
     z-index: 1;
-    width: 56px;
-    height: 56px;
-    padding: 0.5rem;
-    font-size: 18px;
+    justify-content: center;
+    width: var(--#{$cdk}size-56);
+    height: var(--#{$cdk}size-56);
+    padding: var(--#{$cdk}size-8);
+    transition: var(--#{$cdk}default-transition);
     @include border-radius(100%);
-    @include transition(0.25s ease-out);
 
     &:not(.collapsed) {
-      background: $red;
-      border-color: $red;
+      background: var(--#{$cdk}red-500);
+      border-color: var(--#{$cdk}red-500);
 
       i {
         transform: rotate(45deg);
@@ -24,15 +24,16 @@
     }
 
     i {
-      @include transition(0.25s ease-out);
+      font-size: var(--#{$cdk}size-28);
+      transition: var(--#{$cdk}default-transition);
     }
   }
 
   & &-container {
     position: absolute;
     right: 0;
-    bottom: calc(100% + 1rem);
-    @include transition(0.25s ease-out);
+    bottom: calc(100% + var(--#{$cdk}size-16));
+    transition: var(--#{$cdk}default-transition);
 
     &.collapsing {
       .btn-floating-menu {
@@ -49,9 +50,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 20rem;
+    width: var(--#{$cdk}size-320);
     overflow: hidden;
-    @include border-radius(0.5rem);
 
     a,
     button {
@@ -67,9 +67,8 @@
       width: 100%;
       height: 100%;
       content: "";
-      background-color: $white;
-      @include border-radius(0.5rem);
-      @include transition(0.25s ease-out);
+      background-color: var(--#{$cdk}white);
+      transition: var(--#{$cdk}default-transition);
     }
 
     &::after {
@@ -80,9 +79,9 @@
       width: 100vw;
       height: 100vh;
       content: "";
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(map-get($map: $cdk-primary, $key: "primary-800"), 0.8);
       opacity: 1;
-      @include transition(0.25s ease-out);
+      transition: var(--#{$cdk}default-transition);
     }
   }
 
@@ -91,27 +90,18 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem 0.75rem;
+    padding: var(--#{$cdk}size-8) var(--#{$cdk}size-12);
     font-weight: 500;
-    color: $gray-750;
-    @include transition(0.25s ease-out);
-    @include border-radius(0);
+    color: var(--#{$cdk}primary-700);
+    transition: var(--#{$cdk}default-transition);
 
     .material-icon {
       margin-top: 0;
     }
 
-    &:first-of-type {
-      @include border-top-radius(0.5rem);
-    }
-
-    &:last-of-type {
-      @include border-bottom-radius(0.5rem);
-    }
-
     &:hover {
-      color: $white;
-      background: $primary;
+      color: var(--#{$cdk}white);
+      background: var(--#{$cdk}primary-800);
     }
   }
 }

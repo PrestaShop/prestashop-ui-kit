@@ -1,40 +1,57 @@
 .btn {
-  font-weight: $font-weight-semibold;
+  display: inline-flex;
+  gap: var(--#{$cdk}size-4);
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
   white-space: normal;
-  border-width: $border-width;
-  @include border-radius($btn-border-radius);
+  border-width: var(--#{$cdk}size-1);
 
-  @include hover-focus() {
-    cursor: pointer;
+  &:not([href]) {
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
     cursor: not-allowed;
-    background-color: $gray-disabled;
+    //background-color: $gray-disabled;
     opacity: 1;
   }
 
   > .material-icons {
-    margin-top: -0.083em;
-    font-size: 1.45em;
+    font-size: var(--#{$cdk}size-20);
   }
 
   &-default {
-    @include ps-button-outline-variant($gray-700, $primary, "default");
+    @include ps-button-outline-variant(var(--#{$cdk}primary-500), var(--#{$cdk}primary-800), "secondary");
+  }
 
-    border-color: $gray-300;
-
-    &:hover,
-    &:focus {
-      border-color: $gray-300;
+  &-link {
+    > .material-icons {
+      // css trick to remove icon underline on hover
+      float: left;
     }
 
-    &:not([disabled]):not(.disabled):active,
-    &:not([disabled]):not(.disabled).active {
-      color: $white;
+    @include disabled() {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}white);
+      border-color: var(--#{$cdk}white);
     }
+  }
+
+  @include focus-active() {
+    z-index: 1;
+    outline: var(--#{$cdk}size-2) solid $outline-color;
+    outline-offset: var(--#{$cdk}size-2);
+    /* stylelint-disable-next-line */
+    box-shadow: none !important;
+  }
+
+  @include disabled() {
+    outline: 0;
   }
 }
 
@@ -56,6 +73,6 @@
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @include ps-button-outline-variant($value, #fff, $color);
+    @include ps-button-outline-variant($value, map-get($map: $cdk-primary, $key: "primary-800"), $color);
   }
 }

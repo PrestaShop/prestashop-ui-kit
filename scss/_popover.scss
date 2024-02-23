@@ -2,55 +2,56 @@
 $component-name: popover;
 
 .#{$component-name} {
-  padding: 10px;
-  background: $gray-700;
+  padding: var(--#{$cdk}size-10);
+  background: var(--#{$cdk}primary-700);
   border: none;
+  border-radius: 0;
 
   & &-header,
   & &-body {
     padding: 0;
-    color: #fff;
+    color: var(--#{$cdk}white);
     background: none;
     border: none;
   }
 
   & &-header {
-    margin-bottom: 0.2rem;
+    margin-bottom: var(--#{$cdk}size-4);
   }
 
   &.bs-popover-right .arrow {
-    left: calc((0.5rem) * -1);
+    left: calc(-1 * var(--#{$cdk}size-8));
 
     &::before,
     &::after {
-      border-right-color: $gray-700;
+      border-right-color: var(--#{$cdk}primary-700);
     }
   }
 
   &.bs-popover-left .arrow {
-    right: calc((0.5rem) * -1);
+    right: calc(-1 * var(--#{$cdk}size-8));
 
     &::before,
     &::after {
-      border-left-color: $gray-700;
+      border-left-color: var(--#{$cdk}primary-700);
     }
   }
 
   &.bs-popover-bottom .arrow {
-    top: calc((0.5rem) * -1);
+    top: calc(-1 * var(--#{$cdk}size-8));
 
     &::before,
     &::after {
-      border-bottom-color: $gray-700;
+      border-bottom-color: var(--#{$cdk}primary-700);
     }
   }
 
   &.bs-popover-top .arrow {
-    bottom: calc((0.5rem) * -1);
+    bottom: calc(-1 * var(--#{$cdk}size-8));
 
     &::before,
     &::after {
-      border-top-color: $gray-700;
+      border-top-color: var(--#{$cdk}primary-700);
     }
   }
 }

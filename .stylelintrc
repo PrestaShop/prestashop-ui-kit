@@ -4,6 +4,8 @@
   ],
   "rules": {
     "function-disallowed-list": null,
-    "keyframes-name-pattern": null
+    "keyframes-name-pattern": null,
+    "property-disallowed-list": null,
+    "scss/at-function-named-arguments": null
   }
 }

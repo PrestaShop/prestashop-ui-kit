@@ -1,0 +1,30 @@
+body {
+  font-family: var(--#{$cdk}font-family-primary);
+  color: var(--#{$cdk}primary-800);
+
+  // Titles
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--#{$cdk}font-family-secondary);
+    color: var(--#{$cdk}primary-800);
+  }
+
+  p,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: var(--#{$cdk}primary-800);
+  }
+
+  mark,
+  .mark {
+    background-color: var(--#{$cdk}amber-100);
+  }
+}

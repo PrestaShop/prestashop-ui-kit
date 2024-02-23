@@ -1,10 +1,10 @@
 .tooltip-link {
   > .material-icons {
-    color: $medium-gray;
+    color: var(--#{$cdk}primary-800);
     vertical-align: middle;
 
     &:hover {
-      color: theme-color("primary");
+      color: var(--#{$cdk}primary-700);
     }
   }
 }
@@ -13,8 +13,8 @@
   &::before {
     @include material-icon("\E89E");
     display: inline-block;
-    margin-right: 0.125rem;
-    font-size: 1.2rem;
+    margin-right: var(--#{$cdk}size-2);
+    font-size: var(--#{$cdk}size-18);
     font-weight: $font-weight-normal;
     text-decoration: none;
     vertical-align: middle;

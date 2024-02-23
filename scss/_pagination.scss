@@ -6,7 +6,7 @@
 
       &::after {
         @include use-material-icon();
-        line-height: 2.375rem;
+        line-height: var(--#{$cdk}size-36);
       }
 
       &:hover {
@@ -32,12 +32,17 @@
   }
 
   &.active .page-link {
-    font-weight: $font-weight-bold;
+    font-weight: 700;
   }
 }
 
 .page-link {
-  font-weight: $font-weight-normal;
+  margin: 0;
+  font-weight: 400;
+
+  &:active {
+    z-index: 4;
+  }
 
   @include hover-focus () {
     text-decoration: underline;
@@ -47,13 +52,19 @@
 // input used to jump to a page
 .pagination .jump-to-page {
   @extend .form-control;
-  width: 3rem;
-  margin-top: 2px;
-  margin-right: 1px; // fixes weird bug where right border disappears
+  width: var(--#{$cdk}size-48);
+  margin: 0;
   font-weight: 700;
   color: $pagination-active-color;
+  text-align: center;
 
   &:focus {
     font-weight: 400;
+  }
+
+  &:focus,
+  &:active {
+    position: relative;
+    z-index: 1;
   }
 }

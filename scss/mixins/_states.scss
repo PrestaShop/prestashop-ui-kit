@@ -1,0 +1,31 @@
+@mixin focus() {
+  &:focus-visible,
+  &:focus,
+  &.focus {
+    @content;
+  }
+}
+
+@mixin focus-active() {
+  &:focus-visible,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    @content;
+  }
+}
+
+@mixin disabled() {
+  &.disabled,
+  &:disabled,
+  &.disabled:active:focus,
+  &.disabled:active:focus-visible,
+  &:disabled:active:focus,
+  &:disabled:active:focus-visible {
+    @content;
+  }
+}

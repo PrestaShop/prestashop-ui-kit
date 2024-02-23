@@ -7,6 +7,8 @@
   .btn.dropdown-toggle-split {
     // fix spacing to the left of chevron in split dropdown due to class order (.btn overrides it because it's load after)
     @extend .dropdown-toggle-split;
+    padding-right: var(--#{$cdk}size-8);
+    padding-left: var(--#{$cdk}size-8);
 
     // add spacing between button and dropdown button in split dropdown buttons,
     // except on outline buttons (which already have a border separating them)
@@ -16,8 +18,12 @@
 
     // increased horizontal spacing on the dropdown button of large split dropdowns
     &.btn-lg {
-      padding-right: 0.563rem;
-      padding-left: 0.563rem;
+      padding-right: var(--#{$cdk}size-8);
+      padding-left: var(--#{$cdk}size-8);
+    }
+
+    .caret {
+      display: none;
     }
   }
 

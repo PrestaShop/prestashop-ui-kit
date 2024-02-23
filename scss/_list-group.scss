@@ -2,8 +2,6 @@
   &:active {
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
-
-    @include ps-shadow-custom("primary");
   }
 
   .badge {
@@ -14,7 +12,7 @@
   &.active {
     .badge {
       color: $body-color;
-      background: $extra-light-gray;
+      background: var(--#{$cdk}white);
     }
   }
 }

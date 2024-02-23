@@ -2,29 +2,25 @@
 $component-name: help-box;
 
 .#{$component-name} {
-  display: inline-flex;
-  align-items: center;
-  width: 1.4rem;
-  height: 1.2rem;
-  padding: 0;
-  margin: 0 5px 2px;
-  line-height: 19px;
+  @extend .material-icons;
+  margin-left: var(--#{$cdk}size-4);
+  font-size: var(--#{$cdk}size-20);
   vertical-align: middle;
   cursor: pointer;
 
   i,
   &::after {
-    font-family: "Material Icons", Arial, sans-serif;
-    font-size: 19px;
-    color: $primary;
+    font-size: var(--#{$cdk}size-20);
+    line-height: var(--#{$cdk}size-20);
+    color: var(--#{$cdk}primary-800);
     content: "\e887";
-    @include transition(0.25s ease-out);
+    transition: var(--#{$cdk}default-transition);
   }
 
   &:hover {
     i,
     &::after {
-      color: $help-box-hover;
+      color: var(--#{$cdk}primary-700);
     }
   }
 }

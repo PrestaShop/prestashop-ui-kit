@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import cardsContent from './cards.html'
+
+<Meta title="Cards" />
+
+# Cards
+
+Cards are used to display sections inside the BO
+
+<Canvas>
+  <Story name="Cards" height="800px" parameters={{ docs: { source: { code: cardsContent } } }}>
+    {() => cardsContent}
+  </Story>
+</Canvas>
+

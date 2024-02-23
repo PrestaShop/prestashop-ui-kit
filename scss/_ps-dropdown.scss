@@ -1,36 +1,37 @@
 .ps-dropdown {
   width: 100%;
-  padding: 0.188em 0;
-  font-size: 0.875rem;
-  line-height: 2.286em;
+  padding: 0.1875em 0;
+  font-size: var(--#{$cdk}size-14);
+  line-height: 2.25em;
+  color: var(--#{$cdk}primary-800);
   cursor: pointer;
-  background: #fff;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  @include transition(0.15s ease-out);
+  background: var(--#{$cdk}white);
+  box-shadow: none;
+  transition: var(--#{$cdk}default-transition);
 
   &.bordered {
-    border: $gray-300 1px solid;
-    @include border-radius(4px);
+    border: 1px solid var(--#{$cdk}primary-400);
+    @include border-radius(0);
 
     &.show {
-      @include border-bottom-right-radius(0);
-      @include border-bottom-left-radius(0);
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+      @include border-radius(0);
+      border: 1px solid var(--#{$cdk}primary-800);
+      box-shadow: var(--#{$cdk}box-shadow-md);
     }
   }
 
   .dropdown-label {
     flex-grow: 1;
-    padding: 0 5px 0 15px;
+    padding: 0 var(--#{$cdk}size-5) 0 var(--#{$cdk}size-16);
   }
 
   .arrow-down {
     position: relative;
     font-size: 1.8em;
-    line-height: 2rem;
-    color: $gray-500;
+    line-height: var(--#{$cdk}size-32);
+    color: var(--#{$cdk}primary-800);
     cursor: pointer;
-    @include transition(0.4s ease-out);
+    transition: var(--#{$cdk}default-transition);
   }
 
   &.show {
@@ -42,16 +43,14 @@
   > .ps-dropdown-menu {
     z-index: 1;
     width: 100%;
-    min-width: 18.75rem;
+    min-width: 18.75rem; // 300px
     padding: 0;
+    padding: var(--#{$cdk}size-8);
     margin: 0;
-    margin-top: 0.3rem;
-    border-color: $gray-300;
-    border-top: 0;
-    @include border-radius(0);
-    @include border-bottom-right-radius(4px);
-    @include border-bottom-left-radius(4px);
+    margin-top: var(--#{$cdk}size-6);
+    border: none;
     box-shadow: inherit;
+    @include border-radius(0);
 
     .dropdown-item {
       display: flex;

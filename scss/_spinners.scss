@@ -1,17 +1,17 @@
 .spinner {
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--#{$cdk}size-40);
+  height: var(--#{$cdk}size-40);
   font-size: 0;
-  color: $white;
-  background-color: $white;
+  color: var(--#{$cdk}white);
+  background-color: var(--#{$cdk}white);
   border-style: solid;
-  border-width: 0.1875rem;
-  border-top-color: $light-gray;
+  border-width: var(--#{$cdk}size-3);
+  border-top-color: var(--#{$cdk}primary-400);
   border-right-color: theme-color("primary");
   border-bottom-color: theme-color("primary");
-  border-left-color: $light-gray;
-  @include border-radius(2.5rem);
+  border-left-color: var(--#{$cdk}primary-400);
+  @include border-radius(var(--#{$cdk}size-40));
   outline: none;
   animation: rotating 2s linear infinite;
 }

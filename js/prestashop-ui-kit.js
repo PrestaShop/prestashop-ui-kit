@@ -32,7 +32,7 @@ $.fn.pstooltip = $.fn.tooltip;
    */
   var initSelect2 = function () {
     jQuery('[data-toggle="select2"]').each(function () {
-      var newObj = {minimumResultsForSearch: -1};
+      var newObj = {minimumResultsForSearch: -1, theme: "bootstrap4"};
 
       for (var attr in $(this).data()) {
         if (!attr.localeCompare('templateresult')) {

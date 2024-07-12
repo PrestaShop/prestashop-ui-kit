@@ -215,7 +215,7 @@ $form-check-name: form-check;
       position: absolute;
       top: 50%;
       right: 0.3125rem;
-      margin-top: -(1.375rem / 2);
+      margin-top: calc(-1.375rem / 2);
       font-size: 1.375rem;
       font-weight: $font-weight-normal;
       color: $medium-gray;

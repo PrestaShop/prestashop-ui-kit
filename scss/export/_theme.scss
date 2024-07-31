@@ -14,6 +14,18 @@
     theme-colors-active-#{$name}: $value;
   }
 
+  @each $name, $value in $theme-colors-light {
+    theme-colors-light-#{$name}: $value;
+  }
+
+  @each $name, $value in $theme-colors-light-hover {
+    theme-colors-light-hover-#{$name}: $value;
+  }
+
+  @each $name, $value in $theme-colors-light-active {
+    theme-colors-light-active-#{$name}: $value;
+  }
+
   @each $name, $value in $theme-colors-background {
     theme-colors-background-#{$name}: $value;
   }

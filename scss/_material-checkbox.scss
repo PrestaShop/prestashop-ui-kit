@@ -1,13 +1,13 @@
 $md-checkbox-margin: initial !default;
-$md-checkbox-checked-color: $primary !default;
-$md-checkbox-border-color: $gray-450 !default;
+$md-checkbox-checked-color: var(--#{$cdk}primary-800) !default;
+$md-checkbox-border-color: var(--#{$cdk}primary-800) !default;
 $md-checkbox-disabled-opacity: 0.5 !default;
 
-$md-checkbox-size: 20px !default;
-$md-checkbox-padding: 3px !default;
+$md-checkbox-size: var(--#{$cdk}size-20) !default;
+$md-checkbox-padding: var(--#{$cdk}size-4) !default;
 
-$md-checkmark-width: 2px !default;
-$md-checkmark-color: $white !default;
+$md-checkmark-width: var(--#{$cdk}size-2) !default;
+$md-checkmark-color: var(--#{$cdk}white) !default;
 
 .md-checkbox {
   position: relative;
@@ -19,11 +19,11 @@ $md-checkmark-color: $white !default;
   }
 
   &.disabled {
-    color: $gray-500;
+    color: var(--#{$cdk}primary-500);
   }
 
   label {
-    padding-left: $md-checkbox-size + 8px;
+    padding-left: calc($md-checkbox-size + var(--#{$cdk}size-8));
     margin-bottom: 0;
   }
 
@@ -43,10 +43,10 @@ $md-checkmark-color: $white !default;
       width: $md-checkbox-size;
       height: $md-checkbox-size;
       cursor: pointer;
-      background: #fff;
+      background: var(--#{$cdk}white);
       border: 2px solid $md-checkbox-border-color;
-      @include border-radius(2px);
-      @include transition(background 0.3s);
+      border-radius: var(--#{$cdk}size-2);
+      transition: background var(--#{$cdk}default-transition-duration);
     }
   }
 
@@ -75,16 +75,11 @@ $md-checkmark-color: $white !default;
       }
 
       &::after {
-        $md-checkmark-size: $md-checkbox-size - 2 * $md-checkbox-padding;
-
-        /* stylelint-disable */
-        top:
-          ($md-checkbox-size / 2) - ($md-checkmark-size / 4) -
-          $md-checkbox-size / 10;
-        /* stylelint-enable */
+        $md-checkmark-size: calc($md-checkbox-size - (2 * $md-checkbox-padding));
+        top: calc(($md-checkbox-size / 2) - ($md-checkmark-size / 4) - $md-checkbox-size / 10);
         left: $md-checkbox-padding;
         width: $md-checkmark-size;
-        height: $md-checkmark-size / 2;
+        height: calc($md-checkmark-size / 2);
 
         border: $md-checkmark-width solid $md-checkmark-color;
         border-top-style: none;
@@ -98,7 +93,7 @@ $md-checkmark-color: $white !default;
   .indeterminate {
     + .md-checkbox-control {
       &::after {
-        top: ($md-checkbox-size / 2) - ($md-checkmark-width / 2);
+        top: calc(($md-checkbox-size / 2) - ($md-checkmark-width / 2));
         height: 0;
         transform: rotate(0);
       }

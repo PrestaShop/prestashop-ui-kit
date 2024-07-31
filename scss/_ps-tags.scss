@@ -14,8 +14,11 @@
     font-size: 0; // collapses whitespace between tags
 
     &:not(:empty) {
-      padding: 0.5rem 1rem;
-      padding-right: 0;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: var(--#{$cdk}size-8);
+      align-items: flex-start;
+      padding: var(--#{$cdk}size-8) 0 var(--#{$cdk}size-8) var(--#{$cdk}size-8);
     }
   }
 
@@ -23,30 +26,48 @@
     display: inline-block;
     padding: ($badge-padding-y / 2) $badge-padding-x;
     margin: 0 $badge-padding-x 0 0;
-    font-size: 0.75rem;
-    color: theme-color("primary");
+    font-size: var(--#{$cdk}size-12);
+    font-weight: 700;
+    line-height: var(--#{$cdk}size-20);
+    color: var(--#{$cdk}primary-800);
     text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    @include border-radius();
-    @include badge-variant(theme-color("primary"));
+    vertical-align: middle;
+    background-color: var(--#{$cdk}primary-300);
 
     &:last-child {
       margin-right: 0;
     }
 
     > .material-icons {
-      margin: 0 0 0 $badge-padding-x;
-      font-size: 1.063rem;
-      color: $body-color;
+      align-content: center;
+      width: var(--#{$cdk}size-20);
+      height: var(--#{$cdk}size-20);
+      padding-inline: var(--#{$cdk}size-2);
+      margin: 0 0 0 var(--#{$cdk}size-6);
+      font-size: var(--#{$cdk}size-16);
+      font-weight: 400;
+      line-height: var(--#{$cdk}size-20);
+      color: var(--#{$cdk}primary-800);
+      text-decoration: none;
+      text-shadow: none;
       cursor: pointer;
+      background-color: var(--#{$cdk}primary-300);
+      border-radius: 50%;
+      opacity: 1;
+      transition: var(--#{$cdk}default-transition);
+
+      &:hover {
+        color: var(--#{$cdk}primary-800);
+        background-color: var(--#{$cdk}primary-400);
+        opacity: 1;
+      }
     }
   }
 
   [type="text"] {
     flex-grow: 1;
     width: auto;
-    min-width: 75px;
+    min-width: var(--#{$cdk}size-72);
     border: none;
   }
 }

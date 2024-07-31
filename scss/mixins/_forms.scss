@@ -9,7 +9,7 @@
   }
 
   .#{$state}-feedback {
-    margin-top: 0.3125rem;
+    margin-top: var(--#{$cdk}size-5);
     font-size: $font-size-xs;
     font-weight: $font-weight-bold;
     color: $color;
@@ -34,11 +34,11 @@
   &,
   &::after {
     box-sizing: border-box;
-    color: $medium-gray;
-    background: $white;
-    border: 2px solid $light-gray;
+    color: var(--#{$cdk}primary-500);
+    background: var(--#{$cdk}white);
+    border: 2px solid var(--#{$cdk}primary-400);
     @include border-radius($height);
-    @include transition(all 0.5s);
+    transition: var(--#{$cdk}default-transition);
   }
 
   > input {
@@ -56,20 +56,18 @@
     font-size: $icon-size;
     line-height: $height - (2 * $margin) - 4px;
     text-align: center;
-    vertical-align: middle;
     transform: rotate(-180deg);
   }
 
-  /* stylelint-disable selector-class-pattern */
+  /* stylelint-disable-next-line */
   &.-checked {
-    background: theme-color("primary");
+    background: var(--#{$cdk}green-500);
 
     &::after {
       left: $width - $height - 2px + $margin;
-      color: theme-color("primary");
+      color: var(--#{$cdk}green-500);
       content: "check";
       transform: rotate(0deg);
     }
   }
-  /* stylelint-enable */
 }

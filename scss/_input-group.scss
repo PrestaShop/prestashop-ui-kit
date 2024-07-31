@@ -3,9 +3,9 @@ $component-name: input-group;
 
 .#{$component-name} {
   &-text {
-    padding: $input-padding-y 0.625rem;
+    padding: var(--#{$cdk}size-6) var(--#{$cdk}size-10);
     font-size: $font-size-base;
-    color: $medium-gray;
+    color: var(--#{$cdk}primary-600);
 
     .material-icons {
       font-size: $font-size-base;
@@ -23,9 +23,7 @@ $component-name: input-group;
     width: 1%;
 
     .form-control {
-      padding: 0.375rem 2rem 0.375rem 0.625rem;
-      @include border-top-right-radius(0);
-      @include border-bottom-right-radius(0);
+      padding: var(--#{$cdk}size-6) var(--#{$cdk}size-32) var(--#{$cdk}size-6) var(--#{$cdk}size-10);
     }
 
     + .#{$component-name}-append {

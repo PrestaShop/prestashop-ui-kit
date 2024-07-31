@@ -1,26 +1,17 @@
+// Breadcrumb
 .breadcrumb {
   margin: 0;
-  font-size: 0.75rem;
 
   li {
-    + li::before {
+    + li {
       padding-right: 0;
-      padding-left: 0.1875rem;
+      padding-left: var(--#{$cdk}size-8);
+
+      &::before {
+        float: left;
+        padding-right: var(--#{$cdk}size-8);
+        content: ">";
+      }
     }
-
-    > a {
-      @extend a;
-      font-weight: 600;
-      color: $primary;
-    }
-  }
-}
-
-.breadcrumb-item {
-  font-weight: $font-weight-normal;
-  color: $dark-gray;
-
-  + .breadcrumb-item::before {
-    content: ">";
   }
 }

@@ -1,26 +1,31 @@
 /* stylelint-disable */
+// New set of variables for Core Design Kit
+@import "root";
 
 // Color system
-$white: #fff;
-$gray-disabled: #eaebec;
-$gray-100: #fafbfc;
-$gray-200: #fafbfc;
-$gray-250: #fafbfc;
-$gray-300: #bbcdd2;
-$gray-400: #bbcdd2;
-$gray-450: #b3c7cd;
-$gray-500: #6c868e;
-$gray-550: #708090;
-$gray-600: #6c868e;
-$gray-700: #363a41;
-$gray-750: #363a41;
-$gray-800: #363a41;
-$gray-900: #282b30;
-$black: #000;
+$white: map-get($map: $cdk-common, $key: "white");
+$black: map-get($map: $cdk-common, $key: "black");
+
+$gray-100: map-get($map: $cdk-primary, $key: "primary-100");
+$gray-200: map-get($map: $cdk-primary, $key: "primary-200");
+$gray-250: map-get($map: $cdk-primary, $key: "primary-200");
+$gray-300: map-get($map: $cdk-primary, $key: "primary-300");
+$gray-350: map-get($map: $cdk-primary, $key: "primary-300");
+$gray-400: map-get($map: $cdk-primary, $key: "primary-400");
+$gray-450: map-get($map: $cdk-primary, $key: "primary-400");
+$gray-500: map-get($map: $cdk-primary, $key: "primary-500");
+$gray-550: map-get($map: $cdk-primary, $key: "primary-500");
+$gray-600: map-get($map: $cdk-primary, $key: "primary-600");
+$gray-650: map-get($map: $cdk-primary, $key: "primary-600");
+$gray-700: map-get($map: $cdk-primary, $key: "primary-700");
+$gray-750: map-get($map: $cdk-primary, $key: "primary-700");
+$gray-800: map-get($map: $cdk-primary, $key: "primary-800");
+$gray-900: #101010;
+$gray-disabled: map-get($map: $cdk-primary, $key: "primary-400");
 
 // PS Vars
-$extra-light-gray: $gray-100;
-$light-gray: $gray-300;
+$extra-light-gray: $gray-200;
+$light-gray: $gray-400;
 $medium-gray: $gray-500;
 $dark-gray: $gray-700;
 $extra-dark-gray: $gray-900;
@@ -28,60 +33,55 @@ $gray-light: $light-gray;
 $gray-medium: $medium-gray;
 $gray-dark: $dark-gray;
 $gray-soft: $gray-200;
-$background-color: #eff1f2;
-$primary-lighten: #f4fcfd;
+$background-color: map-get($map: $cdk-primary, $key: "primary-100");
+$primary-lighten: map-get($map: $cdk-primary, $key: "primary-200");
 $local-font: false !default;
 
-$blue: #25b9d7;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #f54c3e;
-$orange: #fd7e14 !default;
-$yellow: #fab000;
-$green: #70b580;
-$orange: #fd7e14 !default;
-$teal: #20c997 !default;
-$cyan: $blue;
-$light-blue: #f4fcfd;
+$blue: map-get($map: $cdk-blue, $key: "blue-500");
+$indigo: map-get($map: $cdk-purple, $key: "purple-700");
+$purple: map-get($map: $cdk-purple, $key: "purple-700");
+$red: map-get($map: $cdk-red, $key: "red-500");
+$orange: map-get($map: $cdk-yellow, $key: "yellow-500");
+$yellow: map-get($map: $cdk-yellow, $key: "yellow-500");
+$green: map-get($map: $cdk-green, $key: "green-500");
+$teal: map-get($map: $cdk-ocean-blue, $key: "ocean-blue-700");
+$cyan: map-get($map: $cdk-ocean-blue, $key: "ocean-blue-500");
+$light-blue: map-get($map: $cdk-primary, $key: "primary-200");
 
 // main button background colors
-$primary-hover: #7cd5e7;
-$primary-active: #21a6c1;
-$primary-disabled: #d3f1f7;
-$secondary-hover: #b7ced3;
-$secondary-active: #889da2;
-$danger-hover: #fde1e1;
-$notice: #dff5f9;
+$primary-hover: $gray-700;
+$primary-active: $gray-600;
+$primary-disabled: $gray-500;
+$secondary-hover: $gray-400;
+$secondary-active: $gray-300;
+$danger-hover: map-get($map: $cdk-red, $key: "red-300");
+$notice: map-get($map: $cdk-ocean-blue, $key: "ocean-blue-50");
 
-$primary: $blue !default;
-$secondary: $medium-gray;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
-$outline-color: #005fcc;
-
-$toast-success: #53d572 !default;
-$toast-warning: #fab000 !default;
+$primary: map-get($map: $cdk-primary, $key: "primary-800");
+$secondary: map-get($map: $cdk-primary, $key: "primary-500");
+$success: $green;
+$info: $blue;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+$outline-color: $blue;
 
 $brand-primary: $primary !default;
 $brand-secondary: $secondary !default;
-$brand-info: #5bc0de !default;
-$brand-warning: #f0ad4e !default;
+$brand-info: $info !default;
+$brand-warning: $warning !default;
 $brand-success: $success !default;
 $brand-danger: $danger !default;
 
 $btn-primary-bg: $primary-hover;
-$btn-secondary-border: #000;
+$btn-secondary-border: map-get($map: $cdk-primary, $key: "primary-800");
 $btn-info-bg: $brand-info !default;
 $btn-success-bg: $brand-success !default;
 $btn-warning-bg: $brand-warning !default;
 $btn-danger-bg: $brand-danger !default;
 
-$help-box-hover: #66cee3;
+$help-box-hover: $gray-600;
 
 $theme-colors: (
   "primary": $primary,
@@ -95,24 +95,36 @@ $theme-colors: (
 );
 
 $alerts-background-colors: (
-  "success": #cbf2d4,
-  "info": #beeaf3,
-  "warning": #fffbd3,
-  "danger": #fbc6c3,
+  "primary": var(--#{$cdk}primary-400, #dddddd),
+  "secondary": var(--#{$cdk}white, #ffffff),
+  "success": var(--#{$cdk}green-50, #eaf8ef),
+  "info": var(--#{$cdk}blue-50, #e8edfd),
+  "warning": var(--#{$cdk}yellow-50, #fff5e5),
+  "danger": var(--#{$cdk}red-50, #ffe4e6),
+  "light": var(--#{$cdk}white, #ffffff),
+  "dark": var(--#{$cdk}primary-500, #bbbbbb),
 );
 
 $alerts-second-colors: (
-  "success": #53d572,
-  "info": #25b9d7,
-  "warning": #fab000,
-  "danger": #f44336,
+  "primary": var(--#{$cdk}primary-800, #1b1c1d),
+  "secondary": var(--#{$cdk}primary-800, #1b1c1d),
+  "success": var(--#{$cdk}green-500, #207f4b),
+  "info": var(--#{$cdk}blue-500, #174eef),
+  "warning": var(--#{$cdk}yellow-500, #ffa000),
+  "danger": var(--#{$cdk}red-500, #ba151a),
+  "light": var(--#{$cdk}primary-400, #dddddd),
+  "dark": var(--#{$cdk}primary-800, #1b1c1d),
 );
 
 $theme-alerts-icons: (
-  success: "\E5CA",
+  primary: "\e000",
+  secondary: "\e000",
+  success: "\e86c",
   info: "\e88e",
-  warning: "\E002",
+  warning: "\e002",
   danger: "\e000",
+  light: "\e000",
+  dark: "\e000",
 );
 
 $theme-colors-icons: (
@@ -120,7 +132,7 @@ $theme-colors-icons: (
   "secondary": $secondary,
   "success": $success,
   "info": $info,
-  "warning": #fab000,
+  "warning": $warning,
   "danger": $danger,
   "light": $light,
 );
@@ -128,41 +140,77 @@ $theme-colors-icons: (
 $theme-colors-hover: (
   primary: $primary-hover,
   secondary: $secondary-hover,
-  success: #9bcba6,
-  info: $primary-hover,
-  warning: #e6b045,
-  danger: #e76d7a,
-  light: $gray-800,
-  dark: $gray-100,
-  default: $light-blue,
+  success: map-get($map: $cdk-green, $key: "green-300"),
+  info: map-get($map: $cdk-blue, $key: "blue-300"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-300"),
+  danger: map-get($map: $cdk-red, $key: "red-300"),
+  light: $gray-700,
+  dark: $gray-700,
+  default: map-get($map: $cdk-primary, $key: "primary-300"),
 );
 
 $theme-colors-active: (
   primary: $primary-active,
   secondary: $secondary-active,
-  success: #5a9166,
-  info: darken(map-get($theme-colors, "info"), 10%),
-  warning: darken(map-get($theme-colors, "warning"), 10%),
-  danger: #c3362b,
-  light: darken(map-get($theme-colors, "light"), 10%),
-  dark: darken(map-get($theme-colors, "dark"), 10%),
-  default: $primary,
+  success: map-get($map: $cdk-green, $key: "green-500"),
+  info: map-get($map: $cdk-blue, $key: "blue-500"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-500"),
+  danger: map-get($map: $cdk-red, $key: "red-500"),
+  light: darken(map-get($theme-colors, "light"), 8%),
+  dark: darken(map-get($theme-colors, "dark"), 8%),
+  default: map-get($map: $cdk-primary, $key: "primary-400"),
+);
+
+$theme-colors-light: (
+  primary: map-get($map: $cdk-primary, $key: "primary-400"),
+  secondary: map-get($map: $cdk-common, $key: "white"),
+  success: map-get($map: $cdk-green, $key: "green-50"),
+  info: map-get($map: $cdk-blue, $key: "blue-50"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-50"),
+  danger: map-get($map: $cdk-red, $key: "red-50"),
+  light: map-get($map: $cdk-common, $key: "white"),
+  dark: map-get($map: $cdk-primary, $key: "primary-500"),
+  default: map-get($map: $cdk-primary, $key: "primary-400"),
+);
+
+$theme-colors-light-hover: (
+  primary: map-get($map: $cdk-primary, $key: "primary-300"),
+  secondary: map-get($map: $cdk-primary, $key: "primary-300"),
+  success: map-get($map: $cdk-green, $key: "green-100"),
+  info: map-get($map: $cdk-blue, $key: "blue-100"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-100"),
+  danger: map-get($map: $cdk-red, $key: "red-100"),
+  light: map-get($map: $cdk-common, $key: "white"),
+  dark: map-get($map: $cdk-primary, $key: "primary-600"),
+  default: map-get($map: $cdk-primary, $key: "primary-300"),
+);
+
+$theme-colors-light-active: (
+  primary: map-get($map: $cdk-primary, $key: "primary-400"),
+  secondary: map-get($map: $cdk-primary, $key: "primary-400"),
+  success: map-get($map: $cdk-green, $key: "green-300"),
+  info: map-get($map: $cdk-blue, $key: "blue-300"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-300"),
+  danger: map-get($map: $cdk-red, $key: "red-300"),
+  light: map-get($map: $cdk-common, $key: "white"),
+  dark: map-get($map: $cdk-primary, $key: "primary-400"),
+  default: map-get($map: $cdk-primary, $key: "primary-400"),
 );
 
 $theme-colors-background: (
-  primary: #dff5f9,
-  secondary: $black,
-  success: #d6f0d8,
-  info: #dff5f9,
-  warning: #fffbd3,
-  danger: #fde1e1,
-  light: $gray-200,
-  dark: $gray-700,
+  primary: map-get($map: $cdk-primary, $key: "primary-200"),
+  secondary: map-get($map: $cdk-primary, $key: "primary-800"),
+  success: map-get($map: $cdk-green, $key: "green-50"),
+  info: map-get($map: $cdk-blue, $key: "blue-50"),
+  warning: map-get($map: $cdk-yellow, $key: "yellow-50"),
+  danger: map-get($map: $cdk-red, $key: "red-50"),
+  light: map-get($map: $cdk-primary, $key: "primary-200"),
+  dark: map-get($map: $cdk-primary, $key: "primary-800"),
 );
 
 $theme-colors-shadow: (
   primary: theme-color("primary"),
-  secondary: $black,
+  secondary: theme-color("secondary"),
   success: theme-color("success"),
   info: theme-color("info"),
   warning: theme-color("warning"),
@@ -201,15 +249,15 @@ $spacers: (
 );
 
 // Body
-$body-bg: $white !default;
-$body-color: $dark-gray;
+$body-bg: map-get($map: $cdk-common, $key: "white");
+$body-color: map-get($map: $cdk-primary, $key: "primary-800");
 
 // Links
 $link-hover-color: theme-color("primary") !default;
 $link-hover-decoration: underline;
 
 // Paragraphs
-$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom: map-get($map: $cdk-size, $key: "size-16");
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -234,7 +282,7 @@ $container-max-widths: (
 
 // Grid columns
 //$grid-columns:                12 !default;
-$grid-gutter-width: 1.875rem !default;
+$grid-gutter-width: map-get($map: $cdk-size, $key: "size-30");
 
 // Components
 //$line-height-lg:              1.5 !default;
@@ -243,40 +291,40 @@ $grid-gutter-width: 1.875rem !default;
 //$border-width:                1px !default;
 //$border-color:                $gray-300 !default;
 
-$border-radius: 4px !default;
+$border-radius: 0;
 //$border-radius-lg:            .3rem !default;
 //$border-radius-sm:            .2rem !default;
 
 //$component-active-color:      $white !default;
 //$component-active-bg:         theme-color("primary") !default;
 
-$caret-width: 0.25rem;
+$caret-width: map-get($map: $cdk-size, $key: "size-4");
 
 //$transition-base:             all .2s ease-in-out !default;
 //$transition-fade:             opacity .15s linear !default;
 //$transition-collapse:         height .35s ease !default;
 
 // Fonts
-$font-family-sans-serif: "Open Sans", helvetica, arial, sans-serif;
+$font-family-sans-serif: var(--#{$cdk}font-family-primary);
 //$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //$font-family-base:            $font-family-sans-serif !default;
 
-$font-size-base: 0.875rem;
-$font-size-lg: 1rem;
-$font-size-sm: 0.75rem;
-$font-size-xs: 0.625rem; // PS custom
+$font-size-base: map-get($map: $cdk-size, $key: "size-14");
+$font-size-lg: map-get($map: $cdk-size, $key: "size-16");
+$font-size-sm: map-get($map: $cdk-size, $key: "size-12");
+$font-size-xs: map-get($map: $cdk-size, $key: "size-10"); // PS custom
 
 //$font-weight-light:           300;
 //$font-weight-normal:          400;
-$font-weight-semibold: 600;
+$font-weight-semibold: 500;
 $font-weight-bold: 700;
 
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1rem;
-$h4-font-size: 0.875rem;
-$h5-font-size: 0.75rem;
-$h6-font-size: 0.625rem;
+$h1-font-size: map-get($map: $cdk-size, $key: "size-24");
+$h2-font-size: map-get($map: $cdk-size, $key: "size-20");
+$h3-font-size: map-get($map: $cdk-size, $key: "size-16");
+$h4-font-size: map-get($map: $cdk-size, $key: "size-14");
+$h5-font-size: map-get($map: $cdk-size, $key: "size-12");
+$h6-font-size: map-get($map: $cdk-size, $key: "size-10");
 
 //$headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family: $font-family-sans-serif;
@@ -299,12 +347,12 @@ $headings-color: $body-color;
 
 //$small-font-size:             80% !default;
 
-$text-muted: $medium-gray;
+$text-muted: map-get($map: $cdk-primary, $key: "primary-600");
 
 //$blockquote-small-color:      $gray-600 !default;
 //$blockquote-font-size:        ($font-size-base * 1.25) !default;
 
-$hr-border-color: $light-gray;
+$hr-border-color: map-get($map: $cdk-primary, $key: "primary-400");
 //$hr-border-width:             $border-width !default;
 
 //$mark-padding:                .2em !default;
@@ -321,13 +369,14 @@ $hr-border-color: $light-gray;
 //$hr-margin-y:                 $spacer !default;
 
 // Tables
-$table-cell-padding: 0.4rem;
-$table-cell-padding-sm: 0.25rem;
+$table-cell-padding: map-get($map: $cdk-size, $key: "size-6");
+$table-cell-padding-sm: map-get($map: $cdk-size, $key: "size-4");
 
 //$table-bg:                    transparent !default;
-$table-accent-bg: $background-color;
-$table-hover-bg: theme-color-hover("primary");
-$table-active-bg: theme-color-hover("primary");
+$table-accent-bg: map-get($map: $cdk-primary, $key: "primary-300");
+$table-hover-color: map-get($map: $cdk-primary, $key: "primary-800");
+$table-hover-bg: map-get($map: $cdk-ocean-blue, $key: "ocean-blue-50");
+$table-active-bg: map-get($map: $cdk-primary, $key: "primary-700");
 
 //$table-border-width:          $border-width !default;
 //$table-border-color:          $gray-300 !default;
@@ -335,43 +384,40 @@ $table-active-bg: theme-color-hover("primary");
 $table-head-bg: $background-color;
 $table-head-color: $body-color;
 
-$table-dark-bg: $body-color;
-$table-dark-accent-bg: $extra-dark-gray;
-$table-dark-hover-bg: theme-color-hover("primary");
-$table-dark-border-color: $medium-gray;
+$table-dark-bg: map-get($map: $cdk-primary, $key: "primary-700");
+$table-dark-accent-bg: map-get($map: $cdk-primary, $key: "primary-900");
+$table-dark-hover-bg: map-get($map: $cdk-primary, $key: "primary-800");
+$table-dark-border-color: map-get($map: $cdk-primary, $key: "primary-500");
 //$table-dark-color:            $body-bg !default;
 
 // Buttons
-$input-btn-padding-y: 0.375rem;
-$input-btn-padding-x: 0.838rem;
+$input-btn-padding-y: map-get($map: $cdk-size, $key: "size-6");
+$input-btn-padding-x: map-get($map: $cdk-size, $key: "size-14");
 //$input-btn-line-height:       $line-height-base !default;
 
 //$input-btn-focus-width:       .2rem !default;
 //$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 //$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: 0.313rem;
-$input-btn-padding-x-sm: 0.625rem;
+$input-btn-padding-y-sm: map-get($map: $cdk-size, $key: "size-5");
+$input-btn-padding-x-sm: map-get($map: $cdk-size, $key: "size-10");
 //$input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg: 0.438rem;
-$input-btn-padding-x-lg: 0.838rem;
+$input-btn-padding-y-lg: map-get($map: $cdk-size, $key: "size-8");
+$input-btn-padding-x-lg: map-get($map: $cdk-size, $key: "size-14");
 //$input-btn-line-height-lg:    $line-height-lg !default;
 
 //$input-btn-border-width:      $border-width !default;
 
 // Buttons
-$btn-padding-y: 0.5rem !default;
-$btn-padding-x: 1rem !default;
-//$btn-line-height:             $input-btn-line-height !default;
+$btn-padding-y: map-get($map: $cdk-size, $key: "size-8");
+$btn-padding-x: map-get($map: $cdk-size, $key: "size-16");
 
-//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-//$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-//$btn-line-height-sm:          $input-btn-line-height-sm !default;
+$btn-padding-y-sm: map-get($map: $cdk-size, $key: "size-5");
+$btn-padding-x-sm: map-get($map: $cdk-size, $key: "size-10");
 
-//$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-//$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-//$btn-line-height-lg:          $input-btn-line-height-lg !default;
+$btn-padding-y-lg: map-get($map: $cdk-size, $key: "size-8");
+$btn-padding-x-lg: map-get($map: $cdk-size, $key: "size-16");
 
 //$btn-border-width:            $input-btn-border-width !default;
 
@@ -386,15 +432,15 @@ $btn-active-box-shadow: none;
 
 //$btn-block-spacing-y:         .5rem !default;
 
-$btn-border-radius: 4px;
-//$btn-border-radius-lg:        $border-radius-lg !default;
-//$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
 
 //$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Forms
-$input-padding-y: 0.375rem;
-$input-padding-x: 0.4375rem;
+$input-padding-y: map-get($map: $cdk-size, $key: "size-6");
+$input-padding-x: map-get($map: $cdk-size, $key: "size-8");
 //$input-line-height:                     $input-btn-line-height !default;
 
 //$input-padding-y-sm:                    $input-btn-padding-y-sm !default;
@@ -406,7 +452,7 @@ $input-padding-x: 0.4375rem;
 //$input-line-height-lg:                  $input-btn-line-height-lg !default;
 
 //$input-bg:                              $white !default;
-$input-disabled-bg: #eceeef;
+$input-disabled-bg: map-get($map: $cdk-primary, $key: "primary-300");
 
 $input-color: $body-color;
 $input-border-color: $light-gray;
@@ -423,18 +469,18 @@ $input-focus-border-color: theme-color-hover("primary");
 //$input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow: none;
 
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: map-get($map: $cdk-primary, $key: "primary-500");
 
 //$input-height-border:                   $input-border-width * 2 !default;
 
 //$input-height-inner:                    ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
-$input-height: 2.188rem;
+$input-height: map-get($map: $cdk-size, $key: "size-32");
 
 //$input-height-inner-sm:                 ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
 //$input-height-sm:                       calc(#{$input-height-inner-sm} + #{$input-height-border}) !default;
 
 //$input-height-inner-lg:                 ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
-$input-height-lg: 2.188rem;
+$input-height-lg: map-get($map: $cdk-size, $key: "size-32");
 
 //$input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -495,7 +541,7 @@ $input-group-addon-bg: $extra-light-gray;
 $custom-select-disabled-color: $medium-gray;
 //$custom-select-bg:                  $white !default;
 $custom-select-disabled-bg: $input-disabled-bg;
-$custom-select-bg-size: 8px 10px !default; // In pixels because image dimensions
+$custom-select-bg-size: map-get($map: $cdk-size, $key: "size-8") map-get($map: $cdk-size, $key: "size-10"); // In pixels because image dimensions
 $custom-select-indicator-color: $input-color;
 //$custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$custom-select-border-width:        $input-btn-border-width !default;
@@ -558,16 +604,16 @@ $dropdown-link-hover-bg: $white;
 //$dropdown-link-active-color:        $component-active-color !default;
 //$dropdown-link-active-bg:           $component-active-bg !default;
 
-//$dropdown-link-disabled-color:      $gray-600 !default;
+$dropdown-link-disabled-color: map-get($map: $cdk-primary, $key: "primary-300");
 
-$dropdown-item-padding-x: 0.3125rem;
-$dropdown-item-padding-y: 0.3125rem;
+$dropdown-item-padding-x: map-get($map: $cdk-size, $key: "size-5");
+$dropdown-item-padding-y: map-get($map: $cdk-size, $key: "size-5");
 
 //$dropdown-header-color:             $gray-600 !default;
 
 // Navs
-$nav-link-padding-y: 0.9375rem;
-$nav-link-padding-x: 1.25rem;
+$nav-link-padding-y: map-get($map: $cdk-size, $key: "size-16");
+$nav-link-padding-x: map-get($map: $cdk-size, $key: "size-20");
 $nav-link-disabled-color: $light-gray;
 
 $nav-tabs-border-color: $white;
@@ -580,7 +626,7 @@ $nav-tabs-link-active-border-color: theme-color("primary");
 
 $nav-pills-link-hover-border-color: $nav-tabs-link-hover-border-color;
 $nav-pills-link-active-color: $nav-tabs-link-active-color;
-$nav-pills-link-active-bg: #f4f9fb;
+$nav-pills-link-active-bg: $gray-200;
 $nav-pills-link-active-border-color: $nav-tabs-link-active-border-color; // PS custom
 
 //$nav-pills-border-radius:           $border-radius !default;
@@ -619,18 +665,18 @@ $nav-pills-link-active-border-color: $nav-tabs-link-active-border-color; // PS c
 //$navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 // Pagination
-$pagination-padding-y: 0.65rem;
-$pagination-padding-x: 0.5rem;
+$pagination-padding-y: map-get($map: $cdk-size, $key: "size-10");
+$pagination-padding-x: map-get($map: $cdk-size, $key: "size-8");
 //$pagination-padding-y-sm:           .25rem !default;
 //$pagination-padding-x-sm:           .5rem !default;
 //$pagination-padding-y-lg:           .75rem !default;
 //$pagination-padding-x-lg:           1.5rem !default;
 //$pagination-line-height:            1.25 !default;
 
-$pagination-color: $medium-gray;
-$pagination-bg: $white;
+$pagination-color: map-get($map: $cdk-primary, $key: "primary-600");
+$pagination-bg: map-get($map: $cdk-common, $key: "white");
 //$pagination-border-width:           $border-width !default;
-$pagination-border-color: $white;
+$pagination-border-color: map-get($map: $cdk-common, $key: "white");
 
 //$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
@@ -647,41 +693,29 @@ $pagination-disabled-bg: $pagination-bg;
 $pagination-disabled-border-color: $pagination-border-color;
 
 // Jumbotron
-$jumbotron-padding: 2rem !default;
+$jumbotron-padding: map-get($map: $cdk-size, $key: "size-32");
 $jumbotron-bg: $extra-light-gray;
 
 // Cards
-$card-spacer-x: 0.625rem !default;
-$card-spacer-y: 0.625rem !default;
-$card-border-width: 1px !default;
-$card-border-radius: 5px !default;
+$card-spacer-x: map-get($map: $cdk-size, $key: "size-24") !default;
+$card-spacer-y: map-get($map: $cdk-size, $key: "size-24") !default;
+$card-border-width: var(--#{$cdk}size-1) !default;
+$card-border-radius: var(--#{$cdk}size-0) !default;
 $card-border-radius-inner: $card-border-radius !default;
-$card-cap-bg: $gray-200 !default;
-$card-bg: #fff !default;
-$card-link-hover-color: #fff !default;
-$card-border-color: #dbe6e9 !default;
-//$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
-//$card-cap-bg:                       rgba($black, .03) !default;
-//$card-bg:                           $white !default;
-
-//$card-img-overlay-padding:          1.25rem !default;
-
-//$card-group-margin:                 ($grid-gutter-width / 2) !default;
-//$card-deck-margin:                  $card-group-margin !default;
-
-//$card-columns-count:                3 !default;
-//$card-columns-gap:                  1.25rem !default;
-//$card-columns-margin:               $card-spacer-y !default;
+$card-cap-bg: var(--#{$cdk}white) !default;
+$card-bg: var(--#{$cdk}white) !default;
+$card-link-hover-color: var(--#{$cdk}white) !default;
+$card-border-color: var(--#{$cdk}primary-400) !default;
 
 // Tooltips
 //$tooltip-font-size:           $font-size-sm !default;
 //$tooltip-max-width:           200px !default;
 //$tooltip-color:               $white !default;
-$tooltip-bg: $medium-gray;
+$tooltip-bg: map-get($map: $cdk-primary, $key: "primary-800");
 //$tooltip-border-radius:        $border-radius !default;
-//$tooltip-opacity:             .9 !default;
-$tooltip-padding-y: 0.625rem;
-$tooltip-padding-x: 1.25rem;
+$tooltip-opacity: 1;
+$tooltip-padding-y: map-get($map: $cdk-size, $key: "size-10");
+$tooltip-padding-x: map-get($map: $cdk-size, $key: "size-20");
 //$tooltip-margin:              0 !default;
 
 //$tooltip-arrow-width:         .8rem !default;
@@ -699,12 +733,12 @@ $popover-box-shadow: none;
 
 $popover-header-bg: $extra-light-gray;
 //$popover-header-color:              $headings-color !default;
-$popover-header-padding-y: 0.625rem;
-$popover-header-padding-x: 1.25rem;
+$popover-header-padding-y: map-get($map: $cdk-size, $key: "size-10");
+$popover-header-padding-x: map-get($map: $cdk-size, $key: "size-20");
 
 //$popover-body-color:                $body-color !default;
-$popover-body-padding-y: 0.625rem;
-$popover-body-padding-x: 1.25rem;
+$popover-body-padding-y: map-get($map: $cdk-size, $key: "size-10");
+$popover-body-padding-x: map-get($map: $cdk-size, $key: "size-20");
 
 //$popover-arrow-width:               1rem !default;
 //$popover-arrow-height:              .5rem !default;
@@ -713,17 +747,17 @@ $popover-body-padding-x: 1.25rem;
 //$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 
 // Badges
-$badge-font-size: 0.625rem !default;
+$badge-font-size: map-get($map: $cdk-size, $key: "size-10") !default;
 $badge-font-weight: 500 !default;
-$badge-padding-y: 0.25rem;
-$badge-padding-x: 0.5rem;
+$badge-padding-y: map-get($map: $cdk-size, $key: "size-4");
+$badge-padding-x: map-get($map: $cdk-size, $key: "size-8");
 //$badge-border-radius:               $border-radius !default;
 
 //$badge-pill-padding-x:              .6em !default;
 //$badge-pill-border-radius:          10rem !default;
 
 // Modals
-$modal-inner-padding: 1.875rem;
+$modal-inner-padding: map-get($map: $cdk-size, $key: "size-30");
 
 //$modal-dialog-margin:         .5rem !default;
 //$modal-dialog-margin-y-sm-up: 1.75rem !default;
@@ -751,12 +785,12 @@ $modal-sm: 400px;
 //$modal-transition:                  transform .3s ease-out !default;
 
 // Alerts
-$alert-padding-y: 1rem !default;
-$alert-padding-x: 1rem;
+$alert-padding-y: map-get($map: $cdk-size, $key: "size-16");
+$alert-padding-x: map-get($map: $cdk-size, $key: "size-16");
 //$alert-margin-bottom:               1rem !default;
 //$alert-border-radius:               $border-radius !default;
 //$alert-link-font-weight:            $font-weight-bold !default;
-$alert-border-width: 0.125rem;
+$alert-border-width: map-get($map: $cdk-size, $key: "size-2");
 
 //$alert-bg-level:                    -10 !default;
 //$alert-border-level:                -9 !default;
@@ -774,51 +808,40 @@ $alert-border-width: 0.125rem;
 //$progress-bar-transition:           width .6s ease !default;
 
 // List group
-//$list-group-bg:                     $white !default;
-$list-group-border-color: $light-gray;
-//$list-group-border-width:           $border-width !default;
-//$list-group-border-radius:          $border-radius !default;
+$list-group-bg: map-get($map: $cdk-common, $key: "white");
+$list-group-border-color: map-get($map: $cdk-primary, $key: "primary-400");
 
-$list-group-item-padding-y: $input-padding-y;
-$list-group-item-padding-x: $input-padding-x;
+$list-group-item-padding-y: map-get($map: $cdk-size, $key: "size-10");
+$list-group-item-padding-x: map-get($map: $cdk-size, $key: "size-16");
 
-$list-group-hover-bg: theme-color-hover("primary");
-//$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg: theme-color-hover("primary");
-//$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-hover-bg: map-get($map: $cdk-primary, $key: "primary-200");
+$list-group-active-color: map-get($map: $cdk-common, $key: "white");
+$list-group-active-bg: map-get($map: $cdk-primary, $key: "primary-800");
+$list-group-active-border-color: map-get($map: $cdk-primary, $key: "primary-200");
 
-$list-group-disabled-color: $light-gray;
-//$list-group-disabled-bg:            $list-group-bg !default;
-
-//$list-group-action-color:           $gray-700 !default;
-$list-group-action-hover-color: $white;
-
-$list-group-action-active-color: $body-color !default;
-$list-group-action-active-bg: $gray-200 !default;
+$list-group-disabled-color: map-get($map: $cdk-primary, $key: "primary-500");
+$list-group-disabled-bg: map-get($map: $cdk-primary, $key: "primary-200");
 
 // Image thumbnails
 $thumbnail-padding: 0;
-//$thumbnail-bg:                      $body-bg !default;
-//$thumbnail-border-width:            $border-width !default;
-$thumbnail-border-color: $light-gray;
-//$thumbnail-border-radius:           $border-radius !default;
+$thumbnail-bg: map-get($map: $cdk-common, $key: "white");
+$thumbnail-border-color: map-get($map: $cdk-primary, $key: "primary-400");
 $thumbnail-box-shadow: none;
 
 // Figures
-//$figure-caption-font-size:          90% !default;
-$figure-caption-color: $medium-gray;
+$figure-caption-color: map-get($map: $cdk-primary, $key: "primary-500");
 
 // Breadcrumbs
-$breadcrumb-padding-y: 0.3125rem;
-$breadcrumb-padding-x: 0.3125rem;
-$breadcrumb-item-padding: 0.3rem;
+$breadcrumb-padding-y: map-get($map: $cdk-size, $key: "size-5");
+$breadcrumb-padding-x: map-get($map: $cdk-size, $key: "size-5");
+$breadcrumb-item-padding: map-get($map: $cdk-size, $key: "size-8");
 
 $breadcrumb-margin-bottom: 0;
 
-$breadcrumb-bg: none;
-$breadcrumb-divider-color: $dark-gray;
-$breadcrumb-active-color: $extra-dark-gray;
-$breadcrumb-divider: "/";
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: map-get($map: $cdk-primary, $key: "primary-800");
+$breadcrumb-active-color: map-get($map: $cdk-primary, $key: "primary-800");
+$breadcrumb-divider: ">";
 
 // Carousel
 //$carousel-control-color:            $white !default;

@@ -5,24 +5,25 @@
     // normal header row
     th {
       border-top: none;
-      border-bottom: solid 0.125rem theme-color("primary");
+      border-bottom: solid var(--#{$cdk}size-2) theme-color("primary");
 
       > .material-icons {
-        margin-top: -0.5rem;
-        color: $gray-500;
+        margin-top: calc(-1 * var(--#{$cdk}size-8));
+        color: var(--#{$cdk}primary-600);
       }
     }
 
     // filter row
     .column-filters {
-      background: $gray-200;
+      background: var(--#{$cdk}primary-100);
 
+      td,
       th {
-        vertical-align: top;
-        border-bottom: none;
+        vertical-align: middle;
+        border-bottom: 1px solid var(--#{$cdk}primary-400);
         padding: {
-          top: 1rem;
-          bottom: 1rem;
+          top: var(--#{$cdk}size-16);
+          bottom: var(--#{$cdk}size-16);
         }
       }
     }
@@ -47,7 +48,7 @@
   }
 
   td {
-    font-size: 0.815rem;
+    font-size: 0.8125rem;
   }
 
   .form-group {
@@ -62,22 +63,19 @@
 
 .table-form {
   tbody tr:nth-of-type(odd) {
-    background-color: theme-color-background("info");
+    background-color: var(--#{$cdk}primary-300);
   }
 }
 
 .table-hover {
-  tbody tr {
-    @include hover() {
-      color: $white;
-      cursor: pointer;
-    }
+  .table-active {
+    color: var(--#{$cdk}white);
   }
 }
 
 .thead-dark {
   th {
-    background-color: $extra-dark-gray;
+    background-color: var(--#{$cdk}primary-800);
   }
 }
 

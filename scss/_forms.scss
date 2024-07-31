@@ -1,24 +1,24 @@
 .form {
   &.form-background {
-    padding: 2rem;
-    background-color: $background-color;
+    padding: var(--#{$cdk}size-32);
+    background-color: var(--#{$cdk}primary-100);
   }
 }
 
 .form-control-label {
-  margin-bottom: 0.3125rem;
-  color: $dark-gray;
+  margin-bottom: var(--#{$cdk}size-5);
+  color: var(--#{$cdk}primary-700);
 }
 
 // stylelint-disable
 // help labels around form elements
 .form-text {
-  font-size: 0.75rem;
-  color: $medium-gray;
+  font-size: var(--#{$cdk}size-12);
+  color: var(--#{$cdk}primary-700);
 
   a.btn,
   a {
-    color: $primary;
+    color: var(--#{$cdk}primary-800);
   }
 
   label + & {
@@ -30,17 +30,13 @@
   .small {
     a,
     a.btn {
-      color: $primary;
+      color: var(--#{$cdk}primary-800);
     }
   }
 
   .form-control-label {
     display: flex;
     align-items: flex-start;
-
-    .help-box {
-      margin-top: 0.125rem;
-    }
   }
 }
 // stylelint-enable
@@ -48,33 +44,51 @@
 .form-control {
   height: auto;
   min-height: $input-height;
-  padding: 0.5rem 1rem;
+  padding: var(--#{$cdk}size-8) var(--#{$cdk}size-16);
+  border-radius: var(--#{$cdk}size-0);
 
   &[type="text"],
-  &[type="number"] {
+  &[type="number"],
+  &[type="password"] {
     &:hover,
     &:focus {
-      background-color: $primary-lighten;
+      background-color: var(--#{$cdk}white);
+      border-color: var(--#{$cdk}primary-800);
     }
 
     &.disabled:hover,
     &.disabled:focus,
-    :disabled:hover,
-    :disabled:focus {
-      background-color: $gray-disabled;
+    &:disabled:hover,
+    &:disabled:focus {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}primary-200);
+      border-color: var(--#{$cdk}primary-400);
     }
   }
 
   &.disabled,
-  :disabled {
-    color: $medium-gray;
+  &:disabled {
+    color: var(--#{$cdk}primary-500);
     cursor: $cursor-disabled;
+    background-color: var(--#{$cdk}primary-200);
+    border-color: var(--#{$cdk}primary-400);
+  }
+
+  &:focus {
+    outline: 2px solid var(--#{$cdk}blue-500);
+  }
+
+  &[type="color"] {
+    width: var(--#{$cdk}size-40);
+    /* stylelint-disable-next-line */
+    height: var(--#{$cdk}size-40) !important;
+    padding: var(--#{$cdk}size-1) var(--#{$cdk}size-2);
   }
 }
 
-.form-control-lg {
+/* .form-control-lg {
   padding: $input-btn-padding-y $input-btn-padding-x;
-}
+} */
 
 .has-success,
 .has-warning,
@@ -86,7 +100,7 @@
   }
 
   .form-control {
-    padding-right: 1.5625rem;
+    padding-right: var(--#{$cdk}size-24);
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23f54c3e' d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     /* stylelint-disable */
@@ -116,6 +130,7 @@
     background-repeat: no-repeat;
   }
 }
+
 // stylelint-disable-next-line
 $form-check-name: form-check;
 
@@ -129,7 +144,7 @@ $form-check-name: form-check;
 
   &-radio {
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: var(--#{$cdk}size-10);
 
     .#{$form-check-name}-label {
       display: flex;
@@ -162,24 +177,24 @@ $form-check-name: form-check;
 
   &-round {
     position: relative;
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    border: 2px solid $gray-450;
-    @include transition(0.25s ease-out);
+    width: var(--#{$cdk}size-20);
+    min-width: var(--#{$cdk}size-20);
+    height: var(--#{$cdk}size-20);
+    margin-right: var(--#{$cdk}size-8);
+    border: 2px solid var(--#{$cdk}primary-800);
+    transition: var(--#{$cdk}default-transition);
     @include border-radius(50%);
 
     &::after {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 10px;
-      height: 10px;
+      width: var(--#{$cdk}size-10);
+      height: var(--#{$cdk}size-10);
       content: "";
-      background: $primary;
+      background: var(--#{$cdk}primary-800);
       opacity: 0;
-      @include transition(0.25s ease-out);
+      transition: var(--#{$cdk}default-transition);
       transform: translate(-50%, -50%) scale(0);
       @include border-radius(50%);
     }
@@ -207,16 +222,16 @@ $form-check-name: form-check;
     position: relative;
 
     input {
-      padding-right: 1.6rem;
+      padding-right: var(--#{$cdk}size-32);
     }
 
     &::after {
       @include material-icon("\E8B6");
       position: absolute;
       top: 50%;
-      right: 0.3125rem;
-      margin-top: -(1.375rem / 2);
-      font-size: 1.375rem;
+      right: var(--#{$cdk}size-5);
+      margin-top: calc((-1 * var(--#{$cdk}size-24)) / 2);
+      font-size: var(--#{$cdk}size-24);
       font-weight: $font-weight-normal;
       color: $medium-gray;
     }

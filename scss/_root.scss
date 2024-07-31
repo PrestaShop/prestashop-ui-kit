@@ -1,0 +1,177 @@
+// PrestaShop Core Design Kit
+
+// Variables
+$cdk: cdk- !default;
+
+// Primitives variables
+
+// Common
+$cdk-common: (
+  "black":              #000,
+  "white":              #fff
+) !default;
+
+// Primary
+$cdk-primary: (
+  "primary-100":        #fafafa,
+  "primary-200":        #f7f7f7,
+  "primary-300":        #eee,
+  "primary-400":        #ddd,
+  "primary-500":        #bbb,
+  "primary-600":        #5e5e5e,
+  "primary-700":        #3f3f3d,
+  "primary-800":        #1b1c1d,
+  "primary-900":        #101010
+) !default;
+
+$cdk-red: (
+  "red-50":             #ffe4e6,
+  "red-100":            #fdbfbf,
+  "red-300":            #d63f3c,
+  "red-500":            #ba151a,
+  "red-700":            #a41913
+) !default;
+
+$cdk-purple: (
+  "purple-50":          #f8f0f7,
+  "purple-500":         #decde7,
+  "purple-700":         #7b4fac
+) !default;
+
+$cdk-blue: (
+  "blue-50":            #e8edfd,
+  "blue-100":           #d1dcfc,
+  "blue-300":           #a2b8f9,
+  "blue-500":           #174eef,
+  "blue-700":           #2942cc
+) !default;
+
+$cdk-ocean-blue: (
+  "ocean-blue-50":      #e4f4f8,
+  "ocean-blue-500":     #a4dbe8,
+  "ocean-blue-700":     #5c92aa
+) !default;
+
+$cdk-yellow: (
+  "yellow-50":          #fff5e5,
+  "yellow-100":         #ffeccc,
+  "yellow-300":         #ffd999,
+  "yellow-500":         #ffa000
+) !default;
+
+$cdk-amber: (
+  "amber-100":          #fdf6dd,
+  "amber-500":          #f8e08e
+) !default;
+
+$cdk-green: (
+  "green-50":           #eaf8ef,
+  "green-100":          #bde9c9,
+  "green-300":          #59af70,
+  "green-500":          #207f4b
+) !default;
+
+$cdk-size: (
+  "size-0":               0,
+  "size-1":               1px,
+  "size-2":               0.125rem,
+  "size-3":               0.1875rem,
+  "size-4":               0.25rem,
+  "size-5":               0.3125rem,
+  "size-6":               0.375rem,
+  "size-8":               0.5rem,
+  "size-10":              0.625rem,
+  "size-12":              0.75rem,
+  "size-14":              0.875rem,
+  "size-16":              1rem,
+  "size-18":              1.125rem,
+  "size-20":              1.25rem,
+  "size-24":              1.5rem,
+  "size-28":              1.75rem,
+  "size-30":              1.875rem,
+  "size-32":              2rem,
+  "size-36":              2.25rem,
+  "size-40":              2.5rem,
+  "size-44":              2.75rem,
+  "size-48":              3rem,
+  "size-52":              3.25rem,
+  "size-56":              3.5rem,
+  "size-60":              3.75rem,
+  "size-64":              4rem,
+  "size-72":              4.5rem,
+  "size-80":              5rem,
+  "size-96":              6rem,
+  "size-112":             7rem,
+  "size-128":             8rem,
+  "size-144":             9rem,
+  "size-160":             10rem,
+  "size-176":             11rem,
+  "size-192":             12rem,
+  "size-208":             13rem,
+  "size-224":             14rem,
+  "size-240":             15rem,
+  "size-256":             16rem,
+  "size-288":             18rem,
+  "size-320":             20rem
+) !default;
+
+// List of primitives color maps
+$cdk-primitives: $cdk-common, $cdk-primary, $cdk-red, $cdk-purple, $cdk-blue, $cdk-ocean-blue, $cdk-yellow, $cdk-amber, $cdk-green, $cdk-size !default;
+
+// Generate root primitives CSS variables
+:root {
+  // Primitives
+  @each $primitive in $cdk-primitives {
+    @each $variation, $value in $primitive {
+      --#{$cdk}#{$variation}: #{$value};
+    }
+  }
+
+  // Fonts
+  --#{$cdk}font-family-primary: "IBM Plex Sans", "Verdana", "Arial", "sans-serif";
+  --#{$cdk}font-family-secondary: "IBM Plex Sans", "Verdana", "Arial", "sans-serif";
+  --#{$cdk}font-family-material-icons: "Material Symbols Outlined", "sans-serif";
+
+  --#{$cdk}font-size-xs: 0.75rem;
+  --#{$cdk}font-size-sm: 0.875rem;
+  --#{$cdk}font-size-base: 1rem;
+  --#{$cdk}font-size-lg: 1.125rem;
+  --#{$cdk}font-size-xl: 1.25rem;
+  --#{$cdk}font-size-2xl: 1.5rem;
+  --#{$cdk}font-size-3xl: 1.875rem;
+  --#{$cdk}font-size-4xl: 2rem;
+  --#{$cdk}font-size-5xl: 3rem;
+
+  // Shadows
+  --#{$cdk}box-shadow-default: 0 1px 3px 0 rgb(29 29 27 / 0.2);
+  --#{$cdk}box-shadow-sm: 0 1px 2px 0 rgb(29 29 27 / 0.05);
+  --#{$cdk}box-shadow-md: 0 4px 6px -1px rgb(29 29 27 / 0.2);
+  --#{$cdk}box-shadow-lg: 0 10px 15px -3px rgb(29 29 27 / 0.2);
+  --#{$cdk}box-shadow-xl: 0 20px 25px -5px rgb(29 29 27 / 0.2);
+  --#{$cdk}box-shadow-2xl: 0 25px 60px -12px rgb(29 29 27 / 0.25);
+  --#{$cdk}box-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --#{$cdk}box-shadow-none: none;
+  --#{$cdk}box-shadow-overlay: 0 12px 60px 0 rgb(0 0 0 / 0.1);
+  --#{$cdk}box-shadow-sticky: 0 6px 12px rgb(0 0 0 / 0.1);
+  --#{$cdk}box-shadow-pop-modal: 0 12px 24px rgb(0 0 0 / 0.1);
+
+  // Utilities
+  --#{$cdk}screen-xs: 320px;
+
+  --#{$cdk}min-height-sm: 1.75rem;
+  --#{$cdk}min-height-md: 2.25rem;
+  --#{$cdk}min-height-lg: 3rem;
+
+  --#{$cdk}opacity-overlay: 0.8;
+
+  --#{$cdk}default-transition: all 0.15s;
+  --#{$cdk}default-transition-duration: 0.15s;
+
+  // Specific
+  --#{$cdk}header-height: 3.25rem;
+  --#{$cdk}page-head-height: 6.25rem;
+  --#{$cdk}page-head-with-tabs-height: 9.625rem;
+  --#{$cdk}sidebar-width: 13rem;
+  --#{$cdk}sidebar-width-collapse: 3.25rem;
+  --#{$cdk}multishop-bar-height: 2.25rem;
+}

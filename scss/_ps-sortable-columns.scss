@@ -1,5 +1,3 @@
-$icon-margin-left: 0.5rem !default;
-
 .ps-sortable-column {
 
   display: flex;
@@ -13,12 +11,12 @@ $icon-margin-left: 0.5rem !default;
   .ps-sort {
     @include use-material-icon();
     align-self: flex-end;
-    margin-bottom: 0.125rem;
-    margin-left: $icon-margin-left;
-    font-size: 1rem;
-    color: $gray-500;
+    margin-bottom: var(--#{$cdk}size-2);
+    margin-left: var(--#{$cdk}size-8);
+    font-size: var(--#{$cdk}size-16);
+    color: var(--#{$cdk}primary-500);
     opacity: 0;
-    @include transition(all 0.2s);
+    transition: var(--#{$cdk}default-transition);
     transform: rotate(90deg);
 
     &::before {
@@ -81,7 +79,7 @@ $icon-margin-left: 0.5rem !default;
       > .ps-sort {
         width: initial;
         height: initial;
-        margin-left: $icon-margin-left;
+        margin-left: var(--#{$cdk}size-8);
       }
     }
   }

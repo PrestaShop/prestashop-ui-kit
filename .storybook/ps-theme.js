@@ -7,17 +7,17 @@ export default create({
   brandUrl: 'https://www.prestashop-project.org',
   brandImage: logoUrl,
 
-  colorPrimary: '#6c868e',
-  colorSecondary: '#25b9d7',
+  colorPrimary: '#1d1d1b',
+  colorSecondary: '#a4dbe8',
 
   // UI
-  appBg: '#363a41',
+  appBg: '#1d1d1b',
   appContentBg: 'white',
-  appBorderRadius: 4,
+  appBorderRadius: 0,
 
   barTextColor: 'white',
-  barSelectedColor: '#25b9d7',
-  barBg: '#272a2d',
+  barSelectedColor: '#a4dbe8',
+  barBg: '#3f3f3d',
 
   // Typography
   fontBase: '"Open Sans", sans-serif',
@@ -29,5 +29,5 @@ export default create({
 
   // Form
   inputTextColor: 'black',
-  inputBorderRadius: 4,
+  inputBorderRadius: 0,
 });

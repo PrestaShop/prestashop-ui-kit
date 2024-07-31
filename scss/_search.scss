@@ -4,10 +4,10 @@ $component-name: search;
 .#{$component-name} {
   &.input-group {
     .#{$component-name}-input {
-      padding: 0 0.9375rem;
+      padding: 0 var(--#{$cdk}size-16);
 
       &:focus {
-        border-color: $primary;
+        border-color: var(--#{$cdk}primary-800);
       }
     }
   }

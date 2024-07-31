@@ -1,6 +1,6 @@
 {
   "name": "prestakit",
-  "version": "1.2.6",
+  "version": "2.0.0",
   "description": "Prestashop UI Kit integration",
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "select2": "^4.0.5"
   },
   "devDependencies": {
+    "@fontsource/ibm-plex-sans": "^5.0.20",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",

@@ -1,107 +1,180 @@
 @mixin ps-button-variant(
   $background,
   $border,
-  $hover-background: lighten($background, 7.5%),
-  $hover-border: lighten($border, 7.5%),
-  $active-background: darken($background, 7.5%),
-  $active-border: darken($border, 10%),
+  $hover-background: lighten($background, 13%),
+  $hover-border: lighten($border, 13%),
+  $active-background: $background,
+  $active-border: $border,
   $color-name: "primary"
 ) {
-  @if $color-name == "light" or $color-name == "warning" {
-    color: $gray-800;
-  } @else {
-    color: $white;
-  }
-  background-color: $background;
-  border-color: $border;
-  box-shadow: none;
-
-  &:hover {
-    color: $white;
+  @include hover() {
     background-color: $hover-background;
     border-color: $hover-border;
   }
 
-  &:focus,
-  &.focus {
-    color: $white;
-    background-color: $hover-background;
-    border-color: $hover-border;
-  }
-
-  &:focus-visible {
-    // stylelint-disable-next-line
-    outline: 2px auto $outline-color !important;
-    outline-offset: 3px;
-    box-shadow: none;
-  }
-
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    color: $gray-450;
-    background-color: $gray-disabled;
-    border-color: $gray-disabled;
-  }
-
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active,
-  .show > &.dropdown-toggle {
+  @include focus-active() {
     background-color: $active-background;
     border-color: $active-border;
-    box-shadow: none;
+  }
+
+  @include disabled() {
+    outline: 0;
+  }
+
+  @if $color-name == "primary" {
+    @include disabled() {
+      background-color: var(--#{$cdk}primary-500);
+      border-color: var(--#{$cdk}primary-500);
+    }
+  } @else if $color-name == "secondary" {
+    @include disabled() {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}primary-200);
+      border-color: var(--#{$cdk}primary-200);
+    }
+  } @else if $color-name == "success" {
+    @include disabled() {
+      background-color: var(--#{$cdk}green-100);
+      border-color: var(--#{$cdk}green-100);
+    }
+  } @else if $color-name == "danger" {
+    @include disabled() {
+      background-color: var(--#{$cdk}red-100);
+      border-color: var(--#{$cdk}red-100);
+    }
+  } @else if $color-name == "warning" {
+    color: var(--#{$cdk}primary-800);
+
+    @include hover() {
+      color: var(--#{$cdk}primary-800);
+    }
+
+    @include focus-active() {
+      color: var(--#{$cdk}primary-800);
+    }
+
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}yellow-100);
+      border-color: var(--#{$cdk}yellow-100);
+    }
+  } @else if $color-name == "info" {
+    @include disabled() {
+      background-color: var(--#{$cdk}blue-100);
+      border-color: var(--#{$cdk}blue-100);
+    }
+  } @else if $color-name == "light" {
+    color: var(--#{$cdk}primary-800);
+
+    @include hover() {
+      background-color: var(--#{$cdk}primary-200);
+      border-color: var(--#{$cdk}primary-200);
+    }
+
+    @include focus-active() {
+      color: var(--#{$cdk}primary-800);
+      background-color: var(--#{$cdk}white);
+      border-color: var(--#{$cdk}white);
+    }
+
+    @include disabled() {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}white);
+      border-color: var(--#{$cdk}primary-200);
+    }
+  } @else if $color-name == "dark" {
+    @include disabled() {
+      background-color: var(--#{$cdk}primary-500);
+      border-color: var(--#{$cdk}primary-500);
+    }
   }
 }
 
 @mixin ps-button-outline-variant(
   $color,
-  $color-hover: #fff,
+  $color-hover: var(--#{$cdk}primary-800),
   $color-name: "primary"
 ) {
-  color: $color;
-  background-color: transparent;
+  color: var(--#{$cdk}primary-800);
+  background-color: theme-color-light($color-name);
   background-image: none;
-  border-color: $color;
+  border-color: theme-color($color-name);
 
   @include hover() {
-    color: $color-hover;
-    background-color: theme-color-hover($color-name);
-    border-color: theme-color-hover($color-name);
+    color: var(--#{$cdk}primary-800);
+    background-color: theme-color-light-hover($color-name);
   }
 
-  &:focus,
-  &.focus {
-    color: $color-hover;
-    background-color: theme-color-hover($color-name);
-    border-color: theme-color-hover($color-name);
-    outline: 2px solid #005fcc;
-    outline-style: auto;
-    outline-offset: 3px;
+  @include focus-active() {
+    color: var(--#{$cdk}primary-800);
+    background-color: theme-color-light-active($color-name);
+  }
 
-    &:not(:focus-visible) {
-      outline: 0;
+  @include disabled() {
+    outline: 0;
+  }
+
+  @if $color-name == "primary" {
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}primary-500);
+      border-color: var(--#{$cdk}primary-500);
     }
-  }
+  } @else if $color-name == "secondary" {
+    border-color: var(--#{$cdk}primary-800);
 
-  &:focus-visible {
-    // stylelint-disable-next-line
-    outline: 2px auto $outline-color !important;
-    outline-offset: 3px;
-    box-shadow: none;
-  }
+    @include hover() {
+      border-color: var(--#{$cdk}primary-800);
+    }
 
-  &.disabled,
-  &:disabled {
-    color: $gray-450;
-    background-color: transparent;
-    border-color: $gray-disabled;
-  }
+    @include focus-active() {
+      border-color: var(--#{$cdk}primary-800);
+    }
 
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active,
-  .show > &.dropdown-toggle {
-    color: $color-hover;
-    background-color: theme-color-active($color-name);
-    border-color: theme-color-active($color-name);
+    @include disabled() {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}primary-200);
+      border-color: var(--#{$cdk}primary-200);
+    }
+  } @else if $color-name == "success" {
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}green-50);
+      border-color: var(--#{$cdk}green-100);
+    }
+  } @else if $color-name == "danger" {
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}red-50);
+      border-color: var(--#{$cdk}red-100);
+    }
+  } @else if $color-name == "warning" {
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}yellow-50);
+      border-color: var(--#{$cdk}yellow-100);
+    }
+  } @else if $color-name == "info" {
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}blue-50);
+      border-color: var(--#{$cdk}blue-100);
+    }
+  } @else if $color-name == "light" {
+    @include disabled() {
+      color: var(--#{$cdk}primary-500);
+      background-color: var(--#{$cdk}white);
+      border-color: var(--#{$cdk}primary-200);
+    }
+  } @else if $color-name == "dark" {
+    @include hover() {
+      color: var(--#{$cdk}white);
+    }
+
+    @include disabled() {
+      color: var(--#{$cdk}white);
+      background-color: var(--#{$cdk}primary-500);
+      border-color: var(--#{$cdk}primary-500);
+    }
   }
 }

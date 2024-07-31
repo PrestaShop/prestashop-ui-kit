@@ -1,8 +1,8 @@
 /* stylelint-disable selector-class-pattern */
 .pstaggerWrapper {
   @extend .form-control;
+  min-height: 43px;
   padding: 0;
-
   border: 0;
 }
 
@@ -11,10 +11,9 @@
   display: none;
   width: 100%;
   height: 100%;
-  padding: ($badge-padding-y * 1.75) $badge-padding-x;
-  padding-bottom: 0;
-  background: $white;
-  border: solid $border-width $border-color;
+  padding: var(--#{$cdk}size-6) var(--#{$cdk}size-8);
+  background: var(--#{$cdk}white);
+  border: 1px solid var(--#{$cdk}primary-400);
 }
 
 .pstaggerAddTagWrapper {
@@ -24,30 +23,53 @@
 
 .pstaggerTag {
   display: inline-block;
-  padding: ($badge-padding-y / 2) $badge-padding-x;
-  margin: 0 $badge-padding-x $badge-padding-y 0;
-  font-size: 0.75rem;
-  color: theme-color("primary");
+  padding: var(--#{$cdk}size-2) var(--#{$cdk}size-4) var(--#{$cdk}size-2) var(--#{$cdk}size-6);
+  margin: var(--#{$cdk}size-2);
+  font-size: var(--#{$cdk}size-12);
+  font-weight: 700;
+  color: var(--#{$cdk}primary-800);
   text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
-  @include border-radius();
-  @include badge-variant(theme-color("primary"));
+  vertical-align: middle;
+  background-color: var(--#{$cdk}primary-300);
+
+  > span {
+    display: inline-block;
+    line-height: var(--#{$cdk}size-20);
+    white-space: nowrap;
+  }
 
   .pstaggerClosingCross {
-    margin: 0 0 0 $badge-padding-x;
+    display: inline-block;
+    align-content: center;
+    width: var(--#{$cdk}size-20);
+    height: var(--#{$cdk}size-20);
+    margin: 0 0 0 var(--#{$cdk}size-6);
     font-size: 0;
-    color: $body-color;
-    text-decoration: none;
+    line-height: var(--#{$cdk}size-20);
+    vertical-align: middle;
+
+    &:hover {
+      &::after {
+        color: var(--#{$cdk}primary-800);
+        background-color: var(--#{$cdk}primary-400);
+      }
+    }
 
     &::after {
       @include material-icon("\E5CD");
-      font-size: 1.063rem;
-      vertical-align: bottom;
-    }
-
-    &:hover {
-      color: $body-color;
+      align-content: center;
+      width: var(--#{$cdk}size-20);
+      height: var(--#{$cdk}size-20);
+      font-size: var(--#{$cdk}size-18);
+      font-weight: 400;
+      line-height: var(--#{$cdk}size-20);
+      color: var(--#{$cdk}primary-800);
+      text-decoration: none;
+      text-shadow: none;
+      background-color: var(--#{$cdk}primary-300);
+      border-radius: 50%;
+      transition: var(--#{$cdk}default-transition);
     }
   }
 }
@@ -60,7 +82,6 @@
 .input-group .pstaggerAddTagInput {
   display: block;
   width: 100%;
-  @include border-top-right-radius(0);
-  @include border-bottom-right-radius(0);
+  border-radius: 0;
 }
 /* stylelint-enable selector-class-pattern */

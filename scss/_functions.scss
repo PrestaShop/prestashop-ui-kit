@@ -6,6 +6,18 @@
   @return map-get($theme-colors-active, $key);
 }
 
+@function theme-color-light($key: "primary") {
+  @return map-get($theme-colors-light, $key);
+}
+
+@function theme-color-light-hover($key: "primary") {
+  @return map-get($theme-colors-light-hover, $key);
+}
+
+@function theme-color-light-active($key: "primary") {
+  @return map-get($theme-colors-light-active, $key);
+}
+
 @function theme-color-background($key: "primary") {
   @return map-get($theme-colors-background, $key);
 }

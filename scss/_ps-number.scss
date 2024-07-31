@@ -20,8 +20,8 @@ $component-name: ps-number-input;
     }
 
     .btn {
-      min-width: 2.5rem;
-      padding: 0.44rem 0.47rem;
+      min-width: var(--#{$cdk}size-40);
+      padding: 0 var(--#{$cdk}size-8);
 
       > .material-icons {
         font-size: 1.2em;
@@ -42,15 +42,15 @@ $component-name: ps-number-input;
         -moz-appearance: auto; /* Firefox */
 
         &.is-invalid {
-          padding-right: 1.7625rem;
+          padding-right: var(--#{$cdk}size-28);
         }
       }
     }
   }
 
   & &-controls {
-    height: 2.2rem;
-    margin-left: 5px;
+    height: 39px;
+    margin-left: var(--#{$cdk}size-5);
   }
 
   .invalid-feedback {

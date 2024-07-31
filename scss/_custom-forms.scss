@@ -1,12 +1,19 @@
 .custom-file,
 .custom-select {
   width: 100%;
-  height: $input-height;
+  height: var(--#{$cdk}size-40);
+  box-shadow: none;
+
+  &:focus {
+    outline: 2px solid var(--#{$cdk}blue-500);
+    @include box-shadow(none);
+  }
 }
 
 .custom-file {
   .custom-file-input {
-    height: $input-height;
+    height: var(--#{$cdk}size-40);
+    cursor: pointer;
 
     &:focus ~ .custom-file-label {
       border-color: theme-color-hover("primary");
@@ -22,10 +29,20 @@
       color: $custom-select-disabled-color;
       cursor: $cursor-disabled;
       background-color: $custom-select-disabled-bg;
+
+      &::after {
+        color: $custom-select-disabled-color;
+        background-color: transparent;
+        border-color: var(--#{$cdk}primary-400);
+      }
     }
   }
 
   .custom-file-label {
+    height: var(--#{$cdk}size-40);
+    padding: var(--#{$cdk}size-8) var(--#{$cdk}size-16);
+    cursor: pointer;
+
     &::after {
 
       // make the button overlap the border
@@ -34,6 +51,7 @@
       bottom: $input-border-width * -1;
       height: auto;
       font-weight: $font-weight-semibold;
+      line-height: var(--#{$cdk}size-28);
 
       @include hover-focus () {
         cursor: pointer;

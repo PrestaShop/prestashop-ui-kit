@@ -8,10 +8,7 @@ $material-symbols-font-path: '~material-symbols/';
     
     // IBM Plex Sans
     @include IBM.faces(
-      $subsets: (
-        latin,
-        latin-ext,
-      ),
+      $subsets: all,
       $weights: (
         200,
         300,

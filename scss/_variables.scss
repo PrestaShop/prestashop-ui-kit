@@ -229,6 +229,8 @@ $enable-grid-classes: true !default;
 $enable-print-styles: true !default;
 
 // Spacing
+$spacer: 1.875rem;
+
 $spacers: (
   0: 0,
   1: (
@@ -245,7 +247,6 @@ $spacers: (
     $spacer * 2,
   ),
 );
-
 
 // Body
 $body-bg: map-get($map: $cdk-common, $key: "white");

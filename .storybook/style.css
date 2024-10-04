@@ -9,3 +9,7 @@ body {
 .os-host {
   color: red;
 }
+
+.prismjs {
+  color: white;
+}

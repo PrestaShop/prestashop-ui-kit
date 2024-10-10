@@ -1,0 +1,39 @@
+import { useEffect } from '@storybook/client-api';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import styles from './variables.scss'
+import { 
+  renderPrimaryFont,
+  renderSecondaryFont,
+  renderFontSizes
+} from './variables';
+
+<Meta title="CSS Variables/Fonts" />
+
+# Primary
+<Canvas withSource="none">
+  <Story 
+    name="Primary"
+  >
+    {() => renderPrimaryFont()}
+  </Story>
+</Canvas>
+
+# Secondary
+_NOTE: The secondary font is the same as the primary font._
+<Canvas withSource="none">
+  <Story 
+    name="Secondary"
+  >
+    {() => renderSecondaryFont()}
+  </Story>
+</Canvas>
+
+# Font size
+<Canvas withSource="none">
+  <Story 
+    name="Size"
+  >
+    {() => renderFontSizes()}
+  </Story>
+</Canvas>
+

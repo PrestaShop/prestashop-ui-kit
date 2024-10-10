@@ -1,0 +1,106 @@
+import { useEffect } from '@storybook/client-api';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import styles from './variables.scss'
+import { 
+  renderPrimaryColors,
+  renderRedColors,
+  renderYellowColors,
+  renderGreenColors,
+  renderBlueColors,
+  renderOceanBlueColors,
+  renderPurpleColors,
+  renderAmberColors,
+  renderCommonColors
+} from './variables';
+
+<Meta title="CSS Variables/Colors" />
+
+# Primary
+
+<Canvas withSource="none">
+  <Story 
+    name="Primary"
+  >
+    {() => renderPrimaryColors()}
+  </Story>
+</Canvas>
+
+# Red
+
+<Canvas withSource="none">
+  <Story 
+    name="Red"
+  >
+    {() => renderRedColors()}
+  </Story>
+</Canvas>
+
+# Yellow
+
+<Canvas withSource="none">
+  <Story 
+    name="Yellow"
+  >
+    {() => renderYellowColors()}
+  </Story>
+</Canvas>
+
+# Green
+
+<Canvas withSource="none">
+  <Story 
+    name="Green"
+  >
+    {() => renderGreenColors()}
+  </Story>
+</Canvas>
+
+# Blue
+
+<Canvas withSource="none">
+  <Story 
+    name="Blue"
+  >
+    {() => renderBlueColors()}
+  </Story>
+</Canvas>
+
+# Ocean blue
+
+<Canvas withSource="none">
+  <Story 
+    name="Ocean blue"
+  >
+    {() => renderOceanBlueColors()}
+  </Story>
+</Canvas>
+
+# Purple
+
+<Canvas withSource="none">
+  <Story 
+    name="Purple"
+  >
+    {() => renderPurpleColors()}
+  </Story>
+</Canvas>
+
+# Amber
+
+<Canvas withSource="none">
+  <Story 
+    name="Amber"
+  >
+    {() => renderAmberColors()}
+  </Story>
+</Canvas>
+
+# Common
+
+<Canvas withSource="none">
+  <Story 
+    name="Common"
+  >
+    {() => renderCommonColors()}
+  </Story>
+</Canvas>

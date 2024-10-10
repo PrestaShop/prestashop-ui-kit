@@ -1,0 +1,27 @@
+import { useEffect } from '@storybook/client-api';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import styles from './variables.scss'
+import { 
+  renderBoxShadows,
+  renderSizes
+} from './variables';
+
+<Meta title="CSS Variables/Others" />
+
+# Shadows
+<Canvas withSource="none">
+  <Story 
+    name="Shadows"
+  >
+    {() => renderBoxShadows()}
+  </Story>
+</Canvas>
+
+# Sizes
+<Canvas withSource="none">
+  <Story 
+    name="Spaces"
+  >
+    {() => renderSizes()}
+  </Story>
+</Canvas>

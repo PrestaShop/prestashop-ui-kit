@@ -152,16 +152,11 @@ $form-check-name: form-check;
     }
 
     input {
-      // Visually hide the checkbox for accessibility purposes
+      // Visually hide the radio for accessibility purposes
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      opacity: 0;
+      width: var(--#{$cdk}size-1);
+      height: var(--#{$cdk}size-1);
     }
 
     input:checked {
@@ -199,7 +194,7 @@ $form-check-name: form-check;
     border: 2px solid var(--#{$cdk}primary-800);
     transition: var(--#{$cdk}default-transition);
     @include border-radius(50%);
-
+    
     &::after {
       position: absolute;
       top: 50%;

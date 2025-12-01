@@ -53,9 +53,9 @@ $md-checkmark-color: var(--#{$cdk}white) !default;
   [type="checkbox"] {
     // Visually hide the checkbox for accessibility purposes
     position: absolute;
-    opacity: 0;
     width: var(--#{$cdk}size-1);
     height: var(--#{$cdk}size-1);
+    opacity: 0;
 
     &:disabled {
       + .md-checkbox-control {

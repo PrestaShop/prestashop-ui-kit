@@ -154,9 +154,9 @@ $form-check-name: form-check;
     input {
       // Visually hide the radio for accessibility purposes
       position: absolute;
-      opacity: 0;
       width: var(--#{$cdk}size-1);
       height: var(--#{$cdk}size-1);
+      opacity: 0;
     }
 
     input:checked {
@@ -194,7 +194,7 @@ $form-check-name: form-check;
     border: 2px solid var(--#{$cdk}primary-800);
     transition: var(--#{$cdk}default-transition);
     @include border-radius(50%);
-    
+
     &::after {
       position: absolute;
       top: 50%;

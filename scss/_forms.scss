@@ -152,8 +152,10 @@ $form-check-name: form-check;
     }
 
     input {
+      // Visually hide the radio for accessibility purposes
       position: absolute;
-      cursor: pointer;
+      width: var(--#{$cdk}size-1);
+      height: var(--#{$cdk}size-1);
       opacity: 0;
     }
 
@@ -171,6 +173,14 @@ $form-check-name: form-check;
     input:disabled {
       ~ .#{$form-check-name}-round {
         cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+
+    input:focus-visible {
+      + .#{$form-check-name}-round {
+        outline: var(--#{$cdk}size-2) solid var(--#{$cdk}blue-500);
+        outline-offset: var(--#{$cdk}size-2);
       }
     }
   }

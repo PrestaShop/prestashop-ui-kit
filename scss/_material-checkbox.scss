@@ -51,8 +51,11 @@ $md-checkmark-color: var(--#{$cdk}white) !default;
   }
 
   [type="checkbox"] {
-    display: none;
-    outline: 0;
+    // Visually hide the checkbox for accessibility purposes
+    position: absolute;
+    width: var(--#{$cdk}size-1);
+    height: var(--#{$cdk}size-1);
+    opacity: 0;
 
     &:disabled {
       + .md-checkbox-control {
@@ -61,6 +64,15 @@ $md-checkmark-color: var(--#{$cdk}white) !default;
 
         &::before {
           cursor: not-allowed;
+        }
+      }
+    }
+
+    &:focus-visible {
+      + .md-checkbox-control {
+        &::before {
+          outline: var(--#{$cdk}size-2) solid var(--#{$cdk}blue-500);
+          outline-offset: var(--#{$cdk}size-2);
         }
       }
     }

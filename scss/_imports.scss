@@ -21,10 +21,15 @@ $material-symbols-font-path: '~material-symbols/';
     );
 
     // Material Symbols Outlined
+    //
+    // block, not swap: the glyphs are ligatures of their own names, so while the font is loading
+    // "swap" paints the fallback and every icon shows up as the literal word - remove_red_eye,
+    // shopping_cart - across the whole interface. "block" keeps them invisible for the block
+    // period instead, which is the usual treatment for an icon font.
     @font-face {
       font-family: "Material Symbols Outlined";
       font-style: normal;
-      font-display: swap;
+      font-display: block;
       src: url("#{$material-symbols-font-path}material-symbols-outlined.woff2") format("woff2");
     }
   } @else {
@@ -32,7 +37,7 @@ $material-symbols-font-path: '~material-symbols/';
     @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap");
 
     // Material Symbols Outlined
-    @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0");
+    @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=block");
   }
 }
 
